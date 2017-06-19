@@ -46,6 +46,11 @@
     display: inline;
 }
 
+.gtb-disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
 .tekstveld{
     width: 75%;
     font-family: gtb;

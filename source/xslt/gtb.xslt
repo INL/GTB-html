@@ -85,6 +85,12 @@
         <xsl:sequence select="$successor/preceding::a[@data-showhidegroup eq $successor/@data-showhidegroup][1]"/>
     </xsl:function>
     
+    <xsl:function name="ivdnt:get-active-tabdiv" as="element(div)">
+        <xsl:param name="node-inside-tab" as="node()"/>
+        <xsl:variable name="tab-content" as="element(div)" select="$node-inside-tab/ancestor-or-self::div[ivdnt:class-contains(@class, 'tab-content')]"/>
+        <xsl:sequence select="$tab-content/div[ivdnt:class-contains(@class, 'active')]"/>
+    </xsl:function>
+    
     <xsl:template name="initialize">
         <!-- Nothing (yet) -->
     </xsl:template>
@@ -122,6 +128,24 @@
         <xsl:sequence select="ivdnt:class-contains($element/@class, 'gtbhidden')"/>
     </xsl:function>
     
+    <xsl:template name="ivdnt:deactivate-tab">
+        <xsl:param name="tabdiv" as="element(div)" required="yes"/>
+        <xsl:for-each select="$tabdiv">
+            <!-- Only one iteration -->
+            <xsl:message>deactivate {$tabdiv/@id}</xsl:message>
+            <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtb-disabled')"/>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="ivdnt:reactivate-tab">
+        <xsl:param name="tabdiv" as="element(div)" required="yes"/>
+        <xsl:for-each select="$tabdiv">
+            <xsl:message>reactivate {$tabdiv/@id}</xsl:message>
+            <!-- Only one iteration -->
+            <ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtb-disabled')"/>
+        </xsl:for-each>
+    </xsl:template>
+    
     <xsl:template name="ivdnt:select-tab">
         <xsl:param name="tabid" as="xs:string" required="yes"/>
         <xsl:param name="url-for-content" as="xs:string" required="yes"/>
@@ -141,12 +165,16 @@
         <ixsl:set-property name="url-for-content" select="$url-for-content" object="ixsl:page()"/>
         <ixsl:set-property name="text-input-uri-params" select="$text-input-uri-params" object="ixsl:page()"/>
         <ixsl:set-property name="result-tabdiv-id" select="$tabdiv-id" object="ixsl:page()"/>
+        
+        <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
+        <xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$current-tab"/></xsl:call-template>
 
         <ixsl:schedule-action document="{$url-for-content}" wait="0">
             <xsl:call-template name="ivdnt:render-results">
                 <xsl:with-param name="url-for-content" select="$url-for-content"/>
                 <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
                 <xsl:with-param name="startline" select="1" as="xs:integer"/>
+                <xsl:with-param name="originating-tabdiv" select="$current-tab"/>
             </xsl:call-template>
         </ixsl:schedule-action>
     </xsl:template>
@@ -155,7 +183,8 @@
         <xsl:param name="url-for-content" as="xs:string" required="yes"/>
         <xsl:param name="tabdiv-id" as="xs:string" required="yes"/>
         <xsl:param name="startline" as="xs:integer" required="yes"/>
-        
+        <xsl:param name="originating-tabdiv" as="element(div)" required="yes"/>
+                
         <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
         <xsl:result-document href="{'#' || $tabdiv-id}" method="ixsl:replace-content">
             <xsl:if test="$showLinkToSearchResultXml">
@@ -176,6 +205,8 @@
                 <ixsl:set-attribute name="class" select="$new-class"/>
             </xsl:for-each>
         </xsl:result-document>
+        
+        <xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template>
     </xsl:template>
     
     <xsl:template match="a[@data-showhidegroup]" mode="ixsl:onclick">
@@ -307,12 +338,16 @@
         
         <xsl:variable name="url" as="xs:string" select="$url-for-content || '&amp;start=' || @data-startline"/>
         
-        <xsl:message select="'url=' || $url || ', startline=' || @data-startline"/>
+        <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
+        <xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$current-tab"/></xsl:call-template>
+        
+        <!--<xsl:message select="'url=' || $url || ', startline=' || @data-startline"/>-->
         <ixsl:schedule-action document="{$url}" wait="0">
             <xsl:call-template name="ivdnt:render-results">
                 <xsl:with-param name="url-for-content" select="$url"/>
                 <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
                 <xsl:with-param name="startline" select="@data-startline" as="xs:integer"/>
+                <xsl:with-param name="originating-tabdiv" select="$current-tab"/>
                 <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
             </xsl:call-template>
         </ixsl:schedule-action>
