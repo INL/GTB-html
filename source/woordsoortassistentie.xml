@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivdnt:woordsoorten xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <ivdnt:woordsoort zoek="Az" toon="Az"/>
+    <ivdnt:woordsoort zoek="Bnw" toon="Bnw"/>
+    <ivdnt:woordsoort zoek="Bw" toon="Bw">
+        <ivdnt:woordsoortitemgroep>
+            <ivdnt:woordsoortitem zoek="aanw" toon="aanw" id="BwAanw"/>
+            <ivdnt:woordsoortitem zoek="betr" toon="betr" id="BwBetr"/>
+            <ivdnt:woordsoortitem zoek="onbep" toon="onbep" id="BwOnbep"/>
+            <ivdnt:woordsoortitem zoek="vr" toon="vr" id="BwVr"/>
+            <ivdnt:woordsoortitem zoek="noemend" toon="noemend" id="BwNoemend"/>
+            <ivdnt:woordsoortitem zoek="ontk" toon="ontk" id="BwOntk"/>
+            <ivdnt:woordsoortitem zoek="van,freq" toon="van freq" id="BwFreq"/>
+            <ivdnt:woordsoortitem zoek="van,graad" toon="van graad" id="BwGraad"/>
+            <ivdnt:woordsoortitem zoek="van,hoedanigheid" toon="van hoedanigheid" id="BwHoed"/>
+            <ivdnt:woordsoortitem zoek="van,hoeveelheid" toon="van hoeveelheid" id="BwHoev"/>
+            <ivdnt:woordsoortitem zoek="van,modaliteit" toon="van modaliteit" id="BwMod"/>
+            <ivdnt:woordsoortitem zoek="van,plaats,of,richting" toon="van plaats of richting" id="BwPlaats"/>
+            <ivdnt:woordsoortitem zoek="van,tijd" toon="van tijd" id="BwTijd"/>
+            <ivdnt:woordsoortitem zoek="voegw" toon="voegw" id="BwVoegw"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Lidw" toon="Lidw">
+        <ivdnt:woordsoortitemgroep>
+            <ivdnt:woordsoortitem zoek="bep" toon="bep" id="LidwBep"/>
+            <ivdnt:woordsoortitem zoek="onbep" toon="onbep" id="LidwOnbep"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Telw" toon="Telw">
+        <ivdnt:woordsoortitemgroep>
+            <ivdnt:woordsoortitem zoek="hoofd" toon="hoofd" id="TelwHoofd"/>
+            <ivdnt:woordsoortitem zoek="onbep" toon="onbep" id="TelwOnbep"/>
+            <ivdnt:woordsoortitem zoek="rang" toon="rang" id="TelwRang"/>
+            <ivdnt:woordsoortitem zoek="collect" toon="collect" id="TelwCollect"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Tw" toon="Tw"/>
+    <ivdnt:woordsoort zoek="Uitdr" toon="Uitdr">
+        <ivdnt:woordsoortitemgroep>
+            <ivdnt:woordsoortitem zoek="bijw" toon="bijw" id="UitdrBijw"/>
+            <ivdnt:woordsoortitem zoek="bijv" toon="bijv" id="UitdrBijv"/>
+            <ivdnt:woordsoortitem zoek="aanw" toon="aanw" id="UitdrAanw"/>
+            <ivdnt:woordsoortitem zoek="vnw" toon="vnw" id="UitdrVnw"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Vnw" toon="Vnw">
+        <ivdnt:woordsoortitemgroep label="Type">
+            <ivdnt:woordsoortitem zoek="aanw" toon="aanw" id="VnwAanw"/>
+            <ivdnt:woordsoortitem zoek="betr" toon="betr" id="VnwBetr"/>
+            <ivdnt:woordsoortitem zoek="bez" toon="bez" id="VnwBez"/>
+            <ivdnt:woordsoortitem zoek="onbep" toon="onbep" id="VnwOnbep"/>
+            <ivdnt:woordsoortitem zoek="pers" toon="pers" id="VnwPers"/>
+            <ivdnt:woordsoortitem zoek="uitr" toon="uitr" id="VnwUitr"/>
+            <ivdnt:woordsoortitem zoek="vr" toon="vr" id="VnwVr"/>
+            <ivdnt:woordsoortitem zoek="wdk" toon="wdk" id="VnwWdk"/>
+            <ivdnt:woordsoortitem zoek="wdg" toon="wdg" id="VnwWdg"/>
+        </ivdnt:woordsoortitemgroep>
+        <ivdnt:woordsoortitemgroep label="Persoon">
+            <ivdnt:woordsoortitem zoek="1e" toon="1e" id="Vnw1e"/>
+            <ivdnt:woordsoortitem zoek="2e" toon="2e" id="Vnw2e"/>
+            <ivdnt:woordsoortitem zoek="3e" toon="3e" id="Vnw3e"/>
+        </ivdnt:woordsoortitemgroep>
+        <ivdnt:woordsoortitemgroep label="Geslacht">
+            <ivdnt:woordsoortitem zoek="m" toon="m" id="VnwMnl"/>
+            <ivdnt:woordsoortitem zoek="v" toon="v" id="VnwVwl"/>
+            <ivdnt:woordsoortitem zoek="o" toon="o" id="VnwOnz"/>
+        </ivdnt:woordsoortitemgroep>
+        <ivdnt:woordsoortitemgroep label="Getal">
+            <ivdnt:woordsoortitem zoek="ev" toon="ev" id="VnwEv"/>
+            <ivdnt:woordsoortitem zoek="mv" toon="mv" id="VnwMv"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Vnw.bw" toon="Vnw.bw">
+        <ivdnt:woordsoortitemgroep>
+            <ivdnt:woordsoortitem zoek="aanw" toon="aanw" id="VnwbwAanw"/>
+            <ivdnt:woordsoortitem zoek="betr" toon="betr" id="VnwbwBetr"/>
+            <ivdnt:woordsoortitem zoek="onbep" toon="onbep" id="VnwbwOnbep"/>
+            <ivdnt:woordsoortitem zoek="vr" toon="vr" id="VnwbwVr"/>
+            <ivdnt:woordsoortitem zoek="van,mod" toon="van mod" id="VnwbwMod"/>
+            <ivdnt:woordsoortitem zoek="van,plaats,of,richting" toon="van plaats of richting" id="VnwbwPlaats"/>
+            <ivdnt:woordsoortitem zoek="van,tijd" toon="van tijd" id="VnwbwTijd"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Vw" toon="Vw">
+        <ivdnt:woordsoortitemgroep>
+            <ivdnt:woordsoortitem zoek="ondersch" toon="ondersch" id="VwOndersch"/>
+            <ivdnt:woordsoortitem zoek="nevensch" toon="nevensch" id="VwNevensch"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Vz" toon="Vz">
+        <ivdnt:woordsoortitemgroep>
+            <ivdnt:woordsoortitem zoek="met,gen" toon="met gen" id="VzGen"/>
+            <ivdnt:woordsoortitem zoek="met,dat" toon="met dat" id="VzDat"/>
+            <ivdnt:woordsoortitem zoek="met,acc" toon="met acc" id="VzAcc"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Woorddl" toon="Woorddl">
+        <ivdnt:woordsoortitemgroep>
+            <ivdnt:woordsoortitem zoek="prefix" toon="prefix" id="WoorddlPrfx"/>
+            <ivdnt:woordsoortitem zoek="suffix" toon="suffix" id="WoorddlSffx"/>
+            <ivdnt:woordsoortitem zoek="suffixoïde" toon="suffixoïde" id="WoorddlSffxd"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Ww" toon="Ww">
+        <ivdnt:woordsoortitemgroep label="Vervoeging">
+            <ivdnt:woordsoortitem zoek="st" toon="st" id="WwSt"/>
+            <ivdnt:woordsoortitem zoek="st.,kl.1" toon="st. kl.1" id="WwStk1"/>
+            <ivdnt:woordsoortitem zoek="st.,kl.2a" toon="st. kl.2a" id="WwStk2a"/>
+            <ivdnt:woordsoortitem zoek="st.,kl.2b" toon="st. kl.2b" id="WwStk2b"/>
+            <ivdnt:woordsoortitem zoek="st.,kl.3a" toon="st. kl.3a" id="WwStk3a"/>
+            <ivdnt:woordsoortitem zoek="st.,kl.3b" toon="st. kl.3b" id="WwStk3b"/>
+            <ivdnt:woordsoortitem zoek="st.,kl.4" toon="st. kl.4" id="WwStk4"/>
+            <ivdnt:woordsoortitem zoek="st.,kl.5" toon="st. kl.5" id="WwStk5"/>
+            <ivdnt:woordsoortitem zoek="st.,kl.6" toon="st. kl.6" id="WwStk6"/>
+            <ivdnt:woordsoortitem zoek="st.,kl.7" toon="st. kl.7" id="WwStk7"/>
+            <ivdnt:woordsoortitem zoek="zw" toon="zw" id="WwZw"/>
+            <ivdnt:woordsoortitem zoek="onreg" toon="onreg" id="WwOnreg"/>
+        </ivdnt:woordsoortitemgroep>
+        <ivdnt:woordsoortitemgroep label="Subcategorie">
+            <ivdnt:woordsoortitem zoek="trans" toon="trans" id="WwTrans"/>
+            <ivdnt:woordsoortitem zoek="intr" toon="intr" id="WwIntr"/>
+            <ivdnt:woordsoortitem zoek="refl" toon="refl" id="WwRefl"/>
+            <ivdnt:woordsoortitem zoek="onpers" toon="onpers" id="WwOnpers"/>
+        </ivdnt:woordsoortitemgroep>
+        <ivdnt:woordsoortitemgroep label="Functie">
+            <ivdnt:woordsoortitem zoek="hulpww" toon="hulpww" id="WwHulpww"/>
+            <ivdnt:woordsoortitem zoek="koppelww" toon="koppelww" id="WwKoppelww"/>
+            <ivdnt:woordsoortitem zoek="zelfst" toon="zelfst" id="WwZelfst"/>
+        </ivdnt:woordsoortitemgroep>
+        <ivdnt:woordsoortitemgroep label="Combinaties">
+            <ivdnt:woordsoortitem zoek="met,gen" toon="met gen" id="WwGen"/>
+            <ivdnt:woordsoortitem zoek="met,dat" toon="met dat" id="WwDat"/>
+            <ivdnt:woordsoortitem zoek="met,dat.,en,gen" toon="met dat. en gen" id="WwDatGen"/>
+            <ivdnt:woordsoortitem zoek="met,dat.,en,acc" toon="met dat. en acc" id="WwDatAcc"/>
+            <ivdnt:woordsoortitem zoek="met,acc" toon="met acc" id="WwAcc"/>
+            <ivdnt:woordsoortitem zoek="met,voorz" toon="met voorz" id="WwVoorz"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="Znw" toon="Znw">
+        <ivdnt:woordsoortitemgroep label="Geslacht">
+            <ivdnt:woordsoortitem zoek="m" toon="m" id="ZnwMnl"/>
+            <ivdnt:woordsoortitem zoek="m./o" toon="m./o" id="ZnwMnlOnz"/>
+            <ivdnt:woordsoortitem zoek="m./v" toon="m./v" id="ZnwMnlVr"/>
+            <ivdnt:woordsoortitem zoek="m./v./o" toon="m./v./o" id="ZnwMnlVrOnz"/>
+            <ivdnt:woordsoortitem zoek="o" toon="o" id="ZnwOnz"/>
+            <ivdnt:woordsoortitem zoek="v" toon="v" id="ZnwVr"/>
+            <ivdnt:woordsoortitem zoek="v./o" toon="v./o" id="ZnwVrOnz"/>
+            <ivdnt:woordsoortitem zoek="gemeensl" toon="gemeensl" id="ZnwGemeensl"/>
+        </ivdnt:woordsoortitemgroep>
+        <ivdnt:woordsoortitemgroep label="Getal">
+            <ivdnt:woordsoortitem zoek="mv" toon="mv" id="ZnwMv"/>
+        </ivdnt:woordsoortitemgroep>
+        <ivdnt:woordsoortitemgroep label="Aard">
+            <ivdnt:woordsoortitem zoek="naam" toon="naam" id="ZnwNaam"/>
+        </ivdnt:woordsoortitemgroep>
+    </ivdnt:woordsoort>
+    <ivdnt:woordsoort zoek="?" toon="?"/>
+</ivdnt:woordsoorten>

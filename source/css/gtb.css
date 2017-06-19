@@ -1,0 +1,216 @@
+@font-face{
+    font-family: gtb;
+    src: url('../fonts/INLVRG__.TTF');
+}
+
+@font-face{
+    font-family: gtbi;
+    src: url('../fonts/INLVI___.TTF');
+}
+
+@font-face{
+    font-family: gtbb;
+    src: url('../fonts/INLVB___.TTF');
+}
+
+@font-face{
+    font-family: gtbbi;
+    src: url('../fonts/INLVBI__.TTF');
+}
+
+.tab-content{
+    margin-top: 2em;
+}
+
+.basiszoeken-formulier{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.formuliertitel{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.formulierregel{
+    background-color: lightgray;
+    font-size: smaller;
+    padding: 3px;
+}
+
+.formulierlabel{
+    display: inline;
+}
+
+.formulierinput{
+    display: inline;
+}
+
+.tekstveld{
+    width: 75%;
+    font-family: gtb;
+    display: inline;
+}
+
+.woordsoortveld{
+    width: 75%;
+    display: inline;
+}
+
+.woordsoortassistentieknop{
+    width: 20%; /*  25% is teveel, bij 24% geen wrap. Lager lijkt veiliger. */
+}
+
+table.speciaalteken,
+td.speciaalteken{
+    font-family: gtb;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+td.speciaalteken{
+    width: 10em;
+    text-align: center;
+    cursor: pointer;
+}
+
+td.speciaalteken:hover{
+    background-color: lightgray;
+}
+
+td.speciaalteken:active{
+    box-shadow: 0 5px lightgray;
+    transform: translateY(2px);
+}
+
+.gtbcollapsed:before{
+    content: '▶ ';
+}
+
+.gtbexpanded:before{
+    content: '▼ ';
+}
+
+.gtbcheckbox{
+    border-radius: 3px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.gtbhidden{
+    display: none;
+}
+
+/*input[type=checkbox]:before, .gtbcheckbox:before {
+    content: "[";
+    display: inline;
+    color:red;
+}
+input[type=checkbox]:after, .gtbcheckbox:after {
+    content: "]";
+    display: inline;
+    color:red;
+}*/
+
+.formulierinput label{
+    width: 18%;
+    white-space: nowrap;
+}
+
+.woordsoorttable{
+    margin-left: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-style: dotted;
+    border-width: 1px;
+    width: 80%;
+}
+
+.gtb-xml-error {
+    background-color: red;
+}
+
+.gtb-statcount{
+    font-weight: bold;
+}
+
+.gtb-wdbcol-line{
+    width: 5%;
+}
+.gtb-wdbcol-wdb{
+    width: 10%;
+}
+.gtb-wdbcol-modern_lemma{
+    width: 15%;
+}
+.gtb-wdbcol-lemma{
+    width: 15%;
+}
+.gtb-wdbcol-woordsoort{
+    width: 15%;
+}
+.gtb-wdbcol-betekenis{
+    /*width: 40%;*/
+}
+
+div.gtb-results {
+    font-family: gtb;
+    height: 70vh;
+    overflow-y:scroll;
+}
+
+div.gtb-results i {
+    font-family: gtbi;
+}
+
+div.gtb-results b {
+    font-family: gtbb;
+}
+
+div.gtb-results i b,  div.gtb-results b i{
+    font-family: gtbbi;
+}
+
+tr.gtb-result-row > td {
+    height: 3em;
+    vertical-align: top;
+}
+
+tr.gtb-result-row:nth-child(even){
+    background-color: #fff
+}
+
+tr.gtb-result-row:nth-child(odd){
+    background-color: #ccc
+}
+
+.gtb-wdb-onw{
+    color: orange;
+}
+
+.gtb-wdb-vmnw{
+    color: red;
+}
+
+.gtb-wdb-mnw{
+    color: green;
+}
+
+.gtb-wdb-wnt{
+    color: brown;
+}
+
+.gtb-wdb-wft{
+    color: blue;
+}
+
+.gtb-homoniemnr {
+    vertical-align: super;
+    font-size: 80%;
+}
+
+.gtb-pagineringsknoppen {
+    float: right;
+}

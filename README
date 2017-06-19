@@ -1,0 +1,14 @@
+Het gtb-frontend wordt gegenereerd met een script. Dit script bevindt zich in de map generate-gtb-html-files.
+
+De bronbestanden bevinden zich in de map source.
+De bestanden van het resultaat van het genereren bevinden zich in de map target.
+
+Te midden van de bronbestanden bevindt zich de file source/xslt/gtb.sef. Deze wordt met behulp van Saxon-JS (onderdeel van Oxygen) aangemaakt op basis van de file gtb.xslt. Maak deze file aan voor het genereren van de target-bestanden.
+
+De reden dat het genereerscript dit niet doet, is dat daarvoor een enterprise-licentie van Saxon vereist is. Deze zit ingebakken in Oxygen.
+
+Ga als volgt te werk om te genereren:
+
+cd generate-gtb-html-files
+./generate-gtb-html-files.sh
+
