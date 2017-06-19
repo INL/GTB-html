@@ -134,6 +134,13 @@
             <!-- Only one iteration -->
             <xsl:message>deactivate {$tabdiv/@id}</xsl:message>
             <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtb-disabled')"/>
+            <!-- Het toegevoegde HTML verdwijnt wanneer de tab weer geactiveerd wordt; dat gebeurt vanzelf omdat nu in alle gevallen de tab opnieuw gevuld wordt. -->
+            <xsl:result-document href="?." method="ixsl:append-content">
+                <p class="gtb-wait">
+                    <!-- TODO waarom draait het icoontje niet? Cf. https://www.bootply.com/128062 -->
+                    <button class="btn btn-lg btn-info"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>Even geduld a.u.b. ...</button>
+                </p>
+            </xsl:result-document>
         </xsl:for-each>
     </xsl:template>
     
