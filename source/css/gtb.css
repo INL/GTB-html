@@ -51,6 +51,15 @@
     cursor: wait;
 }
 
+.gtb-wait {
+    z-index: 2000;
+    position: absolute;
+    /*  De percentages zijn een grove benadering. */
+    background-color: transparent;
+    top: 45%;
+    left: 45%;
+ }
+
 .tekstveld{
     width: 75%;
     font-family: gtb;
