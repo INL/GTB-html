@@ -65,6 +65,7 @@
             table.DataTable( {
                 "paging": false,
                 "bFilter": false,
+                "bSort" : false,
                 language: {
                        url: 'js/nl.json',
                 }
