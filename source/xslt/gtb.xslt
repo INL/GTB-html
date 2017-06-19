@@ -136,52 +136,28 @@
         
         <!-- Activate the div whose id is equal to the href of the "resultaat" tabtitle: -->
         <xsl:variable name="tabdiv-id" as="xs:string" select="substring-after($result-tab-title/a/@href, '#')"/>
-        <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
-        <xsl:for-each select="$tabdiv/parent::*/*">
-            <xsl:variable name="class-without-active" select="ivdnt:remove-class-value(@class, 'active')" as="attribute(class)"/>
-            <xsl:variable name="class-without-active-and-in" select="ivdnt:remove-class-value($class-without-active, 'in')" as="attribute(class)"/>
-            <xsl:variable name="new-class" as="attribute(class)" select="ivdnt:add-class-values($class-without-active-and-in, if (@id eq $tabdiv-id) then ('in', 'active') else ())"/>
-            <ixsl:set-attribute name="class" select="$new-class"/>
-        </xsl:for-each>
         
         <!-- Save some info for use by pagination: -->
         <ixsl:set-property name="url-for-content" select="$url-for-content" object="ixsl:page()"/>
         <ixsl:set-property name="text-input-uri-params" select="$text-input-uri-params" object="ixsl:page()"/>
         <ixsl:set-property name="result-tabdiv-id" select="$tabdiv-id" object="ixsl:page()"/>
 
-        <xsl:call-template name="ivdnt:show-wait-document">
-            <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
-        </xsl:call-template>
-        
         <ixsl:schedule-action document="{$url-for-content}" wait="0">
             <xsl:call-template name="ivdnt:render-results">
                 <xsl:with-param name="url-for-content" select="$url-for-content"/>
-                <xsl:with-param name="destination-id" select="$tabdiv-id"/>
+                <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
                 <xsl:with-param name="startline" select="1" as="xs:integer"/>
             </xsl:call-template>
         </ixsl:schedule-action>
     </xsl:template>
     
-    <xsl:template name="ivdnt:show-wait-document">
-        <xsl:param name="tabdiv-id" as="xs:string" required="yes"/>
-        <xsl:result-document href="{'#' || $tabdiv-id}" method="ixsl:replace-content">
-            <p class="text-center">Even geduld a.u.b.</p>
-            <p><img class="center-block" src="img/geduld.gif"/></p>
-        </xsl:result-document>
-    </xsl:template>
-    
     <xsl:template name="ivdnt:render-results">
         <xsl:param name="url-for-content" as="xs:string" required="yes"/>
-        <xsl:param name="destination-id" as="xs:string" required="yes"/>
+        <xsl:param name="tabdiv-id" as="xs:string" required="yes"/>
         <xsl:param name="startline" as="xs:integer" required="yes"/>
-<!--        <xsl:param name="text-input-uri-params" as="xs:string" required="yes" tunnel="yes"/>
         
-        <!-\- Save some info for use by pagination: -\->
-        <ixsl:set-property name="url-for-content" select="$url-for-content" object="ixsl:page()"/>
-        <ixsl:set-property name="text-input-uri-params" select="$text-input-uri-params" object="ixsl:page()"/>
-        <ixsl:set-property name="result-tabdiv-id" select="$destination-id" object="ixsl:page()"/>
--->        
-        <xsl:result-document href="{'#' || $destination-id}" method="ixsl:replace-content">
+        <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
+        <xsl:result-document href="{'#' || $tabdiv-id}" method="ixsl:replace-content">
             <xsl:if test="$showLinkToSearchResultXml">
                 <div>
                     <p>Dit is de uitgerekende URL:</p>
@@ -192,6 +168,13 @@
             <xsl:apply-templates select="doc($url-for-content)" mode="render-results">
                 <xsl:with-param name="startline" select="$startline" as="xs:integer"/>
             </xsl:apply-templates>
+            
+            <xsl:for-each select="$tabdiv/parent::*/*">
+                <xsl:variable name="class-without-active" select="ivdnt:remove-class-value(@class, 'active')" as="attribute(class)"/>
+                <xsl:variable name="class-without-active-and-in" select="ivdnt:remove-class-value($class-without-active, 'in')" as="attribute(class)"/>
+                <xsl:variable name="new-class" as="attribute(class)" select="ivdnt:add-class-values($class-without-active-and-in, if (@id eq $tabdiv-id) then ('in', 'active') else ())"/>
+                <ixsl:set-attribute name="class" select="$new-class"/>
+            </xsl:for-each>
         </xsl:result-document>
     </xsl:template>
     
@@ -322,17 +305,13 @@
         <xsl:variable name="text-input-uri-params" as="xs:string" select="ixsl:get(ixsl:page(), 'text-input-uri-params')"/>
         <xsl:variable name="tabdiv-id" as="xs:string" select="ixsl:get(ixsl:page(), 'result-tabdiv-id')"/>
         
-        <xsl:call-template name="ivdnt:show-wait-document">
-            <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
-        </xsl:call-template>
-        
         <xsl:variable name="url" as="xs:string" select="$url-for-content || '&amp;start=' || @data-startline"/>
         
         <xsl:message select="'url=' || $url || ', startline=' || @data-startline"/>
         <ixsl:schedule-action document="{$url}" wait="0">
             <xsl:call-template name="ivdnt:render-results">
                 <xsl:with-param name="url-for-content" select="$url"/>
-                <xsl:with-param name="destination-id" select="$tabdiv-id"/>
+                <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
                 <xsl:with-param name="startline" select="@data-startline" as="xs:integer"/>
                 <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
             </xsl:call-template>
