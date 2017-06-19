@@ -1,0 +1,2 @@
+Deze folder (met de naam target) wordt telkens verwijderd en opnieuw aangemaakt bij het genereren
+van de applicatie. zie hiervoor het script ../generate-gtb-html-files/generate-gtb-html-files.sh
