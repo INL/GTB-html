@@ -46,19 +46,51 @@
     display: inline;
 }
 
-.gtbdisabled {
+.gtbdisabled{
     opacity: 0.5;
     cursor: wait;
 }
 
-.gtbwait {
+.gtbwait{
     z-index: 2000;
     position: absolute;
     /*  De percentages zijn een grove benadering. */
     background-color: transparent;
     top: 45%;
     left: 45%;
- }
+}
+
+.gtbwaiticon:before{
+    font-family: "Glyphicons Halflings";
+    content: "";
+}
+
+.gtbwaiticon{
+    animation: 0.7s linear 0s normal none infinite running spin2;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
 
 .tekstveld{
     width: 75%;
@@ -143,7 +175,7 @@ input[type=checkbox]:after, .gtbcheckbox:after {
     width: 80%;
 }
 
-.gtb-xml-error {
+.gtb-xml-error{
     background-color: red;
 }
 
@@ -170,25 +202,26 @@ input[type=checkbox]:after, .gtbcheckbox:after {
     /*width: 40%;*/
 }
 
-div.gtb-results {
+div.gtb-results{
     font-family: gtb;
     height: 70vh;
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
 
-div.gtb-results i {
+div.gtb-results i{
     font-family: gtbi;
 }
 
-div.gtb-results b {
+div.gtb-results b{
     font-family: gtbb;
 }
 
-div.gtb-results i b,  div.gtb-results b i{
+div.gtb-results i b,
+div.gtb-results b i{
     font-family: gtbbi;
 }
 
-tr.gtb-result-row > td {
+tr.gtb-result-row > td{
     height: 3em;
     vertical-align: top;
 }
@@ -221,11 +254,11 @@ tr.gtb-result-row:nth-child(odd){
     color: blue;
 }
 
-.gtb-homoniemnr {
+.gtb-homoniemnr{
     vertical-align: super;
     font-size: 80%;
 }
 
-.gtb-pagineringsknoppen {
+.gtb-pagineringsknoppen{
     float: right;
 }

@@ -169,7 +169,7 @@
                         <!--<xsl:message>deactivate (does not exist)</xsl:message>-->
                         <div class="gtbwait">
                             <!-- TODO waarom draait het icoontje niet? Cf. https://www.bootply.com/128062 -->
-                            <button class="btn btn-lg btn-info"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>&#160;Even geduld a.u.b. ...</button>
+                            <button class="btn btn-lg btn-info"><span class="gtbwaiticon"/>&#160;Even geduld a.u.b. ...</button>
                         </div>
                     </xsl:result-document>
                 </xsl:otherwise>
