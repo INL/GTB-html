@@ -46,6 +46,20 @@
     display: inline;
 }
 
+.gtbdisabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+.gtbwait {
+    z-index: 2000;
+    position: absolute;
+    /*  De percentages zijn een grove benadering. */
+    background-color: transparent;
+    top: 45%;
+    left: 45%;
+ }
+
 .tekstveld{
     width: 75%;
     font-family: gtb;
@@ -99,6 +113,7 @@ td.speciaalteken:active{
     border-width: 1px;
 }
 
+/* We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.  */
 .gtbhidden{
     display: none;
 }
