@@ -66,7 +66,14 @@
 }
 
 .gtbwaiticon{
-    animation: 0.7s linear 0s normal none infinite running spin2;
+    animation-name: tolletje;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-direction:normal;
+    animation-iteration-count:infinite;
+    animation-play-state: running;
+    
     display: inline-block;
     font-style: normal;
     font-weight: 400;
@@ -75,20 +82,12 @@
     top: 1px;
 }
 
-@keyframes spin2 {
-    0% {
+@keyframes tolletje {
+    from {
         transform: rotate(0deg);
     }
-    100% {
+    to {
         transform: rotate(360deg);
-    }
-}
-@keyframes spin {
-    0% {
-        transform: scale(1) rotate(0deg);
-    }
-    100% {
-        transform: scale(1) rotate(360deg);
     }
 }
 
