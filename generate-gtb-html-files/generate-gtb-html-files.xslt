@@ -74,6 +74,13 @@
             <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>
             <script src="js/datatables.min.js" type="text/javascript"></script>
+            <!-- Tijdelijk uitgeschakeld, niet meer aangeroepen in gtb.xslt vanwege problemen. -->
+            <!--<!-\- gtbRandom() wordt in gtb.xslt aangeroepen om een URL uniek te maken teneinde caching tegen te gaan. -\->
+            <script type="text/javascript" xsl:expand-text="false">
+                function gtbRandom() {
+                    return Math.random();
+                }
+            </script>-->
                         
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
             <script type="text/javascript" src="saxonjs/SaxonJS.min.js"></script>
@@ -145,7 +152,7 @@
     
     <xsl:template match="ivdnt:woordsoorten" mode="ivdnt:html-mode">
         <div class="woordsoorten" id="{ivdnt:get-showhide-id(.)}">
-            <xsl:apply-templates mode="ivdnt:ivdnt"></xsl:apply-templates>
+            <xsl:apply-templates mode="ivdnt:ivdnt-woordsoort"></xsl:apply-templates>
         </div>
     </xsl:template>
     
@@ -154,7 +161,7 @@
         <xsl:value-of select="generate-id($element/ancestor-or-self::ivdnt:woordsoorten)"/>
     </xsl:function>
     
-    <xsl:template match="ivdnt:woordsoort" mode="ivdnt:ivdnt">
+    <xsl:template match="ivdnt:woordsoort" mode="ivdnt:ivdnt-woordsoort">
         <div data-hoofdwoordsoort="{@toon}">
             <p class="woordsoort" data-zoek="{@zoek}">
                 <xsl:choose>
@@ -173,6 +180,7 @@
                 </xsl:choose>
             </p> 
             <xsl:if test="ivdnt:woordsoortitemgroep">
+                <!-- We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.  -->
                 <div class="gtbhidden" data-showhidegroup="{ivdnt:get-showhide-id(.)}">
                     <table class="woordsoorttable">
                         <xsl:if test="ivdnt:woordsoortitemgroep/@label">
@@ -193,7 +201,7 @@
                                 <tr>
                                     <xsl:for-each select="1 to $numcols">
                                         <xsl:variable name="col" as="xs:integer" select="."/>
-                                        <td><xsl:apply-templates select="$context/ivdnt:woordsoortitemgroep[$col]/ivdnt:woordsoortitem[$row]" mode="ivdnt:ivdnt"/></td>
+                                        <td><xsl:apply-templates select="$context/ivdnt:woordsoortitemgroep[$col]/ivdnt:woordsoortitem[$row]" mode="ivdnt:ivdnt-woordsoort"/></td>
                                     </xsl:for-each>
                                 </tr>
                             </xsl:for-each>
@@ -204,7 +212,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="ivdnt:woordsoortitem" mode="ivdnt:ivdnt">
+    <xsl:template match="ivdnt:woordsoortitem" mode="ivdnt:ivdnt-woordsoort">
         <!--<label class="checkbox-custom checkbox-inline" data-initialize="checkbox" id="{@id}">
             <input class="sr-only" type="checkbox" name="{@id}" value="{@toon}"/> <span class="checkbox-label">{@toon}</span>
         </label>-->
@@ -225,7 +233,7 @@
                             <xsl:if test="xs:integer(current-grouping-key()) ge 1">
                                 <xsl:attribute name="class" select="'collapse out'"/>
                             </xsl:if>
-                            <xsl:apply-templates select="current-group()" mode="ivdnt:ivdnt"/>
+                            <xsl:apply-templates select="current-group()" mode="ivdnt:ivdnt-teken"/>
                             <xsl:if test="count(current-group()) lt $aantal-speciaal-teken-kolommen">
                                 <td colspan="{$aantal-speciaal-teken-kolommen - count(current-group())}">&#160;</td>
                             </xsl:if>
@@ -236,7 +244,7 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="ivdnt:teken" mode="ivdnt:ivdnt">
-        <td class="speciaalteken" data-dismiss="modal"><xsl:apply-templates mode="ivdnt:ivdnt"/></td>
+    <xsl:template match="ivdnt:teken" mode="ivdnt:ivdnt-teken">
+        <td class="speciaalteken" data-dismiss="modal"><xsl:apply-templates mode="ivdnt:ivdnt-teken"/></td>
     </xsl:template>
 </xsl:stylesheet>
