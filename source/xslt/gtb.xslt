@@ -91,6 +91,21 @@
         <xsl:sequence select="$tab-content/div[ivdnt:class-contains(@class, 'active')]"/>
     </xsl:function>
     
+    <xsl:function name="ivdnt:add-random-to-url" as="xs:string">
+        <xsl:param name="url" as="xs:string"/>
+        <!-- Uitgeschakeld, sinds deze toevoeging zien we in het console van Chrome steeds het volgende:
+            
+             Deprecation] Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.
+             
+             Tevens lijkt de applicatie bij het opvragen van een URL regelmatig te hangen.
+        -->
+        <!--<xsl:variable name="random" select="js:gtbRandom()" xmlns:js="http://saxonica.com/ns/globalJS"/>
+        <!-\- De %5F%5Flzbc%5F%5F (__lzbc__) is een erfenis van OpenLaszlo -\->
+        <xsl:variable name="param" select="'%5F%5Flzbc%5F%5F=' || encode-for-uri(string($random))"/>
+        <xsl:value-of select="if (contains($url, '?')) then substring-before($url, '?') || '?' || $param || '&amp;' || substring-after($url, '?') else $url || '?' || $param"/>-->
+        <xsl:value-of select="$url"/>
+    </xsl:function>
+    
     <xsl:template name="initialize">
         <!-- Nothing (yet) -->
     </xsl:template>
@@ -110,7 +125,10 @@
     </xsl:template>
     
     <xsl:template name="ivdnt:gtb-hide">
-        <!-- Huidige context is een div-element dat wordt ingeklapt. -->
+        <!-- Huidige context is een div-element dat wordt ingeklapt.
+             We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen
+             gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.
+        -->
         <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtbhidden')"/>
         <!-- Pas ook de de weergave aan van link die voor het inklappen zorgt: -->
         <xsl:call-template name="ivdnt:gtb-collapse"/>
@@ -132,24 +150,51 @@
         <xsl:param name="tabdiv" as="element(div)" required="yes"/>
         <xsl:for-each select="$tabdiv">
             <!-- Only one iteration -->
-            <xsl:message>deactivate {$tabdiv/@id}</xsl:message>
-            <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtb-disabled')"/>
-            <!-- Het toegevoegde HTML verdwijnt wanneer de tab weer geactiveerd wordt; dat gebeurt vanzelf omdat nu in alle gevallen de tab opnieuw gevuld wordt. -->
-            <xsl:result-document href="?." method="ixsl:append-content">
-                <p class="gtb-wait">
-                    <!-- TODO waarom draait het icoontje niet? Cf. https://www.bootply.com/128062 -->
-                    <button class="btn btn-lg btn-info"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>&#160;Even geduld a.u.b. ...</button>
-                </p>
-            </xsl:result-document>
+            <!--<xsl:message>deactivate id={@id}</xsl:message>-->
+            <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtbdisabled')"/>
+            
+            <!-- Genereer een div met de wait-button of maak hem zichtbaar. In eerste instantie genereerden we dit divje bij het maken van de HTML-file,
+                 maar aangezien de inhoud van de result-tabbladen weer opnieuw wordt gegenereerd, heeft dit daar geen zin:
+            -->
+            <xsl:variable name="waitdiv" as="element(div)?" select="div[ivdnt:class-contains(@class, 'gtbwait')]"/>
+            <xsl:choose>
+                <xsl:when test="$waitdiv">
+                    <!-- Show it: -->
+                    <!--<xsl:message>deactivate (exists), class={@class}</xsl:message>-->
+                    <xsl:for-each select="$waitdiv"><ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtbhidden')"/></xsl:for-each>
+                </xsl:when>
+                <xsl:otherwise>
+                    <!-- Create it: -->
+                    <xsl:result-document href="?." method="ixsl:append-content">
+                        <!--<xsl:message>deactivate (does not exist)</xsl:message>-->
+                        <div class="gtbwait">
+                            <!-- TODO waarom draait het icoontje niet? Cf. https://www.bootply.com/128062 -->
+                            <button class="btn btn-lg btn-info"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>&#160;Even geduld a.u.b. ...</button>
+                        </div>
+                    </xsl:result-document>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:for-each>
     </xsl:template>
     
     <xsl:template name="ivdnt:reactivate-tab">
         <xsl:param name="tabdiv" as="element(div)" required="yes"/>
         <xsl:for-each select="$tabdiv">
-            <xsl:message>reactivate {$tabdiv/@id}</xsl:message>
             <!-- Only one iteration -->
-            <ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtb-disabled')"/>
+            <!--<xsl:message>reactivate id={@id}</xsl:message>-->
+            <ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtbdisabled')"/>
+            
+            <!-- Maak de div met de wait-button onzichtbaar (vergelijk template deactivate-tab);
+                 als de content van de tab opnieuw gegenereerd is, doet dit niets (er is dan
+                 namelijk geen match meer). Onzichtbaar maken is makkelijker dan geheel weghalen,
+                 vandaar deze keuze.
+            -->
+            <xsl:for-each select="div[ivdnt:class-contains(@class, 'gtbwait')]">
+                <!-- Also, one iteration. -->
+                <!--<xsl:message>reactivate eerst class={@class}</xsl:message>-->
+                <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtbhidden')"/>
+                <!--<xsl:message>reactivate dan class={@class}</xsl:message>-->
+            </xsl:for-each>
         </xsl:for-each>
     </xsl:template>
     
@@ -191,17 +236,20 @@
         <xsl:param name="tabdiv-id" as="xs:string" required="yes"/>
         <xsl:param name="startline" as="xs:integer" required="yes"/>
         <xsl:param name="originating-tabdiv" as="element(div)" required="yes"/>
-                
+        
+        <xsl:variable name="randomized-url" select="ivdnt:add-random-to-url($url-for-content)" as="xs:string"/>
+        <!--<xsl:message select="'randomized-url' || $randomized-url"/>-->
+        
         <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
         <xsl:result-document href="{'#' || $tabdiv-id}" method="ixsl:replace-content">
             <xsl:if test="$showLinkToSearchResultXml">
                 <div>
                     <p>Dit is de uitgerekende URL:</p>
-                    <pre style="font-weight: bold"><a target="_blank" href="{$url-for-content}">{$url-for-content}</a></pre>
+                    <pre style="font-weight: bold"><a target="_blank" href="{$randomized-url}">{$randomized-url}</a></pre>
                 </div>    
             </xsl:if>
             
-            <xsl:apply-templates select="doc($url-for-content)" mode="render-results">
+            <xsl:apply-templates select="doc($randomized-url)" mode="render-results">
                 <xsl:with-param name="startline" select="$startline" as="xs:integer"/>
             </xsl:apply-templates>
             
