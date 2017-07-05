@@ -25,6 +25,12 @@
     <xsl:key name="showhidegroup-divs" match="div[@data-showhidegroup]" use="@data-showhidegroup"/>
     <xsl:key name="ids" match="*[@id]" use="@id"/>
     
+    <xsl:variable name="VISITED_URIS_PROPERTY" as="xs:string" select="'visited-uris'"/>
+    <xsl:variable name="URL_FOR_CONTENT_PROPERTY" as="xs:string" select="'url-for-content'"/>
+    <xsl:variable name="TEXT_INPUT_URI_PARAMS_PROPERTY" as="xs:string" select="'text-input-uri-params'"/>
+    <xsl:variable name="RESULT_TABDIV_ID_PROPERTY" as="xs:string" select="'result-tabdiv-id'"/>
+    <xsl:variable name="FOCUSSED_TEXTBOX_PROPERTY" as="xs:string" select="'focussed_textbox-id'"/>
+
     <xsl:include href="render-results.xslt"/>
     
     <xsl:function name="ivdnt:class-contains" as="xs:boolean">
@@ -83,7 +89,7 @@
         <xsl:param name="uri" as="xs:string" required="yes"/>
         <xsl:variable name="oldvalue" as="xs:string" select="ivdnt:get-visited-uris()"/>
         <xsl:variable name="newvalue" as="xs:string" select="string-join(distinct-values(($oldvalue, $uri)), ' ')"/>
-        <ixsl:set-property name="visited-uris" select="$newvalue" object="ixsl:page()"/>
+        <ixsl:set-property name="{$VISITED_URIS_PROPERTY}" select="$newvalue" object="ixsl:page()"/>
     </xsl:template>
     
     <xsl:function name="ivdnt:is-visited-uri" as="xs:boolean">
@@ -112,7 +118,7 @@
     
     <xsl:template name="initialize">
         <xsl:variable name="visited-uris" as="xs:string" select="''"/>
-        <ixsl:set-property name="visited-uris" select="$visited-uris" object="ixsl:page()"/>
+        <ixsl:set-property name="{$VISITED_URIS_PROPERTY}" select="$visited-uris" object="ixsl:page()"/>
     </xsl:template>
     
     <xsl:template name="ivdnt:gtb-collapse">
@@ -219,22 +225,11 @@
         <xsl:variable name="tabdiv-id" as="xs:string" select="substring-after($result-tab-title/a/@href, '#')"/>
         
         <!-- Save some info for use by pagination: -->
-        <ixsl:set-property name="url-for-content" select="$url-for-content" object="ixsl:page()"/>
-        <ixsl:set-property name="text-input-uri-params" select="$text-input-uri-params" object="ixsl:page()"/>
-        <ixsl:set-property name="result-tabdiv-id" select="$tabdiv-id" object="ixsl:page()"/>
+        <ixsl:set-property name="{$URL_FOR_CONTENT_PROPERTY}" select="$url-for-content" object="ixsl:page()"/>
+        <ixsl:set-property name="{$TEXT_INPUT_URI_PARAMS_PROPERTY}" select="$text-input-uri-params" object="ixsl:page()"/>
+        <ixsl:set-property name="{$RESULT_TABDIV_ID_PROPERTY}" select="$tabdiv-id" object="ixsl:page()"/>
         
         <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
-        <!--<xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$current-tab"/></xsl:call-template>
-
-        <ixsl:schedule-action document="{$url-for-content}" wait="0">
-            <xsl:call-template name="ivdnt:render-results">
-                <xsl:with-param name="url-for-content" select="$url-for-content"/>
-                <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
-                <xsl:with-param name="startline" select="1" as="xs:integer"/>
-                <xsl:with-param name="originating-tabdiv" select="$current-tab"/>
-                <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
-            </xsl:call-template>
-        </ixsl:schedule-action>-->
         
         <xsl:call-template name="ivdnt:show-results">
             <xsl:with-param name="url-for-content" select="$url-for-content"/>
@@ -423,25 +418,13 @@
     </xsl:template>
     
     <xsl:template match="a[@data-startline]" mode="ixsl:onclick">
-        <xsl:variable name="url-for-content" as="xs:string" select="ixsl:get(ixsl:page(), 'url-for-content')"/>
-        <xsl:variable name="text-input-uri-params" as="xs:string" select="ixsl:get(ixsl:page(), 'text-input-uri-params')"/>
-        <xsl:variable name="tabdiv-id" as="xs:string" select="ixsl:get(ixsl:page(), 'result-tabdiv-id')"/>
+        <xsl:variable name="url-for-content" as="xs:string" select="ixsl:get(ixsl:page(), $URL_FOR_CONTENT_PROPERTY)"/>
+        <xsl:variable name="text-input-uri-params" as="xs:string" select="ixsl:get(ixsl:page(), $TEXT_INPUT_URI_PARAMS_PROPERTY)"/>
+        <xsl:variable name="tabdiv-id" as="xs:string" select="ixsl:get(ixsl:page(), $RESULT_TABDIV_ID_PROPERTY)"/>
         
         <xsl:variable name="url" as="xs:string" select="$url-for-content || '&amp;start=' || @data-startline"/>
         
         <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
-        <!--<xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$current-tab"/></xsl:call-template>
-        
-        <!-\-<xsl:message select="'url=' || $url || ', startline=' || @data-startline"/>-\->
-        <ixsl:schedule-action document="{$url}" wait="0">
-            <xsl:call-template name="ivdnt:render-results">
-                <xsl:with-param name="url-for-content" select="$url"/>
-                <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
-                <xsl:with-param name="startline" select="@data-startline" as="xs:integer"/>
-                <xsl:with-param name="originating-tabdiv" select="$current-tab"/>
-                <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
-            </xsl:call-template>
-        </ixsl:schedule-action>-->
         
         <xsl:call-template name="ivdnt:show-results">
             <xsl:with-param name="url-for-content" select="$url"/>
@@ -482,15 +465,9 @@
     </xsl:template>
     
     <xsl:template match="td[ivdnt:class-contains(@class, 'speciaalteken')]" mode="ixsl:onclick">
-       <!-- <xsl:variable name="target-input-name" as="xs:string" select="ancestor::div[@data-target-input][1]/@data-target-input"/>
-        <xsl:variable name="target-input" as="element(input)" select="ivdnt:get-target-input($target-input-name)"/>
-        <xsl:variable name="target-input-value" as="xs:string" select="ivdnt:input-value($target-input)"/>
-        
-        <ixsl:set-property name="value" select="$target-input-value || text()" object="$target-input"/>-->
-        
         <xsl:variable name="char" as="xs:string" select="text()"/>
         
-        <xsl:variable name="focussed-textbox" as="element(input)?" select="ixsl:get(ixsl:page(), 'focussed_textbox')"/>
+        <xsl:variable name="focussed-textbox" as="element(input)?" select="ixsl:get(ixsl:page(), $FOCUSSED_TEXTBOX_PROPERTY)"/>
         <xsl:variable name="textbox" as="element(input)" select="if ($focussed-textbox) then $focussed-textbox else following::input[@type eq 'text'][1]"/>
         <xsl:if test="$textbox">
             <!-- We laten het type achterwege bij selStart en selEnd. In Chrome is het double, is dat overal zo? Je zou integer verwachten. -->
@@ -508,6 +485,6 @@
     
     <xsl:template match="input[@type eq 'text']" mode="ixsl:onfocusin">
         <!--<xsl:message select="'Text box with name ' || @name || ' just received focus'"/>-->
-        <ixsl:set-property name="focussed_textbox" select="." object="ixsl:page()"/>
+        <ixsl:set-property name="{$FOCUSSED_TEXTBOX_PROPERTY}" select="." object="ixsl:page()"/>
     </xsl:template>
 </xsl:stylesheet>
