@@ -84,7 +84,9 @@
                         stylesheetParams: {
                              baseArticleURL: "http://gtb.inl.nl/iWDB/search?actie=article",
                              baseSearchURL: "../redirect.php?actie=results",
-                             XXXXXbaseSearchURL: "http://gtb.inl.nl/iWDB/search?actie=results"
+                             XXXXXbaseSearchURL: "http://gtb.inl.nl/iWDB/search?actie=results",
+                             baseListURL: "../redirect.php?actie=list",
+                             XXXXXbaseListURL: "http://gtb.inl.nl/iWDB/search?actie=list"
                         }
                     });
                 }
