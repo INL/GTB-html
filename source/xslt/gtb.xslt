@@ -91,21 +91,6 @@
         <xsl:sequence select="$tab-content/div[ivdnt:class-contains(@class, 'active')]"/>
     </xsl:function>
     
-    <xsl:function name="ivdnt:add-random-to-url" as="xs:string">
-        <xsl:param name="url" as="xs:string"/>
-        <!-- Uitgeschakeld, sinds deze toevoeging zien we in het console van Chrome steeds het volgende:
-            
-             Deprecation] Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.
-             
-             Tevens lijkt de applicatie bij het opvragen van een URL regelmatig te hangen.
-        -->
-        <!--<xsl:variable name="random" select="js:gtbRandom()" xmlns:js="http://saxonica.com/ns/globalJS"/>
-        <!-\- De %5F%5Flzbc%5F%5F (__lzbc__) is een erfenis van OpenLaszlo -\->
-        <xsl:variable name="param" select="'%5F%5Flzbc%5F%5F=' || encode-for-uri(string($random))"/>
-        <xsl:value-of select="if (contains($url, '?')) then substring-before($url, '?') || '?' || $param || '&amp;' || substring-after($url, '?') else $url || '?' || $param"/>-->
-        <xsl:value-of select="$url"/>
-    </xsl:function>
-    
     <xsl:template name="initialize">
         <!-- Nothing (yet) -->
     </xsl:template>
@@ -237,19 +222,16 @@
         <xsl:param name="startline" as="xs:integer" required="yes"/>
         <xsl:param name="originating-tabdiv" as="element(div)" required="yes"/>
         
-        <xsl:variable name="randomized-url" select="ivdnt:add-random-to-url($url-for-content)" as="xs:string"/>
-        <!--<xsl:message select="'randomized-url' || $randomized-url"/>-->
-        
         <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
         <xsl:result-document href="{'#' || $tabdiv-id}" method="ixsl:replace-content">
             <xsl:if test="$showLinkToSearchResultXml">
                 <div>
                     <p>Dit is de uitgerekende URL:</p>
-                    <pre style="font-weight: bold"><a target="_blank" href="{$randomized-url}">{$randomized-url}</a></pre>
+                    <pre style="font-weight: bold"><a target="_blank" href="{$url-for-content}">{$url-for-content}</a></pre>
                 </div>    
             </xsl:if>
             
-            <xsl:apply-templates select="doc($randomized-url)" mode="render-results">
+            <xsl:apply-templates select="doc($url-for-content)" mode="render-results">
                 <xsl:with-param name="startline" select="$startline" as="xs:integer"/>
             </xsl:apply-templates>
             

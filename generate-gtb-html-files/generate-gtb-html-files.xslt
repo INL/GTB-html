@@ -73,13 +73,6 @@
             <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>
             <script src="js/datatables.min.js" type="text/javascript"></script>
-            <!-- Tijdelijk uitgeschakeld, niet meer aangeroepen in gtb.xslt vanwege problemen. -->
-            <!--<!-\- gtbRandom() wordt in gtb.xslt aangeroepen om een URL uniek te maken teneinde caching tegen te gaan. -\->
-            <script type="text/javascript" xsl:expand-text="false">
-                function gtbRandom() {
-                    return Math.random();
-                }
-            </script>-->
                         
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
             <script type="text/javascript" src="saxonjs/SaxonJS.min.js"></script>
