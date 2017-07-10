@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><ivdnt:specialetekens xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+   <ivdnt:teken>ä</ivdnt:teken> <!-- &#x00E4; -->
+   <ivdnt:teken>ë</ivdnt:teken> <!-- &#x00EB; -->
+   <ivdnt:teken>ï</ivdnt:teken> <!-- &#x00EF; -->
+   <ivdnt:teken>ö</ivdnt:teken> <!-- &#x00F6; -->
+   <ivdnt:teken>ü</ivdnt:teken> <!-- &#x00FC; -->
+   <ivdnt:teken>á</ivdnt:teken> <!-- &#x00E1; -->
+   <ivdnt:teken>é</ivdnt:teken> <!-- &#x00E9; -->
+   <ivdnt:teken>í</ivdnt:teken> <!-- &#x00ED; -->
+   <ivdnt:teken>ó</ivdnt:teken> <!-- &#x00F3; -->
+   <ivdnt:teken>ú</ivdnt:teken> <!-- &#x00FA; -->   
    <ivdnt:teken>À</ivdnt:teken> <!-- &#x00C0; -->
    <ivdnt:teken>Á</ivdnt:teken> <!-- &#x00C1; -->
    <ivdnt:teken>Â</ivdnt:teken> <!-- &#x00C2; -->
@@ -25,33 +35,23 @@
    <ivdnt:teken>Ü</ivdnt:teken> <!-- &#x00DC; -->
    <ivdnt:teken>ß</ivdnt:teken> <!-- &#x00DF; -->
    <ivdnt:teken>à</ivdnt:teken> <!-- &#x00E0; -->
-   <ivdnt:teken>á</ivdnt:teken> <!-- &#x00E1; -->
    <ivdnt:teken>â</ivdnt:teken> <!-- &#x00E2; -->
    <ivdnt:teken>ã</ivdnt:teken> <!-- &#x00E3; -->
-   <ivdnt:teken>ä</ivdnt:teken> <!-- &#x00E4; -->
    <ivdnt:teken>å</ivdnt:teken> <!-- &#x00E5; -->
    <ivdnt:teken>æ</ivdnt:teken> <!-- &#x00E6; -->
    <ivdnt:teken>ç</ivdnt:teken> <!-- &#x00E7; -->
    <ivdnt:teken>è</ivdnt:teken> <!-- &#x00E8; -->
-   <ivdnt:teken>é</ivdnt:teken> <!-- &#x00E9; -->
    <ivdnt:teken>ê</ivdnt:teken> <!-- &#x00EA; -->
-   <ivdnt:teken>ë</ivdnt:teken> <!-- &#x00EB; -->
    <ivdnt:teken>ì</ivdnt:teken> <!-- &#x00EC; -->
-   <ivdnt:teken>í</ivdnt:teken> <!-- &#x00ED; -->
    <ivdnt:teken>î</ivdnt:teken> <!-- &#x00EE; -->
-   <ivdnt:teken>ï</ivdnt:teken> <!-- &#x00EF; -->
    <ivdnt:teken>ð</ivdnt:teken> <!-- &#x00F0; -->
    <ivdnt:teken>ñ</ivdnt:teken> <!-- &#x00F1; -->
    <ivdnt:teken>ò</ivdnt:teken> <!-- &#x00F2; -->
-   <ivdnt:teken>ó</ivdnt:teken> <!-- &#x00F3; -->
    <ivdnt:teken>ô</ivdnt:teken> <!-- &#x00F4; -->
    <ivdnt:teken>õ</ivdnt:teken> <!-- &#x00F5; -->
-   <ivdnt:teken>ö</ivdnt:teken> <!-- &#x00F6; -->
    <ivdnt:teken>ø</ivdnt:teken> <!-- &#x00F8; -->
    <ivdnt:teken>ù</ivdnt:teken> <!-- &#x00F9; -->
-   <ivdnt:teken>ú</ivdnt:teken> <!-- &#x00FA; -->
    <ivdnt:teken>û</ivdnt:teken> <!-- &#x00FB; -->
-   <ivdnt:teken>ü</ivdnt:teken> <!-- &#x00FC; -->
    <ivdnt:teken>ý</ivdnt:teken> <!-- &#x00FD; -->
    <ivdnt:teken>þ</ivdnt:teken> <!-- &#x00FE; -->
    <ivdnt:teken>ÿ</ivdnt:teken> <!-- &#x00FF; -->
