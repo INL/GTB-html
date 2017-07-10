@@ -101,8 +101,19 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="node() | @*" mode="ivdnt:html-mode">
+    <!-- De gebruiker hoeft mijn geneuzel niet te zien... -->
+    <xsl:template match="comment()" mode="#all"/>
+    
+    <xsl:template match="node() | @*" mode="ivdnt:html-mode" priority="-1">
         <xsl:copy><xsl:apply-templates select="node() | @*" mode="#current"/></xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="ivdnt:formulier" mode="ivdnt:html-mode">
+        <div>
+            <xsl:apply-templates select="node() | @*" mode="ivdnt:html-mode"/>
+        </div>
+        <!--  Als het formulier modals heeft, plaats deze dan erachter. -->
+        <xsl:apply-templates select=".//ivdnt:modal" mode="ivdnt:modal-mode"/>
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierregel" mode="ivdnt:html-mode">
@@ -240,5 +251,21 @@
     
     <xsl:template match="ivdnt:teken" mode="ivdnt:ivdnt-teken">
         <td class="speciaalteken" data-dismiss="modal"><xsl:apply-templates mode="ivdnt:ivdnt-teken"/></td>
+    </xsl:template>
+    
+    <xsl:template match="ivdnt:sorteeropties" mode="ivdnt:html-mode">
+        <!-- TODO Wanneer zijn welke opties enabled/disabled?
+             TODO De opties zijn afhandelijk van de aard van het resultaat, dus waarschijnlijk dynamisch bepalen.
+             
+             De technische sleutelnamen, zoals "hits","wdb","mdl","lemma","woordsoort", zijn afkomstig uit Sorteren.lzx
+        -->
+        <select name="{@name}" class="form-control">
+            <option value=""></option>
+            <option value="wdb">Woordenboek</option>
+            <option value="hits">Aantal concordanties</option>
+            <option value="mdl">Mod. Ned. trefwoord</option>
+            <option value="lemma">Origineel trefwoord</option>
+            <option value="woordsoort">Woordsoort</option>
+        </select>
     </xsl:template>
 </xsl:stylesheet>

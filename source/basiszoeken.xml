@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div class="basiszoeken-formulier" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<ivdnt:formulier class="basiszoeken-formulier" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <ivdnt:formulierregel>
         <ivdnt:bronselectors/>
     </ivdnt:formulierregel>
@@ -64,4 +64,4 @@
         <ivdnt:formulierlabel><a href="*** iets ***">Help</a></ivdnt:formulierlabel>
         <ivdnt:include href="basiszoeken-buttons.xml"/>
     </ivdnt:formulierregel>
-</div>
+</ivdnt:formulier>

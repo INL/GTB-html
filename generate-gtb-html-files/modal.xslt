@@ -5,19 +5,14 @@
     expand-text="yes"
     version="3.0">
     
-    <xsl:template match="div[.//ivdnt:modal and not(.//div)]" mode="ivdnt:html-mode">
-        <xsl:copy>
-            <xsl:apply-templates select="@* | node()" mode="ivdnt:html-mode"/>
-        </xsl:copy>
-        <xsl:apply-templates select=".//ivdnt:modal" mode="ivdnt:modal-mode"/>
-    </xsl:template>
-    
     <xsl:template match="ivdnt:modal" mode="ivdnt:html-mode">
         <xsl:apply-templates select="ivdnt:modaltrigger/node()" mode="ivdnt:modal-mode"/>
     </xsl:template>
     
     <xsl:template match="ivdnt:modal" mode="ivdnt:modal-mode">
-        <div id="{generate-id()}" data-modaltype="{@type}" data-target-input="{@target-input}">
+        <div id="{generate-id()}">
+            <xsl:if test="@type"><xsl:attribute name="data-modaltype" select="@type"/></xsl:if>
+            <xsl:if test="@target-input"><xsl:attribute name="data-target-input" select="@target-input"/></xsl:if>
             <xsl:copy-of select="ivdnt:add-class-values(@class, 'modal')"/>
             <div class="modal-dialog">
                 <div class="modal-content">

@@ -20,6 +20,7 @@
     </xsl:function>
     
     <xsl:template match="results" mode="render-results">
+        <xsl:param name="html" as="element(html)" required="yes"/>
         <xsl:param name="startline" as="xs:integer" required="yes"/>
         <div class="gtb-results">
             <xsl:apply-templates select="statistics" mode="render-results"/>
@@ -47,6 +48,7 @@
                     <xsl:apply-templates select="result" mode="render-results"/>
                 </tbody>
             </table>
+            <xsl:copy-of select="$html/key('ids', 'resultaatknoppen')"/>
         </div>
         <div class="dataTables_paginate paging_simple_numbers gtb-pagineringsknoppen" id="gtb-result-table_paginate">
             <ul class="pagination">
@@ -71,6 +73,7 @@
                 }
             } );
         </script>
+        
     </xsl:template>
     
     <xsl:template name="ivdnt:gen-pagination">

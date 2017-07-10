@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivdnt:formulier class="gtb-resultaatknoppen" id="resultaatknoppen" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <div class="col-md-2">
+        <ivdnt:modal type="sorteren" suppress-ok-button="true">
+            <ivdnt:modaltrigger><button type="button" class="sorteerknop btn btn-secondary">Sorteren...</button></ivdnt:modaltrigger>
+            <ivdnt:modalcontent>
+                <ivdnt:modaltitle><h4 class="modal-title">Sorteren tussenresultaat</h4></ivdnt:modaltitle>
+                <p class="row"><label class="col-md-6" for="sleutel1">Eerste sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel1"/></span></p>
+                <p class="row"><label class="col-md-6" for="sleutel2">Tweede sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel2"/></span></p>
+                <p class="row"><label class="col-md-6" for="sleutel3">Derde sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel3"/></span></p>
+                <p class="row"><label class="col-md-6" for="sleutel4">Vierde sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel4"/></span></p>
+                <p class="row">
+                    <label class="col-md-6" for="xx">Sorteren</label>
+                    <span class="col-md-6">
+                        <input name="sorteervolgorde" type="radio" value="oplopend" checked="checked" class="radio-inline"/> oplopend
+                        <input name="sorteervolgorde" type="radio" value="aflopend" class="radio-inline"/> aflopend
+                    </span>
+                </p>
+                <div class="modal-footer">
+                    <p class="row">
+                        <button type="button" name="doe-sorteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="{ancestor::ivdnt:modal/@type}">Sorteren</button>
+                        <button type="button" name="wis-sorteren" class="btn btn-secondary">Wissen</button>
+                        <button type="button" name="annuleer-sorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
+                    </p>
+                </div>
+            </ivdnt:modalcontent>
+        </ivdnt:modal>
+    </div>
+    
+    <div class="col-md-2"><button class="btn btn-secondary" name="exporteren">Exporteren</button></div>
+    <div class="col-md-2"><button class="btn btn-secondary" name="afdrukken">Afdrukken</button></div>
+    <div class="col-md-6"></div>
+</ivdnt:formulier>

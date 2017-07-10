@@ -144,6 +144,11 @@ td.speciaalteken:active{
     border-width: 1px;
 }
 
+.gtb-resultaatknoppen {
+   margin-top: 1em;
+   margin-bottom: 1em; 
+}
+
 /* We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.  */
 .gtbhidden{
     display: none;
@@ -260,4 +265,9 @@ tr.gtb-result-row:nth-child(odd){
 
 .gtb-pagineringsknoppen{
     float: right;
+}
+
+/*  Verberg de resultaatknoppen in de auxiliaries-sectie, maar toon ze wanneer ze worden opgeroepen in de content. */
+.auxiliaries > .gtb-resultaatknoppen {
+    display: none;
 }

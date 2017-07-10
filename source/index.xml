@@ -36,5 +36,9 @@
                 </div>
             </div>
         </div>
+        <div class="auxiliaries">
+            <!-- Verborgen hulpstukken -->            
+            <ivdnt:include href="resultaatknoppen.xml"/>
+        </div>
     </body>
 </html>

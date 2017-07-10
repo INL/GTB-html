@@ -31,6 +31,8 @@
     <xsl:variable name="URL_FOR_CONTENT_PROPERTY" as="xs:string" select="'url-for-content'"/>
     <xsl:variable name="TEXT_INPUT_URI_PARAMS_PROPERTY" as="xs:string" select="'text-input-uri-params'"/>
     <xsl:variable name="RESULT_TABDIV_ID_PROPERTY" as="xs:string" select="'result-tabdiv-id'"/>
+    <xsl:variable name="RESULT_SORTKEYS_PROPERTY" as="xs:string" select="'result-sortkeys'"/>
+    <xsl:variable name="RESULT_SORTREVERSE_PROPERTY" as="xs:string" select="'result-sortreverse'"/>
     <xsl:variable name="FOCUSSED_TEXTBOX_PROPERTY" as="xs:string" select="'focussed_textbox-id'"/>
     <xsl:variable name="BASISZOEKEN_FORMULIER_CLASS" as="xs:string" select="'basiszoeken-formulier'"/>
 
@@ -72,9 +74,14 @@
         <xsl:sequence select="ixsl:get($input, 'checked')"/>
     </xsl:function>
     
-    <xsl:function name="ivdnt:input-value" as="xs:string">
+    <xsl:function name="ivdnt:get-input-value" as="xs:string">
         <xsl:param name="input" as="element(input)"/>
         <xsl:sequence select="ixsl:get($input, 'value')"/>
+    </xsl:function>
+    
+    <xsl:function name="ivdnt:get-select-value" as="xs:string">
+        <xsl:param name="select" as="element(select)"/>
+        <xsl:sequence select="ixsl:get($select, 'value')"/>
     </xsl:function>
     
     <xsl:template name="ivdnt:uncheck">
@@ -231,6 +238,8 @@
         <ixsl:set-property name="{$URL_FOR_CONTENT_PROPERTY}" select="$url-for-content" object="ixsl:page()"/>
         <ixsl:set-property name="{$TEXT_INPUT_URI_PARAMS_PROPERTY}" select="$text-input-uri-params" object="ixsl:page()"/>
         <ixsl:set-property name="{$RESULT_TABDIV_ID_PROPERTY}" select="$tabdiv-id" object="ixsl:page()"/>
+        <ixsl:set-property name="{$RESULT_SORTKEYS_PROPERTY}" select="''" object="ixsl:page()"/>
+        <ixsl:set-property name="{$RESULT_SORTREVERSE_PROPERTY}" select="'false'" object="ixsl:page()"/>
         
         <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
         
@@ -250,7 +259,8 @@
         <xsl:param name="originating-tabdiv" as="element(div)" required="yes"/>
         <xsl:param name="text-input-uri-params" as="xs:string" required="no" tunnel="yes"/>
         
-        <xsl:if test="not(ivdnt:is-visited-uri($url-for-content))"><xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></xsl:if>
+        <!--<xsl:if test="not(ivdnt:is-visited-uri($url-for-content))"><xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></xsl:if>-->
+        <xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template>
         
         <ixsl:schedule-action document="{$url-for-content}" wait="0">
             <xsl:call-template name="ivdnt:render-results">
@@ -271,7 +281,7 @@
         <xsl:param name="text-input-uri-params" as="xs:string" required="yes" tunnel="yes"/>
         
         <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
-        <xsl:result-document href="{'#' || $tabdiv-id}" method="ixsl:replace-content">
+        <xsl:result-document href="#resultaathouder" method="ixsl:replace-content">
             <xsl:if test="$showLinkToSearchResultXml">
                 <div>
                     <p>Dit is de uitgerekende URL:</p>
@@ -280,6 +290,7 @@
             </xsl:if>
             
             <xsl:apply-templates select="doc($url-for-content)" mode="render-results">
+                <xsl:with-param name="html" select="/html"/>
                 <xsl:with-param name="startline" select="$startline" as="xs:integer"/>
             </xsl:apply-templates>
             
@@ -291,7 +302,8 @@
             </xsl:for-each>
         </xsl:result-document>
         
-        <xsl:if test="not(ivdnt:is-visited-uri($url-for-content))"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></xsl:if>
+        <!--<xsl:if test="not(ivdnt:is-visited-uri($url-for-content))"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></xsl:if>-->
+        <ixsl:schedule-action wait="100"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></ixsl:schedule-action>
         
         <xsl:call-template name="ivdnt:add-visited-uri">
             <xsl:with-param name="uri" select="$url-for-content"/>
@@ -327,7 +339,7 @@
         <xsl:variable name="topdiv" select="$context/ancestor::div[@data-modaltype eq 'basiszoeken-woordsoort'][1]"/>
         <xsl:variable name="values" as="xs:string*">
             <xsl:for-each select="$topdiv//div[@data-hoofdwoordsoort][.//input[ivdnt:is-checked(.)]]">
-                <xsl:variable name="input-values" as="xs:string+" select="for $i in .//input[ivdnt:is-checked(.)] return ivdnt:input-value($i)"/>
+                <xsl:variable name="input-values" as="xs:string+" select="for $i in .//input[ivdnt:is-checked(.)] return ivdnt:get-input-value($i)"/>
                 <xsl:variable name="input-values-joined" as="xs:string" select="string-join($input-values, '|')"/>
                 <xsl:variable name="input-values-searchstring" as="xs:string" select="if ($input-values-joined eq '') then '' else '&lt;' || $input-values-joined || '&gt;'"/>
 
@@ -345,7 +357,7 @@
         <xsl:variable name="values" as="xs:string*">
             <xsl:for-each select="$topdiv//input[@type eq 'text']">
                 <xsl:variable name="name" as="xs:string" select="@name"/>
-                <xsl:variable name="value" as="xs:string" select="normalize-space(ivdnt:input-value(.))"/>
+                <xsl:variable name="value" as="xs:string" select="normalize-space(ivdnt:get-input-value(.))"/>
                 <xsl:sequence select="if ($value eq '') then () else $name || '=' || encode-for-uri($value)"/>
             </xsl:for-each>
         </xsl:variable>
@@ -385,7 +397,7 @@
         <xsl:param name="current-textfield" as="element(input)"/>
         <xsl:variable name="wdb-inputs" as="xs:string" select="ivdnt:get-wdb-inputs-for-url($topdiv)"/>
         <xsl:variable name="sensitivity" as="xs:string" select="ivdnt:get-sensitivity-for-url($topdiv)"/>
-        <xsl:variable name="prefix" as="xs:string" select="encode-for-uri(ivdnt:input-value($current-textfield))"/>
+        <xsl:variable name="prefix" as="xs:string" select="encode-for-uri(ivdnt:get-input-value($current-textfield))"/>
         <!-- TODO dynamically determine other-params. -->
         <xsl:variable name="other-params" as="xs:string" select="'&amp;xmlerror=true'"/>
         <xsl:value-of select="$baseListURL || $other-params || '&amp;prefix=' || $prefix || '&amp;index=' || $current-textfield/@name || '&amp;wdb=' || $wdb-inputs || '&amp;' || $sensitivity"/>
@@ -397,12 +409,14 @@
     </xsl:function>
     
     <xsl:template match="button[@data-dismiss eq 'modal' and not(ivdnt:class-contains(@class, 'close'))]" mode="ixsl:onclick">
-        <xsl:variable name="target-input-name" as="xs:string" select="ancestor::div[@data-target-input][1]/@data-target-input"/>
-        <xsl:variable name="target-input" as="element(input)" select="ivdnt:get-target-input($target-input-name)"/>
-        <xsl:variable name="target-input-value" as="xs:string" select="ivdnt:input-value($target-input)"/>
-        <xsl:variable name="target-input-value" as="xs:string" select="if ($target-input-value eq '') then '' else $target-input-value || ' '"/>
-
-        <ixsl:set-property name="value" select="$target-input-value || ivdnt:woordsoortvalue(.)" object="$target-input"/>
+        <xsl:variable name="target-input-name" as="xs:string?" select="ancestor::div[@data-target-input][1]/@data-target-input"/>
+        <xsl:if test="$target-input-name">
+            <xsl:variable name="target-input" as="element(input)" select="ivdnt:get-target-input($target-input-name)"/>
+            <xsl:variable name="target-input-value" as="xs:string" select="ivdnt:get-input-value($target-input)"/>
+            <xsl:variable name="target-input-value" as="xs:string" select="if ($target-input-value eq '') then '' else $target-input-value || ' '"/>
+            
+            <ixsl:set-property name="value" select="$target-input-value || ivdnt:woordsoortvalue(.)" object="$target-input"/>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="button[ivdnt:class-contains(@class, 'woordsoortassistentieknop')]" mode="ixsl:onclick">
@@ -431,8 +445,19 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="a[@data-startline]" mode="ixsl:onclick">
+    <xsl:function name="ivdnt:get-url-for-content" as="xs:string">
         <xsl:variable name="url-for-content" as="xs:string" select="ixsl:get(ixsl:page(), $URL_FOR_CONTENT_PROPERTY)"/>
+        <xsl:variable name="sortkeys" as="xs:string" select="ixsl:get(ixsl:page(), $RESULT_SORTKEYS_PROPERTY)"/>
+        <xsl:choose>
+            <xsl:when test="$sortkeys ne ''">
+                <xsl:value-of select="$url-for-content || '&amp;sort=' || encode-for-uri($sortkeys) || '&amp;reverse=' || ixsl:get(ixsl:page(), $RESULT_SORTREVERSE_PROPERTY)"/>
+            </xsl:when>
+            <xsl:otherwise><xsl:value-of select="$url-for-content"/></xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+    
+    <xsl:template match="a[@data-startline]" mode="ixsl:onclick">
+        <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content()"/>
         <xsl:variable name="text-input-uri-params" as="xs:string" select="ixsl:get(ixsl:page(), $TEXT_INPUT_URI_PARAMS_PROPERTY)"/>
         <xsl:variable name="tabdiv-id" as="xs:string" select="ixsl:get(ixsl:page(), $RESULT_TABDIV_ID_PROPERTY)"/>
         
@@ -461,6 +486,44 @@
         <xsl:for-each select="$topdiv//input[@type eq 'text']">
             <ixsl:set-property name="value" select="''" object="."/>
         </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="button[@name eq 'wis-sorteren']" mode="ixsl:onclick">
+        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@data-modaltype eq 'sorteren'][1]"/>
+        <xsl:for-each select="$topdiv//select">
+            <ixsl:set-property name="value" select="option[1]/@value" object="."/>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="button[@name eq 'doe-sorteren']" mode="ixsl:onclick">
+        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@data-modaltype eq 'sorteren'][1]"/>
+        <xsl:variable name="keys" as="xs:string*" select="for $select in $topdiv//select return ivdnt:get-select-value($select)[. ne '']"/>
+        <xsl:variable name="value-of-reserved-input" as="xs:string" select="ivdnt:get-input-value($topdiv//input[@name eq 'sorteervolgorde' and ivdnt:is-checked(.)])"/>
+        <xsl:variable name="reversed" as="xs:string" select="if ($value-of-reserved-input eq 'aflopend') then 'true' else 'false'"/>
+        
+        <xsl:choose>
+            <xsl:when test="count($keys) gt 0">
+                <ixsl:set-property name="{$RESULT_SORTKEYS_PROPERTY}" select="string-join($keys, ',')" object="ixsl:page()"/>
+                <ixsl:set-property name="{$RESULT_SORTREVERSE_PROPERTY}" select="$reversed"  object="ixsl:page()"/>
+            </xsl:when>
+        </xsl:choose>
+        
+        <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content()"/>
+        <xsl:variable name="text-input-uri-params" as="xs:string" select="ixsl:get(ixsl:page(), $TEXT_INPUT_URI_PARAMS_PROPERTY)"/>
+
+        <!-- We kunnen current-tab niet berekenen met ivdnt:get-active-tabdiv() omdat we in de auxiliaries-div zitten en niet binnen
+             een echte tab.
+        -->
+        <xsl:variable name="current-tab" as="element(div)" select="key('ids', 'resultaathouder')/parent::div"/>
+        <xsl:variable name="tabdiv-id" as="xs:string" select="$current-tab/@id"/>
+        
+        <xsl:call-template name="ivdnt:show-results">
+            <xsl:with-param name="url-for-content" select="$url-for-content"/>
+            <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
+            <xsl:with-param name="startline" select="1" as="xs:integer"/>
+            <xsl:with-param name="originating-tabdiv" select="$current-tab"/>
+            <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
+        </xsl:call-template>
     </xsl:template>
     
     <xsl:template match="input[@name eq 'toon-tekens']" mode="ixsl:onclick">
@@ -502,8 +565,8 @@
         <ixsl:set-property name="{$FOCUSSED_TEXTBOX_PROPERTY}" select="." object="ixsl:page()"/>
     </xsl:template>
     
-    <xsl:template match="input[@type eq 'text']" mode="ixsl:oninput">
+    <!--<xsl:template match="input[@type eq 'text']" mode="ixsl:oninput">
         <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $BASISZOEKEN_FORMULIER_CLASS)][1]"/>
         <xsl:message select="'text=' || ivdnt:input-value(.) || ',url=' || ivdnt:get-typeahead-url($topdiv, .)"/>        
-    </xsl:template>
+    </xsl:template>-->
 </xsl:stylesheet>

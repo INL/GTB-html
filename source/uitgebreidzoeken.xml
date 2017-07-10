@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<ivdnt:formulier xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <p>TODO</p>
     <!--<ivdnt:tabs>
         <ivdnt:tab>
@@ -11,4 +11,4 @@
             <p>This is another nested tab</p>
         </ivdnt:tab>
     </ivdnt:tabs>-->
-</div>
+</ivdnt:formulier>
