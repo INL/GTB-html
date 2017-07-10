@@ -1,131 +1,130 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ivdnt:specialetekens xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-   <ivdnt:teken>&#x00C0;</ivdnt:teken>
-   <ivdnt:teken>&#x00C1;</ivdnt:teken>
-   <ivdnt:teken>&#x00C2;</ivdnt:teken>
-   <ivdnt:teken>&#x00C4;</ivdnt:teken>
-   <ivdnt:teken>&#x00C5;</ivdnt:teken>
-   <ivdnt:teken>&#x00C6;</ivdnt:teken>
-   <ivdnt:teken>&#x00C7;</ivdnt:teken>
-   <ivdnt:teken>&#x00C8;</ivdnt:teken>
-   <ivdnt:teken>&#x00C9;</ivdnt:teken>
-   <ivdnt:teken>&#x00CA;</ivdnt:teken>
-   <ivdnt:teken>&#x00CB;</ivdnt:teken>
-   <ivdnt:teken>&#x00CC;</ivdnt:teken>
-   <ivdnt:teken>&#x00CD;</ivdnt:teken>
-   <ivdnt:teken>&#x00CE;</ivdnt:teken>
-   <ivdnt:teken>&#x00CF;</ivdnt:teken>
-   <ivdnt:teken>&#x00D1;</ivdnt:teken>
-   <ivdnt:teken>&#x00D2;</ivdnt:teken>
-   <ivdnt:teken>&#x00D3;</ivdnt:teken>
-   <ivdnt:teken>&#x00D4;</ivdnt:teken>
-   <ivdnt:teken>&#x00D6;</ivdnt:teken>
-   <ivdnt:teken>&#x00D8;</ivdnt:teken>
-   <ivdnt:teken>&#x00D9;</ivdnt:teken>
-   <ivdnt:teken>&#x00DB;</ivdnt:teken>
-   <ivdnt:teken>&#x00DC;</ivdnt:teken>
-   <ivdnt:teken>&#x00DF;</ivdnt:teken>
-   <ivdnt:teken>&#x00E0;</ivdnt:teken>
-   <ivdnt:teken>&#x00E1;</ivdnt:teken>
-   <ivdnt:teken>&#x00E2;</ivdnt:teken>
-   <ivdnt:teken>&#x00E3;</ivdnt:teken>
-   <ivdnt:teken>&#x00E4;</ivdnt:teken>
-   <ivdnt:teken>&#x00E5;</ivdnt:teken>
-   <ivdnt:teken>&#x00E6;</ivdnt:teken>
-   <ivdnt:teken>&#x00E7;</ivdnt:teken>
-   <ivdnt:teken>&#x00E8;</ivdnt:teken>
-   <ivdnt:teken>&#x00E9;</ivdnt:teken>
-   <ivdnt:teken>&#x00EA;</ivdnt:teken>
-   <ivdnt:teken>&#x00EB;</ivdnt:teken>
-   <ivdnt:teken>&#x00EC;</ivdnt:teken>
-   <ivdnt:teken>&#x00ED;</ivdnt:teken>
-   <ivdnt:teken>&#x00EE;</ivdnt:teken>
-   <ivdnt:teken>&#x00EF;</ivdnt:teken>
-   <ivdnt:teken>&#x00F0;</ivdnt:teken>
-   <ivdnt:teken>&#x00F1;</ivdnt:teken>
-   <ivdnt:teken>&#x00F2;</ivdnt:teken>
-   <ivdnt:teken>&#x00F3;</ivdnt:teken>
-   <ivdnt:teken>&#x00F4;</ivdnt:teken>
-   <ivdnt:teken>&#x00F5;</ivdnt:teken>
-   <ivdnt:teken>&#x00F6;</ivdnt:teken>
-   <ivdnt:teken>&#x00F8;</ivdnt:teken>
-   <ivdnt:teken>&#x00F9;</ivdnt:teken>
-   <ivdnt:teken>&#x00FA;</ivdnt:teken>
-   <ivdnt:teken>&#x00FB;</ivdnt:teken>
-   <ivdnt:teken>&#x00FC;</ivdnt:teken>
-   <ivdnt:teken>&#x00FD;</ivdnt:teken>
-   <ivdnt:teken>&#x00FE;</ivdnt:teken>
-   <ivdnt:teken>&#x00FF;</ivdnt:teken>
-   <ivdnt:teken>&#x0100;</ivdnt:teken>
-   <ivdnt:teken>&#x0101;</ivdnt:teken>
-   <ivdnt:teken>&#x0103;</ivdnt:teken>
-   <ivdnt:teken>&#x0105;</ivdnt:teken>
-   <ivdnt:teken>&#x0106;</ivdnt:teken>
-   <ivdnt:teken>&#x0107;</ivdnt:teken>
-   <ivdnt:teken>&#x0109;</ivdnt:teken>
-   <ivdnt:teken>&#x010C;</ivdnt:teken>
-   <ivdnt:teken>&#x010D;</ivdnt:teken>
-   <ivdnt:teken>&#x0111;</ivdnt:teken>
-   <ivdnt:teken>&#x0112;</ivdnt:teken>
-   <ivdnt:teken>&#x0113;</ivdnt:teken>
-   <ivdnt:teken>&#x0114;</ivdnt:teken>
-   <ivdnt:teken>&#x0115;</ivdnt:teken>
-   <ivdnt:teken>&#x0117;</ivdnt:teken>
-   <ivdnt:teken>&#x0119;</ivdnt:teken>
-   <ivdnt:teken>&#x011A;</ivdnt:teken>
-   <ivdnt:teken>&#x011B;</ivdnt:teken>
-   <ivdnt:teken>&#x011D;</ivdnt:teken>
-   <ivdnt:teken>&#x0121;</ivdnt:teken>
-   <ivdnt:teken>&#x0129;</ivdnt:teken>
-   <ivdnt:teken>&#x012B;</ivdnt:teken>
-   <ivdnt:teken>&#x012C;</ivdnt:teken>
-   <ivdnt:teken>&#x012D;</ivdnt:teken>
-   <ivdnt:teken>&#x0131;</ivdnt:teken>
-   <ivdnt:teken>&#x014B;</ivdnt:teken>
-   <ivdnt:teken>&#x014C;</ivdnt:teken>
-   <ivdnt:teken>&#x014D;</ivdnt:teken>
-   <ivdnt:teken>&#x014F;</ivdnt:teken>
-   <ivdnt:teken>&#x0152;</ivdnt:teken>
-   <ivdnt:teken>&#x0153;</ivdnt:teken>
-   <ivdnt:teken>&#x0157;</ivdnt:teken>
-   <ivdnt:teken>&#x015A;</ivdnt:teken>
-   <ivdnt:teken>&#x015B;</ivdnt:teken>
-   <ivdnt:teken>&#x015D;</ivdnt:teken>
-   <ivdnt:teken>&#x0160;</ivdnt:teken>
-   <ivdnt:teken>&#x0161;</ivdnt:teken>
-   <ivdnt:teken>&#x0169;</ivdnt:teken>
-   <ivdnt:teken>&#x016B;</ivdnt:teken>
-   <ivdnt:teken>&#x016D;</ivdnt:teken>
-   <ivdnt:teken>&#x016F;</ivdnt:teken>
-   <ivdnt:teken>&#x0175;</ivdnt:teken>
-   <ivdnt:teken>&#x0177;</ivdnt:teken>
-   <ivdnt:teken>&#x017A;</ivdnt:teken>
-   <ivdnt:teken>&#x017C;</ivdnt:teken>
-   <ivdnt:teken>&#x017D;</ivdnt:teken>
-   <ivdnt:teken>&#x017E;</ivdnt:teken>
-   <ivdnt:teken>&#x1907;</ivdnt:teken>
-   <ivdnt:teken>&#x1908;</ivdnt:teken>
-   <ivdnt:teken>&#x0192;</ivdnt:teken>
-   <ivdnt:teken>&#x1944;</ivdnt:teken>
-   <ivdnt:teken>&#x1909;</ivdnt:teken>
-   <ivdnt:teken>&#x190A;</ivdnt:teken>
-   <ivdnt:teken>&#x190B;</ivdnt:teken>
-   <ivdnt:teken>&#x190C;</ivdnt:teken>
-   <ivdnt:teken>&#x190D;</ivdnt:teken>
-   <ivdnt:teken>&#x190E;</ivdnt:teken>
-   <ivdnt:teken>&#x190F;</ivdnt:teken>
-   <ivdnt:teken>&#x1910;</ivdnt:teken>
-   <ivdnt:teken>&#x1911;</ivdnt:teken>
-   <ivdnt:teken>&#x1912;</ivdnt:teken>
-   <ivdnt:teken>&#x1913;</ivdnt:teken>
-   <ivdnt:teken>&#x01FD;</ivdnt:teken>
-   <ivdnt:teken>&#x1914;</ivdnt:teken>
-   <ivdnt:teken>&#x1915;</ivdnt:teken>
-   <ivdnt:teken>&#x1B27;</ivdnt:teken>
-   <ivdnt:teken>&#x1B28;</ivdnt:teken>
-   <ivdnt:teken>&#x1916;</ivdnt:teken>
-   <ivdnt:teken>&#x1917;</ivdnt:teken>
-   <ivdnt:teken>&#x1B2A;</ivdnt:teken>
-   <ivdnt:teken>&#x194A;</ivdnt:teken>
-   <ivdnt:teken>&#x1919;</ivdnt:teken>    
+<?xml version="1.0" encoding="UTF-8"?><ivdnt:specialetekens xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+   <ivdnt:teken>À</ivdnt:teken> <!-- &#x00C0; -->
+   <ivdnt:teken>Á</ivdnt:teken> <!-- &#x00C1; -->
+   <ivdnt:teken>Â</ivdnt:teken> <!-- &#x00C2; -->
+   <ivdnt:teken>Ä</ivdnt:teken> <!-- &#x00C4; -->
+   <ivdnt:teken>Å</ivdnt:teken> <!-- &#x00C5; -->
+   <ivdnt:teken>Æ</ivdnt:teken> <!-- &#x00C6; -->
+   <ivdnt:teken>Ç</ivdnt:teken> <!-- &#x00C7; -->
+   <ivdnt:teken>È</ivdnt:teken> <!-- &#x00C8; -->
+   <ivdnt:teken>É</ivdnt:teken> <!-- &#x00C9; -->
+   <ivdnt:teken>Ê</ivdnt:teken> <!-- &#x00CA; -->
+   <ivdnt:teken>Ë</ivdnt:teken> <!-- &#x00CB; -->
+   <ivdnt:teken>Ì</ivdnt:teken> <!-- &#x00CC; -->
+   <ivdnt:teken>Í</ivdnt:teken> <!-- &#x00CD; -->
+   <ivdnt:teken>Î</ivdnt:teken> <!-- &#x00CE; -->
+   <ivdnt:teken>Ï</ivdnt:teken> <!-- &#x00CF; -->
+   <ivdnt:teken>Ñ</ivdnt:teken> <!-- &#x00D1; -->
+   <ivdnt:teken>Ò</ivdnt:teken> <!-- &#x00D2; -->
+   <ivdnt:teken>Ó</ivdnt:teken> <!-- &#x00D3; -->
+   <ivdnt:teken>Ô</ivdnt:teken> <!-- &#x00D4; -->
+   <ivdnt:teken>Ö</ivdnt:teken> <!-- &#x00D6; -->
+   <ivdnt:teken>Ø</ivdnt:teken> <!-- &#x00D8; -->
+   <ivdnt:teken>Ù</ivdnt:teken> <!-- &#x00D9; -->
+   <ivdnt:teken>Û</ivdnt:teken> <!-- &#x00DB; -->
+   <ivdnt:teken>Ü</ivdnt:teken> <!-- &#x00DC; -->
+   <ivdnt:teken>ß</ivdnt:teken> <!-- &#x00DF; -->
+   <ivdnt:teken>à</ivdnt:teken> <!-- &#x00E0; -->
+   <ivdnt:teken>á</ivdnt:teken> <!-- &#x00E1; -->
+   <ivdnt:teken>â</ivdnt:teken> <!-- &#x00E2; -->
+   <ivdnt:teken>ã</ivdnt:teken> <!-- &#x00E3; -->
+   <ivdnt:teken>ä</ivdnt:teken> <!-- &#x00E4; -->
+   <ivdnt:teken>å</ivdnt:teken> <!-- &#x00E5; -->
+   <ivdnt:teken>æ</ivdnt:teken> <!-- &#x00E6; -->
+   <ivdnt:teken>ç</ivdnt:teken> <!-- &#x00E7; -->
+   <ivdnt:teken>è</ivdnt:teken> <!-- &#x00E8; -->
+   <ivdnt:teken>é</ivdnt:teken> <!-- &#x00E9; -->
+   <ivdnt:teken>ê</ivdnt:teken> <!-- &#x00EA; -->
+   <ivdnt:teken>ë</ivdnt:teken> <!-- &#x00EB; -->
+   <ivdnt:teken>ì</ivdnt:teken> <!-- &#x00EC; -->
+   <ivdnt:teken>í</ivdnt:teken> <!-- &#x00ED; -->
+   <ivdnt:teken>î</ivdnt:teken> <!-- &#x00EE; -->
+   <ivdnt:teken>ï</ivdnt:teken> <!-- &#x00EF; -->
+   <ivdnt:teken>ð</ivdnt:teken> <!-- &#x00F0; -->
+   <ivdnt:teken>ñ</ivdnt:teken> <!-- &#x00F1; -->
+   <ivdnt:teken>ò</ivdnt:teken> <!-- &#x00F2; -->
+   <ivdnt:teken>ó</ivdnt:teken> <!-- &#x00F3; -->
+   <ivdnt:teken>ô</ivdnt:teken> <!-- &#x00F4; -->
+   <ivdnt:teken>õ</ivdnt:teken> <!-- &#x00F5; -->
+   <ivdnt:teken>ö</ivdnt:teken> <!-- &#x00F6; -->
+   <ivdnt:teken>ø</ivdnt:teken> <!-- &#x00F8; -->
+   <ivdnt:teken>ù</ivdnt:teken> <!-- &#x00F9; -->
+   <ivdnt:teken>ú</ivdnt:teken> <!-- &#x00FA; -->
+   <ivdnt:teken>û</ivdnt:teken> <!-- &#x00FB; -->
+   <ivdnt:teken>ü</ivdnt:teken> <!-- &#x00FC; -->
+   <ivdnt:teken>ý</ivdnt:teken> <!-- &#x00FD; -->
+   <ivdnt:teken>þ</ivdnt:teken> <!-- &#x00FE; -->
+   <ivdnt:teken>ÿ</ivdnt:teken> <!-- &#x00FF; -->
+   <ivdnt:teken>Ā</ivdnt:teken> <!-- &#x0100; -->
+   <ivdnt:teken>ā</ivdnt:teken> <!-- &#x0101; -->
+   <ivdnt:teken>ă</ivdnt:teken> <!-- &#x0103; -->
+   <ivdnt:teken>ą</ivdnt:teken> <!-- &#x0105; -->
+   <ivdnt:teken>Ć</ivdnt:teken> <!-- &#x0106; -->
+   <ivdnt:teken>ć</ivdnt:teken> <!-- &#x0107; -->
+   <ivdnt:teken>ĉ</ivdnt:teken> <!-- &#x0109; -->
+   <ivdnt:teken>Č</ivdnt:teken> <!-- &#x010C; -->
+   <ivdnt:teken>č</ivdnt:teken> <!-- &#x010D; -->
+   <ivdnt:teken>đ</ivdnt:teken> <!-- &#x0111; -->
+   <ivdnt:teken>Ē</ivdnt:teken> <!-- &#x0112; -->
+   <ivdnt:teken>ē</ivdnt:teken> <!-- &#x0113; -->
+   <ivdnt:teken>Ĕ</ivdnt:teken> <!-- &#x0114; -->
+   <ivdnt:teken>ĕ</ivdnt:teken> <!-- &#x0115; -->
+   <ivdnt:teken>ė</ivdnt:teken> <!-- &#x0117; -->
+   <ivdnt:teken>ę</ivdnt:teken> <!-- &#x0119; -->
+   <ivdnt:teken>Ě</ivdnt:teken> <!-- &#x011A; -->
+   <ivdnt:teken>ě</ivdnt:teken> <!-- &#x011B; -->
+   <ivdnt:teken>ĝ</ivdnt:teken> <!-- &#x011D; -->
+   <ivdnt:teken>ġ</ivdnt:teken> <!-- &#x0121; -->
+   <ivdnt:teken>ĩ</ivdnt:teken> <!-- &#x0129; -->
+   <ivdnt:teken>ī</ivdnt:teken> <!-- &#x012B; -->
+   <ivdnt:teken>Ĭ</ivdnt:teken> <!-- &#x012C; -->
+   <ivdnt:teken>ĭ</ivdnt:teken> <!-- &#x012D; -->
+   <ivdnt:teken>ı</ivdnt:teken> <!-- &#x0131; -->
+   <ivdnt:teken>ŋ</ivdnt:teken> <!-- &#x014B; -->
+   <ivdnt:teken>Ō</ivdnt:teken> <!-- &#x014C; -->
+   <ivdnt:teken>ō</ivdnt:teken> <!-- &#x014D; -->
+   <ivdnt:teken>ŏ</ivdnt:teken> <!-- &#x014F; -->
+   <ivdnt:teken>Œ</ivdnt:teken> <!-- &#x0152; -->
+   <ivdnt:teken>œ</ivdnt:teken> <!-- &#x0153; -->
+   <ivdnt:teken>ŗ</ivdnt:teken> <!-- &#x0157; -->
+   <ivdnt:teken>Ś</ivdnt:teken> <!-- &#x015A; -->
+   <ivdnt:teken>ś</ivdnt:teken> <!-- &#x015B; -->
+   <ivdnt:teken>ŝ</ivdnt:teken> <!-- &#x015D; -->
+   <ivdnt:teken>Š</ivdnt:teken> <!-- &#x0160; -->
+   <ivdnt:teken>š</ivdnt:teken> <!-- &#x0161; -->
+   <ivdnt:teken>ũ</ivdnt:teken> <!-- &#x0169; -->
+   <ivdnt:teken>ū</ivdnt:teken> <!-- &#x016B; -->
+   <ivdnt:teken>ŭ</ivdnt:teken> <!-- &#x016D; -->
+   <ivdnt:teken>ů</ivdnt:teken> <!-- &#x016F; -->
+   <ivdnt:teken>ŵ</ivdnt:teken> <!-- &#x0175; -->
+   <ivdnt:teken>ŷ</ivdnt:teken> <!-- &#x0177; -->
+   <ivdnt:teken>ź</ivdnt:teken> <!-- &#x017A; -->
+   <ivdnt:teken>ż</ivdnt:teken> <!-- &#x017C; -->
+   <ivdnt:teken>Ž</ivdnt:teken> <!-- &#x017D; -->
+   <ivdnt:teken>ž</ivdnt:teken> <!-- &#x017E; -->
+   <ivdnt:teken>ᤇ</ivdnt:teken> <!-- &#x1907; -->
+   <ivdnt:teken>ᤈ</ivdnt:teken> <!-- &#x1908; -->
+   <ivdnt:teken>ƒ</ivdnt:teken> <!-- &#x0192; -->
+   <ivdnt:teken>᥄</ivdnt:teken> <!-- &#x1944; -->
+   <ivdnt:teken>ᤉ</ivdnt:teken> <!-- &#x1909; -->
+   <ivdnt:teken>ᤊ</ivdnt:teken> <!-- &#x190A; -->
+   <ivdnt:teken>ᤋ</ivdnt:teken> <!-- &#x190B; -->
+   <ivdnt:teken>ᤌ</ivdnt:teken> <!-- &#x190C; -->
+   <ivdnt:teken>ᤍ</ivdnt:teken> <!-- &#x190D; -->
+   <ivdnt:teken>ᤎ</ivdnt:teken> <!-- &#x190E; -->
+   <ivdnt:teken>ᤏ</ivdnt:teken> <!-- &#x190F; -->
+   <ivdnt:teken>ᤐ</ivdnt:teken> <!-- &#x1910; -->
+   <ivdnt:teken>ᤑ</ivdnt:teken> <!-- &#x1911; -->
+   <ivdnt:teken>ᤒ</ivdnt:teken> <!-- &#x1912; -->
+   <ivdnt:teken>ᤓ</ivdnt:teken> <!-- &#x1913; -->
+   <ivdnt:teken>ǽ</ivdnt:teken> <!-- &#x01FD; -->
+   <ivdnt:teken>ᤔ</ivdnt:teken> <!-- &#x1914; -->
+   <ivdnt:teken>ᤕ</ivdnt:teken> <!-- &#x1915; -->
+   <ivdnt:teken>ᬧ</ivdnt:teken> <!-- &#x1B27; -->
+   <ivdnt:teken>ᬨ</ivdnt:teken> <!-- &#x1B28; -->
+   <ivdnt:teken>ᤖ</ivdnt:teken> <!-- &#x1916; -->
+   <ivdnt:teken>ᤗ</ivdnt:teken> <!-- &#x1917; -->
+   <ivdnt:teken>ᬪ</ivdnt:teken> <!-- &#x1B2A; -->
+   <ivdnt:teken>᥊</ivdnt:teken> <!-- &#x194A; -->
+   <ivdnt:teken>ᤙ</ivdnt:teken> <!-- &#x1919; -->    
 </ivdnt:specialetekens>
