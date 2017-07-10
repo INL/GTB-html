@@ -48,16 +48,22 @@
                     <xsl:apply-templates select="result" mode="render-results"/>
                 </tbody>
             </table>
-            <xsl:copy-of select="$html/key('ids', 'resultaatknoppen')"/>
         </div>
-        <div class="dataTables_paginate paging_simple_numbers gtb-pagineringsknoppen" id="gtb-result-table_paginate">
-            <ul class="pagination">
-                <xsl:call-template name="ivdnt:gen-pagination">
-                    <xsl:with-param name="statistics" select="statistics"/>
-                    <xsl:with-param name="startline" select="$startline"/>
-                </xsl:call-template>
-            </ul>
+        <div class="row">
+            <xsl:copy-of select="$html/key('ids', 'resultaatknoppen')/*"/>
+            <!-- De voorafgaande col-md-6 gaat als 3 keer een col-md-2 naar de knoppen voor sorteren, exporteren en afdrukken. -->
+            <div class="col-md-6">
+                <div class="dataTables_paginate paging_simple_numbers gtb-pagineringsknoppen" id="gtb-result-table_paginate">
+                <ul class="pagination">
+                    <xsl:call-template name="ivdnt:gen-pagination">
+                        <xsl:with-param name="statistics" select="statistics"/>
+                        <xsl:with-param name="startline" select="$startline"/>
+                    </xsl:call-template>
+                </ul>
+            </div>
+            </div>
         </div>
+        
         <script xsl:expand-text="no">
             var table = $('#gtb-result-table') ;
             $(document).ready( function () {

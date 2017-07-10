@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivdnt:formulier class="gtb-resultaatknoppen" id="resultaatknoppen" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-    <div class="col-md-2">
+    <div class="col-md-2 resultaatknop">
         <ivdnt:modal type="sorteren" suppress-ok-button="true">
             <ivdnt:modaltrigger><button type="button" class="sorteerknop btn btn-secondary">Sorteren...</button></ivdnt:modaltrigger>
             <ivdnt:modalcontent>
@@ -27,7 +27,7 @@
         </ivdnt:modal>
     </div>
     
-    <div class="col-md-2"><button class="btn btn-secondary" name="exporteren">Exporteren</button></div>
-    <div class="col-md-2"><button class="btn btn-secondary" name="afdrukken">Afdrukken</button></div>
-    <div class="col-md-6"></div>
+    <div class="col-md-2 resultaatknop"><button class="btn btn-secondary" name="exporteren">Exporteren</button></div>
+    <div class="col-md-2 resultaatknop"><button class="btn btn-secondary" name="afdrukken">Afdrukken</button></div>
+    <!-- De resterende col-md-6 gaat naar de navigatieknoppen -->
 </ivdnt:formulier>

@@ -266,6 +266,9 @@ tr.gtb-result-row:nth-child(odd){
 .gtb-pagineringsknoppen{
     float: right;
 }
+.resultaatknop {
+    margin-top: 1.5em;
+}
 
 /*  Verberg de resultaatknoppen in de auxiliaries-sectie, maar toon ze wanneer ze worden opgeroepen in de content. */
 .auxiliaries > .gtb-resultaatknoppen {
