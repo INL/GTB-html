@@ -498,8 +498,8 @@
     <xsl:template match="button[@name eq 'doe-sorteren']" mode="ixsl:onclick">
         <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@data-modaltype eq 'sorteren'][1]"/>
         <xsl:variable name="keys" as="xs:string*" select="for $select in $topdiv//select return ivdnt:get-select-value($select)[. ne '']"/>
-        <xsl:variable name="value-of-reserved-input" as="xs:string" select="ivdnt:get-input-value($topdiv//input[@name eq 'sorteervolgorde' and ivdnt:is-checked(.)])"/>
-        <xsl:variable name="reversed" as="xs:string" select="if ($value-of-reserved-input eq 'aflopend') then 'true' else 'false'"/>
+        <xsl:variable name="value-of-reversed-input" as="xs:string" select="ivdnt:get-input-value($topdiv//input[@name eq 'sorteervolgorde' and ivdnt:is-checked(.)])"/>
+        <xsl:variable name="reversed" as="xs:string" select="if ($value-of-reversed-input eq 'aflopend') then 'true' else 'false'"/>
         
         <xsl:choose>
             <xsl:when test="count($keys) gt 0">
