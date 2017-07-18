@@ -5,10 +5,12 @@
             <ivdnt:modaltrigger><button type="button" class="sorteerknop btn btn-secondary">Sorteren...</button></ivdnt:modaltrigger>
             <ivdnt:modalcontent>
                 <ivdnt:modaltitle><h4 class="modal-title">Sorteren tussenresultaat</h4></ivdnt:modaltitle>
-                <p class="row"><label class="col-md-6" for="sleutel1">Eerste sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel1"/></span></p>
-                <p class="row"><label class="col-md-6" for="sleutel2">Tweede sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel2"/></span></p>
-                <p class="row"><label class="col-md-6" for="sleutel3">Derde sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel3"/></span></p>
-                <p class="row"><label class="col-md-6" for="sleutel4">Vierde sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel4"/></span></p>
+                <div id="sleutels">
+                    <p class="row"><label class="col-md-6" for="sleutel1">Eerste sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel1"/></span></p>
+                    <p class="row"><label class="col-md-6" for="sleutel2">Tweede sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel2"/></span></p>
+                    <p class="row"><label class="col-md-6" for="sleutel3">Derde sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel3"/></span></p>
+                    <p class="row"><label class="col-md-6" for="sleutel4">Vierde sleutel:</label> <span class="col-md-6"><ivdnt:sorteeropties name="sleutel4"/></span></p>
+                </div>
                 <p class="row">
                     <label class="col-md-6" for="xx">Sorteren</label>
                     <span class="col-md-6">

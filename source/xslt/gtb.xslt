@@ -526,6 +526,30 @@
         </xsl:call-template>
     </xsl:template>
     
+    <xsl:template match="select[matches(@name, '^sleutel[1-4]$')]" mode="ixsl:onchange">
+        <xsl:variable name="thisSelect" as="element(select)" select="."/>
+        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@id eq 'sleutels'][1]"/>
+        <xsl:variable name="thisSelectValue" select="ivdnt:get-select-value($thisSelect)"/>
+        <xsl:variable name="allSelectedValues" as="xs:string*" select="for $s in $topdiv//select return ivdnt:get-select-value($s)"/>
+        <xsl:for-each select="$topdiv//select/option[@value ne '']">
+            <xsl:choose>
+                <xsl:when test="@value = $allSelectedValues">
+                    <xsl:choose>
+                        <xsl:when test="parent::select is $thisSelect and @value eq $thisSelectValue">
+                            <ixsl:remove-attribute name="disabled"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <ixsl:set-attribute name="disabled" select="'disabled'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <ixsl:remove-attribute name="disabled"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:template>
+    
     <xsl:template match="input[@name eq 'toon-tekens']" mode="ixsl:onclick">
         <xsl:variable name="parentdiv" select="following::div[ivdnt:class-contains(@class, 'speciaalteken')][1]" as="element(div)"/>
         <xsl:variable name="is-checked" as="xs:boolean" select="ivdnt:is-checked(.)"/>
