@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT"
+    xmlns:js="http://saxonica.com/ns/globalJS"
     xmlns:array="http://www.w3.org/2005/xpath-functions/array"
     xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces"
     expand-text="yes"
@@ -271,6 +272,15 @@
                 <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
             </xsl:call-template>
         </ixsl:schedule-action>
+    </xsl:template>
+    
+    <xsl:template name="ivdnt:show-results-in-new-window">
+        <xsl:param name="url-for-content" as="xs:string" required="yes"/>
+        <xsl:param name="client-filename" as="xs:string" required="yes"/>
+        <xsl:param name="mimetype" as="xs:string" required="yes"/>
+        
+        <!-- The current date predicat always returns false, so that the result of the function call is voided -->
+        <xsl:sequence select="js:exportResult($url-for-content, $client-filename, $mimetype)[current-date() lt xs:date('2000-01-01')]" />
     </xsl:template>
     
     <xsl:template name="ivdnt:render-results">
@@ -548,6 +558,26 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="button[@name eq 'doe-exporteren']" mode="ixsl:onclick">
+        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@data-modaltype eq 'exporteren'][1]"/>
+        <xsl:variable name="value-of-format-input" as="xs:string" select="ivdnt:get-input-value($topdiv//input[@name eq 'uitvoer' and ivdnt:is-checked(.)])"/>
+        
+        <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content() || '&amp;uitvoer=' || $value-of-format-input"/>
+        <xsl:variable name="text-input-uri-params" as="xs:string" select="ixsl:get(ixsl:page(), $TEXT_INPUT_URI_PARAMS_PROPERTY)"/>
+        
+        <!-- We kunnen current-tab niet berekenen met ivdnt:get-active-tabdiv() omdat we in de auxiliaries-div zitten en niet binnen
+             een echte tab.
+        -->
+        <xsl:variable name="current-tab" as="element(div)" select="key('ids', 'resultaathouder')/parent::div"/>
+        <xsl:variable name="tabdiv-id" as="xs:string" select="$current-tab/@id"/>
+        
+        <xsl:call-template name="ivdnt:show-results-in-new-window">
+            <xsl:with-param name="url-for-content" select="$url-for-content"/>
+            <xsl:with-param name="client-filename" select="'gtb-export.' || $value-of-format-input"/>
+            <xsl:with-param name="mimetype" select="'text/' || $value-of-format-input"/>
+        </xsl:call-template>
     </xsl:template>
     
     <xsl:template match="input[@name eq 'toon-tekens']" mode="ixsl:onclick">

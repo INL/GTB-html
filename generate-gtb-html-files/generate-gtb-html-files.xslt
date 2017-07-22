@@ -73,6 +73,8 @@
             <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>
             <script src="js/datatables.min.js" type="text/javascript"></script>
+            <script src="js/download.js" type="text/javascript"></script>
+            <script src="js/gtb.js" type="text/javascript"></script>
                         
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
             <script type="text/javascript" src="saxonjs/SaxonJS.min.js"></script>
