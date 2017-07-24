@@ -46,12 +46,12 @@
     display: inline;
 }
 
-.gtbdisabled{
+.gtb-disabled{
     opacity: 0.5;
     cursor: wait;
 }
 
-.gtbwait{
+.gtb-wait{
     z-index: 2000;
     position: absolute;
     /*  De percentages zijn een grove benadering. */
@@ -60,12 +60,12 @@
     left: 45%;
 }
 
-.gtbwaiticon:before{
+.gtb-waiticon:before{
     font-family: "Glyphicons Halflings";
     content: "";
 }
 
-.gtbwaiticon{
+.gtb-waiticon{
     animation-name: tolletje;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -91,13 +91,13 @@
     }
 }
 
-.tekstveld{
+.gtb-tekstveld, .gtb-selectveld{
     width: 75%;
     font-family: gtb;
     display: inline;
 }
 
-.woordsoortveld{
+.gtb-woordsoortveld{
     width: 75%;
     display: inline;
 }
@@ -129,11 +129,11 @@ td.speciaalteken:active{
     transform: translateY(2px);
 }
 
-.gtbcollapsed:before{
+.gtb-collapsed:before{
     content: '▶ ';
 }
 
-.gtbexpanded:before{
+.gtb-expanded:before{
     content: '▼ ';
 }
 
@@ -150,8 +150,12 @@ td.speciaalteken:active{
 }
 
 /* We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.  */
-.gtbhidden{
+.gtb-hidden{
     display: none;
+}
+
+.gtb-inspring {
+    padding-left: 2em;
 }
 
 /*input[type=checkbox]:before, .gtbcheckbox:before {

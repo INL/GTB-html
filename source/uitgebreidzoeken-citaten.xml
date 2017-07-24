@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-hidden" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Woord in citaattekst</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel class="gtb-inspring"><p><a href="#" data-showhidegroup="uitgebreidzoeken.brongegevens" class="gtb-collapsed">Brongegevens</a></p></ivdnt:formulierregel>
+    <div class="gtb-hidden" data-showhidegroup="uitgebreidzoeken.brongegevens">
+        <ivdnt:formulierregel>
+            <ivdnt:formulierlabel class="gtb-inspring">Auteur citaat</ivdnt:formulierlabel>
+            <ivdnt:formulierinput>
+                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+            </ivdnt:formulierinput>
+        </ivdnt:formulierregel>
+        <ivdnt:formulierregel>
+            <ivdnt:formulierlabel class="gtb-inspring">Verkorte brontitel</ivdnt:formulierlabel>
+            <ivdnt:formulierinput>
+                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+            </ivdnt:formulierinput>
+        </ivdnt:formulierregel>
+        <ivdnt:formulierregel>
+            <ivdnt:formulierlabel class="gtb-inspring">Datering bron</ivdnt:formulierlabel>
+            <ivdnt:formulierinput>
+                <ivdnt:van-tot-velden/>
+            </ivdnt:formulierinput>
+        </ivdnt:formulierregel>
+        <ivdnt:formulierregel>
+            <ivdnt:formulierlabel class="gtb-inspring">Lokalisering bron</ivdnt:formulierlabel>
+            <ivdnt:formulierinput>
+                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+            </ivdnt:formulierinput>
+        </ivdnt:formulierregel>
+    </div>
+    <ivdnt:formulierregel class="gtb-inspring"><p><a href="#" data-showhidegroup="uitgebreidzoeken.oudstecitaat" class="gtb-collapsed">Oudste citaat</a></p></ivdnt:formulierregel>
+    <div class="gtb-hidden" data-showhidegroup="uitgebreidzoeken.oudstecitaat">
+        <ivdnt:formulierregel>
+            <ivdnt:formulierlabel class="gtb-inspring">Datering oudste citaat</ivdnt:formulierlabel>
+            <ivdnt:formulierinput>
+                <ivdnt:van-tot-velden/>
+            </ivdnt:formulierinput>
+        </ivdnt:formulierregel>
+        <ivdnt:formulierregel>
+            <ivdnt:formulierlabel class="gtb-inspring">Lokalisering oudste citaat</ivdnt:formulierlabel>
+            <ivdnt:formulierinput>
+                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+            </ivdnt:formulierinput>
+        </ivdnt:formulierregel>
+    </div>
+</div>
+

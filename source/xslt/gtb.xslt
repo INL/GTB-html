@@ -140,14 +140,14 @@
     <xsl:template name="ivdnt:gtb-collapse">
         <xsl:for-each select="ivdnt:get-showhide-a(.)">
             <!-- This iterates only once. -->
-            <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtbexpanded', 'gtbcollapsed')"/>
+            <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-expanded', 'gtb-collapsed')"/>
         </xsl:for-each>
     </xsl:template>
     
     <xsl:template name="ivdnt:gtb-expand">
         <xsl:for-each select="ivdnt:get-showhide-a(.)">
             <!-- Dit itereert slecht 1 keer -->
-            <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtbcollapsed', 'gtbexpanded')"/>
+            <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-collapsed', 'gtb-expanded')"/>
         </xsl:for-each>
     </xsl:template>
     
@@ -156,21 +156,21 @@
              We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen
              gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.
         -->
-        <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtbhidden')"/>
+        <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtb-hidden')"/>
         <!-- Pas ook de de weergave aan van link die voor het inklappen zorgt: -->
         <xsl:call-template name="ivdnt:gtb-collapse"/>
     </xsl:template>
     
     <xsl:template name="ivdnt:gtb-show">
         <!-- Huidige context is een div-element dat wordt uitgeklapt. -->
-        <ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtbhidden')"/>
+        <ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtb-hidden')"/>
         <!-- Pas ook de de weergave aan van link die voor het uitklappen zorgt: -->
         <xsl:call-template name="ivdnt:gtb-expand"/>
     </xsl:template>
     
     <xsl:function name="ivdnt:gtb-is-hidden" as="xs:boolean">
         <xsl:param as="element()" name="element"/>
-        <xsl:sequence select="ivdnt:class-contains($element/@class, 'gtbhidden')"/>
+        <xsl:sequence select="ivdnt:class-contains($element/@class, 'gtb-hidden')"/>
     </xsl:function>
     
     <xsl:template name="ivdnt:deactivate-tab">
@@ -178,25 +178,25 @@
         <xsl:for-each select="$tabdiv">
             <!-- Only one iteration -->
             <!--<xsl:message>deactivate id={@id}</xsl:message>-->
-            <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtbdisabled')"/>
+            <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtb-disabled')"/>
             
             <!-- Genereer een div met de wait-button of maak hem zichtbaar. In eerste instantie genereerden we dit divje bij het maken van de HTML-file,
                  maar aangezien de inhoud van de result-tabbladen weer opnieuw wordt gegenereerd, heeft dit daar geen zin:
             -->
-            <xsl:variable name="waitdiv" as="element(div)?" select="div[ivdnt:class-contains(@class, 'gtbwait')]"/>
+            <xsl:variable name="waitdiv" as="element(div)?" select="div[ivdnt:class-contains(@class, 'gtb-wait')]"/>
             <xsl:choose>
                 <xsl:when test="$waitdiv">
                     <!-- Show it: -->
                     <!--<xsl:message>deactivate (exists), class={@class}</xsl:message>-->
-                    <xsl:for-each select="$waitdiv"><ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtbhidden')"/></xsl:for-each>
+                    <xsl:for-each select="$waitdiv"><ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtb-hidden')"/></xsl:for-each>
                 </xsl:when>
                 <xsl:otherwise>
                     <!-- Create it: -->
                     <xsl:result-document href="?." method="ixsl:append-content">
                         <!--<xsl:message>deactivate (does not exist)</xsl:message>-->
-                        <div class="gtbwait">
+                        <div class="gtb-wait">
                             <!-- TODO waarom draait het icoontje niet? Cf. https://www.bootply.com/128062 -->
-                            <button class="btn btn-lg btn-info"><span class="gtbwaiticon"/>&#160;Even geduld a.u.b. ...</button>
+                            <button class="btn btn-lg btn-info"><span class="gtb-waiticon"/>&#160;Even geduld a.u.b. ...</button>
                         </div>
                     </xsl:result-document>
                 </xsl:otherwise>
@@ -209,17 +209,17 @@
         <xsl:for-each select="$tabdiv">
             <!-- Only one iteration -->
             <!--<xsl:message>reactivate id={@id}</xsl:message>-->
-            <ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtbdisabled')"/>
+            <ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtb-disabled')"/>
             
             <!-- Maak de div met de wait-button onzichtbaar (vergelijk template deactivate-tab);
                  als de content van de tab opnieuw gegenereerd is, doet dit niets (er is dan
                  namelijk geen match meer). Onzichtbaar maken is makkelijker dan geheel weghalen,
                  vandaar deze keuze.
             -->
-            <xsl:for-each select="div[ivdnt:class-contains(@class, 'gtbwait')]">
+            <xsl:for-each select="div[ivdnt:class-contains(@class, 'gtb-wait')]">
                 <!-- Also, one iteration. -->
                 <!--<xsl:message>reactivate eerst class={@class}</xsl:message>-->
-                <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtbhidden')"/>
+                <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtb-hidden')"/>
                 <!--<xsl:message>reactivate dan class={@class}</xsl:message>-->
             </xsl:for-each>
         </xsl:for-each>
@@ -356,7 +356,7 @@
     
     <xsl:function name="ivdnt:woordsoortvalue" as="xs:string">
         <xsl:param name="context" as="node()"/>
-        <xsl:variable name="topdiv" select="$context/ancestor::div[@data-modaltype eq 'basiszoeken-woordsoort'][1]"/>
+        <xsl:variable name="topdiv" select="$context/ancestor::div[@data-modaltype eq 'woordsoortzoeken'][1]"/>
         <xsl:variable name="values" as="xs:string*">
             <xsl:for-each select="$topdiv//div[@data-hoofdwoordsoort][.//input[ivdnt:is-checked(.)]]">
                 <xsl:variable name="input-values" as="xs:string+" select="for $i in .//input[ivdnt:is-checked(.)] return ivdnt:get-input-value($i)"/>
@@ -424,12 +424,13 @@
     </xsl:function>
     
     <xsl:function name="ivdnt:get-target-input" as="element(input)">
-        <xsl:param name="inputname" as="xs:string"/>
-        <xsl:sequence select="ixsl:page()//input[@name eq $inputname][1]"/>
+        <xsl:param name="data-target-id" as="xs:string"/>
+        <xsl:sequence select="ixsl:page()//input[@data-modal-target-id eq $data-target-id][1]"/>
     </xsl:function>
     
     <xsl:template match="button[@data-dismiss eq 'modal' and not(ivdnt:class-contains(@class, 'close'))]" mode="ixsl:onclick">
         <xsl:variable name="target-input-name" as="xs:string?" select="ancestor::div[@data-target-input][1]/@data-target-input"/>
+        
         <xsl:if test="$target-input-name">
             <xsl:variable name="target-input" as="element(input)" select="ivdnt:get-target-input($target-input-name)"/>
             <xsl:variable name="target-input-value" as="xs:string" select="ivdnt:get-input-value($target-input)"/>
@@ -440,7 +441,7 @@
     </xsl:template>
     
     <xsl:template match="button[ivdnt:class-contains(@class, 'woordsoortassistentieknop')]" mode="ixsl:onclick">
-        <xsl:variable name="topdiv" as="element(div)" select="following::div[@data-modaltype eq 'basiszoeken-woordsoort'][1]"/>
+        <xsl:variable name="topdiv" as="element(div)" select="following::div[@data-modaltype eq 'woordsoortzoeken'][1]"/>
         <xsl:for-each select="$topdiv//input[@type eq 'checkbox' and ivdnt:is-checked(.)]">
             <xsl:call-template name="ivdnt:uncheck"><xsl:with-param name="checkbox" select="."/></xsl:call-template>
         </xsl:for-each>

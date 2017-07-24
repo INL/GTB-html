@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivdnt:formulier class="basiszoeken-formulier" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <ivdnt:formulierregel>
-        <ivdnt:bronselectors/>
+        <ivdnt:bronselectors label="Basiszoeken"/>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
@@ -14,22 +14,22 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Modern Nederlands trefwoord</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemmodern" class="form-control tekstveld"/>
+            <input type="text" name="lemmodern" class="form-control gtb-tekstveld"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Origineel trefwoord</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemma" class="form-control tekstveld"/>
+            <input type="text" name="lemma" class="form-control gtb-tekstveld"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woordsoort</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemwrdsrt" class="form-control woordsoortveld"/>
-            <ivdnt:modal type="basiszoeken-woordsoort" target-input="lemwrdsrt">
+            <input type="text" name="lemwrdsrt" data-modal-target-id="basiszoeken.lemwrdsrt" class="form-control gtb-woordsoortveld"/>
+            <ivdnt:modal type="woordsoortzoeken" target-input="basiszoeken.lemwrdsrt">
                 <ivdnt:modaltrigger><button type="button" class="woordsoortassistentieknop btn btn-secondary">Assistentie...</button></ivdnt:modaltrigger>
                 <ivdnt:modalcontent>
                     <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
@@ -42,21 +42,21 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in betekenis</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="betekenis" class="form-control tekstveld"/>
+            <input type="text" name="betekenis" class="form-control gtb-tekstveld"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in citaat</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="citaatcompleet" class="form-control tekstveld"/>
+            <input type="text" name="citaatcompleet" class="form-control gtb-tekstveld"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in artikel</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="article" class="form-control tekstveld"/>
+            <input type="text" name="article" class="form-control gtb-tekstveld"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     

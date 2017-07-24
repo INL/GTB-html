@@ -12,8 +12,9 @@
     <xsl:include href="tabs.xslt"/>
     <xsl:include href="modal.xslt"/>
     
-    <xsl:variable name="basiszoeken-label-column-class" as="xs:string" select="'col-md-4'"/>
-    <xsl:variable name="basiszoeken-input-column-class" as="xs:string" select="'col-md-8'"/>
+    <xsl:variable name="zoekformulier-label-column-class" as="xs:string" select="'col-md-4'"/>
+    <xsl:variable name="zoekformulier-input-column-class" as="xs:string" select="'col-md-8'"/>
+    <xsl:variable name="zoekformulier-vantot-label-class" as="xs:string" select="'col-md-4'"/>
     <xsl:variable name="bronselector-column-class" as="xs:string" select="'col-md-2'"/>
     
     <xsl:variable name="aantal-speciaal-teken-kolommen" as="xs:integer" select="13"/>
@@ -119,20 +120,20 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierregel" mode="ivdnt:html-mode">
-        <div class="row formulierregel">
+        <div class="{normalize-space('row formulierregel ' || @class)}">
             <xsl:apply-templates mode="#current"/>
         </div>
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierlabel" mode="ivdnt:html-mode">
-        <div class="{$basiszoeken-label-column-class}"><span class="{local-name()}"><xsl:apply-templates mode="#current"/></span></div>
+        <div class="{$zoekformulier-label-column-class}"><span class="{normalize-space(local-name() || ' ' || @class)}"><xsl:apply-templates mode="#current"/></span></div>
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierinput" mode="ivdnt:html-mode">
-        <div class="{$basiszoeken-input-column-class}"><div class="{local-name()}"><xsl:apply-templates mode="#current"/></div></div>
+        <div class="{$zoekformulier-input-column-class}"><div class="{local-name()}"><xsl:apply-templates mode="#current"/></div></div>
     </xsl:template>
-    
-    <xsl:template match="ivdnt:formulierinput/input" mode="ivdnt:html-mode">
+
+    <xsl:template match="ivdnt:formulierinput/input | ivdnt:formulierinput/select" mode="ivdnt:html-mode">
         <xsl:copy>
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:attribute name="data-label" select="ancestor::ivdnt:formulierregel[1]/ivdnt:formulierlabel"/>
@@ -140,18 +141,41 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="ivdnt:bronselectors" mode="ivdnt:html-mode">
-        <div class="{$basiszoeken-label-column-class}">
-            <span class="formulierlabel formuliertitel">Basiszoeken</span>
+    <xsl:template match="ivdnt:van-tot-velden" mode="ivdnt:html-mode">        
+        <div class="row">
+            <span class="col-md-6"><label class="gtb-tekstveld">Vanaf <input type="text" name="xxx" class="form-control "/></label></span><span class="col-md-6 gtb-tekstveld"><label class="gtb-tekstveld">Tot / met <input type="text" name="xxx" class="form-control"/></label></span>
         </div>
-        <div class="{$basiszoeken-input-column-class}">
+    </xsl:template>
+    
+    <xsl:template match="ivdnt:bronselectors" mode="ivdnt:html-mode">
+        <div class="{$zoekformulier-label-column-class}">
+            <span class="formulierlabel formuliertitel"><xsl:value-of select="@label"/></span>
+        </div>
+        <div class="{$zoekformulier-input-column-class}">
             <div class="formulierinput">
                 <div class="row">
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label>ONW <input checked="checked" data-inputname="wdb" type="checkbox" name="onw" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label>VMNW <input checked="checked" data-inputname="wdb" type="checkbox" name="vmnw" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label>MNW <input checked="checked" data-inputname="wdb" type="checkbox" name="mnw" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label>WNT <input checked="checked" data-inputname="wdb" type="checkbox" name="wnt" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label>WFT <input checked="checked" data-inputname="wdb" type="checkbox" name="wft" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Oudnederlands Woordenboek">ONW <input checked="checked" data-inputname="wdb" type="checkbox" name="onw" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Vroegmiddelnederlands Woordenboek">VMNW <input checked="checked" data-inputname="wdb" type="checkbox" name="vmnw" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Middelnederlandsch Woordenboek">MNW <input checked="checked" data-inputname="wdb" type="checkbox" name="mnw" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Nederlandsche Taal">WNT <input checked="checked" data-inputname="wdb" type="checkbox" name="wnt" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Friese taal">WFT <input checked="checked" data-inputname="wdb" type="checkbox" name="wft" class="checkbox-inline"/></label></div>
+                </div>
+            </div>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="ivdnt:resultaatformaatselectors" mode="ivdnt:html-mode">
+        <div class="{$zoekformulier-label-column-class}">
+            <span class="formulierlabel formuliertitel">Resultaten weergeven als </span>
+        </div>
+        <div class="{$zoekformulier-input-column-class}">
+            <div class="formulierinput">
+                <div class="row">
+                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met artikelen">Artikelen <input checked="checked" data-inputname="domein" type="radio" name="domein" value="0" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met betekenisomschrijvingen">Omschrijvingen <input data-inputname="domein" type="radio" name="domein" value="1" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met citaten">Citaten <input data-inputname="domein" type="radio" name="domein" value="2" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met kopsecties">Kopsecties <input data-inputname="domein" type="radio" name="domein" value="3" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met verbindingen">Verbindingen <input data-inputname="domein" type="radio" name="domein" value="4" class="radio-inline"/></label></div>
                 </div>
             </div>
         </div>
@@ -173,7 +197,7 @@
             <p class="woordsoort" data-zoek="{@zoek}">
                 <xsl:choose>
                     <xsl:when test="ivdnt:woordsoortitemgroep">
-                        <a href="#" data-showhidegroup="{ivdnt:get-showhide-id(.)}" class="gtbcollapsed">&#160;{@toon}</a>
+                        <a href="#" data-showhidegroup="{ivdnt:get-showhide-id(.)}" class="gtb-collapsed">&#160;{@toon}</a>
                     </xsl:when>
                     <xsl:otherwise>
                         <label>
@@ -188,7 +212,7 @@
             </p> 
             <xsl:if test="ivdnt:woordsoortitemgroep">
                 <!-- We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.  -->
-                <div class="gtbhidden" data-showhidegroup="{ivdnt:get-showhide-id(.)}">
+                <div class="gtb-hidden" data-showhidegroup="{ivdnt:get-showhide-id(.)}">
                     <table class="woordsoorttable">
                         <xsl:if test="ivdnt:woordsoortitemgroep/@label">
                             <thead>

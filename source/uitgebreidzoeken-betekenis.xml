@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div data-showhidegroup="uitgebreidzoeken.betekenis" class="gtb-hidden" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Woord in betekenis</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Label bij betekenis</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Collocaties / verbindingen met</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Semantische classificatie</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+</div>
