@@ -575,13 +575,6 @@
         <xsl:variable name="value-of-format-input" as="xs:string" select="ivdnt:get-input-value($topdiv//input[@name eq 'uitvoer' and ivdnt:is-checked(.)])"/>
         
         <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content() || '&amp;uitvoer=' || $value-of-format-input"/>
-        <xsl:variable name="text-input-uri-params" as="xs:string" select="ixsl:get(ixsl:page(), $TEXT_INPUT_URI_PARAMS_PROPERTY)"/>
-        
-        <!-- We kunnen current-tab niet berekenen met ivdnt:get-active-tabdiv() omdat we in de auxiliaries-div zitten en niet binnen
-             een echte tab.
-        -->
-        <xsl:variable name="current-tab" as="element(div)" select="key('ids', 'resultaathouder')/parent::div"/>
-        <xsl:variable name="tabdiv-id" as="xs:string" select="$current-tab/@id"/>
         
         <xsl:call-template name="ivdnt:export-result">
             <xsl:with-param name="url-for-content" select="$url-for-content"/>
@@ -592,8 +585,7 @@
     
     <xsl:template match="button[@name eq 'doe-afdrukken']" mode="ixsl:onclick">
         <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content() || '&amp;uitvoer=printhtml'"/>
-        <xsl:variable name="text-input-uri-params" as="xs:string" select="ixsl:get(ixsl:page(), $TEXT_INPUT_URI_PARAMS_PROPERTY)"/>
-        <xsl:message select="$url-for-content"/>
+        
         <xsl:call-template name="ivdnt:print-result">
             <xsl:with-param name="url-for-content" select="$url-for-content"/>
         </xsl:call-template>
