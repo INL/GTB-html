@@ -142,9 +142,15 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:van-tot-velden" mode="ivdnt:html-mode">        
-        <div class="row">
-            <span class="col-md-6"><label class="gtb-tekstveld">Vanaf <input type="text" name="xxx" class="form-control "/></label></span><span class="col-md-6 gtb-tekstveld"><label class="gtb-tekstveld">Tot / met <input type="text" name="xxx" class="form-control"/></label></span>
-        </div>
+        <p class="form-control-static">
+            <span class="col-md-2">Vanaf </span>
+            <!-- input style=... dient om de 100% van .form-control in bootstrap.css te overschrijven.
+                 Het percentage is proefondervindelijk vastgesteld en klopt niet eens helemaal. 
+                 TODO moet netter kunnen. -->
+            <input type="text" name="xxx" class="col-md-2 form-control" style="width: 21%"/>
+            <span class="col-md-2">tot / met </span>
+            <input type="text" name="xxx" class="col-md-2 form-control" style="width: 21%"/>
+        </p>
     </xsl:template>
     
     <xsl:template match="ivdnt:bronselectors" mode="ivdnt:html-mode">
