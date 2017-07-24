@@ -32,28 +32,27 @@
     <div class="col-md-2 resultaatknop">
        
         <ivdnt:modal type="exporteren" suppress-ok-button="true">
-            <ivdnt:modaltrigger> <button class="exporteerknop btn btn-secondary" name="exporteren">Exporteren</button></ivdnt:modaltrigger>
+            <ivdnt:modaltrigger> <button class="exporteerknop btn btn-secondary" name="exporteren">Exporteren...</button></ivdnt:modaltrigger>
             <ivdnt:modalcontent>
                 <ivdnt:modaltitle><h4 class="modal-title">Exporteren tussenresultaat</h4></ivdnt:modaltitle>
                 <p>Kies een formaat voor het te exporteren tussenresultaat</p>
-                <form id="exportform" download="mijnfile.csv">
+                <p class="row">
+                    <label class="col-md-6" for="xx">Formaat</label>
+                    <span class="col-md-6">
+                        <input name="uitvoer" type="radio" value="html" checked="checked" class="radio-inline"/> HTML
+                        <input name="uitvoer" type="radio" value="xml" class="radio-inline"/> XML
+                        <input name="uitvoer" type="radio" value="csv" class="radio-inline"/> CSV (Excel)
+                    </span>
+                </p>
+                <div class="modal-footer">
                     <p class="row">
-                        <label class="col-md-6" for="xx">Formaat</label>
-                        <span class="col-md-6">
-                            <input name="uitvoer" type="radio" value="html" checked="checked" class="radio-inline"/> HTML
-                            <input name="uitvoer" type="radio" value="xml" class="radio-inline"/> XML
-                            <input name="uitvoer" type="radio" value="csv" class="radio-inline"/> CSV (Excel)
-                        </span>
+                        <button type="button" name="doe-exporteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="{ancestor::ivdnt:modal/@type}">Exporteren</button>
+                        <button type="button" name="annuleer-exportorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
                     </p>
-                    <div class="modal-footer">
-                        <p class="row">
-                            <button type="button" name="doe-exporteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="{ancestor::ivdnt:modal/@type}">Exporteren</button>
-                            <button type="button" name="annuleer-exportorteren" class="btn btn-secondary" data-dismiss="modal" >Sluiten</button>
-                        </p>
-                    </div>
-                </form>
+                </div>
             </ivdnt:modalcontent>
-        </ivdnt:modal>    </div>
-    <div class="col-md-2 resultaatknop"><button class="btn btn-secondary" name="afdrukken">Afdrukken</button></div>
+        </ivdnt:modal>
+    </div>
+    <div class="col-md-2 resultaatknop"><button class="exporteerknop btn btn-secondary" name="doe-afdrukken">Afdrukken...</button></div>
     <!-- De resterende col-md-6 gaat naar de navigatieknoppen -->
 </ivdnt:formulier>

@@ -39,6 +39,11 @@
 
     <xsl:include href="render-results.xslt"/>
     
+    <!-- This function is used in order to void the output of the result of a called Javascript function. We are working around possible optimizations.-->
+    <xsl:function name="ivdnt:always-false" as="xs:boolean">
+        <xsl:sequence select="current-date() lt xs:date('2000-01-01')"/>
+    </xsl:function>
+    
     <xsl:function name="ivdnt:class-contains" as="xs:boolean">
         <xsl:param name="class" as="attribute(class)?"/>
         <xsl:param name="required-value" as="xs:string"/>
@@ -279,8 +284,13 @@
         <xsl:param name="client-filename" as="xs:string" required="yes"/>
         <xsl:param name="mimetype" as="xs:string" required="yes"/>
         
-        <!-- The current date predicat always returns false, so that the result of the function call is voided -->
-        <xsl:sequence select="js:exportResult($url-for-content, $client-filename, $mimetype)[current-date() lt xs:date('2000-01-01')]" />
+        <xsl:sequence select="js:exportResult($url-for-content, $client-filename, $mimetype)[ivdnt:always-false()]" />
+    </xsl:template>
+    
+    <xsl:template name="ivdnt:print-result">
+        <xsl:param name="url-for-content" as="xs:string" required="yes"/>
+        
+        <xsl:sequence select="js:openNewWindow($url-for-content)[ivdnt:always-false()]" />
     </xsl:template>
     
     <xsl:template name="ivdnt:render-results">
@@ -577,6 +587,15 @@
             <xsl:with-param name="url-for-content" select="$url-for-content"/>
             <xsl:with-param name="client-filename" select="'gtb-export.' || $value-of-format-input"/>
             <xsl:with-param name="mimetype" select="'text/' || $value-of-format-input"/>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xsl:template match="button[@name eq 'doe-afdrukken']" mode="ixsl:onclick">
+        <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content() || '&amp;uitvoer=printhtml'"/>
+        <xsl:variable name="text-input-uri-params" as="xs:string" select="ixsl:get(ixsl:page(), $TEXT_INPUT_URI_PARAMS_PROPERTY)"/>
+        <xsl:message select="$url-for-content"/>
+        <xsl:call-template name="ivdnt:print-result">
+            <xsl:with-param name="url-for-content" select="$url-for-content"/>
         </xsl:call-template>
     </xsl:template>
     

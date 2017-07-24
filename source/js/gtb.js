@@ -4,3 +4,7 @@ function exportResult(url, clientFilename, mimetype) {
 		success: download.bind(true, mimetype, clientFilename)
 	});
 }
+
+function openNewWindow(url) {
+    window.open(url);
+}
