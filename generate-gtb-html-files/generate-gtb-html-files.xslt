@@ -43,8 +43,14 @@
     </xsl:function>
     
     <xsl:template match="/">
+        <!-- Stap 1: los alle includes op, dat maakt het navigeren makkelijker, bijvoorbeeld om na te gaan of een formulier modals heeft. -->
+        <xsl:variable name="includes-resolved" as="element()">
+            <xsl:apply-templates select="/" mode="ivdnt:include-mode"/>
+        </xsl:variable>
+        <xsl:result-document href="/tmp/klad.xml"><xsl:copy-of select="$includes-resolved"/></xsl:result-document>
+        <!-- Stap 2: doe de normale conversie -->
         <xsl:copy>
-            <xsl:apply-templates mode="ivdnt:html-mode"/>
+            <xsl:apply-templates select="$includes-resolved" mode="ivdnt:html-mode"/>
         </xsl:copy>
     </xsl:template>
     

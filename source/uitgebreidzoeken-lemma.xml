@@ -22,7 +22,7 @@
                 <ivdnt:modaltrigger><button type="button" class="woordsoortassistentieknop btn btn-secondary">Assistentie...</button></ivdnt:modaltrigger>
                 <ivdnt:modalcontent>
                     <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
-                    <ivdnt:include href="woordsoortassistentie2.xml"/>
+                    <ivdnt:include href="woordsoortassistentie.xml"/>
                 </ivdnt:modalcontent>
             </ivdnt:modal>
         </ivdnt:formulierinput>
