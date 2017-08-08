@@ -122,7 +122,6 @@
             <xsl:apply-templates select="node() | @*" mode="ivdnt:html-mode"/>
         </div>
         <!--  Als het formulier modals heeft, plaats deze dan erachter. -->
-        <!-- TODO de modals kunnen in een  include-file zitten! -->
         <xsl:apply-templates select=".//ivdnt:modal" mode="ivdnt:modal-mode"/>
     </xsl:template>
     
@@ -215,7 +214,7 @@
                     <xsl:otherwise>
                         <label>
                             <!-- name="{@id}" niet meer nodig bij <input>.
-                                 TODO verwijder id's uit woordsoortassistentie.xml
+                                 
                                  N.B.: value is expres leeg, dit maakt het onderscheid met subwaardes makkelijker.
                             -->
                             <input type="checkbox" value=""/><span>&#160;{@toon}</span>
