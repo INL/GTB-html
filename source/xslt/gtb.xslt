@@ -36,6 +36,8 @@
     <xsl:variable name="RESULT_SORTREVERSE_PROPERTY" as="xs:string" select="'result-sortreverse'"/>
     <xsl:variable name="FOCUSSED_TEXTBOX_PROPERTY" as="xs:string" select="'focussed_textbox-id'"/>
     <xsl:variable name="BASISZOEKEN_FORMULIER_CLASS" as="xs:string" select="'basiszoeken-formulier'"/>
+    <xsl:variable name="UITGEBREIDZOEKEN_FORMULIER_CLASS" as="xs:string" select="'uitgebreidzoeken-formulier'"/>
+    
 
     <xsl:include href="render-results.xslt"/>
     
@@ -88,6 +90,11 @@
     <xsl:function name="ivdnt:get-select-value" as="xs:string">
         <xsl:param name="select" as="element(select)"/>
         <xsl:sequence select="ixsl:get($select, 'value')"/>
+    </xsl:function>
+    
+    <xsl:function name="ivdnt:strip-hash-from-id"  as="xs:string">
+        <xsl:param name="id-with-hash" as="xs:string"/>
+        <xsl:value-of select="substring-after($id-with-hash, '#')"/>        
     </xsl:function>
     
     <xsl:template name="ivdnt:uncheck">
@@ -238,7 +245,7 @@
         </xsl:for-each>
         
         <!-- Activate the div whose id is equal to the href of the "resultaat" tabtitle: -->
-        <xsl:variable name="tabdiv-id" as="xs:string" select="substring-after($result-tab-title/a/@href, '#')"/>
+        <xsl:variable name="tabdiv-id" as="xs:string" select="ivdnt:strip-hash-from-id($result-tab-title/a/@href)"/>
         
         <!-- Save some info for use by pagination: -->
         <ixsl:set-property name="{$URL_FOR_CONTENT_PROPERTY}" select="$url-for-content" object="ixsl:page()"/>
@@ -402,7 +409,7 @@
         <xsl:value-of select="'sensitive=' || exists($sensitive)"/>
     </xsl:function>
     
-    <xsl:function name="ivdnt:get-basiszoeken-url" as="xs:string">
+    <xsl:function name="ivdnt:get-zoeken-url" as="xs:string">
         <xsl:param name="topdiv" as="element(div)"/>
         <xsl:variable name="text-inputs" as="xs:string" select="ivdnt:get-text-inputs-for-url($topdiv)"/>
         <xsl:variable name="wdb-inputs" as="xs:string" select="ivdnt:get-wdb-inputs-for-url($topdiv)"/>
@@ -441,26 +448,26 @@
     </xsl:template>
     
     <xsl:template match="button[ivdnt:class-contains(@class, 'woordsoortassistentieknop')]" mode="ixsl:onclick">
-        <xsl:variable name="topdiv" as="element(div)" select="following::div[@data-modaltype eq 'woordsoortzoeken'][1]"/>
+        <xsl:variable name="topdiv" as="element(div)" select="id(ivdnt:strip-hash-from-id(@data-target))"/>
         <xsl:for-each select="$topdiv//input[@type eq 'checkbox' and ivdnt:is-checked(.)]">
             <xsl:call-template name="ivdnt:uncheck"><xsl:with-param name="checkbox" select="."/></xsl:call-template>
         </xsl:for-each>
     </xsl:template>
     
-    <xsl:template name="ivdnt:doe-basiszoeken">
+    <xsl:template name="ivdnt:doe-zoeken">
         <xsl:param name="topdiv" as="element(div)" required="yes"/>
         <xsl:call-template name="ivdnt:select-tab">
             <xsl:with-param name="tabid" select="'resultaat'"/>
-            <xsl:with-param name="url-for-content" select="ivdnt:get-basiszoeken-url($topdiv)"/>
+            <xsl:with-param name="url-for-content" select="ivdnt:get-zoeken-url($topdiv)"/>
             <xsl:with-param name="text-input-uri-params" as="xs:string" select="ivdnt:get-text-inputs-for-url($topdiv)" tunnel="yes"/>
         </xsl:call-template>
     </xsl:template>
     
-    <xsl:template match="div[ivdnt:class-contains(@class, $BASISZOEKEN_FORMULIER_CLASS)]" mode="ixsl:onkeypress">
+    <xsl:template match="div[ivdnt:class-contains(@class, $BASISZOEKEN_FORMULIER_CLASS) or ivdnt:class-contains(@class, $UITGEBREIDZOEKEN_FORMULIER_CLASS)]" mode="ixsl:onkeypress">
         <xsl:variable name="event" select="ixsl:event()"/>
         <xsl:if test="xs:integer(ixsl:get($event, 'which')) eq 13">
             <!-- User pressed enter -->
-            <xsl:call-template name="ivdnt:doe-basiszoeken">
+            <xsl:call-template name="ivdnt:doe-zoeken">
                 <xsl:with-param name="topdiv" select="."/>
             </xsl:call-template>
         </xsl:if>
@@ -495,15 +502,29 @@
         </xsl:call-template>
     </xsl:template>
     
-    <xsl:template match="button[@name eq 'start-zoeken']" mode="ixsl:onclick">
+    <xsl:template match="button[@name eq 'start-basis-zoeken']" mode="ixsl:onclick">
         <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $BASISZOEKEN_FORMULIER_CLASS)][1]"/>
-        <xsl:call-template name="ivdnt:doe-basiszoeken">
+        <xsl:call-template name="ivdnt:doe-zoeken">
             <xsl:with-param name="topdiv" select="$topdiv"/>
         </xsl:call-template>
     </xsl:template>
     
-    <xsl:template match="button[@name eq 'wis-zoeken']" mode="ixsl:onclick">
+    <xsl:template match="button[@name eq 'wis-basis-zoeken']" mode="ixsl:onclick">
         <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $BASISZOEKEN_FORMULIER_CLASS)][1]"/>
+        <xsl:for-each select="$topdiv//input[@type eq 'text']">
+            <ixsl:set-property name="value" select="''" object="."/>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="button[@name eq 'start-uitgebreid-zoeken']" mode="ixsl:onclick">
+        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $UITGEBREIDZOEKEN_FORMULIER_CLASS)][1]"/>
+        <xsl:call-template name="ivdnt:doe-zoeken">
+            <xsl:with-param name="topdiv" select="$topdiv"/>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xsl:template match="button[@name eq 'wis-uitgebreid-zoeken']" mode="ixsl:onclick">
+        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $UITGEBREIDZOEKEN_FORMULIER_CLASS)][1]"/>
         <xsl:for-each select="$topdiv//input[@type eq 'text']">
             <ixsl:set-property name="value" select="''" object="."/>
         </xsl:for-each>
@@ -631,8 +652,4 @@
         <ixsl:set-property name="{$FOCUSSED_TEXTBOX_PROPERTY}" select="." object="ixsl:page()"/>
     </xsl:template>
     
-    <!--<xsl:template match="input[@type eq 'text']" mode="ixsl:oninput">
-        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $BASISZOEKEN_FORMULIER_CLASS)][1]"/>
-        <xsl:message select="'text=' || ivdnt:input-value(.) || ',url=' || ivdnt:get-typeahead-url($topdiv, .)"/>        
-    </xsl:template>-->
 </xsl:stylesheet>

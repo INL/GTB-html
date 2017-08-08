@@ -116,6 +116,7 @@
             <xsl:apply-templates select="node() | @*" mode="ivdnt:html-mode"/>
         </div>
         <!--  Als het formulier modals heeft, plaats deze dan erachter. -->
+        <!-- TODO de modals kunnen in een  include-file zitten! -->
         <xsl:apply-templates select=".//ivdnt:modal" mode="ivdnt:modal-mode"/>
     </xsl:template>
     
@@ -147,9 +148,9 @@
             <!-- input style=... dient om de 100% van .form-control in bootstrap.css te overschrijven.
                  Het percentage is proefondervindelijk vastgesteld en klopt niet eens helemaal. 
                  TODO moet netter kunnen. -->
-            <input type="text" name="xxx" class="col-md-2 form-control" style="width: 21%"/>
+            <input type="text" name="{@van}" class="col-md-2 form-control" style="width: 21%"/>
             <span class="col-md-2">tot / met </span>
-            <input type="text" name="xxx" class="col-md-2 form-control" style="width: 21%"/>
+            <input type="text" name="{@tot}" class="col-md-2 form-control" style="width: 21%"/>
         </p>
     </xsl:template>
     

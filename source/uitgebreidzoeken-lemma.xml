@@ -22,7 +22,7 @@
                 <ivdnt:modaltrigger><button type="button" class="woordsoortassistentieknop btn btn-secondary">Assistentie...</button></ivdnt:modaltrigger>
                 <ivdnt:modalcontent>
                     <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
-                    <ivdnt:include href="woordsoortassistentie.xml"/>
+                    <ivdnt:include href="woordsoortassistentie2.xml"/>
                 </ivdnt:modalcontent>
             </ivdnt:modal>
         </ivdnt:formulierinput>
@@ -40,13 +40,13 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Verwante vorm</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+                <input type="text" name="etymvorm" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">In de etymologische beschrijving genoemde taal</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+                <input type="text" name="etymtaal" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
     </div>
@@ -56,19 +56,19 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Morfologisch element</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+                <input type="text" name="morfelem" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Woorden in de morfologische beschrijving</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+                <input type="text" name="morfterm" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Woordvormingstype</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <select name='woordvormingstype' class="form-control gtb-selectveld">
+                <select name='morftype' class="form-control gtb-selectveld">
                     <option value="afleiding" >afleiding</option>
                     <option value="samenkoppeling" >samenkoppeling</option>
                     <option value="samenkoppeling bnw+znw" >samenkoppeling, bnw+znw</option>
@@ -110,7 +110,7 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Type</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <select name="flexietype" class="form-control gtb-selectveld">
+                <select name="flextype" class="form-control gtb-selectveld">
                     <option data-dict="ONW,VMNW"  value="(1e pl.conj.pres.)">1e pl.conj.pres. (ONW,VMNW)</option>
                     <option data-dict="VMNW" value="(1e pl.conj.pret.)" >1e pl.conj.pret. (VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(1e pl.ind.pres.)">1e pl.ind.pres. (ONW,VMNW)</option>
@@ -226,7 +226,7 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Vorm</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+                <input type="text" name="flexvorm" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
     </div>

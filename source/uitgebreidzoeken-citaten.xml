@@ -3,7 +3,7 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in citaattekst</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+            <input type="text" name="citaat" class="form-control gtb-tekstveld"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
@@ -12,25 +12,25 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Auteur citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+                <input type="text" name="bronauteur" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Verkorte brontitel</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+                <input type="text" name="brontitel" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Datering bron</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <ivdnt:van-tot-velden/>
+                <ivdnt:van-tot-velden van="bronvan" tot="brontot"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Lokalisering bron</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+                <input type="text" name="bronlocatie" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
     </div>
@@ -39,13 +39,13 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Datering oudste citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <ivdnt:van-tot-velden/>
+                <ivdnt:van-tot-velden van="oudvan" tot="oudtot"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Lokalisering oudste citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="xxx" class="form-control gtb-tekstveld"/>
+                <input type="text" name="oudlocatie" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
     </div>

@@ -62,6 +62,6 @@
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel><a href="*** iets ***">Help</a></ivdnt:formulierlabel>
-        <ivdnt:include href="basiszoeken-buttons.xml"/>
+        <ivdnt:include href="uitgebreidzoeken-buttons.xml"/>
     </ivdnt:formulierregel>
 </ivdnt:formulier>

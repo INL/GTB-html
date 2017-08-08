@@ -197,9 +197,7 @@
         <xsl:param name="text-input-uri-params" as="xs:string" tunnel="yes"/>
         
         <!-- Assume url encoding is not needed for dictionary name or id. -->
-        <xsl:variable name="form-pane" select="ancestor::div[ivdnt:class-contains(@class, 'tab-content')][1]//div[ivdnt:class-contains(@class, $BASISZOEKEN_FORMULIER_CLASS)]"/>
         <xsl:variable name="href" as="xs:string" select="$baseArticleURL || '&amp;wdb=' || parent::*/@Wdb || '&amp;id=' || parent::*/@id || '&amp;' || $text-input-uri-params"/>
-        <!--<xsl:message select="'href=' || $href"/>-->
         <a href="{$href}" target="_blank">
             <xsl:call-template name="parse-result-attributes"/>
             <span class="gtb-homoniemnr">{parent::*/@Homoniemnr}</span>
