@@ -83,13 +83,8 @@
     </xsl:function>
     
     <xsl:function name="ivdnt:get-input-value" as="xs:string">
-        <xsl:param name="input" as="element(input)"/>
+        <xsl:param name="input" as="element()"/> <!-- either element(select) or element(input) -->
         <xsl:sequence select="ixsl:get($input, 'value')"/>
-    </xsl:function>
-    
-    <xsl:function name="ivdnt:get-select-value" as="xs:string">
-        <xsl:param name="select" as="element(select)"/>
-        <xsl:sequence select="ixsl:get($select, 'value')"/>
     </xsl:function>
     
     <xsl:function name="ivdnt:strip-hash-from-id"  as="xs:string">
@@ -379,10 +374,10 @@
     
     
     <!-- Return the names and (url-encoded) values of all text inputs below $topdiv. Each name is linked to a value with an = sign. All name-value-pairs are separated by an ampersand. -->
-    <xsl:function name="ivdnt:get-text-inputs-for-url" as="xs:string">
+    <xsl:function name="ivdnt:get-value-inputs-for-url" as="xs:string">
         <xsl:param name="topdiv" as="element(div)"/>
         <xsl:variable name="values" as="xs:string*">
-            <xsl:for-each select="$topdiv//input[@type eq 'text']">
+            <xsl:for-each select="$topdiv//input[@type eq 'text'] | $topdiv//select">
                 <xsl:variable name="name" as="xs:string" select="@name"/>
                 <xsl:variable name="value" as="xs:string" select="normalize-space(ivdnt:get-input-value(.))"/>
                 <xsl:sequence select="if ($value eq '') then () else $name || '=' || encode-for-uri($value)"/>
@@ -411,7 +406,7 @@
     
     <xsl:function name="ivdnt:get-zoeken-url" as="xs:string">
         <xsl:param name="topdiv" as="element(div)"/>
-        <xsl:variable name="text-inputs" as="xs:string" select="ivdnt:get-text-inputs-for-url($topdiv)"/>
+        <xsl:variable name="text-inputs" as="xs:string" select="ivdnt:get-value-inputs-for-url($topdiv)"/>
         <xsl:variable name="wdb-inputs" as="xs:string" select="ivdnt:get-wdb-inputs-for-url($topdiv)"/>
         <xsl:variable name="sensitivity" as="xs:string" select="ivdnt:get-sensitivity-for-url($topdiv)"/>
         <!-- TODO dynamically determine other-params. -->
@@ -459,7 +454,7 @@
         <xsl:call-template name="ivdnt:select-tab">
             <xsl:with-param name="tabid" select="'resultaat'"/>
             <xsl:with-param name="url-for-content" select="ivdnt:get-zoeken-url($topdiv)"/>
-            <xsl:with-param name="text-input-uri-params" as="xs:string" select="ivdnt:get-text-inputs-for-url($topdiv)" tunnel="yes"/>
+            <xsl:with-param name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($topdiv)" tunnel="yes"/>
         </xsl:call-template>
     </xsl:template>
     
@@ -525,7 +520,7 @@
     
     <xsl:template match="button[@name eq 'wis-uitgebreid-zoeken']" mode="ixsl:onclick">
         <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $UITGEBREIDZOEKEN_FORMULIER_CLASS)][1]"/>
-        <xsl:for-each select="$topdiv//input[@type eq 'text']">
+        <xsl:for-each select="$topdiv//input[@type eq 'text'] | $topdiv//select">
             <ixsl:set-property name="value" select="''" object="."/>
         </xsl:for-each>
     </xsl:template>
@@ -539,7 +534,7 @@
     
     <xsl:template match="button[@name eq 'doe-sorteren']" mode="ixsl:onclick">
         <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@data-modaltype eq 'sorteren'][1]"/>
-        <xsl:variable name="keys" as="xs:string*" select="for $select in $topdiv//select return ivdnt:get-select-value($select)[. ne '']"/>
+        <xsl:variable name="keys" as="xs:string*" select="for $select in $topdiv//select return ivdnt:get-input-value($select)[. ne '']"/>
         <xsl:variable name="value-of-reversed-input" as="xs:string" select="ivdnt:get-input-value($topdiv//input[@name eq 'sorteervolgorde' and ivdnt:is-checked(.)])"/>
         <xsl:variable name="reversed" as="xs:string" select="if ($value-of-reversed-input eq 'aflopend') then 'true' else 'false'"/>
         
@@ -571,8 +566,8 @@
     <xsl:template match="select[matches(@name, '^sleutel[1-4]$')]" mode="ixsl:onchange">
         <xsl:variable name="thisSelect" as="element(select)" select="."/>
         <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@id eq 'sleutels'][1]"/>
-        <xsl:variable name="thisSelectValue" select="ivdnt:get-select-value($thisSelect)"/>
-        <xsl:variable name="allSelectedValues" as="xs:string*" select="for $s in $topdiv//select return ivdnt:get-select-value($s)"/>
+        <xsl:variable name="thisSelectValue" select="ivdnt:get-input-value($thisSelect)"/>
+        <xsl:variable name="allSelectedValues" as="xs:string*" select="for $s in $topdiv//select return ivdnt:get-input-value($s)"/>
         <xsl:for-each select="$topdiv//select/option[@value ne '']">
             <xsl:choose>
                 <xsl:when test="@value = $allSelectedValues">

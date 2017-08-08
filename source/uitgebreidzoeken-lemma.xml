@@ -69,6 +69,7 @@
             <ivdnt:formulierlabel class="gtb-inspring">Woordvormingstype</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <select name='morftype' class="form-control gtb-selectveld">
+                    <option value="">---</option>
                     <option value="afleiding" >afleiding</option>
                     <option value="samenkoppeling" >samenkoppeling</option>
                     <option value="samenkoppeling bnw+znw" >samenkoppeling, bnw+znw</option>
@@ -111,6 +112,7 @@
             <ivdnt:formulierlabel class="gtb-inspring">Type</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <select name="flextype" class="form-control gtb-selectveld">
+                    <option value="">----</option>
                     <option data-dict="ONW,VMNW"  value="(1e pl.conj.pres.)">1e pl.conj.pres. (ONW,VMNW)</option>
                     <option data-dict="VMNW" value="(1e pl.conj.pret.)" >1e pl.conj.pret. (VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(1e pl.ind.pres.)">1e pl.ind.pres. (ONW,VMNW)</option>
