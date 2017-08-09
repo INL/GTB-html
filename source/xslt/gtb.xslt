@@ -377,7 +377,7 @@
     <xsl:function name="ivdnt:get-value-inputs-for-url" as="xs:string">
         <xsl:param name="topdiv" as="element(div)"/>
         <xsl:variable name="values" as="xs:string*">
-            <xsl:for-each select="$topdiv//input[@type eq 'text'] | $topdiv//select">
+            <xsl:for-each select="$topdiv//*[self::select | self::input[@type eq 'text']]">
                 <xsl:variable name="name" as="xs:string" select="@name"/>
                 <xsl:variable name="value" as="xs:string" select="normalize-space(ivdnt:get-input-value(.))"/>
                 <xsl:sequence select="if ($value eq '') then () else $name || '=' || encode-for-uri($value)"/>
@@ -520,7 +520,7 @@
     
     <xsl:template match="button[@name eq 'wis-uitgebreid-zoeken']" mode="ixsl:onclick">
         <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $UITGEBREIDZOEKEN_FORMULIER_CLASS)][1]"/>
-        <xsl:for-each select="$topdiv//input[@type eq 'text'] | $topdiv//select">
+        <xsl:for-each select="$topdiv//*[self::select | self::input[@type eq 'text']]">
             <ixsl:set-property name="value" select="''" object="."/>
         </xsl:for-each>
     </xsl:template>
