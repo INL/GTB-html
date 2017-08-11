@@ -137,7 +137,7 @@ td.speciaalteken:active{
     content: '▼ ';
 }
 
-.gtbcheckbox{
+.gtbcheckbox, .gtbradio{
     border-radius: 3px;
     border-style: solid;
     border-color: black;
@@ -184,7 +184,9 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 }
 
 .gtb-xml-error{
-    background-color: red;
+    background-color: yellow;
+    font-family:monospace;
+    font-size: smaller;
 }
 
 .gtb-statcount{
@@ -206,8 +208,8 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 .gtb-wdbcol-woordsoort{
     width: 15%;
 }
-.gtb-wdbcol-betekenis{
-    /*width: 40%;*/
+.gtb-wdbcol-anders{
+    /*  rest */
 }
 
 div.gtb-results{

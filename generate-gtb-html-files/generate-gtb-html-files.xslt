@@ -160,17 +160,18 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:bronselectors" mode="ivdnt:html-mode">
+        <!-- use suffix attribute to add a suffix to the dictionary names, e.g. suffix="bronnen" yields name="onwbronnen" -->
         <div class="{$zoekformulier-label-column-class}">
             <span class="formulierlabel formuliertitel"><xsl:value-of select="@label"/></span>
         </div>
         <div class="{$zoekformulier-input-column-class}">
             <div class="formulierinput">
                 <div class="row">
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Oudnederlands Woordenboek">ONW <input checked="checked" data-inputname="wdb" type="checkbox" name="onw" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Vroegmiddelnederlands Woordenboek">VMNW <input checked="checked" data-inputname="wdb" type="checkbox" name="vmnw" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Middelnederlandsch Woordenboek">MNW <input checked="checked" data-inputname="wdb" type="checkbox" name="mnw" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Nederlandsche Taal">WNT <input checked="checked" data-inputname="wdb" type="checkbox" name="wnt" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Friese taal">WFT <input checked="checked" data-inputname="wdb" type="checkbox" name="wft" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Oudnederlands Woordenboek">ONW <input checked="checked" data-inputname="wdb" type="checkbox" name="onw{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Vroegmiddelnederlands Woordenboek">VMNW <input checked="checked" data-inputname="wdb" type="checkbox" name="vmnw{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Middelnederlandsch Woordenboek">MNW <input checked="checked" data-inputname="wdb" type="checkbox" name="mnw{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Nederlandsche Taal">WNT <input checked="checked" data-inputname="wdb" type="checkbox" name="wnt{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Friese taal">WFT <input checked="checked" data-inputname="wdb" type="checkbox" name="wft{@suffix}" class="checkbox-inline"/></label></div>
                 </div>
             </div>
         </div>
@@ -183,11 +184,11 @@
         <div class="{$zoekformulier-input-column-class}">
             <div class="formulierinput">
                 <div class="row">
-                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met artikelen">Artikelen <input checked="checked" data-inputname="domein" type="radio" name="domein" value="0" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met betekenisomschrijvingen">Omschrijvingen <input data-inputname="domein" type="radio" name="domein" value="1" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met citaten">Citaten <input data-inputname="domein" type="radio" name="domein" value="2" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met kopsecties">Kopsecties <input data-inputname="domein" type="radio" name="domein" value="3" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class}"><label title="Toon een lijst met verbindingen">Verbindingen <input data-inputname="domein" type="radio" name="domein" value="4" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met artikelen">Artikelen <input checked="checked" data-inputname="domein" type="radio" name="domein" value="0" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met betekenisomschrijvingen">Omschr. <input data-inputname="domein" type="radio" name="domein" value="1" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met citaten">Citaten <input data-inputname="domein" type="radio" name="domein" value="2" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met kopsecties">Kopsecties <input data-inputname="domein" type="radio" name="domein" value="3" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met verbindingen">Verbind. <input data-inputname="domein" type="radio" name="domein" value="4" class="radio-inline"/></label></div>
                 </div>
             </div>
         </div>

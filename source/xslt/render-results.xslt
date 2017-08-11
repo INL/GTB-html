@@ -32,16 +32,26 @@
                     <col class="gtb-wdbcol-modern_lemma"/>
                     <col class="gtb-wdbcol-lemma"/>
                     <col class="gtb-wdbcol-woordsoort"/>
-                    <col class="gtb-wdbcol-betekenis"/>
+                    <xsl:if test="result/@Verbinding">
+                        <!-- Extra kolom: nooit meer dan één, namelijk Verbinding, Kopsectie of Citaat. Verbinding komt voor de betekenis, de rest erna -->
+                        <col class="gtb-wdbcol-anders"/>
+                    </xsl:if>
+                    <col class="gtb-wdbcol-anders"/>
+                    <xsl:if test="result/@Kopsectie | result/@Citaat">
+                        <col class="gtb-wdbcol-anders"/>
+                    </xsl:if>
                 </colgroup>
                 <thead>
                     <tr>
-                        <td>Nr.</td>
-                        <td>Wdb</td>
-                        <td>Mod. Ned. trefwoord</td>
-                        <td>Origineel trefwoord</td>
-                        <td>Woordsoort</td>
-                        <td>Betekenis</td>
+                        <th>Nr.</th>
+                        <th>Wdb</th>
+                        <th>Mod. Ned. trefwoord</th>
+                        <th>Origineel trefwoord</th>
+                        <th>Woordsoort</th>
+                        <xsl:if test="result/@Verbinding"><th>Verbinding</th></xsl:if>
+                        <xsl:if test="result/@Betekenis"><th>Betekenis</th></xsl:if>
+                        <xsl:if test="result/@Kopsectie"><th>Kopsectie</th></xsl:if>
+                        <xsl:if test="result/@Citaat"><th>Citaat</th></xsl:if>
                     </tr>
                 </thead>
                 <tbody>
@@ -169,7 +179,10 @@
             <xsl:apply-templates select="@Modern_lemma" mode="render-results"/>
             <xsl:apply-templates select="@Lemma" mode="render-results"/>
             <xsl:apply-templates select="@Woordsoort" mode="render-results"/>
+            <xsl:apply-templates select="@Verbinding" mode="render-results"/>
             <xsl:apply-templates select="@Betekenis" mode="render-results"/>
+            <xsl:apply-templates select="@Kopsectie" mode="render-results"/>
+            <xsl:apply-templates select="@Citaat" mode="render-results"/>
         </tr>
     </xsl:template>
     
@@ -185,7 +198,7 @@
         <xsl:value-of select="."/>
     </xsl:template>
     
-    <xsl:template match="@Modern_lemma | @Betekenis" mode="render-result-attributes">
+    <xsl:template match="@Modern_lemma | @Betekenis | @Citaat | @Verbinding | @Kopsectie" mode="render-result-attributes">
         <xsl:call-template name="parse-result-attributes"/>
         
         <xsl:if test="(local-name() eq 'Lemma') and (parent::*/@Homoniemnr ne '')">
@@ -223,11 +236,18 @@
     </xsl:template>
     
     <!-- TODO find out about markup used inside attributes --> 
-    <xsl:template match="I|i|EM|em|B|b" mode="parse-result-attribute">
+    <xsl:template match="I|i|EM|em|B|b|br|BR" mode="parse-result-attribute">
         <xsl:element name="{lower-case(local-name(.))}">
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates mode="parse-result-attribute"/>
         </xsl:element>
+    </xsl:template>
+    
+    <xsl:template match="font[@color]|FONT[@color]" mode="parse-result-attribute">
+        <span style="color: {@color}">
+            <xsl:copy-of select="@* except @color"/>
+            <xsl:apply-templates mode="parse-result-attribute"/>
+        </span>
     </xsl:template>
     
 </xsl:stylesheet>

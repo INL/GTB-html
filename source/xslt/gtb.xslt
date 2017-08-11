@@ -381,7 +381,9 @@
                 <xsl:sequence select="if ($value eq '') then () else $name || '=' || encode-for-uri($value)"/>
             </xsl:for-each>
         </xsl:variable>
-        <xsl:value-of select="string-join($values, '&amp;')"/>
+        <xsl:variable name="domeininput" as="element()?" select="$topdiv//input[@type eq 'radio' and @name eq 'domein' and ivdnt:is-checked(.)]"/>
+        <xsl:variable name="domein" as="xs:integer" select="if ($domeininput) then xs:integer(ivdnt:get-input-value($domeininput)) else 0"/>
+        <xsl:value-of select="string-join($values, '&amp;') || '&amp;domein=' || $domein"/>
     </xsl:function>
     
     <!-- Return the (url-encoded) names of all checkboxes below $topdiv that have @data-inputname="wdb" and that are checked. The names are separated by comma's. -->
@@ -408,20 +410,20 @@
         <xsl:variable name="wdb-inputs" as="xs:string" select="ivdnt:get-wdb-inputs-for-url($topdiv)"/>
         <xsl:variable name="sensitivity" as="xs:string" select="ivdnt:get-sensitivity-for-url($topdiv)"/>
         <!-- TODO dynamically determine other-params. -->
-        <xsl:variable name="other-params" as="xs:string" select="'&amp;domein=0&amp;conc=true&amp;xmlerror=true'"/>
+        <xsl:variable name="other-params" as="xs:string" select="'&amp;conc=true&amp;xmlerror=true'"/>
         <xsl:value-of select="$baseSearchURL || $other-params || '&amp;' || $text-inputs || '&amp;wdb=' || $wdb-inputs || '&amp;' || $sensitivity"/>
     </xsl:function>
     
-    <xsl:function name="ivdnt:get-typeahead-url" as="xs:string">
+    <!--<xsl:function name="ivdnt:get-typeahead-url" as="xs:string">
         <xsl:param name="topdiv" as="element(div)"/>
         <xsl:param name="current-textfield" as="element(input)"/>
         <xsl:variable name="wdb-inputs" as="xs:string" select="ivdnt:get-wdb-inputs-for-url($topdiv)"/>
         <xsl:variable name="sensitivity" as="xs:string" select="ivdnt:get-sensitivity-for-url($topdiv)"/>
         <xsl:variable name="prefix" as="xs:string" select="encode-for-uri(ivdnt:get-input-value($current-textfield))"/>
-        <!-- TODO dynamically determine other-params. -->
+        <!-\- TODO dynamically determine other-params. -\->
         <xsl:variable name="other-params" as="xs:string" select="'&amp;xmlerror=true'"/>
         <xsl:value-of select="$baseListURL || $other-params || '&amp;prefix=' || $prefix || '&amp;index=' || $current-textfield/@name || '&amp;wdb=' || $wdb-inputs || '&amp;' || $sensitivity"/>
-    </xsl:function>
+    </xsl:function>-->
     
     <xsl:function name="ivdnt:get-target-input" as="element(input)">
         <xsl:param name="data-target-id" as="xs:string"/>
