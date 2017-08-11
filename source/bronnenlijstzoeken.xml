@@ -1,4 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ivdnt:formulier xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-    <p>TODO</p>
+<ivdnt:formulier class="zoek-formulier" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <ivdnt:formulierregel>
+        <ivdnt:bronselectors label="Zoeken in bronnenlijst" suffix="bronnen"/>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Speciale tekens (klik om ze in te voeren)<br/><label class="form-group"><input name="toon-tekens" type="checkbox" class="gtbcheckbox"/>Toon alle tekens</label></ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <ivdnt:include href="specialetekens.xml"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <h1 style="background-color: red">Dit formulier werkt nog niet</h1>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Auteur</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="bronauteur" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Verkorte titel</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="brontitelkort" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Woorden in titel</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="brontitel" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Datering</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <ivdnt:van-tot-velden van="bronvan" tot="brontot"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Lokalisering</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="bronlocatie" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Signatuur</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="bronsig" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel>Woord in bronartikel</ivdnt:formulierlabel>
+        <ivdnt:formulierinput>
+            <input type="text" name="article" class="form-control gtb-tekstveld"/>
+        </ivdnt:formulierinput>
+    </ivdnt:formulierregel>
+    
+    <ivdnt:formulierregel>
+        <ivdnt:formulierlabel><a href="*** iets ***">Help</a></ivdnt:formulierlabel>
+        <ivdnt:include href="zoek-buttons.xml"/>
+    </ivdnt:formulierregel>
 </ivdnt:formulier>
