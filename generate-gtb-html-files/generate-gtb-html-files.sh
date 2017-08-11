@@ -15,7 +15,7 @@ fi
 
 mkdir "$TARGETDIR"
 
-cp -R "$SOURCEDIR"/* "$TARGETDIR"
+cp -L -R "$SOURCEDIR"/* "$TARGETDIR"
 rm "$TARGETDIR"/*.xml
 rm "$TARGETDIR"/xslt/*.xslt
 
