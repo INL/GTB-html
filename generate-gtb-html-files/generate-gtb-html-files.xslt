@@ -92,6 +92,7 @@
                         initialTemplate: "initialize",
                         stylesheetParams: {
                              baseArticleURL: "http://gtb.inl.nl/iWDB/search?actie=article",
+                             baseArticleContentURL: "http://gtb.inl.nl/iWDB/search?actie=article_content",
                              baseSearchURL: "../redirect.php?actie=results",
                              XXXXXbaseSearchURL: "http://gtb.inl.nl/iWDB/search?actie=results",
                              baseListURL: "../redirect.php?actie=list",

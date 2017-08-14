@@ -3,5 +3,5 @@
     <div class="col-md-2"><button class="btn btn-primary" name="start-zoeken" type="submit">Zoek</button></div>
     <div class="col-md-2"><button class="btn btn-secondary"  name="wis-zoeken">Wis</button></div>
     <div class="col-md-2"><button class="btn btn-secondary"  name="xxx">Geschiedenis</button></div>
-    <div class="col-md-2 gtbcheckbox"><label class="form-group">Letters exact <input data-inputname="sensitive" type="checkbox" checked="checked" name="sensitive" class="checkbox-inline"/></label></div>
+    <div class="col-md-2 gtbcheckbox"><label class="form-group">Letters exact <input data-inputname="sensitive" type="checkbox" name="sensitive" class="checkbox-inline"/></label></div>
 </div>

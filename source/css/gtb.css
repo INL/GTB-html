@@ -208,6 +208,18 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 .gtb-wdbcol-woordsoort{
     width: 15%;
 }
+.gtb-wdbcol-auteur{
+    width: 15%;
+}
+.gtb-wdbcol-titel{
+    width: 50%;
+}
+.gtb-wdbcol-datering{
+    width: 10%;
+}
+.gtb-wdbcol-lokalisering{
+    width: 10%;
+}
 .gtb-wdbcol-anders{
     /*  rest */
 }

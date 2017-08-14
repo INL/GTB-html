@@ -19,6 +19,11 @@
         <xsl:value-of select="if (count($result) gt 0) then ' ' || string-join($result, ' ') else ''"/>
     </xsl:function>
     
+    <xsl:function name="ivdnt:is-bronnenlijst-result"  as="xs:boolean">
+        <xsl:param name="results-element" as="element(results)"/>
+        <xsl:sequence select="exists($results-element/result[@titel])"></xsl:sequence>
+    </xsl:function>
+    
     <xsl:template match="results" mode="render-results">
         <xsl:param name="html" as="element(html)" required="yes"/>
         <xsl:param name="startline" as="xs:integer" required="yes"/>
@@ -29,29 +34,49 @@
                 <colgroup>
                     <col class="gtb-wdbcol-line"/>
                     <col class="gtb-wdbcol-wdb"/>
-                    <col class="gtb-wdbcol-modern_lemma"/>
-                    <col class="gtb-wdbcol-lemma"/>
-                    <col class="gtb-wdbcol-woordsoort"/>
-                    <xsl:if test="result/@Verbinding">
-                        <!-- Extra kolom: nooit meer dan één, namelijk Verbinding, Kopsectie of Citaat. Verbinding komt voor de betekenis, de rest erna -->
-                        <col class="gtb-wdbcol-anders"/>
-                    </xsl:if>
-                    <col class="gtb-wdbcol-anders"/>
-                    <xsl:if test="result/@Kopsectie | result/@Citaat">
-                        <col class="gtb-wdbcol-anders"/>
-                    </xsl:if>
+                    <xsl:choose>
+                        <xsl:when test="ivdnt:is-bronnenlijst-result(.)">
+                            <col class="gtb-wdbcol-auteur"/>
+                            <col class="gtb-wdbcol-titel"/>
+                            <col class="gtb-wdbcol-datering"/>
+                            <col class="gtb-wdbcol-lokalisering"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <col class="gtb-wdbcol-modern_lemma"/>
+                            <col class="gtb-wdbcol-lemma"/>
+                            <col class="gtb-wdbcol-woordsoort"/>
+                            <xsl:if test="result/@Verbinding">
+                                <!-- Extra kolom: nooit meer dan één, namelijk Verbinding, Kopsectie of Citaat. Verbinding komt voor de betekenis, de rest erna -->
+                                <col class="gtb-wdbcol-anders"/>
+                            </xsl:if>
+                            <col class="gtb-wdbcol-anders"/>
+                            <xsl:if test="result/@Kopsectie | result/@Citaat">
+                                <col class="gtb-wdbcol-anders"/>
+                            </xsl:if>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </colgroup>
                 <thead>
                     <tr>
                         <th>Nr.</th>
                         <th>Wdb</th>
-                        <th>Mod. Ned. trefwoord</th>
-                        <th>Origineel trefwoord</th>
-                        <th>Woordsoort</th>
-                        <xsl:if test="result/@Verbinding"><th>Verbinding</th></xsl:if>
-                        <xsl:if test="result/@Betekenis"><th>Betekenis</th></xsl:if>
-                        <xsl:if test="result/@Kopsectie"><th>Kopsectie</th></xsl:if>
-                        <xsl:if test="result/@Citaat"><th>Citaat</th></xsl:if>
+                        <xsl:choose>
+                            <xsl:when test="ivdnt:is-bronnenlijst-result(.)">
+                                <th>Auteur</th>
+                                <th>Titel</th>
+                                <th>Datering</th>
+                                <th>Lokalisering</th>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <th>Mod. Ned. trefwoord</th>
+                                <th>Origineel trefwoord</th>
+                                <th>Woordsoort</th>
+                                <xsl:if test="result/@Verbinding"><th>Verbinding</th></xsl:if>
+                                <xsl:if test="result/@Betekenis"><th>Betekenis</th></xsl:if>
+                                <xsl:if test="result/@Kopsectie"><th>Kopsectie</th></xsl:if>
+                                <xsl:if test="result/@Citaat"><th>Citaat</th></xsl:if>
+                            </xsl:otherwise>
+                        </xsl:choose>                        
                     </tr>
                 </thead>
                 <tbody>
@@ -183,6 +208,12 @@
             <xsl:apply-templates select="@Betekenis" mode="render-results"/>
             <xsl:apply-templates select="@Kopsectie" mode="render-results"/>
             <xsl:apply-templates select="@Citaat" mode="render-results"/>
+            
+            <!-- Attributen van het bronnenlijst-resultaat (behalve @Wdb en @line is er geen overlap): -->
+            <xsl:apply-templates select="@auteur" mode="render-results"/>
+            <xsl:apply-templates select="@titel" mode="render-results"/>
+            <xsl:apply-templates select="@van" mode="render-results"/>
+            <xsl:apply-templates select="@locatie" mode="render-results"/>
         </tr>
     </xsl:template>
     
@@ -193,12 +224,17 @@
         </td>
     </xsl:template>
     
-    <xsl:template match="@Line | @Wdb | @Woordsoort" mode="render-result-attributes">
+    <xsl:template match="@van" mode="render-result-attributes">
+        <xsl:variable name="datering" as="xs:string" select="if (. eq ../@tot) then . else . || ' - ' || ../@tot"/>
+        <td class="gtb-van">{$datering}</td>
+    </xsl:template>
+    
+    <xsl:template match="@Line | @Wdb | @Woordsoort| @locatie" mode="render-result-attributes">
         <!-- No parsing or special rules needed for these attributes. -->
         <xsl:value-of select="."/>
     </xsl:template>
     
-    <xsl:template match="@Modern_lemma | @Betekenis | @Citaat | @Verbinding | @Kopsectie" mode="render-result-attributes">
+    <xsl:template match="@Modern_lemma | @Betekenis | @Citaat | @Verbinding | @Kopsectie | @auteur" mode="render-result-attributes">
         <xsl:call-template name="parse-result-attributes"/>
         
         <xsl:if test="(local-name() eq 'Lemma') and (parent::*/@Homoniemnr ne '')">
@@ -214,6 +250,27 @@
         <a href="{$href}" target="_blank">
             <xsl:call-template name="parse-result-attributes"/>
             <span class="gtb-homoniemnr">{parent::*/@Homoniemnr}</span>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="@titel" mode="render-result-attributes">
+        <xsl:param name="text-input-uri-params" as="xs:string" tunnel="yes"/>
+        
+        <xsl:variable name="auteur-as-xml" as="node()*">
+            <xsl:try>
+                <xsl:sequence select="parse-xml-fragment(../@auteur)"/>
+                <xsl:catch>
+                    <xsl:message>Fout bij parseren van auteur, input={../@auteur}</xsl:message>
+                    <xsl:sequence select="()"/>
+                </xsl:catch>
+            </xsl:try>
+        </xsl:variable>
+        
+        <!-- Assume url encoding is not needed for dictionary name or id; the name of the author is wrapped in a b element. -->
+        <!-- TODO auteur komt niet uit b element, maar uit query string van vraag. Is de auteur wel nodig in de href? -->
+        <xsl:variable name="href" as="xs:string" select="$baseArticleContentURL || '&amp;wdb=' || parent::*/@Wdb || 'BRONNEN&amp;id=' || parent::*/@id || '&amp;auteur=' || encode-for-uri(lower-case($auteur-as-xml//b[1]))"/>
+        <a href="{$href}" target="_blank">
+            <xsl:call-template name="parse-result-attributes"/>
         </a>
     </xsl:template>
     

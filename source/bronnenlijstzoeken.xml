@@ -12,10 +12,6 @@
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
-        <h1 style="background-color: red">Dit formulier werkt nog niet</h1>
-    </ivdnt:formulierregel>
-    
-    <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Auteur</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
             <input type="text" name="bronauteur" class="form-control gtb-tekstveld"/>
