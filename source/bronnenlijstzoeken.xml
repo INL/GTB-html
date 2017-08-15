@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ivdnt:formulier class="zoek-formulier" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<ivdnt:formulier class="zoek-formulier" label="Zoeken in bronnenlijst" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <ivdnt:formulierregel>
-        <ivdnt:bronselectors label="Zoeken in bronnenlijst" suffix="bronnen"/>
+        <ivdnt:bronselectors suffix="bronnen"/>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>

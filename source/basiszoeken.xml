@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ivdnt:formulier class="zoek-formulier" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<ivdnt:formulier class="zoek-formulier" label="Basiszoeken" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <ivdnt:formulierregel>
-        <ivdnt:bronselectors label="Basiszoeken"/>
+        <ivdnt:bronselectors/>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>

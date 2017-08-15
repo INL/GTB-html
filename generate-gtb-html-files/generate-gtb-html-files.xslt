@@ -119,11 +119,15 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:formulier" mode="ivdnt:html-mode">
-        <div>
+        <div id="{generate-id()}">
             <xsl:apply-templates select="node() | @*" mode="ivdnt:html-mode"/>
         </div>
         <!--  Als het formulier modals heeft, plaats deze dan erachter. -->
         <xsl:apply-templates select=".//ivdnt:modal" mode="ivdnt:modal-mode"/>
+    </xsl:template>
+    
+    <xsl:template match="ivdnt:formulier/@label" mode="ivdnt:html-mode">
+        <xsl:attribute name="data-label" select="."/>
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierregel" mode="ivdnt:html-mode">
@@ -163,7 +167,7 @@
     <xsl:template match="ivdnt:bronselectors" mode="ivdnt:html-mode">
         <!-- use suffix attribute to add a suffix to the dictionary names, e.g. suffix="bronnen" yields name="onwbronnen" -->
         <div class="{$zoekformulier-label-column-class}">
-            <span class="formulierlabel formuliertitel"><xsl:value-of select="@label"/></span>
+            <span class="formulierlabel formuliertitel"><xsl:value-of select="ancestor::ivdnt:formulier[1]/@label"/></span>
         </div>
         <div class="{$zoekformulier-input-column-class}">
             <div class="formulierinput">
@@ -219,7 +223,7 @@
                                  
                                  N.B.: value is expres leeg, dit maakt het onderscheid met subwaardes makkelijker.
                             -->
-                            <input type="checkbox" value=""/><span>&#160;{@toon}</span>
+                            <input type="checkbox" value="" name="woordsoort.{generate-id()}"/><span>&#160;{@toon}</span>
                         </label>
                     </xsl:otherwise>
                 </xsl:choose>
@@ -265,7 +269,7 @@
             <!-- name="{@id}" niet meer nodig bij <input>.
                  TODO verwijder id's uit woordsoortassistentie.xml
             -->
-            <input type="checkbox" value="{@zoek}"/> <span>{@toon}</span>
+            <input type="checkbox" value="{@zoek}" name="woordsoortitem.{generate-id()}"/> <span>{@toon}</span>
         </label>
     </xsl:template>
     
