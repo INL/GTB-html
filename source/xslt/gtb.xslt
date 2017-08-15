@@ -31,6 +31,7 @@
     
     <xsl:key name="showhidegroup-divs" match="div[@data-showhidegroup]" use="@data-showhidegroup"/>
     <xsl:key name="ids" match="*[@id]" use="@id"/>
+    <xsl:key name="form-div-id-input-or-selects" match="input-or-select" use="@form-div-id"/>
     
     <!-- TODO Bijhouden van bezochte uri's is niet nodig. -->
     <xsl:variable name="VISITED_URIS_PROPERTY" as="xs:string" select="'visited-uris'"/>
@@ -417,13 +418,13 @@
         <xsl:param name="all-inputs-and-selects" as="element(inputs-and-selects)"/>
         <xsl:param name="topdiv-id" as="xs:string"/>
         <xsl:variable name="values" as="xs:string*">
-            <xsl:for-each select="$all-inputs-and-selects/input-or-select[@form-div-id eq $topdiv-id and @element eq 'select' or @type eq 'text']">
+            <xsl:for-each select="$all-inputs-and-selects/key('form-div-id-input-or-selects', $topdiv-id)[@element eq 'select' or @type eq 'text']">
                 <xsl:variable name="name" as="xs:string" select="@name"/>
                 <xsl:variable name="value" as="xs:string" select="@value"/>
                 <xsl:sequence select="if ($value eq '') then () else $name || '=' || encode-for-uri($value)"/>
             </xsl:for-each>
         </xsl:variable>
-        <xsl:variable name="domeininput" as="element()?" select="$all-inputs-and-selects/input-or-select[@form-div-id eq $topdiv-id][@type eq 'radio' and @name eq 'domein' and @checked eq 'checked']"/>
+        <xsl:variable name="domeininput" as="element()?" select="$all-inputs-and-selects/key('form-div-id-input-or-selects', $topdiv-id)[@type eq 'radio' and @name eq 'domein' and @checked eq 'checked']"/>
         <xsl:variable name="domein" as="xs:integer" select="if ($domeininput) then xs:integer($domeininput/@value) else 0"/>
         <xsl:value-of select="string-join($values, '&amp;') || '&amp;domein=' || $domein"/>
     </xsl:function>
@@ -434,7 +435,7 @@
         <xsl:param name="topdiv-id" as="xs:string"/>
         
         <xsl:variable name="names" as="xs:string*">
-            <xsl:for-each select="$all-inputs-and-selects/input-or-select[@form-div-id eq $topdiv-id and @type eq 'checkbox' and @data-inputname eq 'wdb' and @checked eq 'checked']">
+            <xsl:for-each select="$all-inputs-and-selects/key('form-div-id-input-or-selects', $topdiv-id)[@type eq 'checkbox' and @data-inputname eq 'wdb' and @checked eq 'checked']">
                 <xsl:value-of select="@name"/>
             </xsl:for-each>
         </xsl:variable>
@@ -449,7 +450,7 @@
         <xsl:param name="all-inputs-and-selects" as="element(inputs-and-selects)"/>
         <xsl:param name="topdiv-id" as="xs:string"/>
         
-        <xsl:variable name="sensitive" as="element(input-or-select)?" select="$all-inputs-and-selects/input-or-select[@form-div-id eq $topdiv-id and @data-inputname eq 'sensitive' and @type eq 'checkbox' and @checked eq 'checked']"/>
+        <xsl:variable name="sensitive" as="element(input-or-select)?" select="$all-inputs-and-selects/key('form-div-id-input-or-selects', $topdiv-id)[@data-inputname eq 'sensitive' and @type eq 'checkbox' and @checked eq 'checked']"/>
         <xsl:value-of select="'sensitive=' || exists($sensitive)"/>
     </xsl:function>
     
