@@ -21,9 +21,9 @@
     <!-- Pass the start of the URL to which the query parameters (excluding the first part, ?actie=list - this is part of the parameter value) for retrieving the article will be appended: -->
     <xsl:param name="baseListURL" as="xs:string" required="yes"/>
     <!-- Pass (json) true or set here to true() if you want to see the full search URL (for development purposes): -->
-    <xsl:param name="showLinkToSearchResultXml" as="xs:boolean" select="false()"/>
+    <xsl:param name="showLinkToSearchResultXml" as="xs:boolean" select="true()"/>
     <!-- Pass (json) true or set here to true() if you want to see the XML list containing all inputs and selects (for development purposes): -->
-    <xsl:param name="showInputsAndSelectsXML" as="xs:boolean" select="false()"/>
+    <xsl:param name="showInputsAndSelectsXML" as="xs:boolean" select="true()"/>
     <!-- Number of lines in each result page. -->
     <xsl:param name="maxLinesInResultPage" as="xs:integer" select="250"/>
     <!-- The order in which the results of dictionaries get listed in the results. Used to calculate line offsets when jumping to a dictionary. Space-separated value. -->
@@ -31,7 +31,6 @@
     
     <xsl:key name="showhidegroup-divs" match="div[@data-showhidegroup]" use="@data-showhidegroup"/>
     <xsl:key name="ids" match="*[@id]" use="@id"/>
-    <xsl:key name="form-div-id-input-or-selects" match="input-or-select" use="@form-div-id"/>
     
     <!-- TODO Bijhouden van bezochte uri's is niet nodig. -->
     <xsl:variable name="VISITED_URIS_PROPERTY" as="xs:string" select="'visited-uris'"/>
@@ -309,9 +308,11 @@
         <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
         <xsl:result-document href="#resultaathouder" method="ixsl:replace-content">
             <xsl:if test="$showInputsAndSelectsXML">
+                <xsl:variable name="originating-formdiv" select="$originating-tabdiv//div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)][1]" as="element(div)"/>
+                <xsl:variable name="originating-formdiv-id" select="$originating-formdiv/@id" as="xs:string"/>
                 <div>
                     <p>De XML-lijst met alle inputs en selects</p>
-                    <pre><xsl:copy-of select="ivdnt:get-all-inputs-and-selects(/html/body)"/></pre>
+                    <pre><xsl:copy-of select="ivdnt:get-formdiv-inputs-and-selects(/html/body, $originating-formdiv-id)"/></pre>
                 </div>
             </xsl:if>
             <xsl:if test="$showLinkToSearchResultXml">
@@ -390,52 +391,76 @@
          If the input or select element is below a division with a class containing $ZOEK_FORMULIER_CLASS the value of the id of that element
          is placed into the generated element.
     -->
-    <xsl:function name="ivdnt:get-all-inputs-and-selects" as="element(inputs-and-selects)">
+    <xsl:function name="ivdnt:get-formdiv-inputs-and-selects" as="element(inputs-and-selects)">
         <xsl:param name="where-to-start" as="element()"/>
+        <xsl:param name="formdiv-id" as="xs:string"/>
         <inputs-and-selects>
-            <xsl:for-each select="$where-to-start//*[self::select | self::input]">
-                <xsl:variable name="name" as="xs:string" select="@name"/>
-                <xsl:variable name="type" as="xs:string" select="if (self::input) then @type else ''"/>
-                <xsl:variable name="value" as="xs:string" select="normalize-space(ivdnt:get-input-value(.))"/>
-                <xsl:variable name="checked" as="xs:boolean" select="if ($type = ('radio', 'checkbox')) then ivdnt:is-checked(.) else false()"/>
-                <xsl:variable name="form-div" as="element(div)?" select="ancestor::div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)][1]"/>
-                <input-or-select element="{local-name(.)}" name="{$name}" type="{$type}" value="{$value}">
-                    <xsl:copy-of select="@*[starts-with(name(), 'data-')]"/>
-                    <xsl:copy-of select="@id"/>
-                    <xsl:if test="$checked"><xsl:attribute name="checked" select="'checked'"/></xsl:if>
-                    <xsl:if test="$type ne ''"><xsl:attribute name="type" select="$type"/></xsl:if>
-                    <xsl:if test="$form-div">
-                        <xsl:attribute name="form-div-id" select="$form-div/@id"/>
-                        <xsl:attribute name="form-label" select="$form-div/@data-label"/>
-                    </xsl:if>
-                </input-or-select>
+            <xsl:for-each select="$where-to-start//div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS) and @id eq $formdiv-id][1]">
+                <!-- This iterates only one time -->
+                <xsl:variable name="formdiv" as="element(div)" select="."/>
+                <xsl:sequence select="ivdnt:create-input-or-select-elements($formdiv)"/>
             </xsl:for-each>
         </inputs-and-selects>
     </xsl:function>
     
-    <!-- Return the names and (url-encoded) values of all text inputs below $topdiv. Each name is linked to a value with an = sign. All name-value-pairs are separated by an ampersand. -->
+    <xsl:function name="ivdnt:create-input-or-select-elements"  as="element()+">
+        <xsl:param name="formdiv" as="element(div)"/>
+        
+        <xsl:for-each select="$formdiv//*[self::select | self::input]">
+            <xsl:variable name="name" as="xs:string" select="@name"/>
+            <xsl:variable name="type" as="xs:string" select="if (self::input) then @type else ''"/>
+            <xsl:variable name="value" as="xs:string" select="normalize-space(ivdnt:get-input-value(.))"/>
+            <xsl:variable name="checked" as="xs:boolean" select="if ($type = ('radio', 'checkbox')) then ivdnt:is-checked(.) else false()"/>
+            <xsl:sequence select="ivdnt:create-input-or-select-element(., $formdiv)"/>
+            <xsl:if test="@data-label eq 'Woordsoort'">
+                <xsl:variable name="data-target" as="xs:string" select="ivdnt:strip-hash-from-id(following-sibling::button[1]/@data-target)"/>
+                <woordsoort-inputs>
+                    <xsl:variable name="woordsoort-div" as="element(div)" select="id($data-target)"/>
+                    <xsl:sequence select="ivdnt:create-input-or-select-elements($woordsoort-div)"/>
+                </woordsoort-inputs>
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:function>
+    
+    <xsl:function name="ivdnt:create-input-or-select-element"  as="element(input-or-select)">
+        <xsl:param name="input-or-select-element" as="element()"/>
+        <xsl:param name="formdiv" as="element(div)"/>
+        
+        <xsl:variable name="name" as="xs:string" select="$input-or-select-element/@name"/>
+        <xsl:variable name="type" as="xs:string" select="if ($input-or-select-element/self::input) then $input-or-select-element/@type else ''"/>
+        <xsl:variable name="value" as="xs:string" select="normalize-space(ivdnt:get-input-value($input-or-select-element))"/>
+        <xsl:variable name="checked" as="xs:boolean" select="if ($input-or-select-element/$type = ('radio', 'checkbox')) then ivdnt:is-checked($input-or-select-element) else false()"/>
+        <input-or-select element="{local-name($input-or-select-element)}" name="{$name}" type="{$type}" value="{$value}">
+            <xsl:copy-of select="$input-or-select-element/@id"/>
+            <xsl:copy-of select="$input-or-select-element/@*[starts-with(name(), 'data-')]"/>
+            <xsl:attribute name="form-div-id" select="$formdiv/@id"/>
+            <xsl:if test="$checked"><xsl:attribute name="checked" select="'checked'"/></xsl:if>
+            <xsl:if test="$type ne ''"><xsl:attribute name="type" select="$type"/></xsl:if>
+            <xsl:if test="$formdiv/@data-label ne ''"><xsl:attribute name="form-label" select="$formdiv/@data-label"/></xsl:if>
+        </input-or-select>
+    </xsl:function>
+    
+    <!-- Return the names and (url-encoded) values of all text inputs of the current form. Each name is linked to a value with an = sign. All name-value-pairs are separated by an ampersand. -->
     <xsl:function name="ivdnt:get-value-inputs-for-url" as="xs:string">
-        <xsl:param name="all-inputs-and-selects" as="element(inputs-and-selects)"/>
-        <xsl:param name="topdiv-id" as="xs:string"/>
+        <xsl:param name="formdiv-inputs-and-selects" as="element(inputs-and-selects)"/>
         <xsl:variable name="values" as="xs:string*">
-            <xsl:for-each select="$all-inputs-and-selects/key('form-div-id-input-or-selects', $topdiv-id)[@element eq 'select' or @type eq 'text']">
+            <xsl:for-each select="$formdiv-inputs-and-selects/input-or-select[@element eq 'select' or @type eq 'text']">
                 <xsl:variable name="name" as="xs:string" select="@name"/>
                 <xsl:variable name="value" as="xs:string" select="@value"/>
                 <xsl:sequence select="if ($value eq '') then () else $name || '=' || encode-for-uri($value)"/>
             </xsl:for-each>
         </xsl:variable>
-        <xsl:variable name="domeininput" as="element()?" select="$all-inputs-and-selects/key('form-div-id-input-or-selects', $topdiv-id)[@type eq 'radio' and @name eq 'domein' and @checked eq 'checked']"/>
+        <xsl:variable name="domeininput" as="element()?" select="$formdiv-inputs-and-selects/input-or-select[@type eq 'radio' and @name eq 'domein' and @checked eq 'checked']"/>
         <xsl:variable name="domein" as="xs:integer" select="if ($domeininput) then xs:integer($domeininput/@value) else 0"/>
         <xsl:value-of select="string-join($values, '&amp;') || '&amp;domein=' || $domein"/>
     </xsl:function>
     
-    <!-- Return the (url-encoded) names of all checkboxes below $topdiv that have @data-inputname="wdb" and that are checked. The names are separated by comma's. -->
+    <!-- Return the (url-encoded) names of all checkboxes of the current form that have @data-inputname="wdb" and that are checked. The names are separated by comma's. -->
     <xsl:function name="ivdnt:get-wdb-inputs-for-url" as="xs:string">
-        <xsl:param name="all-inputs-and-selects" as="element(inputs-and-selects)"/>
-        <xsl:param name="topdiv-id" as="xs:string"/>
+        <xsl:param name="formdiv-inputs-and-selects" as="element(inputs-and-selects)"/>
         
         <xsl:variable name="names" as="xs:string*">
-            <xsl:for-each select="$all-inputs-and-selects/key('form-div-id-input-or-selects', $topdiv-id)[@type eq 'checkbox' and @data-inputname eq 'wdb' and @checked eq 'checked']">
+            <xsl:for-each select="$formdiv-inputs-and-selects/input-or-select[@type eq 'checkbox' and @data-inputname eq 'wdb' and @checked eq 'checked']">
                 <xsl:value-of select="@name"/>
             </xsl:for-each>
         </xsl:variable>
@@ -447,19 +472,17 @@
     
     <!-- Return sensitive=true or sensitive=false depending on the checkedness of the corresponding checkbox. -->
     <xsl:function name="ivdnt:get-sensitivity-for-url" as="xs:string">
-        <xsl:param name="all-inputs-and-selects" as="element(inputs-and-selects)"/>
-        <xsl:param name="topdiv-id" as="xs:string"/>
+        <xsl:param name="formdiv-inputs-and-selects" as="element(inputs-and-selects)"/>
         
-        <xsl:variable name="sensitive" as="element(input-or-select)?" select="$all-inputs-and-selects/key('form-div-id-input-or-selects', $topdiv-id)[@data-inputname eq 'sensitive' and @type eq 'checkbox' and @checked eq 'checked']"/>
+        <xsl:variable name="sensitive" as="element(input-or-select)?" select="$formdiv-inputs-and-selects/input-or-select[@data-inputname eq 'sensitive' and @type eq 'checkbox' and @checked eq 'checked']"/>
         <xsl:value-of select="'sensitive=' || exists($sensitive)"/>
     </xsl:function>
     
     <xsl:function name="ivdnt:get-zoeken-url" as="xs:string">
-        <xsl:param name="topdiv-id" as="xs:string"/>
         <xsl:param name="text-input-uri-params" as="xs:string"/>
-        <xsl:param name="all-inputs-and-selects" as="element(inputs-and-selects)"/>
-        <xsl:variable name="wdb-inputs" as="xs:string" select="ivdnt:get-wdb-inputs-for-url($all-inputs-and-selects, $topdiv-id)"/>
-        <xsl:variable name="sensitivity" as="xs:string" select="ivdnt:get-sensitivity-for-url($all-inputs-and-selects, $topdiv-id)"/>
+        <xsl:param name="formdiv-inputs-and-selects" as="element(inputs-and-selects)"/>
+        <xsl:variable name="wdb-inputs" as="xs:string" select="ivdnt:get-wdb-inputs-for-url($formdiv-inputs-and-selects)"/>
+        <xsl:variable name="sensitivity" as="xs:string" select="ivdnt:get-sensitivity-for-url($formdiv-inputs-and-selects)"/>
         <!-- TODO dynamically determine other-params. -->
         <xsl:variable name="other-params" as="xs:string" select="'&amp;conc=true&amp;xmlerror=true'"/>
         <xsl:value-of select="$baseSearchURL || $other-params || '&amp;' || $text-input-uri-params || '&amp;wdb=' || $wdb-inputs || '&amp;' || $sensitivity"/>
@@ -490,14 +513,14 @@
     </xsl:template>
     
     <xsl:template name="ivdnt:doe-zoeken">
-        <xsl:param name="topdiv" as="element(div)" required="yes"/>
+        <xsl:param name="formdiv" as="element(div)" required="yes"/>
         
-        <xsl:variable name="topdiv-id" as="xs:string" select="$topdiv/@id"/>
-        <xsl:variable name="all-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-all-inputs-and-selects(/html/body)"/>
-        <xsl:variable name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($all-inputs-and-selects, $topdiv-id)"/>
+        <xsl:variable name="formdiv-id" as="xs:string" select="$formdiv/@id"/>
+        <xsl:variable name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-formdiv-inputs-and-selects(/html/body, $formdiv-id)"/>
+        <xsl:variable name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($formdiv-inputs-and-selects)"/>
         <xsl:call-template name="ivdnt:select-tab">
             <xsl:with-param name="tabid" select="'resultaat'"/>
-            <xsl:with-param name="url-for-content" select="ivdnt:get-zoeken-url($topdiv-id, $text-input-uri-params, $all-inputs-and-selects)"/>
+            <xsl:with-param name="url-for-content" select="ivdnt:get-zoeken-url($text-input-uri-params, $formdiv-inputs-and-selects)"/>
             <xsl:with-param name="text-input-uri-params" as="xs:string" select="$text-input-uri-params" tunnel="yes"/>
         </xsl:call-template>
     </xsl:template>
@@ -507,7 +530,7 @@
         <xsl:if test="xs:integer(ixsl:get($event, 'which')) eq 13">
             <!-- User pressed enter -->
             <xsl:call-template name="ivdnt:doe-zoeken">
-                <xsl:with-param name="topdiv" select="."/>
+                <xsl:with-param name="formdiv" select="."/>
             </xsl:call-template>
         </xsl:if>
     </xsl:template>
@@ -542,15 +565,15 @@
     </xsl:template>
     
     <xsl:template match="button[@name eq 'start-zoeken']" mode="ixsl:onclick">
-        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)][1]"/>
+        <xsl:variable name="formdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)][1]"/>
         <xsl:call-template name="ivdnt:doe-zoeken">
-            <xsl:with-param name="topdiv" select="$topdiv"/>
+            <xsl:with-param name="formdiv" select="$formdiv"/>
         </xsl:call-template>
     </xsl:template>
     
     <xsl:template match="button[@name eq 'wis-zoeken']" mode="ixsl:onclick">
-        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)][1]"/>
-        <xsl:for-each select="$topdiv//input[@type eq 'text']">
+        <xsl:variable name="formdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)][1]"/>
+        <xsl:for-each select="$formdiv//input[@type eq 'text']">
             <ixsl:set-property name="value" select="''" object="."/>
         </xsl:for-each>
     </xsl:template>
