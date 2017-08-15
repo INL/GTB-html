@@ -21,9 +21,9 @@
     <!-- Pass the start of the URL to which the query parameters (excluding the first part, ?actie=list - this is part of the parameter value) for retrieving the article will be appended: -->
     <xsl:param name="baseListURL" as="xs:string" required="yes"/>
     <!-- Pass (json) true or set here to true() if you want to see the full search URL (for development purposes): -->
-    <xsl:param name="showLinkToSearchResultXml" as="xs:boolean" select="true()"/>
+    <xsl:param name="showLinkToSearchResultXml" as="xs:boolean" select="false()"/>
     <!-- Pass (json) true or set here to true() if you want to see the XML list containing all inputs and selects (for development purposes): -->
-    <xsl:param name="showInputsAndSelectsXML" as="xs:boolean" select="true()"/>
+    <xsl:param name="showInputsAndSelectsXML" as="xs:boolean" select="false()"/>
     <!-- Number of lines in each result page. -->
     <xsl:param name="maxLinesInResultPage" as="xs:integer" select="250"/>
     <!-- The order in which the results of dictionaries get listed in the results. Used to calculate line offsets when jumping to a dictionary. Space-separated value. -->
@@ -232,8 +232,10 @@
     
     <xsl:template name="ivdnt:select-tab">
         <xsl:param name="tabid" as="xs:string" required="yes"/>
-        <xsl:param name="url-for-content" as="xs:string" required="yes"/>
-        <xsl:param name="text-input-uri-params" as="xs:string" required="yes" tunnel="yes"/>
+        <xsl:param name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" required="yes"/>
+        
+        <xsl:variable name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($formdiv-inputs-and-selects)"/>
+        <xsl:variable name="url-for-content" select="ivdnt:get-zoeken-url($text-input-uri-params, $formdiv-inputs-and-selects)"/>
                 
         <!-- Activate the tabtitle whose id is $tabid: -->
         <xsl:variable name="result-tab-title" as="element()" select="key('ids', $tabid)"/>
@@ -244,15 +246,14 @@
         
         <!-- Activate the div whose id is equal to the href of the "resultaat" tabtitle: -->
         <xsl:variable name="tabdiv-id" as="xs:string" select="ivdnt:strip-hash-from-id($result-tab-title/a/@href)"/>
-        
-        <!-- Save some info for use by pagination: -->
+        <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
+                
+        <!-- Save some info for later use: -->
         <ixsl:set-property name="{$URL_FOR_CONTENT_PROPERTY}" select="$url-for-content" object="ixsl:page()"/>
         <ixsl:set-property name="{$TEXT_INPUT_URI_PARAMS_PROPERTY}" select="$text-input-uri-params" object="ixsl:page()"/>
         <ixsl:set-property name="{$RESULT_TABDIV_ID_PROPERTY}" select="$tabdiv-id" object="ixsl:page()"/>
         <ixsl:set-property name="{$RESULT_SORTKEYS_PROPERTY}" select="''" object="ixsl:page()"/>
         <ixsl:set-property name="{$RESULT_SORTREVERSE_PROPERTY}" select="'false'" object="ixsl:page()"/>
-        
-        <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
         
         <xsl:call-template name="ivdnt:show-results">
             <xsl:with-param name="url-for-content" select="$url-for-content"/>
@@ -520,8 +521,7 @@
         <xsl:variable name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($formdiv-inputs-and-selects)"/>
         <xsl:call-template name="ivdnt:select-tab">
             <xsl:with-param name="tabid" select="'resultaat'"/>
-            <xsl:with-param name="url-for-content" select="ivdnt:get-zoeken-url($text-input-uri-params, $formdiv-inputs-and-selects)"/>
-            <xsl:with-param name="text-input-uri-params" as="xs:string" select="$text-input-uri-params" tunnel="yes"/>
+            <xsl:with-param name="formdiv-inputs-and-selects" select="$formdiv-inputs-and-selects"/>
         </xsl:call-template>
     </xsl:template>
     
