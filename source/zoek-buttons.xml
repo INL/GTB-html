@@ -8,7 +8,7 @@
             <ivdnt:modaltrigger><button type="button" name="geschiedenis" class="geschiedenisknop btn btn-secondary">Geschiedenis...</button></ivdnt:modaltrigger>
             <ivdnt:modalcontent>
                 <ivdnt:modaltitle><h4 class="modal-title">Overzicht eerder gestelde zoekvragen</h4></ivdnt:modaltitle>
-                <p style="background-color: red">Deze dialoog werkt nog niet</p>
+
                 <div class="gtb-zoekvragen-geschiedenis">
                     <!-- Hier worden de zoekvragen in geplaatst -->
                 </div>
@@ -21,5 +21,5 @@
             </ivdnt:modalcontent>
         </ivdnt:modal>
     </div>
-    <div class="col-md-2 gtbcheckbox"><label class="form-group">Letters exact <input data-inputname="sensitive" type="checkbox" name="sensitive" class="checkbox-inline"/></label></div>
+    <div class="col-md-2 gtbcheckbox"><label class="form-group">Letters exact <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive" class="checkbox-inline"/></label></div>
 </div>
