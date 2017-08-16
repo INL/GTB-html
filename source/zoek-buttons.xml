@@ -4,7 +4,7 @@
     <div class="col-md-2"><button class="btn btn-secondary"  name="wis-zoeken">Wis</button></div>
     <div class="col-md-2">
         <!--<button class="btn btn-secondary"  name="xxx">Geschiedenis</button>-->
-        <ivdnt:modal type="geschiedenis" suppress-ok-button="true">
+        <ivdnt:modal type="geschiedenis" suppress-ok-button="true" style="width: 70vw">
             <ivdnt:modaltrigger><button type="button" name="geschiedenis" class="geschiedenisknop btn btn-secondary">Geschiedenis...</button></ivdnt:modaltrigger>
             <ivdnt:modalcontent>
                 <ivdnt:modaltitle><h4 class="modal-title">Overzicht eerder gestelde zoekvragen</h4></ivdnt:modaltitle>

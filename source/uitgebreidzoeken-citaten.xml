@@ -39,7 +39,7 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Datering oudste citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <ivdnt:van-tot-velden van="oudvan" tot="oudtot" data-humanname-vab="vanaf-datering oudste citaat" data-humanname-tot="tot-datering oudste citaat"/>
+                <ivdnt:van-tot-velden van="oudvan" tot="oudtot" data-humanname-van="vanaf-datering oudste citaat" data-humanname-tot="tot-datering oudste citaat"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>

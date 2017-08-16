@@ -16,6 +16,7 @@
             <xsl:if test="@target-input"><xsl:attribute name="data-target-input" select="@target-input"/></xsl:if>
             <xsl:copy-of select="ivdnt:add-class-values(@class, 'modal')"/>
             <div class="modal-dialog">
+                <xsl:copy-of select="@style"/>
                 <div class="modal-content">
                     <xsl:apply-templates select="node() except ivdnt:modaltrigger" mode="ivdnt:modal-mode"/>
                 </div>

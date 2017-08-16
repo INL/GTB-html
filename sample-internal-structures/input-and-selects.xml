@@ -3,137 +3,137 @@
      Te bekijken in het resultaatscherm (met een DOM-inspector) door in gtb.xslt parameter showInputsAndSelectsXML op true te zetten.
 -->
 <inputs-and-selects>
-    <input-or-select element="input" name="onw" type="checkbox" value="on" id="bronselectors.d5e898.onw" data-inputname="wdb" data-humanname="zoek in ONW" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="vmnw" type="checkbox" value="on" id="bronselectors.d5e898.vmnw" data-inputname="wdb" data-humanname="zoek in VMNW" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="mnw" type="checkbox" value="on" id="bronselectors.d5e898.mnw" data-inputname="wdb" data-humanname="zoek in MNW" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="wnt" type="checkbox" value="on" id="bronselectors.d5e898.wnt" data-inputname="wdb" data-humanname="zoek in WNT" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="wft" type="checkbox" value="on" id="bronselectors.d5e898.wft" data-inputname="wdb" data-humanname="zoek in WFT" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="domein" type="radio" value="0" id="resultaatformaatselectors.d5e903.0" data-inputname="domein" data-humanname="toon artikelen" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="domein" type="radio" value="1" id="resultaatformaatselectors.d5e903.1" data-inputname="domein" data-humanname="toon omschrijvingen" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="domein" type="radio" value="2" id="resultaatformaatselectors.d5e903.2" data-inputname="domein" data-humanname="toon citaten" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="domein" type="radio" value="3" id="resultaatformaatselectors.d5e903.3" data-inputname="domein" data-humanname="toon kopsecties" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="domein" type="radio" value="4" id="resultaatformaatselectors.d5e903.4" data-inputname="domein" data-humanname="toon verbindingen" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="toon-tekens" type="checkbox" value="on" id="toon-tekens.d5e912" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="lemmodern" type="text" value="koe" id="lemmodern.d5e1341" data-humanname="modern Nederlands trefwoord" data-label="Modern Nederlands trefwoord" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="lemma" type="text" value="" id="lemma.d5e1352" data-label="Origineel trefwoord" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="lemwrdsrt" type="text" value="" id="lemwrdsrt.d5e1363" data-humanname="woordsoort" data-modal-target-id="uitgebreidzoeken.lemwrdsrt" data-label="Woordsoort" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="onw" type="checkbox" value="on" ref="bronselectors.d5e898.onw" data-inputname="wdb" data-humanname="zoek in ONW" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="vmnw" type="checkbox" value="on" ref="bronselectors.d5e898.vmnw" data-inputname="wdb" data-humanname="zoek in VMNW" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="mnw" type="checkbox" value="on" ref="bronselectors.d5e898.mnw" data-inputname="wdb" data-humanname="zoek in MNW" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="wnt" type="checkbox" value="on" ref="bronselectors.d5e898.wnt" data-inputname="wdb" data-humanname="zoek in WNT" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="wft" type="checkbox" value="on" ref="bronselectors.d5e898.wft" data-inputname="wdb" data-humanname="zoek in WFT" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="domein" type="radio" value="0" ref="resultaatformaatselectors.d5e903.0" data-inputname="domein" data-humanname="toon artikelen" form-div-id="d5e894" checked="checked" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="domein" type="radio" value="1" ref="resultaatformaatselectors.d5e903.1" data-inputname="domein" data-humanname="toon omschrijvingen" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="domein" type="radio" value="2" ref="resultaatformaatselectors.d5e903.2" data-inputname="domein" data-humanname="toon citaten" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="domein" type="radio" value="3" ref="resultaatformaatselectors.d5e903.3" data-inputname="domein" data-humanname="toon kopsecties" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="domein" type="radio" value="4" ref="resultaatformaatselectors.d5e903.4" data-inputname="domein" data-humanname="toon verbindingen" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="toon-tekens" type="checkbox" value="on" ref="toon-tekens.d5e912" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="lemmodern" type="text" value="koe" ref="lemmodern.d5e1341" data-humanname="modern Nederlands trefwoord" data-label="Modern Nederlands trefwoord" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="lemma" type="text" value="" ref="lemma.d5e1352" data-label="Origineel trefwoord" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="lemwrdsrt" type="text" value="" ref="lemwrdsrt.d5e1363" data-humanname="woordsoort" data-modal-target-id="uitgebreidzoeken.lemwrdsrt" data-label="Woordsoort" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
     <woordsoort-inputs>
-        <input-or-select element="input" name="woordsoort.d5e1379" type="checkbox" value="" id="woordsoort.d5e1379" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoort.d5e1381" type="checkbox" value="" id="woordsoort.d5e1381" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1387" type="checkbox" value="aanw" id="woordsoortitem.d5e1387" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1389" type="checkbox" value="betr" id="woordsoortitem.d5e1389" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1391" type="checkbox" value="onbep" id="woordsoortitem.d5e1391" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1393" type="checkbox" value="vr" id="woordsoortitem.d5e1393" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1395" type="checkbox" value="noemend" id="woordsoortitem.d5e1395" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1398" type="checkbox" value="ontk" id="woordsoortitem.d5e1398" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1400" type="checkbox" value="van,freq" id="woordsoortitem.d5e1400" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1402" type="checkbox" value="van,graad" id="woordsoortitem.d5e1402" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1404" type="checkbox" value="van,hoedanigheid" id="woordsoortitem.d5e1404" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1406" type="checkbox" value="van,hoeveelheid" id="woordsoortitem.d5e1406" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1408" type="checkbox" value="van,modaliteit" id="woordsoortitem.d5e1408" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1411" type="checkbox" value="van,plaats,of,richting" id="woordsoortitem.d5e1411" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1413" type="checkbox" value="van,tijd" id="woordsoortitem.d5e1413" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1415" type="checkbox" value="voegw" id="woordsoortitem.d5e1415" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1423" type="checkbox" value="bep" id="woordsoortitem.d5e1423" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1425" type="checkbox" value="onbep" id="woordsoortitem.d5e1425" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1433" type="checkbox" value="hoofd" id="woordsoortitem.d5e1433" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1435" type="checkbox" value="onbep" id="woordsoortitem.d5e1435" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1437" type="checkbox" value="rang" id="woordsoortitem.d5e1437" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1439" type="checkbox" value="collect" id="woordsoortitem.d5e1439" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoort.d5e1444" type="checkbox" value="" id="woordsoort.d5e1444" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1450" type="checkbox" value="bijw" id="woordsoortitem.d5e1450" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1452" type="checkbox" value="bijv" id="woordsoortitem.d5e1452" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1454" type="checkbox" value="aanw" id="woordsoortitem.d5e1454" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1456" type="checkbox" value="vnw" id="woordsoortitem.d5e1456" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1464" type="checkbox" value="aanw" id="woordsoortitem.d5e1464" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1486" type="checkbox" value="1e" id="woordsoortitem.d5e1486" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1495" type="checkbox" value="m" id="woordsoortitem.d5e1495" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1504" type="checkbox" value="ev" id="woordsoortitem.d5e1504" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1466" type="checkbox" value="betr" id="woordsoortitem.d5e1466" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1488" type="checkbox" value="2e" id="woordsoortitem.d5e1488" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1497" type="checkbox" value="v" id="woordsoortitem.d5e1497" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1506" type="checkbox" value="mv" id="woordsoortitem.d5e1506" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1468" type="checkbox" value="bez" id="woordsoortitem.d5e1468" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1490" type="checkbox" value="3e" id="woordsoortitem.d5e1490" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1499" type="checkbox" value="o" id="woordsoortitem.d5e1499" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1470" type="checkbox" value="onbep" id="woordsoortitem.d5e1470" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1472" type="checkbox" value="pers" id="woordsoortitem.d5e1472" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1475" type="checkbox" value="uitr" id="woordsoortitem.d5e1475" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1477" type="checkbox" value="vr" id="woordsoortitem.d5e1477" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1479" type="checkbox" value="wdk" id="woordsoortitem.d5e1479" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1481" type="checkbox" value="wdg" id="woordsoortitem.d5e1481" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1514" type="checkbox" value="aanw" id="woordsoortitem.d5e1514" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1516" type="checkbox" value="betr" id="woordsoortitem.d5e1516" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1518" type="checkbox" value="onbep" id="woordsoortitem.d5e1518" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1520" type="checkbox" value="vr" id="woordsoortitem.d5e1520" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1522" type="checkbox" value="van,mod" id="woordsoortitem.d5e1522" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1525" type="checkbox" value="van,plaats,of,richting" id="woordsoortitem.d5e1525" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1527" type="checkbox" value="van,tijd" id="woordsoortitem.d5e1527" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1535" type="checkbox" value="ondersch" id="woordsoortitem.d5e1535" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1537" type="checkbox" value="nevensch" id="woordsoortitem.d5e1537" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1545" type="checkbox" value="met,gen" id="woordsoortitem.d5e1545" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1547" type="checkbox" value="met,dat" id="woordsoortitem.d5e1547" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1549" type="checkbox" value="met,acc" id="woordsoortitem.d5e1549" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1558" type="checkbox" value="prefix" id="woordsoortitem.d5e1558" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1560" type="checkbox" value="suffix" id="woordsoortitem.d5e1560" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1562" type="checkbox" value="suffixoïde" id="woordsoortitem.d5e1562" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1570" type="checkbox" value="st" id="woordsoortitem.d5e1570" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1599" type="checkbox" value="trans" id="woordsoortitem.d5e1599" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1610" type="checkbox" value="hulpww" id="woordsoortitem.d5e1610" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1619" type="checkbox" value="met,gen" id="woordsoortitem.d5e1619" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1572" type="checkbox" value="st.,kl.1" id="woordsoortitem.d5e1572" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1601" type="checkbox" value="intr" id="woordsoortitem.d5e1601" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1612" type="checkbox" value="koppelww" id="woordsoortitem.d5e1612" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1621" type="checkbox" value="met,dat" id="woordsoortitem.d5e1621" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1574" type="checkbox" value="st.,kl.2a" id="woordsoortitem.d5e1574" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1603" type="checkbox" value="refl" id="woordsoortitem.d5e1603" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1614" type="checkbox" value="zelfst" id="woordsoortitem.d5e1614" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1623" type="checkbox" value="met,dat.,en,gen" id="woordsoortitem.d5e1623" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1576" type="checkbox" value="st.,kl.2b" id="woordsoortitem.d5e1576" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1605" type="checkbox" value="onpers" id="woordsoortitem.d5e1605" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1625" type="checkbox" value="met,dat.,en,acc" id="woordsoortitem.d5e1625" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1578" type="checkbox" value="st.,kl.3a" id="woordsoortitem.d5e1578" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1627" type="checkbox" value="met,acc" id="woordsoortitem.d5e1627" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1581" type="checkbox" value="st.,kl.3b" id="woordsoortitem.d5e1581" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1630" type="checkbox" value="met,voorz" id="woordsoortitem.d5e1630" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1583" type="checkbox" value="st.,kl.4" id="woordsoortitem.d5e1583" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1585" type="checkbox" value="st.,kl.5" id="woordsoortitem.d5e1585" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1587" type="checkbox" value="st.,kl.6" id="woordsoortitem.d5e1587" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1589" type="checkbox" value="st.,kl.7" id="woordsoortitem.d5e1589" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1591" type="checkbox" value="zw" id="woordsoortitem.d5e1591" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1594" type="checkbox" value="onreg" id="woordsoortitem.d5e1594" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1638" type="checkbox" value="m" id="woordsoortitem.d5e1638" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1658" type="checkbox" value="mv" id="woordsoortitem.d5e1658" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1663" type="checkbox" value="naam" id="woordsoortitem.d5e1663" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1640" type="checkbox" value="m./o" id="woordsoortitem.d5e1640" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1642" type="checkbox" value="m./v" id="woordsoortitem.d5e1642" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1644" type="checkbox" value="m./v./o" id="woordsoortitem.d5e1644" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1646" type="checkbox" value="o" id="woordsoortitem.d5e1646" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1649" type="checkbox" value="v" id="woordsoortitem.d5e1649" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1651" type="checkbox" value="v./o" id="woordsoortitem.d5e1651" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoortitem.d5e1653" type="checkbox" value="gemeensl" id="woordsoortitem.d5e1653" form-div-id="d5e1365"/>
-        <input-or-select element="input" name="woordsoort.d5e1667" type="checkbox" value="" id="woordsoort.d5e1667" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoort.d5e1379" type="checkbox" value="" ref="woordsoort.d5e1379" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoort.d5e1381" type="checkbox" value="" ref="woordsoort.d5e1381" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1387" type="checkbox" value="aanw" ref="woordsoortitem.d5e1387" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1389" type="checkbox" value="betr" ref="woordsoortitem.d5e1389" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1391" type="checkbox" value="onbep" ref="woordsoortitem.d5e1391" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1393" type="checkbox" value="vr" ref="woordsoortitem.d5e1393" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1395" type="checkbox" value="noemend" ref="woordsoortitem.d5e1395" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1398" type="checkbox" value="ontk" ref="woordsoortitem.d5e1398" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1400" type="checkbox" value="van,freq" ref="woordsoortitem.d5e1400" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1402" type="checkbox" value="van,graad" ref="woordsoortitem.d5e1402" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1404" type="checkbox" value="van,hoedanigheid" ref="woordsoortitem.d5e1404" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1406" type="checkbox" value="van,hoeveelheid" ref="woordsoortitem.d5e1406" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1408" type="checkbox" value="van,modaliteit" ref="woordsoortitem.d5e1408" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1411" type="checkbox" value="van,plaats,of,richting" ref="woordsoortitem.d5e1411" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1413" type="checkbox" value="van,tijd" ref="woordsoortitem.d5e1413" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1415" type="checkbox" value="voegw" ref="woordsoortitem.d5e1415" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1423" type="checkbox" value="bep" ref="woordsoortitem.d5e1423" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1425" type="checkbox" value="onbep" ref="woordsoortitem.d5e1425" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1433" type="checkbox" value="hoofd" ref="woordsoortitem.d5e1433" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1435" type="checkbox" value="onbep" ref="woordsoortitem.d5e1435" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1437" type="checkbox" value="rang" ref="woordsoortitem.d5e1437" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1439" type="checkbox" value="collect" ref="woordsoortitem.d5e1439" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoort.d5e1444" type="checkbox" value="" ref="woordsoort.d5e1444" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1450" type="checkbox" value="bijw" ref="woordsoortitem.d5e1450" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1452" type="checkbox" value="bijv" ref="woordsoortitem.d5e1452" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1454" type="checkbox" value="aanw" ref="woordsoortitem.d5e1454" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1456" type="checkbox" value="vnw" ref="woordsoortitem.d5e1456" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1464" type="checkbox" value="aanw" ref="woordsoortitem.d5e1464" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1486" type="checkbox" value="1e" ref="woordsoortitem.d5e1486" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1495" type="checkbox" value="m" ref="woordsoortitem.d5e1495" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1504" type="checkbox" value="ev" ref="woordsoortitem.d5e1504" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1466" type="checkbox" value="betr" ref="woordsoortitem.d5e1466" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1488" type="checkbox" value="2e" ref="woordsoortitem.d5e1488" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1497" type="checkbox" value="v" ref="woordsoortitem.d5e1497" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1506" type="checkbox" value="mv" ref="woordsoortitem.d5e1506" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1468" type="checkbox" value="bez" ref="woordsoortitem.d5e1468" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1490" type="checkbox" value="3e" ref="woordsoortitem.d5e1490" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1499" type="checkbox" value="o" ref="woordsoortitem.d5e1499" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1470" type="checkbox" value="onbep" ref="woordsoortitem.d5e1470" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1472" type="checkbox" value="pers" ref="woordsoortitem.d5e1472" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1475" type="checkbox" value="uitr" ref="woordsoortitem.d5e1475" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1477" type="checkbox" value="vr" ref="woordsoortitem.d5e1477" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1479" type="checkbox" value="wdk" ref="woordsoortitem.d5e1479" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1481" type="checkbox" value="wdg" ref="woordsoortitem.d5e1481" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1514" type="checkbox" value="aanw" ref="woordsoortitem.d5e1514" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1516" type="checkbox" value="betr" ref="woordsoortitem.d5e1516" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1518" type="checkbox" value="onbep" ref="woordsoortitem.d5e1518" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1520" type="checkbox" value="vr" ref="woordsoortitem.d5e1520" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1522" type="checkbox" value="van,mod" ref="woordsoortitem.d5e1522" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1525" type="checkbox" value="van,plaats,of,richting" ref="woordsoortitem.d5e1525" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1527" type="checkbox" value="van,tijd" ref="woordsoortitem.d5e1527" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1535" type="checkbox" value="ondersch" ref="woordsoortitem.d5e1535" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1537" type="checkbox" value="nevensch" ref="woordsoortitem.d5e1537" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1545" type="checkbox" value="met,gen" ref="woordsoortitem.d5e1545" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1547" type="checkbox" value="met,dat" ref="woordsoortitem.d5e1547" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1549" type="checkbox" value="met,acc" ref="woordsoortitem.d5e1549" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1558" type="checkbox" value="prefix" ref="woordsoortitem.d5e1558" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1560" type="checkbox" value="suffix" ref="woordsoortitem.d5e1560" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1562" type="checkbox" value="suffixoïde" ref="woordsoortitem.d5e1562" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1570" type="checkbox" value="st" ref="woordsoortitem.d5e1570" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1599" type="checkbox" value="trans" ref="woordsoortitem.d5e1599" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1610" type="checkbox" value="hulpww" ref="woordsoortitem.d5e1610" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1619" type="checkbox" value="met,gen" ref="woordsoortitem.d5e1619" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1572" type="checkbox" value="st.,kl.1" ref="woordsoortitem.d5e1572" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1601" type="checkbox" value="intr" ref="woordsoortitem.d5e1601" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1612" type="checkbox" value="koppelww" ref="woordsoortitem.d5e1612" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1621" type="checkbox" value="met,dat" ref="woordsoortitem.d5e1621" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1574" type="checkbox" value="st.,kl.2a" ref="woordsoortitem.d5e1574" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1603" type="checkbox" value="refl" ref="woordsoortitem.d5e1603" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1614" type="checkbox" value="zelfst" ref="woordsoortitem.d5e1614" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1623" type="checkbox" value="met,dat.,en,gen" ref="woordsoortitem.d5e1623" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1576" type="checkbox" value="st.,kl.2b" ref="woordsoortitem.d5e1576" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1605" type="checkbox" value="onpers" ref="woordsoortitem.d5e1605" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1625" type="checkbox" value="met,dat.,en,acc" ref="woordsoortitem.d5e1625" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1578" type="checkbox" value="st.,kl.3a" ref="woordsoortitem.d5e1578" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1627" type="checkbox" value="met,acc" ref="woordsoortitem.d5e1627" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1581" type="checkbox" value="st.,kl.3b" ref="woordsoortitem.d5e1581" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1630" type="checkbox" value="met,voorz" ref="woordsoortitem.d5e1630" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1583" type="checkbox" value="st.,kl.4" ref="woordsoortitem.d5e1583" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1585" type="checkbox" value="st.,kl.5" ref="woordsoortitem.d5e1585" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1587" type="checkbox" value="st.,kl.6" ref="woordsoortitem.d5e1587" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1589" type="checkbox" value="st.,kl.7" ref="woordsoortitem.d5e1589" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1591" type="checkbox" value="zw" ref="woordsoortitem.d5e1591" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1594" type="checkbox" value="onreg" ref="woordsoortitem.d5e1594" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1638" type="checkbox" value="m" ref="woordsoortitem.d5e1638" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1658" type="checkbox" value="mv" ref="woordsoortitem.d5e1658" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1663" type="checkbox" value="naam" ref="woordsoortitem.d5e1663" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1640" type="checkbox" value="m./o" ref="woordsoortitem.d5e1640" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1642" type="checkbox" value="m./v" ref="woordsoortitem.d5e1642" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1644" type="checkbox" value="m./v./o" ref="woordsoortitem.d5e1644" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1646" type="checkbox" value="o" ref="woordsoortitem.d5e1646" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1649" type="checkbox" value="v" ref="woordsoortitem.d5e1649" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1651" type="checkbox" value="v./o" ref="woordsoortitem.d5e1651" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoortitem.d5e1653" type="checkbox" value="gemeensl" ref="woordsoortitem.d5e1653" form-div-id="d5e1365"/>
+        <input-or-select element="input" name="woordsoort.d5e1667" type="checkbox" value="" ref="woordsoort.d5e1667" form-div-id="d5e1365"/>
     </woordsoort-inputs>
-    <input-or-select element="input" name="lemvariant" type="text" value="" id="lemvariant.d5e1681" data-humanname="trefwoordvariant" data-label="Trefwoordvariant" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="etymvorm" type="text" value="" id="etymvorm.d5e1700" data-humanname="verwante vorm" data-label="Verwante vorm" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="etymtaal" type="text" value="" id="etymtaal.d5e1711" data-humanname="taal in etym. beschr." data-label="In de etymologische beschrijving genoemde taal" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="morfelem" type="text" value="" id="morfelem.d5e1730" data-humanname="morfologisch element" data-label="Morfologisch element" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="morfterm" type="text" value="" id="morfterm.d5e1741" data-humanname="woorden in morf. beschr." data-label="Woorden in de morfologische beschrijving" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="select" name="morftype" type="" value="" id="morftype.d5e1752" data-humanname="woordvormingstype" data-label="Woordvormingstype" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="select" name="flextype" type="" value="(accusatief pluralis)|(ap)|(acc.pl.)" id="flextype.d5e1863" data-humanname="flexietype" data-label="Type" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="flexvorm" type="text" value="" id="flexvorm.d5e2154" data-humanname="flexievorm" data-label="Vorm" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="betekenis" type="text" value="" id="betekenis.d5e2175" data-humanname="woord in betekenis" data-label="Woord in betekenis" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="betlabel" type="text" value="" id="betlabel.d5e2186" data-humanname="label bij betekenis" data-label="Label bij betekenis" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="betcolloc" type="text" value="" id="betcolloc.d5e2197" data-humanname="collocaties/verbindingen" data-label="Collocaties / verbindingen met" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="betclass" type="text" value="" id="betclass.d5e2208" data-humanname="semantische classificatie" data-label="Semantische classificatie" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="citaat" type="text" value="" id="citaat.d5e2227" data-humanname="woord in citaattekst" data-label="Woord in citaattekst" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="bronauteur" type="text" value="" id="bronauteur.d5e2245" data-humanname="auteur citaat" data-label="Auteur citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="brontitel" type="text" value="" id="brontitel.d5e2256" data-humanname="verkorte brontitel" data-label="Verkorte brontitel" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="bronvan" type="text" value="" id="van-tot-velden.d5e2267.van" data-humanname="vanaf-datering citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="brontot" type="text" value="" id="van-tot-velden.d5e2267.tot" data-humanname="tot-datering citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="bronlocatie" type="text" value="" id="bronlocatie.d5e2278" data-label="Lokalisering bron" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="oudvan" type="text" value="" id="van-tot-velden.d5e2297.van" data-humanname="" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="oudtot" type="text" value="" id="van-tot-velden.d5e2297.tot" data-humanname="tot-datering oudste citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="oudlocatie" type="text" value="" id="oudlocatie.d5e2308" data-humanname="lokalisering oudste citaat" data-label="Lokalisering oudste citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
-    <input-or-select element="input" name="sensitive" type="checkbox" value="on" id="sensitive.d5e2365" data-inputname="sensitive" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="lemvariant" type="text" value="" ref="lemvariant.d5e1681" data-humanname="trefwoordvariant" data-label="Trefwoordvariant" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="etymvorm" type="text" value="" ref="etymvorm.d5e1700" data-humanname="verwante vorm" data-label="Verwante vorm" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="etymtaal" type="text" value="" ref="etymtaal.d5e1711" data-humanname="taal in etym. beschr." data-label="In de etymologische beschrijving genoemde taal" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="morfelem" type="text" value="" ref="morfelem.d5e1730" data-humanname="morfologisch element" data-label="Morfologisch element" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="morfterm" type="text" value="" ref="morfterm.d5e1741" data-humanname="woorden in morf. beschr." data-label="Woorden in de morfologische beschrijving" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="select" name="morftype" type="" value="" ref="morftype.d5e1752" data-humanname="woordvormingstype" data-label="Woordvormingstype" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="select" name="flextype" type="" value="(accusatief pluralis)|(ap)|(acc.pl.)" ref="flextype.d5e1863" data-humanname="flexietype" data-label="Type" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="flexvorm" type="text" value="" ref="flexvorm.d5e2154" data-humanname="flexievorm" data-label="Vorm" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="betekenis" type="text" value="" ref="betekenis.d5e2175" data-humanname="woord in betekenis" data-label="Woord in betekenis" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="betlabel" type="text" value="" ref="betlabel.d5e2186" data-humanname="label bij betekenis" data-label="Label bij betekenis" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="betcolloc" type="text" value="" ref="betcolloc.d5e2197" data-humanname="collocaties/verbindingen" data-label="Collocaties / verbindingen met" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="betclass" type="text" value="" ref="betclass.d5e2208" data-humanname="semantische classificatie" data-label="Semantische classificatie" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="citaat" type="text" value="" ref="citaat.d5e2227" data-humanname="woord in citaattekst" data-label="Woord in citaattekst" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="bronauteur" type="text" value="" ref="bronauteur.d5e2245" data-humanname="auteur citaat" data-label="Auteur citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="brontitel" type="text" value="" ref="brontitel.d5e2256" data-humanname="verkorte brontitel" data-label="Verkorte brontitel" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="bronvan" type="text" value="" ref="van-tot-velden.d5e2267.van" data-humanname="vanaf-datering citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="brontot" type="text" value="" ref="van-tot-velden.d5e2267.tot" data-humanname="tot-datering citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="bronlocatie" type="text" value="" ref="bronlocatie.d5e2278" data-label="Lokalisering bron" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="oudvan" type="text" value="" ref="van-tot-velden.d5e2297.van" data-humanname="" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="oudtot" type="text" value="" ref="van-tot-velden.d5e2297.tot" data-humanname="tot-datering oudste citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="oudlocatie" type="text" value="" ref="oudlocatie.d5e2308" data-humanname="lokalisering oudste citaat" data-label="Lokalisering oudste citaat" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
+    <input-or-select element="input" name="sensitive" type="checkbox" value="on" ref="sensitive.d5e2365" data-inputname="sensitive" form-div-id="d5e894" form-label="Uitgebreid zoeken"/>
 </inputs-and-selects>

@@ -33,7 +33,7 @@
     <xsl:key name="ids" match="*[@id]" use="@id"/>
     
     <!-- TODO Bijhouden van bezochte uri's is niet nodig. -->
-    <xsl:variable name="VISITED_URIS_PROPERTY" as="xs:string" select="'visited-uris'"/>
+    <!--<xsl:variable name="VISITED_URIS_PROPERTY" as="xs:string" select="'visited-uris'"/>-->
     <xsl:variable name="URL_FOR_CONTENT_PROPERTY" as="xs:string" select="'url-for-content'"/>
     <xsl:variable name="TEXT_INPUT_URI_PARAMS_PROPERTY" as="xs:string" select="'text-input-uri-params'"/>
     <xsl:variable name="FORMDIV_INPUTS_AND_SELECTS_PROPERTY" as="xs:string" select="'formdiv-inputs-and-selects'"/>
@@ -96,31 +96,36 @@
         <xsl:value-of select="substring-after($id-with-hash, '#')"/>        
     </xsl:function>
     
+    <xsl:template name="ivdnt:check">
+        <xsl:param name="checkbox" as="element(input)" required="yes"/>
+        <ixsl:set-property name="checked" object="$checkbox" select="true()"/>
+    </xsl:template>
+    
     <xsl:template name="ivdnt:uncheck">
         <xsl:param name="checkbox" as="element(input)" required="yes"/>
         <ixsl:set-property name="checked" object="$checkbox" select="false()"/>
         <!-- note that <ixsl:remove-attribute name="checked"> does not work (the current context is the input, equal to parameter $checkbox, so it could have worked). -->
     </xsl:template>
     
-    <!-- Return a space separated string consisting of all visited uris. Note that we attempted to use maps and arrays, but we got too many runtimes errors, so we gave up. -->
+    <!--<!-\- Return a space separated string consisting of all visited uris. Note that we attempted to use maps and arrays, but we got too many runtimes errors, so we gave up. -\->
     <xsl:function name="ivdnt:get-visited-uris" as="xs:string">
         <xsl:sequence select="ixsl:get(ixsl:page(), 'visited-uris')"/>
-    </xsl:function>
+    </xsl:function>-->
     
-    <xsl:template name="ivdnt:add-visited-uri">
+    <!--<xsl:template name="ivdnt:add-visited-uri">
         <xsl:param name="uri" as="xs:string" required="yes"/>
         <xsl:variable name="oldvalue" as="xs:string" select="ivdnt:get-visited-uris()"/>
         <xsl:variable name="newvalue" as="xs:string" select="string-join(distinct-values(($oldvalue, $uri)), ' ')"/>
         <ixsl:set-property name="{$VISITED_URIS_PROPERTY}" select="$newvalue" object="ixsl:page()"/>
-    </xsl:template>
+    </xsl:template>-->
     
-    <xsl:function name="ivdnt:is-visited-uri" as="xs:boolean">
+    <!--<xsl:function name="ivdnt:is-visited-uri" as="xs:boolean">
         <xsl:param name="uri" as="xs:string"/>
         <xsl:variable name="visited-uris" as="xs:string" select="ivdnt:get-visited-uris()"/>
-        <!-- Test if the sequence visited-uris contains the uri: -->
-        <!--<xsl:message select="'ivdnt:is-visited-uri geeft: ' || ($uri = tokenize($visited-uris, ' '))"/>-->
+        <!-\- Test if the sequence visited-uris contains the uri: -\->
+        <!-\-<xsl:message select="'ivdnt:is-visited-uri geeft: ' || ($uri = tokenize($visited-uris, ' '))"/>-\->
         <xsl:sequence select="($uri = tokenize($visited-uris, ' '))"/>
-    </xsl:function>
+    </xsl:function>-->
     
     <xsl:function name="ivdnt:get-showhide-div" as="element(div)">
         <xsl:param as="element()" name="predecessor"/>
@@ -139,8 +144,8 @@
     </xsl:function>
     
     <xsl:template name="initialize">
-        <xsl:variable name="visited-uris" as="xs:string" select="''"/>
-        <ixsl:set-property name="{$VISITED_URIS_PROPERTY}" select="$visited-uris" object="ixsl:page()"/>
+        <!--<xsl:variable name="visited-uris" as="xs:string" select="''"/>
+        <ixsl:set-property name="{$VISITED_URIS_PROPERTY}" select="$visited-uris" object="ixsl:page()"/>-->
     </xsl:template>
     
     <xsl:template name="ivdnt:gtb-collapse">
@@ -347,9 +352,9 @@
         <!--<xsl:if test="not(ivdnt:is-visited-uri($url-for-content))"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></xsl:if>-->
         <ixsl:schedule-action wait="100"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></ixsl:schedule-action>
         
-        <xsl:call-template name="ivdnt:add-visited-uri">
+        <!--<xsl:call-template name="ivdnt:add-visited-uri">
             <xsl:with-param name="uri" select="$url-for-content"/>
-        </xsl:call-template>
+        </xsl:call-template>-->
     </xsl:template>
     
     <xsl:template match="a[@data-showhidegroup]" mode="ixsl:onclick">
@@ -420,7 +425,7 @@
             <xsl:if test="@data-label eq 'Woordsoort'">
                 <xsl:variable name="data-target" as="xs:string" select="ivdnt:strip-hash-from-id(following-sibling::button[1]/@data-target)"/>
                 <woordsoort-inputs>
-                    <xsl:variable name="woordsoort-div" as="element(div)" select="id($data-target)"/>
+                    <xsl:variable name="woordsoort-div" as="element(div)" select="key('ids', $data-target)"/>
                     <xsl:sequence select="ivdnt:create-input-or-select-elements($woordsoort-div)"/>
                 </woordsoort-inputs>
             </xsl:if>
@@ -435,8 +440,7 @@
         <xsl:variable name="type" as="xs:string" select="if ($input-or-select-element/self::input) then $input-or-select-element/@type else ''"/>
         <xsl:variable name="value" as="xs:string" select="normalize-space(ivdnt:get-input-value($input-or-select-element))"/>
         <xsl:variable name="checked" as="xs:boolean" select="if ($input-or-select-element/$type = ('radio', 'checkbox')) then ivdnt:is-checked($input-or-select-element) else false()"/>
-        <input-or-select element="{local-name($input-or-select-element)}" name="{$name}" type="{$type}" value="{$value}">
-            <xsl:copy-of select="$input-or-select-element/@id"/>
+        <input-or-select element="{local-name($input-or-select-element)}" name="{$name}" type="{$type}" value="{$value}" ref="{$input-or-select-element/@id}">
             <xsl:copy-of select="$input-or-select-element/@*[starts-with(name(), 'data-')]"/>
             <xsl:attribute name="form-div-id" select="$formdiv/@id"/>
             <xsl:if test="$checked"><xsl:attribute name="checked" select="'checked'"/></xsl:if>
@@ -524,7 +528,7 @@
     </xsl:template>
     
     <xsl:template match="button[ivdnt:class-contains(@class, 'woordsoortassistentieknop')]" mode="ixsl:onclick">
-        <xsl:variable name="topdiv" as="element(div)" select="id(ivdnt:strip-hash-from-id(@data-target))"/>
+        <xsl:variable name="topdiv" as="element(div)" select="key('ids', ivdnt:strip-hash-from-id(@data-target))"/>
         <xsl:for-each select="$topdiv//input[@type eq 'checkbox' and ivdnt:is-checked(.)]">
             <xsl:call-template name="ivdnt:uncheck"><xsl:with-param name="checkbox" select="."/></xsl:call-template>
         </xsl:for-each>
@@ -591,6 +595,9 @@
     <xsl:template match="button[@name eq 'wis-zoeken']" mode="ixsl:onclick">
         <xsl:variable name="formdiv" as="element(div)" select="ancestor::div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)][1]"/>
         <xsl:for-each select="$formdiv//input[@type eq 'text']">
+            <ixsl:set-property name="value" select="''" object="."/>
+        </xsl:for-each>
+        <xsl:for-each select="$formdiv//select">
             <ixsl:set-property name="value" select="''" object="."/>
         </xsl:for-each>
     </xsl:template>
@@ -671,11 +678,6 @@
     </xsl:template>
     
     <xsl:template match="button[@name eq 'geschiedenis']" mode="ixsl:onclick">
-        <!-- bepaal eerst de huidige tab
-             zoek de div aan de hand van de id gegeven in data-target.
-             bepaal daarna met for-each de div.
-             render in de div de inputs die geassocieerd zijn met de huidige tab.
-        -->
         <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
         <xsl:variable name="popupdiv" as="element(div)" select="id(ivdnt:strip-hash-from-id(@data-target))"/>
         <xsl:variable name="list-div" as="element(div)" select="$popupdiv//div[ivdnt:class-contains(@class, 'gtb-zoekvragen-geschiedenis')]"/>
@@ -689,7 +691,7 @@
     </xsl:template>
     
     <xsl:template match="inputs-and-selects-list" mode="geschiedenis-lijst">
-        <ol><xsl:apply-templates mode="geschiedenis-lijst"/></ol>
+        <div class="list-group" data-type="inputs-and-selects-list"><xsl:apply-templates mode="geschiedenis-lijst"/></div>
     </xsl:template>
     
     <xsl:template match="inputs-and-selects" mode="geschiedenis-lijst">
@@ -697,12 +699,49 @@
             <xsl:apply-templates select="input-or-select[@data-humanname ne '']" mode="geschiedenis-lijst"/>
         </xsl:variable>
         
-        <li>
+        <a href="#" class="list-group-item list-group-item-action">
             <xsl:for-each select="$descriptions">
                 <xsl:copy-of select="."/>
                 <xsl:if test="position() ne last()"><xsl:text>,&#32;</xsl:text></xsl:if>
             </xsl:for-each>
-        </li>
+        </a>
+    </xsl:template>
+    
+    <xsl:template match="a[ivdnt:class-contains(@class, 'list-group-item')]" mode="ixsl:onclick">
+        <xsl:variable name="me" as="element(a)" select="."/>
+        <xsl:for-each select="parent::*/a">
+            <ixsl:set-attribute name="class" select="if (. is $me) then ivdnt:add-class-values(@class, 'active') else ivdnt:remove-class-value(@class, 'active')"/>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="button[@name eq 'doe-selecteervraag']" mode="ixsl:onclick">
+        <!-- Bepaal het nummer van het geselecteerde item.
+             Selecteer het overeenkomstige XML-element in de lijst van $FORMDIV_INPUTS_AND_SELECTS_PROPERTY (gegeven het tabblad)
+             Stel alle inputs in op basis van het XML-element.
+        -->
+        <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
+        <xsl:variable name="active-a" as="element(a)" select="ancestor::div[ivdnt:class-contains(@class, 'modal-body')]//div[@data-type eq 'inputs-and-selects-list']/a[ivdnt:class-contains(@class, 'active')][1]"/>
+        <xsl:if test="exists($active-a)">
+            <xsl:variable name="num" as="xs:integer" select="count($active-a/preceding-sibling::a) + 1"/>
+            <xsl:variable name="inputs-and-selects-list" as="element(inputs-and-selects-list)?" select="ixsl:get($current-tab, $FORMDIV_INPUTS_AND_SELECTS_PROPERTY)"/>
+            <xsl:for-each select="$inputs-and-selects-list/inputs-and-selects[$num]//input-or-select">
+                <xsl:variable name="id" as="xs:string" select="@ref"/>
+                <xsl:variable name="input-or-select-element" as="element()?" select="ixsl:page()/key('ids', $id)"/>
+                <xsl:choose>
+                    <xsl:when test="@type = ('radio', 'checkbox')">
+                        <xsl:variable name="is-checked" as="xs:boolean" select="exists(.[@checked eq 'checked'])"/>
+                        <xsl:choose>
+                            <xsl:when test="$is-checked"><xsl:call-template name="ivdnt:check"><xsl:with-param name="checkbox" select="$input-or-select-element"/></xsl:call-template></xsl:when>
+                            <xsl:otherwise><xsl:call-template name="ivdnt:uncheck"><xsl:with-param name="checkbox" select="$input-or-select-element"/></xsl:call-template></xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:variable name="val" as="xs:string" select="@value"/>
+                        <ixsl:set-property name="value" select="$val" object="$input-or-select-element"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="input-or-select[@type = ('radio', 'checkbox') and @checked='checked']" mode="geschiedenis-lijst">
