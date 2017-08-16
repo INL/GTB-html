@@ -36,6 +36,7 @@
     <xsl:variable name="VISITED_URIS_PROPERTY" as="xs:string" select="'visited-uris'"/>
     <xsl:variable name="URL_FOR_CONTENT_PROPERTY" as="xs:string" select="'url-for-content'"/>
     <xsl:variable name="TEXT_INPUT_URI_PARAMS_PROPERTY" as="xs:string" select="'text-input-uri-params'"/>
+    <xsl:variable name="FORMDIV_INPUTS_AND_SELECTS_PROPERTY" as="xs:string" select="'formdiv-inputs-and-selects'"/>
     <xsl:variable name="RESULT_TABDIV_ID_PROPERTY" as="xs:string" select="'result-tabdiv-id'"/>
     <xsl:variable name="RESULT_SORTKEYS_PROPERTY" as="xs:string" select="'result-sortkeys'"/>
     <xsl:variable name="RESULT_SORTREVERSE_PROPERTY" as="xs:string" select="'result-sortreverse'"/>
@@ -254,6 +255,9 @@
         <ixsl:set-property name="{$RESULT_TABDIV_ID_PROPERTY}" select="$tabdiv-id" object="ixsl:page()"/>
         <ixsl:set-property name="{$RESULT_SORTKEYS_PROPERTY}" select="''" object="ixsl:page()"/>
         <ixsl:set-property name="{$RESULT_SORTREVERSE_PROPERTY}" select="'false'" object="ixsl:page()"/>
+        
+        <!-- Store the XML representation of the inputs and selects at the originating tab div: -->
+        <ixsl:set-property name="{$FORMDIV_INPUTS_AND_SELECTS_PROPERTY}" select="ivdnt:add-formdiv-inputs-and-selects($current-tab, $formdiv-inputs-and-selects)" object="$current-tab"/>
         
         <xsl:call-template name="ivdnt:show-results">
             <xsl:with-param name="url-for-content" select="$url-for-content"/>
@@ -494,6 +498,19 @@
         <xsl:sequence select="ixsl:page()//input[@data-modal-target-id eq $data-target-id][1]"/>
     </xsl:function>
     
+    <xsl:function name="ivdnt:add-formdiv-inputs-and-selects"  as="element(inputs-and-selects-list)">
+        <xsl:param name="tabdiv" as="element(div)"/>
+        <xsl:param name="formdiv-inputs-and-selects" as="element(inputs-and-selects)"/>
+        
+        <!-- Note that the first time, ixsl:get issues a console warning when retrieving the value of $FORMDIV_INPUTS_AND_SELECTS_PROPERTY. So be it. -->
+        <xsl:variable name="existing-inputs-and-selects-list" as="element(inputs-and-selects-list)?" select="ixsl:get($tabdiv, $FORMDIV_INPUTS_AND_SELECTS_PROPERTY)"/>
+        
+        <inputs-and-selects-list>
+            <xsl:copy-of select="$existing-inputs-and-selects-list/*"/>
+            <xsl:copy-of select="$formdiv-inputs-and-selects"/>
+        </inputs-and-selects-list>
+    </xsl:function>
+    
     <xsl:template match="button[@data-dismiss eq 'modal' and not(ivdnt:class-contains(@class, 'close'))]" mode="ixsl:onclick">
         <xsl:variable name="target-input-name" as="xs:string?" select="ancestor::div[@data-target-input][1]/@data-target-input"/>
         
@@ -651,6 +668,49 @@
             <xsl:with-param name="client-filename" select="'gtb-export.' || $value-of-format-input"/>
             <xsl:with-param name="mimetype" select="'text/' || $value-of-format-input"/>
         </xsl:call-template>
+    </xsl:template>
+    
+    <xsl:template match="button[@name eq 'geschiedenis']" mode="ixsl:onclick">
+        <!-- bepaal eerst de huidige tab
+             zoek de div aan de hand van de id gegeven in data-target.
+             bepaal daarna met for-each de div.
+             render in de div de inputs die geassocieerd zijn met de huidige tab.
+        -->
+        <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
+        <xsl:variable name="popupdiv" as="element(div)" select="id(ivdnt:strip-hash-from-id(@data-target))"/>
+        <xsl:variable name="list-div" as="element(div)" select="$popupdiv//div[ivdnt:class-contains(@class, 'gtb-zoekvragen-geschiedenis')]"/>
+        
+        <xsl:for-each select="$list-div">
+            <!-- for-each merely sets the context -->
+            <xsl:result-document href="?." method="ixsl:replace-content">
+                <xsl:apply-templates select="ixsl:get($current-tab, $FORMDIV_INPUTS_AND_SELECTS_PROPERTY)" mode="geschiedenis-lijst"/>
+            </xsl:result-document>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="inputs-and-selects-list" mode="geschiedenis-lijst">
+        <ol><xsl:apply-templates mode="geschiedenis-lijst"/></ol>
+    </xsl:template>
+    
+    <xsl:template match="inputs-and-selects" mode="geschiedenis-lijst">
+        <xsl:variable name="descriptions" as="element()*">
+            <xsl:apply-templates select="input-or-select[@data-humanname ne '']" mode="geschiedenis-lijst"/>
+        </xsl:variable>
+        
+        <li>
+            <xsl:for-each select="$descriptions">
+                <xsl:copy-of select="."/>
+                <xsl:if test="position() ne last()"><xsl:text>,&#32;</xsl:text></xsl:if>
+            </xsl:for-each>
+        </li>
+    </xsl:template>
+    
+    <xsl:template match="input-or-select[@type = ('radio', 'checkbox') and @checked='checked']" mode="geschiedenis-lijst">
+        <span>{@data-humanname}: <span class="gtb-input-value">ja</span></span>
+    </xsl:template>
+    
+    <xsl:template match="input-or-select[(@type eq 'text' or @element eq 'select') and @value ne '']" mode="geschiedenis-lijst">
+        <span>{@data-humanname}: <span class="gtb-input-value">{@value}</span></span>
     </xsl:template>
     
     <xsl:template match="button[@name eq 'doe-afdrukken']" mode="ixsl:onclick">

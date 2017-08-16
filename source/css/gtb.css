@@ -243,6 +243,16 @@ div.gtb-results b i{
     font-family: gtbbi;
 }
 
+div.gtb-zoekvragen-geschiedenis {
+    min-height: 40vh;
+    max-height: 40vh;
+    overflow:auto;
+}
+
+.gtb-input-value {
+    font-weight: bold;
+}
+
 tr.gtb-result-row > td{
     height: 3em;
     vertical-align: top;

@@ -3,28 +3,28 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in betekenis</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="betekenis" class="form-control gtb-tekstveld"/>
+            <input type="text" name="betekenis" class="form-control gtb-tekstveld" data-humanname="woord in betekenis"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Label bij betekenis</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="betlabel" class="form-control gtb-tekstveld"/>
+            <input type="text" name="betlabel" class="form-control gtb-tekstveld" data-humanname="label bij betekenis"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
 
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Collocaties / verbindingen met</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="betcolloc" class="form-control gtb-tekstveld"/>
+            <input type="text" name="betcolloc" class="form-control gtb-tekstveld" data-humanname="collocaties/verbindingen"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Semantische classificatie</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="betclass" class="form-control gtb-tekstveld"/>
+            <input type="text" name="betclass" class="form-control gtb-tekstveld" data-humanname="semantische classificatie"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
 </div>

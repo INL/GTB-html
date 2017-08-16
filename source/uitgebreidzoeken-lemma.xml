@@ -3,7 +3,7 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Modern Nederlands trefwoord</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemmodern" class="form-control gtb-tekstveld"/>
+            <input type="text" name="lemmodern" class="form-control gtb-tekstveld" data-humanname="modern Nederlands trefwoord"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
@@ -17,7 +17,7 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woordsoort</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemwrdsrt" data-modal-target-id="uitgebreidzoeken.lemwrdsrt" class="form-control gtb-woordsoortveld"/>
+            <input type="text" name="lemwrdsrt" data-humanname="woordsoort" data-modal-target-id="uitgebreidzoeken.lemwrdsrt" class="form-control gtb-woordsoortveld"/>
             <ivdnt:modal type="woordsoortzoeken" target-input="uitgebreidzoeken.lemwrdsrt">
                 <ivdnt:modaltrigger><button type="button" class="woordsoortassistentieknop btn btn-secondary">Assistentie...</button></ivdnt:modaltrigger>
                 <ivdnt:modalcontent>
@@ -31,7 +31,7 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Trefwoordvariant</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemvariant" class="form-control gtb-tekstveld"/>
+            <input type="text" name="lemvariant" data-humanname="trefwoordvariant" class="form-control gtb-tekstveld"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
@@ -40,13 +40,13 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Verwante vorm</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="etymvorm" class="form-control gtb-tekstveld"/>
+                <input type="text" name="etymvorm" data-humanname="verwante vorm" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">In de etymologische beschrijving genoemde taal</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="etymtaal" class="form-control gtb-tekstveld"/>
+                <input type="text" name="etymtaal" data-humanname="taal in etym. beschr." class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
     </div>
@@ -56,19 +56,19 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Morfologisch element</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="morfelem" class="form-control gtb-tekstveld"/>
+                <input type="text" name="morfelem" data-humanname="morfologisch element" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Woorden in de morfologische beschrijving</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="morfterm" class="form-control gtb-tekstveld"/>
+                <input type="text" name="morfterm" data-humanname="woorden in morf. beschr." class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Woordvormingstype</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <select name='morftype' class="form-control gtb-selectveld">
+                <select name='morftype' data-humanname="woordvormingstype" class="form-control gtb-selectveld">
                     <option value="">---</option>
                     <option value="afleiding" >afleiding</option>
                     <option value="samenkoppeling" >samenkoppeling</option>
@@ -111,7 +111,7 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Type</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <select name="flextype" class="form-control gtb-selectveld">
+                <select name="flextype" data-humanname="flexietype" class="form-control gtb-selectveld">
                     <option value="">----</option>
                     <option data-dict="ONW,VMNW"  value="(1e pl.conj.pres.)">1e pl.conj.pres. (ONW,VMNW)</option>
                     <option data-dict="VMNW" value="(1e pl.conj.pret.)" >1e pl.conj.pret. (VMNW)</option>
@@ -228,7 +228,7 @@
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel class="gtb-inspring">Vorm</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
-                <input type="text" name="flexvorm" class="form-control gtb-tekstveld"/>
+                <input type="text" name="flexvorm" data-humanname="flexievorm" class="form-control gtb-tekstveld"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
     </div>

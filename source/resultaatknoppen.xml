@@ -46,7 +46,7 @@
                 </p>
                 <div class="modal-footer">
                     <p class="row">
-                        <button type="button" name="doe-exporteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="{ancestor::ivdnt:modal/@type}">Exporteren</button>
+                        <button type="button" name="doe-exporteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="exporteren">Exporteren</button>
                         <button type="button" name="annuleer-exportorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
                     </p>
                 </div>

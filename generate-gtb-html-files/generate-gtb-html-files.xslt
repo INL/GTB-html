@@ -172,9 +172,9 @@
             <!-- input style=... dient om de 100% van .form-control in bootstrap.css te overschrijven.
                  Het percentage is proefondervindelijk vastgesteld en klopt niet eens helemaal. 
                  TODO moet netter kunnen. -->
-            <input id="{ivdnt:generate-input-id(.)}.van" type="text" name="{@van}" class="col-md-2 form-control" style="width: 21%"/>
+            <input id="{ivdnt:generate-input-id(.)}.van" type="text" name="{@van}" data-humanname="{@data-humanname-van}" class="col-md-2 form-control" style="width: 21%"/>
             <span class="col-md-2">tot / met </span>
-            <input id="{ivdnt:generate-input-id(.)}.tot" type="text" name="{@tot}" class="col-md-2 form-control" style="width: 21%"/>
+            <input id="{ivdnt:generate-input-id(.)}.tot" type="text" name="{@tot}" data-humanname="{@data-humanname-tot}" class="col-md-2 form-control" style="width: 21%"/>
         </p>
     </xsl:template>
     
@@ -186,11 +186,11 @@
         <div class="{$zoekformulier-input-column-class}">
             <div class="formulierinput">
                 <div class="row">
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Oudnederlands Woordenboek">ONW <input id="{ivdnt:generate-input-id(.)}.onw" checked="checked" data-inputname="wdb" type="checkbox" name="onw{@suffix}" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Vroegmiddelnederlands Woordenboek">VMNW <input id="{ivdnt:generate-input-id(.)}.vmnw" checked="checked" data-inputname="wdb" type="checkbox" name="vmnw{@suffix}" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Middelnederlandsch Woordenboek">MNW <input id="{ivdnt:generate-input-id(.)}.mnw" checked="checked" data-inputname="wdb" type="checkbox" name="mnw{@suffix}" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Nederlandsche Taal">WNT <input id="{ivdnt:generate-input-id(.)}.wnt" checked="checked" data-inputname="wdb" type="checkbox" name="wnt{@suffix}" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Friese taal">WFT <input id="{ivdnt:generate-input-id(.)}.wft" checked="checked" data-inputname="wdb" type="checkbox" name="wft{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Oudnederlands Woordenboek">ONW <input id="{ivdnt:generate-input-id(.)}.onw" checked="checked" data-inputname="wdb" data-humanname="zoek in ONW" type="checkbox" name="onw{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Vroegmiddelnederlands Woordenboek">VMNW <input id="{ivdnt:generate-input-id(.)}.vmnw" checked="checked" data-inputname="wdb" data-humanname="zoek in VMNW" type="checkbox" name="vmnw{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Middelnederlandsch Woordenboek">MNW <input id="{ivdnt:generate-input-id(.)}.mnw" checked="checked" data-inputname="wdb" data-humanname="zoek in MNW" type="checkbox" name="mnw{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Nederlandsche Taal">WNT <input id="{ivdnt:generate-input-id(.)}.wnt" checked="checked" data-inputname="wdb" data-humanname="zoek in WNT"  type="checkbox" name="wnt{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Friese taal">WFT <input id="{ivdnt:generate-input-id(.)}.wft" checked="checked" data-inputname="wdb" data-humanname="zoek in WFT" type="checkbox" name="wft{@suffix}" class="checkbox-inline"/></label></div>
                 </div>
             </div>
         </div>
@@ -203,11 +203,11 @@
         <div class="{$zoekformulier-input-column-class}">
             <div class="formulierinput">
                 <div class="row">
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met artikelen">Artikelen <input id="{ivdnt:generate-input-id(.)}.0" checked="checked" data-inputname="domein" type="radio" name="domein" value="0" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met betekenisomschrijvingen">Omschr. <input id="{ivdnt:generate-input-id(.)}.1" data-inputname="domein" type="radio" name="domein" value="1" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met citaten">Citaten <input id="{ivdnt:generate-input-id(.)}.2" data-inputname="domein" type="radio" name="domein" value="2" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met kopsecties">Kopsecties <input id="{ivdnt:generate-input-id(.)}.3" data-inputname="domein" type="radio" name="domein" value="3" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met verbindingen">Verbind. <input id="{ivdnt:generate-input-id(.)}.4" data-inputname="domein" type="radio" name="domein" value="4" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met artikelen">Artikelen <input id="{ivdnt:generate-input-id(.)}.0" checked="checked" data-inputname="domein" data-humanname="toon artikelen" type="radio" name="domein" value="0" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met betekenisomschrijvingen">Omschr. <input id="{ivdnt:generate-input-id(.)}.1" data-inputname="domein" data-humanname="toon omschrijvingen" type="radio" name="domein" value="1" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met citaten">Citaten <input id="{ivdnt:generate-input-id(.)}.2" data-inputname="domein" data-humanname="toon citaten" type="radio" name="domein" value="2" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met kopsecties">Kopsecties <input id="{ivdnt:generate-input-id(.)}.3" data-inputname="domein" data-humanname="toon kopsecties" type="radio" name="domein" value="3" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met verbindingen">Verbind. <input id="{ivdnt:generate-input-id(.)}.4" data-inputname="domein" data-humanname="toon verbindingen" type="radio" name="domein" value="4" class="radio-inline"/></label></div>
                 </div>
             </div>
         </div>
