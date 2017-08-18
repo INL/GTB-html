@@ -109,6 +109,7 @@
                 "paging": false,
                 "bFilter": false,
                 "bSort" : false,
+                "bInfo": false,
                 language: {
                        url: 'js/nl.json',
                 }
