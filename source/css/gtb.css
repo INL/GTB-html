@@ -249,6 +249,11 @@ div.gtb-zoekvragen-geschiedenis {
     overflow:auto;
 }
 
+.gtb-zoekvraag-description{
+    font-size: smaller;
+}
+
+
 .gtb-input-value {
     font-weight: bold;
 }
