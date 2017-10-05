@@ -290,7 +290,7 @@
         <!--<xsl:if test="not(ivdnt:is-visited-uri($url-for-content))"><xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></xsl:if>-->
         <xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template>
         
-        <ixsl:schedule-action document="{$url-for-content}" wait="0">
+        <ixsl:schedule-action document="{$url-for-content}">
             <xsl:call-template name="ivdnt:render-results">
                 <xsl:with-param name="url-for-content" select="$url-for-content"/>
                 <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
@@ -441,6 +441,7 @@
         <xsl:variable name="formdiv-id" as="xs:string" select="$formdiv/@id"/>
         <xsl:variable name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-formdiv-inputs-and-selects(/html/body, $formdiv-id)"/>
         <xsl:variable name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($formdiv-inputs-and-selects)"/>
+        
         <xsl:call-template name="ivdnt:select-tab">
             <xsl:with-param name="tabid" select="'resultaat'"/>
             <xsl:with-param name="formdiv-inputs-and-selects" select="$formdiv-inputs-and-selects"/>
