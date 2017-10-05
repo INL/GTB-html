@@ -92,7 +92,8 @@
                  .../iWDB/search?wdb=onw%2Cvmnw%2Cmnw%2Cwnt%2Cwft%2C&actie=list&index=lemmodern&prefix=koe&sensitive=false&xmlerror=true
             -->
             <!--<script type="text/javascript">const BASE_LIST_URL = "http://gtb.inl.nl/iWDB/search?actie=list";</script>-->
-            <script type="text/javascript">const BASE_LIST_URL = "../redirect.php?actie=list";</script>
+             <!-- TODO wrd-parameter dynamisch -->
+            <script type="text/javascript">const BASE_LIST_URL = "redirect.php?actie=list&amp;wdb=onw%2Cvmnw%2Cmnw%2Cwnt%2Cwft%2C";</script>
             <script src="js/gtb.js" type="text/javascript"></script>
                         
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>

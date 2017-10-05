@@ -14,21 +14,21 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Auteur</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="bronauteur" class="form-control gtb-tekstveld" data-humanname="auteur"/>
+            <input type="text" name="bronauteur" class="form-control gtb-tekstveld typeahead" data-humanname="auteur"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Verkorte titel</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="brontitelkort" class="form-control gtb-tekstveld"/>
+            <input type="text" name="brontitelkort" class="form-control gtb-tekstveld typeahead"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woorden in titel</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="brontitel" class="form-control gtb-tekstveld" data-humanname="woorden in titel"/>
+            <input type="text" name="brontitel" class="form-control gtb-tekstveld typeahead" data-humanname="woorden in titel"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
@@ -42,21 +42,21 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Lokalisering</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="bronlocatie" class="form-control gtb-tekstveld" data-humanname="lokalisering"/>
+            <input type="text" name="bronlocatie" class="form-control gtb-tekstveld typeahead" data-humanname="lokalisering"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Signatuur</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="bronsig" class="form-control gtb-tekstveld" data-humanname="signatuur"/>
+            <input type="text" name="bronsig" class="form-control gtb-tekstveld typeahead" data-humanname="signatuur"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in bronartikel</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="article" class="form-control gtb-tekstveld" data-humanname="woord in bronartikel"/>
+            <input type="text" name="article" class="form-control gtb-tekstveld typeahead" data-humanname="woord in bronartikel"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     

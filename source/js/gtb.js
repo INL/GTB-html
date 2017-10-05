@@ -15,23 +15,27 @@ $(document).ready(function init() {
             // Requests suggestions from the backend
             source: function (query, process) {
                 var name = htmlObject.getAttribute("name");
-                console.log("query=" + query + ", name=" + name);
                 query = query.replace(/^.+\s+(\S*)$/, "$1");
                 if (query.length === 0) {
                     process([]);
                     return;
                 }
                 // Constant BASE_LIST_URL has been defined globally in the main HTML file
+                // TODO wdb-parameter toevoegen
                 var url = BASE_LIST_URL + "&index=" + name + "&prefix=" + encodeURIComponent(query) + "&sensitive=false";
-                console.log("url=" + url);
-                $. get (url, function (data) {
-                    process(data);
-                });
+                var results =[];
+                $. get (url,
+                function (data) {
+                    $(data).find('result').each(function () {
+                        var result = $(this).attr("Lemma");
+                        results.push(result);
+                    });
+                    process(results);
+                }, "xml");
             },
             
-            // Determines what items to show (backend only returns
-            // items we should show, so we always return true)
-            matcher: function () {
+            // Determines what items to show (backend returns xml, we select what we need from it)
+            matcher: function (item) {
                 return true;
             },
             
