@@ -14,14 +14,14 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Modern Nederlands trefwoord</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemmodern" class="form-control gtb-tekstveld" data-humanname="modern Nederlands trefwoord"/>
+            <input type="text" name="lemmodern" class="form-control gtb-tekstveld typeahead" data-humanname="modern Nederlands trefwoord"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Origineel trefwoord</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemma" class="form-control gtb-tekstveld" data-humanname="origineel trefwoord"/>
+            <input type="text" name="lemma" class="form-control gtb-tekstveld typeahead" data-humanname="origineel trefwoord"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
