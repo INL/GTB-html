@@ -18,6 +18,7 @@ mkdir "$TARGETDIR"
 cp -L -R "$SOURCEDIR"/* "$TARGETDIR"
 rm "$TARGETDIR"/*.xml
 rm "$TARGETDIR"/xslt/*.xslt
+rm -Rf "$TARGETDIR"/*/notused
 
 # Transform index.xml to index.html:
 $JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform "$SOURCEDIR"/index.xml "$WHEREAMI"/generate-gtb-html-files.xslt "$@" >"$TARGETDIR"/index.html
