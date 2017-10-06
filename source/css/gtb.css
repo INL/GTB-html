@@ -18,6 +18,10 @@
     src: url('../fonts/INLVBI__.TTF');
 }
 
+body {
+    font-family: verdana, helvetica, sans-serif
+}
+
 .tab-content{
     margin-top: 2em;
 }
@@ -93,7 +97,7 @@
 
 .gtb-tekstveld, .gtb-selectveld{
     width: 75%;
-    font-family: gtb;
+    font-family: gtb, verdana;
     display: inline;
 }
 
@@ -225,22 +229,22 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 }
 
 div.gtb-results{
-    font-family: gtb;
+    font-family: gtb, verdana;
     height: 70vh;
     overflow-y: scroll;
 }
 
 div.gtb-results i{
-    font-family: gtbi;
+    font-family: gtbi, verdana;
 }
 
 div.gtb-results b{
-    font-family: gtbb;
+    font-family: gtbb, verdana;
 }
 
 div.gtb-results i b,
 div.gtb-results b i{
-    font-family: gtbbi;
+    font-family: gtbbi, verdana;
 }
 
 div.gtb-zoekvragen-geschiedenis {
