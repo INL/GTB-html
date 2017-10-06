@@ -14,14 +14,14 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Modern Nederlands trefwoord</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemmodern" class="form-control gtb-tekstveld" data-humanname="modern Nederlands trefwoord"/>
+            <input type="text" name="lemmodern" class="form-control gtb-tekstveld typeahead" data-humanname="modern Nederlands trefwoord"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Origineel trefwoord</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemma" class="form-control gtb-tekstveld" data-humanname="origineel trefwoord"/>
+            <input type="text" name="lemma" class="form-control gtb-tekstveld typeahead" data-humanname="origineel trefwoord"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
@@ -42,21 +42,21 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in betekenis</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="betekenis" class="form-control gtb-tekstveld" data-humanname="woord in betekenis"/>
+            <input type="text" name="betekenis" class="form-control gtb-tekstveld typeahead" data-humanname="woord in betekenis"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in citaat</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="citaatcompleet" class="form-control gtb-tekstveld" data-humanname="woord in citaat"/>
+            <input type="text" name="citaatcompleet" class="form-control gtb-tekstveld typeahead" data-humanname="woord in citaat"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in artikel</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="article" class="form-control gtb-tekstveld" data-humanname="woord in artikel"/>
+            <input type="text" name="article" class="form-control gtb-tekstveld typeahead" data-humanname="woord in artikel"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     

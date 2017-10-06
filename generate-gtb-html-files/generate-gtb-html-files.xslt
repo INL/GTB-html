@@ -85,8 +85,15 @@
             
             <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>
+            <script src="js/bootstrap3-typeahead.min.js" type="text/javascript"></script>
             <script src="js/datatables.min.js" type="text/javascript"></script>
             <script src="js/download.js" type="text/javascript"></script>
+            <!-- baseListURL contains the baseurl for the typeahead functionality. This is a sample URL:
+                 .../iWDB/search?wdb=onw%2Cvmnw%2Cmnw%2Cwnt%2Cwft%2C&actie=list&index=lemmodern&prefix=koe&sensitive=false&xmlerror=true
+            -->
+            <!--<script type="text/javascript">const BASE_LIST_URL = "http://gtb.inl.nl/iWDB/search?actie=list";</script>-->
+             <!-- TODO wrd-parameter dynamisch -->
+            <script type="text/javascript">const BASE_LIST_URL = "redirect.php?actie=list";</script>
             <script src="js/gtb.js" type="text/javascript"></script>
                         
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
@@ -100,9 +107,7 @@
                              baseArticleURL: "http://gtb.inl.nl/iWDB/search?actie=article",
                              baseArticleContentURL: "http://gtb.inl.nl/iWDB/search?actie=article_content",
                              baseSearchURL: "../redirect.php?actie=results",
-                             XXXXXbaseSearchURL: "http://gtb.inl.nl/iWDB/search?actie=results",
-                             baseListURL: "../redirect.php?actie=list",
-                             XXXXXbaseListURL: "http://gtb.inl.nl/iWDB/search?actie=list"
+                             XXXXXbaseSearchURL: "http://gtb.inl.nl/iWDB/search?actie=results"
                         }
                     });
                 }

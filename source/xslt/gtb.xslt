@@ -18,8 +18,6 @@
     <xsl:param name="baseArticleContentURL" as="xs:string" required="yes"/>
     <!-- Pass the start of the URL to which the query parameters (excluding the first part, ?actie=article_content - this is part of the parameter value) for retrieving the bron (source) will be appended: -->
     <xsl:param name="baseArticleURL" as="xs:string" required="yes"/>
-    <!-- Pass the start of the URL to which the query parameters (excluding the first part, ?actie=list - this is part of the parameter value) for retrieving the article will be appended: -->
-    <xsl:param name="baseListURL" as="xs:string" required="yes"/>
     <!-- Pass (json) true or set here to true() if you want to see the full search URL (for development purposes): -->
     <xsl:param name="showLinkToSearchResultXml" as="xs:boolean" select="false()"/>
     <!-- Pass (json) true or set here to true() if you want to see the XML list containing all inputs and selects (for development purposes): -->

@@ -307,3 +307,13 @@ tr.gtb-result-row:nth-child(odd){
 .auxiliaries > .gtb-resultaatknoppen {
     display: none;
 }
+
+.gtb-typeahead-word {
+    font-weight: bold;
+}
+
+.gtb-typeahead-wdb {
+    font-style: italic;
+    padding-left: 4em;
+    float: right;
+}
