@@ -97,7 +97,7 @@ body {
 
 .gtb-tekstveld, .gtb-selectveld{
     width: 75%;
-    font-family: gtb, verdana;
+    font-family: gtb, Verdana, sans-serif;
     display: inline;
 }
 
@@ -229,22 +229,22 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 }
 
 div.gtb-results{
-    font-family: gtb, verdana;
+    font-family: gtb, Verdana, sans-serif;
     height: 70vh;
     overflow-y: scroll;
 }
 
 div.gtb-results i{
-    font-family: gtbi, verdana;
+    font-family: gtbi, Verdana, sans-serif;
 }
 
 div.gtb-results b{
-    font-family: gtbb, verdana;
+    font-family: gtbb, Verdana, sans-serif;
 }
 
 div.gtb-results i b,
 div.gtb-results b i{
-    font-family: gtbbi, verdana;
+    font-family: gtbbi, Verdana, sans-serif;
 }
 
 div.gtb-zoekvragen-geschiedenis {
