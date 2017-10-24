@@ -27,6 +27,8 @@
     <xsl:template match="results" mode="render-results">
         <xsl:param name="html" as="element(html)" required="yes"/>
         <xsl:param name="startline" as="xs:integer" required="yes"/>
+        
+        <xsl:variable name="first-result" as="element(result)?" select="result[1]"/>
         <div class="gtb-results">
             <xsl:apply-templates select="statistics" mode="render-results"/>
             <!-- Note: the id 'gtb-result-table' is used on several places in this file and in js/gtb.js -->
@@ -45,12 +47,12 @@
                             <col class="gtb-wdbcol-modern_lemma"/>
                             <col class="gtb-wdbcol-lemma"/>
                             <col class="gtb-wdbcol-woordsoort"/>
-                            <xsl:if test="result/@Verbinding">
+                            <xsl:if test="$first-result/@Verbinding">
                                 <!-- Extra kolom: nooit meer dan één, namelijk Verbinding, Kopsectie of Citaat. Verbinding komt voor de betekenis, de rest erna -->
                                 <col class="gtb-wdbcol-anders"/>
                             </xsl:if>
                             <col class="gtb-wdbcol-anders"/>
-                            <xsl:if test="result/@Kopsectie | result/@Citaat">
+                            <xsl:if test="$first-result/@Kopsectie | $first-result/@Citaat">
                                 <col class="gtb-wdbcol-anders"/>
                             </xsl:if>
                         </xsl:otherwise>
@@ -71,10 +73,14 @@
                                 <th>Mod. Ned. trefwoord</th>
                                 <th>Origineel trefwoord</th>
                                 <th>Woordsoort</th>
-                                <xsl:if test="result/@Verbinding"><th>Verbinding</th></xsl:if>
-                                <xsl:if test="result/@Betekenis"><th>Betekenis</th></xsl:if>
-                                <xsl:if test="result/@Kopsectie"><th>Kopsectie</th></xsl:if>
-                                <xsl:if test="result/@Citaat"><th>Citaat</th></xsl:if>
+                                <xsl:if test="$first-result/@Verbinding"><th>Verbinding</th></xsl:if>
+                                <xsl:if test="$first-result/@hits and $first-result/conc"><th>Freq. </th></xsl:if>
+                                <xsl:choose>
+                                    <xsl:when test="$first-result/conc"><th>Concordantie</th></xsl:when>
+                                    <xsl:when test="$first-result/@Betekenis"><th>Betekenis</th></xsl:when>
+                                </xsl:choose>
+                                <xsl:if test="$first-result/@Kopsectie"><th>Kopsectie</th></xsl:if>
+                                <xsl:if test="$first-result/@Citaat"><th>Citaat</th></xsl:if>
                             </xsl:otherwise>
                         </xsl:choose>                        
                     </tr>
@@ -206,7 +212,15 @@
             <xsl:apply-templates select="@Lemma" mode="render-results"/>
             <xsl:apply-templates select="@Woordsoort" mode="render-results"/>
             <xsl:apply-templates select="@Verbinding" mode="render-results"/>
-            <xsl:apply-templates select="@Betekenis" mode="render-results"/>
+            <xsl:choose>
+                <xsl:when test="conc">
+                    <xsl:apply-templates select="@hits" mode="render-results"/>
+                    <td class="gtb-conc">
+                        <xsl:apply-templates select="conc" mode="render-results"/>
+                    </td>
+                </xsl:when>
+                <xsl:when test="@Betekenis"><xsl:apply-templates select="@Betekenis" mode="render-results"/></xsl:when>
+            </xsl:choose>
             <xsl:apply-templates select="@Kopsectie" mode="render-results"/>
             <xsl:apply-templates select="@Citaat" mode="render-results"/>
             
@@ -216,6 +230,18 @@
             <xsl:apply-templates select="@van" mode="render-results"/>
             <xsl:apply-templates select="@locatie" mode="render-results"/>
         </tr>
+    </xsl:template>
+    
+    <xsl:template match="conc" mode="render-results">
+        <span class="gtb-conc-line">
+            <span class="gtb-conc-voor"><xsl:text>&#160;</xsl:text><xsl:apply-templates select="@voor" mode="render-conc-attributes"/></span>
+            <span class="gtb-conc-zoekwoord"><xsl:apply-templates select="@zoekwoord" mode="render-conc-attributes"/></span>
+            <span class="gtb-conc-na"><xsl:text>&#160;</xsl:text><xsl:apply-templates select="@na" mode="render-conc-attributes"/></span>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="@voor | @zoekwoord | @na" mode="render-conc-attributes">
+        <xsl:call-template name="parse-result-attributes"/>
     </xsl:template>
     
     <xsl:template match="result/@*" mode="render-results">
@@ -230,7 +256,7 @@
         <td class="gtb-van">{$datering}</td>
     </xsl:template>
     
-    <xsl:template match="@Line | @Wdb | @Woordsoort| @locatie" mode="render-result-attributes">
+    <xsl:template match="@Line | @Wdb | @Woordsoort | @locatie | @hits" mode="render-result-attributes">
         <!-- No parsing or special rules needed for these attributes. -->
         <xsl:value-of select="."/>
     </xsl:template>

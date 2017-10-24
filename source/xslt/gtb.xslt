@@ -392,7 +392,9 @@
         </xsl:variable>
         <xsl:variable name="domeininput" as="element()?" select="$formdiv-inputs-and-selects/input-or-select[@type eq 'radio' and @name eq 'domein' and @checked eq 'checked']"/>
         <xsl:variable name="domein" as="xs:integer" select="if ($domeininput) then xs:integer($domeininput/@value) else 0"/>
-        <xsl:value-of select="string-join($values, '&amp;') || '&amp;domein=' || $domein"/>
+        <xsl:variable name="concordance-output" as="xs:boolean" select="exists($formdiv-inputs-and-selects/input-or-select[@data-concordance-output eq 'true'])"/>
+        <xsl:variable name="conc" as="xs:string" select="if ($concordance-output) then '&amp;conc=true' else ''"/>
+        <xsl:value-of select="string-join($values, '&amp;') || '&amp;domein=' || $domein || $conc"/>
     </xsl:function>
     
     <!-- Return the (url-encoded) names of all checkboxes of the current form that have @data-inputname="wdb" and that are checked. The names are separated by comma's. -->

@@ -42,21 +42,21 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in betekenis</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="betekenis" class="form-control gtb-tekstveld typeahead" data-humanname="woord in betekenis"/>
+            <input type="text" name="betekenis" class="form-control gtb-tekstveld typeahead" data-humanname="woord in betekenis" data-concordance-output="true"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in citaat</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="citaatcompleet" class="form-control gtb-tekstveld typeahead" data-humanname="woord in citaat"/>
+            <input type="text" name="citaatcompleet" class="form-control gtb-tekstveld typeahead" data-humanname="woord in citaat" data-concordance-output="true"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in artikel</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="article" class="form-control gtb-tekstveld typeahead" data-humanname="woord in artikel"/>
+            <input type="text" name="article" class="form-control gtb-tekstveld typeahead" data-humanname="woord in artikel" data-concordance-output="true"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     

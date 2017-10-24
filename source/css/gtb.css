@@ -247,6 +247,39 @@ div.gtb-results b i{
     font-family: gtbbi, Verdana, sans-serif;
 }
 
+#gtb-result-table th {
+    text-align: left;
+}
+tr.gtb-result-row:hover {
+    /*  Dit werkt nog niet */
+    border-style: dotted;
+    border-color: blue;
+}
+td.conc {
+}
+.gtb-conc-line {
+    white-space: nowrap;
+    display: block;
+    clear: both;
+}
+.gtb-conc-voor {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: rtl;
+    width: 15em;
+    float:left;
+}
+
+.gtb-conc-zoekwoord {
+    font-weight: bold;
+}
+
+.gtb-conc-na {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 15em;
+}
+
 div.gtb-zoekvragen-geschiedenis {
     min-height: 40vh;
     max-height: 40vh;
