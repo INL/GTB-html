@@ -8,6 +8,12 @@
     
     <xsl:output method="html" version="5.0" encoding="UTF-8"/>
     
+    <xsl:param name="VERSIONINFO" as="xs:string" select="''"/>
+    <xsl:param name="BASEARTICLEURL" as="xs:string" select="'http://gtb.inl.nl/iWDB/search?actie=article'"/>
+    <xsl:param name="BASEARTICLECONTENTURL" as="xs:string" select="'http://gtb.inl.nl/iWDB/search?actie=article_content'"/>
+    <xsl:param name="BASESEARCHURL" as="xs:string" select="'../redirect.php?actie=results'"/>
+    <xsl:param name="BASELISTURL" as="xs:string" select="'redirect.php?actie=list'"/>
+    
     <xsl:include href="include.xslt"/>
     <xsl:include href="tabs.xslt"/>
     <xsl:include href="modal.xslt"/>
@@ -61,6 +67,7 @@
     </xsl:template>
     
     <xsl:template match="html" mode="ivdnt:html-mode">
+        <xsl:message select="$VERSIONINFO"></xsl:message>
         <xsl:copy>
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:comment>
@@ -91,9 +98,7 @@
             <!-- baseListURL contains the baseurl for the typeahead functionality. This is a sample URL:
                  .../iWDB/search?wdb=onw%2Cvmnw%2Cmnw%2Cwnt%2Cwft%2C&actie=list&index=lemmodern&prefix=koe&sensitive=false&xmlerror=true
             -->
-            <!--<script type="text/javascript">const BASE_LIST_URL = "http://gtb.inl.nl/iWDB/search?actie=list";</script>-->
-             <!-- TODO wrd-parameter dynamisch -->
-            <script type="text/javascript">const BASE_LIST_URL = "redirect.php?actie=list";</script>
+            <script type="text/javascript">const BASE_LIST_URL = "<xsl:value-of select="$BASELISTURL"/>";</script>
             <script src="js/gtb.js" type="text/javascript"></script>
                         
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
@@ -104,16 +109,21 @@
                         stylesheetLocation: "xslt/gtb.sef",
                         initialTemplate: "initialize",
                         stylesheetParams: {
-                             baseArticleURL: "http://gtb.inl.nl/iWDB/search?actie=article",
-                             baseArticleContentURL: "http://gtb.inl.nl/iWDB/search?actie=article_content",
-                             baseSearchURL: "../redirect.php?actie=results",
-                             XXXXXbaseSearchURL: "http://gtb.inl.nl/iWDB/search?actie=results"
+                             baseArticleURL: "<xsl:value-of select="$BASEARTICLEURL"/>",
+                             baseArticleContentURL: "<xsl:value-of select="$BASEARTICLECONTENTURL"/>",
+                             baseSearchURL: "<xsl:value-of select="$BASESEARCHURL"/>"
                         }
                     });
                 }
             </script>
             <xsl:apply-templates select="node()" mode="#current"/>
         </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="@ivdnt:versioninfo" mode="#all">
+        <xsl:if test="$VERSIONINFO ne ''">
+            <xsl:attribute name="title" select="'build info: ' || $VERSIONINFO"/>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="body" mode="ivdnt:html-mode">

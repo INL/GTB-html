@@ -20,8 +20,9 @@ rm "$TARGETDIR"/*.xml
 rm "$TARGETDIR"/xslt/*.xslt
 rm -Rf "$TARGETDIR"/*/notused
 
+VERSIONINFO=`git describe --tags`
 # Transform index.xml to index.html:
-$JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform "$SOURCEDIR"/index.xml "$WHEREAMI"/generate-gtb-html-files.xslt "$@" >"$TARGETDIR"/index.html
+$JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform "$SOURCEDIR"/index.xml "$WHEREAMI"/generate-gtb-html-files.xslt "$@" >"$TARGETDIR"/index.html "VERSIONINFO=$VERSIONINFO"
 
 # Compile Saxon-JS XSLT stylesheet"
 # ### This requires Saxon-EE. Therefore, compile the stylesheet in the source folder using Oxygen
