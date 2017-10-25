@@ -87,17 +87,67 @@
         <xsl:sequence select="$value"></xsl:sequence>
     </xsl:function>
     
+    <xsl:function name="ivdnt:is-text-or-select-field" as="xs:boolean">
+        <xsl:param name="input" as="element(input-or-select)"/>
+        <xsl:sequence select="exists($input[@type eq 'text' or @element eq 'select'])"/>
+    </xsl:function>
+    
+    <xsl:function name="ivdnt:is-wdb-field" as="xs:boolean">
+        <xsl:param name="input" as="element(input-or-select)"/>
+        <xsl:sequence select="exists($input[@type eq 'checkbox' and @data-inputname eq 'wdb'])"/>
+    </xsl:function>
+    
+    <xsl:function name="ivdnt:is-domein-field" as="xs:boolean">
+        <xsl:param name="input" as="element(input-or-select)"/>
+        <xsl:sequence select="exists($input[@type eq 'radio' and @data-inputname eq 'domein'])"/>
+    </xsl:function>
+    
     <xsl:function name="ivdnt:get-question-description"  as="node()+">
         <xsl:param name="inputs-and-selects-element" as="element(inputs-and-selects)"/>
-        <xsl:variable name="spans" as="element(span)+">
-            <xsl:apply-templates select="$inputs-and-selects-element/input-or-select[@data-humanname ne '']" mode="geschiedenis-lijst">
+        <xsl:variable name="textspans" as="element(span)*">
+            <xsl:apply-templates select="$inputs-and-selects-element/input-or-select[@data-humanname ne '' and ivdnt:is-text-or-select-field(.)]" mode="geschiedenis-lijst">
                 <xsl:sort data-type="number" select="ivdnt:input-or-select-sort-value(.)"></xsl:sort>
             </xsl:apply-templates>
         </xsl:variable>
-        <xsl:for-each select="$spans">
+        <xsl:variable name="wdbspans" as="element(span)*">
+            <xsl:apply-templates select="$inputs-and-selects-element/input-or-select[@data-humanname ne '' and ivdnt:is-wdb-field(.)]" mode="geschiedenis-lijst">
+                <xsl:sort data-type="number" select="ivdnt:input-or-select-sort-value(.)"></xsl:sort>
+            </xsl:apply-templates>
+        </xsl:variable>
+        <xsl:variable name="domeinspans" as="element(span)*">
+            <xsl:apply-templates select="$inputs-and-selects-element/input-or-select[@data-humanname ne '' and ivdnt:is-domein-field(.)]" mode="geschiedenis-lijst">
+                <xsl:sort data-type="number" select="ivdnt:input-or-select-sort-value(.)"></xsl:sort>
+            </xsl:apply-templates>
+        </xsl:variable>
+        <xsl:variable name="otherspans" as="element(span)*">
+            <xsl:apply-templates select="$inputs-and-selects-element/input-or-select[@data-humanname ne '' and not(ivdnt:is-text-or-select-field(.) or ivdnt:is-wdb-field(.) or ivdnt:is-domein-field(.))]" mode="geschiedenis-lijst">
+                <xsl:sort data-type="number" select="ivdnt:input-or-select-sort-value(.)"></xsl:sort>
+            </xsl:apply-templates>
+        </xsl:variable>
+        
+        <xsl:for-each select="$textspans">
             <xsl:copy-of select="."/>
             <xsl:if test="position() ne last()"><xsl:text>,&#32;</xsl:text></xsl:if>
         </xsl:for-each>
+        <xsl:text>; zoek in:&#32;</xsl:text>
+        <xsl:for-each select="$wdbspans">
+            <xsl:copy-of select="."/>
+            <xsl:if test="position() ne last()"><xsl:text>&#32;/&#32;</xsl:text></xsl:if>
+        </xsl:for-each>
+        <xsl:if test="exists($domeinspans)"><xsl:text>;&#32;</xsl:text>
+            <xsl:for-each select="$domeinspans">
+                <!-- Zolang domeinspans een radio is, itereert dit maar één keer. -->
+                <xsl:copy-of select="."/>
+                <xsl:if test="position() ne last()"><xsl:text>&#32;</xsl:text></xsl:if>
+            </xsl:for-each>
+        </xsl:if>
+        <xsl:if test="exists($otherspans)">
+            <xsl:text>;&#32;</xsl:text>
+            <xsl:for-each select="$otherspans">
+                <xsl:copy-of select="."/>
+                <xsl:if test="position() ne last()"><xsl:text>, &#32;</xsl:text></xsl:if>
+            </xsl:for-each>        </xsl:if>
+        
     </xsl:function>
     
     <xsl:template match="inputs-and-selects-list" mode="geschiedenis-lijst">
@@ -112,12 +162,16 @@
         </a>
     </xsl:template>
     
-    <xsl:template match="input-or-select[@type = ('radio', 'checkbox') and @checked='checked']" mode="geschiedenis-lijst">
-        <span>{@data-humanname}: <span class="gtb-input-value">ja</span></span>
+    <xsl:template match="input-or-select[@type = ('checkbox', 'radio') and @checked='checked']" mode="geschiedenis-lijst">
+        <xsl:choose>
+            <xsl:when test="ivdnt:is-wdb-field(.)"><span>{upper-case(@name)}</span></xsl:when>
+            <xsl:when test="ivdnt:is-domein-field(.)"><span>{@data-humanname}</span></xsl:when>
+            <xsl:otherwise><span>{@data-humanname}: <span class="gtb-input-value">ja t={@type} n={@name}</span></span></xsl:otherwise>
+        </xsl:choose>        
     </xsl:template>
     
     <xsl:template match="input-or-select[(@type eq 'text' or @element eq 'select') and @value ne '']" mode="geschiedenis-lijst">
-        <span>{@data-humanname}: <span class="gtb-input-value">{@value}</span></span>
+        <span>{@data-humanname} (<span class="gtb-input-value">{@value}</span>)</span>
     </xsl:template>
     
 </xsl:stylesheet>

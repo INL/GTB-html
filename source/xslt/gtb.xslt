@@ -341,7 +341,7 @@
                 </pre>-->
             </xsl:if>
             
-            <h4 class="gtb-zoekvraag-description">Zoekvraag: <xsl:copy-of select="ixsl:get(ixsl:page(), $CURRENT_QUESTION_DESCRIPTION_PROPERTY)"/></h4>
+            <h4 class="gtb-zoekvraag-description">Zoekvraag = <xsl:copy-of select="ixsl:get(ixsl:page(), $CURRENT_QUESTION_DESCRIPTION_PROPERTY)"/></h4>
             
             <xsl:apply-templates select="doc($url-for-content)" mode="render-results">
                 <xsl:with-param name="html" select="/html"/>
