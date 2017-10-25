@@ -9,10 +9,10 @@
     <xsl:output method="html" version="5.0" encoding="UTF-8"/>
     
     <xsl:param name="VERSIONINFO" as="xs:string" select="''"/>
-    <xsl:param name="BASEARTICLEURL" as="xs:string" select="'http://gtb.inl.nl/iWDB/search?actie=article'"/>
-    <xsl:param name="BASEARTICLECONTENTURL" as="xs:string" select="'http://gtb.inl.nl/iWDB/search?actie=article_content'"/>
-    <xsl:param name="BASESEARCHURL" as="xs:string" select="'../redirect.php?actie=results'"/>
-    <xsl:param name="BASELISTURL" as="xs:string" select="'redirect.php?actie=list'"/>
+    <xsl:param name="BASEARTICLEURL" as="xs:string" required="yes"/> <!-- for development use: "http://gtb.inl.nl/iWDB/search?actie=article", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=article" -->
+    <xsl:param name="BASEARTICLECONTENTURL" as="xs:string" required="yes"/> <!-- for development use: "http://gtb.inl.nl/iWDB/search?actie=article_content", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=article_content" -->
+    <xsl:param name="BASESEARCHURL" as="xs:string" required="yes"/> <!-- for development use: "../redirect.php?actie=results", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=results" -->
+    <xsl:param name="BASELISTURL" as="xs:string" required="yes"/> <!-- for development use: "redirect.php?actie=list", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=list" -->
     
     <xsl:include href="include.xslt"/>
     <xsl:include href="tabs.xslt"/>
@@ -67,7 +67,6 @@
     </xsl:template>
     
     <xsl:template match="html" mode="ivdnt:html-mode">
-        <xsl:message select="$VERSIONINFO"></xsl:message>
         <xsl:copy>
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:comment>

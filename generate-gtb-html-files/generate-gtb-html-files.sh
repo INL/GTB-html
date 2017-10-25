@@ -5,8 +5,13 @@ WHEREAMI=$(dirname $(realpath $0))
 
 PROJECTDIR=`dirname "$WHEREAMI"`
 
+if [ -z "$BASE_TARGET_DIR" ]
+then
+    BASE_TARGET_DIR=target
+fi
+
 SOURCEDIR=$PROJECTDIR/source
-TARGETDIR=$PROJECTDIR/target
+TARGETDIR=$PROJECTDIR/$BASE_TARGET_DIR
 
 if [ -d "$TARGETDIR" ]
 then
@@ -21,6 +26,7 @@ rm "$TARGETDIR"/xslt/*.xslt
 rm -Rf "$TARGETDIR"/*/notused
 
 VERSIONINFO=`git describe --tags`
+
 # Transform index.xml to index.html:
 $JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform "$SOURCEDIR"/index.xml "$WHEREAMI"/generate-gtb-html-files.xslt "$@" >"$TARGETDIR"/index.html "VERSIONINFO=$VERSIONINFO"
 
