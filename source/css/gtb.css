@@ -247,37 +247,33 @@ div.gtb-results b i{
     font-family: gtbbi, Verdana, sans-serif;
 }
 
-#gtb-result-table th {
-    text-align: left;
-}
-tr.gtb-result-row:hover {
-    /*  Dit werkt nog niet */
-    border-style: dotted;
-    border-color: blue;
-}
 td.conc {
 }
 .gtb-conc-line {
     white-space: nowrap;
-    display: block;
     clear: both;
 }
 .gtb-conc-voor {
     overflow: hidden;
     text-overflow: ellipsis;
+    display: inline-block;
     direction: rtl;
     width: 15em;
-    float:left;
+    vertical-align: top;
 }
 
 .gtb-conc-zoekwoord {
     font-weight: bold;
+    vertical-align: top;
+    display: inline-block;
 }
 
 .gtb-conc-na {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 15em;
+    display: inline-block;
+    vertical-align: top;
 }
 
 div.gtb-zoekvragen-geschiedenis {
@@ -295,9 +291,18 @@ div.gtb-zoekvragen-geschiedenis {
     font-weight: bold;
 }
 
+#gtb-result-table th {
+    text-align: left;
+}
+
 tr.gtb-result-row > td{
     height: 3em;
     vertical-align: top;
+}
+
+tr.gtb-result-row:hover{
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 tr.gtb-result-row:nth-child(even){
