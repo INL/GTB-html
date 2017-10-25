@@ -48,7 +48,7 @@
     
     <!-- This function is used in order to void the output of the result of a called Javascript function. We are working around possible optimizations.-->
     <xsl:function name="ivdnt:always-false" as="xs:boolean">
-        <xsl:sequence select="current-date() lt xs:date('2000-01-01')"/>
+        <xsl:sequence select="current-date() lt xs:date('1957-11-05')"/>
     </xsl:function>
     
     <xsl:function name="ivdnt:class-contains" as="xs:boolean">

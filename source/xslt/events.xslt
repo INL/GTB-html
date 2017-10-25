@@ -164,11 +164,20 @@
         
         <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content() || '&amp;uitvoer=' || $value-of-format-input"/>
         
-        <xsl:call-template name="ivdnt:export-result">
-            <xsl:with-param name="url-for-content" select="$url-for-content"/>
-            <xsl:with-param name="client-filename" select="'gtb-export.' || $value-of-format-input"/>
-            <xsl:with-param name="mimetype" select="'text/' || $value-of-format-input"/>
-        </xsl:call-template>
+        <xsl:choose>
+            <xsl:when test="$value-of-format-input eq 'html'">
+                <xsl:call-template name="ivdnt:print-result">
+                    <xsl:with-param name="url-for-content" select="$url-for-content"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="ivdnt:export-result">
+                    <xsl:with-param name="url-for-content" select="$url-for-content"/>
+                    <xsl:with-param name="client-filename" select="'gtb-export.' || $value-of-format-input"/>
+                    <xsl:with-param name="mimetype" select="'text/' || $value-of-format-input"/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="button[@name eq 'geschiedenis']" mode="ixsl:onclick">
