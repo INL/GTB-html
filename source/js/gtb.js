@@ -17,6 +17,12 @@ $(document).ready(function init() {
         return "wdb=" + encodeURIComponent(wdbArray.join(",")) + "&sensitive=" + isSensitive;
     }
     
+    function stripSpans(str) {
+        str = str.replace(/<span class="gtb-typeahead-word">([^<]*)<\/span>/, "$1");
+        str = str.replace(/<span class="gtb-typeahead-wdb">[^<]*<\/span>/, "");
+        return str;
+    }
+    
     var typeaheads = $('.typeahead');
     typeaheads.each(function (index) {
         var htmlObject = this;
@@ -89,8 +95,8 @@ $(document).ready(function init() {
                     if (! newVal) {
                         newVal = '';
                     }
-                    // Delete all from newVal except the content of the first <span>
-                    newVal = newVal.replace(/^<span[^>]*>([^<]*)<.*$/, "$1");
+                    // Delete all from newVal except the content of the spans containing the words:
+                    newVal = stripSpans(newVal);
 
                     this.$element.val(this.displayText(newVal) || newVal).text(this.displayText(newVal) || newVal).change();
                     this.afterSelect(newVal);
