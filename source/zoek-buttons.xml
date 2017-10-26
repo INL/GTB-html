@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-    <div class="col-md-2"><button class="btn btn-primary" name="start-zoeken" type="submit">Zoek</button></div>
-    <div class="col-md-2"><button class="btn btn-secondary"  name="wis-zoeken">Wis</button></div>
     <div class="col-md-2">
         <!--<button class="btn btn-secondary"  name="xxx">Geschiedenis</button>-->
         <ivdnt:modal type="geschiedenis" suppress-ok-button="true" style="width: 70vw">
@@ -21,5 +19,7 @@
             </ivdnt:modalcontent>
         </ivdnt:modal>
     </div>
+    <div class="col-md-2"><button class="btn btn-secondary"  name="wis-zoeken">Wis</button></div>
+    <div class="col-md-2"><button class="btn btn-primary gtb-zoek-button" name="start-zoeken" type="submit">Zoek</button></div>
     <div class="col-md-2 gtbcheckbox"><label class="form-group">Letters exact <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive" class="checkbox-inline"/></label></div>
 </div>

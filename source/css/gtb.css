@@ -153,6 +153,11 @@ td.speciaalteken:active{
    margin-bottom: 1em; 
 }
 
+.gtb-zoek-button {
+    float: right;
+    margin-right: -0.5em; /*  gokje */
+}
+
 /* We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.  */
 .gtb-hidden{
     display: none;
