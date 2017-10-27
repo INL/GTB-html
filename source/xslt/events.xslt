@@ -253,8 +253,6 @@
         <xsl:variable name="textbox" as="element(input)" select="../input[@type eq 'text']"/>
         <xsl:sequence select="ixsl:call($textbox, 'focus', [])[ivdnt:always-false()]"/>
         
-        <xsl:message>$special-chars-visible = {$special-chars-visible}, $same-img-clicked = {$same-img-clicked}</xsl:message>
-        
         <xsl:for-each select="$parentdiv//tr[ivdnt:class-contains(@class, 'collapse')]">
             <xsl:choose>
                 <xsl:when test="$special-chars-visible and $same-img-clicked">
