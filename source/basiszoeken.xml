@@ -5,7 +5,7 @@
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
-        <!--<ivdnt:formulierlabel>Speciale tekens (klik om ze in te voeren)<br/><label class="form-group"><input name="toon-tekens" type="checkbox" class="gtbcheckbox"/>Toon alle tekens</label></ivdnt:formulierlabel>-->
+        <ivdnt:formulierlabel/>
         <ivdnt:formulierinput>
             <ivdnt:include href="specialetekens.xml"/>
         </ivdnt:formulierinput>
