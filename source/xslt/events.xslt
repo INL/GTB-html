@@ -241,13 +241,23 @@
     <xsl:template match="img[ivdnt:class-contains(@class, 'gtb-tekens-icon')]" mode="ixsl:onclick">
         <xsl:variable name="parentdiv" select="ancestor::div[ivdnt:class-contains(@class, 'zoek-formulier')]//div[ivdnt:class-contains(@class, 'speciaalteken')][1]" as="element(div)"/>
         <xsl:variable name="special-chars-visible" as="xs:boolean" select="exists($parentdiv//tr[ivdnt:class-contains(@class, 'collapse') and ivdnt:class-contains(@class, 'in')])"/>
+        
+        <xsl:variable name="img-id" select="@id"/>
+        <xsl:variable name="same-img-clicked" as="xs:boolean" select="exists($parentdiv[@data-clicked-img-id eq $img-id])"/>
+        
+        <!-- Save the id of the img in the parentdiv sothat we know which image was clicked. If the same image is clicked a second time, we hide the special chars. -->
+        <!-- The for-each merely sets the context; no iteration occurs. -->
+        <xsl:for-each select="$parentdiv"><ixsl:set-attribute name="data-clicked-img-id" select="$img-id"/></xsl:for-each>
+        
         <!-- Set focus and show the caret. The predicate below with ivdnt:always-false() makes that the result of ixsl:call() is not put into the result. -->
         <xsl:variable name="textbox" as="element(input)" select="../input[@type eq 'text']"/>
         <xsl:sequence select="ixsl:call($textbox, 'focus', [])[ivdnt:always-false()]"/>
         
+        <xsl:message>$special-chars-visible = {$special-chars-visible}, $same-img-clicked = {$same-img-clicked}</xsl:message>
+        
         <xsl:for-each select="$parentdiv//tr[ivdnt:class-contains(@class, 'collapse')]">
             <xsl:choose>
-                <xsl:when test="$special-chars-visible">
+                <xsl:when test="$special-chars-visible and $same-img-clicked">
                     <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'in', 'out')"/>
                 </xsl:when>
                 <xsl:otherwise>

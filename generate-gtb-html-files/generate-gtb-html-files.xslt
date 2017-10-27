@@ -178,7 +178,7 @@
             <xsl:attribute name="data-label" select="ancestor::ivdnt:formulierregel[1]/ivdnt:formulierlabel"/>
             <xsl:apply-templates select="node()" mode="#current"/>
             <xsl:if test="not(../ivdnt:modal)">
-                <img class="gtb-tekens-icon" src="keyboard.png" alt="Icoon met bijzondere tekens" title="Klik om speciale tekens in te voeren"/>
+                <img class="gtb-tekens-icon" src="keyboard.png" alt="Icoon met bijzondere tekens" title="Klik om speciale tekens in te voeren" id="{generate-id()}"/>
             </xsl:if>
         </xsl:copy>
     </xsl:template>
