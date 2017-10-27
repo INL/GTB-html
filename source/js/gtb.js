@@ -17,10 +17,25 @@ $(document).ready(function init() {
         return "wdb=" + encodeURIComponent(wdbArray.join(",")) + "&sensitive=" + isSensitive;
     }
     
+    function getSubmitButton(htmlObject) {
+        var tabDiv = $(htmlObject).closest(".tab-pane");
+        return $(tabDiv).find("button[type=submit]");
+    }
+    
     function stripSpans(str) {
         str = str.replace(/<span class="gtb-typeahead-word">([^<]*)<\/span>/, "$1");
         str = str.replace(/<span class="gtb-typeahead-wdb">[^<]*<\/span>/, "");
         return str;
+    }
+    
+    var originalKeyUp = $.fn.typeahead.Constructor.prototype.keyup;
+    $.fn.typeahead. Constructor.prototype.keyup = function (event) {
+        if (event.which == 13) {
+            this.select(event);
+        } else {
+            return originalKeyUp.apply(this, arguments);
+        }
+        return originalKeyUp.apply(this, arguments);
     }
     
     var typeaheads = $('.typeahead');
@@ -70,8 +85,8 @@ $(document).ready(function init() {
             // Numbers of items to show (we show all items)
             items: "all",
             
-            // Don't select the first suggestion
-            autoSelect: false,
+            // Select the first suggestion
+            autoSelect: true,
             
             // 300ms delay between lookups
             // (disabled, makes Enter act weird (select previous selection instead of execute search)
@@ -85,7 +100,7 @@ $(document).ready(function init() {
             },
             
             // When an item is selected, we just take the word, not the wdbs.
-            select: function () {
+            select: function (event) {
                 var val = this.$menu.find('.active').data('value');
                 this.$element.data('active', val);
                 if (this.autoSelect || val) {
@@ -97,17 +112,23 @@ $(document).ready(function init() {
                     }
                     // Delete all from newVal except the content of the spans containing the words:
                     newVal = stripSpans(newVal);
-
+                    
                     this.$element.val(this.displayText(newVal) || newVal).text(this.displayText(newVal) || newVal).change();
                     this.afterSelect(newVal);
+                    
+                    if (arguments.length > 0) {
+                        // event was passed, only our modifid keyup function passes the event
+                        if (event.type === "keyup") {
+                            getSubmitButton(htmlObject).trigger('click');
+                        }
+                    }
                 }
                 return this.hide();
             },
             
             // What to do after a word is selected.
-            afterSelect: function () {
+            afterSelect: function (val) {
                 that.find(".dropdown-menu").scrollTop(0);
-                //ANW.SEARCH.SIMPLE.perform();
             }
         });
     })
