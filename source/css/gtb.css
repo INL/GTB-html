@@ -95,6 +95,12 @@ body {
     }
 }
 
+.gtb-tekens-icon {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
 .gtb-tekstveld, .gtb-selectveld{
     width: 75%;
     font-family: gtb, Verdana, sans-serif;
@@ -106,8 +112,9 @@ body {
     display: inline;
 }
 
-.woordsoortassistentieknop{
-    width: 20%; /*  25% is teveel, bij 24% geen wrap. Lager lijkt veiliger. */
+input.woordsoortassistentieknop{
+    width: 10%;
+    height: 10%;
 }
 
 table.speciaalteken,

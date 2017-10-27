@@ -5,7 +5,7 @@
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
-        <ivdnt:formulierlabel>Speciale tekens (klik om ze in te voeren)<br/><label class="form-group"><input name="toon-tekens" type="checkbox" class="gtbcheckbox"/>Toon alle tekens</label></ivdnt:formulierlabel>
+        <!--<ivdnt:formulierlabel>Speciale tekens (klik om ze in te voeren)<br/><label class="form-group"><input name="toon-tekens" type="checkbox" class="gtbcheckbox"/>Toon alle tekens</label></ivdnt:formulierlabel>-->
         <ivdnt:formulierinput>
             <ivdnt:include href="specialetekens.xml"/>
         </ivdnt:formulierinput>
@@ -30,7 +30,7 @@
         <ivdnt:formulierinput>
             <input type="text" name="lemwrdsrt" data-modal-target-id="basiszoeken.lemwrdsrt" class="form-control gtb-woordsoortveld" data-humanname="woordsoort"/>
             <ivdnt:modal type="woordsoortzoeken" target-input="basiszoeken.lemwrdsrt">
-                <ivdnt:modaltrigger><button type="button" class="woordsoortassistentieknop btn btn-secondary">Assistentie...</button></ivdnt:modaltrigger>
+                <ivdnt:modaltrigger><input type="image" class="woordsoortassistentieknop btn btn-secondary" src="toverstaf.png" alt="Icon met toverstaf" title="Klik voor hulp bij het invoeren van de woordsoort"/></ivdnt:modaltrigger>
                 <ivdnt:modalcontent>
                     <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
                     <ivdnt:include href="woordsoortassistentie.xml"/>
