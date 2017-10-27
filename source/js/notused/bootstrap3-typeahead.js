@@ -57,6 +57,8 @@
     this.render = this.options.render || this.render;
     this.updater = this.options.updater || this.updater;
     this.displayText = this.options.displayText || this.displayText;
+    this.itemLink = this.options.itemLink || this.itemLink;
+    this.followLinkOnSelect = this.options.followLinkOnSelect || this.followLinkOnSelect;
     this.source = this.options.source;
     this.delay = this.options.delay;
     this.$menu = $(this.options.menu);
@@ -66,17 +68,20 @@
     this.listen();
     this.showHintOnFocus = typeof this.options.showHintOnFocus == 'boolean' || this.options.showHintOnFocus === "all" ? this.options.showHintOnFocus : false;
     this.afterSelect = this.options.afterSelect;
+    this.afterEmptySelect = this.options.afterEmptySelect;
     this.addItem = false;
     this.value = this.$element.val() || this.$element.text();
     this.keyPressed = false;
+    this.focused = this.$element.is( ":focus" );
   };
 
   Typeahead.prototype = {
 
     constructor: Typeahead,
 
-    select: function () {
-      var val = this.$menu.find('.active').data('value');
+
+    setDefault: function (val) {
+      // var val = this.$menu.find('.active').data('value');
       this.$element.data('active', val);
       if (this.autoSelect || val) {
         var newVal = this.updater(val);
@@ -92,6 +97,37 @@
         this.afterSelect(newVal);
       }
       return this.hide();
+    },
+
+    select: function () {
+        var val = this.$menu.find('.active').data('value');
+
+        this.$element.data('active', val);
+        if (this.autoSelect || val) {
+            var newVal = this.updater(val);
+            // Updater can be set to any random functions via "options" parameter in constructor above.
+            // Add null check for cases when updater returns void or undefined.
+            if (!newVal) {
+              newVal = '';
+            }
+            this.$element
+              .val(this.displayText(newVal) || newVal)
+              .text(this.displayText(newVal) || newVal)
+              .change();
+            this.afterSelect(newVal);
+            if(this.followLinkOnSelect && this.itemLink(val)) {
+                document.location = this.itemLink(val);
+                this.afterSelect(newVal);
+            } else if(this.followLinkOnSelect && !this.itemLink(val)) {
+                this.afterEmptySelect(newVal);
+            } else {
+                this.afterSelect(newVal);
+            }
+        } else {
+            this.afterEmptySelect(newVal);
+        }
+
+        return this.hide();
     },
 
     updater: function (item) {
@@ -159,7 +195,7 @@
       if (typeof(query) != 'undefined' && query !== null) {
         this.query = query;
       } else {
-        this.query = this.$element.val() || this.$element.text() || '';
+        this.query = this.$element.val();
       }
 
       if (this.query.length < this.options.minLength && !this.options.showHintOnFocus) {
@@ -311,6 +347,9 @@
         var text = self.displayText(item);
         i = $(that.options.item).data('value', item);
         i.find('a').html(that.highlighter(text, item));
+        if(this.followLinkOnSelect) {
+            i.find('a').attr('href', self.itemLink(item));
+        }
         if (text == self.$element.val()) {
           i.addClass('active');
           self.$element.data('active', item);
@@ -331,6 +370,10 @@
       return typeof item !== 'undefined' && typeof item.name != 'undefined' ? item.name : item;
     },
 
+    itemLink: function (item) {
+      return null;
+    },
+
     next: function (event) {
       var active = this.$menu.find('.active').removeClass('active');
       var next = active.next();
@@ -341,7 +384,8 @@
 
       next.addClass('active');
       // added for screen reader
-      this.$element.val(next.text());
+      var newVal = this.updater(next.data('value'));
+      this.$element.val(this.displayText(newVal) || newVal);
     },
 
     prev: function (event) {
@@ -354,7 +398,8 @@
 
       prev.addClass('active');
       // added for screen reader
-      this.$element.val(prev.text());
+      var newVal = this.updater(prev.data('value'));
+      this.$element.val(this.displayText(newVal) || newVal);
     },
 
     listen: function () {
@@ -369,11 +414,17 @@
         this.$element.on('keydown', $.proxy(this.keydown, this));
       }
 
-      this.$menu
-        .on('click', $.proxy(this.click, this))
-        .on('mouseenter', 'li', $.proxy(this.mouseenter, this))
-        .on('mouseleave', 'li', $.proxy(this.mouseleave, this))
-        .on('mousedown', $.proxy(this.mousedown,this));
+      if ('ontouchstart' in document.documentElement) {
+        this.$menu
+          .on('touchstart', 'li', $.proxy(this.touchstart, this))
+          .on('touchend', 'li', $.proxy(this.click, this));
+      } else {
+        this.$menu
+          .on('click', $.proxy(this.click, this))
+          .on('mouseenter', 'li', $.proxy(this.mouseenter, this))
+          .on('mouseleave', 'li', $.proxy(this.mouseleave, this))
+          .on('mousedown', $.proxy(this.mousedown,this));
+      }
     },
 
     destroy : function () {
@@ -502,6 +553,7 @@
 
     blur: function (e) {
       if (!this.mousedover && !this.mouseddown && this.shown) {
+        this.select();
         this.hide();
         this.focused = false;
         this.keyPressed = false;
@@ -542,6 +594,18 @@
         // IE won't fire this, but FF and Chrome will so we reset our flag for them here
         this.mouseddown = false;
       }.bind(this));
+    },
+
+    touchstart: function (e) {
+      e.preventDefault();
+      this.$menu.find('.active').removeClass('active');
+      $(e.currentTarget).addClass('active');
+    },
+
+    touchend: function (e) {
+      e.preventDefault();
+      this.select();
+      this.$element.focus();
     }
 
   };
@@ -581,7 +645,9 @@
     scrollHeight: 0,
     autoSelect: true,
     afterSelect: $.noop,
+    afterEmptySelect: $.noop,
     addItem: false,
+    followLinkOnSelect: false,
     delay: 0,
     separator: 'category',
     headerHtml: '<li class="dropdown-header"></li>',
