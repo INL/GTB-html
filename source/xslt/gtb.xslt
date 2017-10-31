@@ -437,7 +437,6 @@
     
     <xsl:template name="ivdnt:doe-zoeken">
         <xsl:param name="formdiv" as="element(div)" required="yes"/>
-        
         <xsl:variable name="formdiv-id" as="xs:string" select="$formdiv/@id"/>
         <xsl:variable name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-formdiv-inputs-and-selects(/html/body, $formdiv-id)"/>
         <xsl:variable name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($formdiv-inputs-and-selects)"/>
