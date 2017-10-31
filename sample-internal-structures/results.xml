@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results>
+<statistics>
+<stat item='Totaal gevonden' count='14' hits='16' />
+<stat item='VMNW' count='2' hits='2' />
+<stat item='WFT' count='2' hits='2' />
+<stat item='ONW' count='3' hits='4' />
+<stat item='WNT' count='5' hits='6' />
+<stat item='MNW' count='2' hits='2' />
+</statistics>
+<result Wdb="ONW" id="ID5508" Lemma="hundo ?" Homoniemnr="" Modern_lemma="HOND (III)" Woordsoort="znw." Betekenis="Jachthond." line="1" hits='0'>
+</result>
+<result Wdb="ONW" id="ID2555" Lemma="hunt" Homoniemnr="I" Modern_lemma="hond, Hond" Woordsoort="znw.  m." Betekenis="Hond." line="2" hits='0'>
+</result>
+<result Wdb="ONW" id="ID5036" Lemma="hunt" Homoniemnr="II" Modern_lemma="hond" Woordsoort="znw." Betekenis="Honderd; honderdtal. &lt;note TEIform=&quot;note&quot; anchored=&quot;yes&quot; place=&quot;unspecified&quot; type=&quot;def&quot;&gt;Deze betekenis is in het Oudnederlands alleen in de Lex Salica aangetroffen. Zie het Lex Salica-artikel hieronder.&lt;/note&gt;" line="3" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID38192" Lemma="HONT" Homoniemnr="I" Modern_lemma="hond" Woordsoort="znw.m." Betekenis="hond; Hond" line="4" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID72303" Lemma="HONT" Homoniemnr="II" Modern_lemma="hond" Woordsoort="znw.o." Betekenis="hond (bep. landmaat)" line="5" hits='0'>
+</result>
+<result Wdb="MNW" id="17877" Lemma="HONT" Homoniemnr="I" Modern_lemma="hond" Woordsoort="znw(o.) " Betekenis=" Als benaming van eene lantmaat; mlat. &lt;i&gt;hondus&lt;/i&gt;; mnd. &lt;i&gt;hunt&lt;/i&gt;. Vgl. &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;17810&quot;&gt;hondert&lt;/ref&gt;, 2)&lt;/xr&gt;. Het &lt;rf&gt;hont&lt;/rf&gt; is een onderdeel van het morgen, doch de grootte is op verschillende plaatsen niet dezelfde. In het Mnd. is het &lt;i&gt;hont&lt;/i&gt; gelijk aan &lt;formula notation=&quot;mathml&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;1&lt;/mi&gt;&lt;mi&gt;6&lt;/mi&gt;&lt;/mfrac&gt;&lt;/formula&gt; morgen; in het Mnl. is een &lt;rf&gt;hont&lt;/rf&gt; nu eens &lt;formula notation=&quot;mathml&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;1&lt;/mi&gt;&lt;mi&gt;4&lt;/mi&gt;&lt;/mfrac&gt;&lt;/formula&gt;, dan eens &lt;formula notation=&quot;mathml&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;1&lt;/mi&gt;&lt;mi&gt;5&lt;/mi&gt;&lt;/mfrac&gt;&lt;/formula&gt;, elders &lt;formula notation=&quot;mathml&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;1&lt;/mi&gt;&lt;mi&gt;6&lt;/mi&gt;&lt;/mfrac&gt;&lt;/formula&gt; morgen groot. Zie b. v. &lt;bibl&gt;&lt;idno n=&quot;s0911_sub002&quot;&gt;&lt;/idno&gt;&lt;src&gt;Mieris&lt;/src&gt; 3, 455&lt;i&gt;a&lt;/i&gt;,&lt;/bibl&gt; waar “17&lt;formula notation=&quot;mathml&quot;&gt;&lt;mfrac&gt;&lt;mi&gt;1&lt;/mi&gt;&lt;mi&gt;2&lt;/mi&gt;&lt;/mfrac&gt;&lt;/formula&gt; mergen” gelijk gesteld worden met “17 mergen ende twee hont”, alsmede  De benaming zal wel oorspronkelijk beteekend hebben: “honderd van eene zekere maat (b. v. voeten)”. Doch dat die oorspronkelijke bet. op den achtergrond kon geraken en vergeten worden, zie men bij &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;17810&quot;&gt;hondert&lt;/ref&gt;&lt;/xr&gt;. " line="6" hits='0'>
+</result>
+<result Wdb="MNW" id="17878" Lemma="HONT" Homoniemnr="II" Modern_lemma="hond" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Hond&lt;/i&gt;, het bekende huisdier. " line="7" hits='0'>
+</result>
+<result Wdb="WNT" id="M026245" Lemma="HOND" Homoniemnr="I" Modern_lemma="hond, Hond" Woordsoort="znw.(m.)" Betekenis=" Een welbekend viervoetig (huis)dier, bij uitstek leerzaam en zich zeer bijzonder hechtende aan den mensch (trouw); in de wetenschap &lt;I&gt;Canis familiaris.&lt;/I&gt; Het wordt, in zijne vele verscheidenheden (rassen), gehouden tot gezelschap; als bewaker van erven, huizen en schepen; als hulp bij het hoeden van (schaaps)kudden en op de jacht; als trekdier; enz. Voor de afzonderlijke geslachten bezigt men bijzondere namen: &lt;I&gt;reu&lt;/I&gt; of &lt;I&gt;rekel&lt;/I&gt; en &lt;I&gt;teef&lt;/I&gt; (verg. ook &lt;I&gt;hondin&lt;/I&gt;); de jongen heeten (&lt;I&gt;welp&lt;/I&gt; of) &lt;I&gt;jong.&lt;/I&gt;" line="8" hits='0'>
+</result>
+<result Wdb="WNT" id="M026245.re.7" Subentry="true" Lemma="hond" Homoniemnr="" Modern_lemma="hond " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder HOND I]&lt;/i&gt;" line="9" hits='0'>
+</result>
+<result Wdb="WNT" id="M026246" Lemma="HOND" Homoniemnr="II" Modern_lemma="hond" Woordsoort="znw.(o.)" Betekenis=" De nog gebruikelijke naam eener, niet in alle streken even groote vlaktemaat, doch gemeenlijk de naam voor (het zesde deel van een Rijnlandsch morgen): honderd vierkante roeden. Zie gelijkbet. &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;M026266&quot;&gt;HONDERD&lt;/ref&gt;&lt;/xr&gt; (II). " line="10" hits='0'>
+</result>
+<result Wdb="WNT" id="M026245.re.11" Subentry="true" Lemma="honde(n)" Homoniemnr="" Modern_lemma="hond " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder HOND I]&lt;/i&gt;" line="11" hits='0'>
+</result>
+<result Wdb="WNT" id="M029726.re.38" Subentry="true" Lemma="Hondenkammen" Homoniemnr="" Modern_lemma="hond~kammen " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KAM I]&lt;/i&gt;" line="12" hits='0'>
+</result>
+<result Wdb="WFT" id="41293" Lemma="hont" Homoniemnr="I" Modern_lemma="&lt;orth&gt;hond&lt;/orth&gt;" Woordsoort="znw. m./v." Betekenis="Stoere, stevige vent." line="13" hits='0'>
+</result>
+<result Wdb="WFT" id="41813" Lemma="hûn" Homoniemnr="" Modern_lemma="&lt;orth&gt;hond&lt;/orth&gt;" Woordsoort="znw. m./v." Betekenis="Hond." line="14" hits='0'>
+</result>
+</results>
