@@ -95,10 +95,13 @@ body {
     }
 }
 
-.gtb-tekens-icon {
+.gtb-keyboard-icon {
     margin-left: 0.5em;
     margin-bottom: 0.5em;
     cursor: pointer;
+    /*  TODO better icon, without scaling */
+    width: 110%;
+    height: 110%;
 }
 
 .gtb-tekstveld, .gtb-selectveld{
@@ -149,10 +152,10 @@ td.speciaalteken:active{
 }
 
 .gtbcheckbox, .gtbradio{
-    border-radius: 3px;
+    /*border-radius: 3px;
     border-style: solid;
     border-color: black;
-    border-width: 1px;
+    border-width: 1px;*/
 }
 
 .gtb-resultaatknoppen {
@@ -163,6 +166,7 @@ td.speciaalteken:active{
 .gtb-zoek-button {
     float: right;
     margin-right: -0.5em; /*  gokje */
+    margin-left: 2em;
 }
 
 /* We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.  */
