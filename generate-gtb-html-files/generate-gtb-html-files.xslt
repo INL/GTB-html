@@ -14,6 +14,9 @@
     <xsl:param name="BASESEARCHURL" as="xs:string" required="yes"/> <!-- for development use: "../redirect.php?actie=results", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=results" -->
     <xsl:param name="BASELISTURL" as="xs:string" required="yes"/> <!-- for development use: "redirect.php?actie=list", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=list" -->
     
+    <!-- Space-separated dictionary abbreviations. Default is all dictionaries. -->
+    <xsl:param name="SELECTED_SOURCES" select="'onw vmnw mnw wnt wft'"/>
+    
     <xsl:include href="include.xslt"/>
     <xsl:include href="tabs.xslt"/>
     <xsl:include href="modal.xslt"/>
@@ -24,6 +27,8 @@
     <xsl:variable name="bronselector-column-class" as="xs:string" select="'col-md-2'"/>
     
     <xsl:variable name="aantal-speciaal-teken-kolommen" as="xs:integer" select="13"/>
+    
+    <xsl:variable name="selected_sources_sequence" as="xs:string*" select="tokenize($SELECTED_SOURCES, '\s+')"/>
         
     <xsl:function name="ivdnt:class-contains" as="xs:boolean">
         <xsl:param name="class" as="attribute(class)?"/>
@@ -201,11 +206,51 @@
         <div class="{$zoekformulier-input-column-class}">
             <div class="formulierinput">
                 <div class="row">
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Oudnederlands Woordenboek">ONW <input id="{ivdnt:generate-input-id(.)}.onw" checked="checked" data-inputname="wdb" data-humanname="zoek in ONW" type="checkbox" name="onw{@suffix}" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Vroegmiddelnederlands Woordenboek">VMNW <input id="{ivdnt:generate-input-id(.)}.vmnw" checked="checked" data-inputname="wdb" data-humanname="zoek in VMNW" type="checkbox" name="vmnw{@suffix}" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Middelnederlandsch Woordenboek">MNW <input id="{ivdnt:generate-input-id(.)}.mnw" checked="checked" data-inputname="wdb" data-humanname="zoek in MNW" type="checkbox" name="mnw{@suffix}" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Nederlandsche Taal">WNT <input id="{ivdnt:generate-input-id(.)}.wnt" checked="checked" data-inputname="wdb" data-humanname="zoek in WNT"  type="checkbox" name="wnt{@suffix}" class="checkbox-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbcheckbox"><label title="Woordenboek der Friese taal">WFT <input id="{ivdnt:generate-input-id(.)}.wft" checked="checked" data-inputname="wdb" data-humanname="zoek in WFT" type="checkbox" name="wft{@suffix}" class="checkbox-inline"/></label></div>
+                    <div class="{$bronselector-column-class} gtbcheckbox">
+                        <label title="Oudnederlands Woordenboek">ONW
+                            <input id="{ivdnt:generate-input-id(.)}.onw" data-inputname="wdb" data-humanname="zoek in ONW" type="checkbox" name="onw{@suffix}" class="checkbox-inline">
+                                <xsl:if test="'onw' = $selected_sources_sequence">
+                                    <xsl:attribute name="checked">checked</xsl:attribute>
+                                </xsl:if>
+                            </input>
+                        </label>
+                    </div>
+                    <div class="{$bronselector-column-class} gtbcheckbox">
+                        <label title="Vroegmiddelnederlands Woordenboek">VMNW
+                            <input id="{ivdnt:generate-input-id(.)}.vmnw" data-inputname="wdb" data-humanname="zoek in VMNW" type="checkbox" name="vmnw{@suffix}" class="checkbox-inline">
+                                <xsl:if test="'vmnw' = $selected_sources_sequence">
+                                    <xsl:attribute name="checked">checked</xsl:attribute>
+                                </xsl:if>
+                            </input>
+                        </label>
+                    </div>
+                    <div class="{$bronselector-column-class} gtbcheckbox">
+                        <label title="Middelnederlandsch Woordenboek">MNW
+                            <input id="{ivdnt:generate-input-id(.)}.mnw" data-inputname="wdb" data-humanname="zoek in MNW" type="checkbox" name="mnw{@suffix}" class="checkbox-inline">
+                                <xsl:if test="'mnw' = $selected_sources_sequence">
+                                    <xsl:attribute name="checked">checked</xsl:attribute>
+                                </xsl:if>
+                            </input>
+                        </label>
+                    </div>
+                    <div class="{$bronselector-column-class} gtbcheckbox">
+                        <label title="Woordenboek der Nederlandsche Taal">WNT
+                            <input id="{ivdnt:generate-input-id(.)}.wnt" data-inputname="wdb" data-humanname="zoek in WNT" type="checkbox" name="wnt{@suffix}" class="checkbox-inline">
+                                <xsl:if test="'wnt' = $selected_sources_sequence">
+                                    <xsl:attribute name="checked">checked</xsl:attribute>
+                                </xsl:if>
+                            </input>
+                        </label>
+                    </div>
+                    <div class="{$bronselector-column-class} gtbcheckbox">
+                        <label title="Woordenboek der Friese taal">WFT
+                            <input id="{ivdnt:generate-input-id(.)}.wft" data-inputname="wdb" data-humanname="zoek in WFT" type="checkbox" name="wft{@suffix}" class="checkbox-inline">
+                                <xsl:if test="'wft' = $selected_sources_sequence">
+                                    <xsl:attribute name="checked">checked</xsl:attribute>
+                                </xsl:if>
+                            </input>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
