@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results>
+<statistics>
+<stat item='Totaal gevonden' count='1438' hits='1456' />
+<stat item='VMNW' count='45' hits='45' />
+<stat item='WFT' count='125' hits='125' />
+<stat item='ONW' count='5' hits='6' />
+<stat item='WNT' count='1160' hits='1173' />
+<stat item='MNW' count='103' hits='107' />
+</statistics>
+<result Wdb="ONW" id="ID2743" Lemma="kuo" Homoniemnr="" Modern_lemma="koe" Woordsoort="znw.  v." Betekenis="Koe, vrouwelijk rund." line="1" hits='0'>
+</result>
+<result Wdb="ONW" id="ID2750" Lemma="kuokalīn" Homoniemnr="" Modern_lemma="koekelijn" Woordsoort="znw.  o." Betekenis="Koekelin; kleine koek, koekje. &lt;note TEIform=&quot;note&quot; anchored=&quot;yes&quot; place=&quot;unspecified&quot; type=&quot;def&quot;&gt;In het Oudnederlands alleen als toenaam aangetroffen, mogelijk de beroepsbijnaam voor een koekenbakker, vgl. Tavernier 1968: 243-244.&lt;/note&gt;" line="2" hits='0'>
+</result>
+<result Wdb="ONW" id="ID2744" Lemma="kuolant" Homoniemnr="" Modern_lemma="koeland, Koeland" Woordsoort="znw.  o." Betekenis="Weiland, grasland voor het weiden van koeien." line="3" hits='0'>
+</result>
+<result Wdb="ONW" id="ID2745" Lemma="kuolitha" Homoniemnr="" Modern_lemma="koelte" Woordsoort="znw.  v." Betekenis="Koelte." line="4" hits='0'>
+</result>
+<result Wdb="ONW" id="ID2746" Lemma="kuosmero" Homoniemnr="" Modern_lemma="koesmeer" Woordsoort="znw.  o." Betekenis="Boter." line="5" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID37961" Lemma="COCKENBEKE" Homoniemnr="" Modern_lemma="Koekenbeek" Woordsoort="znw.v." Betekenis="Koekenbeek" line="6" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID98082" Lemma="COE" Homoniemnr="" Modern_lemma="koe" Woordsoort="znw.v." Betekenis="koe; beeld van een koe; Koe" line="7" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID10240" Lemma="COEBRUCGHE" Homoniemnr="" Modern_lemma="Koebrug" Woordsoort="znw.v." Betekenis="Koebrug" line="8" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID95922" Lemma="COEC" Homoniemnr="" Modern_lemma="Koeke" Woordsoort="znw.m./o." Betekenis="Koeke" line="9" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID2176" Lemma="COECOECSLOOC" Homoniemnr="" Modern_lemma="koekoekslook" Woordsoort="znw.o." Betekenis="koekoekslook" line="10" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID10242" Lemma="COEDINSTUC" Homoniemnr="" Modern_lemma="Koedijnsstuk" Woordsoort="znw.o." Betekenis="Koedinstuk" line="11" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID26891" Lemma="COEHURE" Homoniemnr="" Modern_lemma="koehuur" Woordsoort="znw.v." Betekenis="koehuur" line="12" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID49891" Lemma="COEKE" Homoniemnr="" Modern_lemma="Koeke" Woordsoort="znw." Betekenis="Koeke" line="13" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID10262" Lemma="COEKEBITERE" Homoniemnr="" Modern_lemma="Koekbijter" Woordsoort="znw.m." Betekenis="Koekbijter" line="14" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID62861" Lemma="COEKELARE" Homoniemnr="" Modern_lemma="Koekelare" Woordsoort="znw." Betekenis="Koekelare" line="15" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID80903" Lemma="COEKELBERCH" Homoniemnr="" Modern_lemma="Koekelberg" Woordsoort="znw.v." Betekenis="Koekelberg" line="16" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID10265" Lemma="COEKELIN" Homoniemnr="" Modern_lemma="Koekelijn" Woordsoort="znw.o." Betekenis="Koekelin" line="17" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID10269" Lemma="COEKELKIN" Homoniemnr="" Modern_lemma="koekeltje" Woordsoort="znw.o." Betekenis="koekje" line="18" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID10264" Lemma="COEKEMAKERE" Homoniemnr="" Modern_lemma="Koekenmaker" Woordsoort="znw.m." Betekenis="koekenmaker" line="19" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID11748" Lemma="COEL" Homoniemnr="" Modern_lemma="koel" Woordsoort="bnw." Betekenis="koel" line="20" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID81392" Lemma="COELEN" Homoniemnr="" Modern_lemma="koelen" Woordsoort="zw.ww.trans.,intr.,refl." Betekenis="koelen; reinigen; koel worden; verkoeling brengen; zich verfrissen" line="21" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID15203" Lemma="COELEWEI" Homoniemnr="" Modern_lemma="Koelewei" Woordsoort="znw." Betekenis="Koelewei" line="22" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID84871" Lemma="COELTE" Homoniemnr="" Modern_lemma="koelte" Woordsoort="znw.v." Betekenis="afkoeling (?)" line="23" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID54303" Lemma="COENE" Homoniemnr="I" Modern_lemma="Koen" Woordsoort="znw.m." Betekenis="Koen" line="24" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID62503" Lemma="COENE" Homoniemnr="II" Modern_lemma="koen" Woordsoort="znw.m." Betekenis="held" line="25" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID42503" Lemma="COENE" Homoniemnr="III" Modern_lemma="koen" Woordsoort="bnw." Betekenis="durvend; dapper; vermetel" line="26" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID52503" Lemma="COENE" Homoniemnr="IV" Modern_lemma="koen" Woordsoort="bw." Betekenis="op onverschrokken wijze" line="27" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID32503" Lemma="COENEKIN" Homoniemnr="" Modern_lemma="Koentje" Woordsoort="znw.o." Betekenis="Koen" line="28" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID26842" Lemma="COENHEIT" Homoniemnr="" Modern_lemma="koenheid" Woordsoort="znw.v." Betekenis="moed; ondernemendheid" line="29" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID85792" Lemma="COENLIKE" Homoniemnr="" Modern_lemma="koenlijk" Woordsoort="bw." Betekenis="op dappere wijze; vol vertrouwen" line="30" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID42762" Lemma="COENRAET" Homoniemnr="" Modern_lemma="Koenraad" Woordsoort="znw.m." Betekenis="Koenraad" line="31" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID92762" Lemma="COENRART" Homoniemnr="" Modern_lemma="koenraad" Woordsoort="" Betekenis="" line="32" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID37622" Lemma="COEPORTE" Homoniemnr="" Modern_lemma="Koepoort" Woordsoort="znw.v." Betekenis="Koepoort" line="33" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID11750" Lemma="COESTEKERE" Homoniemnr="" Modern_lemma="Koesteker" Woordsoort="znw.m." Betekenis="Koesteker" line="34" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID56891" Lemma="COESTRATE" Homoniemnr="" Modern_lemma="Koestraat" Woordsoort="znw.v." Betekenis="Koestraat" line="35" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID66891" Lemma="COETS" Homoniemnr="" Modern_lemma="Koets" Woordsoort="znw." Betekenis="Koets" line="36" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID78891" Lemma="COETSBELC" Homoniemnr="" Modern_lemma="Koetsbelk" Woordsoort="znw.v." Betekenis="Koetsbelk" line="37" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID77622" Lemma="COEVER" Homoniemnr="" Modern_lemma="koever" Woordsoort="znw.m." Betekenis="voorraad; bescherming" line="38" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID10278" Lemma="COEVERINGHE" Homoniemnr="" Modern_lemma="Koevering" Woordsoort="znw.v." Betekenis="Koevering" line="39" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID68012" Lemma="COEWEIDE" Homoniemnr="" Modern_lemma="koeweide" Woordsoort="znw.v." Betekenis="weiland" line="40" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID11747" Lemma="COEYIN" Homoniemnr="" Modern_lemma="koeien" Woordsoort="bnw." Betekenis="koeien-" line="41" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID10244" Lemma="COEYINSCOEMAKERE" Homoniemnr="" Modern_lemma="koeienschoenmaker" Woordsoort="znw.m." Betekenis="maker van koeienleren schoenen" line="42" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID23762" Lemma="CONRARDUS" Homoniemnr="" Modern_lemma="koenraad" Woordsoort="" Betekenis="" line="43" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID60961" Lemma="COUROET" Homoniemnr="" Modern_lemma="Koeroet" Woordsoort="znw." Betekenis="Kouroet" line="44" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID7834" Lemma="COUVERTURE" Homoniemnr="" Modern_lemma="koevertuur" Woordsoort="znw.v." Betekenis="dekkleed" line="45" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID39861" Lemma="CUCCUC" Homoniemnr="I" Modern_lemma="koekoek" Woordsoort="znw.m." Betekenis="koekoek" line="46" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID86971" Lemma="CUCCUC" Homoniemnr="II" Modern_lemma="koekoek" Woordsoort="tw." Betekenis="koekoek!" line="47" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID15282" Lemma="CUCKELS" Homoniemnr="" Modern_lemma="Koekels" Woordsoort="znw." Betekenis="Koekels" line="48" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID60903" Lemma="CUCKELSBERCH" Homoniemnr="" Modern_lemma="Koekelsberg" Woordsoort="znw.v." Betekenis="Koekelsberg" line="49" hits='0'>
+</result>
+<result Wdb="VMNW" id="ID7833" Lemma="CUEVERKIEF" Homoniemnr="" Modern_lemma="koeverkief" Woordsoort="znw.m." Betekenis="hoofddeksel" line="50" hits='0'>
+</result>
+<result Wdb="MNW" id="22377" Lemma="COE" Homoniemnr="" Modern_lemma="koe" Woordsoort="znw(v.) " Betekenis="Koe." line="51" hits='0'>
+</result>
+<result Wdb="MNW" id="22378" Lemma="COEBEEST" Homoniemnr="" Modern_lemma="koebeest" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koebeest&lt;/i&gt;, &lt;i&gt;koe&lt;/i&gt;. Nog heden eene zeer gewone benaming der koe bij den boerenstand. Wvla. &lt;i&gt;koebeest&lt;/i&gt; (&lt;bibl&gt;&lt;idno n=&quot;s0322&quot;&gt;&lt;/idno&gt;&lt;src&gt;De Bo&lt;/src&gt; 547&lt;/bibl&gt;). " line="52" hits='0'>
+</result>
+<result Wdb="MNW" id="22379" Lemma="COEBRANT" Homoniemnr="" Modern_lemma="koebrand" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Het merk&lt;/i&gt;, &lt;i&gt;waarmee eene koe ingebrand wordt&lt;/i&gt;, bepaaldelijk om te bewijzen dat de eigenaar der koe recht heeft haar te laten grazen in de meent of gemeene weide. " line="53" hits='0'>
+</result>
+<result Wdb="MNW" id="22403" Lemma="COECAMP" Homoniemnr="" Modern_lemma="koekamp" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Een kamp of weide&lt;/i&gt;, &lt;i&gt;waar koeien grazen&lt;/i&gt;, &lt;i&gt;weide&lt;/i&gt;, &lt;i&gt;weiland&lt;/i&gt;. Nog heden is de naam &lt;i&gt;Koekamp&lt;/i&gt;, waarvoor men thans &lt;i&gt;koeienkamp&lt;/i&gt; bezigen zou, bekend als benaming van plaatsen te Haarlem (een gedeelte van den Hout) en te 's-Gravenhage (een exercitieveld). " line="54" hits='0'>
+</result>
+<result Wdb="MNW" id="22413" Lemma="COECLAUWE" Homoniemnr="" Modern_lemma="koeklauw" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koeienklauw&lt;/i&gt;, &lt;i&gt;koeienhoef&lt;/i&gt;, &lt;i&gt;koehoef&lt;/i&gt;. " line="55" hits='0'>
+</result>
+<result Wdb="MNW" id="22414" Lemma="COECOEC" Homoniemnr="" Modern_lemma="koekoek" Woordsoort="znw(m.) " Betekenis="Benaming van den bekenden vogel. &lt;i&gt;Koekoek&lt;/i&gt;." line="56" hits='0'>
+</result>
+<result Wdb="MNW" id="22415" Lemma="COECOECSLOOC" Homoniemnr="" Modern_lemma="koekoekslook" Woordsoort="znw(o.) " Betekenis="Benaming van verschillende planten, o. a. van de &lt;i&gt;komkommer&lt;/i&gt;. Zie Grimm 5, 2529 op &lt;rf seen=&quot;yes&quot;&gt;kuckukslauch&lt;/rf&gt;, ook &lt;i&gt;kuckuksbrot&lt;/i&gt; geheeten; Lübben 2, 591 op &lt;rf seen=&quot;yes&quot;&gt;kukukeslôk&lt;/rf&gt;. &lt;bibl&gt;&lt;idno n=&quot;s0607_sub006&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Hor. Belg.&lt;/i&gt;&lt;/src&gt; 7, 9&lt;/bibl&gt;: &lt;rf seen=&quot;yes&quot;&gt;cuccucslooc&lt;/rf&gt;, cucumer. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;kockocksbrood&lt;/rf&gt;, oxys, trifolium acetosum; &lt;rf seen=&quot;yes&quot;&gt;kockocksbloeme, kockockslooc&lt;/rf&gt;, flos cuculi, nasturtium aquaticum minus (&lt;i&gt;waterkers&lt;/i&gt;), cardamine. " line="57" hits='0'>
+</result>
+<result Wdb="MNW" id="22416" Lemma="COECOECSNEST" Homoniemnr="" Modern_lemma="koekoeksnest" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Het nest van een koekoek&lt;/i&gt;. Schertsend toegepast op eene geliefde. Misschien is het punt van vergelijking dit, dat de eigenschappen van de beminde zóó buitengemeen zijn, dat men ze zich slechts kan voorstellen als niet werkelijk, evenals een koekoeksnest, dat ook niet bestaat, daar, gelijk men weet, de koekoek hare eieren legt in het nest van andere vogels. &lt;rf&gt;Coecoecsnest&lt;/rf&gt; staat dan in beteekenis b.v. gelijk met ons &lt;i&gt;fenix&lt;/i&gt;. " line="58" hits='0'>
+</result>
+<result Wdb="MNW" id="22381" Lemma="COEDIEF" Homoniemnr="" Modern_lemma="koeiendief" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Koedief&lt;/i&gt;, &lt;i&gt;koeiendief&lt;/i&gt;. Het woord moet ook in het Mnl. in gebruik geweest zijn en is als naam van eene bepaalde plaats in de omstreken van Haarlem nog bekend. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf&gt;koedief&lt;/rf&gt;, abactor, abigeus." line="59" hits='0'>
+</result>
+<result Wdb="MNW" id="22382" Lemma="COEDREC" Homoniemnr="" Modern_lemma="koeiendrek" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Koedrek&lt;/i&gt;, &lt;i&gt;koeiendrek.&lt;/i&gt;" line="60" hits='0'>
+</result>
+<result Wdb="MNW" id="22383" Lemma="COEF" Homoniemnr="" Modern_lemma="koef" Woordsoort="" Betekenis="" line="61" hits='0'>
+</result>
+<result Wdb="MNW" id="22385" Lemma="COEGANC" Homoniemnr="" Modern_lemma="koegang" Woordsoort="znw(m., o.) " Betekenis="Naam van eene bepaalde, vooral in Friesland (ook West-Friesland) gebruikelijke landmaat, &lt;i&gt;een stuk weiland&lt;/i&gt;. Eig. &lt;i&gt;een stuk land&lt;/i&gt;, &lt;i&gt;waarop eene koe in een zomer genoeg gras voor zijn voedsel vindt.&lt;/i&gt;" line="62" hits='0'>
+</result>
+<result Wdb="MNW" id="22386" Lemma="COEGELT" Homoniemnr="" Modern_lemma="koegeld" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Het geld&lt;/i&gt;, &lt;i&gt;dat betaald wordt voor het recht om eene koe te laten grazen in de gemeene weide&lt;/i&gt;. Vgl. bij &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;22379&quot;&gt;coebrant&lt;/ref&gt;&lt;/xr&gt;." line="63" hits='0'>
+</result>
+<result Wdb="MNW" id="22387" Lemma="COEGRAS" Homoniemnr="" Modern_lemma="koegras, koeiengras" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Weiland&lt;/i&gt;. Eig. &lt;i&gt;een stuk land, waarop eene koe in een zomer genoeg gras voor zijn voedsel vindt&lt;/i&gt;." line="64" hits='0'>
+</result>
+<result Wdb="MNW" id="22388" Lemma="COEHAER" Homoniemnr="" Modern_lemma="koehaar, koeienhaar" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Koehaar&lt;/i&gt;. " line="65" hits='0'>
+</result>
+<result Wdb="MNW" id="22389" Lemma="COEHERDE" Homoniemnr="" Modern_lemma="koeherde" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Koeherder&lt;/i&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf&gt;koeherder&lt;/rf&gt;, j. &lt;rf&gt;koedrijver&lt;/rf&gt;, bubulcus, &lt;bibl&gt;&lt;idno n=&quot;s0489&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Gemma&lt;/i&gt;&lt;/src&gt; 215&lt;i&gt;r&lt;/i&gt;&lt;/bibl&gt;: &lt;rf&gt;koeharder&lt;/rf&gt;, vaccarius. " line="66" hits='0'>
+</result>
+<result Wdb="MNW" id="22391" Lemma="COEHORN" Homoniemnr="" Modern_lemma="koehoorn" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Koehoorn&lt;/i&gt;. " line="67" hits='0'>
+</result>
+<result Wdb="MNW" id="22392" Lemma="COEHUUS" Homoniemnr="" Modern_lemma="koehuis" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Koestal&lt;/i&gt;." line="68" hits='0'>
+</result>
+<result Wdb="MNW" id="22393" Lemma="COEHUUT" Homoniemnr="" Modern_lemma="koehuid" Woordsoort="znw(v., m.) " Betekenis="&lt;i&gt;Koehuid&lt;/i&gt;. " line="69" hits='0'>
+</result>
+<result Wdb="MNW" id="22404" Lemma="COEKE" Homoniemnr="" Modern_lemma="koek" Woordsoort="znw(m.) " Betekenis=" &lt;i&gt;Koek&lt;/i&gt;, &lt;i&gt;taart&lt;/i&gt;, &lt;i&gt;gebak.&lt;/i&gt; &lt;bibl&gt;&lt;idno n=&quot;s0489&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Gemma&lt;/i&gt;&lt;/src&gt; 209&lt;i&gt;v&lt;/i&gt;&lt;/bibl&gt;: &lt;rf&gt;koeke&lt;/rf&gt;, torta. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf&gt;koeck&lt;/rf&gt;, crustulum, crustulata; libum, laganum, collyra, nastus panis. " line="70" hits='0'>
+</result>
+<result Wdb="MNW" id="22406" Lemma="COEKENARE" Homoniemnr="" Modern_lemma="koekenaar" Woordsoort="" Betekenis="" line="71" hits='0'>
+</result>
+<result Wdb="MNW" id="22407" Lemma="COEKENBACSTER" Homoniemnr="" Modern_lemma="koekenbakster" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koekenbakster&lt;/i&gt;, &lt;i&gt;bakvrouw&lt;/i&gt;. " line="72" hits='0'>
+</result>
+<result Wdb="MNW" id="22409" Lemma="COEKENERSSE" Homoniemnr="" Modern_lemma="koekenersse" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Bakvrouw&lt;/i&gt;." line="73" hits='0'>
+</result>
+<result Wdb="MNW" id="22411" Lemma="COEKERLE" Homoniemnr="" Modern_lemma="koekerel" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Koedrijver&lt;/i&gt;, &lt;i&gt;koeherder&lt;/i&gt;." line="74" hits='0'>
+</result>
+<result Wdb="MNW" id="22412" Lemma="COEKETELE" Homoniemnr="" Modern_lemma="koeketel" Woordsoort="znw(m.) " Betekenis="Vermoedelijk &lt;i&gt;de ketel&lt;/i&gt;, &lt;i&gt;waarin het voer voor de koe gekookt wordt&lt;/i&gt;. In sommige deelen van ons land is de naam daarvoor nog gebruikelijk." line="75" hits='0'>
+</result>
+<result Wdb="MNW" id="22417" Lemma="COEL" Homoniemnr="" Modern_lemma="koel" Woordsoort="" Betekenis="" line="76" hits='0'>
+</result>
+<result Wdb="MNW" id="22418" Lemma="COELACHTICH" Homoniemnr="" Modern_lemma="koelachtig" Woordsoort="bnw " Betekenis="&lt;i&gt;Een weinig koel&lt;/i&gt;. " line="77" hits='0'>
+</result>
+<result Wdb="MNW" id="22419" Lemma="COELBAC" Homoniemnr="" Modern_lemma="koelbak" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Bak voor het afkoelen van dranken&lt;/i&gt;, &lt;i&gt;koelvat&lt;/i&gt;; ook &lt;i&gt;een bak&lt;/i&gt;, &lt;i&gt;waarin heet ijzer wordt afgekoeld of gebluscht&lt;/i&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;koelback, koeltroch&lt;/rf&gt;, j. &lt;rf seen=&quot;yes&quot;&gt;leschback&lt;/rf&gt;, lacus. In de eerste beteekenis komt het woord onder allerlei ander huisraad voor &lt;bibl&gt;&lt;idno n=&quot;s0504_sub000&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Gesch. v. Antw.&lt;/i&gt;&lt;/src&gt; 2, 646;&lt;/bibl&gt; aldaar wordt ook &lt;rf seen=&quot;yes&quot;&gt;coeltobbeken&lt;/rf&gt; vermeld, hetzelfde als &lt;rf seen=&quot;yes&quot;&gt;coelvat&lt;/rf&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;koelvat, koelkuype&lt;/rf&gt;, lacus in quo cerevisia refrigeratur." line="78" hits='0'>
+</result>
+<result Wdb="MNW" id="22420" Lemma="COELBAT" Homoniemnr="" Modern_lemma="koelvat" Woordsoort="" Betekenis="" line="79" hits='0'>
+</result>
+<result Wdb="MNW" id="22421" Lemma="COELDE" Homoniemnr="" Modern_lemma="koelte" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koelte&lt;/i&gt;; ook &lt;i&gt;kalmte&lt;/i&gt;, &lt;i&gt;bedaardheid&lt;/i&gt;. " line="80" hits='0'>
+</result>
+<result Wdb="MNW" id="22422" Lemma="COELE" Homoniemnr="I" Modern_lemma="koel" Woordsoort="bnw " Betekenis="&lt;i&gt;Koel&lt;/i&gt;, &lt;i&gt;niet warm&lt;/i&gt;, &lt;i&gt;matig koud&lt;/i&gt;, &lt;i&gt;een aangenamen warmtegraad hebbende&lt;/i&gt;. " line="81" hits='0'>
+</result>
+<result Wdb="MNW" id="22423" Lemma="COELE" Homoniemnr="II" Modern_lemma="koel" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koelte&lt;/i&gt;, &lt;i&gt;verkoeling&lt;/i&gt;. " line="82" hits='0'>
+</result>
+<result Wdb="MNW" id="22424" Lemma="COELEN" Homoniemnr="" Modern_lemma="koelen" Woordsoort="ww(zw., trans., intr., refl.) " Betekenis=" &lt;label&gt;trans.&lt;/label&gt;" line="83" hits='0'>
+</result>
+<result Wdb="MNW" id="22425" Lemma="COELHEIT" Homoniemnr="" Modern_lemma="koelheid" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koelte&lt;/i&gt;. Het ndl. &lt;i&gt;koelheid&lt;/i&gt; heeft de bet. &lt;i&gt;onverschilligheid&lt;/i&gt;, van het karakter of het gemoed, aangenomen. " line="84" hits='0'>
+</result>
+<result Wdb="MNW" id="22427" Lemma="COELINC" Homoniemnr="" Modern_lemma="koeling" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Kleine baars&lt;/i&gt;, hd. ook &lt;i&gt;kaulbarsch&lt;/i&gt;, &lt;i&gt;kaulhaupt&lt;/i&gt; en &lt;i&gt;kaulkopf&lt;/i&gt; geheeten. Zie Grimm 5, 351 op &lt;rf seen=&quot;yes&quot;&gt;käuling&lt;/rf&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1267&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Teuth.&lt;/i&gt;&lt;/src&gt; 62&lt;/bibl&gt;: &lt;rf seen=&quot;yes&quot;&gt;cuylinck is eyn cleyn visken&lt;/rf&gt;, capatenus." line="85" hits='0'>
+</result>
+<result Wdb="MNW" id="22426" Lemma="COELINGE" Homoniemnr="" Modern_lemma="koeling" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Verkoeling&lt;/i&gt;. " line="86" hits='0'>
+</result>
+<result Wdb="MNW" id="22429" Lemma="COELNESSE" Homoniemnr="" Modern_lemma="koelnis" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koelte&lt;/i&gt;. " line="87" hits='0'>
+</result>
+<result Wdb="MNW" id="22430" Lemma="COELSINNICH" Homoniemnr="" Modern_lemma="koelzinnig" Woordsoort="bnw " Betekenis="&lt;i&gt;Bedaard&lt;/i&gt;, &lt;i&gt;kalm&lt;/i&gt;, &lt;i&gt;gelijkmatig&lt;/i&gt;. Vgl. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;koel van sinnen&lt;/rf&gt;, sedatus, tranquillus, temperatus animo, non fervens aut perturbatus. " line="88" hits='0'>
+</result>
+<result Wdb="MNW" id="22432" Lemma="COELTOBBE" Homoniemnr="" Modern_lemma="koeltobbe" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Bak voor het afkoelen van dranken, koelvat&lt;/i&gt;; ook &lt;i&gt;een bak, waarin heet ijzer wordt afgekoeld of gebluscht&lt;/i&gt;." line="89" hits='0'>
+</result>
+<result Wdb="MNW" id="22433" Lemma="COELVAT" Homoniemnr="" Modern_lemma="koelvat" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Bak voor het afkoelen van dranken, koelvat&lt;/i&gt;; ook &lt;i&gt;een bak, waarin heet ijzer wordt afgekoeld of gebluscht&lt;/i&gt;." line="90" hits='0'>
+</result>
+<result Wdb="MNW" id="22435" Lemma="COEMES" Homoniemnr="" Modern_lemma="koemest" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Koemest&lt;/i&gt;, &lt;i&gt;koeienmest&lt;/i&gt;. Vgl. &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;22382&quot;&gt;coedrec&lt;/ref&gt;&lt;/xr&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf&gt;koemest&lt;/rf&gt;, fimus bovis, laetamen, bucerda, stercus vaccinum; &lt;rf&gt;koestront&lt;/rf&gt; j. &lt;rf&gt;koemest&lt;/rf&gt;, bucerda. Vgl. ook &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;22464&quot;&gt;coescite&lt;/ref&gt;&lt;/xr&gt;. De koemest werd als artsenij gebruikt in enkele ziekten." line="91" hits='0'>
+</result>
+<result Wdb="MNW" id="22437" Lemma="COEMULE" Homoniemnr="" Modern_lemma="koemuil" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koevoet&lt;/i&gt; (?). Indien deze verklaring juist is, zal men &lt;rf&gt;mule&lt;/rf&gt;, het bekende schoeisel, op te vatten hebben in de beteekenis van &lt;i&gt;hoef&lt;/i&gt;. " line="92" hits='0'>
+</result>
+<result Wdb="MNW" id="22438" Lemma="COEN" Homoniemnr="I" Modern_lemma="koe" Woordsoort="" Betekenis="" line="93" hits='0'>
+</result>
+<result Wdb="MNW" id="22441" Lemma="COENE" Homoniemnr="" Modern_lemma="koen" Woordsoort="bnw " Betekenis=" &lt;i&gt;Moedig&lt;/i&gt;, &lt;i&gt;dapper&lt;/i&gt;, &lt;i&gt;onverschrokken&lt;/i&gt;, &lt;i&gt;steunende op eigen kracht&lt;/i&gt;, &lt;i&gt;vol zelfvertrouwen&lt;/i&gt;. Dit begrip gaat geleidelijk over in dat van &lt;i&gt;strijdlustig&lt;/i&gt;, &lt;i&gt;strijdvaardig&lt;/i&gt;, en evenzeer in dat van &lt;i&gt;stout&lt;/i&gt;, &lt;i&gt;koen&lt;/i&gt;, &lt;i&gt;vermetel&lt;/i&gt;, &lt;i&gt;overmoedig&lt;/i&gt;, &lt;i&gt;driest&lt;/i&gt;. Het thans voor dit begrip gewone woord, &lt;i&gt;dapper&lt;/i&gt;, had in het Mnl. nog niet deze beteekenis, maar die van &lt;i&gt;vlug&lt;/i&gt;, &lt;i&gt;snel&lt;/i&gt;, zonder het minste bijdenkbeeld van &lt;i&gt;moed&lt;/i&gt;. Zie &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;06168&quot;&gt;dapper&lt;/ref&gt;&lt;/xr&gt;. Over de beteekennissen van &lt;i&gt;koen&lt;/i&gt; in andere germ. talen zie Grimm, &lt;i&gt;Wtb&lt;/i&gt;. 5, 2575. " line="94" hits='0'>
+</result>
+<result Wdb="MNW" id="22442" Lemma="COENHEIT" Homoniemnr="" Modern_lemma="koenheid" Woordsoort="znw(v.) " Betekenis=" &lt;i&gt;Moed&lt;/i&gt;, &lt;i&gt;dapperheid&lt;/i&gt;, &lt;i&gt;onverschrokkenheid&lt;/i&gt;, &lt;i&gt;stoutheid&lt;/i&gt;, &lt;i&gt;strijdvaardigheid&lt;/i&gt;, ook in eene minder gunstige opvatting &lt;i&gt;vermetelheid&lt;/i&gt;, &lt;i&gt;driestheid&lt;/i&gt;, &lt;i&gt;overmoed&lt;/i&gt;. " line="95" hits='0'>
+</result>
+<result Wdb="MNW" id="22443" Lemma="COENICHEIT" Homoniemnr="" Modern_lemma="koenigheid" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Moed&lt;/i&gt;, &lt;i&gt;dapperheid&lt;/i&gt;, &lt;i&gt;onverschrokkenheid&lt;/i&gt;, &lt;i&gt;stoutheid&lt;/i&gt;, &lt;i&gt;strijdvaardigheid&lt;/i&gt;, ook in eene minder gunstige opvatting &lt;i&gt;vermetelheid&lt;/i&gt;, &lt;i&gt;driestheid&lt;/i&gt;, &lt;i&gt;overmoed&lt;/i&gt;." line="96" hits='0'>
+</result>
+<result Wdb="MNW" id="22444" Lemma="COENLIKE" Homoniemnr="" Modern_lemma="koenlijk" Woordsoort="bijw " Betekenis="&lt;i&gt;Op eene van&lt;/i&gt; “&lt;i&gt;coenheit&lt;/i&gt;” &lt;i&gt;getuigende wijze&lt;/i&gt;, &lt;i&gt;stout&lt;/i&gt;, &lt;i&gt;moedig&lt;/i&gt;, &lt;i&gt;stoutmoedig&lt;/i&gt;, &lt;i&gt;onverschrokken&lt;/i&gt;; ook &lt;i&gt;driest&lt;/i&gt;, &lt;i&gt;vermetel&lt;/i&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf&gt;koenlick&lt;/rf&gt;, audacter. " line="97" hits='0'>
+</result>
+<result Wdb="MNW" id="22447" Lemma="COEPORTE" Homoniemnr="" Modern_lemma="koepoort, Koepoort" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koepoort&lt;/i&gt;; &lt;i&gt;eene poort&lt;/i&gt;, &lt;i&gt;waardoor vaak koeien de stad inkomen&lt;/i&gt;. Het was o. a. de benaming van eene poort te Gent en van eene te Leiden." line="98" hits='0'>
+</result>
+<result Wdb="MNW" id="22448" Lemma="COER" Homoniemnr="I" Modern_lemma="koer" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Wachttorentje&lt;/i&gt;, &lt;i&gt;een in de hoogte gelegen punt&lt;/i&gt;, &lt;i&gt;vanwaar uit men den omtrek kan overzien&lt;/i&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; geeft “&lt;rf seen=&quot;yes&quot;&gt;koer, koertorn&lt;/rf&gt;, specula”, en daarnaast &lt;rf seen=&quot;yes&quot;&gt;koerwachter&lt;/rf&gt;, speculator (&lt;i&gt;hij die op den uitkijk staat&lt;/i&gt;), waarbij V. Hasselt de mededeeling voegt, dat &lt;rf seen=&quot;yes&quot;&gt;coirwachter&lt;/rf&gt; in 1597 te Arnhem voorkomt voor &lt;i&gt;torenwachter&lt;/i&gt;. Vgl. &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;22452&quot;&gt;coeren&lt;/ref&gt;&lt;/xr&gt; en &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; “&lt;rf seen=&quot;yes&quot;&gt;koeren&lt;/rf&gt;, speculari, e specula prospicere, observare”, vanwaar &lt;rf seen=&quot;yes&quot;&gt;coerre&lt;/rf&gt; (&lt;rf seen=&quot;yes&quot;&gt;coere, coer&lt;/rf&gt;). Zie de volg. Art.; Lübben 2, 602: &lt;rf seen=&quot;yes&quot;&gt;kuren&lt;/rf&gt;, &lt;i&gt;spähend schauen&lt;/i&gt;, jagersterm; &lt;rf seen=&quot;yes&quot;&gt;kûrhûs&lt;/rf&gt; = &lt;rf seen=&quot;yes&quot;&gt;koertorn&lt;/rf&gt; bij &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt;; &lt;bibl&gt;&lt;idno n=&quot;s1267&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Teuth.&lt;/i&gt;&lt;/src&gt; 63&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;cueren, warden&lt;/rf&gt;, speculari, circumspicere; &lt;i&gt;ald.&lt;/i&gt; &lt;rf seen=&quot;yes&quot;&gt;cuere, warde&lt;/rf&gt;, specula, speculare, tocca; &lt;rf seen=&quot;yes&quot;&gt;cuerwechter&lt;/rf&gt;, speculator, spectator, circumspector, arcubius." line="99" hits='0'>
+</result>
+<result Wdb="MNW" id="22449" Lemma="COER" Homoniemnr="II" Modern_lemma="koer" Woordsoort="znw(m.) " Betekenis="" line="100" hits='0'>
+</result>
+<result Wdb="MNW" id="22451" Lemma="COERE" Homoniemnr="" Modern_lemma="koer" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Uitkijk&lt;/i&gt;, &lt;i&gt;wacht&lt;/i&gt;. Vgl. &lt;bibl&gt;&lt;idno n=&quot;s1267&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Teuth.&lt;/i&gt;&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;cuere, warde&lt;/rf&gt;. In de uitdr. &lt;usg type=&quot;colloc&quot;&gt;die coere waren&lt;/usg&gt;, &lt;i&gt;de wacht houden&lt;/i&gt;, bepaaldelijk &lt;i&gt;op den toren&lt;/i&gt;. Vgl. &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;22459&quot;&gt;coerwachte&lt;/ref&gt;&lt;/xr&gt;. " line="101" hits='0'>
+</result>
+<result Wdb="MNW" id="22452" Lemma="COEREN" Homoniemnr="" Modern_lemma="koeren" Woordsoort="ww(zw., intr.) " Betekenis="&lt;i&gt;De wacht houden&lt;/i&gt;, &lt;i&gt;waken&lt;/i&gt;, &lt;i&gt;op den uitkijk staan&lt;/i&gt;. Vooral van iemand die op eene verhevenheid staat, b. v. &lt;i&gt;een torenwachter&lt;/i&gt;." line="102" hits='0'>
+</result>
+<result Wdb="MNW" id="22453" Lemma="COERHUUS" Homoniemnr="" Modern_lemma="koerhuis" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Wachttoren&lt;/i&gt;; &lt;i&gt;een huis van waar men den omtrek kan overzien&lt;/i&gt;, &lt;i&gt;waarop de wacht wordt gehouden&lt;/i&gt;; &lt;i&gt;koerhuis&lt;/i&gt; (Van Dale). Vgl. de plaats uit &lt;bibl&gt;&lt;idno n=&quot;s0889&quot;&gt;&lt;/idno&gt;&lt;src&gt;Matth. &lt;i&gt;Anal.&lt;/i&gt;&lt;/src&gt;&lt;/bibl&gt; bij &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;22452&quot;&gt;coeren&lt;/ref&gt;&lt;/xr&gt;." line="103" hits='0'>
+</result>
+<result Wdb="MNW" id="22454" Lemma="COERRE" Homoniemnr="" Modern_lemma="koerder" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Wachter&lt;/i&gt;, &lt;i&gt;torenwachter&lt;/i&gt;, &lt;i&gt;iemand die op den uitkijk staat&lt;/i&gt;." line="104" hits='0'>
+</result>
+<result Wdb="MNW" id="22455" Lemma="COERROEDE" Homoniemnr="" Modern_lemma="koerroede" Woordsoort="znw(v.) " Betekenis="Misschien &lt;i&gt;de&lt;/i&gt; “&lt;i&gt;tobberode&lt;/i&gt;” &lt;i&gt;op het koerhuis&lt;/i&gt;. Zie &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;22453&quot;&gt;coerhuus&lt;/ref&gt;&lt;/xr&gt;, waar ook op ééne plaats &lt;rf&gt;tobberode&lt;/rf&gt; wordt vermeld. De “tobberoede” is waarschijnlijk &lt;i&gt;het over een katrol gaande werktuig&lt;/i&gt;, &lt;i&gt;waarmede men iets kan ophijschen&lt;/i&gt;, &lt;i&gt;hijschmachine&lt;/i&gt;, &lt;i&gt;windas&lt;/i&gt;. " line="105" hits='0'>
+</result>
+<result Wdb="MNW" id="22456" Lemma="COERS" Homoniemnr="" Modern_lemma="koers" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Loop&lt;/i&gt;; ook &lt;i&gt;het gangbaar zijn van geld&lt;/i&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;coers&lt;/rf&gt;, cursus, meatus; &lt;rf seen=&quot;yes&quot;&gt;coers hebben&lt;/rf&gt;, in usu esse. " line="106" hits='0'>
+</result>
+<result Wdb="MNW" id="22457" Lemma="COERSDBROOT" Homoniemnr="" Modern_lemma="koerstbrood" Woordsoort="znw " Betekenis="" line="107" hits='0'>
+</result>
+<result Wdb="MNW" id="22459" Lemma="COERWACHTE" Homoniemnr="" Modern_lemma="koerwacht" Woordsoort="znw(v.) " Betekenis=" &lt;i&gt;Wacht&lt;/i&gt;, &lt;i&gt;uitkijk&lt;/i&gt;, &lt;i&gt;het houden van een wakend oog op den omtrek&lt;/i&gt;. " line="108" hits='0'>
+</result>
+<result Wdb="MNW" id="22460" Lemma="COESALICH" Homoniemnr="" Modern_lemma="koezalig" Woordsoort="bnw " Betekenis="&lt;i&gt;Rijk aan koeien&lt;/i&gt;, &lt;i&gt;gelukkig met zijn koeien&lt;/i&gt;. Zie &lt;bibl&gt;&lt;idno n=&quot;s1280&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Tijdschr.&lt;/i&gt;&lt;/src&gt; 5, 187.&lt;/bibl&gt; " line="109" hits='0'>
+</result>
+<result Wdb="MNW" id="22461" Lemma="COESAT" Homoniemnr="" Modern_lemma="koezat" Woordsoort="bnw " Betekenis="&lt;i&gt;Stomdronken&lt;/i&gt;. Vgl. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf&gt;koedronck&lt;/rf&gt;, &lt;i&gt;het ledigen van een beker in één teug&lt;/i&gt; (ingens haustus) en hd. &lt;i&gt;kühsuff&lt;/i&gt; (Grimm 5, 2583), waar ook de uitdr. “saufen wie ein ochs” wordt vermeld. Misschien bewaart de gemeenzame uitdrukking &lt;i&gt;zoo zat als een keu&lt;/i&gt; (&lt;i&gt;koei&lt;/i&gt;?) eene herinnering aan het mnl. &lt;rf&gt;coesat&lt;/rf&gt;. " line="110" hits='0'>
+</result>
+<result Wdb="MNW" id="22462" Lemma="COESCATTINGE" Homoniemnr="" Modern_lemma="koeschatting" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Eene door boeren opgebrachte belasting&lt;/i&gt;, &lt;i&gt;welke betaald werd naar het aantal koeien&lt;/i&gt;, &lt;i&gt;dat men bezat&lt;/i&gt;." line="111" hits='0'>
+</result>
+<result Wdb="MNW" id="22464" Lemma="COESCITE" Homoniemnr="" Modern_lemma="koeschijt" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koestront&lt;/i&gt;, &lt;i&gt;koeiendrek&lt;/i&gt;. " line="112" hits='0'>
+</result>
+<result Wdb="MNW" id="22465" Lemma="COESCITTE" Homoniemnr="" Modern_lemma="koeschijt" Woordsoort="znw(v.) " Betekenis="Koestront, koeiendrek." line="113" hits='0'>
+</result>
+<result Wdb="MNW" id="22466" Lemma="COESEEL" Homoniemnr="" Modern_lemma="koezeel" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Touw&lt;/i&gt;, &lt;i&gt;waaraan eene koe wordt geleid&lt;/i&gt;. " line="114" hits='0'>
+</result>
+<result Wdb="MNW" id="22467" Lemma="COESLACH" Homoniemnr="" Modern_lemma="koeslag" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Eene belasting&lt;/i&gt;, &lt;i&gt;opgebracht aan den landheer en berekend naar het aantal koeien&lt;/i&gt;, &lt;i&gt;dat men bezat&lt;/i&gt;; vgl. &lt;bibl&gt;&lt;idno n=&quot;s1055&quot;&gt;&lt;/idno&gt;&lt;src&gt;Racer&lt;/src&gt; 2, 60.&lt;/bibl&gt; Het woord was alleen in de oostelijke streken in gebruik. " line="115" hits='0'>
+</result>
+<result Wdb="MNW" id="22468" Lemma="COESMULE" Homoniemnr="" Modern_lemma="koesmuil" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koeienmuil&lt;/i&gt;, &lt;i&gt;koeiensnuit&lt;/i&gt;." line="116" hits='0'>
+</result>
+<result Wdb="MNW" id="22470" Lemma="COESTAL" Homoniemnr="" Modern_lemma="koestal" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Koestal&lt;/i&gt;, &lt;i&gt;koeienstal.&lt;/i&gt; &lt;bibl&gt;&lt;idno n=&quot;s0489&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Gemma&lt;/i&gt;&lt;/src&gt; 17&lt;i&gt;r&lt;/i&gt;&lt;/bibl&gt;: &lt;rf seen=&quot;yes&quot;&gt;veehuys&lt;/rf&gt; of &lt;rf seen=&quot;yes&quot;&gt;koestal&lt;/rf&gt;, armentarium. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;koestal&lt;/rf&gt;, bubile. &lt;bibl&gt;&lt;idno n=&quot;s0444&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Fragm. Lex.&lt;/i&gt;&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;coestal&lt;/rf&gt;, bostar, &lt;i&gt;dr&lt;/i&gt;. stabulum boum; &lt;rf seen=&quot;yes&quot;&gt;coestal, ossenstal, daer men ossen vercoopt, boverie&lt;/rf&gt;, boarium. " line="117" hits='0'>
+</result>
+<result Wdb="MNW" id="22471" Lemma="COESTEREN" Homoniemnr="" Modern_lemma="koesteren" Woordsoort="ww(zw., trans.) " Betekenis="&lt;i&gt;Koesteren&lt;/i&gt;, &lt;i&gt;opkweeken&lt;/i&gt;, &lt;i&gt;verkwikken&lt;/i&gt;, eig. &lt;i&gt;warm toedekken&lt;/i&gt;." line="118" hits='0'>
+</result>
+<result Wdb="MNW" id="22472" Lemma="COESTERTE" Homoniemnr="" Modern_lemma="koestaart" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Koestaart&lt;/i&gt;, &lt;i&gt;koeienstaart&lt;/i&gt;. Het woord heeft natuurlijk in het Mnl. bestaan, doch tot heden is er geen voorbeeld van gevonden. — In de glosse: “&lt;rf&gt;coestarte&lt;/rf&gt;, arthocaseus” (&lt;i&gt;Mnl. Wdb&lt;/i&gt;. 3, 1103) is niet dit woord bedoeld, maar &lt;rf&gt;caestarte&lt;/rf&gt; (&lt;i&gt;kaaskoek&lt;/i&gt;)." line="119" hits='0'>
+</result>
+<result Wdb="MNW" id="22473" Lemma="COESTIC" Homoniemnr="" Modern_lemma="koestuk, Koestuk" Woordsoort="znw(o.) " Betekenis="Benaming van een &lt;i&gt;stuk weiland voor koeien&lt;/i&gt;, &lt;bibl&gt;&lt;idno n=&quot;s0025_sub459&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;Ann. Em.&lt;/i&gt;&lt;/src&gt; 25, 69; 74 (&lt;anno&gt;&lt;i&gt;a.&lt;/i&gt; 1464&lt;/anno&gt;).&lt;/bibl&gt; — Misschien is het op deze plaatsen reeds als plaatsnaam op te vatten." line="120" hits='0'>
+</result>
+<result Wdb="MNW" id="22474" Lemma="COESTRONT" Homoniemnr="" Modern_lemma="koeienstront" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koeienstront&lt;/i&gt;, &lt;i&gt;koemest&lt;/i&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf&gt;koestront&lt;/rf&gt;, j. &lt;rf&gt;koemest&lt;/rf&gt; bucerda. " line="121" hits='0'>
+</result>
+<result Wdb="MNW" id="22475" Lemma="COET" Homoniemnr="" Modern_lemma="koet" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Koet&lt;/i&gt;, de vogel." line="122" hits='0'>
+</result>
+<result Wdb="MNW" id="22477" Lemma="COETSBEDDE" Homoniemnr="" Modern_lemma="koetsbed" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Rustbed&lt;/i&gt;, &lt;i&gt;rustbank&lt;/i&gt;, &lt;i&gt;canapé&lt;/i&gt;. " line="123" hits='0'>
+</result>
+<result Wdb="MNW" id="22478" Lemma="COETSE" Homoniemnr="" Modern_lemma="koets" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Leger&lt;/i&gt;, &lt;i&gt;legerstede&lt;/i&gt;. Eene &lt;rf seen=&quot;yes&quot;&gt;coetse&lt;/rf&gt; is niet hetzelfde als &lt;rf seen=&quot;yes&quot;&gt;ledecant&lt;/rf&gt; of &lt;rf seen=&quot;yes&quot;&gt;bedde&lt;/rf&gt;, hoewel het nu en dan in de beteekenis van &lt;rf seen=&quot;yes&quot;&gt;bedde&lt;/rf&gt; voorkomt (b. v. &lt;bibl&gt;&lt;idno n=&quot;s0319&quot;&gt;&lt;/idno&gt;&lt;src&gt;&lt;i&gt;D. B.&lt;/i&gt;&lt;/src&gt; &lt;i&gt;Gen&lt;/i&gt;. 49, 4&lt;/bibl&gt;: du biste ghegaen op dijns vaders bedde ende du besmettest sijn coetse; lat. &lt;i&gt;ascendisti cubile patris tui et maculasti stratum ejus&lt;/i&gt;). In eene bet., van &lt;rf seen=&quot;yes&quot;&gt;ledecant&lt;/rf&gt; verschillende, staat het    (&lt;i&gt;l&lt;/i&gt;. thoreuma, Diefenb. 588&lt;i&gt;a&lt;/i&gt;, waar o. a. de glosse &lt;i&gt;dragebette&lt;/i&gt; staat opgegeven). Het woord &lt;i&gt;koets&lt;/i&gt; bestaat in de bet. &lt;i&gt;bed&lt;/i&gt; nog heden in de bij dichters gebruikelijke samenstellingen &lt;i&gt;echtkoets&lt;/i&gt; en &lt;i&gt;slaapkoets&lt;/i&gt; en in dialecten ook in de uitdr. “de kinderen moeten naar de &lt;i&gt;koets&lt;/i&gt;”. De beteekenis &lt;i&gt;slaapstede&lt;/i&gt;, &lt;i&gt;meubel waarin een bed gelegd wordt&lt;/i&gt;, &lt;i&gt;ledikant&lt;/i&gt; blijkt duidelijk, &lt;bibl&gt;&lt;idno n=&quot;s0525_sub003&quot;&gt;&lt;/idno&gt;&lt;src&gt;Gonnet, &lt;i&gt;Zijlkl.&lt;/i&gt;&lt;/src&gt; 201&lt;/bibl&gt;: “Dat beste bedde mit die kuets ende sess lelijde cussenen”." line="124" hits='0'>
+</result>
+<result Wdb="MNW" id="22483" Lemma="COEVENNE" Homoniemnr="" Modern_lemma="koeven" Woordsoort="znw(v.) " Betekenis="Benaming van &lt;i&gt;een stuk weiland van eene bepaalde grootte&lt;/i&gt;. Vgl. bij &lt;xr type=&quot;multiple_target&quot;&gt;&lt;ref target=&quot;61950 61951 61952&quot;&gt;venne&lt;/ref&gt;&lt;/xr&gt; (ndl. &lt;i&gt;veen&lt;/i&gt;) en Lübben op &lt;rf&gt;venne&lt;/rf&gt; en &lt;rf&gt;vennelant&lt;/rf&gt; (5, 234). " line="125" hits='0'>
+</result>
+<result Wdb="MNW" id="22485" Lemma="COEVER" Homoniemnr="I" Modern_lemma="koever" Woordsoort="znw(o., m.) " Betekenis=" &lt;i&gt;Voorraad&lt;/i&gt;, &lt;i&gt;overvloed&lt;/i&gt;. " line="126" hits='0'>
+</result>
+<result Wdb="MNW" id="22486" Lemma="COEVER" Homoniemnr="II" Modern_lemma="koever" Woordsoort="znw " Betekenis="Benaming van een voorwerp, waarin iets geborgen wordt of een bepaald aantal voorwerpen van dezelfde soort verzonden of verpakt worden. Waarschijnlijk hetzelfde als hd. mhd. &lt;i&gt;kober&lt;/i&gt;. Zie Grimm &lt;i&gt;Wtb&lt;/i&gt;. op &lt;rf&gt;kober&lt;/rf&gt;. &lt;i&gt;Mand&lt;/i&gt;, &lt;i&gt;korf&lt;/i&gt;, &lt;i&gt;ben&lt;/i&gt;. Of is &lt;rf&gt;coever&lt;/rf&gt; eene andere schrijfwijze voor &lt;rf&gt;coefer&lt;/rf&gt; en beteekent het hetzelfde als &lt;i&gt;koffer&lt;/i&gt;, &lt;i&gt;kist&lt;/i&gt;? " line="127" hits='0'>
+</result>
+<result Wdb="MNW" id="22487" Lemma="COEVER" Homoniemnr="III" Modern_lemma="koever" Woordsoort="bnw " Betekenis="&lt;i&gt;Overvloedig&lt;/i&gt;, &lt;i&gt;veelvuldig&lt;/i&gt;, &lt;i&gt;in overvloed voorhanden&lt;/i&gt;." line="128" hits='0'>
+</result>
+<result Wdb="MNW" id="22489" Lemma="COEVEREREN" Homoniemnr="" Modern_lemma="koevereren" Woordsoort="ww(zw., trans.) " Betekenis=" &lt;i&gt;Terugkrijgen&lt;/i&gt;, &lt;i&gt;herwinnen&lt;/i&gt;. " line="129" hits='0'>
+</result>
+<result Wdb="MNW" id="22490" Lemma="COEVERHEIT" Homoniemnr="" Modern_lemma="koeverheid" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Overvloed&lt;/i&gt;." line="130" hits='0'>
+</result>
+<result Wdb="MNW" id="22491" Lemma="COEVERKIEF" Homoniemnr="" Modern_lemma="koeverkief" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Hoofddoek&lt;/i&gt;, eene hoofdbedekking van vrouwen. " line="131" hits='0'>
+</result>
+<result Wdb="MNW" id="22492" Lemma="COEVERTOER" Homoniemnr="" Modern_lemma="koevertuur" Woordsoort="znw(o.) " Betekenis="" line="132" hits='0'>
+</result>
+<result Wdb="MNW" id="22493" Lemma="COEVERTURE" Homoniemnr="" Modern_lemma="koevertuur, couverture" Woordsoort="znw(v.) " Betekenis=" &lt;i&gt;Al wat tot dekking en beschutting dient van mensch of dier&lt;/i&gt;. Dat zulk een voorwerp, met kunst bewerkt, tevens tot sieraad kan dienen, spreekt vanzelf. In het bijzonder beteekenen de beide woorden " line="133" hits='0'>
+</result>
+<result Wdb="MNW" id="22494" Lemma="COEVLEESC" Homoniemnr="" Modern_lemma="koeienvlees" Woordsoort="znw(o.) " Betekenis="&lt;i&gt;Koevleesch&lt;/i&gt;, &lt;i&gt;koeienvleesch&lt;/i&gt;, &lt;i&gt;rundvleesch&lt;/i&gt;. " line="134" hits='0'>
+</result>
+<result Wdb="MNW" id="22495" Lemma="COEVOET" Homoniemnr="" Modern_lemma="koevoet" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Koeienpoot&lt;/i&gt;, &lt;i&gt;koeienklauw&lt;/i&gt;. Vgl. &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;22413&quot;&gt;coeclauwe&lt;/ref&gt;&lt;/xr&gt; en &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;22437&quot;&gt;coemule&lt;/ref&gt;&lt;/xr&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf&gt;koevoet&lt;/rf&gt;, pes vaccinus." line="135" hits='0'>
+</result>
+<result Wdb="MNW" id="22496" Lemma="COEWACHTE" Homoniemnr="" Modern_lemma="koewacht" Woordsoort="znw(m.) " Betekenis="&lt;i&gt;Koewachter&lt;/i&gt;, &lt;i&gt;koeherder&lt;/i&gt;. Vgl. ndl. &lt;i&gt;brandwacht&lt;/i&gt;, &lt;i&gt;nachtwacht&lt;/i&gt;, &lt;i&gt;schildwacht&lt;/i&gt;. " line="136" hits='0'>
+</result>
+<result Wdb="MNW" id="22497" Lemma="COEWACHTER" Homoniemnr="" Modern_lemma="koewachter" Woordsoort="" Betekenis="" line="137" hits='0'>
+</result>
+<result Wdb="MNW" id="22498" Lemma="COEWEIDE" Homoniemnr="" Modern_lemma="koeweide" Woordsoort="znw(v.) " Betekenis=" &lt;i&gt;Weiland&lt;/i&gt;. " line="138" hits='0'>
+</result>
+<result Wdb="MNW" id="22396" Lemma="COEYENBOTER" Homoniemnr="" Modern_lemma="koeienboter" Woordsoort="znw(o., v.) " Betekenis="&lt;i&gt;Koeboter&lt;/i&gt;, &lt;i&gt;koeienboter&lt;/i&gt;, &lt;i&gt;boter uit koemelk verkregen&lt;/i&gt;. " line="139" hits='0'>
+</result>
+<result Wdb="MNW" id="22397" Lemma="COEYENHIËR" Homoniemnr="" Modern_lemma="koeienhijer" Woordsoort="" Betekenis="" line="140" hits='0'>
+</result>
+<result Wdb="MNW" id="22398" Lemma="COEYENMELC" Homoniemnr="" Modern_lemma="koemelk" Woordsoort="znw(o., v.) " Betekenis="&lt;i&gt;Koemelk&lt;/i&gt;, &lt;i&gt;koeienmelk&lt;/i&gt;. " line="141" hits='0'>
+</result>
+<result Wdb="MNW" id="22399" Lemma="COEYENMES" Homoniemnr="" Modern_lemma="koeienmest" Woordsoort="" Betekenis="" line="142" hits='0'>
+</result>
+<result Wdb="MNW" id="22400" Lemma="COEYENVEEN" Homoniemnr="" Modern_lemma="koeienven" Woordsoort="" Betekenis="" line="143" hits='0'>
+</result>
+<result Wdb="MNW" id="22401" Lemma="COEYIJN" Homoniemnr="" Modern_lemma="koeien" Woordsoort="bnw " Betekenis="&lt;i&gt;Van koehuid gemaakt&lt;/i&gt;, &lt;i&gt;koeien&lt;/i&gt;-. &lt;bibl&gt;&lt;idno n=&quot;s1026&quot;&gt;&lt;/idno&gt;&lt;src&gt;Plant.&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;koeyen, dat van koeyen is&lt;/rf&gt;, de vache, &lt;i&gt;vaccinus&lt;/i&gt;. " line="144" hits='0'>
+</result>
+<result Wdb="MNW" id="22532" Lemma="COINSUTTER" Homoniemnr="" Modern_lemma="koeiensutter" Woordsoort="" Betekenis="" line="145" hits='0'>
+</result>
+<result Wdb="MNW" id="22545" Lemma="COKE" Homoniemnr="II" Modern_lemma="koek" Woordsoort="" Betekenis="&lt;i&gt;Koek.&lt;/i&gt;" line="146" hits='0'>
+</result>
+<result Wdb="MNW" id="22554" Lemma="COKELKIJN" Homoniemnr="" Modern_lemma="koekeltje" Woordsoort="" Betekenis="" line="147" hits='0'>
+</result>
+<result Wdb="MNW" id="23417" Lemma="CORS" Homoniemnr="II" Modern_lemma="koers" Woordsoort="" Betekenis="&lt;i&gt;Loop&lt;/i&gt;, &lt;i&gt;gang&lt;/i&gt;. Fr. &lt;i&gt;cours&lt;/i&gt;." line="148" hits='0'>
+</result>
+<result Wdb="MNW" id="23426" Lemma="CORSIER" Homoniemnr="" Modern_lemma="koersier" Woordsoort="znw(m.) " Betekenis=" &lt;i&gt;Ros&lt;/i&gt;, &lt;i&gt;renner&lt;/i&gt;, &lt;i&gt;harddraver&lt;/i&gt;. " line="149" hits='0'>
+</result>
+<result Wdb="MNW" id="23553" Lemma="COUCHE" Homoniemnr="" Modern_lemma="koets" Woordsoort="znw(v.) " Betekenis="&lt;i&gt;Draagbaar&lt;/i&gt;. &lt;bibl&gt;&lt;idno n=&quot;s1346&quot;&gt;&lt;/idno&gt;&lt;src&gt;Kil.&lt;/src&gt;&lt;/bibl&gt; &lt;rf seen=&quot;yes&quot;&gt;koets, koetsie, koetswaghen&lt;/rf&gt;, lectica. " line="150" hits='0'>
+</result>
+<result Wdb="MNW" id="23610" Lemma="COUWE" Homoniemnr="IV" Modern_lemma="koe" Woordsoort="" Betekenis="Koe." line="151" hits='0'>
+</result>
+<result Wdb="MNW" id="22527" Lemma="COYER" Homoniemnr="" Modern_lemma="kooier, koeier" Woordsoort="" Betekenis="" line="152" hits='0'>
+</result>
+<result Wdb="MNW" id="46848" Lemma="ROES" Homoniemnr="II" Modern_lemma="roes, koers" Woordsoort="znw " Betekenis="Het woord is niet duidelijk. Mog. zooveel als: &lt;i&gt;wijze, gebruik&lt;/i&gt;." line="153" hits='0'>
+</result>
+<result Wdb="WNT" id="M040155.re.5" Subentry="true" Lemma="Coehoornmortier" Homoniemnr="" Modern_lemma="koehoornmortier " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder MORTIER]&lt;/i&gt;" line="154" hits='0'>
+</result>
+<result Wdb="WNT" id="M016793.re.1" Subentry="true" Lemma="Coeterfoeteren" Homoniemnr="" Modern_lemma="koeterfoeteren " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder FOETEREN I]&lt;/i&gt;" line="155" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432" Lemma="KOE" Homoniemnr="I" Modern_lemma="koe" Woordsoort="znw.(v.)" Betekenis=" Vrouwelijk rund." line="156" hits='0'>
+</result>
+<result Wdb="WNT" id="M034433" Lemma="KOE" Homoniemnr="II" Modern_lemma="koe" Woordsoort="znw." Betekenis="Lederen handbekleedsel, door metselaars en steenkruiers gebruikt om het stukschuren der handen door de gedurige aanraking met de ruwe en dikwijls nog heete steenen te voorkomen (&lt;SC&gt;ZWIERS&lt;/SC&gt; [1918]). Misschien is &lt;I&gt;koeien&lt;/I&gt; eigenlijk de aanduiding van de stof (koeleder) waarvan deze bekleedsels gemaakt worden. " line="157" hits='0'>
+</result>
+<result Wdb="WNT" id="M034434" Lemma="KOE" Homoniemnr="III" Modern_lemma="koe" Woordsoort="znw." Betekenis=" Kinkhoren (&lt;I&gt;Loquela (Wdb.)&lt;/I&gt; [Klemskerke, 1907])." line="158" hits='0'>
+</result>
+<result Wdb="WNT" id="M034435" Lemma="KOE" Homoniemnr="IV" Modern_lemma="koe" Woordsoort="znw." Betekenis=" In West-Friesl. gebezigd bij het kaartspel als iemand zijn slag haalt. " line="159" hits='0'>
+</result>
+<result Wdb="WNT" id="M009733.re.345" Subentry="true" Lemma="koe(i)boer" Homoniemnr="" Modern_lemma="koeboer " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder BOER I]&lt;/i&gt;" line="160" hits='0'>
+</result>
+<result Wdb="WNT" id="M023518.re.1" Subentry="true" Lemma="Koe(i)haamde" Homoniemnr="" Modern_lemma="koehamd " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder HAM III]&lt;/i&gt;" line="161" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.104" Subentry="true" Lemma="Koe(i)haamde" Homoniemnr="" Modern_lemma="koehamd " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="162" hits='0'>
+</result>
+<result Wdb="WNT" id="M071062.re.1" Subentry="true" Lemma="koe(i)tuier" Homoniemnr="" Modern_lemma="koetuier " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder TUIER I]&lt;/i&gt;" line="163" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.149" Subentry="true" Lemma="Koe(ie)koek" Homoniemnr="" Modern_lemma="koeienkoek " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="164" hits='0'>
+</result>
+<result Wdb="WNT" id="M034448.re.131" Subentry="true" Lemma="koe(ie)koek" Homoniemnr="" Modern_lemma="koeienkoek " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOEK]&lt;/i&gt;" line="165" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.58" Subentry="true" Lemma="Koe(ien)bloem" Homoniemnr="" Modern_lemma="koebloem, koeienbloem " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="166" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.82" Subentry="true" Lemma="Koe(ien)drek" Homoniemnr="" Modern_lemma="koedrek, koeiendrek " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="167" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.100" Subentry="true" Lemma="Koe(ien)gras" Homoniemnr="" Modern_lemma="koegras, koeiengras " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="168" hits='0'>
+</result>
+<result Wdb="WNT" id="M067082.re.100" Subentry="true" Lemma="koe(ien)stront" Homoniemnr="" Modern_lemma="koeienstront " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder STRONT]&lt;/i&gt;" line="169" hits='0'>
+</result>
+<result Wdb="WNT" id="M000028.re.10" Subentry="true" Lemma="Koeaal" Homoniemnr="" Modern_lemma="koeaal " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder AAL IV]&lt;/i&gt;" line="170" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.8" Subentry="true" Lemma="Koeaal" Homoniemnr="" Modern_lemma="koeaal " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="171" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.4" Subentry="true" Lemma="Koeachtig" Homoniemnr="" Modern_lemma="koeachtig " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="172" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.43" Subentry="true" Lemma="Koealtaar" Homoniemnr="" Modern_lemma="koealtaar " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="173" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.44" Subentry="true" Lemma="Koebak" Homoniemnr="" Modern_lemma="koebak " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="174" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.45" Subentry="true" Lemma="Koebalk" Homoniemnr="" Modern_lemma="koebalk " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="175" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.46" Subentry="true" Lemma="koebalken" Homoniemnr="" Modern_lemma="koebalk " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="176" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.47" Subentry="true" Lemma="Koeband" Homoniemnr="" Modern_lemma="koeband " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="177" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.48" Subentry="true" Lemma="Koebart" Homoniemnr="" Modern_lemma="koebart " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="178" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.9" Subentry="true" Lemma="koebat" Homoniemnr="" Modern_lemma="koebart " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="179" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.49" Subentry="true" Lemma="Koebeeld" Homoniemnr="" Modern_lemma="koebeeld " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="180" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.51" Subentry="true" Lemma="koebeend" Homoniemnr="" Modern_lemma="koebeend " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="181" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.50" Subentry="true" Lemma="Koebeenig" Homoniemnr="" Modern_lemma="koebenig " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="182" hits='0'>
+</result>
+<result Wdb="WNT" id="M006024.re.36" Subentry="true" Lemma="koebeest" Homoniemnr="" Modern_lemma="koebeest " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder BEEST I]&lt;/i&gt;" line="183" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.10" Subentry="true" Lemma="koebeest" Homoniemnr="" Modern_lemma="koebeest " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="184" hits='0'>
+</result>
+<result Wdb="WNT" id="M034436" Lemma="KOEBEEST" Homoniemnr="" Modern_lemma="koebeest" Woordsoort="znw.(o.)" Betekenis=" Vrouwelijk huisrund. " line="185" hits='0'>
+</result>
+<result Wdb="WNT" id="M034436.re.1" Subentry="true" Lemma="Koebeestenvleesch" Homoniemnr="" Modern_lemma="koebeestenvlees " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOEBEEST]&lt;/i&gt;" line="186" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.52" Subentry="true" Lemma="Koebeet" Homoniemnr="" Modern_lemma="koebiet " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="187" hits='0'>
+</result>
+<result Wdb="WNT" id="M006437.re.23" Subentry="true" Lemma="koebek" Homoniemnr="" Modern_lemma="koebek " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder BEK]&lt;/i&gt;" line="188" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.53" Subentry="true" Lemma="Koebek" Homoniemnr="" Modern_lemma="koebek " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="189" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.54" Subentry="true" Lemma="Koebel" Homoniemnr="" Modern_lemma="koebel " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="190" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.55" Subentry="true" Lemma="Koeberg" Homoniemnr="" Modern_lemma="koeberg " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="191" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.56" Subentry="true" Lemma="Koebeugel" Homoniemnr="" Modern_lemma="koebeugel " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="192" hits='0'>
+</result>
+<result Wdb="WNT" id="M008084.re.2" Subentry="true" Lemma="koebeun" Homoniemnr="" Modern_lemma="koebeun " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder BEUN II]&lt;/i&gt;" line="193" hits='0'>
+</result>
+<result Wdb="WNT" id="M009486.re.245" Subentry="true" Lemma="koebloem" Homoniemnr="" Modern_lemma="koebloem " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder BLOEM]&lt;/i&gt;" line="194" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.59" Subentry="true" Lemma="Koeblond" Homoniemnr="" Modern_lemma="koeblond " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="195" hits='0'>
+</result>
+<result Wdb="WNT" id="M009573.re.6" Subentry="true" Lemma="koebocht" Homoniemnr="" Modern_lemma="koebocht " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder BOCHT II]&lt;/i&gt;" line="196" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.60" Subentry="true" Lemma="Koebocht" Homoniemnr="" Modern_lemma="koebocht " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="197" hits='0'>
+</result>
+<result Wdb="WNT" id="M009723.re.2" Subentry="true" Lemma="koeboelin" Homoniemnr="" Modern_lemma="koeboelin " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder BOELIN]&lt;/i&gt;" line="198" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.61" Subentry="true" Lemma="Koeboer" Homoniemnr="" Modern_lemma="koeboer " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="199" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.62" Subentry="true" Lemma="koeboerderij" Homoniemnr="" Modern_lemma="koeboerderij " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="200" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.63" Subentry="true" Lemma="koeboeremest" Homoniemnr="" Modern_lemma="koeboerenmest " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="201" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.64" Subentry="true" Lemma="Koeboet" Homoniemnr="" Modern_lemma="koeboet " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="202" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.65" Subentry="true" Lemma="Koeboom" Homoniemnr="" Modern_lemma="koeboom " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="203" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.66" Subentry="true" Lemma="koeboomwas" Homoniemnr="" Modern_lemma="koeboomwas " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="204" hits='0'>
+</result>
+<result Wdb="WNT" id="M011867.re.44" Subentry="true" Lemma="koebrug" Homoniemnr="" Modern_lemma="koebrug " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder BRUG]&lt;/i&gt;" line="205" hits='0'>
+</result>
+<result Wdb="WNT" id="M011867.re.62" Subentry="true" Lemma="koebrug" Homoniemnr="" Modern_lemma="koebrug " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder BRUG]&lt;/i&gt;" line="206" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.11" Subentry="true" Lemma="koebrug" Homoniemnr="" Modern_lemma="koebrug " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="207" hits='0'>
+</result>
+<result Wdb="WNT" id="M034437" Lemma="KOEBRUG" Homoniemnr="" Modern_lemma="koebrug" Woordsoort="znw.(v.)" Betekenis=" Soort van opperste scheepsdek (ook de oudste bet. in het Nnd.), misschien eerst — voor een gedeelte althans — een traliewerk dat men oudtijds legde boven den kuil van het halfdek af tot den bak toe wijl men aldaar geen vast dek had, en dat naderhand door een gesloten dek vervangen werd. Verg. voor deze en de volg. bet. &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;M011001&quot;&gt;BOVENNET&lt;/ref&gt;&lt;/xr&gt;. " line="208" hits='0'>
+</result>
+<result Wdb="WNT" id="M034437.re.1" Subentry="true" Lemma="Koebrugbalk" Homoniemnr="" Modern_lemma="koebrugbalk " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOEBRUG]&lt;/i&gt;" line="209" hits='0'>
+</result>
+<result Wdb="WNT" id="M013286.re.35" Subentry="true" Lemma="koebrugdek" Homoniemnr="" Modern_lemma="koebrugdek " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder DEK]&lt;/i&gt;" line="210" hits='0'>
+</result>
+<result Wdb="WNT" id="M034437.re.2" Subentry="true" Lemma="Koebrugdek" Homoniemnr="" Modern_lemma="koebrugdek " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOEBRUG]&lt;/i&gt;" line="211" hits='0'>
+</result>
+<result Wdb="WNT" id="M050814.re.4" Subentry="true" Lemma="koebrugoverloop" Homoniemnr="" Modern_lemma="koebrugoverloop " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder OVERLOOP]&lt;/i&gt;" line="212" hits='0'>
+</result>
+<result Wdb="WNT" id="M034438.re.1" Subentry="true" Lemma="Koech" Homoniemnr="" Modern_lemma="koech " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOECHEN]&lt;/i&gt;" line="213" hits='0'>
+</result>
+<result Wdb="WNT" id="M034438.re.3" Subentry="true" Lemma="koechel" Homoniemnr="" Modern_lemma="koechel " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOECHEN]&lt;/i&gt;" line="214" hits='0'>
+</result>
+<result Wdb="WNT" id="M034438.re.2" Subentry="true" Lemma="Koechelen" Homoniemnr="" Modern_lemma="koechelen " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOECHEN]&lt;/i&gt;" line="215" hits='0'>
+</result>
+<result Wdb="WNT" id="M034438" Lemma="KOECHEN" Homoniemnr="" Modern_lemma="koechen" Woordsoort="ww.(intr.,zw.)" Betekenis=" Zuchten, steunen. Zie een voorbeeld onder &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;M035766&quot;&gt;KUCHEN&lt;/ref&gt;&lt;/xr&gt;." line="216" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.69" Subentry="true" Lemma="Koedamp" Homoniemnr="" Modern_lemma="koedamp " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="217" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.70" Subentry="true" Lemma="Koedarm" Homoniemnr="" Modern_lemma="koedarm " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="218" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.71" Subentry="true" Lemma="Koedeel" Homoniemnr="" Modern_lemma="koedeel " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="219" hits='0'>
+</result>
+<result Wdb="WNT" id="M013286.re.43" Subentry="true" Lemma="Koedek" Homoniemnr="" Modern_lemma="koedek " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder DEK]&lt;/i&gt;" line="220" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.72" Subentry="true" Lemma="Koedek" Homoniemnr="" Modern_lemma="koedek " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="221" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.73" Subentry="true" Lemma="koedekspinster" Homoniemnr="" Modern_lemma="koedekspinster " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="222" hits='0'>
+</result>
+<result Wdb="WNT" id="M013526.re.40" Subentry="true" Lemma="koedief" Homoniemnr="" Modern_lemma="koeiendief " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder DIEF]&lt;/i&gt;" line="223" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.74" Subentry="true" Lemma="Koedief" Homoniemnr="" Modern_lemma="koeiendief " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="224" hits='0'>
+</result>
+<result Wdb="WNT" id="M013533.re.3" Subentry="true" Lemma="Koediefte" Homoniemnr="" Modern_lemma="koeiendiefte " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder DIEFTE]&lt;/i&gt;" line="225" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.75" Subentry="true" Lemma="Koediefte" Homoniemnr="" Modern_lemma="koeiendiefte " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="226" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.76" Subentry="true" Lemma="Koedil(le)" Homoniemnr="" Modern_lemma="koedille " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="227" hits='0'>
+</result>
+<result Wdb="WNT" id="M013733.re.5" Subentry="true" Lemma="koedjakke" Homoniemnr="" Modern_lemma="koedjak " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder DJAK]&lt;/i&gt;" line="228" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.12" Subentry="true" Lemma="koedjakke" Homoniemnr="" Modern_lemma="koedjak " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="229" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.78" Subentry="true" Lemma="Koedokter" Homoniemnr="" Modern_lemma="koedokter " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="230" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.13" Subentry="true" Lemma="koedong" Homoniemnr="" Modern_lemma="koeiendong " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="231" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.79" Subentry="true" Lemma="Koedooder" Homoniemnr="" Modern_lemma="koedoder " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="232" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.80" Subentry="true" Lemma="Koedrank" Homoniemnr="" Modern_lemma="koedrank " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="233" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.81" Subentry="true" Lemma="Koedreet" Homoniemnr="" Modern_lemma="koedreet " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="234" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.83" Subentry="true" Lemma="koedrekvlieg" Homoniemnr="" Modern_lemma="koeiendrekvlieg " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="235" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.86" Subentry="true" Lemma="Koedrijver" Homoniemnr="" Modern_lemma="koedrijver " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="236" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.87" Subentry="true" Lemma="Koedronk" Homoniemnr="" Modern_lemma="koedronk " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="237" hits='0'>
+</result>
+<result Wdb="WNT" id="M034434.re.1" Subentry="true" Lemma="Koeën" Homoniemnr="" Modern_lemma="koeën " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE III]&lt;/i&gt;" line="238" hits='0'>
+</result>
+<result Wdb="WNT" id="M016605.re.2" Subentry="true" Lemma="Koeflater" Homoniemnr="" Modern_lemma="koeflater " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder FLATER]&lt;/i&gt;" line="239" hits='0'>
+</result>
+<result Wdb="WNT" id="M016632.re.2" Subentry="true" Lemma="koeflens" Homoniemnr="" Modern_lemma="koeflens " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder FLENS I]&lt;/i&gt;" line="240" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.89" Subentry="true" Lemma="Koeflens" Homoniemnr="" Modern_lemma="koeflens " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="241" hits='0'>
+</result>
+<result Wdb="WNT" id="M017221.re.10" Subentry="true" Lemma="koegang" Homoniemnr="" Modern_lemma="koegang " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder GANG II]&lt;/i&gt;" line="242" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.14" Subentry="true" Lemma="koegang" Homoniemnr="" Modern_lemma="koegang " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="243" hits='0'>
+</result>
+<result Wdb="WNT" id="M034440" Lemma="KOEGANG" Homoniemnr="I" Modern_lemma="koegang" Woordsoort="znw.(m.)" Betekenis=" Bepaalde landmaat, eigenlijk: zooveel land als een koe in een zomer voor haar voedsel noodig heeft; verg. &lt;xr type=&quot;article_id_internal&quot;&gt;&lt;ref target=&quot;M034540&quot;&gt;KOEWEIDE&lt;/ref&gt;&lt;/xr&gt;. " line="244" hits='0'>
+</result>
+<result Wdb="WNT" id="M034441" Lemma="KOEGANG" Homoniemnr="II" Modern_lemma="koegang" Woordsoort="znw.(v.)" Betekenis="In Groningen en N.-Holl.: de ruimte achter de koeien op stal (&lt;SC&gt;BOUMAN&lt;/SC&gt; 31; &lt;SC&gt;TER LAAN&lt;/SC&gt;; &lt;SC&gt;KARSTEN&lt;/SC&gt;). " line="245" hits='0'>
+</result>
+<result Wdb="WNT" id="M034441.re.1" Subentry="true" Lemma="Koegangdeur" Homoniemnr="" Modern_lemma="koegangdeur " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOEGANG II]&lt;/i&gt;" line="246" hits='0'>
+</result>
+<result Wdb="WNT" id="M034442" Lemma="KOEGEL" Homoniemnr="" Modern_lemma="koegel" Woordsoort="" Betekenis=" Zie &lt;SC&gt;KOGEL.&lt;/SC&gt; " line="247" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.94" Subentry="true" Lemma="Koegeld" Homoniemnr="" Modern_lemma="koegeld " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="248" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.95" Subentry="true" Lemma="Koegeloei" Homoniemnr="" Modern_lemma="koegeloei " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="249" hits='0'>
+</result>
+<result Wdb="WNT" id="M034432.re.97" Subentry="true" Lemma="Koegeslacht" Homoniemnr="" Modern_lemma="koegeslacht " Woordsoort="" Betekenis="&lt;i&gt;[behandeld onder KOE I]&lt;/i&gt;" line="250" hits='0'>
+</result>
+</results>

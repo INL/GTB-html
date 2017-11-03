@@ -19,7 +19,8 @@
             </ivdnt:modalcontent>
         </ivdnt:modal>
     </div>
-    <div class="col-md-2"><button class="btn btn-secondary"  name="wis-zoeken">Wis</button></div>
-    <div class="col-md-2"><button class="btn btn-primary gtb-zoek-button" name="start-zoeken" type="submit">Zoek</button></div>
-    <div class="col-md-2 gtbcheckbox"><label class="form-group">Letters exact <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive" class="checkbox-inline"/></label></div>
+    <div class="col-md-1"><button class="btn btn-secondary"  name="wis-zoeken">Wis</button></div>
+    <div class="col-md-1"><img class="gtb-keyboard-icon" src="keyboard.png" alt="Icoon met toetsenbordje" title="Klik om speciale tekens in te voeren"/></div>
+    <div class="col-md-1"><button class="btn btn-primary gtb-zoek-button" name="start-zoeken" type="submit">Zoek</button></div>
+    <div class="col-md-3 gtbcheckbox"><label class="form-group">Letters exact <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive" class="checkbox-inline"/></label></div>
 </div>

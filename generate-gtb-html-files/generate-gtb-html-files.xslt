@@ -293,14 +293,11 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:specialetekens" mode="ivdnt:html-mode">
-        <div class="speciaalteken">
+        <div class="speciaalteken collapse out">
             <table class="speciaalteken">
                 <tbody>
                     <xsl:for-each-group select="ivdnt:teken" group-adjacent="xs:integer((position() - 1) div $aantal-speciaal-teken-kolommen)">
                         <tr>
-                            <xsl:if test="xs:integer(current-grouping-key()) ge 1">
-                                <xsl:attribute name="class" select="'collapse out'"/>
-                            </xsl:if>
                             <xsl:apply-templates select="current-group()" mode="ivdnt:ivdnt-teken"/>
                             <xsl:if test="count(current-group()) lt $aantal-speciaal-teken-kolommen">
                                 <td colspan="{$aantal-speciaal-teken-kolommen - count(current-group())}">&#160;</td>

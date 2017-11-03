@@ -98,7 +98,7 @@
                 <ul class="pagination">
                     <xsl:call-template name="ivdnt:gen-pagination">
                         <xsl:with-param name="statistics" select="statistics"/>
-                        <xsl:with-param name="startline" select="$startline"/>
+                        <xsl:with-param name="currentStartLine" select="$startline"/>
                     </xsl:call-template>
                 </ul>
             </div>
@@ -124,38 +124,48 @@
         
     </xsl:template>
     
+    <xsl:function name="ivdnt:range-title"  as="xs:string">
+        <xsl:param name="firstOfRange" as="xs:integer"/>
+        <xsl:param name="maxLineNumber" as="xs:integer"/>
+        
+        <xsl:variable name="lastOfRange" as="xs:integer" select="min(($firstOfRange + $maxLinesInResultPage - 1, $maxLineNumber))"/>
+        <xsl:value-of select="'Toon regel ' || $firstOfRange || ' - ' || $lastOfRange"/>
+    </xsl:function>
+    
     <xsl:template name="ivdnt:gen-pagination">
         <xsl:param name="statistics" as="element(statistics)" required="yes"/>
-        <xsl:param name="startline" as="xs:integer" required="yes"/>
+        <xsl:param name="currentStartLine" as="xs:integer" required="yes"/>
         
-        <xsl:variable name="last-startline" select="max(((xs:integer($statistics/stat[1]/@count) + 1) - $maxLinesInResultPage, 1))" as="xs:integer"/>
-        <xsl:variable name="preceding-startline" select="if (($startline - $maxLinesInResultPage) ge 1) then $startline - $maxLinesInResultPage else ()" as="xs:integer?"/>
-        <xsl:variable name="following-startline" select="if (($startline + $maxLinesInResultPage) gt $last-startline) then () else $startline + $maxLinesInResultPage " as="xs:integer?"/>
-        <xsl:variable name="beyond-following-startline" select="if (not(exists($preceding-startline)) and exists($following-startline))
-            then if (($following-startline + $maxLinesInResultPage) gt $last-startline)
-                 then ()
-                 else $following-startline + $maxLinesInResultPage
-            else ()" as="xs:integer?"/>
-        <xsl:variable name="surrounding-startlines" select="($preceding-startline, $startline, $following-startline, $beyond-following-startline)" as="xs:integer+"/>
+        <!-- Note: a result with value 0 means: invalid line number. -->
+        <xsl:variable name="highestLineNumber" as="xs:integer" select="xs:integer($statistics/stat[1]/@count)"/>
+        <xsl:variable name="lastPageNumber" as="xs:integer" select="xs:integer(($highestLineNumber + $maxLinesInResultPage - 1) div $maxLinesInResultPage)"/>
+        <xsl:variable name="lastStartLine" as="xs:integer" select="(($lastPageNumber - 1) * $maxLinesInResultPage) + 1"/>
+        <xsl:variable name="nextStartLine" as="xs:integer" select="if (($currentStartLine + $maxLinesInResultPage) gt $highestLineNumber) then 0 else $currentStartLine + $maxLinesInResultPage"/>
+        <xsl:variable name="beyondNextStartLine" as="xs:integer" select="if ($nextStartLine eq 0) then 0 else if (($nextStartLine + $maxLinesInResultPage) gt $highestLineNumber) then 0 else $nextStartLine + $maxLinesInResultPage"/>
+        <xsl:variable name="prevStartLine" as="xs:integer" select="if ($currentStartLine lt $maxLinesInResultPage) then 0 else $currentStartLine - $maxLinesInResultPage"/>
         
-        <li class="gtb-paginate_button "><a href="#" data-startline="1" title="Ga naar regel 1">Eerste</a></li>
-        <li class="gtb-paginate_button previous {if (empty($preceding-startline)) then 'disabled' else ''}" id="gtb-result-table_previous">
-            <xsl:variable name="line" as="xs:integer" select="max(($startline - $maxLinesInResultPage, 1))"/>
-            <a href="#" data-startline="{$line}" title="Ga naar regel {$line}">Vorige</a>
+        <xsl:message>currentStartLine={$currentStartLine}, highestLineNumber={$highestLineNumber}, lastPageNumber={$lastPageNumber}, lastStartLine={$lastStartLine}, nextStartLine={$nextStartLine}, beyondNextStartLine={$beyondNextStartLine}, prevStartLine={$prevStartLine}"</xsl:message>
+        
+        <xsl:variable name="surroundingStartlines" select="($prevStartLine, $currentStartLine, $nextStartLine, $beyondNextStartLine)" as="xs:integer+"/>
+        
+        <li class="gtb-paginate_button "><a href="#" data-startline="1" title="{ivdnt:range-title(1, $highestLineNumber)}">Eerste</a></li>
+        <li class="gtb-paginate_button previous {if ($prevStartLine eq 0) then 'disabled' else ''}" id="gtb-result-table_previous">
+            <xsl:variable name="line" as="xs:integer" select="max(($prevStartLine, 1))"/>
+            <a href="#" data-startline="{$line}" title="{ivdnt:range-title($line, $highestLineNumber)}">Vorige</a>
         </li>
-        <xsl:if test="$surrounding-startlines[1] ne 1">
+        <xsl:if test="$surroundingStartlines[1] ne 1">
             <li class="gbt-paginate_button disabled"><a href="#">…</a></li>
         </xsl:if>
-        <xsl:for-each select="$surrounding-startlines">
-            <li class="gtb-paginate_button {if (. eq $startline) then 'active' else ''}"><a title="Ga naar regel {.}" href="#" data-startline="{.}">{ivdnt:linenumber2pagenumber(.)}</a></li>
+        <xsl:for-each select="$surroundingStartlines[. ne 0]">
+            <li class="gtb-paginate_button {if (. eq $currentStartLine) then 'active' else ''}"><a title="{ivdnt:range-title(., $highestLineNumber)}" href="#" data-startline="{.}">{ivdnt:linenumber2pagenumber(.)}</a></li>
         </xsl:for-each>
-        <xsl:if test="$surrounding-startlines[3] ne $last-startline">
+        <xsl:if test="$surroundingStartlines[3] ne $lastStartLine">
             <li class="gbt-paginate_button disabled"><a href="#">…</a></li>
         </xsl:if>
-        <li class="gtb-paginate_button next {if (empty($following-startline)) then 'disabled' else ''}" id="gtb-result-table_next">
-            <a href="#" data-startline="{$following-startline}" title="Ga naar regel {$following-startline}">Volgende</a>
+        <li class="gtb-paginate_button next {if ($nextStartLine eq 0) then 'disabled' else ''}" id="gtb-result-table_next">
+            <a href="#" data-startline="{$nextStartLine}" title="{ivdnt:range-title($nextStartLine, $highestLineNumber)}">Volgende</a>
         </li>
-        <li class="gtb-paginate_button "><a href="#" data-startline="{$last-startline}" title="Ga naar regel {$last-startline}">Laatste</a></li>
+        <li class="gtb-paginate_button "><a href="#" data-startline="{$lastStartLine}" title="{ivdnt:range-title($lastStartLine, $highestLineNumber)}">Laatste</a></li>
     </xsl:template>
     
     <xsl:function name="ivdnt:linenumber2pagenumber" as="xs:integer">

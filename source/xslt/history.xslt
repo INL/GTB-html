@@ -27,14 +27,14 @@
     <xsl:function name="ivdnt:create-input-or-select-elements"  as="element()+">
         <xsl:param name="formdiv" as="element(div)"/>
         
-        <xsl:for-each select="$formdiv//*[self::select | self::input]">
+        <xsl:for-each select="$formdiv//*[self::select | self::input[@name]]">
             <xsl:variable name="name" as="xs:string" select="@name"/>
             <xsl:variable name="type" as="xs:string" select="if (self::input) then @type else ''"/>
             <xsl:variable name="value" as="xs:string" select="normalize-space(ivdnt:get-input-value(.))"/>
             <xsl:variable name="checked" as="xs:boolean" select="if ($type = ('radio', 'checkbox')) then ivdnt:is-checked(.) else false()"/>
             <xsl:sequence select="ivdnt:create-input-or-select-element(., $formdiv)"/>
             <xsl:if test="@data-label eq 'Woordsoort'">
-                <xsl:variable name="data-target" as="xs:string" select="ivdnt:strip-hash-from-id(following-sibling::button[1]/@data-target)"/>
+                <xsl:variable name="data-target" as="xs:string" select="ivdnt:strip-hash-from-id(following-sibling::input[1]/@data-target)"/>
                 <woordsoort-inputs>
                     <xsl:variable name="woordsoort-div" as="element(div)" select="key('ids', $data-target)"/>
                     <xsl:sequence select="ivdnt:create-input-or-select-elements($woordsoort-div)"/>

@@ -19,7 +19,7 @@
         <ivdnt:formulierinput>
             <input type="text" name="lemwrdsrt" data-humanname="woordsoort" data-modal-target-id="uitgebreidzoeken.lemwrdsrt" class="form-control gtb-woordsoortveld"/>
             <ivdnt:modal type="woordsoortzoeken" target-input="uitgebreidzoeken.lemwrdsrt">
-                <ivdnt:modaltrigger><button type="button" class="woordsoortassistentieknop btn btn-secondary">Assistentie...</button></ivdnt:modaltrigger>
+                <ivdnt:modaltrigger><input type="image" class="woordsoortassistentieknop btn btn-secondary" src="toverstaf.png" alt="Icon met toverstaf" title="Klik voor hulp bij het invoeren van de woordsoort"/></ivdnt:modaltrigger>
                 <ivdnt:modalcontent>
                     <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
                     <ivdnt:include href="woordsoortassistentie.xml"/>

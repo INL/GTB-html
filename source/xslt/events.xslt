@@ -238,18 +238,13 @@
         </xsl:call-template>
     </xsl:template>
     
-    <xsl:template match="input[@name eq 'toon-tekens']" mode="ixsl:onclick">
-        <xsl:variable name="parentdiv" select="following::div[ivdnt:class-contains(@class, 'speciaalteken')][1]" as="element(div)"/>
-        <xsl:variable name="is-checked" as="xs:boolean" select="ivdnt:is-checked(.)"/>
-        <xsl:for-each select="$parentdiv//tr[ivdnt:class-contains(@class, 'collapse')]">
-            <xsl:choose>
-                <xsl:when test="$is-checked">
-                    <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'out', 'in')"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'in', 'out')"/>
-                </xsl:otherwise>
-            </xsl:choose>
+    <xsl:template match="img[ivdnt:class-contains(@class, 'gtb-keyboard-icon')]" mode="ixsl:onclick">
+        <xsl:variable name="speciaaltekendiv" select="ancestor::div[ivdnt:class-contains(@class, 'zoek-formulier')]//div[ivdnt:class-contains(@class, 'speciaalteken')][1]" as="element(div)"/>
+        <xsl:variable name="special-chars-visible" as="xs:boolean" select="ivdnt:class-contains($speciaaltekendiv/@class, 'in')"/>
+        
+        <xsl:for-each select="$speciaaltekendiv">
+            <!-- Not a real iteration, for-each just sets the context. -->
+            <ixsl:set-attribute name="class" select="if ($special-chars-visible) then ivdnt:replace-class-value(@class, 'in', 'out') else ivdnt:replace-class-value(@class, 'out', 'in')"/>
         </xsl:for-each>
     </xsl:template>
     
@@ -267,8 +262,8 @@
             <ixsl:set-property name="value" select="$newtext" object="$textbox"/>
             <xsl:variable name="newSelStart" select="$selStart + string-length($char)"/>
             <ixsl:set-property name="selectionEnd" select="$newSelStart" object="$textbox"/>
-            <!-- Set focus and show the caret. The predicate below with current-date() always returns false, thus making sure that the result of ixsl:call() is not put into the result. -->
-            <xsl:sequence select="ixsl:call($textbox, 'focus', [])[string(current-date()) eq 'nimmer']"/>
+            <!-- Set focus and show the caret. The predicate below with ivdnt:always-false() makes that the result of ixsl:call() is not put into the result. -->
+            <xsl:sequence select="ixsl:call($textbox, 'focus', [])[ivdnt:always-false()]"/>
         </xsl:if>
     </xsl:template>
     
