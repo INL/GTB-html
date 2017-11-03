@@ -88,6 +88,7 @@
             <link rel="stylesheet" media="screen" href="css/bootstrap.min.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/datatables.min.css" type="text/css" />
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
+            <link rel="stylesheet" media="screen" href="css/gtb-artikel.css" type="text/css"/>
             
             <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>

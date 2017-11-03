@@ -13,12 +13,6 @@
         <xsl:value-of select="'&quot;' || replace($string, '&quot;', '\\&quot;') || '&quot;'"/>
     </xsl:function>
     
-    <xsl:function name="ivdnt:attributes2string" as="xs:string">
-        <xsl:param name="attrs" as="attribute()*"/>
-        <xsl:variable name="result" as="xs:string*"><xsl:for-each select="$attrs">{name(.) || '=' || ivdnt:quote(.)}</xsl:for-each></xsl:variable>
-        <xsl:value-of select="if (count($result) gt 0) then ' ' || string-join($result, ' ') else ''"/>
-    </xsl:function>
-    
     <xsl:function name="ivdnt:is-bronnenlijst-result"  as="xs:boolean">
         <xsl:param name="results-element" as="element(results)"/>
         <xsl:sequence select="exists($results-element/result[@titel])"></xsl:sequence>
@@ -325,24 +319,28 @@
     </xsl:template>
     
     <xsl:template match="*" mode="parse-result-attribute">
-        <span class="gtb-xml-error">&lt;{name(.) || ivdnt:attributes2string(@*)}&gt;</span>
-        <xsl:apply-templates mode="parse-result-attribute"/>
-        <span class="gtb-xml-error">&lt;/{name(.)}&gt;</span>
+        <span class="gtb-art-{lower-case(name(.))}">
+            <xsl:apply-templates select="@*" mode="parse-result-attribute"/>
+            <xsl:apply-templates mode="parse-result-attribute"/>
+        </span>
     </xsl:template>
     
-    <!-- TODO find out about markup used inside attributes --> 
-    <xsl:template match="I|i|EM|em|B|b|br|BR" mode="parse-result-attribute">
-        <xsl:element name="{lower-case(local-name(.))}">
-            <xsl:copy-of select="@*"/>
-            <xsl:apply-templates mode="parse-result-attribute"/>
-        </xsl:element>
+    <xsl:template match="@*" mode="parse-result-attribute">
+        <xsl:attribute name="data-{lower-case(name(.))}" select="."/>
     </xsl:template>
     
     <xsl:template match="font[@color]|FONT[@color]" mode="parse-result-attribute">
         <span style="color: {@color}">
-            <xsl:copy-of select="@* except @color"/>
+            <xsl:apply-templates select="@* except @color" mode="parse-result-attribute"/>
             <xsl:apply-templates mode="parse-result-attribute"/>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="br|BR" mode="parse-result-attribute">
+        <xsl:element name="{lower-case(local-name(.))}">
+            <xsl:apply-templates select="@*" mode="parse-result-attribute"/>
+            <xsl:apply-templates mode="parse-result-attribute"/>
+        </xsl:element>
     </xsl:template>
     
 </xsl:stylesheet>

@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://ns.saxonica.com/xslt/export" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vv="http://saxon.sf.net/generated-variable" xmlns:java-type="http://saxon.sf.net/java-type" version="30" packageVersion="1" saxonVersion="9.7.0.19" timeStamp="2017-11-03T15:58:52.515+01:00" target="JS">
- <co id="0" binds="1">
+<package xmlns="http://ns.saxonica.com/xslt/export" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vv="http://saxon.sf.net/generated-variable" xmlns:java-type="http://saxon.sf.net/java-type" version="30" packageVersion="1" saxonVersion="9.7.0.19" timeStamp="2017-11-03T16:19:17.957+01:00" target="JS">
+ <co id="0" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg8257460" type="xs:anyAtomicType*" line="410" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.anyAtomicType.cast(val);" jsCardCheck="function c() {return true;};">
+   <data vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="410">
+    <message>
+     <valueOf role="select" flags="e">
+      <str val="Geen woordenboeken geselecteerd"/>
+     </valueOf>
+     <str role="terminate" val="no"/>
+     <str role="error" val="Q{http://www.w3.org/2005/xqt-errors}XTMM9000"/>
+    </message>
+   </data>
+  </globalVariable>
+ </co>
+ <co id="1" binds="2">
   <mode name="Q{}render-conc-attributes" onNo="TC" flags="W" patternSlots="0">
-   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="0" flags="os" line="254" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="0" flags="os" line="248" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}zoekwoord)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='zoekwoord'"/>
-    <callT role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="255" name="parse-result-attributes" bSlot="0"/>
+    <callT role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="249" name="parse-result-attributes" bSlot="0"/>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="0" flags="os" line="254" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="0" flags="os" line="248" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}voor)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='voor'"/>
-    <callT role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="255" name="parse-result-attributes" bSlot="0"/>
+    <callT role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="249" name="parse-result-attributes" bSlot="0"/>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="0" flags="os" line="254" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="0" flags="os" line="248" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}na)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='na'"/>
-    <callT role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="255" name="parse-result-attributes" bSlot="0"/>
+    <callT role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="249" name="parse-result-attributes" bSlot="0"/>
    </templateRule>
   </mode>
  </co>
- <co id="2" binds="">
+ <co id="3" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-showhide-div" line="131" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="element(Q{}div)" slots="2">
    <arg name="predecessor" as="element()"/>
    <check role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="133" card="1" diag="5|0|XTTE0780|ivdnt:get-showhide-div">
-    <let var="vv:loc274003906" as="xs:untypedAtomic?" slot="1" eval="8">
+    <let var="vv:loc2107035762" as="xs:untypedAtomic?" slot="1" eval="8">
      <data>
       <slash simple="1">
        <varRef name="predecessor" slot="0"/>
@@ -36,7 +49,7 @@
          <data>
           <axis name="attribute" nodeTest="attribute(Q{}data-showhidegroup)" jsTest="return item.name=='data-showhidegroup'"/>
          </data>
-         <varRef name="vv:loc274003906" slot="1"/>
+         <varRef name="vv:loc2107035762" slot="1"/>
         </vc>
        </filter>
       </first>
@@ -45,12 +58,20 @@
    </check>
   </function>
  </co>
- <co id="3" vis="PUBLIC" binds="">
+ <co id="4" vis="PUBLIC" binds="">
   <globalParam name="Q{}showLinkToSearchResultXml" type="xs:boolean" line="0" visibility="PUBLIC" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <false/>
   </globalParam>
  </co>
- <co id="4" binds="5">
+ <co id="5" binds="6">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg66740533" type="xs:string" line="303" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="303" name="concat">
+    <gVarRef name="Q{}baseArticleContentURL" bSlot="0"/>
+    <str val="&amp;wdb="/>
+   </fn>
+  </globalVariable>
+ </co>
+ <co id="7" binds="8">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}gtb-collapse" flags="os" line="152" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="2">
    <forEach role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="153">
     <let var="successor" as="element()" slot="0" eval="7">
@@ -58,7 +79,7 @@
       <dot flags="a"/>
      </treat>
      <check line="138" card="1" diag="5|0|XTTE0780|ivdnt:get-showhide-a">
-      <let var="vv:loc472567114" as="xs:untypedAtomic?" slot="1" eval="8">
+      <let var="vv:loc494664368" as="xs:untypedAtomic?" slot="1" eval="8">
        <data>
         <slash simple="1">
          <varRef name="successor" slot="0"/>
@@ -74,7 +95,7 @@
            <data>
             <axis name="attribute" nodeTest="attribute(Q{}data-showhidegroup)" jsTest="return item.name=='data-showhidegroup'"/>
            </data>
-           <varRef name="vv:loc472567114" slot="1"/>
+           <varRef name="vv:loc494664368" slot="1"/>
           </vc>
          </filter>
         </first>
@@ -97,7 +118,7 @@
    </forEach>
   </template>
  </co>
- <co id="6" binds="7">
+ <co id="9" binds="10">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-formdiv-inputs-and-selects" line="15" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="7" flags="pU" as="element(Q{}inputs-and-selects)" slots="2">
    <arg name="where-to-start" as="element()"/>
    <arg name="formdiv-id" as="xs:string"/>
@@ -143,11 +164,11 @@
    </elem>
   </function>
  </co>
- <co id="8" binds="9">
-  <function name="Q{http://www.ivdnt.org/xslt/namespaces}range-title" line="127" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="8" flags="pU" as="xs:string" slots="2">
+ <co id="11" binds="12">
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}range-title" line="121" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="8" flags="pU" as="xs:string" slots="2">
    <arg name="firstOfRange" as="xs:integer"/>
    <arg name="maxLineNumber" as="xs:integer"/>
-   <cvUntyped role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="132" to="xs:string">
+   <cvUntyped role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="126" to="xs:string">
     <cast as="xs:untypedAtomic" emptiable="0">
      <fn name="concat">
       <fn name="concat">
@@ -157,7 +178,7 @@
        </fn>
        <str val=" - "/>
       </fn>
-      <treat line="131" as="xs:integer" jsTest="return SaxonJS.U.Atomic.integer.matches(item);" diag="3|0|XTTE0570|lastOfRange">
+      <treat line="125" as="xs:integer" jsTest="return SaxonJS.U.Atomic.integer.matches(item);" diag="3|0|XTTE0570|lastOfRange">
        <cvUntyped to="xs:integer">
         <fn name="min">
          <sequence>
@@ -178,12 +199,12 @@
    </cvUntyped>
   </function>
  </co>
- <co id="10" binds="">
+ <co id="13" binds="">
   <globalVariable name="Q{}RESULT_SORTKEYS_PROPERTY" type="xs:string" line="40" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <str val="result-sortkeys"/>
   </globalVariable>
  </co>
- <co id="11" binds="12 13">
+ <co id="14" binds="15 16">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}reactivate-tab" flags="os" line="219" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="1">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="220">
     <param name="tabdiv" slot="0" flags="r" as="element(Q{}div)">
@@ -240,17 +261,17 @@
    </sequence>
   </template>
  </co>
- <co id="14" binds="">
+ <co id="17" binds="">
   <globalVariable name="Q{}ZOEK_FORMULIER_CLASS" type="xs:string" line="43" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <str val="zoek-formulier"/>
   </globalVariable>
  </co>
- <co id="15" binds="">
+ <co id="18" binds="">
   <globalVariable name="Q{}URL_FOR_CONTENT_PROPERTY" type="xs:string" line="35" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <str val="url-for-content"/>
   </globalVariable>
  </co>
- <co id="16" binds="17 18">
+ <co id="19" binds="20 21">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}show-results" flags="os" line="281" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="5">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="282">
     <param name="url-for-content" slot="0" flags="r" as="xs:string">
@@ -333,9 +354,9 @@
    </sequence>
   </template>
  </co>
- <co id="19" binds="9 9 9 9 9 9 9 9 9 8 8 8 9 9 8 8">
-  <template name="Q{http://www.ivdnt.org/xslt/namespaces}gen-pagination" flags="os" line="135" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" slots="10">
-   <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="136">
+ <co id="22" binds="12 12 12 12 12 12 12 12 12 11 11 11 12 12 11 11">
+  <template name="Q{http://www.ivdnt.org/xslt/namespaces}gen-pagination" flags="os" line="129" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" slots="10">
+   <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="130">
     <param name="statistics" slot="0" flags="r" as="element(Q{}statistics)">
      <treat role="conversion" as="element(Q{}statistics)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='statistics';" diag="8|0|XTTE0590|statistics">
       <check card="1" diag="8|0|XTTE0590|statistics">
@@ -343,7 +364,7 @@
       </check>
      </treat>
     </param>
-    <param line="137" name="currentStartLine" slot="1" flags="r" as="xs:integer">
+    <param line="131" name="currentStartLine" slot="1" flags="r" as="xs:integer">
      <treat role="conversion" as="xs:integer" jsTest="return SaxonJS.U.Atomic.integer.matches(item);" diag="8|0|XTTE0590|currentStartLine">
       <check card="1" diag="8|0|XTTE0590|currentStartLine">
        <cvUntyped to="xs:integer">
@@ -354,7 +375,7 @@
       </check>
      </treat>
     </param>
-    <let line="140" var="highestLineNumber" as="xs:integer" slot="2" eval="7">
+    <let line="134" var="highestLineNumber" as="xs:integer" slot="2" eval="7">
      <check card="1" diag="3|0|XTTE0570|highestLineNumber">
       <cast as="xs:integer" emptiable="1">
        <data>
@@ -370,7 +391,7 @@
        </data>
       </cast>
      </check>
-     <let line="141" var="lastPageNumber" as="xs:integer" slot="3" eval="7">
+     <let line="135" var="lastPageNumber" as="xs:integer" slot="3" eval="7">
       <cast as="xs:integer" emptiable="0">
        <arith op="div" calc="i/i">
         <arith op="-" calc="i-i">
@@ -383,7 +404,7 @@
         <gVarRef name="Q{}maxLinesInResultPage" bSlot="1"/>
        </arith>
       </cast>
-      <let line="142" var="lastStartLine" as="xs:integer" slot="4" eval="7">
+      <let line="136" var="lastStartLine" as="xs:integer" slot="4" eval="7">
        <arith op="+" calc="i+i">
         <arith op="*" calc="i*i">
          <arith op="-" calc="i-i">
@@ -394,7 +415,7 @@
         </arith>
         <int val="1"/>
        </arith>
-       <let line="143" var="nextStartLine" as="xs:integer" slot="5" eval="7">
+       <let line="137" var="nextStartLine" as="xs:integer" slot="5" eval="7">
         <choose>
          <vc op="gt" onEmpty="0" comp="CAVC">
           <arith op="+" calc="i+i">
@@ -410,7 +431,7 @@
           <gVarRef name="Q{}maxLinesInResultPage" bSlot="4"/>
          </arith>
         </choose>
-        <let line="144" var="beyondNextStartLine" as="xs:integer" slot="6" eval="7">
+        <let line="138" var="beyondNextStartLine" as="xs:integer" slot="6" eval="7">
          <choose>
           <compareToInt op="eq" val="0">
            <varRef name="nextStartLine" slot="5"/>
@@ -430,7 +451,7 @@
            <gVarRef name="Q{}maxLinesInResultPage" bSlot="6"/>
           </arith>
          </choose>
-         <let line="145" var="prevStartLine" as="xs:integer" slot="7" eval="7">
+         <let line="139" var="prevStartLine" as="xs:integer" slot="7" eval="7">
           <choose>
            <vc op="lt" onEmpty="0" comp="CAVC">
             <varRef name="currentStartLine" slot="1"/>
@@ -443,7 +464,7 @@
             <gVarRef name="Q{}maxLinesInResultPage" bSlot="8"/>
            </arith>
           </choose>
-          <sequence line="147">
+          <sequence line="141">
            <message>
             <valueOf role="select" flags="e">
              <fn name="concat">
@@ -481,14 +502,14 @@
             <str role="terminate" val="no"/>
             <str role="error" val="Q{http://www.w3.org/2005/xqt-errors}XTMM9000"/>
            </message>
-           <let line="149" var="surroundingStartlines" as="xs:integer+" slot="8" eval="11">
+           <let line="143" var="surroundingStartlines" as="xs:integer+" slot="8" eval="11">
             <sequence>
              <varRef name="prevStartLine" slot="7"/>
              <varRef name="currentStartLine" slot="1"/>
              <varRef name="nextStartLine" slot="5"/>
              <varRef name="beyondNextStartLine" slot="6"/>
             </sequence>
-            <sequence line="151">
+            <sequence line="145">
              <elem name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
               <sequence>
                <att name="class" flags="l">
@@ -515,7 +536,7 @@
                </elem>
               </sequence>
              </elem>
-             <elem line="152" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+             <elem line="146" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
               <sequence>
                <att name="class" flags="l">
                 <fn name="concat">
@@ -533,7 +554,7 @@
                <att name="id" flags="l">
                 <str val="gtb-result-table_previous"/>
                </att>
-               <let line="153" var="line" as="xs:integer" slot="9" eval="7">
+               <let line="147" var="line" as="xs:integer" slot="9" eval="7">
                 <treat as="xs:integer" jsTest="return SaxonJS.U.Atomic.integer.matches(item);" diag="3|0|XTTE0570|line">
                  <cvUntyped to="xs:integer">
                   <fn name="max">
@@ -544,7 +565,7 @@
                   </fn>
                  </cvUntyped>
                 </treat>
-                <elem line="154" name="a" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+                <elem line="148" name="a" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <sequence>
                   <att name="href" flags="l">
                    <str val="#"/>
@@ -568,13 +589,13 @@
                </let>
               </sequence>
              </elem>
-             <choose line="156">
+             <choose line="150">
               <compareToInt op="ne" val="1">
                <first>
                 <varRef name="surroundingStartlines" slot="8"/>
                </first>
               </compareToInt>
-              <elem line="157" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+              <elem line="151" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                <sequence>
                 <att name="class" flags="l">
                  <str val="gbt-paginate_button disabled"/>
@@ -592,14 +613,14 @@
                </sequence>
               </elem>
              </choose>
-             <forEach line="159">
+             <forEach line="153">
               <filter flags="b">
                <varRef name="surroundingStartlines" slot="8"/>
                <compareToInt op="ne" val="0">
                 <dot type="xs:integer"/>
                </compareToInt>
               </filter>
-              <elem line="160" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+              <elem line="154" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                <sequence>
                 <att name="class" flags="l">
                  <fn name="concat">
@@ -633,11 +654,11 @@
                   </att>
                   <valueOf flags="el">
                    <convert from="xs:integer" to="xs:string">
-                    <cast line="173" as="xs:integer" emptiable="0">
+                    <cast line="167" as="xs:integer" emptiable="0">
                      <arith op="div" calc="i/i">
                       <arith op="-" calc="i-i">
                        <arith op="+" calc="i+i">
-                        <dot line="160" type="xs:integer"/>
+                        <dot line="154" type="xs:integer"/>
                         <gVarRef name="Q{}maxLinesInResultPage" bSlot="12"/>
                        </arith>
                        <int val="1"/>
@@ -652,7 +673,7 @@
                </sequence>
               </elem>
              </forEach>
-             <choose line="162">
+             <choose line="156">
               <vc op="ne" onEmpty="0" comp="CAVC">
                <subscript>
                 <varRef name="surroundingStartlines" slot="8"/>
@@ -660,7 +681,7 @@
                </subscript>
                <varRef name="lastStartLine" slot="4"/>
               </vc>
-              <elem line="163" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+              <elem line="157" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                <sequence>
                 <att name="class" flags="l">
                  <str val="gbt-paginate_button disabled"/>
@@ -678,7 +699,7 @@
                </sequence>
               </elem>
              </choose>
-             <elem line="165" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+             <elem line="159" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
               <sequence>
                <att name="class" flags="l">
                 <fn name="concat">
@@ -696,7 +717,7 @@
                <att name="id" flags="l">
                 <str val="gtb-result-table_next"/>
                </att>
-               <elem line="166" name="a" flags="l">
+               <elem line="160" name="a" flags="l">
                 <sequence>
                  <att name="href" flags="l">
                   <str val="#"/>
@@ -719,7 +740,7 @@
                </elem>
               </sequence>
              </elem>
-             <elem line="168" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+             <elem line="162" name="li" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
               <sequence>
                <att name="class" flags="l">
                 <str val="gtb-paginate_button "/>
@@ -759,7 +780,7 @@
    </sequence>
   </template>
  </co>
- <co id="20" binds="20 21">
+ <co id="23" binds="23 24">
   <mode name="Q{}geschiedenis-lijst" onNo="TC" flags="W" patternSlots="0">
    <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="0" flags="os" line="153" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt">
     <p.nodeTest role="match" test="element(Q{}inputs-and-selects-list)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='inputs-and-selects-list';"/>
@@ -980,7 +1001,7 @@
    </templateRule>
   </mode>
  </co>
- <co id="22" binds="">
+ <co id="25" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-wdb-field" line="95" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="8" flags="pU" as="xs:boolean" slots="1">
    <arg name="input" as="element(Q{}input-or-select)"/>
    <fn role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="97" name="exists">
@@ -1004,7 +1025,7 @@
    </fn>
   </function>
  </co>
- <co id="23" binds="24">
+ <co id="26" binds="0">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-wdb-inputs-for-url" line="401" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="xs:string" slots="2">
    <arg name="formdiv-inputs-and-selects" as="element(Q{}inputs-and-selects)"/>
    <let role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="404" var="names" as="xs:string*" slot="1" eval="3">
@@ -1057,7 +1078,7 @@
          <fn name="empty">
           <varRef name="names" slot="1"/>
          </fn>
-         <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg891268508" bSlot="0"/>
+         <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg8257460" bSlot="0"/>
         </choose>
         <cast line="412" as="xs:untypedAtomic" emptiable="0">
          <fn name="encode-for-uri">
@@ -1074,12 +1095,12 @@
    </let>
   </function>
  </co>
- <co id="25" binds="25">
-  <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-preceding-dict-linecount" line="176" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="7" flags="pU" as="xs:integer" slots="5">
+ <co id="27" binds="27">
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-preceding-dict-linecount" line="170" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="7" flags="pU" as="xs:integer" slots="5">
    <arg name="statistics" as="element(Q{}statistics)"/>
    <arg name="dictnames" as="xs:string*"/>
    <arg name="dictname" as="xs:string"/>
-   <choose role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="182">
+   <choose role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="176">
     <or op="or">
      <fn name="empty">
       <varRef name="dictnames" slot="1"/>
@@ -1093,9 +1114,9 @@
     </or>
     <int val="0"/>
     <true/>
-    <let line="186" var="stat" as="element(Q{}stat)?" slot="3" eval="7">
+    <let line="180" var="stat" as="element(Q{}stat)?" slot="3" eval="7">
      <check card="?" diag="3|0|XTTE0570|stat">
-      <let var="vv:loc1990703550" as="xs:string?" slot="4" eval="7">
+      <let var="vv:loc297505376" as="xs:string?" slot="4" eval="7">
        <first>
         <varRef name="dictnames" slot="1"/>
        </first>
@@ -1108,13 +1129,13 @@
          <data>
           <axis name="attribute" nodeTest="attribute(Q{}item)" jsTest="return item.name=='item'"/>
          </data>
-         <varRef name="vv:loc1990703550" slot="4"/>
+         <varRef name="vv:loc297505376" slot="4"/>
         </vc>
        </filter>
       </let>
      </check>
-     <arith line="188" op="+" calc="i+i">
-      <choose line="187">
+     <arith line="182" op="+" calc="i+i">
+      <choose line="181">
        <fn name="exists">
         <varRef name="stat" slot="3"/>
        </fn>
@@ -1143,7 +1164,7 @@
    </choose>
   </function>
  </co>
- <co id="26" binds="">
+ <co id="28" binds="">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}uncheck" flags="os" line="105" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="1">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="106">
     <param name="checkbox" slot="0" flags="r" as="element(Q{}input)">
@@ -1161,73 +1182,11 @@
    </sequence>
   </template>
  </co>
- <co id="27" binds="">
-  <function name="Q{http://www.ivdnt.org/xslt/namespaces}attributes2string" line="16" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="8" flags="pU" as="xs:string" slots="2">
-   <arg name="attrs" as="attribute()*"/>
-   <let role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="18" var="result" as="xs:string*" slot="1" eval="3">
-    <cvUntyped to="xs:string">
-     <data>
-      <forEach>
-       <varRef name="attrs" slot="0"/>
-       <valueOf flags="e">
-        <fn name="concat">
-         <fn name="concat">
-          <fn name="name">
-           <dot type="attribute()"/>
-          </fn>
-          <str val="="/>
-         </fn>
-         <cvUntyped line="13" to="xs:string">
-          <cast as="xs:untypedAtomic" emptiable="0">
-           <fn name="concat">
-            <fn name="concat">
-             <str val="&#34;"/>
-             <fn name="replace">
-              <cvUntyped line="18" to="xs:string">
-               <data>
-                <dot type="attribute()"/>
-               </data>
-              </cvUntyped>
-              <str val="&#34;"/>
-              <str val="\\&#34;"/>
-              <str val=""/>
-             </fn>
-            </fn>
-            <str val="&#34;"/>
-           </fn>
-          </cast>
-         </cvUntyped>
-        </fn>
-       </valueOf>
-      </forEach>
-     </data>
-    </cvUntyped>
-    <cvUntyped line="19" to="xs:string">
-     <cast as="xs:untypedAtomic" emptiable="0">
-      <choose>
-       <fn name="exists">
-        <varRef name="result" slot="1"/>
-       </fn>
-       <fn name="concat">
-        <str val=" "/>
-        <fn name="string-join">
-         <varRef name="result" slot="1"/>
-         <str val=" "/>
-        </fn>
-       </fn>
-       <true/>
-       <str val=""/>
-      </choose>
-     </cast>
-    </cvUntyped>
-   </let>
-  </function>
- </co>
- <co id="28" binds="">
+ <co id="29" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-showhide-a" line="136" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="element(Q{}a)" slots="2">
    <arg name="successor" as="element()"/>
    <check role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="138" card="1" diag="5|0|XTTE0780|ivdnt:get-showhide-a">
-    <let var="vv:loc1589936611" as="xs:untypedAtomic?" slot="1" eval="8">
+    <let var="vv:loc680811290" as="xs:untypedAtomic?" slot="1" eval="8">
      <data>
       <slash simple="1">
        <varRef name="successor" slot="0"/>
@@ -1243,7 +1202,7 @@
          <data>
           <axis name="attribute" nodeTest="attribute(Q{}data-showhidegroup)" jsTest="return item.name=='data-showhidegroup'"/>
          </data>
-         <varRef name="vv:loc1589936611" slot="1"/>
+         <varRef name="vv:loc680811290" slot="1"/>
         </vc>
        </filter>
       </first>
@@ -1252,7 +1211,7 @@
    </check>
   </function>
  </co>
- <co id="29" binds="">
+ <co id="30" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-target-input" line="433" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="element(Q{}input)" slots="1">
    <arg name="data-target-id" as="xs:string"/>
    <check role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="435" card="1" diag="5|0|XTTE0780|ivdnt:get-target-input">
@@ -1278,12 +1237,12 @@
    </check>
   </function>
  </co>
- <co id="30" vis="PUBLIC" binds="">
+ <co id="31" vis="PUBLIC" binds="">
   <globalParam name="Q{}dictionaryOutputOrder" type="item()*" line="0" visibility="PUBLIC" jsAcceptor="return val;" jsCardCheck="function c() {return true;};">
    <str val="ONW VMNW MNW WNT WFT"/>
   </globalParam>
  </co>
- <co id="31" binds="">
+ <co id="32" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-checked" line="85" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="xs:boolean" slots="1">
    <arg name="input" as="element(Q{}input)"/>
    <treat role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="87" as="xs:boolean" jsTest="return SaxonJS.U.Atomic.boolean.matches(item);" diag="5|0|XTTE0780|ivdnt:is-checked">
@@ -1300,7 +1259,7 @@
    </treat>
   </function>
  </co>
- <co id="32" binds="33 6">
+ <co id="33" binds="34 9">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}doe-zoeken" flags="os" line="438" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="1">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="439">
     <param name="formdiv" slot="0" flags="r" as="element(Q{}div)">
@@ -1341,7 +1300,7 @@
    </sequence>
   </template>
  </co>
- <co id="21" binds="20 34 20 34 20 34 20 34">
+ <co id="24" binds="23 35 23 35 23 35 23 35">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-question-description" line="105" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="3" flags="pU" as="node()+" slots="5">
    <arg name="inputs-and-selects-element" as="element(Q{}inputs-and-selects)"/>
    <let role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="107" var="textspans" as="element(Q{}span)*" slot="1" eval="3">
@@ -1671,7 +1630,7 @@
    </let>
   </function>
  </co>
- <co id="35" binds="36 31">
+ <co id="36" binds="37 32">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}create-input-or-select-element" line="46" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="7" flags="pU" as="element(Q{}input-or-select)" slots="3">
    <arg name="input-or-select-element" as="element()"/>
    <arg name="formdiv" as="element(Q{}div)"/>
@@ -1812,7 +1771,7 @@
    </let>
   </function>
  </co>
- <co id="34" binds="">
+ <co id="35" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}input-or-select-sort-value" line="76" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="7" flags="pU" as="xs:integer" slots="1">
    <arg name="input-or-select" as="element(Q{}input-or-select)"/>
    <choose role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="80">
@@ -1844,15 +1803,23 @@
    </choose>
   </function>
  </co>
- <co id="37" binds="">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg416185744" type="xs:boolean" line="51" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+ <co id="38" binds="39">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg234751164" type="xs:string" line="281" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="281" name="concat">
+    <gVarRef name="Q{}baseArticleURL" bSlot="0"/>
+    <str val="&amp;wdb="/>
+   </fn>
+  </globalVariable>
+ </co>
+ <co id="40" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg627674191" type="xs:boolean" line="51" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <vc vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="51" op="lt" comp="CalVC">
     <fn name="current-date"/>
     <atomic val="1957-11-05" type="xs:date"/>
    </vc>
   </globalVariable>
  </co>
- <co id="13" binds="">
+ <co id="16" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}add-class-values" line="60" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="attribute(Q{}class)" slots="2">
    <arg name="classlike-attr" as="attribute()?"/>
    <arg name="values-to-be-added" as="xs:string*"/>
@@ -1879,7 +1846,7 @@
    </treat>
   </function>
  </co>
- <co id="38" binds="5">
+ <co id="41" binds="8">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}gtb-expand" flags="os" line="159" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="2">
    <forEach role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="160">
     <let var="successor" as="element()" slot="0" eval="7">
@@ -1887,7 +1854,7 @@
       <dot flags="a"/>
      </treat>
      <check line="138" card="1" diag="5|0|XTTE0780|ivdnt:get-showhide-a">
-      <let var="vv:loc100304050" as="xs:untypedAtomic?" slot="1" eval="8">
+      <let var="vv:loc1412686828" as="xs:untypedAtomic?" slot="1" eval="8">
        <data>
         <slash simple="1">
          <varRef name="successor" slot="0"/>
@@ -1903,7 +1870,7 @@
            <data>
             <axis name="attribute" nodeTest="attribute(Q{}data-showhidegroup)" jsTest="return item.name=='data-showhidegroup'"/>
            </data>
-           <varRef name="vv:loc100304050" slot="1"/>
+           <varRef name="vv:loc1412686828" slot="1"/>
           </vc>
          </filter>
         </first>
@@ -1926,15 +1893,15 @@
    </forEach>
   </template>
  </co>
- <co id="39" binds="40">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg760082070" type="xs:string" line="309" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
-   <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="309" name="concat">
-    <gVarRef name="Q{}baseArticleContentURL" bSlot="0"/>
-    <str val="&amp;wdb="/>
-   </fn>
+ <co id="42" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg330582733" type="xs:boolean" line="51" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <vc vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="51" op="lt" comp="CalVC">
+    <fn name="current-date"/>
+    <atomic val="1957-11-05" type="xs:date"/>
+   </vc>
   </globalVariable>
  </co>
- <co id="41" binds="">
+ <co id="43" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-domein-field" line="100" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="8" flags="pU" as="xs:boolean" slots="1">
    <arg name="input" as="element(Q{}input-or-select)"/>
    <fn role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="102" name="exists">
@@ -1958,38 +1925,14 @@
    </fn>
   </function>
  </co>
- <co id="42" binds="">
+ <co id="44" binds="">
   <globalVariable name="Q{}RESULT_SORTREVERSE_PROPERTY" type="xs:string" line="41" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <str val="result-sortreverse"/>
   </globalVariable>
  </co>
- <co id="43" binds="">
+ <co id="45" binds="">
   <globalVariable name="Q{}RESULT_TABDIV_ID_PROPERTY" type="xs:string" line="39" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <str val="result-tabdiv-id"/>
-  </globalVariable>
- </co>
- <co id="44" binds="">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg937083753" type="item()" line="313" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
-   <check vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="313" card="1" diag="0|0||ixsl:call">
-    <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:window" type="item()?"/>
-   </check>
-  </globalVariable>
- </co>
- <co id="45" binds="30">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg717016121" type="xs:string*" line="197" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c() {return true;};">
-   <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="197" name="tokenize">
-    <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="0|0||tokenize">
-     <check card="?" diag="0|0||tokenize">
-      <cvUntyped to="xs:string">
-       <data>
-        <gVarRef name="Q{}dictionaryOutputOrder" bSlot="0"/>
-       </data>
-      </cvUntyped>
-     </check>
-    </treat>
-    <str val="\s+"/>
-    <str val=""/>
-   </fn>
   </globalVariable>
  </co>
  <co id="46" binds="">
@@ -1997,7 +1940,7 @@
    <str val="current-question-description"/>
   </globalVariable>
  </co>
- <co id="12" binds="">
+ <co id="15" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}remove-class-value" line="68" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="attribute(Q{}class)" slots="4">
    <arg name="classlike-attr" as="attribute()?"/>
    <arg name="value-to-be-removed" as="xs:string"/>
@@ -2091,7 +2034,7 @@
    </sequence>
   </template>
  </co>
- <co id="49" binds="12 38">
+ <co id="49" binds="15 41">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}gtb-show" flags="os" line="176" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="0">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="178">
     <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:set-attribute" type="item()*">
@@ -2114,7 +2057,7 @@
    </sequence>
   </template>
  </co>
- <co id="50" binds="13 4">
+ <co id="50" binds="16 7">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}gtb-hide" flags="os" line="166" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="0">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="171">
     <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:set-attribute" type="item()*">
@@ -2137,23 +2080,41 @@
    </sequence>
   </template>
  </co>
- <co id="24" binds="">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg891268508" type="xs:anyAtomicType*" line="410" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.anyAtomicType.cast(val);" jsCardCheck="function c() {return true;};">
-   <data vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="410">
-    <message>
-     <valueOf role="select" flags="e">
-      <str val="Geen woordenboeken geselecteerd"/>
-     </valueOf>
-     <str role="terminate" val="no"/>
-     <str role="error" val="Q{http://www.w3.org/2005/xqt-errors}XTMM9000"/>
-    </message>
-   </data>
+ <co id="51" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg194575758" type="item()" line="313" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
+   <check vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="313" card="1" diag="0|0||ixsl:call">
+    <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:window" type="item()?"/>
+   </check>
   </globalVariable>
  </co>
- <co id="51" binds="">
+ <co id="52" binds="31">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg180470909" type="xs:string*" line="191" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c() {return true;};">
+   <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="191" name="tokenize">
+    <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="0|0||tokenize">
+     <check card="?" diag="0|0||tokenize">
+      <cvUntyped to="xs:string">
+       <data>
+        <gVarRef name="Q{}dictionaryOutputOrder" bSlot="0"/>
+       </data>
+      </cvUntyped>
+     </check>
+    </treat>
+    <str val="\s+"/>
+    <str val=""/>
+   </fn>
+  </globalVariable>
+ </co>
+ <co id="53" binds="">
   <mode onNo="TC" flags="dW" patternSlots="0"/>
  </co>
- <co id="52" binds="53 23 54">
+ <co id="54" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1677870749" type="item()" line="307" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
+   <check vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="307" card="1" diag="0|0||ixsl:call">
+    <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:window" type="item()?"/>
+   </check>
+  </globalVariable>
+ </co>
+ <co id="55" binds="56 26 57">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-zoeken-url" line="423" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="8" flags="pU" as="xs:string" slots="2">
    <arg name="text-input-uri-params" as="xs:string"/>
    <arg name="formdiv-inputs-and-selects" as="element(Q{}inputs-and-selects)"/>
@@ -2164,7 +2125,7 @@
        <fn name="concat">
         <fn name="concat">
          <fn name="concat">
-          <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1421868521" bSlot="0"/>
+          <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1287982895" bSlot="0"/>
           <varRef name="text-input-uri-params" slot="0"/>
          </fn>
          <str val="&amp;wdb="/>
@@ -2183,7 +2144,7 @@
    </cvUntyped>
   </function>
  </co>
- <co id="55" binds="">
+ <co id="58" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}add-formdiv-inputs-and-selects" line="63" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="7" flags="pU" as="element(Q{}inputs-and-selects-list)" slots="2">
    <arg name="tabdiv" as="element(Q{}div)"/>
    <arg name="formdiv-inputs-and-selects" as="element(Q{}inputs-and-selects)"/>
@@ -2209,9 +2170,9 @@
    </elem>
   </function>
  </co>
- <co id="1" binds="56">
-  <template name="Q{}parse-result-attributes" flags="os" line="315" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" slots="0">
-   <try role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="320">
+ <co id="2" binds="59">
+  <template name="Q{}parse-result-attributes" flags="os" line="309" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" slots="0">
+   <try role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="314">
     <applyT mode="Q{}parse-result-attribute" bSlot="0">
      <fn role="select" name="parse-xml-fragment">
       <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="0|0||parse-xml-fragment">
@@ -2226,7 +2187,7 @@
      </fn>
     </applyT>
     <catch err="node()" test="true">
-     <elem line="322" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+     <elem line="316" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
       <sequence>
        <att name="class" flags="l">
         <str val="gtb-xml-error"/>
@@ -2247,17 +2208,28 @@
    </try>
   </template>
  </co>
- <co id="57" vis="PUBLIC" binds="">
+ <co id="60" vis="PUBLIC" binds="">
   <globalParam name="Q{}showInputsAndSelectsXML" type="xs:boolean" line="0" visibility="PUBLIC" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <false/>
   </globalParam>
  </co>
- <co id="58" binds="">
+ <co id="61" binds="">
   <template name="Q{}initialize" flags="os" line="147" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="0">
    <empty role="body"/>
   </template>
  </co>
- <co id="33" binds="59 52 13 12 60 21 55 16">
+ <co id="56" binds="62">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1287982895" type="xs:string" line="430" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="430" name="concat">
+    <fn name="concat">
+     <gVarRef name="Q{}baseSearchURL" bSlot="0"/>
+     <str val="&amp;conc=true&amp;xmlerror=true"/>
+    </fn>
+    <str val="&amp;"/>
+   </fn>
+  </globalVariable>
+ </co>
+ <co id="34" binds="63 55 16 15 64 24 58 19">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}select-tab" flags="os" line="240" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="7">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="241">
     <param name="tabid" slot="0" flags="r" as="xs:string">
@@ -2441,7 +2413,7 @@
    </sequence>
   </template>
  </co>
- <co id="61" binds="">
+ <co id="65" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-text-or-select-field" line="90" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="8" flags="pU" as="xs:boolean" slots="1">
    <arg name="input" as="element(Q{}input-or-select)"/>
    <fn role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="92" name="exists">
@@ -2465,86 +2437,86 @@
    </fn>
   </function>
  </co>
- <co id="62" vis="PUBLIC" binds="">
+ <co id="39" vis="PUBLIC" binds="">
   <globalParam name="Q{}baseArticleURL" type="xs:string" line="0" visibility="PUBLIC" flags="r" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};"/>
  </co>
- <co id="63" binds="63 63 63 63 63 63 63 63 63 63 63 63 63 63 63 63 63 19 0 0 0 63 64 65">
+ <co id="66" binds="66 66 66 66 66 66 66 66 66 66 66 66 66 66 66 66 66 22 1 1 1 66 67 68">
   <mode name="Q{}render-results" onNo="TC" flags="W" patternSlots="0">
-   <templateRule prec="0" prio="0.0" seq="3" rank="0" minImp="0" slots="0" flags="os" line="216" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="3" rank="0" minImp="0" slots="0" flags="os" line="210" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="element(Q{}result)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='result';"/>
-    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="218" name="tr" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="212" name="tr" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
      <sequence>
       <att name="class" flags="l">
        <str val="gtb-result-row"/>
       </att>
-      <applyT line="219" mode="Q{}render-results" bSlot="0">
+      <applyT line="213" mode="Q{}render-results" bSlot="0">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}line)" jsTest="return item.name=='line'"/>
       </applyT>
-      <applyT line="220" mode="Q{}render-results" bSlot="1">
+      <applyT line="214" mode="Q{}render-results" bSlot="1">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}Wdb)" jsTest="return item.name=='Wdb'"/>
       </applyT>
-      <applyT line="221" mode="Q{}render-results" bSlot="2">
+      <applyT line="215" mode="Q{}render-results" bSlot="2">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}Modern_lemma)" jsTest="return item.name=='Modern_lemma'"/>
       </applyT>
-      <applyT line="222" mode="Q{}render-results" bSlot="3">
+      <applyT line="216" mode="Q{}render-results" bSlot="3">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}Lemma)" jsTest="return item.name=='Lemma'"/>
       </applyT>
-      <applyT line="223" mode="Q{}render-results" bSlot="4">
+      <applyT line="217" mode="Q{}render-results" bSlot="4">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}Woordsoort)" jsTest="return item.name=='Woordsoort'"/>
       </applyT>
-      <applyT line="224" mode="Q{}render-results" bSlot="5">
+      <applyT line="218" mode="Q{}render-results" bSlot="5">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}Verbinding)" jsTest="return item.name=='Verbinding'"/>
       </applyT>
-      <choose line="226">
+      <choose line="220">
        <fn name="exists">
         <axis name="child" nodeTest="element(Q{}conc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='conc';"/>
        </fn>
-       <sequence line="227">
+       <sequence line="221">
         <applyT mode="Q{}render-results" bSlot="6">
          <axis role="select" name="attribute" nodeTest="attribute(Q{}hits)" jsTest="return item.name=='hits'"/>
         </applyT>
-        <elem line="228" name="td" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+        <elem line="222" name="td" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
          <sequence>
           <att name="class" flags="l">
            <str val="gtb-conc"/>
           </att>
-          <applyT line="229" mode="Q{}render-results" bSlot="7">
+          <applyT line="223" mode="Q{}render-results" bSlot="7">
            <axis role="select" name="child" nodeTest="element(Q{}conc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='conc';"/>
           </applyT>
          </sequence>
         </elem>
        </sequence>
-       <fn line="232" name="exists">
+       <fn line="226" name="exists">
         <axis name="attribute" nodeTest="attribute(Q{}Betekenis)" jsTest="return item.name=='Betekenis'"/>
        </fn>
-       <applyT line="232" mode="Q{}render-results" bSlot="8">
+       <applyT line="226" mode="Q{}render-results" bSlot="8">
         <axis role="select" name="attribute" nodeTest="attribute(Q{}Betekenis)" jsTest="return item.name=='Betekenis'"/>
        </applyT>
       </choose>
-      <applyT line="234" mode="Q{}render-results" bSlot="9">
+      <applyT line="228" mode="Q{}render-results" bSlot="9">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}Kopsectie)" jsTest="return item.name=='Kopsectie'"/>
       </applyT>
-      <applyT line="235" mode="Q{}render-results" bSlot="10">
+      <applyT line="229" mode="Q{}render-results" bSlot="10">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}Citaat)" jsTest="return item.name=='Citaat'"/>
       </applyT>
-      <applyT line="238" mode="Q{}render-results" bSlot="11">
+      <applyT line="232" mode="Q{}render-results" bSlot="11">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}auteur)" jsTest="return item.name=='auteur'"/>
       </applyT>
-      <applyT line="239" mode="Q{}render-results" bSlot="12">
+      <applyT line="233" mode="Q{}render-results" bSlot="12">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}titel)" jsTest="return item.name=='titel'"/>
       </applyT>
-      <applyT line="240" mode="Q{}render-results" bSlot="13">
+      <applyT line="234" mode="Q{}render-results" bSlot="13">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}van)" jsTest="return item.name=='van'"/>
       </applyT>
-      <applyT line="241" mode="Q{}render-results" bSlot="14">
+      <applyT line="235" mode="Q{}render-results" bSlot="14">
        <axis role="select" name="attribute" nodeTest="attribute(Q{}locatie)" jsTest="return item.name=='locatie'"/>
       </applyT>
      </sequence>
     </elem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="3" flags="os" line="27" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="3" flags="os" line="21" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="element(Q{}results)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='results';"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="28">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="22">
      <param name="html" slot="0" flags="r" as="element(Q{}html)">
       <treat role="conversion" as="element(Q{}html)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='html';" diag="8|0|XTTE0590|html">
        <check card="1" diag="8|0|XTTE0590|html">
@@ -2552,7 +2524,7 @@
        </check>
       </treat>
      </param>
-     <param line="29" name="startline" slot="1" flags="r" as="xs:integer">
+     <param line="23" name="startline" slot="1" flags="r" as="xs:integer">
       <treat role="conversion" as="xs:integer" jsTest="return SaxonJS.U.Atomic.integer.matches(item);" diag="8|0|XTTE0590|startline">
        <check card="1" diag="8|0|XTTE0590|startline">
         <cvUntyped to="xs:integer">
@@ -2563,113 +2535,113 @@
        </check>
       </treat>
      </param>
-     <let line="31" var="first-result" as="element(Q{}result)?" slot="2" eval="7">
+     <let line="25" var="first-result" as="element(Q{}result)?" slot="2" eval="7">
       <first>
        <axis name="child" nodeTest="element(Q{}result)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='result';"/>
       </first>
-      <sequence line="32">
+      <sequence line="26">
        <elem name="div" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
         <sequence>
          <att name="class" flags="l">
           <str val="gtb-results"/>
          </att>
-         <applyT line="33" mode="Q{}render-results" bSlot="15">
+         <applyT line="27" mode="Q{}render-results" bSlot="15">
           <axis role="select" name="child" nodeTest="element(Q{}statistics)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='statistics';"/>
          </applyT>
-         <elem line="35" name="table" flags="l">
+         <elem line="29" name="table" flags="l">
           <sequence>
            <att name="id" flags="l">
             <str val="gtb-result-table"/>
            </att>
-           <elem line="37" name="colgroup" flags="l">
+           <elem line="31" name="colgroup" flags="l">
             <sequence>
              <elem name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
               <att name="class" flags="l">
                <str val="gtb-wdbcol-line"/>
               </att>
              </elem>
-             <elem line="38" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+             <elem line="32" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
               <att name="class" flags="l">
                <str val="gtb-wdbcol-wdb"/>
               </att>
              </elem>
-             <choose line="40">
-              <fn line="24" name="exists">
-               <filter line="40" flags="b">
+             <choose line="34">
+              <fn line="18" name="exists">
+               <filter line="34" flags="b">
                 <slash simple="1">
                  <dot type="element(Q{}results)"/>
-                 <axis line="24" name="child" nodeTest="element(Q{}result)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='result';"/>
+                 <axis line="18" name="child" nodeTest="element(Q{}result)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='result';"/>
                 </slash>
-                <fn line="24" name="exists">
+                <fn line="18" name="exists">
                  <axis name="attribute" nodeTest="attribute(Q{}titel)" jsTest="return item.name=='titel'"/>
                 </fn>
                </filter>
               </fn>
-              <sequence line="41">
+              <sequence line="35">
                <elem name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                 <att name="class" flags="l">
                  <str val="gtb-wdbcol-auteur"/>
                 </att>
                </elem>
-               <elem line="42" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+               <elem line="36" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                 <att name="class" flags="l">
                  <str val="gtb-wdbcol-titel"/>
                 </att>
                </elem>
-               <elem line="43" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+               <elem line="37" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                 <att name="class" flags="l">
                  <str val="gtb-wdbcol-datering"/>
                 </att>
                </elem>
-               <elem line="44" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+               <elem line="38" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                 <att name="class" flags="l">
                  <str val="gtb-wdbcol-lokalisering"/>
                 </att>
                </elem>
               </sequence>
               <true/>
-              <sequence line="47">
+              <sequence line="41">
                <elem name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                 <att name="class" flags="l">
                  <str val="gtb-wdbcol-modern_lemma"/>
                 </att>
                </elem>
-               <elem line="48" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+               <elem line="42" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                 <att name="class" flags="l">
                  <str val="gtb-wdbcol-lemma"/>
                 </att>
                </elem>
-               <elem line="49" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+               <elem line="43" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                 <att name="class" flags="l">
                  <str val="gtb-wdbcol-woordsoort"/>
                 </att>
                </elem>
-               <choose line="50">
+               <choose line="44">
                 <fn name="exists">
                  <slash simple="1">
                   <varRef name="first-result" slot="2"/>
                   <axis name="attribute" nodeTest="attribute(Q{}Verbinding)" jsTest="return item.name=='Verbinding'"/>
                  </slash>
                 </fn>
-                <elem line="52" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+                <elem line="46" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <att name="class" flags="l">
                   <str val="gtb-wdbcol-anders"/>
                  </att>
                 </elem>
                </choose>
-               <elem line="54" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+               <elem line="48" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                 <att name="class" flags="l">
                  <str val="gtb-wdbcol-anders"/>
                 </att>
                </elem>
-               <choose line="55">
+               <choose line="49">
                 <fn name="exists">
                  <slash simple="1">
                   <varRef name="first-result" slot="2"/>
                   <axis name="attribute" nodeTest="(attribute(Q{}Kopsectie) | attribute(Q{}Citaat))" jsTest="function a() {return item.name=='Kopsectie'};function b() {return item.name=='Citaat'};return a()||b();"/>
                  </slash>
                 </fn>
-                <elem line="56" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+                <elem line="50" name="col" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <att name="class" flags="l">
                   <str val="gtb-wdbcol-anders"/>
                  </att>
@@ -2679,7 +2651,7 @@
              </choose>
             </sequence>
            </elem>
-           <elem line="63" name="thead" flags="l">
+           <elem line="57" name="thead" flags="l">
             <elem name="tr" flags="l">
              <sequence>
               <elem name="th" flags="l">
@@ -2687,63 +2659,63 @@
                 <str val="Nr."/>
                </valueOf>
               </elem>
-              <elem line="64" name="th" flags="l">
+              <elem line="58" name="th" flags="l">
                <valueOf flags="Sel">
                 <str val="Wdb"/>
                </valueOf>
               </elem>
-              <choose line="66">
-               <fn line="24" name="exists">
-                <filter line="66" flags="b">
+              <choose line="60">
+               <fn line="18" name="exists">
+                <filter line="60" flags="b">
                  <slash simple="1">
                   <dot type="element(Q{}results)"/>
-                  <axis line="24" name="child" nodeTest="element(Q{}result)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='result';"/>
+                  <axis line="18" name="child" nodeTest="element(Q{}result)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='result';"/>
                  </slash>
-                 <fn line="24" name="exists">
+                 <fn line="18" name="exists">
                   <axis name="attribute" nodeTest="attribute(Q{}titel)" jsTest="return item.name=='titel'"/>
                  </fn>
                 </filter>
                </fn>
-               <sequence line="67">
+               <sequence line="61">
                 <elem name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <valueOf flags="Sel">
                   <str val="Auteur"/>
                  </valueOf>
                 </elem>
-                <elem line="68" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+                <elem line="62" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <valueOf flags="Sel">
                   <str val="Titel"/>
                  </valueOf>
                 </elem>
-                <elem line="69" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+                <elem line="63" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <valueOf flags="Sel">
                   <str val="Datering"/>
                  </valueOf>
                 </elem>
-                <elem line="70" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+                <elem line="64" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <valueOf flags="Sel">
                   <str val="Lokalisering"/>
                  </valueOf>
                 </elem>
                </sequence>
                <true/>
-               <sequence line="73">
+               <sequence line="67">
                 <elem name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <valueOf flags="el">
                   <str val="Mod. Ned. trefwoord"/>
                  </valueOf>
                 </elem>
-                <elem line="74" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+                <elem line="68" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <valueOf flags="el">
                   <str val="Origineel trefwoord"/>
                  </valueOf>
                 </elem>
-                <elem line="75" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+                <elem line="69" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                  <valueOf flags="Sel">
                   <str val="Woordsoort"/>
                  </valueOf>
                 </elem>
-                <choose line="76">
+                <choose line="70">
                  <fn name="exists">
                   <slash simple="1">
                    <varRef name="first-result" slot="2"/>
@@ -2756,7 +2728,7 @@
                   </valueOf>
                  </elem>
                 </choose>
-                <choose line="77">
+                <choose line="71">
                  <and op="and">
                   <fn name="exists">
                    <slash simple="1">
@@ -2777,7 +2749,7 @@
                   </valueOf>
                  </elem>
                 </choose>
-                <choose line="79">
+                <choose line="73">
                  <fn name="exists">
                   <slash simple="1">
                    <varRef name="first-result" slot="2"/>
@@ -2789,19 +2761,19 @@
                    <str val="Concordantie"/>
                   </valueOf>
                  </elem>
-                 <fn line="80" name="exists">
+                 <fn line="74" name="exists">
                   <slash simple="1">
                    <varRef name="first-result" slot="2"/>
                    <axis name="attribute" nodeTest="attribute(Q{}Betekenis)" jsTest="return item.name=='Betekenis'"/>
                   </slash>
                  </fn>
-                 <elem line="80" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+                 <elem line="74" name="th" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
                   <valueOf flags="Sel">
                    <str val="Betekenis"/>
                   </valueOf>
                  </elem>
                 </choose>
-                <choose line="82">
+                <choose line="76">
                  <fn name="exists">
                   <slash simple="1">
                    <varRef name="first-result" slot="2"/>
@@ -2814,7 +2786,7 @@
                   </valueOf>
                  </elem>
                 </choose>
-                <choose line="83">
+                <choose line="77">
                  <fn name="exists">
                   <slash simple="1">
                    <varRef name="first-result" slot="2"/>
@@ -2832,7 +2804,7 @@
              </sequence>
             </elem>
            </elem>
-           <elem line="89" name="tbody" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+           <elem line="83" name="tbody" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
             <applyT mode="Q{}render-results" bSlot="16">
              <axis role="select" name="child" nodeTest="element(Q{}result)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='result';"/>
             </applyT>
@@ -2841,12 +2813,12 @@
          </elem>
         </sequence>
        </elem>
-       <elem line="93" name="div" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+       <elem line="87" name="div" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
         <sequence>
          <att name="class" flags="l">
           <str val="row"/>
          </att>
-         <copyOf line="94" flags="vsc">
+         <copyOf line="88" flags="vsc">
           <docOrder intra="1">
            <slash>
             <slash>
@@ -2860,12 +2832,12 @@
            </slash>
           </docOrder>
          </copyOf>
-         <elem line="96" name="div" flags="l">
+         <elem line="90" name="div" flags="l">
           <sequence>
            <att name="class" flags="l">
             <str val="col-md-6"/>
            </att>
-           <elem line="97" name="div" flags="l">
+           <elem line="91" name="div" flags="l">
             <sequence>
              <att name="class" flags="l">
               <str val="dataTables_paginate paging_simple_numbers gtb-pagineringsknoppen"/>
@@ -2873,19 +2845,19 @@
              <att name="id" flags="l">
               <str val="gtb-result-table_paginate"/>
              </att>
-             <elem line="98" name="ul" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+             <elem line="92" name="ul" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
               <sequence>
                <att name="class" flags="l">
                 <str val="pagination"/>
                </att>
-               <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" line="99" name="ivdnt:gen-pagination" bSlot="17">
+               <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" line="93" name="ivdnt:gen-pagination" bSlot="17">
                 <withParam name="statistics" flags="c" as="element(Q{}statistics)*">
-                 <check line="100" card="1" diag="8|0||statistics">
+                 <check line="94" card="1" diag="8|0||statistics">
                   <axis name="child" nodeTest="element(Q{}statistics)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='statistics';"/>
                  </check>
                 </withParam>
                 <withParam name="currentStartLine" flags="c" as="xs:integer">
-                 <varRef line="101" name="startline" slot="1"/>
+                 <varRef line="95" name="startline" slot="1"/>
                 </withParam>
                </callT>
               </sequence>
@@ -2896,7 +2868,7 @@
          </elem>
         </sequence>
        </elem>
-       <elem line="108" name="script" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+       <elem line="102" name="script" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
         <valueOf flags="l">
          <str val="&#xA;            var table = $('#gtb-result-table') ;&#xA;            $(document).ready( function () {&#xA;                 table.DataTable();&#xA;            } );&#xA;            &#xA;            table.DataTable( {&#xA;                &#34;paging&#34;: false,&#xA;                &#34;bFilter&#34;: false,&#xA;                &#34;bSort&#34; : false,&#xA;                &#34;bInfo&#34;: false,&#xA;                language: {&#xA;                       url: 'js/nl.json',&#xA;                }&#xA;            } );&#xA;        "/>
         </valueOf>
@@ -2905,14 +2877,14 @@
      </let>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="4" rank="0" minImp="0" slots="0" flags="os" line="245" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="4" rank="0" minImp="0" slots="0" flags="os" line="239" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="element(Q{}conc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='conc';"/>
-    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="246" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="240" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
      <sequence>
       <att name="class" flags="l">
        <str val="gtb-conc-line"/>
       </att>
-      <elem line="247" name="span" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="241" name="span" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-conc-voor"/>
@@ -2925,7 +2897,7 @@
         </applyT>
        </sequence>
       </elem>
-      <elem line="248" name="span" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="242" name="span" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-conc-zoekwoord"/>
@@ -2935,7 +2907,7 @@
         </applyT>
        </sequence>
       </elem>
-      <elem line="249" name="span" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="243" name="span" flags="l" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-conc-na"/>
@@ -2948,28 +2920,28 @@
         </applyT>
        </sequence>
       </elem>
-      <elem line="247" name="br" flags="l">
+      <elem line="241" name="br" flags="l">
        <empty/>
       </elem>
      </sequence>
     </elem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="200" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="194" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="element(Q{}statistics)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='statistics';"/>
-    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="201" name="p" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="195" name="p" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
      <sequence>
       <att name="class" flags="l">
        <str val="gtb-statistics"/>
       </att>
-      <applyT line="202" mode="Q{}render-results" flags="i" bSlot="21">
+      <applyT line="196" mode="Q{}render-results" flags="i" bSlot="21">
        <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
       </applyT>
      </sequence>
     </elem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="206" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="200" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="element(Q{}stat)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='stat';"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="209">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="203">
      <elem name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
       <sequence>
        <att name="class" flags="l">
@@ -3020,7 +2992,7 @@
        </valueOf>
       </sequence>
      </elem>
-     <elem line="210" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+     <elem line="204" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
       <sequence>
        <att name="class" flags="l">
         <str val="gtb-statcount"/>
@@ -3044,7 +3016,7 @@
           </convert>
          </fn>
          <str val=" "/>
-         <choose line="207">
+         <choose line="201">
           <vc op="eq" onEmpty="0" comp="CAVC">
            <cast as="xs:integer" emptiable="1">
             <data>
@@ -3068,11 +3040,11 @@
        </valueOf>
       </sequence>
      </elem>
-     <choose line="211">
+     <choose line="205">
       <fn name="exists">
        <axis name="following-sibling" nodeTest="element(Q{}stat)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='stat';"/>
       </fn>
-      <elem line="212" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="206" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-statseparator"/>
@@ -3085,12 +3057,12 @@
      </choose>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.5" seq="5" rank="1" minImp="0" slots="0" flags="os" line="258" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.5" seq="5" rank="1" minImp="0" slots="0" flags="os" line="252" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.withUpper role="match" axis="parent" upFirst="false">
      <p.nodeTest test="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
      <p.nodeTest test="element(Q{}result)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='result';"/>
     </p.withUpper>
-    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="260" name="td" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="254" name="td" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
      <sequence>
       <att name="class" flags="l">
        <fn name="concat">
@@ -3102,7 +3074,7 @@
           </fn>
          </fn>
         </fn>
-        <choose line="259">
+        <choose line="253">
          <vc op="eq" onEmpty="0" comp="CCC">
           <fn name="local-name">
            <dot type="attribute()"/>
@@ -3128,7 +3100,7 @@
         </choose>
        </fn>
       </att>
-      <applyT line="261" mode="Q{}render-result-attributes" bSlot="23">
+      <applyT line="255" mode="Q{}render-result-attributes" bSlot="23">
        <dot role="select" type="attribute()"/>
       </applyT>
      </sequence>
@@ -3136,18 +3108,7 @@
    </templateRule>
   </mode>
  </co>
- <co id="53" binds="66">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1421868521" type="xs:string" line="430" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
-   <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="430" name="concat">
-    <fn name="concat">
-     <gVarRef name="Q{}baseSearchURL" bSlot="0"/>
-     <str val="&amp;conc=true&amp;xmlerror=true"/>
-    </fn>
-    <str val="&amp;"/>
-   </fn>
-  </globalVariable>
- </co>
- <co id="67" binds="68 37">
+ <co id="69" binds="54 70">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}export-result" flags="os" line="302" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="3">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="303">
     <param name="url-for-content" slot="0" flags="r" as="xs:string">
@@ -3185,7 +3146,7 @@
     </param>
     <filter line="307" flags="ib">
      <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:call" type="item()*">
-      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg2055114956" bSlot="0"/>
+      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1677870749" bSlot="0"/>
       <str val="exportResult"/>
       <arrayBlock>
        <varRef name="url-for-content" slot="0"/>
@@ -3193,35 +3154,20 @@
        <varRef name="mimetype" slot="2"/>
       </arrayBlock>
      </ifCall>
-     <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg416185744" bSlot="1"/>
+     <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1362698676" bSlot="1"/>
     </filter>
    </sequence>
   </template>
  </co>
- <co id="69" binds="">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1553139606" type="xs:boolean" line="51" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+ <co id="71" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1193567851" type="xs:boolean" line="51" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <vc vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="51" op="lt" comp="CalVC">
     <fn name="current-date"/>
     <atomic val="1957-11-05" type="xs:date"/>
    </vc>
   </globalVariable>
  </co>
- <co id="70" binds="62">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg2022557436" type="xs:string" line="287" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
-   <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="287" name="concat">
-    <gVarRef name="Q{}baseArticleURL" bSlot="0"/>
-    <str val="&amp;wdb="/>
-   </fn>
-  </globalVariable>
- </co>
- <co id="68" binds="">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg2055114956" type="item()" line="307" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
-   <check vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="307" card="1" diag="0|0||ixsl:call">
-    <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:window" type="item()?"/>
-   </check>
-  </globalVariable>
- </co>
- <co id="71" binds="">
+ <co id="72" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}class-contains" line="54" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="8" flags="pU" as="xs:boolean" slots="2">
    <arg name="class" as="attribute(Q{}class)?"/>
    <arg name="required-value" as="xs:string"/>
@@ -3239,7 +3185,7 @@
    </fn>
   </function>
  </co>
- <co id="72" binds="32">
+ <co id="73" binds="33">
   <mode name="Q{http://saxonica.com/ns/interactiveXSLT}onkeypress" onNo="TC" flags="W" patternSlots="0">
    <templateRule prec="0" prio="0.5" seq="0" rank="0" minImp="0" slots="0" flags="os" line="54" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt">
     <p.withPredicate role="match">
@@ -3278,30 +3224,22 @@
    </templateRule>
   </mode>
  </co>
- <co id="73" binds="">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1314182891" type="xs:boolean" line="51" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+ <co id="70" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1362698676" type="xs:boolean" line="51" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <vc vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="51" op="lt" comp="CalVC">
     <fn name="current-date"/>
     <atomic val="1957-11-05" type="xs:date"/>
    </vc>
   </globalVariable>
  </co>
- <co id="74" binds="">
-  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1629348845" type="xs:boolean" line="51" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
-   <vc vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="51" op="lt" comp="CalVC">
-    <fn name="current-date"/>
-    <atomic val="1957-11-05" type="xs:date"/>
-   </vc>
-  </globalVariable>
- </co>
- <co id="66" vis="PUBLIC" binds="">
+ <co id="62" vis="PUBLIC" binds="">
   <globalParam name="Q{}baseSearchURL" type="xs:string" line="0" visibility="PUBLIC" flags="r" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};"/>
  </co>
- <co id="65" binds="1 70 1 39 1">
+ <co id="68" binds="2 38 2 5 2">
   <mode name="Q{}render-result-attributes" onNo="TC" flags="W" patternSlots="0">
-   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="270" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="264" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Woordsoort)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Woordsoort'"/>
-    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="272">
+    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="266">
      <convert from="xs:untypedAtomic" to="xs:string">
       <data>
        <dot type="attribute()"/>
@@ -3309,11 +3247,11 @@
      </convert>
     </valueOf>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="275" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="269" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Verbinding)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Verbinding'"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="276">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="270">
      <callT name="parse-result-attributes" bSlot="0"/>
-     <choose line="278">
+     <choose line="272">
       <and op="and">
        <vc op="eq" onEmpty="0" comp="CCC">
         <fn name="local-name">
@@ -3328,7 +3266,7 @@
         </slash>
        </atomSing>
       </and>
-      <elem line="279" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="273" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-homoniemnr"/>
@@ -3351,9 +3289,9 @@
      </choose>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="270" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="264" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Wdb)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Wdb'"/>
-    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="272">
+    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="266">
      <convert from="xs:untypedAtomic" to="xs:string">
       <data>
        <dot type="attribute()"/>
@@ -3361,11 +3299,11 @@
      </convert>
     </valueOf>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="275" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="269" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Betekenis)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Betekenis'"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="276">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="270">
      <callT name="parse-result-attributes" bSlot="0"/>
-     <choose line="278">
+     <choose line="272">
       <and op="and">
        <vc op="eq" onEmpty="0" comp="CCC">
         <fn name="local-name">
@@ -3380,7 +3318,7 @@
         </slash>
        </atomSing>
       </and>
-      <elem line="279" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="273" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-homoniemnr"/>
@@ -3403,15 +3341,15 @@
      </choose>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="0" flags="os" line="265" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="0" rank="0" minImp="0" slots="0" flags="os" line="259" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}van)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='van'"/>
-    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="267" name="td" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="261" name="td" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
      <sequence>
       <att name="class" flags="l">
        <str val="gtb-van"/>
       </att>
       <valueOf flags="el">
-       <choose line="266">
+       <choose line="260">
         <vc op="eq" onEmpty="0" comp="GAC|http://www.w3.org/2005/xpath-functions/collation/codepoint">
          <atomSing card="?" diag="1|0||eq">
           <dot type="attribute(Q{}van)"/>
@@ -3448,11 +3386,11 @@
      </sequence>
     </elem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="275" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="269" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Citaat)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Citaat'"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="276">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="270">
      <callT name="parse-result-attributes" bSlot="0"/>
-     <choose line="278">
+     <choose line="272">
       <and op="and">
        <vc op="eq" onEmpty="0" comp="CCC">
         <fn name="local-name">
@@ -3467,7 +3405,7 @@
         </slash>
        </atomSing>
       </and>
-      <elem line="279" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="273" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-homoniemnr"/>
@@ -3490,9 +3428,9 @@
      </choose>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="3" rank="0" minImp="0" slots="1" flags="os" line="283" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="3" rank="0" minImp="0" slots="1" flags="os" line="277" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Lemma)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Lemma'"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="284">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="278">
      <param name="text-input-uri-params" slot="0" flags="ti" as="xs:string">
       <treat role="conversion" as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="8|0|XTTE0590|text-input-uri-params">
        <check card="1" diag="8|0|XTTE0590|text-input-uri-params">
@@ -3504,15 +3442,15 @@
        </check>
       </treat>
      </param>
-     <elem line="288" name="a" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+     <elem line="282" name="a" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
       <sequence>
        <att name="href" flags="l">
-        <fn line="287" name="concat">
+        <fn line="281" name="concat">
          <fn name="concat">
           <fn name="concat">
            <fn name="concat">
             <fn name="concat">
-             <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg2022557436" bSlot="1"/>
+             <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg234751164" bSlot="1"/>
              <atomSing card="?" diag="0|1||concat">
               <slash>
                <axis name="parent" nodeTest="element()" jsTest="return item.nodeType==1;"/>
@@ -3537,8 +3475,8 @@
        <att name="target" flags="l">
         <str val="_blank"/>
        </att>
-       <callT line="289" name="parse-result-attributes" bSlot="2"/>
-       <elem line="290" name="span" flags="l">
+       <callT line="283" name="parse-result-attributes" bSlot="2"/>
+       <elem line="284" name="span" flags="l">
         <sequence>
          <att name="class" flags="l">
           <str val="gtb-homoniemnr"/>
@@ -3562,11 +3500,11 @@
      </elem>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="275" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="269" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}auteur)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='auteur'"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="276">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="270">
      <callT name="parse-result-attributes" bSlot="0"/>
-     <choose line="278">
+     <choose line="272">
       <and op="and">
        <vc op="eq" onEmpty="0" comp="CCC">
         <fn name="local-name">
@@ -3581,7 +3519,7 @@
         </slash>
        </atomSing>
       </and>
-      <elem line="279" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="273" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-homoniemnr"/>
@@ -3604,11 +3542,11 @@
      </choose>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="275" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="269" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Kopsectie)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Kopsectie'"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="276">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="270">
      <callT name="parse-result-attributes" bSlot="0"/>
-     <choose line="278">
+     <choose line="272">
       <and op="and">
        <vc op="eq" onEmpty="0" comp="CCC">
         <fn name="local-name">
@@ -3623,7 +3561,7 @@
         </slash>
        </atomSing>
       </and>
-      <elem line="279" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="273" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-homoniemnr"/>
@@ -3646,11 +3584,11 @@
      </choose>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="275" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="2" rank="0" minImp="0" slots="0" flags="os" line="269" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Modern_lemma)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Modern_lemma'"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="276">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="270">
      <callT name="parse-result-attributes" bSlot="0"/>
-     <choose line="278">
+     <choose line="272">
       <and op="and">
        <vc op="eq" onEmpty="0" comp="CCC">
         <fn name="local-name">
@@ -3665,7 +3603,7 @@
         </slash>
        </atomSing>
       </and>
-      <elem line="279" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+      <elem line="273" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
        <sequence>
         <att name="class" flags="l">
          <str val="gtb-homoniemnr"/>
@@ -3688,9 +3626,9 @@
      </choose>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="270" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="264" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}locatie)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='locatie'"/>
-    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="272">
+    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="266">
      <convert from="xs:untypedAtomic" to="xs:string">
       <data>
        <dot type="attribute()"/>
@@ -3698,9 +3636,9 @@
      </convert>
     </valueOf>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="4" rank="0" minImp="0" slots="1" flags="os" line="294" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="4" rank="0" minImp="0" slots="1" flags="os" line="288" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}titel)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='titel'"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="295">
+    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="289">
      <param name="text-input-uri-params" slot="0" flags="ti" as="xs:string">
       <treat role="conversion" as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="8|0|XTTE0590|text-input-uri-params">
        <check card="1" diag="8|0|XTTE0590|text-input-uri-params">
@@ -3712,15 +3650,15 @@
        </check>
       </treat>
      </param>
-     <elem line="310" name="a" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+     <elem line="304" name="a" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
       <sequence>
        <att name="href" flags="l">
-        <fn line="309" name="concat">
+        <fn line="303" name="concat">
          <fn name="concat">
           <fn name="concat">
            <fn name="concat">
             <fn name="concat">
-             <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg760082070" bSlot="3"/>
+             <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg66740533" bSlot="3"/>
              <atomSing card="?" diag="0|1||concat">
               <slash>
                <axis name="parent" nodeTest="element()" jsTest="return item.nodeType==1;"/>
@@ -3745,14 +3683,14 @@
        <att name="target" flags="l">
         <str val="_blank"/>
        </att>
-       <callT line="311" name="parse-result-attributes" bSlot="4"/>
+       <callT line="305" name="parse-result-attributes" bSlot="4"/>
       </sequence>
      </elem>
     </sequence>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="270" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="264" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Line)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Line'"/>
-    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="272">
+    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="266">
      <convert from="xs:untypedAtomic" to="xs:string">
       <data>
        <dot type="attribute()"/>
@@ -3760,9 +3698,9 @@
      </convert>
     </valueOf>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="270" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="264" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}hits)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='hits'"/>
-    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="272">
+    <valueOf role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="266">
      <convert from="xs:untypedAtomic" to="xs:string">
       <data>
        <dot type="attribute()"/>
@@ -3772,7 +3710,7 @@
    </templateRule>
   </mode>
  </co>
- <co id="75" binds="36 36">
+ <co id="74" binds="37 37">
   <mode name="Q{http://saxonica.com/ns/interactiveXSLT}onchange" onNo="TC" flags="W" patternSlots="0">
    <templateRule prec="0" prio="0.5" seq="0" rank="0" minImp="0" slots="5" flags="os" line="137" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt">
     <p.withPredicate role="match">
@@ -3883,7 +3821,7 @@
    </templateRule>
   </mode>
  </co>
- <co id="76" binds="">
+ <co id="75" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}strip-hash-from-id" line="95" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="8" flags="pU" as="xs:string" slots="1">
    <arg name="id-with-hash" as="xs:string"/>
    <cvUntyped role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="97" to="xs:string">
@@ -3896,7 +3834,7 @@
    </cvUntyped>
   </function>
  </co>
- <co id="7" binds="35 7">
+ <co id="10" binds="36 10">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}create-input-or-select-elements" line="27" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="3" flags="pU" as="element()+" slots="1">
    <arg name="formdiv" as="element(Q{}div)"/>
    <check role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="30" card="+" diag="5|0|XTTE0780|ivdnt:create-input-or-select-elements">
@@ -3966,7 +3904,7 @@
    </check>
   </function>
  </co>
- <co id="77" binds="31 31 36">
+ <co id="76" binds="32 32 37">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}woordsoortvalue" line="367" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="8" flags="pU" as="xs:string" slots="3">
    <arg name="context" as="node()"/>
    <cvUntyped role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="380" to="xs:string">
@@ -4058,7 +3996,7 @@
    </cvUntyped>
   </function>
  </co>
- <co id="18" binds="57 6 3 63 13 12 12 11">
+ <co id="21" binds="60 9 4 66 16 15 15 14">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}render-results" flags="os" line="316" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="5">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="317">
     <param name="url-for-content" slot="0" flags="r" as="xs:string">
@@ -4112,7 +4050,7 @@
       </check>
      </treat>
     </param>
-    <resultDoc line="324" global="#&#xA;#Fri Nov 03 15:58:52 CET 2017&#xA;" local="#&#xA;#Fri Nov 03 15:58:52 CET 2017&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xA;">
+    <resultDoc line="324" global="#&#xA;#Fri Nov 03 16:19:17 CET 2017&#xA;" local="#&#xA;#Fri Nov 03 16:19:17 CET 2017&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xA;">
      <str role="href" val="#resultaathouder"/>
      <sequence role="content" line="325">
       <choose>
@@ -4298,10 +4236,10 @@
    </sequence>
   </template>
  </co>
- <co id="40" vis="PUBLIC" binds="">
+ <co id="6" vis="PUBLIC" binds="">
   <globalParam name="Q{}baseArticleContentURL" type="xs:string" line="0" visibility="PUBLIC" flags="r" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};"/>
  </co>
- <co id="78" binds="">
+ <co id="77" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-url-for-content" line="450" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="xs:string" slots="2">
    <let role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="451" var="url-for-content" as="xs:string" slot="0" eval="7">
     <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="3|0|XTTE0570|url-for-content">
@@ -4366,12 +4304,12 @@
    </let>
   </function>
  </co>
- <co id="9" vis="PUBLIC" binds="">
+ <co id="12" vis="PUBLIC" binds="">
   <globalParam name="Q{}maxLinesInResultPage" type="xs:integer" line="0" visibility="PUBLIC" jsAcceptor="return SaxonJS.U.Atomic.integer.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <int val="250"/>
   </globalParam>
  </co>
- <co id="36" binds="">
+ <co id="37" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-input-value" line="90" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="xs:string" slots="1">
    <arg name="input" as="element()"/>
    <treat role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="92" as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="5|0|XTTE0780|ivdnt:get-input-value">
@@ -4388,10 +4326,10 @@
    </treat>
   </function>
  </co>
- <co id="79" binds="9 9">
-  <function name="Q{http://www.ivdnt.org/xslt/namespaces}linenumber2pagenumber" line="171" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="7" flags="pU" as="xs:integer" slots="1">
+ <co id="78" binds="12 12">
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}linenumber2pagenumber" line="165" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="7" flags="pU" as="xs:integer" slots="1">
    <arg name="linenumber" as="xs:integer"/>
-   <cast role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="173" as="xs:integer" emptiable="0">
+   <cast role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="167" as="xs:integer" emptiable="0">
     <arith op="div" calc="i/i">
      <arith op="-" calc="i-i">
       <arith op="+" calc="i+i">
@@ -4405,12 +4343,12 @@
    </cast>
   </function>
  </co>
- <co id="80" binds="">
+ <co id="79" binds="">
   <globalVariable name="Q{}FOCUSSED_TEXTBOX_PROPERTY" type="xs:string" line="42" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <str val="focussed_textbox-id"/>
   </globalVariable>
  </co>
- <co id="17" binds="13 12">
+ <co id="20" binds="16 15">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}deactivate-tab" flags="os" line="188" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="2">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="189">
     <param name="tabdiv" slot="0" flags="r" as="element(Q{}div)">
@@ -4471,7 +4409,7 @@
          </ifCall>
         </forEach>
         <true/>
-        <resultDoc line="207" global="#&#xA;#Fri Nov 03 15:58:52 CET 2017&#xA;" local="#&#xA;#Fri Nov 03 15:58:52 CET 2017&#xA;method={http\://saxonica.com/ns/interactiveXSLT}append-content&#xA;">
+        <resultDoc line="207" global="#&#xA;#Fri Nov 03 16:19:17 CET 2017&#xA;" local="#&#xA;#Fri Nov 03 16:19:17 CET 2017&#xA;method={http\://saxonica.com/ns/interactiveXSLT}append-content&#xA;">
          <str role="href" val="?."/>
          <elem role="content" line="209" name="div" namespaces="xs=http://www.w3.org/2001/XMLSchema ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS array=http://www.w3.org/2005/xpath-functions/array ivdnt=http://www.ivdnt.org/xslt/namespaces">
           <sequence>
@@ -4503,10 +4441,10 @@
    </sequence>
   </template>
  </co>
- <co id="81" binds="">
-  <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-bronnenlijst-result" line="22" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="8" flags="pU" as="xs:boolean" slots="1">
+ <co id="80" binds="">
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-bronnenlijst-result" line="16" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="8" flags="pU" as="xs:boolean" slots="1">
    <arg name="results-element" as="element(Q{}results)"/>
-   <fn role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="24" name="exists">
+   <fn role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="18" name="exists">
     <filter flags="b">
      <slash simple="1">
       <varRef name="results-element" slot="0"/>
@@ -4519,7 +4457,7 @@
    </fn>
   </function>
  </co>
- <co id="82" binds="">
+ <co id="81" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}quote" line="11" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="8" flags="pU" as="xs:string" slots="1">
    <arg name="string" as="xs:string"/>
    <cvUntyped role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="13" to="xs:string">
@@ -4540,146 +4478,42 @@
    </cvUntyped>
   </function>
  </co>
- <co id="83" binds="">
+ <co id="82" binds="">
   <globalVariable name="Q{}FORMDIV_INPUTS_AND_SELECTS_PROPERTY" type="xs:string" line="38" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <str val="formdiv-inputs-and-selects"/>
   </globalVariable>
  </co>
- <co id="56" binds="27 56 56 56">
+ <co id="59" binds="59 59 59 59 59 59">
   <mode name="Q{}parse-result-attribute" onNo="TC" flags="W" patternSlots="0">
-   <templateRule prec="0" prio="-0.5" seq="0" rank="0" minImp="0" slots="0" flags="os" line="327" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="-0.5" seq="0" rank="0" minImp="0" slots="0" flags="os" line="321" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="element()" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1;"/>
-    <sequence role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="328">
-     <elem name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
-      <sequence>
-       <att name="class" flags="l">
-        <str val="gtb-xml-error"/>
-       </att>
-       <valueOf flags="el">
-        <fn name="concat">
-         <str val="&lt;"/>
-         <fn name="concat">
-          <fn name="name">
-           <dot type="element()"/>
-          </fn>
-          <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}attributes2string" tailCall="false" bSlot="0" eval="4">
-           <axis name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
-          </ufCall>
-         </fn>
-         <str val="&gt;"/>
-        </fn>
-       </valueOf>
-      </sequence>
-     </elem>
-     <applyT line="329" mode="Q{}parse-result-attribute" flags="i" bSlot="1">
-      <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
-     </applyT>
-     <elem line="330" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
-      <sequence>
-       <att name="class" flags="l">
-        <str val="gtb-xml-error"/>
-       </att>
-       <valueOf flags="el">
-        <fn name="concat">
-         <str val="&lt;/"/>
+    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="322" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+     <sequence>
+      <att name="class" flags="l">
+       <fn name="concat">
+        <str val="gtb-art-"/>
+        <fn name="lower-case">
          <fn name="name">
           <dot type="element()"/>
          </fn>
-         <str val="&gt;"/>
-        </fn>
-       </valueOf>
-      </sequence>
-     </elem>
-    </sequence>
-   </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="1" minImp="0" slots="0" flags="os" line="334" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
-    <p.nodeTest role="match" test="element(Q{}EM)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='EM';"/>
-    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="335">
-     <fn role="name" name="lower-case">
-      <fn name="local-name">
-       <dot type="element()"/>
-      </fn>
-     </fn>
-     <sequence role="content" line="336">
-      <copyOf flags="vsc">
-       <axis name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
-      </copyOf>
-      <applyT line="337" mode="Q{}parse-result-attribute" flags="i" bSlot="2">
-       <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
-      </applyT>
-     </sequence>
-    </compElem>
-   </templateRule>
-   <templateRule prec="0" prio="0.5" seq="2" rank="2" minImp="0" slots="0" flags="os" line="341" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
-    <p.withPredicate role="match">
-     <p.nodeTest test="element(Q{}font)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='font';"/>
-     <axis vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="341" name="attribute" nodeTest="attribute(Q{}color)" jsTest="return item.name=='color'"/>
-    </p.withPredicate>
-    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="342" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
-     <sequence>
-      <att name="style" flags="l">
-       <fn name="concat">
-        <str val="color: "/>
-        <fn name="string">
-         <convert from="xs:untypedAtomic" to="xs:string">
-          <data>
-           <axis name="attribute" nodeTest="attribute(Q{}color)" jsTest="return item.name=='color'"/>
-          </data>
-         </convert>
         </fn>
        </fn>
       </att>
-      <copyOf line="343" flags="vsc">
-       <axis name="attribute" nodeTest="(attribute() except attribute(Q{}color))" jsTest="function a() {return SaxonJS.U.isAttr(item)};function b() {return item.name=='color'};return a()&amp;&amp;!b();"/>
-      </copyOf>
-      <applyT line="344" mode="Q{}parse-result-attribute" flags="i" bSlot="3">
+      <applyT line="323" mode="Q{}parse-result-attribute" bSlot="0">
+       <axis role="select" name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
+      </applyT>
+      <applyT line="324" mode="Q{}parse-result-attribute" flags="i" bSlot="1">
        <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
       </applyT>
      </sequence>
     </elem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="1" minImp="0" slots="0" flags="os" line="334" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
-    <p.nodeTest role="match" test="element(Q{}br)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='br';"/>
-    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="335">
-     <fn role="name" name="lower-case">
-      <fn name="local-name">
-       <dot type="element()"/>
-      </fn>
-     </fn>
-     <sequence role="content" line="336">
-      <copyOf flags="vsc">
-       <axis name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
-      </copyOf>
-      <applyT line="337" mode="Q{}parse-result-attribute" flags="i" bSlot="2">
-       <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
-      </applyT>
-     </sequence>
-    </compElem>
-   </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="1" minImp="0" slots="0" flags="os" line="334" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
-    <p.nodeTest role="match" test="element(Q{}B)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='B';"/>
-    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="335">
-     <fn role="name" name="lower-case">
-      <fn name="local-name">
-       <dot type="element()"/>
-      </fn>
-     </fn>
-     <sequence role="content" line="336">
-      <copyOf flags="vsc">
-       <axis name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
-      </copyOf>
-      <applyT line="337" mode="Q{}parse-result-attribute" flags="i" bSlot="2">
-       <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
-      </applyT>
-     </sequence>
-    </compElem>
-   </templateRule>
-   <templateRule prec="0" prio="0.5" seq="2" rank="2" minImp="0" slots="0" flags="os" line="341" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.5" seq="2" rank="2" minImp="0" slots="0" flags="os" line="332" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.withPredicate role="match">
      <p.nodeTest test="element(Q{}FONT)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='FONT';"/>
-     <axis vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="341" name="attribute" nodeTest="attribute(Q{}color)" jsTest="return item.name=='color'"/>
+     <axis vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="332" name="attribute" nodeTest="attribute(Q{}color)" jsTest="return item.name=='color'"/>
     </p.withPredicate>
-    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="342" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="333" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
      <sequence>
       <att name="style" flags="l">
        <fn name="concat">
@@ -4693,108 +4527,100 @@
         </fn>
        </fn>
       </att>
-      <copyOf line="343" flags="vsc">
-       <axis name="attribute" nodeTest="(attribute() except attribute(Q{}color))" jsTest="function a() {return SaxonJS.U.isAttr(item)};function b() {return item.name=='color'};return a()&amp;&amp;!b();"/>
-      </copyOf>
-      <applyT line="344" mode="Q{}parse-result-attribute" flags="i" bSlot="3">
+      <applyT line="334" mode="Q{}parse-result-attribute" bSlot="2">
+       <axis role="select" name="attribute" nodeTest="(attribute() except attribute(Q{}color))" jsTest="function a() {return SaxonJS.U.isAttr(item)};function b() {return item.name=='color'};return a()&amp;&amp;!b();"/>
+      </applyT>
+      <applyT line="335" mode="Q{}parse-result-attribute" flags="i" bSlot="3">
        <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
       </applyT>
      </sequence>
     </elem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="1" minImp="0" slots="0" flags="os" line="334" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
-    <p.nodeTest role="match" test="element(Q{}i)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='i';"/>
-    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="335">
+   <templateRule prec="0" prio="0.0" seq="3" rank="1" minImp="0" slots="0" flags="os" line="339" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+    <p.nodeTest role="match" test="element(Q{}br)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='br';"/>
+    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="340">
      <fn role="name" name="lower-case">
       <fn name="local-name">
        <dot type="element()"/>
       </fn>
      </fn>
-     <sequence role="content" line="336">
-      <copyOf flags="vsc">
-       <axis name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
-      </copyOf>
-      <applyT line="337" mode="Q{}parse-result-attribute" flags="i" bSlot="2">
+     <sequence role="content" line="341">
+      <applyT mode="Q{}parse-result-attribute" bSlot="4">
+       <axis role="select" name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
+      </applyT>
+      <applyT line="342" mode="Q{}parse-result-attribute" flags="i" bSlot="5">
        <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
       </applyT>
      </sequence>
     </compElem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="1" minImp="0" slots="0" flags="os" line="334" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+   <templateRule prec="0" prio="0.0" seq="3" rank="1" minImp="0" slots="0" flags="os" line="339" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="element(Q{}BR)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='BR';"/>
-    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="335">
+    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="340">
      <fn role="name" name="lower-case">
       <fn name="local-name">
        <dot type="element()"/>
       </fn>
      </fn>
-     <sequence role="content" line="336">
-      <copyOf flags="vsc">
-       <axis name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
-      </copyOf>
-      <applyT line="337" mode="Q{}parse-result-attribute" flags="i" bSlot="2">
+     <sequence role="content" line="341">
+      <applyT mode="Q{}parse-result-attribute" bSlot="4">
+       <axis role="select" name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
+      </applyT>
+      <applyT line="342" mode="Q{}parse-result-attribute" flags="i" bSlot="5">
        <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
       </applyT>
      </sequence>
     </compElem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="1" minImp="0" slots="0" flags="os" line="334" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
-    <p.nodeTest role="match" test="element(Q{}em)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='em';"/>
-    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="335">
-     <fn role="name" name="lower-case">
-      <fn name="local-name">
-       <dot type="element()"/>
-      </fn>
-     </fn>
-     <sequence role="content" line="336">
-      <copyOf flags="vsc">
-       <axis name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
-      </copyOf>
-      <applyT line="337" mode="Q{}parse-result-attribute" flags="i" bSlot="2">
+   <templateRule prec="0" prio="0.5" seq="2" rank="2" minImp="0" slots="0" flags="os" line="332" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+    <p.withPredicate role="match">
+     <p.nodeTest test="element(Q{}font)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='font';"/>
+     <axis vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="332" name="attribute" nodeTest="attribute(Q{}color)" jsTest="return item.name=='color'"/>
+    </p.withPredicate>
+    <elem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="333" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
+     <sequence>
+      <att name="style" flags="l">
+       <fn name="concat">
+        <str val="color: "/>
+        <fn name="string">
+         <convert from="xs:untypedAtomic" to="xs:string">
+          <data>
+           <axis name="attribute" nodeTest="attribute(Q{}color)" jsTest="return item.name=='color'"/>
+          </data>
+         </convert>
+        </fn>
+       </fn>
+      </att>
+      <applyT line="334" mode="Q{}parse-result-attribute" bSlot="2">
+       <axis role="select" name="attribute" nodeTest="(attribute() except attribute(Q{}color))" jsTest="function a() {return SaxonJS.U.isAttr(item)};function b() {return item.name=='color'};return a()&amp;&amp;!b();"/>
+      </applyT>
+      <applyT line="335" mode="Q{}parse-result-attribute" flags="i" bSlot="3">
        <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
       </applyT>
      </sequence>
-    </compElem>
+    </elem>
    </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="1" minImp="0" slots="0" flags="os" line="334" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
-    <p.nodeTest role="match" test="element(Q{}I)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='I';"/>
-    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="335">
-     <fn role="name" name="lower-case">
-      <fn name="local-name">
-       <dot type="element()"/>
+   <templateRule prec="0" prio="-0.5" seq="1" rank="0" minImp="0" slots="0" flags="os" line="328" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
+    <p.nodeTest role="match" test="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
+    <compAtt role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="329">
+     <fn role="name" name="concat">
+      <str val="data-"/>
+      <fn name="lower-case">
+       <fn name="name">
+        <dot type="attribute()"/>
+       </fn>
       </fn>
      </fn>
-     <sequence role="content" line="336">
-      <copyOf flags="vsc">
-       <axis name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
-      </copyOf>
-      <applyT line="337" mode="Q{}parse-result-attribute" flags="i" bSlot="2">
-       <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
-      </applyT>
-     </sequence>
-    </compElem>
-   </templateRule>
-   <templateRule prec="0" prio="0.0" seq="1" rank="1" minImp="0" slots="0" flags="os" line="334" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
-    <p.nodeTest role="match" test="element(Q{}b)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='b';"/>
-    <compElem role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="335">
-     <fn role="name" name="lower-case">
-      <fn name="local-name">
-       <dot type="element()"/>
-      </fn>
-     </fn>
-     <sequence role="content" line="336">
-      <copyOf flags="vsc">
-       <axis name="attribute" nodeTest="attribute()" jsTest="return SaxonJS.U.isAttr(item)"/>
-      </copyOf>
-      <applyT line="337" mode="Q{}parse-result-attribute" flags="i" bSlot="2">
-       <axis role="select" name="child" nodeTest="node()" jsTest="return true;"/>
-      </applyT>
-     </sequence>
-    </compElem>
+     <convert role="select" from="xs:untypedAtomic" to="xs:string">
+      <data>
+       <dot type="attribute()"/>
+      </data>
+     </convert>
+    </compAtt>
    </templateRule>
   </mode>
  </co>
- <co id="84" binds="85 78 60 48 26 60 20 36 31 78 85 67 36 36 31 16 78 32 31 26 29 36 77 5 5 73 13 12 16 78 60 47 49 50 50">
+ <co id="83" binds="84 77 64 48 28 64 23 37 32 77 84 69 37 37 32 19 77 33 32 28 30 37 76 40 16 15 19 77 64 47 49 50 50 8 8">
   <mode name="Q{http://saxonica.com/ns/interactiveXSLT}onclick" onNo="TC" flags="W" patternSlots="0">
    <templateRule prec="0" prio="0.5" seq="12" rank="0" minImp="0" slots="0" flags="os" line="233" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt">
     <p.withPredicate role="match">
@@ -5056,7 +4882,7 @@
          </fn>
         </filter>
        </check>
-       <resultDoc line="190" global="#&#xA;#Fri Nov 03 15:58:52 CET 2017&#xA;" local="#&#xA;#Fri Nov 03 15:58:52 CET 2017&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xA;">
+       <resultDoc line="190" global="#&#xA;#Fri Nov 03 16:19:17 CET 2017&#xA;" local="#&#xA;#Fri Nov 03 16:19:17 CET 2017&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xA;">
         <str role="href" val="?."/>
         <applyT role="content" line="191" mode="Q{}geschiedenis-lijst" bSlot="6">
          <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" role="select" name="ixsl:get" type="item()*">
@@ -5595,116 +5421,6 @@
      </choose>
     </let>
    </templateRule>
-   <templateRule prec="0" prio="0.5" seq="13" rank="0" minImp="0" slots="2" flags="os" line="241" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt">
-    <p.withPredicate role="match">
-     <p.nodeTest test="element(Q{}img)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='img';"/>
-     <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="57" name="exists">
-      <fn name="index-of">
-       <fn name="tokenize">
-        <fn name="string">
-         <axis baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" line="241" name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
-        </fn>
-        <str val="\s+"/>
-        <str val=""/>
-       </fn>
-       <str val="gtb-keyboard-icon"/>
-      </fn>
-     </fn>
-    </p.withPredicate>
-    <let role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="242" var="speciaaltekendiv" as="element(Q{}div)" slot="0" eval="7">
-     <check card="1" diag="3|0|XTTE0570|speciaaltekendiv">
-      <docOrder intra="1">
-       <slash>
-        <slash>
-         <fn name="reverse">
-          <filter flags="b">
-           <slash simple="1">
-            <dot type="element(Q{}img)"/>
-            <axis name="ancestor" nodeTest="element(Q{}div)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='div';"/>
-           </slash>
-           <fn baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" line="57" name="exists">
-            <fn name="index-of">
-             <fn name="tokenize">
-              <fn name="string">
-               <axis baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" line="242" name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
-              </fn>
-              <str val="\s+"/>
-              <str val=""/>
-             </fn>
-             <str val="zoek-formulier"/>
-            </fn>
-           </fn>
-          </filter>
-         </fn>
-         <axis name="descendant-or-self" nodeTest="node()" jsTest="return true;"/>
-        </slash>
-        <first>
-         <filter flags="b">
-          <axis name="child" nodeTest="element(Q{}div)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='div';"/>
-          <fn baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" line="57" name="exists">
-           <fn name="index-of">
-            <fn name="tokenize">
-             <fn name="string">
-              <axis baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" line="242" name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
-             </fn>
-             <str val="\s+"/>
-             <str val=""/>
-            </fn>
-            <str val="speciaalteken"/>
-           </fn>
-          </fn>
-         </filter>
-        </first>
-       </slash>
-      </docOrder>
-     </check>
-     <let line="243" var="special-chars-visible" as="xs:boolean" slot="1" eval="8">
-      <fn baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" line="57" name="exists">
-       <fn name="index-of">
-        <fn name="tokenize">
-         <fn name="string">
-          <slash baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" line="243" simple="1">
-           <varRef name="speciaaltekendiv" slot="0"/>
-           <axis name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
-          </slash>
-         </fn>
-         <str val="\s+"/>
-         <str val=""/>
-        </fn>
-        <str val="in"/>
-       </fn>
-      </fn>
-      <forEach line="245">
-       <varRef name="speciaaltekendiv" slot="0"/>
-       <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" line="247" name="ixsl:set-attribute" type="item()*">
-        <str val="class"/>
-        <choose>
-         <varRef name="special-chars-visible" slot="1"/>
-         <cvUntyped to="xs:string">
-          <data>
-           <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}replace-class-value" tailCall="false" bSlot="23" eval="8 0 0">
-            <axis name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
-            <str val="in"/>
-            <str val="out"/>
-           </ufCall>
-          </data>
-         </cvUntyped>
-         <true/>
-         <cvUntyped to="xs:string">
-          <data>
-           <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}replace-class-value" tailCall="false" bSlot="24" eval="8 0 0">
-            <axis name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
-            <str val="out"/>
-            <str val="in"/>
-           </ufCall>
-          </data>
-         </cvUntyped>
-        </choose>
-       </ifCall>
-      </forEach>
-     </let>
-    </let>
-   </templateRule>
    <templateRule prec="0" prio="0.5" seq="14" rank="0" minImp="0" slots="5" flags="os" line="251" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt">
     <p.withPredicate role="match">
      <p.nodeTest test="element(Q{}td)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='td';"/>
@@ -5844,7 +5560,7 @@
              <str val="focus"/>
              <arrayBlock/>
             </ifCall>
-            <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1314182891" bSlot="25"/>
+            <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg627674191" bSlot="23"/>
            </filter>
           </sequence>
          </let>
@@ -5886,7 +5602,7 @@
         </is>
         <cvUntyped to="xs:string">
          <data>
-          <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}add-class-values" tailCall="false" bSlot="26" eval="8 0">
+          <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}add-class-values" tailCall="false" bSlot="24" eval="8 0">
            <axis name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
            <str val="active"/>
           </ufCall>
@@ -5895,7 +5611,7 @@
         <true/>
         <cvUntyped to="xs:string">
          <data>
-          <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}remove-class-value" tailCall="false" bSlot="27" eval="8 0">
+          <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}remove-class-value" tailCall="false" bSlot="25" eval="8 0">
            <axis name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
            <str val="active"/>
           </ufCall>
@@ -5911,11 +5627,11 @@
      <p.nodeTest test="element(Q{}a)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='a';"/>
      <axis vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="64" name="attribute" nodeTest="attribute(Q{}data-startline)" jsTest="return item.name=='data-startline'"/>
     </p.withPredicate>
-    <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="73" name="ivdnt:show-results" bSlot="28">
+    <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="73" name="ivdnt:show-results" bSlot="26">
      <withParam name="url-for-content" flags="c" as="xs:string">
       <fn line="65" name="concat">
        <fn name="concat">
-        <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}get-url-for-content" tailCall="false" bSlot="29"/>
+        <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}get-url-for-content" tailCall="false" bSlot="27"/>
         <str val="&amp;start="/>
        </fn>
        <data line="69">
@@ -5947,7 +5663,7 @@
       </check>
      </withParam>
      <withParam name="originating-tabdiv" flags="c" as="element(Q{}div)">
-      <ufCall line="71" name="Q{http://www.ivdnt.org/xslt/namespaces}get-active-tabdiv" tailCall="false" bSlot="30" eval="7">
+      <ufCall line="71" name="Q{http://www.ivdnt.org/xslt/namespaces}get-active-tabdiv" tailCall="false" bSlot="28" eval="7">
        <dot type="element(Q{}a)"/>
       </ufCall>
      </withParam>
@@ -5976,7 +5692,7 @@
      <let var="predecessor" as="element(Q{}a)" slot="1" eval="7">
       <dot type="element(Q{}a)"/>
       <check baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" line="133" card="1" diag="5|0|XTTE0780|ivdnt:get-showhide-div">
-       <let var="vv:loc565882475" as="xs:untypedAtomic?" slot="2" eval="8">
+       <let var="vv:loc2035238303" as="xs:untypedAtomic?" slot="2" eval="8">
         <data>
          <slash simple="1">
           <varRef name="predecessor" slot="1"/>
@@ -5992,7 +5708,7 @@
             <data>
              <axis name="attribute" nodeTest="attribute(Q{}data-showhidegroup)" jsTest="return item.name=='data-showhidegroup'"/>
             </data>
-            <varRef name="vv:loc565882475" slot="2"/>
+            <varRef name="vv:loc2035238303" slot="2"/>
            </vc>
           </filter>
          </first>
@@ -6013,24 +5729,134 @@
         <varRef name="next-div" slot="0"/>
        </is>
        <choose line="20">
-        <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}gtb-is-hidden" tailCall="false" bSlot="31" eval="7">
+        <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}gtb-is-hidden" tailCall="false" bSlot="29" eval="7">
          <treat as="element()" jsTest="return item.nodeType==1;" diag="0|0||ivdnt:gtb-is-hidden">
           <dot type="node()"/>
          </treat>
         </ufCall>
-        <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" line="21" name="ivdnt:gtb-show" bSlot="32"/>
+        <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" line="21" name="ivdnt:gtb-show" bSlot="30"/>
         <true/>
-        <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" line="24" name="ivdnt:gtb-hide" bSlot="33"/>
+        <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" line="24" name="ivdnt:gtb-hide" bSlot="31"/>
        </choose>
        <true/>
-       <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" line="29" name="ivdnt:gtb-hide" bSlot="34"/>
+       <callT xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces" line="29" name="ivdnt:gtb-hide" bSlot="32"/>
       </choose>
      </forEach>
     </let>
    </templateRule>
+   <templateRule prec="0" prio="0.5" seq="13" rank="0" minImp="0" slots="2" flags="os" line="241" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt">
+    <p.withPredicate role="match">
+     <p.nodeTest test="element(Q{}img)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='img';"/>
+     <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="57" name="exists">
+      <fn name="index-of">
+       <fn name="tokenize">
+        <fn name="string">
+         <axis baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" line="241" name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
+        </fn>
+        <str val="\s+"/>
+        <str val=""/>
+       </fn>
+       <str val="gtb-keyboard-icon"/>
+      </fn>
+     </fn>
+    </p.withPredicate>
+    <let role="action" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="242" var="speciaaltekendiv" as="element(Q{}div)" slot="0" eval="7">
+     <check card="1" diag="3|0|XTTE0570|speciaaltekendiv">
+      <docOrder intra="1">
+       <slash>
+        <slash>
+         <fn name="reverse">
+          <filter flags="b">
+           <slash simple="1">
+            <dot type="element(Q{}img)"/>
+            <axis name="ancestor" nodeTest="element(Q{}div)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='div';"/>
+           </slash>
+           <fn baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" line="57" name="exists">
+            <fn name="index-of">
+             <fn name="tokenize">
+              <fn name="string">
+               <axis baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" line="242" name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
+              </fn>
+              <str val="\s+"/>
+              <str val=""/>
+             </fn>
+             <str val="zoek-formulier"/>
+            </fn>
+           </fn>
+          </filter>
+         </fn>
+         <axis name="descendant-or-self" nodeTest="node()" jsTest="return true;"/>
+        </slash>
+        <first>
+         <filter flags="b">
+          <axis name="child" nodeTest="element(Q{}div)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='div';"/>
+          <fn baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" line="57" name="exists">
+           <fn name="index-of">
+            <fn name="tokenize">
+             <fn name="string">
+              <axis baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" line="242" name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
+             </fn>
+             <str val="\s+"/>
+             <str val=""/>
+            </fn>
+            <str val="speciaalteken"/>
+           </fn>
+          </fn>
+         </filter>
+        </first>
+       </slash>
+      </docOrder>
+     </check>
+     <let line="243" var="special-chars-visible" as="xs:boolean" slot="1" eval="8">
+      <fn baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" line="57" name="exists">
+       <fn name="index-of">
+        <fn name="tokenize">
+         <fn name="string">
+          <slash baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt" line="243" simple="1">
+           <varRef name="speciaaltekendiv" slot="0"/>
+           <axis name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
+          </slash>
+         </fn>
+         <str val="\s+"/>
+         <str val=""/>
+        </fn>
+        <str val="in"/>
+       </fn>
+      </fn>
+      <forEach line="245">
+       <varRef name="speciaaltekendiv" slot="0"/>
+       <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" line="247" name="ixsl:set-attribute" type="item()*">
+        <str val="class"/>
+        <choose>
+         <varRef name="special-chars-visible" slot="1"/>
+         <cvUntyped to="xs:string">
+          <data>
+           <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}replace-class-value" tailCall="false" bSlot="33" eval="8 0 0">
+            <axis name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
+            <str val="in"/>
+            <str val="out"/>
+           </ufCall>
+          </data>
+         </cvUntyped>
+         <true/>
+         <cvUntyped to="xs:string">
+          <data>
+           <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}replace-class-value" tailCall="false" bSlot="34" eval="8 0 0">
+            <axis name="attribute" nodeTest="attribute(Q{}class)" jsTest="return item.name=='class'"/>
+            <str val="out"/>
+            <str val="in"/>
+           </ufCall>
+          </data>
+         </cvUntyped>
+        </choose>
+       </ifCall>
+      </forEach>
+     </let>
+    </let>
+   </templateRule>
   </mode>
  </co>
- <co id="5" binds="13 12">
+ <co id="8" binds="16 15">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}replace-class-value" line="77" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="attribute(Q{}class)" slots="3">
    <arg name="classlike-attr" as="attribute()?"/>
    <arg name="old-value" as="xs:string"/>
@@ -6052,12 +5878,12 @@
    </treat>
   </function>
  </co>
- <co id="86" binds="74">
+ <co id="85" binds="71">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}always-false" line="50" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="1" flags="pU" as="xs:boolean" slots="0">
-   <gVarRef role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="-1" name="Q{http://saxon.sf.net/generated-variable}gg1629348845" bSlot="0"/>
+   <gVarRef role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="-1" name="Q{http://saxon.sf.net/generated-variable}gg1193567851" bSlot="0"/>
   </function>
  </co>
- <co id="60" binds="">
+ <co id="64" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-active-tabdiv" line="141" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="element(Q{}div)" slots="1">
    <arg name="node-inside-tab" as="node()"/>
    <check role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="144" card="1" diag="5|0|XTTE0780|ivdnt:get-active-tabdiv">
@@ -6103,7 +5929,7 @@
    </check>
   </function>
  </co>
- <co id="59" binds="">
+ <co id="63" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-value-inputs-for-url" line="384" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="8" flags="pU" as="xs:string" slots="3">
    <arg name="formdiv-inputs-and-selects" as="element(Q{}inputs-and-selects)"/>
    <let role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="393" var="domeininput" as="element(Q{}input-or-select)?" slot="1" eval="7">
@@ -6243,12 +6069,12 @@
    </let>
   </function>
  </co>
- <co id="87" binds="">
+ <co id="86" binds="">
   <globalVariable name="Q{}TEXT_INPUT_URI_PARAMS_PROPERTY" type="xs:string" line="36" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <str val="text-input-uri-params"/>
   </globalVariable>
  </co>
- <co id="54" binds="">
+ <co id="57" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-sensitivity-for-url" line="416" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="8" flags="pU" as="xs:string" slots="1">
    <arg name="formdiv-inputs-and-selects" as="element(Q{}inputs-and-selects)"/>
    <cvUntyped role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="420" to="xs:string">
@@ -6292,7 +6118,7 @@
    </cvUntyped>
   </function>
  </co>
- <co id="85" binds="44 69">
+ <co id="84" binds="51 42">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}print-result" flags="os" line="310" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="1">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="311">
     <param name="url-for-content" slot="0" flags="r" as="xs:string">
@@ -6308,32 +6134,32 @@
     </param>
     <filter line="313" flags="ib">
      <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:call" type="item()*">
-      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg937083753" bSlot="0"/>
+      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg194575758" bSlot="0"/>
       <str val="openNewWindow"/>
       <arrayBlock>
        <varRef name="url-for-content" slot="0"/>
       </arrayBlock>
      </ifCall>
-     <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1553139606" bSlot="1"/>
+     <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg330582733" bSlot="1"/>
     </filter>
    </sequence>
   </template>
  </co>
- <co id="64" binds="25 45">
-  <function name="Q{http://www.ivdnt.org/xslt/namespaces}calculate-dictionary-startline" line="193" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="7" flags="pU" as="xs:integer" slots="2">
+ <co id="67" binds="27 52">
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}calculate-dictionary-startline" line="187" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="7" flags="pU" as="xs:integer" slots="2">
    <arg name="statistics" as="element(Q{}statistics)"/>
    <arg name="dictname" as="xs:string"/>
-   <arith role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="197" op="+" calc="i+i">
+   <arith role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="191" op="+" calc="i+i">
     <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}get-preceding-dict-linecount" tailCall="false" bSlot="0" eval="6 4 6">
      <varRef name="statistics" slot="0"/>
-     <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg717016121" bSlot="1"/>
+     <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg180470909" bSlot="1"/>
      <varRef name="dictname" slot="1"/>
     </ufCall>
     <int val="1"/>
    </arith>
   </function>
  </co>
- <co id="88" binds="">
+ <co id="87" binds="">
   <mode name="Q{http://saxonica.com/ns/interactiveXSLT}onfocusin" onNo="TC" flags="W" patternSlots="0">
    <templateRule prec="0" prio="0.5" seq="0" rank="0" minImp="0" slots="0" flags="os" line="270" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/events.xslt">
     <p.withPredicate role="match">
@@ -6379,4 +6205,4 @@
  </output>
  <decimalFormat decimal-separator="46" grouping-separator="44" digit="35" minus-sign="45" percent="37" per-mille="8240" zero-digit="48" exponent-separator="101" pattern-separator="59" infinity="Infinity" NaN="NaN"/>
 </package>
-<?Σ 3fe0269e?>
+<?Σ d232c18?>
