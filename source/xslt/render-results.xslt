@@ -138,8 +138,6 @@
         <xsl:variable name="beyondNextStartLine" as="xs:integer" select="if ($nextStartLine eq 0) then 0 else if (($nextStartLine + $maxLinesInResultPage) gt $highestLineNumber) then 0 else $nextStartLine + $maxLinesInResultPage"/>
         <xsl:variable name="prevStartLine" as="xs:integer" select="if ($currentStartLine lt $maxLinesInResultPage) then 0 else $currentStartLine - $maxLinesInResultPage"/>
         
-        <xsl:message>currentStartLine={$currentStartLine}, highestLineNumber={$highestLineNumber}, lastPageNumber={$lastPageNumber}, lastStartLine={$lastStartLine}, nextStartLine={$nextStartLine}, beyondNextStartLine={$beyondNextStartLine}, prevStartLine={$prevStartLine}"</xsl:message>
-        
         <xsl:variable name="surroundingStartlines" select="($prevStartLine, $currentStartLine, $nextStartLine, $beyondNextStartLine)" as="xs:integer+"/>
         
         <li class="gtb-paginate_button "><a href="#" data-startline="1" title="{ivdnt:range-title(1, $highestLineNumber)}">Eerste</a></li>

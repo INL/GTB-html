@@ -99,9 +99,6 @@ body {
     margin-left: 0.5em;
     margin-bottom: 0.5em;
     cursor: pointer;
-    /*  TODO better icon, without scaling */
-    width: 110%;
-    height: 110%;
 }
 
 .gtb-tekstveld, .gtb-selectveld{
