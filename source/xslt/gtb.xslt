@@ -42,91 +42,15 @@
     <xsl:variable name="FOCUSSED_TEXTBOX_PROPERTY" as="xs:string" select="'focussed_textbox-id'"/>
     <xsl:variable name="ZOEK_FORMULIER_CLASS" as="xs:string" select="'zoek-formulier'"/>    
 
+    <xsl:include href="utilities.xslt"/>
     <xsl:include href="render-results.xslt"/>
     <xsl:include href="history.xslt"/>
     <xsl:include href="events.xslt"/>
-    
-    <!-- This function is used in order to void the output of the result of a called Javascript function. We are working around possible optimizations.-->
-    <xsl:function name="ivdnt:always-false" as="xs:boolean">
-        <xsl:sequence select="current-date() lt xs:date('1957-11-05')"/>
-    </xsl:function>
-    
-    <xsl:function name="ivdnt:class-contains" as="xs:boolean">
-        <xsl:param name="class" as="attribute(class)?"/>
-        <xsl:param name="required-value" as="xs:string"/>
-        <xsl:sequence select="exists(index-of(tokenize(string($class), '\s+'), $required-value))"/>
-    </xsl:function>
-    
-    <xsl:function name="ivdnt:add-class-values" as="attribute(class)">
-        <xsl:param name="classlike-attr" as="attribute()?"/>
-        <xsl:param name="values-to-be-added" as="xs:string*"/>
-        <xsl:variable name="newvalue" as="xs:string+" select="(tokenize(string($classlike-attr), '\s+'), $values-to-be-added)"/>
-        
-        <xsl:attribute name="class" select="string-join(distinct-values($newvalue), ' ')"/>
-    </xsl:function>
-    
-    <xsl:function name="ivdnt:remove-class-value" as="attribute(class)">
-        <xsl:param name="classlike-attr" as="attribute()?"/>
-        <xsl:param name="value-to-be-removed" as="xs:string"/>
-        <xsl:variable name="class-as-seq" as="xs:string*" select="distinct-values(tokenize(string($classlike-attr), '\s+'))"/>
-        <xsl:variable name="index" as="xs:integer?" select="index-of($class-as-seq, $value-to-be-removed)"/>
-        
-        <xsl:attribute name="class" select="if (empty($index)) then $classlike-attr else string-join(remove($class-as-seq, $index), ' ')"/>
-    </xsl:function>
-    
-    <xsl:function name="ivdnt:replace-class-value" as="attribute(class)">
-        <xsl:param name="classlike-attr" as="attribute()?"/>
-        <xsl:param name="old-value" as="xs:string"/>
-        <xsl:param name="new-value" as="xs:string"/>
-        
-        <xsl:attribute name="class" select="ivdnt:add-class-values(ivdnt:remove-class-value($classlike-attr, $old-value), $new-value)"/>
-    </xsl:function>
-    
-    <xsl:function name="ivdnt:is-checked" as="xs:boolean">
-        <xsl:param name="input" as="element(input)"/>
-        <xsl:sequence select="ixsl:get($input, 'checked')"/>
-    </xsl:function>
-    
-    <xsl:function name="ivdnt:get-input-value" as="xs:string">
-        <xsl:param name="input" as="element()"/> <!-- either element(select) or element(input) -->
-        <xsl:sequence select="ixsl:get($input, 'value')"/>
-    </xsl:function>
     
     <xsl:function name="ivdnt:strip-hash-from-id"  as="xs:string">
         <xsl:param name="id-with-hash" as="xs:string"/>
         <xsl:value-of select="substring-after($id-with-hash, '#')"/>        
     </xsl:function>
-    
-    <xsl:template name="ivdnt:check">
-        <xsl:param name="checkbox" as="element(input)" required="yes"/>
-        <ixsl:set-property name="checked" object="$checkbox" select="true()"/>
-    </xsl:template>
-    
-    <xsl:template name="ivdnt:uncheck">
-        <xsl:param name="checkbox" as="element(input)" required="yes"/>
-        <ixsl:set-property name="checked" object="$checkbox" select="false()"/>
-        <!-- note that <ixsl:remove-attribute name="checked"> does not work (the current context is the input, equal to parameter $checkbox, so it could have worked). -->
-    </xsl:template>
-    
-    <!--<!-\- Return a space separated string consisting of all visited uris. Note that we attempted to use maps and arrays, but we got too many runtimes errors, so we gave up. -\->
-    <xsl:function name="ivdnt:get-visited-uris" as="xs:string">
-        <xsl:sequence select="ixsl:get(ixsl:page(), 'visited-uris')"/>
-    </xsl:function>-->
-    
-    <!--<xsl:template name="ivdnt:add-visited-uri">
-        <xsl:param name="uri" as="xs:string" required="yes"/>
-        <xsl:variable name="oldvalue" as="xs:string" select="ivdnt:get-visited-uris()"/>
-        <xsl:variable name="newvalue" as="xs:string" select="string-join(distinct-values(($oldvalue, $uri)), ' ')"/>
-        <ixsl:set-property name="{$VISITED_URIS_PROPERTY}" select="$newvalue" object="ixsl:page()"/>
-    </xsl:template>-->
-    
-    <!--<xsl:function name="ivdnt:is-visited-uri" as="xs:boolean">
-        <xsl:param name="uri" as="xs:string"/>
-        <xsl:variable name="visited-uris" as="xs:string" select="ivdnt:get-visited-uris()"/>
-        <!-\- Test if the sequence visited-uris contains the uri: -\->
-        <!-\-<xsl:message select="'ivdnt:is-visited-uri geeft: ' || ($uri = tokenize($visited-uris, ' '))"/>-\->
-        <xsl:sequence select="($uri = tokenize($visited-uris, ' '))"/>
-    </xsl:function>-->
     
     <xsl:function name="ivdnt:get-showhide-div" as="element(div)">
         <xsl:param as="element()" name="predecessor"/>

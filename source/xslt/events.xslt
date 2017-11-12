@@ -257,7 +257,7 @@
             <!-- We laten het type achterwege bij selStart en selEnd. In Chrome is het double, is dat overal zo? Je zou integer verwachten. -->
             <xsl:variable name="selStart" select="ixsl:get($textbox, 'selectionStart')"/>
             <xsl:variable name="selEnd" select="ixsl:get($textbox, 'selectionEnd')"/>
-            <xsl:variable name="text" as="xs:string" select="ixsl:get($textbox, 'value')"/>
+            <xsl:variable name="text" as="xs:string" select="ivdnt:get-input-value($textbox)"/>
             <xsl:variable name="newtext" as="xs:string" select="substring($text, 1, $selStart) || $char || substring($text, $selEnd+1)"/>
             <ixsl:set-property name="value" select="$newtext" object="$textbox"/>
             <xsl:variable name="newSelStart" select="$selStart + string-length($char)"/>
