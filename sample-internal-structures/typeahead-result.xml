@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wdbData prefixLength='3'>
-<result prefixLength='3' Lemma="koe" Wdb="VMNW,WFT,ONW,WNT,MNW"/>
-<result prefixLength='3' Lemma="koeaal" Wdb="WNT"/>
-<result prefixLength='3' Lemma="koeachtig" Wdb="WNT"/>
-<result prefixLength='3' Lemma="koealtaar" Wdb="WNT"/>
-<result prefixLength='3' Lemma="koebak" Wdb="WNT"/>
-<result prefixLength='3' Lemma="koebalk" Wdb="WNT"/>
-<result prefixLength='3' Lemma="koeband" Wdb="WNT"/>
-<result prefixLength='3' Lemma="koebart" Wdb="WNT"/>
-<result prefixLength='3' Lemma="koebat" Wdb="WNT"/>
-<result prefixLength='3' Lemma="koebeeld" Wdb="WNT"/>
+<wdbData prefixLength="3">
+    <result prefixLength="3" Lemma="koe" Wdb="VMNW,WFT,ONW,WNT,MNW"/>
+    <result prefixLength="3" Lemma="koeaal" Wdb="WNT"/>
+    <result prefixLength="3" Lemma="koeachtig" Wdb="WNT"/>
+    <result prefixLength="3" Lemma="koealtaar" Wdb="WNT"/>
+    <result prefixLength="3" Lemma="koebak" Wdb="WNT"/>
+    <result prefixLength="3" Lemma="koebalk" Wdb="WNT"/>
+    <result prefixLength="3" Lemma="koeband" Wdb="WNT"/>
+    <result prefixLength="3" Lemma="koebart" Wdb="WNT"/>
+    <result prefixLength="3" Lemma="koebat" Wdb="WNT"/>
+    <result prefixLength="3" Lemma="koebeeld" Wdb="WNT"/>
 </wdbData>
