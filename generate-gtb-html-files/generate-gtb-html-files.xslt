@@ -108,7 +108,7 @@
                         
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
             <script type="text/javascript" src="saxonjs/SaxonJS.min.js"></script>
-            <script xsl:expand-text="no">
+            <script type="text/javascript" xsl:expand-text="no">
                 window.onload = function() {
                     SaxonJS.transform({
                         stylesheetLocation: "xslt/gtb.sef",
@@ -181,11 +181,6 @@
     <xsl:template match="ivdnt:formulierinput/input | ivdnt:formulierinput/select" mode="ivdnt:html-mode">
         <xsl:copy>
             <xsl:attribute name="id" select="ivdnt:generate-input-id(.)"/>
-            <!-- TEST TEST TEST TODO Use XSLT for this
-            <xsl:if test="self::input[@type eq 'text' and ivdnt:class-contains(@class, 'typeahead')]">
-                <xsl:attribute name="onBlur" select="'nextSibling.style.display = &quot;none&quot;'"/>
-            </xsl:if>
-             EINDE TEST TEST TEST -->
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:attribute name="data-label" select="ancestor::ivdnt:formulierregel[1]/ivdnt:formulierlabel"/>
             <xsl:apply-templates select="node()" mode="#current"/>

@@ -53,6 +53,9 @@
     <!-- =============================================================================================================== -->
     <!-- The following functions and templates may be redefined, but are expected to be goog enough for the general case: -->
     <!-- =============================================================================================================== -->
+    
+    <!-- The property in ixsl:page() where we store the currently active typeahead ul: -->
+    <xsl:variable name="ivdnt:typeahead-active-ul" as="xs:string" select="'typeahead-active-ul'"/>
         
     <!-- Obtains the typeahead ul element that follows the current textfield (input element). --> 
     <xsl:function name="ivdnt:get-my-typeahead-ul"  as="element(ul)">
@@ -85,6 +88,10 @@
     </xsl:template>
     
     <!-- Hide the typeahead list when the corresponding textfield looses focus. -->
+    <!-- Because an onblur hides the onclick, it seems to be impossible to respond to clicks in the typeahead ul.
+         Therefore, we do not use onblur. Instead, we put a mouse listener on the body element and store a reference
+         there to the currently active typeahead.
+    -->
     <!--<xsl:template match="input[ivdnt:class-contains(@class, 'typeahead')]" mode="ixsl:onblur ixsl:onfocusout">
         <!-\- TODO a click that causes an onblur, hides the onclick on the li. -\->
         <!-\- TODO Find out whether onblur (W3C preferred) or onfocusout (IE) is the way to go. -\->
@@ -107,6 +114,18 @@
         <xsl:call-template name="ivdnt:typeahead-hide">
             <xsl:with-param name="ul" select="$current-li/parent::ul"/>
         </xsl:call-template>
+    </xsl:template>
+    
+    <!-- A click on the body element serves as a replacement for the onblur event, but only if there is a typeahead
+         ul active. Note that an attribute at body signals the presence of a valid reference to the currently
+         active typeahead ul (there is no way to check if a property is present).
+    -->
+    <xsl:template match="body[exists(@*[local-name() eq $ivdnt:typeahead-active-ul])]" mode="ixsl:onclick">
+        <xsl:for-each select="ixsl:get(., $ivdnt:typeahead-active-ul)">
+            <xsl:call-template name="ivdnt:typeahead-hide">
+                <xsl:with-param name="ul" select="."/>
+            </xsl:call-template>
+        </xsl:for-each>
     </xsl:template>
     
     <!--<!-\- TODO arrows, enter, escape, etc. is not reported.
@@ -143,7 +162,15 @@
     <!-- Hides the typeahead list. -->
     <xsl:template name="ivdnt:typeahead-hide">
         <xsl:param name="ul" as="element(ul)" required="yes"/>
-        <ixsl:set-style name="display" select="'none'" object="$ul"/>
+        <!-- Note that an attribute at body signals the presence of a valid reference to the currently active typeahead ul. -->
+        <xsl:for-each select="ixsl:page()/html/body">
+            <ixsl:remove-attribute name="{$ivdnt:typeahead-active-ul}"/>
+        </xsl:for-each>
+        <xsl:for-each select="$ul">
+            <!-- One iteration only -->
+            <ixsl:set-style name="display" select="'none'"/>
+            <ixsl:set-property name="{$ivdnt:typeahead-active-ul}" select="''" object="ixsl:page()/html/body"/>
+        </xsl:for-each>
     </xsl:template>
     
     <!-- Deals with a keyup event in the typeahead textfield, by calling ivdnt:typeahead-insert-listitems. That
@@ -152,7 +179,13 @@
     -->
     <xsl:template name="ivdnt:typeahead-key">
         <xsl:param name="textfield" as="element(input)" required="yes"/>
-        <xsl:for-each select="ivdnt:get-my-typeahead-ul($textfield)">
+        <xsl:variable name="ul" as="element(ul)" select="ivdnt:get-my-typeahead-ul($textfield)"/>
+        <!-- Note that an attribute at body signals the presence of a valid reference to the currently active typeahead ul. -->
+        <xsl:for-each select="ixsl:page()/html/body">
+            <ixsl:set-attribute name="{$ivdnt:typeahead-active-ul}" select="''"/>
+            <ixsl:set-property name="{$ivdnt:typeahead-active-ul}" select="$ul" object="."/>
+        </xsl:for-each>
+        <xsl:for-each select="$ul">
             <!-- One iteration only -->
             <xsl:call-template name="ivdnt:typeahead-insert-listitems">
                 <xsl:with-param name="text-field" select="$textfield"/>
