@@ -53,7 +53,7 @@
     <!-- =============================================================================================================== -->
     <!-- The following functions and templates may be redefined, but are expected to be goog enough for the general case: -->
     <!-- =============================================================================================================== -->
-    
+        
     <!-- Obtains the typeahead ul element that follows the current textfield (input element). --> 
     <xsl:function name="ivdnt:get-my-typeahead-ul"  as="element(ul)">
         <xsl:param name="input" as="element(input)"/>
@@ -81,7 +81,6 @@
         <!-- In mode onkeyup, the key has been processed, so the value of the text box has been updated. -->
         <xsl:call-template name="ivdnt:typeahead-key">
             <xsl:with-param name="textfield" select="."/>
-            <!--<xsl:with-param name="mode" select="'onkeyup'"/>-->
         </xsl:call-template>
     </xsl:template>
     
