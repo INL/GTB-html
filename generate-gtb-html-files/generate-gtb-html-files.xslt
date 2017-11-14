@@ -94,16 +94,16 @@
             <link rel="stylesheet" media="screen" href="css/datatables.min.css" type="text/css" />
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/gtb-artikel.css" type="text/css"/>
+            <link rel="stylesheet" media="screen" href="css/gtb-typeahead.css" type="text/css"/>
             
             <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>
-            <script src="js/bootstrap3-typeahead.min.js" type="text/javascript"></script>
+            <!--<script src="js/bootstrap3-typeahead.min.js" type="text/javascript"></script>-->
             <script src="js/datatables.min.js" type="text/javascript"></script>
             <script src="js/download.js" type="text/javascript"></script>
             <!-- baseListURL contains the baseurl for the typeahead functionality. This is a sample URL:
                  .../iWDB/search?wdb=onw%2Cvmnw%2Cmnw%2Cwnt%2Cwft%2C&actie=list&index=lemmodern&prefix=koe&sensitive=false&xmlerror=true
             -->
-            <script type="text/javascript">const BASE_LIST_URL = "<xsl:value-of select="$BASELISTURL"/>";</script>
             <script src="js/gtb.js" type="text/javascript"></script>
                         
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
@@ -116,7 +116,8 @@
                         stylesheetParams: {
                              baseArticleURL: "<xsl:value-of select="$BASEARTICLEURL"/>",
                              baseArticleContentURL: "<xsl:value-of select="$BASEARTICLECONTENTURL"/>",
-                             baseSearchURL: "<xsl:value-of select="$BASESEARCHURL"/>"
+                             baseSearchURL: "<xsl:value-of select="$BASESEARCHURL"/>",
+                             baseListURL: "<xsl:value-of select="$BASELISTURL"/>"
                         }
                     });
                 }
@@ -180,10 +181,18 @@
     <xsl:template match="ivdnt:formulierinput/input | ivdnt:formulierinput/select" mode="ivdnt:html-mode">
         <xsl:copy>
             <xsl:attribute name="id" select="ivdnt:generate-input-id(.)"/>
+            <!-- TEST TEST TEST TODO Use XSLT for this
+            <xsl:if test="self::input[@type eq 'text' and ivdnt:class-contains(@class, 'typeahead')]">
+                <xsl:attribute name="onBlur" select="'nextSibling.style.display = &quot;none&quot;'"/>
+            </xsl:if>
+             EINDE TEST TEST TEST -->
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:attribute name="data-label" select="ancestor::ivdnt:formulierregel[1]/ivdnt:formulierlabel"/>
             <xsl:apply-templates select="node()" mode="#current"/>
         </xsl:copy>
+        <xsl:if test="self::input[@type eq 'text' and ivdnt:class-contains(@class, 'typeahead')]">
+            <ul class="typeahead dropdown-menu" role="listbox"/>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="ivdnt:van-tot-velden" mode="ivdnt:html-mode">        

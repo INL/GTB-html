@@ -4,3 +4,7 @@ target/*
 !target/README
 
 target\.test/
+
+*.magweg
+
+*.bak
