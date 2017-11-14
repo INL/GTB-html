@@ -51,7 +51,7 @@
         </xsl:for-each>
     </xsl:template>
     
-    <xsl:template match="div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)]" mode="ixsl:onkeypress">
+    <xsl:template match="div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS) and not(ivdnt:typeahead-is-ul-active())]" mode="ixsl:onkeypress">
         <xsl:variable name="event" select="ixsl:event()"/>
         <xsl:if test="xs:integer(ixsl:get($event, 'which')) eq 13">
             <!-- User pressed enter -->
@@ -59,6 +59,14 @@
                 <xsl:with-param name="formdiv" select="."/>
             </xsl:call-template>
         </xsl:if>
+    </xsl:template>
+    
+    <!-- Redefine the standard typeahead template on order to start a search. -->
+    <xsl:template name="ivdnt:typeahead-after-select">
+        <xsl:param name="textfield" as="element(input)" required="yes"/>
+        <xsl:call-template name="ivdnt:doe-zoeken">
+            <xsl:with-param name="formdiv" select="ivdnt:get-active-tabdiv($textfield)"/>
+        </xsl:call-template>
     </xsl:template>
     
     <xsl:template match="a[@data-startline]" mode="ixsl:onclick">

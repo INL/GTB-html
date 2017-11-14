@@ -56,7 +56,24 @@
     
     <!-- The property in ixsl:page() where we store the currently active typeahead ul: -->
     <xsl:variable name="ivdnt:typeahead-active-ul" as="xs:string" select="'typeahead-active-ul'"/>
-        
+    
+    <!-- Called when a selection had been make in the typeahead textbox or ul. May be redefined to have some
+         special effect, such as starting an operation. Default is to do nothing.
+    -->
+    <xsl:template name="ivdnt:typeahead-after-select">
+        <xsl:param name="textfield" as="element(input)" required="yes"/>
+    </xsl:template>
+    
+    <xsl:template name="ivdnt:typeahead-schedule-after-select">
+        <xsl:param name="textfield" as="element(input)" required="yes"/>
+        <ixsl:schedule-action wait="100">
+            <xsl:call-template name="ivdnt:typeahead-after-select">
+                <xsl:with-param name="textfield" select="$textfield"/>
+            </xsl:call-template>
+        </ixsl:schedule-action>
+    </xsl:template>
+    
+    
     <!-- Obtains the typeahead ul element that follows the current textfield (input element). --> 
     <xsl:function name="ivdnt:get-my-typeahead-ul"  as="element(ul)">
         <xsl:param name="input" as="element(input)"/>
@@ -67,6 +84,16 @@
     <xsl:function name="ivdnt:get-my-typeahead-textfield"  as="element(input)">
         <xsl:param name="ul" as="element(ul)"/>
         <xsl:sequence select="$ul/preceding-sibling::input[ivdnt:class-contains(@class, 'typeahead')][1]"/>
+    </xsl:function>
+    
+    <xsl:function name="ivdnt:is-active-li" as="xs:boolean">
+        <xsl:param name="li" as="element(li)?"/>
+        <xsl:sequence select="exists($li) and ivdnt:class-contains($li/@class, 'active')"/>
+    </xsl:function>
+    
+    <xsl:function name="ivdnt:find-active-li" as="element(li)">
+        <xsl:param name="ul" as="element(ul)"/>
+        <xsl:sequence select="$ul/li[ivdnt:is-active-li(.)]"/>
     </xsl:function>
     
     <!-- Stores the value of the selected item in the typeahead list into the corresponding typeahead textfield. -->
@@ -82,9 +109,22 @@
     <!-- Deal with a keyup event by calling idvnt:typeahead-key -->
     <xsl:template match="input[ivdnt:class-contains(@class, 'typeahead')]" mode="ixsl:onkeyup">
         <!-- In mode onkeyup, the key has been processed, so the value of the text box has been updated. -->
-        <xsl:call-template name="ivdnt:typeahead-key">
-            <xsl:with-param name="textfield" select="."/>
-        </xsl:call-template>
+        <xsl:variable name="event" select="ixsl:event()"/>
+        <xsl:variable name="whichKey" select="xs:integer(ixsl:get($event, 'which'))" as="xs:integer"/>
+        <!-- Test if the key is not an enter (13), escape (27), arrow up (38) or arrow down (40): -->
+        <xsl:choose>
+            <xsl:when test="$whichKey = (13, 27, 38, 40)">
+                <xsl:call-template name="ivdnt:typeahead-special-key">
+                    <xsl:with-param name="textfield" select="."/>
+                    <xsl:with-param name="whichKey" select="$whichKey"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="ivdnt:typeahead-normal-key">
+                    <xsl:with-param name="textfield" select="."/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>      
     </xsl:template>
     
     <!-- Hide the typeahead list when the corresponding textfield looses focus. -->
@@ -104,60 +144,37 @@
     <xsl:template match="ul[ivdnt:class-contains(@class, 'typeahead')]/li" mode="ixsl:onclick">
         <!-- TODO a click that causes an onblur, hides the onclick on the li. -->
         <xsl:variable name="current-li" as="element(li)" select="."/>
+        <xsl:variable name="ul" as="element(ul)" select="$current-li/parent::ul"/>
         
-        <xsl:for-each select="parent::ul/li">
+        <xsl:for-each select="$ul/li">
             <ixsl:set-attribute name="class" select="if (. is $current-li) then 'active' else ''"/>
         </xsl:for-each>
         <xsl:call-template name="ivdnt:typeahead-select">
             <xsl:with-param name="selected-listitem" select="."/>
         </xsl:call-template>
         <xsl:call-template name="ivdnt:typeahead-hide">
-            <xsl:with-param name="ul" select="$current-li/parent::ul"/>
+            <xsl:with-param name="ul" select="$ul"/>
+        </xsl:call-template>
+        <xsl:call-template name="ivdnt:typeahead-schedule-after-select">
+            <xsl:with-param name="textfield" as="element(input)" select="ivdnt:get-my-typeahead-textfield($ul)"/>
         </xsl:call-template>
     </xsl:template>
+    
+    <xsl:function name="ivdnt:typeahead-is-ul-active"  as="xs:boolean">
+        <xsl:sequence select="exists(ixsl:page()/html/body[exists(@*[local-name() eq $ivdnt:typeahead-active-ul])])"></xsl:sequence>
+    </xsl:function>
     
     <!-- A click on the body element serves as a replacement for the onblur event, but only if there is a typeahead
          ul active. Note that an attribute at body signals the presence of a valid reference to the currently
          active typeahead ul (there is no way to check if a property is present).
     -->
-    <xsl:template match="body[exists(@*[local-name() eq $ivdnt:typeahead-active-ul])]" mode="ixsl:onclick">
+    <xsl:template match="body[ivdnt:typeahead-is-ul-active()]" mode="ixsl:onclick">
         <xsl:for-each select="ixsl:get(., $ivdnt:typeahead-active-ul)">
             <xsl:call-template name="ivdnt:typeahead-hide">
                 <xsl:with-param name="ul" select="."/>
             </xsl:call-template>
         </xsl:for-each>
     </xsl:template>
-    
-    <!--<!-\- TODO arrows, enter, escape, etc. is not reported.
-    <xsl:template match="input[ivdnt:class-contains(@class, 'typeahead')]" mode="ixsl:keypress">
-        <xsl:variable name="event" select="ixsl:event()"/>
-        <xsl:variable name="whichKey" select="xs:integer(ixsl:get($event, 'which'))" as="xs:integer"/>
-        <xsl:message>at input, key={$whichKey}</xsl:message>
-        <xsl:choose>
-            <xsl:when test="$whichKey eq 27">
-                <!-\- escape key -\->
-                <xsl:call-template name="ivdnt:typeahead-hide"><xsl:with-param name="ul" select="ivdnt:get-my-typeahead-ul(.)"/></xsl:call-template>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:message>todo</xsl:message>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    
-    <xsl:template match="ul[ivdnt:class-contains(@class, 'typeahead')]/li" mode="ixsl:keypress">
-        <xsl:variable name="event" select="ixsl:event()"/>
-        <xsl:variable name="whichKey" select="xs:integer(ixsl:get($event, 'which'))" as="xs:integer"/>
-        <xsl:message>at li, key={$whichKey}</xsl:message>
-        <xsl:choose>
-            <xsl:when test="$whichKey eq 27">
-                <!-\- escape key -\->
-                <xsl:call-template name="ivdnt:typeahead-hide"><xsl:with-param name="ul" select="parent::ul"/></xsl:call-template>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:message>todo</xsl:message>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>-->
     
     <!-- Hides the typeahead list. -->
     <xsl:template name="ivdnt:typeahead-hide">
@@ -177,8 +194,9 @@
          template will store a sequence of, as described at ivdng:typeahead-insert-listitems.
          If the textfield become empty, the typehead list is hidden.
     -->
-    <xsl:template name="ivdnt:typeahead-key">
+    <xsl:template name="ivdnt:typeahead-normal-key">
         <xsl:param name="textfield" as="element(input)" required="yes"/>
+        
         <xsl:variable name="ul" as="element(ul)" select="ivdnt:get-my-typeahead-ul($textfield)"/>
         <!-- Note that an attribute at body signals the presence of a valid reference to the currently active typeahead ul. -->
         <xsl:for-each select="ixsl:page()/html/body">
@@ -192,6 +210,76 @@
             </xsl:call-template>
             <xsl:variable name="text" as="xs:string" select="ivdnt:get-input-value($textfield)"/>
             <ixsl:set-style name="display" select="if ($text ne '') then 'block' else 'none'"/>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <!-- Process a special key, such as enter, arrows, escape -->
+    <xsl:template name="ivdnt:typeahead-special-key">
+        <xsl:param name="textfield" as="element(input)" required="yes"/>
+        <xsl:param name="whichKey" as="xs:integer" required="yes"/>
+        
+        <xsl:choose>
+            <xsl:when test="$whichKey eq 13">
+                <!-- enter key -->
+                <xsl:variable name="ul" as="element(ul)" select="ivdnt:get-my-typeahead-ul(.)"/>
+                <xsl:call-template name="ivdnt:typeahead-select">
+                    <xsl:with-param name="selected-listitem" select="ivdnt:find-active-li($ul)"/>
+                </xsl:call-template>
+                <xsl:call-template name="ivdnt:typeahead-hide">
+                    <xsl:with-param name="ul" select="$ul"/>
+                </xsl:call-template>
+                <xsl:call-template name="ivdnt:typeahead-schedule-after-select">
+                    <xsl:with-param name="textfield" as="element(input)" select="$textfield"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$whichKey eq 27">
+                <!-- escape key -->
+                <xsl:call-template name="ivdnt:typeahead-hide"><xsl:with-param name="ul" select="ivdnt:get-my-typeahead-ul(.)"/></xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$whichKey eq 38">
+                <!-- down arrow -->
+                <xsl:call-template name="ivdnt:typeahead-previous-value">
+                    <xsl:with-param name="ul" select="ivdnt:get-my-typeahead-ul(.)"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="$whichKey eq 40">
+                <!-- down arrow -->
+                <xsl:call-template name="ivdnt:typeahead-next-value">
+                    <xsl:with-param name="ul" select="ivdnt:get-my-typeahead-ul(.)"/>
+                </xsl:call-template>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- Select the previous item in the typeahead ul -->
+    <xsl:template name="ivdnt:typeahead-previous-value">
+        <xsl:param name="ul" as="element(ul)" required="yes"/>
+        <xsl:variable name="active-li" as="element(li)" select="ivdnt:find-active-li($ul)"/>
+        <xsl:for-each select="$ul/li">
+            <xsl:choose>
+                <xsl:when test="following-sibling::li[1] is $active-li">
+                    <ixsl:set-attribute name="class" select="'active'"/>
+                </xsl:when>
+                <xsl:when test="preceding-sibling::li">
+                    <ixsl:remove-attribute name="class"/>
+                </xsl:when>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <!-- Select the next item in the typeahead ul -->
+    <xsl:template name="ivdnt:typeahead-next-value">
+        <xsl:param name="ul" as="element(ul)" required="yes"/>
+        <xsl:variable name="active-li" as="element(li)" select="ivdnt:find-active-li($ul)"/>
+        <xsl:for-each select="$ul/li">
+            <xsl:choose>
+                <xsl:when test="preceding-sibling::li[1] is $active-li">
+                    <ixsl:set-attribute name="class" select="'active'"/>
+                </xsl:when>
+                <xsl:when test="following-sibling::li">
+                    <ixsl:remove-attribute name="class"/>
+                </xsl:when>
+            </xsl:choose>
         </xsl:for-each>
     </xsl:template>
     
