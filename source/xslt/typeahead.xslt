@@ -87,6 +87,7 @@
     
     <!-- Hide the typeahead list when the corresponding textfield looses focus. -->
     <!--<xsl:template match="input[ivdnt:class-contains(@class, 'typeahead')]" mode="ixsl:onblur ixsl:onfocusout">
+        <!-\- TODO a click that causes an onblur, hides the onclick on the li. -\->
         <!-\- TODO Find out whether onblur (W3C preferred) or onfocusout (IE) is the way to go. -\->
         <xsl:call-template name="ivdnt:typeahead-hide">
             <xsl:with-param name="ul" select="following-sibling::ul[ivdnt:class-contains(@class, 'typeahead')][1]"/>
@@ -96,7 +97,6 @@
     <!-- Deal with a click in the typeahead list by storing the selected value in the textfield and then hiding the list. -->
     <xsl:template match="ul[ivdnt:class-contains(@class, 'typeahead')]/li" mode="ixsl:onclick">
         <!-- TODO a click that causes an onblur, hides the onclick on the li. -->
-        <xsl:message>klik</xsl:message>
         <xsl:variable name="current-li" as="element(li)" select="."/>
         
         <xsl:for-each select="parent::ul/li">

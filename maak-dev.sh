@@ -8,4 +8,4 @@ cd generate-gtb-html-files
   "BASEARTICLEURL=http://gtb.inl.nl/iWDB/search?actie=article" \
   "BASEARTICLECONTENTURL=http://gtb.inl.nl/iWDB/search?actie=article_content" \
   "BASESEARCHURL=../redirect.php?actie=results" \
-  "BASELISTURL=redirect.php?actie=list"
+  "BASELISTURL=../redirect.php?actie=list"
