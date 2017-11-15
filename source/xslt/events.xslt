@@ -64,8 +64,11 @@
     <!-- Redefine the standard typeahead template on order to start a search. -->
     <xsl:template name="ivdnt:typeahead-after-select">
         <xsl:param name="textfield" as="element(input)" required="yes"/>
+        <xsl:variable name="active-tabdiv" select="ivdnt:get-active-tabdiv($textfield)" as="element(div)"/>
+        <xsl:variable name="formdiv" as="element(div)" select="$active-tabdiv/div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)]"/>
+
         <xsl:call-template name="ivdnt:doe-zoeken">
-            <xsl:with-param name="formdiv" select="ivdnt:get-active-tabdiv($textfield)"/>
+            <xsl:with-param name="formdiv" select="$formdiv"/>
         </xsl:call-template>
     </xsl:template>
     
