@@ -42,15 +42,6 @@
         <xsl:value-of select="string($listitem/a/span[@class eq 'gtb-typeahead-word'])"/>
     </xsl:function>
     
-    <xsl:template name="ivdnt:typeahead-select">
-        <xsl:param name="selected-listitem" as="element(li)" required="yes"/>
-        <xsl:variable name="value" select="ivdnt:get-typeahead-value-from-listitem($selected-listitem)"/>
-        <xsl:call-template name="ivdnt:typeahead-update-textbox">
-            <xsl:with-param name="textbox" as="element(input)" select="ivdnt:get-my-typeahead-textfield($selected-listitem/parent::ul)"/>
-            <xsl:with-param name="value" as="xs:string" select="$value"/>
-        </xsl:call-template>
-    </xsl:template>
-    
     <xsl:template name="ivdnt:retrieve-typeahead-listitems">
         <xsl:param name="url" as="xs:string"/>
 

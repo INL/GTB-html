@@ -259,6 +259,9 @@
             <xsl:choose>
                 <xsl:when test="following-sibling::li[1] is $active-li">
                     <ixsl:set-attribute name="class" select="'active'"/>
+                    <xsl:call-template name="ivdnt:typeahead-select">
+                        <xsl:with-param name="selected-listitem" select="."/>
+                    </xsl:call-template>
                 </xsl:when>
                 <xsl:when test="preceding-sibling::li">
                     <ixsl:remove-attribute name="class"/>
@@ -275,6 +278,9 @@
             <xsl:choose>
                 <xsl:when test="preceding-sibling::li[1] is $active-li">
                     <ixsl:set-attribute name="class" select="'active'"/>
+                    <xsl:call-template name="ivdnt:typeahead-select">
+                        <xsl:with-param name="selected-listitem" select="."/>
+                    </xsl:call-template>
                 </xsl:when>
                 <xsl:when test="following-sibling::li">
                     <ixsl:remove-attribute name="class"/>
