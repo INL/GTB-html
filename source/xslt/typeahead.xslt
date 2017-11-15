@@ -59,9 +59,11 @@
     
     <!-- Called when a selection had been make in the typeahead textbox or ul. May be redefined to have some
          special effect, such as starting an operation. Default is to do nothing.
+         Parameter for-click tells whether the call originates from a click (true) or enter being pressed (false).
     -->
     <xsl:template name="ivdnt:typeahead-after-select">
         <xsl:param name="textfield" as="element(input)" required="yes"/>
+        <xsl:param name="for-click" as="xs:boolean" required="yes"/>
     </xsl:template>
         
     <!-- Obtains the typeahead ul element that follows the current textfield (input element). --> 
@@ -147,6 +149,7 @@
         </xsl:call-template>
         <xsl:call-template name="ivdnt:typeahead-after-select">
             <xsl:with-param name="textfield" select="ivdnt:get-my-typeahead-textfield($ul)"/>
+            <xsl:with-param name="for-click" as="xs:boolean" select="true()"/>
         </xsl:call-template>
     </xsl:template>
     
@@ -220,6 +223,7 @@
                 </xsl:call-template>
                 <xsl:call-template name="ivdnt:typeahead-after-select">
                     <xsl:with-param name="textfield" select="$textfield"/>
+                    <xsl:with-param name="for-click" select="false()"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:when test="$whichKey eq 27">
