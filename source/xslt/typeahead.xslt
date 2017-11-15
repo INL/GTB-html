@@ -63,17 +63,7 @@
     <xsl:template name="ivdnt:typeahead-after-select">
         <xsl:param name="textfield" as="element(input)" required="yes"/>
     </xsl:template>
-    
-    <xsl:template name="ivdnt:typeahead-schedule-after-select">
-        <xsl:param name="textfield" as="element(input)" required="yes"/>
-        <ixsl:schedule-action wait="100">
-            <xsl:call-template name="ivdnt:typeahead-after-select">
-                <xsl:with-param name="textfield" select="$textfield"/>
-            </xsl:call-template>
-        </ixsl:schedule-action>
-    </xsl:template>
-    
-    
+        
     <!-- Obtains the typeahead ul element that follows the current textfield (input element). --> 
     <xsl:function name="ivdnt:get-my-typeahead-ul"  as="element(ul)">
         <xsl:param name="input" as="element(input)"/>
@@ -155,8 +145,8 @@
         <xsl:call-template name="ivdnt:typeahead-hide">
             <xsl:with-param name="ul" select="$ul"/>
         </xsl:call-template>
-        <xsl:call-template name="ivdnt:typeahead-schedule-after-select">
-            <xsl:with-param name="textfield" as="element(input)" select="ivdnt:get-my-typeahead-textfield($ul)"/>
+        <xsl:call-template name="ivdnt:typeahead-after-select">
+            <xsl:with-param name="textfield" select="ivdnt:get-my-typeahead-textfield($ul)"/>
         </xsl:call-template>
     </xsl:template>
     
@@ -228,8 +218,8 @@
                 <xsl:call-template name="ivdnt:typeahead-hide">
                     <xsl:with-param name="ul" select="$ul"/>
                 </xsl:call-template>
-                <xsl:call-template name="ivdnt:typeahead-schedule-after-select">
-                    <xsl:with-param name="textfield" as="element(input)" select="$textfield"/>
+                <xsl:call-template name="ivdnt:typeahead-after-select">
+                    <xsl:with-param name="textfield" select="$textfield"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:when test="$whichKey eq 27">
