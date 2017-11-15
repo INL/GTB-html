@@ -254,7 +254,7 @@
                 <xsl:variable name="originating-formdiv-id" select="$originating-formdiv/@id" as="xs:string"/>
                 <div>
                     <p>De XML-lijst met alle inputs en selects</p>
-                    <pre><xsl:copy-of select="ivdnt:get-formdiv-inputs-and-selects(/html/body, $originating-formdiv-id)"/></pre> 
+                    <pre><xsl:copy-of select="ivdnt:get-formdiv-inputs-and-selects($originating-formdiv)"/></pre> 
                 </div>
             </xsl:if>
             <xsl:if test="$showLinkToSearchResultXml">
@@ -364,8 +364,7 @@
     
     <xsl:template name="ivdnt:doe-zoeken">
         <xsl:param name="formdiv" as="element(div)" required="yes"/>
-        <xsl:variable name="formdiv-id" as="xs:string" select="$formdiv/@id"/>
-        <xsl:variable name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-formdiv-inputs-and-selects(/html/body, $formdiv-id)"/>
+        <xsl:variable name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-formdiv-inputs-and-selects($formdiv)"/>
         <xsl:variable name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($formdiv-inputs-and-selects)"/>
         
         <xsl:call-template name="ivdnt:select-tab">
