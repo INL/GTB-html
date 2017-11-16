@@ -95,12 +95,6 @@ body {
     }
 }
 
-.gtb-keyboard-icon {
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
-    cursor: pointer;
-}
-
 .gtb-tekstveld, .gtb-selectveld{
     width: 75%;
     font-family: gtb, Verdana, sans-serif;
