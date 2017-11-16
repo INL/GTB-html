@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <head>
-        <title>Instituut voor de Nederlandse Taal - ge&#xEF;ntegreerde taalbank</title>
+        <title>Instituut voor de Nederlandse Taal - geïntegreerde taalbank</title>
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-12"><h1 ivdnt:versioninfo="">Ge&#xEF;ntegreerde taalbank</h1></div>
+                <div class="col-md-12"><h1 ivdnt:versioninfo="">Geïntegreerde taalbank</h1></div>
             </div>
             
             <div class="row">

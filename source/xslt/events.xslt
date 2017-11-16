@@ -238,7 +238,7 @@
         </xsl:call-template>
     </xsl:template>
     
-    <xsl:template match="img[ivdnt:class-contains(@class, 'gtb-keyboard-icon')]" mode="ixsl:onclick">
+    <xsl:template match="button[@name eq 'open-speciale-tekens']" mode="ixsl:onclick">
         <xsl:variable name="speciaaltekendiv" select="ancestor::div[ivdnt:class-contains(@class, 'zoek-formulier')]//div[ivdnt:class-contains(@class, 'speciaalteken')][1]" as="element(div)"/>
         <xsl:variable name="special-chars-visible" as="xs:boolean" select="ivdnt:class-contains($speciaaltekendiv/@class, 'in')"/>
         

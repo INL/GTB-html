@@ -90,11 +90,12 @@
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             
+            <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/bootstrap.min.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/datatables.min.css" type="text/css" />
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/gtb-artikel.css" type="text/css"/>
-            
+			
             <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>
             <script src="js/bootstrap3-typeahead.min.js" type="text/javascript"></script>
@@ -106,7 +107,6 @@
             <script type="text/javascript">const BASE_LIST_URL = "<xsl:value-of select="$BASELISTURL"/>";</script>
             <script src="js/gtb.js" type="text/javascript"></script>
                         
-            <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
             <script type="text/javascript" src="saxonjs/SaxonJS.min.js"></script>
             <script xsl:expand-text="no">
                 window.onload = function() {
