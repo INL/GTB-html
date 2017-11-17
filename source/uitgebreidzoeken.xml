@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ivdnt:formulier class="zoek-formulier" label="Uitgebreid zoeken" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-    <ivdnt:formulierregel>
-        <ivdnt:bronselectors/>
-    </ivdnt:formulierregel>
+<ivdnt:formulier class="form-horizontal zoek-formulier" label="Uitgebreid zoeken" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <ivdnt:bronselectors/>
     
     <ivdnt:formulierregel>
         <ivdnt:resultaatformaatselectors/>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel/>
-        <ivdnt:formulierinput>
-            <ivdnt:include href="specialetekens.xml"/>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
+    <ivdnt:include href="specialetekens.xml"/>
     
     <ivdnt:formulierregel><p><a href="#" data-showhidegroup="uitgebreidzoeken.lemma" class="gtb-expanded">Lemma</a></p></ivdnt:formulierregel>
     <ivdnt:include href="uitgebreidzoeken-lemma.xml"/>

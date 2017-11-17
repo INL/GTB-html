@@ -5,9 +5,12 @@
     </head>
     <body>
         <div class="gtb-header">
-            <img class="gtb-header-logo" src="img/gtb-logo-header.svg" alt=""/>
-            <div class="gtb-header-content">
-                <h3 class="gtb-header-title" ivdnt:versioninfo="">De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h3>
+            <div class="container">
+                <img class="gtb-header-logo hidden-xs" src="img/gtb-logo-header.svg" alt=""/>
+                <div class="gtb-header-content">
+                    <h3 class="gtb-header-title hidden-xs" ivdnt:versioninfo="">De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h3>
+                    <h4 class="gtb-header-title visible-xs" ivdnt:versioninfo="">De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h4>
+                </div>
             </div>
         </div>
         
