@@ -202,58 +202,68 @@
     
     <xsl:template match="ivdnt:bronselectors" mode="ivdnt:html-mode">
         <!-- use suffix attribute to add a suffix to the dictionary names, e.g. suffix="bronnen" yields name="onwbronnen" -->
-        <div class="{$zoekformulier-label-column-class}">
-            <span class="formulierlabel formuliertitel"><xsl:value-of select="ancestor::ivdnt:formulier[1]/@label"/></span>
-        </div>
-        <div class="{$zoekformulier-input-column-class}">
-            <div class="formulierinput">
+       
+        <!-- buiten de form-group zodat margin niet zichtbaar is (collapsed met parent)-->
+        <h3 class="visible-xs visible-sm">Bronnen</h3>
+    
+        <div class="formulierregel form-group">
+            <label class="visible-md visible-lg {$zoekformulier-label-column-class}">Bronnen</label>
+    
+            <div class="col-xs-offset-1 col-xs-11 col-md-offset-0 {$zoekformulier-input-column-class}">
                 <div class="row">
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Oudnederlands Woordenboek">ONW
-                            <input id="{ivdnt:generate-input-id(.)}.onw" data-inputname="wdb" data-humanname="zoek in ONW" type="checkbox" name="onw{@suffix}" class="checkbox-inline">
+                    <div class="col-md-2">
+                        <label title="Oudnederlands Woordenboek" class="checkbox checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.onw" data-inputname="wdb" data-humanname="zoek in ONW" type="checkbox" name="onw{@suffix}">
                                 <xsl:if test="'onw' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
-                            </input>
+                            </input> 
+                            ONW
                         </label>
                     </div>
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Vroegmiddelnederlands Woordenboek">VMNW
-                            <input id="{ivdnt:generate-input-id(.)}.vmnw" data-inputname="wdb" data-humanname="zoek in VMNW" type="checkbox" name="vmnw{@suffix}" class="checkbox-inline">
+                    
+                    <div class="col-md-2">
+                        <label title="Vroegmiddelnederlands Woordenboek" class="checkbox checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.vmnw" data-inputname="wdb" data-humanname="zoek in VMNW" type="checkbox" name="vmnw{@suffix}">
                                 <xsl:if test="'vmnw' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
                             </input>
+                            VMNW
                         </label>
                     </div>
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Middelnederlandsch Woordenboek">MNW
-                            <input id="{ivdnt:generate-input-id(.)}.mnw" data-inputname="wdb" data-humanname="zoek in MNW" type="checkbox" name="mnw{@suffix}" class="checkbox-inline">
+                    <div class="col-md-2">
+                        <label title="Middelnederlandsch Woordenboek" class="checkbox checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.mnw" data-inputname="wdb" data-humanname="zoek in MNW" type="checkbox" name="mnw{@suffix}">
                                 <xsl:if test="'mnw' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
                             </input>
+                            MNW
                         </label>
                     </div>
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Woordenboek der Nederlandsche Taal">WNT
-                            <input id="{ivdnt:generate-input-id(.)}.wnt" data-inputname="wdb" data-humanname="zoek in WNT" type="checkbox" name="wnt{@suffix}" class="checkbox-inline">
+                    <div class="col-md-2">
+                        <label title="Woordenboek der Nederlandsche Taal" class="checkbox checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.wnt" data-inputname="wdb" data-humanname="zoek in WNT" type="checkbox" name="wnt{@suffix}">
                                 <xsl:if test="'wnt' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
                             </input>
+                            WNT
                         </label>
                     </div>
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Woordenboek der Friese taal">WFT
-                            <input id="{ivdnt:generate-input-id(.)}.wft" data-inputname="wdb" data-humanname="zoek in WFT" type="checkbox" name="wft{@suffix}" class="checkbox-inline">
+                    <div class="col-md-2">
+                        <label title="Woordenboek der Friese taal" class="checkbox checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.wft" data-inputname="wdb" data-humanname="zoek in WFT" type="checkbox" name="wft{@suffix}">
                                 <xsl:if test="'wft' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
                             </input>
+                            WFT
                         </label>
                     </div>
                 </div>
+            
             </div>
         </div>
     </xsl:template>
