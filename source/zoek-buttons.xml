@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<span xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
 
     <!--<button class="btn btn-secondary"  name="xxx">Geschiedenis</button>-->
     <ivdnt:modal type="geschiedenis" suppress-ok-button="true" style="width: 70vw">
@@ -21,6 +21,6 @@
 
     <button class="btn btn-default" name="wis-zoeken" title="Wis zoekvelden"><span class="fa fa-lg fa-eraser"></span> Wis</button>
     <button class="btn btn-default" name="open-speciale-tekens" title="Klik om speciale tekens in te voeren"><span class="fa fa-lg fa-keyboard-o"></span> Speciale tekens</button>
-    <button class="btn btn-primary gtb-zoek-button" name="start-zoeken" type="submit"><span class="fa fa-lg fa-search"></span> Zoek</button>
+    <button class="btn btn-primary pull-right gtb-zoek-button" name="start-zoeken" type="submit"><span class="fa fa-lg fa-search"></span> Zoek</button>
     <div class="gtbcheckbox"><label class="form-group">Letters exact <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive" class="checkbox-inline"/></label></div>
-</div>
+</span>
