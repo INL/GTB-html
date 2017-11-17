@@ -4,11 +4,14 @@
         <title>Instituut voor de Nederlandse Taal - geïntegreerde taalbank</title>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12"><h1 ivdnt:versioninfo="">Geïntegreerde taalbank</h1></div>
+        <div class="gtb-header">
+            <img class="gtb-header-logo" src="img/gtb-logo-header.svg" alt=""/>
+            <div class="gtb-header-content">
+                <h3 class="gtb-header-title" ivdnt:versioninfo="">De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h3>
             </div>
-            
+        </div>
+        
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <ivdnt:tabs title-container-class="titles" content-container-class="container">    
