@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ivdnt:formulier class="zoek-formulier" label="Basiszoeken" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<ivdnt:formulier class="form-horizontal zoek-formulier" label="Basiszoeken" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <ivdnt:formulierregel>
         <ivdnt:bronselectors/>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel/>
-        <ivdnt:formulierinput>
-            <ivdnt:include href="specialetekens.xml"/>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
-    
+    <ivdnt:include href="specialetekens.xml"/>
+        
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Modern Nederlands trefwoord</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
@@ -28,14 +23,22 @@
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woordsoort</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
-            <input type="text" name="lemwrdsrt" data-modal-target-id="basiszoeken.lemwrdsrt" class="form-control gtb-woordsoortveld" data-humanname="woordsoort"/>
-            <ivdnt:modal type="woordsoortzoeken" target-input="basiszoeken.lemwrdsrt">
-                <ivdnt:modaltrigger><input type="image" class="woordsoortassistentieknop btn btn-secondary" src="toverstaf.png" alt="Icon met toverstaf" title="Klik voor hulp bij het invoeren van de woordsoort"/></ivdnt:modaltrigger>
-                <ivdnt:modalcontent>
-                    <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
-                    <ivdnt:include href="woordsoortassistentie.xml"/>
-                </ivdnt:modalcontent>
-            </ivdnt:modal>
+            <div class="input-group">
+                <input type="text" name="lemwrdsrt" data-modal-target-id="basiszoeken.lemwrdsrt" class="form-control gtb-woordsoortveld" data-humanname="woordsoort"/>
+                    <span class="input-group-btn">
+                        <ivdnt:modal type="woordsoortzoeken" target-input="basiszoeken.lemwrdsrt">
+                            <ivdnt:modaltrigger>
+                                <button type="button" class="woordsoortassistentieknop modaltrigger btn btn-default" title="Klik voor hulp bij het invoeren van de woordsoort">
+                                    <span class="glyphicon glyphicon-pencil"> </span>                                
+                                </button>
+                            </ivdnt:modaltrigger>
+                            <ivdnt:modalcontent>
+                                <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
+                            <ivdnt:include href="woordsoortassistentie.xml"/>
+                        </ivdnt:modalcontent>
+                    </ivdnt:modal>
+                </span>
+            </div>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
@@ -61,7 +64,9 @@
     </ivdnt:formulierregel>
     
     <ivdnt:formulierregel>
-        <ivdnt:formulierlabel><a href="*** iets ***">Help</a></ivdnt:formulierlabel>
-        <ivdnt:include href="zoek-buttons.xml"/>
+        <div class="col-xs-12">
+          <a class="btn btn-default" href="*** iets ***"><span class="fa fa-lg fa-info"></span> Help</a>
+          <ivdnt:include href="zoek-buttons.xml"/>
+        </div>
     </ivdnt:formulierregel>
 </ivdnt:formulier>

@@ -164,17 +164,23 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierregel" mode="ivdnt:html-mode">
-        <div class="{normalize-space('row formulierregel ' || @class)}">
+        <div class="{normalize-space('form-group formulierregel ' || @class)}">
             <xsl:apply-templates mode="#current"/>
         </div>
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierlabel" mode="ivdnt:html-mode">
-        <div class="{$zoekformulier-label-column-class}"><span class="{normalize-space(local-name() || ' ' || @class)}"><xsl:apply-templates mode="#current"/></span></div>
+        <div class="{$zoekformulier-label-column-class}">
+            <label class="{normalize-space('formulierlabel ' || @class)}">
+                <xsl:apply-templates mode="#current"/>
+            </label>
+        </div>
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierinput" mode="ivdnt:html-mode">
-        <div class="{$zoekformulier-input-column-class}"><div class="{local-name()}"><xsl:apply-templates mode="#current"/></div></div>
+        <div class="{normalize-space($zoekformulier-input-column-class || ' formulierinput ' || @class)}">
+            <xsl:apply-templates mode="#current"/>
+        </div>
     </xsl:template>
 
     <xsl:template match="ivdnt:formulierinput/input | ivdnt:formulierinput/select" mode="ivdnt:html-mode">
@@ -186,16 +192,12 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="ivdnt:van-tot-velden" mode="ivdnt:html-mode">        
-        <p class="form-control-static">
-            <span class="col-md-2">Vanaf </span>
-            <!-- input style=... dient om de 100% van .form-control in bootstrap.css te overschrijven.
-                 Het percentage is proefondervindelijk vastgesteld en klopt niet eens helemaal. 
-                 TODO moet netter kunnen. -->
-            <input id="{ivdnt:generate-input-id(.)}.van" type="text" name="{@van}" data-humanname="{@data-humanname-van}" class="col-md-2 form-control" style="width: 21%"/>
-            <span class="col-md-2">tot / met </span>
-            <input id="{ivdnt:generate-input-id(.)}.tot" type="text" name="{@tot}" data-humanname="{@data-humanname-tot}" class="col-md-2 form-control" style="width: 21%"/>
-        </p>
+    <xsl:template match="ivdnt:van-tot-velden" mode="ivdnt:html-mode">
+        <div class="{normalize-space('input-group ' || @class)}">
+            <input id="{ivdnt:generate-input-id(.)}.van" type="text" name="{@van}" data-humanname="{@data-humanname-van}" class="form-control"/>
+            <span class="input-group-addon">tot / met</span>
+            <input id="{ivdnt:generate-input-id(.)}.tot" type="text" name="{@tot}" data-humanname="{@data-humanname-tot}" class="form-control"/>
+        </div>
     </xsl:template>
     
     <xsl:template match="ivdnt:bronselectors" mode="ivdnt:html-mode">
@@ -339,7 +341,7 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:specialetekens" mode="ivdnt:html-mode">
-        <div class="speciaalteken collapse out">
+        <div class="form-group speciaalteken collapse out">
             <table class="speciaalteken">
                 <tbody>
                     <xsl:for-each-group select="ivdnt:teken" group-adjacent="xs:integer((position() - 1) div $aantal-speciaal-teken-kolommen)">
