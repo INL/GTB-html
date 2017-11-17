@@ -22,24 +22,15 @@ body {
     font-family: verdana, helvetica, sans-serif
 }
 
-.tab-content{
-    margin-top: 2em;
-}
-
 .zoek-formulier{
-    margin-left: 10%;
-    margin-right: 10%;
-}
+ }
 
 .formuliertitel{
     font-weight: bold;
     font-size: larger;
 }
 
-.formulierregel{
-    background-color: lightgray;
-    font-size: smaller;
-    padding: 3px;
+.formulierregel {
 }
 
 .formulierlabel{

@@ -13,30 +13,28 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <ivdnt:tabs title-container-class="titles" content-container-class="container">    
-                        <ivdnt:tab>
-                            <ivdnt:tabtitle>Basiszoeken</ivdnt:tabtitle>
-                            <ivdnt:include href="basiszoeken.xml"/>
-                        </ivdnt:tab>
-                        <ivdnt:tab>
-                            <ivdnt:tabtitle>Uitgebreid zoeken</ivdnt:tabtitle>
-                            <ivdnt:include href="uitgebreidzoeken.xml"/>
-                        </ivdnt:tab>
-                        <ivdnt:tab>
-                            <ivdnt:tabtitle>Zoeken in bronnenlijst</ivdnt:tabtitle>
-                            <ivdnt:include href="bronnenlijstzoeken.xml"/>
-                        </ivdnt:tab>
-                        <ivdnt:tab id="resultaat">
-                            <ivdnt:tabtitle>Resultaat</ivdnt:tabtitle>
-                            <ivdnt:include href="resultaat.xml"/>
-                        </ivdnt:tab>
-                        <ivdnt:tab>
-                            <ivdnt:tabtitle>Help &amp; Info</ivdnt:tabtitle>
-                            <ivdnt:include href="help-en-info.xml"/>
-                        </ivdnt:tab>
-                    </ivdnt:tabs>
-                </div>
+                <ivdnt:tabs class="col-xs-12">
+                    <ivdnt:tab>
+                        <ivdnt:tabtitle>Basiszoeken</ivdnt:tabtitle>
+                        <ivdnt:include href="basiszoeken.xml"/>
+                    </ivdnt:tab>
+                    <ivdnt:tab>
+                        <ivdnt:tabtitle>Uitgebreid zoeken</ivdnt:tabtitle>
+                        <ivdnt:include href="uitgebreidzoeken.xml"/>
+                    </ivdnt:tab>
+                    <ivdnt:tab>
+                        <ivdnt:tabtitle>Zoeken in bronnenlijst</ivdnt:tabtitle>
+                        <ivdnt:include href="bronnenlijstzoeken.xml"/>
+                    </ivdnt:tab>
+                    <ivdnt:tab id="resultaat">
+                        <ivdnt:tabtitle>Resultaat</ivdnt:tabtitle>
+                        <ivdnt:include href="resultaat.xml"/>
+                    </ivdnt:tab>
+                    <ivdnt:tab>
+                        <ivdnt:tabtitle>Help &amp; Info</ivdnt:tabtitle>
+                        <ivdnt:include href="help-en-info.xml"/>
+                    </ivdnt:tab>
+                </ivdnt:tabs>
             </div>
         </div>
         <div class="auxiliaries">
