@@ -365,6 +365,10 @@ tr.gtb-result-row:nth-child(odd){
     padding: 25px 15px;
 }
 
+.form-inline .checkbox-inline {
+    padding-bottom: 7px;
+}
+
 /* header */
 
 .gtb-header {

@@ -21,6 +21,8 @@
 
     <button class="btn btn-default" name="wis-zoeken" title="Wis zoekvelden"><span class="fa fa-lg fa-eraser"></span> Wis</button>
     <button class="btn btn-default" name="open-speciale-tekens" title="Klik om speciale tekens in te voeren"><span class="fa fa-lg fa-keyboard-o"></span> Speciale tekens</button>
+    <label class="checkbox-inline gtbcheckbox">
+        <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive"/> Letters exact
+    </label>
     <button class="btn btn-primary pull-right gtb-zoek-button" name="start-zoeken" type="submit"><span class="fa fa-lg fa-search"></span> Zoek</button>
-    <div class="gtbcheckbox"><label class="form-group">Letters exact <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive" class="checkbox-inline"/></label></div>
 </span>
