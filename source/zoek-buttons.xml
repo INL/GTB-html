@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<span xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
 
-    <!--<button class="btn btn-secondary"  name="xxx">Geschiedenis</button>-->
-    <ivdnt:modal type="geschiedenis" suppress-ok-button="true" style="width: 70vw">
-        <ivdnt:modaltrigger><button type="button" name="geschiedenis" class="geschiedenisknop btn btn-default"><span class="fa fa-lg fa-history"></span> Geschiedenis...</button></ivdnt:modaltrigger>
-        <ivdnt:modalcontent>
-            <ivdnt:modaltitle><h4 class="modal-title">Overzicht eerder gestelde zoekvragen</h4></ivdnt:modaltitle>
+<ivdnt:formulierregel class="helpregel" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <div class="col-md-offset-4 col-md-8">
+        <!-- submit buttons als eerste element zodat de andere elementen wrappen en de button op dezelfde plaats blijft ipv andersom -->
+        <button class="btn btn-primary pull-right gtb-zoek-button" name="start-zoeken" type="submit"><span class="fa fa-lg fa-search"></span> Zoek</button>
 
-            <div class="gtb-zoekvragen-geschiedenis">
-                <!-- Hier worden de zoekvragen in geplaatst -->
-            </div>
-            <div class="modal-footer">
-                <p class="row">
-                    <button type="button" name="doe-selecteervraag" class="btn btn-default btn-primary" data-dismiss="modal">Selecteer</button>
-                    <button type="button" name="annuleer-sorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
-                </p>
-            </div>
-        </ivdnt:modalcontent>
-    </ivdnt:modal>
+        <a class="btn btn-default" href="*** iets ***"><span class="fa fa-lg fa-info"></span> Help</a>
+        
+        <ivdnt:modal type="geschiedenis" suppress-ok-button="true" style="width: 70vw">
+          <ivdnt:modaltrigger><button type="button" name="geschiedenis" class="geschiedenisknop btn btn-default"><span class="fa fa-lg fa-history"></span> Geschiedenis...</button></ivdnt:modaltrigger>
+          <ivdnt:modalcontent>
+              <ivdnt:modaltitle><h4 class="modal-title">Overzicht eerder gestelde zoekvragen</h4></ivdnt:modaltitle>
+        
+              <div class="gtb-zoekvragen-geschiedenis">
+                  <!-- Hier worden de zoekvragen in geplaatst -->
+              </div>
+              <div class="modal-footer">
+                  <p class="row">
+                      <button type="button" name="doe-selecteervraag" class="btn btn-default btn-primary" data-dismiss="modal">Selecteer</button>
+                      <button type="button" name="annuleer-sorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
+                  </p>
+              </div>
+          </ivdnt:modalcontent>
+        </ivdnt:modal>
+        
+        <button class="btn btn-default" name="wis-zoeken" title="Wis zoekvelden"><span class="fa fa-lg fa-eraser"></span> Wis</button>
+        <button class="btn btn-default" name="open-speciale-tekens" title="Klik om speciale tekens in te voeren"><span class="fa fa-lg fa-keyboard-o"></span> Speciale tekens</button>
+        <label class="checkbox-inline gtbcheckbox">
+          <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive"/> Letters exact
+        </label>
 
-    <button class="btn btn-default" name="wis-zoeken" title="Wis zoekvelden"><span class="fa fa-lg fa-eraser"></span> Wis</button>
-    <button class="btn btn-default" name="open-speciale-tekens" title="Klik om speciale tekens in te voeren"><span class="fa fa-lg fa-keyboard-o"></span> Speciale tekens</button>
-    <label class="checkbox-inline gtbcheckbox">
-        <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive"/> Letters exact
-    </label>
-    <button class="btn btn-primary pull-right gtb-zoek-button" name="start-zoeken" type="submit"><span class="fa fa-lg fa-search"></span> Zoek</button>
-</span>
+    </div>
+</ivdnt:formulierregel>

@@ -14,11 +14,6 @@
     
     <p><a href="#" data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-collapsed">Citaten</a></p>
     <ivdnt:include href="uitgebreidzoeken-citaten.xml"/>
-    
-    <ivdnt:formulierregel class="helpregel">
-        <div class="col-md-offset-4 col-md-8">
-            <a class="btn btn-default" href="*** iets ***"><span class="fa fa-lg fa-info"></span> Help</a>
-            <ivdnt:include href="zoek-buttons.xml"/>
-        </div>
-    </ivdnt:formulierregel>
+
+    <ivdnt:include href="zoek-buttons.xml"/>
 </ivdnt:formulier>
