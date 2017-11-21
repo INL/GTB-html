@@ -21,9 +21,9 @@
     <xsl:include href="tabs.xslt"/>
     <xsl:include href="modal.xslt"/>
     
-    <xsl:variable name="zoekformulier-label-column-class" as="xs:string" select="'col-md-4'"/>
-    <xsl:variable name="zoekformulier-input-column-class" as="xs:string" select="'col-md-8'"/>
-    <xsl:variable name="zoekformulier-vantot-label-class" as="xs:string" select="'col-md-4'"/>
+    <xsl:variable name="zoekformulier-label-column-class" as="xs:string" select="'col-sm-4'"/>
+    <xsl:variable name="zoekformulier-input-column-class" as="xs:string" select="'col-sm-8'"/>
+    <xsl:variable name="zoekformulier-vantot-label-class" as="xs:string" select="'col-sm-4'"/>
     <xsl:variable name="bronselector-column-class" as="xs:string" select="'col-xs-2'"/>
     
     <xsl:variable name="aantal-speciaal-teken-kolommen" as="xs:integer" select="13"/>
