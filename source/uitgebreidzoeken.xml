@@ -2,9 +2,7 @@
 <ivdnt:formulier class="form-horizontal zoek-formulier" label="Uitgebreid zoeken" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <ivdnt:bronselectors/>
     
-    <ivdnt:formulierregel>
-        <ivdnt:resultaatformaatselectors/>
-    </ivdnt:formulierregel>
+    <ivdnt:resultaatformaatselectors/>
     
     <ivdnt:include href="specialetekens.xml"/>
     
