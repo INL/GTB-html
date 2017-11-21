@@ -16,7 +16,9 @@
     <ivdnt:include href="uitgebreidzoeken-citaten.xml"/>
     
     <ivdnt:formulierregel>
-        <ivdnt:formulierlabel><a href="*** iets ***">Help</a></ivdnt:formulierlabel>
-        <ivdnt:include href="zoek-buttons.xml"/>
+        <div class="col-md-offset-4 col-md-8">
+            <a class="btn btn-default" href="*** iets ***"><span class="fa fa-lg fa-info"></span> Help</a>
+            <ivdnt:include href="zoek-buttons.xml"/>
+        </div>
     </ivdnt:formulierregel>
 </ivdnt:formulier>
