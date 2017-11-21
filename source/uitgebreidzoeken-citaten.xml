@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-hidden" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<div data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-inspring gtb-hidden" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in citaattekst</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
@@ -7,43 +7,44 @@
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel class="gtb-inspring"><p><a href="#" data-showhidegroup="uitgebreidzoeken.brongegevens" class="gtb-collapsed">Brongegevens</a></p></ivdnt:formulierregel>
-    <div class="gtb-hidden" data-showhidegroup="uitgebreidzoeken.brongegevens">
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.brongegevens" class="gtb-collapsed">Brongegevens</a></p>
+    <div class="gtb-inspring gtb-hidden" data-showhidegroup="uitgebreidzoeken.brongegevens">
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Auteur citaat</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Auteur citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="bronauteur" class="form-control gtb-tekstveld typeahead" data-humanname="auteur citaat"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Verkorte brontitel</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Verkorte brontitel</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="brontitel" class="form-control gtb-tekstveld typeahead" data-humanname="verkorte brontitel"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Datering bron</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Datering bron</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <ivdnt:van-tot-velden van="bronvan" tot="brontot" data-humanname-van="vanaf-datering citaat" data-humanname-tot="tot-datering citaat"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Lokalisering bron</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Lokalisering bron</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="bronlocatie" class="form-control gtb-tekstveld typeahead"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
     </div>
-    <ivdnt:formulierregel class="gtb-inspring"><p><a href="#" data-showhidegroup="uitgebreidzoeken.oudstecitaat" class="gtb-collapsed">Oudste citaat</a></p></ivdnt:formulierregel>
-    <div class="gtb-hidden" data-showhidegroup="uitgebreidzoeken.oudstecitaat">
+    
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.oudstecitaat" class="gtb-collapsed">Oudste citaat</a></p>
+    <div class="gtb-inspring gtb-hidden" data-showhidegroup="uitgebreidzoeken.oudstecitaat">
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Datering oudste citaat</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Datering oudste citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <ivdnt:van-tot-velden van="oudvan" tot="oudtot" data-humanname-van="vanaf-datering oudste citaat" data-humanname-tot="tot-datering oudste citaat"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Lokalisering oudste citaat</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Lokalisering oudste citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="oudlocatie" class="form-control gtb-tekstveld typeahead" data-humanname="lokalisering oudste citaat"/>
             </ivdnt:formulierinput>

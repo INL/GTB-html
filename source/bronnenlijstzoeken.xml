@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ivdnt:formulier class="zoek-formulier" label="Zoeken in bronnenlijst" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-    <ivdnt:formulierregel>
-        <ivdnt:bronselectors suffix="bronnen"/>
-    </ivdnt:formulierregel>
+<ivdnt:formulier class="form-horizontal zoek-formulier" label="Zoeken in bronnenlijst" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <ivdnt:bronselectors suffix="bronnen"/>
     
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel/>
-        <ivdnt:formulierinput>
-            <ivdnt:include href="specialetekens.xml"/>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
-    
+    <ivdnt:include href="specialetekens.xml"/>
+
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Auteur</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
@@ -60,8 +53,10 @@
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel><a href="*** iets ***">Help</a></ivdnt:formulierlabel>
-        <ivdnt:include href="zoek-buttons.xml"/>
+    <ivdnt:formulierregel class="helpregel">
+        <div class="col-md-offset-4 col-md-8">
+            <a class="btn btn-default" href="*** iets ***"><span class="fa fa-lg fa-info"></span> Help</a>
+            <ivdnt:include href="zoek-buttons.xml"/>
+        </div>
     </ivdnt:formulierregel>
 </ivdnt:formulier>
