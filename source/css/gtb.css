@@ -31,13 +31,27 @@ body {
 }
 
 .formulierregel {
+    margin-bottom: 8px;
 }
 
 .formulierlabel{
-    display: inline;
+    margin-bottom: 3px;
 }
 
-.formulierinput{
+.formulierinput {
+    
+}
+
+.formulierinput input {
+    height: 30px;
+}
+
+.formulierinput .btn {
+    padding: 4px 10px;
+}
+
+.helpregel {
+    margin-top: 35px;
 }
 
 .gtb-disabled{
@@ -122,12 +136,22 @@ td.speciaalteken:active{
     transform: translateY(2px);
 }
 
+.gtb-expanded,
+.gtb-collapsed {
+    position:relative;
+    font-weight: bolder;
+}
+
 .gtb-collapsed:before{
-    content: '▶ ';
+    content: '▶';
+    position: absolute;
+    left: -15px;
 }
 
 .gtb-expanded:before{
-    content: '▼ ';
+    content: '▼';
+    position: absolute;
+    left: -15px;
 }
 
 .gtbcheckbox, .gtbradio{
@@ -151,7 +175,7 @@ td.speciaalteken:active{
 }
 
 .gtb-inspring {
-    padding-left: 2em;
+    padding-left: 15px;
 }
 
 /*input[type=checkbox]:before, .gtbcheckbox:before {
@@ -164,9 +188,6 @@ input[type=checkbox]:after, .gtbcheckbox:after {
     display: inline;
     color:red;
 }*/
-
-.formulierinput label{
-}
 
 .woordsoorttable{
     margin-left: 2em;

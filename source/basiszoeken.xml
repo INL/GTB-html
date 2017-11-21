@@ -4,41 +4,7 @@
     
     <ivdnt:include href="specialetekens.xml"/>
         
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel>Modern Nederlands trefwoord</ivdnt:formulierlabel>
-        <ivdnt:formulierinput>
-            <input type="text" name="lemmodern" class="form-control gtb-tekstveld typeahead" data-humanname="modern Nederlands trefwoord"/>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
-    
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel>Origineel trefwoord</ivdnt:formulierlabel>
-        <ivdnt:formulierinput>
-            <input type="text" name="lemma" class="form-control gtb-tekstveld typeahead" data-humanname="origineel trefwoord"/>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
-    
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel>Woordsoort</ivdnt:formulierlabel>
-        <ivdnt:formulierinput>
-            <div class="input-group">
-                <input type="text" name="lemwrdsrt" data-modal-target-id="basiszoeken.lemwrdsrt" class="form-control gtb-woordsoortveld" data-humanname="woordsoort"/>
-                    <span class="input-group-btn">
-                        <ivdnt:modal type="woordsoortzoeken" target-input="basiszoeken.lemwrdsrt">
-                            <ivdnt:modaltrigger>
-                                <button type="button" class="woordsoortassistentieknop modaltrigger btn btn-default" title="Klik voor hulp bij het invoeren van de woordsoort">
-                                    <span class="glyphicon glyphicon-pencil"> </span>                                
-                                </button>
-                            </ivdnt:modaltrigger>
-                            <ivdnt:modalcontent>
-                                <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
-                            <ivdnt:include href="woordsoortassistentie.xml"/>
-                        </ivdnt:modalcontent>
-                    </ivdnt:modal>
-                </span>
-            </div>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
+    <ivdnt:include href="basiszoeken-lemma.xml"/>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in betekenis</ivdnt:formulierlabel>
@@ -61,10 +27,10 @@
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel>
+    <ivdnt:formulierregel class="helpregel">
         <div class="col-md-offset-4 col-md-8">
-          <a class="btn btn-default" href="*** iets ***"><span class="fa fa-lg fa-info"></span> Help</a>
-          <ivdnt:include href="zoek-buttons.xml"/>
+            <a class="btn btn-default" href="*** iets ***"><span class="fa fa-lg fa-info"></span> Help</a>
+            <ivdnt:include href="zoek-buttons.xml"/>
         </div>
     </ivdnt:formulierregel>
 </ivdnt:formulier>

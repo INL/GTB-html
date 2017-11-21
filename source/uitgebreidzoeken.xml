@@ -6,16 +6,16 @@
     
     <ivdnt:include href="specialetekens.xml"/>
     
-    <ivdnt:formulierregel><p><a href="#" data-showhidegroup="uitgebreidzoeken.lemma" class="gtb-expanded">Lemma</a></p></ivdnt:formulierregel>
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.lemma" class="gtb-expanded">Lemma</a></p>
     <ivdnt:include href="uitgebreidzoeken-lemma.xml"/>
     
-    <ivdnt:formulierregel><p><a href="#" data-showhidegroup="uitgebreidzoeken.betekenis" class="gtb-collapsed">Betekenis</a></p></ivdnt:formulierregel>
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.betekenis" class="gtb-collapsed">Betekenis</a></p>
     <ivdnt:include href="uitgebreidzoeken-betekenis.xml"/>
     
-    <ivdnt:formulierregel><p><a href="#" data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-collapsed">Citaten</a></p></ivdnt:formulierregel>
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-collapsed">Citaten</a></p>
     <ivdnt:include href="uitgebreidzoeken-citaten.xml"/>
     
-    <ivdnt:formulierregel>
+    <ivdnt:formulierregel class="helpregel">
         <div class="col-md-offset-4 col-md-8">
             <a class="btn btn-default" href="*** iets ***"><span class="fa fa-lg fa-info"></span> Help</a>
             <ivdnt:include href="zoek-buttons.xml"/>
