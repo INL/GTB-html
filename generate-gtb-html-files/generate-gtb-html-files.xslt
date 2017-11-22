@@ -344,7 +344,7 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:specialetekens" mode="ivdnt:html-mode">
-        <div class="form-group speciaalteken collapse out">
+        <div class="speciaalteken collapse out">
             <table class="speciaalteken">
                 <tbody>
                     <xsl:for-each-group select="ivdnt:teken" group-adjacent="xs:integer((position() - 1) div $aantal-speciaal-teken-kolommen)">

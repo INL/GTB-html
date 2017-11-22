@@ -126,32 +126,38 @@ body:before {
     display: inline;
 }
 
-input.woordsoortassistentieknop{
-    width: 10%;
-    height: 10%;
+div.speciaalteken {
+    margin: 10px 0px 20px 0px;
 }
 
 table.speciaalteken,
 td.speciaalteken{
     font-family: gtb, Verdana, sans-serif;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
+}
+
+table.speciaalteken {
+    table-layout: fixed; 
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
 }
 
 td.speciaalteken{
-    width: 10em;
+    width: 1px; /* arbitrair, is meer een soort noemer over de deler van het totaal aantal width in de rij voor fixed layout tables */
+    padding: 3px;
     text-align: center;
     cursor: pointer;
+    /* bootstrap inputs nadoen */
+    border: 1px solid #CCC!important; /*  bootstrap override het een en ander */
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 }
 
 td.speciaalteken:hover{
-    background-color: lightgray;
+    background-color: #EEE;
 }
 
 td.speciaalteken:active{
-    box-shadow: 0 5px lightgray;
-    transform: translateY(2px);
+    background-color: #DDD;
+    box-shadow: inset 0px 1px 6px -1px rgba(0,0,0,0.3);
 }
 
 .gtb-expanded,
