@@ -179,10 +179,10 @@ td.speciaalteken:active{
 }
 
 .gtbcheckbox, .gtbradio{
-    /*border-radius: 3px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;*/
+}
+
+.resultaathouder {
+    background-color: rgba(255,255,255,0.8);
 }
 
 .gtb-resultaatknoppen {
