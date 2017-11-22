@@ -52,4 +52,10 @@
     <xsl:template match="ivdnt:modaltitle" mode="ivdnt:modal-mode">
         <xsl:apply-templates select="node()" mode="ivdnt:html-mode"/>
     </xsl:template>
+    
+    <xsl:template match="ivdnt:modal[@suppress-ok-button eq 'true']/ivdnt:modalfooter" mode="ivdnt:modal-mode">
+        <div class="modal-footer">
+            <xsl:apply-templates select="node()" mode="ivdnt:html-mode"/>
+        </div>
+    </xsl:template>
 </xsl:stylesheet>

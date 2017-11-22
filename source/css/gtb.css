@@ -42,7 +42,7 @@ body {
     
 }
 
-.formulierinput input {
+.formulierinput input[type=text] {
     height: 30px;
 }
 
@@ -241,8 +241,9 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 
 div.gtb-results{
     font-family: gtb, Verdana, sans-serif;
-    height: 70vh;
-    overflow-y: scroll;
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 35px;
 }
 
 div.gtb-results i{
@@ -311,17 +312,8 @@ tr.gtb-result-row > td{
     vertical-align: top;
 }
 
-tr.gtb-result-row:hover{
-    cursor: pointer;
-    opacity: 0.5;
-}
-
-tr.gtb-result-row:nth-child(even){
-    background-color: #fff
-}
-
-tr.gtb-result-row:nth-child(odd){
-    background-color: #ccc
+tr.gtb-result-row{
+    /* cursor: pointer; */
 }
 
 .gtb-wdb-onw{
@@ -375,6 +367,7 @@ tr.gtb-result-row:nth-child(odd){
 /* color variables for testing */
 :root {
     --main-blue: #00042E;
+    --main-blue-alt: #040a49;
     --light-blue: #4285F4;
     --header-gradient: #29617d;
 }
@@ -387,6 +380,21 @@ tr.gtb-result-row:nth-child(odd){
 
 .form-horizontal .checkbox-inline {
     padding-bottom: 7px;
+}
+
+.pagination {
+    margin: 0px;
+}
+
+.pagination > li {
+    display: inline-block;
+}
+
+.pagination > li > ul {
+    /* geen float, anders wordt de baseline van de button anders en aligned de boel niet meer met andere buttons */
+    /* Alleen opletten dat we geen whitespace tussen closers en openers hebben in de html... zie https://css-tricks.com/fighting-the-space-between-inline-block-elements/ */
+    float: none;
+    display: inline-block;
 }
 
 /* header */
