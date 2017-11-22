@@ -118,7 +118,7 @@ body:before {
 }
 
 .gtb-tekstveld, .gtb-selectveld{
-    font-family: gtb, Verdana, sans-serif;
+    font-family: Verdana, sans-serif, gtb;
 }
 
 .gtb-woordsoortveld{
@@ -132,7 +132,7 @@ div.speciaalteken {
 
 table.speciaalteken,
 td.speciaalteken{
-    font-family: gtb, Verdana, sans-serif;
+    font-family: Verdana, sans-serif, gtb;
 }
 
 table.speciaalteken {
@@ -264,23 +264,23 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 }
 
 div.gtb-results{
-    font-family: gtb, Verdana, sans-serif;
+    font-family: Verdana, sans-serif, gtb;
     max-height: 70vh;
     overflow-y: auto;
     margin-bottom: 35px;
 }
 
 div.gtb-results i{
-    font-family: gtbi, Verdana, sans-serif;
+    font-family: Verdana, sans-serif, gtbi;
 }
 
 div.gtb-results b{
-    font-family: gtbb, Verdana, sans-serif;
+    font-family: Verdana, sans-serif, gtbb;
 }
 
 div.gtb-results i b,
 div.gtb-results b i{
-    font-family: gtbbi, Verdana, sans-serif;
+    font-family: Verdana, sans-serif, gtbbi;
 }
 
 td.conc {
