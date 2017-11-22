@@ -181,7 +181,7 @@ td.speciaalteken:active{
 .gtbcheckbox, .gtbradio{
 }
 
-.resultaathouder {
+#resultaathouder {
     background-color: rgba(255,255,255,0.8);
 }
 
