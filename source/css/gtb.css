@@ -22,6 +22,23 @@ body {
     font-family: verdana, helvetica, sans-serif
 }
 
+/* background image, style via pseudo-element omdat we zo transparantie kunnen zetten in oudere browsers */
+body:before {
+    content: " ";
+    
+    background-color: #FFF;
+    background-image: url(../img/gtb-logo-header.svg);
+    background-repeat: no-repeat;
+    
+    opacity: 0.06;
+    z-index: -1000;
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 15%;
+}
+
 .zoek-formulier{
  }
 
@@ -42,8 +59,9 @@ body {
     
 }
 
-.formulierinput input[type=text] {
+.formulierinput .form-control[type=text] {
     height: 30px;
+    padding: 4px 8px;
 }
 
 .formulierinput .btn {
@@ -367,7 +385,7 @@ tr.gtb-result-row{
 /* color variables for testing */
 :root {
     --main-blue: #00042E;
-    --main-blue-alt: #040a49;
+    --main-blue-lighter: #040a49;
     --light-blue: #4285F4;
     --header-gradient: #29617d;
 }
@@ -379,7 +397,7 @@ tr.gtb-result-row{
 }
 
 .form-horizontal .checkbox-inline {
-    padding-bottom: 7px;
+    vertical-align: baseline;
 }
 
 .pagination {
@@ -395,6 +413,57 @@ tr.gtb-result-row{
     /* Alleen opletten dat we geen whitespace tussen closers en openers hebben in de html... zie https://css-tricks.com/fighting-the-space-between-inline-block-elements/ */
     float: none;
     display: inline-block;
+}
+
+/* tabs */
+/* tabs */
+.nav-tabs {
+    border-bottom: 2px solid #DDD;
+}
+
+.nav-tabs>li>a {
+    border: none;
+    color: #666;
+    margin-right: 0px;
+    background: transparent;
+}
+
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:focus,
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover{
+    background-color: transparent;
+    color: var(--light-blue);
+    border: none;
+}
+
+.nav-tabs>li>a::after {
+    content: "";
+    background: var(--light-blue);
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+}
+
+.nav-tabs>li.active>a::after,
+.nav-tabs>li:hover>a::after {
+    transform: scale(1);
+}
+
+.tab-nav>li>a::after {
+    background: #21527d none repeat scroll 0% 0%;
+    color: #fff;
+}
+
+.card {
+    background: #FFF none repeat scroll 0% 0%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
 }
 
 /* header */
