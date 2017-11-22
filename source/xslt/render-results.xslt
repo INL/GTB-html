@@ -26,7 +26,7 @@
         <div class="gtb-results">
             <xsl:apply-templates select="statistics" mode="render-results"/>
             <!-- Note: the id 'gtb-result-table' is used on several places in this file and in js/gtb.js -->
-            <table id="gtb-result-table">
+            <table id="gtb-result-table" class="table table-striped table-hover table-condensed">
                 <colgroup>
                     <col class="gtb-wdbcol-line"/>
                     <col class="gtb-wdbcol-wdb"/>
@@ -84,37 +84,18 @@
                 </tbody>
             </table>
         </div>
-        <div class="row">
-            <xsl:copy-of select="$html/key('ids', 'resultaatknoppen')/*"/>
-            <!-- De voorafgaande col-md-6 gaat als 3 keer een col-md-2 naar de knoppen voor sorteren, exporteren en afdrukken. -->
-            <div class="col-md-6">
-                <div class="dataTables_paginate paging_simple_numbers gtb-pagineringsknoppen" id="gtb-result-table_paginate">
-                <ul class="pagination">
-                    <xsl:call-template name="ivdnt:gen-pagination">
-                        <xsl:with-param name="statistics" select="statistics"/>
-                        <xsl:with-param name="currentStartLine" select="$startline"/>
-                    </xsl:call-template>
-                </ul>
-            </div>
-            </div>
-        </div>
         
-        <script xsl:expand-text="no">
-            var table = $('#gtb-result-table') ;
-            $(document).ready( function () {
-                 table.DataTable();
-            } );
-            
-            table.DataTable( {
-                "paging": false,
-                "bFilter": false,
-                "bSort" : false,
-                "bInfo": false,
-                language: {
-                       url: 'js/nl.json',
-                }
-            } );
-        </script>
+        <!-- waarom datatables kopieren als het niet gebruikt wordt!? -->
+        <div class="dataTables_paginate paging_simple_numbers gtb-pagineringsknoppen pull-right" id="gtb-result-table_paginate">
+            <ul class="pagination">
+                <xsl:call-template name="ivdnt:gen-pagination">
+                    <xsl:with-param name="statistics" select="statistics"/>
+                    <xsl:with-param name="currentStartLine" select="$startline"/>
+                </xsl:call-template>
+            </ul>
+        </div>
+        <!-- /node() ipv /* om whitespace te behouden, belangrijk voor spacing tussen inline-block elementen zoals buttons -->
+        <xsl:copy-of select="$html/key('ids', 'resultaatknoppen')/node()"/>
         
     </xsl:template>
     
