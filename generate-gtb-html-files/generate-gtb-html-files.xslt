@@ -21,10 +21,10 @@
     <xsl:include href="tabs.xslt"/>
     <xsl:include href="modal.xslt"/>
     
-    <xsl:variable name="zoekformulier-label-column-class" as="xs:string" select="'col-md-4'"/>
-    <xsl:variable name="zoekformulier-input-column-class" as="xs:string" select="'col-md-8'"/>
-    <xsl:variable name="zoekformulier-vantot-label-class" as="xs:string" select="'col-md-4'"/>
-    <xsl:variable name="bronselector-column-class" as="xs:string" select="'col-md-2'"/>
+    <xsl:variable name="zoekformulier-label-column-class" as="xs:string" select="'col-sm-4'"/>
+    <xsl:variable name="zoekformulier-input-column-class" as="xs:string" select="'col-sm-8'"/>
+    <xsl:variable name="zoekformulier-vantot-label-class" as="xs:string" select="'col-sm-4'"/>
+    <xsl:variable name="bronselector-column-class" as="xs:string" select="'col-xs-2'"/>
     
     <xsl:variable name="aantal-speciaal-teken-kolommen" as="xs:integer" select="13"/>
     
@@ -90,6 +90,7 @@
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             
+            <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/bootstrap.min.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/datatables.min.css" type="text/css" />
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
@@ -106,7 +107,6 @@
             -->
             <script src="js/gtb.js" type="text/javascript"></script>
                         
-            <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
             <script type="text/javascript" src="saxonjs/SaxonJS.min.js"></script>
             <script type="text/javascript" xsl:expand-text="no">
                 window.onload = function() {
@@ -165,17 +165,21 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierregel" mode="ivdnt:html-mode">
-        <div class="{normalize-space('row formulierregel ' || @class)}">
+        <div class="{normalize-space('form-group formulierregel ' || @class)}">
             <xsl:apply-templates mode="#current"/>
         </div>
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierlabel" mode="ivdnt:html-mode">
-        <div class="{$zoekformulier-label-column-class}"><span class="{normalize-space(local-name() || ' ' || @class)}"><xsl:apply-templates mode="#current"/></span></div>
+        <label class="{normalize-space($zoekformulier-label-column-class || ' formulierlabel ' || @class)}">
+            <xsl:apply-templates mode="#current"/>
+        </label>
     </xsl:template>
     
     <xsl:template match="ivdnt:formulierinput" mode="ivdnt:html-mode">
-        <div class="{$zoekformulier-input-column-class}"><div class="{local-name()}"><xsl:apply-templates mode="#current"/></div></div>
+        <div class="{normalize-space($zoekformulier-input-column-class || ' formulierinput ' || @class)}">
+            <xsl:apply-templates mode="#current"/>
+        </div>
     </xsl:template>
 
     <xsl:template match="ivdnt:formulierinput/input | ivdnt:formulierinput/select" mode="ivdnt:html-mode">
@@ -190,88 +194,89 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="ivdnt:van-tot-velden" mode="ivdnt:html-mode">        
-        <p class="form-control-static">
-            <span class="col-md-2">Vanaf </span>
-            <!-- input style=... dient om de 100% van .form-control in bootstrap.css te overschrijven.
-                 Het percentage is proefondervindelijk vastgesteld en klopt niet eens helemaal. 
-                 TODO moet netter kunnen. -->
-            <input id="{ivdnt:generate-input-id(.)}.van" type="text" name="{@van}" data-humanname="{@data-humanname-van}" class="col-md-2 form-control" style="width: 21%"/>
-            <span class="col-md-2">tot / met </span>
-            <input id="{ivdnt:generate-input-id(.)}.tot" type="text" name="{@tot}" data-humanname="{@data-humanname-tot}" class="col-md-2 form-control" style="width: 21%"/>
-        </p>
+    <xsl:template match="ivdnt:van-tot-velden" mode="ivdnt:html-mode">
+        <div class="{normalize-space('input-group ' || @class)}">
+            <input id="{ivdnt:generate-input-id(.)}.van" type="text" name="{@van}" data-humanname="{@data-humanname-van}" class="form-control"/>
+            <span class="input-group-addon">tot / met</span>
+            <input id="{ivdnt:generate-input-id(.)}.tot" type="text" name="{@tot}" data-humanname="{@data-humanname-tot}" class="form-control"/>
+        </div>
     </xsl:template>
     
     <xsl:template match="ivdnt:bronselectors" mode="ivdnt:html-mode">
         <!-- use suffix attribute to add a suffix to the dictionary names, e.g. suffix="bronnen" yields name="onwbronnen" -->
-        <div class="{$zoekformulier-label-column-class}">
-            <span class="formulierlabel formuliertitel"><xsl:value-of select="ancestor::ivdnt:formulier[1]/@label"/></span>
-        </div>
-        <div class="{$zoekformulier-input-column-class}">
-            <div class="formulierinput">
+       
+        <div class="formulierregel form-group">
+            <label class="{$zoekformulier-label-column-class} formulierlabel">Bronnen</label>
+    
+            <div class="{$zoekformulier-input-column-class}">
                 <div class="row">
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Oudnederlands Woordenboek">ONW
-                            <input id="{ivdnt:generate-input-id(.)}.onw" data-inputname="wdb" data-humanname="zoek in ONW" type="checkbox" name="onw{@suffix}" class="checkbox-inline">
+                    <div class="{$bronselector-column-class}">
+                        <label title="Oudnederlands Woordenboek" class="checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.onw" data-inputname="wdb" data-humanname="zoek in ONW" type="checkbox" name="onw{@suffix}">
                                 <xsl:if test="'onw' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
-                            </input>
+                            </input> 
+                            ONW
                         </label>
                     </div>
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Vroegmiddelnederlands Woordenboek">VMNW
-                            <input id="{ivdnt:generate-input-id(.)}.vmnw" data-inputname="wdb" data-humanname="zoek in VMNW" type="checkbox" name="vmnw{@suffix}" class="checkbox-inline">
+                    
+                    <div class="{$bronselector-column-class}">
+                        <label title="Vroegmiddelnederlands Woordenboek" class="checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.vmnw" data-inputname="wdb" data-humanname="zoek in VMNW" type="checkbox" name="vmnw{@suffix}">
                                 <xsl:if test="'vmnw' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
                             </input>
+                            VMNW
                         </label>
                     </div>
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Middelnederlandsch Woordenboek">MNW
-                            <input id="{ivdnt:generate-input-id(.)}.mnw" data-inputname="wdb" data-humanname="zoek in MNW" type="checkbox" name="mnw{@suffix}" class="checkbox-inline">
+                    <div class="col-xs-2">
+                        <label title="Middelnederlandsch Woordenboek" class="checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.mnw" data-inputname="wdb" data-humanname="zoek in MNW" type="checkbox" name="mnw{@suffix}">
                                 <xsl:if test="'mnw' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
                             </input>
+                            MNW
                         </label>
                     </div>
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Woordenboek der Nederlandsche Taal">WNT
-                            <input id="{ivdnt:generate-input-id(.)}.wnt" data-inputname="wdb" data-humanname="zoek in WNT" type="checkbox" name="wnt{@suffix}" class="checkbox-inline">
+                    <div class="{$bronselector-column-class}">
+                        <label title="Woordenboek der Nederlandsche Taal" class="checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.wnt" data-inputname="wdb" data-humanname="zoek in WNT" type="checkbox" name="wnt{@suffix}">
                                 <xsl:if test="'wnt' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
                             </input>
+                            WNT
                         </label>
                     </div>
-                    <div class="{$bronselector-column-class} gtbcheckbox">
-                        <label title="Woordenboek der Friese taal">WFT
-                            <input id="{ivdnt:generate-input-id(.)}.wft" data-inputname="wdb" data-humanname="zoek in WFT" type="checkbox" name="wft{@suffix}" class="checkbox-inline">
+                    <div class="{$bronselector-column-class}">
+                        <label title="Woordenboek der Friese taal" class="checkbox-inline gtbcheckbox">
+                            <input id="{ivdnt:generate-input-id(.)}.wft" data-inputname="wdb" data-humanname="zoek in WFT" type="checkbox" name="wft{@suffix}">
                                 <xsl:if test="'wft' = $selected_sources_sequence">
                                     <xsl:attribute name="checked">checked</xsl:attribute>
                                 </xsl:if>
                             </input>
+                            WFT
                         </label>
                     </div>
                 </div>
+            
             </div>
         </div>
     </xsl:template>
     
     <xsl:template match="ivdnt:resultaatformaatselectors" mode="ivdnt:html-mode">
-        <div class="{$zoekformulier-label-column-class}">
-            <span class="formulierlabel formuliertitel">Resultaten weergeven als </span>
-        </div>
-        <div class="{$zoekformulier-input-column-class}">
-            <div class="formulierinput">
+        <div class="formulierregel form-group">
+            <label class="{$zoekformulier-label-column-class} formulierlabel">Resultaten weergeven als </label>
+            <div class="{$zoekformulier-input-column-class}">
                 <div class="row">
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met artikelen">Artikelen <input id="{ivdnt:generate-input-id(.)}.0" checked="checked" data-inputname="domein" data-humanname="toon artikelen" type="radio" name="domein" value="0" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met betekenisomschrijvingen">Omschr. <input id="{ivdnt:generate-input-id(.)}.1" data-inputname="domein" data-humanname="toon omschrijvingen" type="radio" name="domein" value="1" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met citaten">Citaten <input id="{ivdnt:generate-input-id(.)}.2" data-inputname="domein" data-humanname="toon citaten" type="radio" name="domein" value="2" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met kopsecties">Kopsecties <input id="{ivdnt:generate-input-id(.)}.3" data-inputname="domein" data-humanname="toon kopsecties" type="radio" name="domein" value="3" class="radio-inline"/></label></div>
-                    <div class="{$bronselector-column-class} gtbradio"><label title="Toon een lijst met verbindingen">Verbind. <input id="{ivdnt:generate-input-id(.)}.4" data-inputname="domein" data-humanname="toon verbindingen" type="radio" name="domein" value="4" class="radio-inline"/></label></div>
+                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met artikelen"><input id="{ivdnt:generate-input-id(.)}.0" checked="checked" data-inputname="domein" data-humanname="toon artikelen" type="radio" name="domein" value="0"/>Artikelen</label></div>
+                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met betekenisomschrijvingen"><input id="{ivdnt:generate-input-id(.)}.1" data-inputname="domein" data-humanname="toon omschrijvingen" type="radio" name="domein" value="1"/>Omschr.</label></div>
+                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met citaten"><input id="{ivdnt:generate-input-id(.)}.2" data-inputname="domein" data-humanname="toon citaten" type="radio" name="domein" value="2"/>Citaten</label></div>
+                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met kopsecties"><input id="{ivdnt:generate-input-id(.)}.3" data-inputname="domein" data-humanname="toon kopsecties" type="radio" name="domein" value="3"/>Kopsecties</label></div>
+                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met verbindingen"><input id="{ivdnt:generate-input-id(.)}.4" data-inputname="domein" data-humanname="toon verbindingen" type="radio" name="domein" value="4"/>Verbind.</label></div>
                 </div>
             </div>
         </div>

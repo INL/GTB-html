@@ -253,7 +253,7 @@
         </xsl:call-template>
     </xsl:template>
     
-    <xsl:template match="img[ivdnt:class-contains(@class, 'gtb-keyboard-icon')]" mode="ixsl:onclick">
+    <xsl:template match="button[@name eq 'open-speciale-tekens']" mode="ixsl:onclick">
         <xsl:variable name="speciaaltekendiv" select="ancestor::div[ivdnt:class-contains(@class, 'zoek-formulier')]//div[ivdnt:class-contains(@class, 'speciaalteken')][1]" as="element(div)"/>
         <xsl:variable name="special-chars-visible" as="xs:boolean" select="ivdnt:class-contains($speciaaltekendiv/@class, 'in')"/>
         
@@ -270,6 +270,7 @@
         <xsl:variable name="textbox" as="element(input)" select="if ($focussed-textbox) then $focussed-textbox else following::input[@type eq 'text'][1]"/>
         <xsl:if test="$textbox">
             <!-- We laten het type achterwege bij selStart en selEnd. In Chrome is het double, is dat overal zo? Je zou integer verwachten. -->
+            <!-- koen: alle cijfers zijn doubles in het magische land van javascript -->
             <xsl:variable name="selStart" select="ixsl:get($textbox, 'selectionStart')"/>
             <xsl:variable name="selEnd" select="ixsl:get($textbox, 'selectionEnd')"/>
             <xsl:variable name="text" as="xs:string" select="ivdnt:get-input-value($textbox)"/>

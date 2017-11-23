@@ -22,32 +22,54 @@ body {
     font-family: verdana, helvetica, sans-serif
 }
 
-.tab-content{
-    margin-top: 2em;
+/* background image, style via pseudo-element omdat we zo transparantie kunnen zetten in oudere browsers */
+body:before {
+    content: " ";
+    
+    background-color: #FFF;
+    background-image: url(../img/gtb-logo-header.svg);
+    background-repeat: no-repeat;
+    
+    opacity: 0.06;
+    z-index: -1000;
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 15%;
 }
 
 .zoek-formulier{
-    margin-left: 10%;
-    margin-right: 10%;
-}
+ }
 
 .formuliertitel{
     font-weight: bold;
     font-size: larger;
 }
 
-.formulierregel{
-    background-color: lightgray;
-    font-size: smaller;
-    padding: 3px;
+.formulierregel {
+    margin-bottom: 8px;
 }
 
 .formulierlabel{
-    display: inline;
+    margin-bottom: 3px;
 }
 
-.formulierinput{
-    display: inline;
+.formulierinput {
+    
+}
+
+.formulierinput .form-control[type=text] {
+    height: 30px;
+    padding: 4px 8px;
+}
+
+.formulierinput .btn {
+    padding: 4px 10px;
+}
+
+.helpregel {
+    margin-top: 35px;
 }
 
 .gtb-disabled{
@@ -95,16 +117,8 @@ body {
     }
 }
 
-.gtb-keyboard-icon {
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
-    cursor: pointer;
-}
-
 .gtb-tekstveld, .gtb-selectveld{
-    width: 75%;
-    font-family: gtb, Verdana, sans-serif;
-    display: inline;
+    font-family: Verdana, sans-serif, gtb;
 }
 
 .gtb-woordsoortveld{
@@ -112,47 +126,63 @@ body {
     display: inline;
 }
 
-input.woordsoortassistentieknop{
-    width: 10%;
-    height: 10%;
+div.speciaalteken {
+    margin: 10px 0px 20px 0px;
 }
 
 table.speciaalteken,
 td.speciaalteken{
-    font-family: gtb, Verdana, sans-serif;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
+    font-family: Verdana, sans-serif, gtb;
+}
+
+table.speciaalteken {
+    table-layout: fixed; 
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
 }
 
 td.speciaalteken{
-    width: 10em;
+    width: 1px; /* arbitrair, is meer een soort noemer over de deler van het totaal aantal width in de rij voor fixed layout tables */
+    padding: 3px;
     text-align: center;
     cursor: pointer;
+    /* bootstrap inputs nadoen */
+    border: 1px solid #CCC!important; /*  bootstrap override het een en ander */
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 }
 
 td.speciaalteken:hover{
-    background-color: lightgray;
+    background-color: #EEE;
 }
 
 td.speciaalteken:active{
-    box-shadow: 0 5px lightgray;
-    transform: translateY(2px);
+    background-color: #DDD;
+    box-shadow: inset 0px 1px 6px -1px rgba(0,0,0,0.3);
+}
+
+.gtb-expanded,
+.gtb-collapsed {
+    position:relative;
+    font-weight: bolder;
 }
 
 .gtb-collapsed:before{
-    content: '▶ ';
+    content: '▶';
+    position: absolute;
+    left: -15px;
 }
 
 .gtb-expanded:before{
-    content: '▼ ';
+    content: '▼';
+    position: absolute;
+    left: -15px;
 }
 
 .gtbcheckbox, .gtbradio{
-    /*border-radius: 3px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;*/
+}
+
+#resultaathouder {
+    background-color: rgba(255,255,255,0.8);
 }
 
 .gtb-resultaatknoppen {
@@ -161,9 +191,6 @@ td.speciaalteken:active{
 }
 
 .gtb-zoek-button {
-    float: right;
-    margin-right: -0.5em; /*  gokje */
-    margin-left: 2em;
 }
 
 /* We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.  */
@@ -172,7 +199,7 @@ td.speciaalteken:active{
 }
 
 .gtb-inspring {
-    padding-left: 2em;
+    padding-left: 15px;
 }
 
 /*input[type=checkbox]:before, .gtbcheckbox:before {
@@ -185,11 +212,6 @@ input[type=checkbox]:after, .gtbcheckbox:after {
     display: inline;
     color:red;
 }*/
-
-.formulierinput label{
-    width: 18%;
-    white-space: nowrap;
-}
 
 .woordsoorttable{
     margin-left: 2em;
@@ -242,22 +264,23 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 }
 
 div.gtb-results{
-    font-family: gtb, Verdana, sans-serif;
-    height: 70vh;
-    overflow-y: scroll;
+    font-family: Verdana, sans-serif, gtb;
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 35px;
 }
 
 div.gtb-results i{
-    font-family: gtbi, Verdana, sans-serif;
+    font-family: Verdana, sans-serif, gtbi;
 }
 
 div.gtb-results b{
-    font-family: gtbb, Verdana, sans-serif;
+    font-family: Verdana, sans-serif, gtbb;
 }
 
 div.gtb-results i b,
 div.gtb-results b i{
-    font-family: gtbbi, Verdana, sans-serif;
+    font-family: Verdana, sans-serif, gtbbi;
 }
 
 td.conc {
@@ -313,17 +336,8 @@ tr.gtb-result-row > td{
     vertical-align: top;
 }
 
-tr.gtb-result-row:hover{
-    cursor: pointer;
-    opacity: 0.5;
-}
-
-tr.gtb-result-row:nth-child(even){
-    background-color: #fff
-}
-
-tr.gtb-result-row:nth-child(odd){
-    background-color: #ccc
+tr.gtb-result-row{
+    /* cursor: pointer; */
 }
 
 .gtb-wdb-onw{
@@ -371,4 +385,160 @@ tr.gtb-result-row:nth-child(odd){
     font-style: italic;
     padding-left: 4em;
     float: right;
+}
+
+
+/* color variables for testing */
+:root {
+    --main-blue: #00042E;
+    --main-blue-lighter: #040a49;
+    --light-blue: #4285F4;
+    --header-gradient: #29617d;
+}
+
+/* Bootstrap */
+
+.tab-content {
+    margin: 25px 15px;
+}
+
+.form-horizontal .checkbox-inline {
+    vertical-align: baseline;
+}
+
+.pagination {
+    margin: 0px;
+}
+
+.pagination > li {
+    display: inline-block;
+}
+
+.pagination > li > ul {
+    /* geen float, anders wordt de baseline van de button anders en aligned de boel niet meer met andere buttons */
+    /* Alleen opletten dat we geen whitespace tussen closers en openers hebben in de html... zie https://css-tricks.com/fighting-the-space-between-inline-block-elements/ */
+    float: none;
+    display: inline-block;
+}
+
+/* tabs */
+/* tabs */
+.nav-tabs {
+    border-bottom: 2px solid #DDD;
+}
+
+.nav-tabs>li>a {
+    border: none;
+    color: #666;
+    margin-right: 0px;
+    background: transparent;
+}
+
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:focus,
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover{
+    background-color: transparent;
+    color: var(--light-blue);
+    border: none;
+}
+
+.nav-tabs>li>a::after {
+    content: "";
+    background: var(--light-blue);
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+}
+
+.nav-tabs>li.active>a::after,
+.nav-tabs>li:hover>a::after {
+    transform: scale(1);
+}
+
+.tab-nav>li>a::after {
+    background: #21527d none repeat scroll 0% 0%;
+    color: #fff;
+}
+
+.card {
+    background: #FFF none repeat scroll 0% 0%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+/* header */
+
+.gtb-header {
+    /* background: -webkit-linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%); 
+    background:    -moz-linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%); 
+    background:     -ms-linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%); 
+    background:      -o-linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%); 
+    background:         linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%);  */
+
+    background-color: var(--main-blue);
+
+    height: 100px;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+
+    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15)
+}
+
+.gtb-header > .container {
+    height: 100%;
+    display: flex;
+}
+
+.gtb-header-flex-container {
+    max-height: 100%;
+    display: flex;
+}
+
+.gtb-header-logo {
+    height: calc(100% + 20px); /* break out of the parent container by 12px padding + 8px for effect  */
+    width: auto;
+    
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.15);
+    padding: 1px;
+    padding-top: 0px;
+    border: 2px solid var(--main-blue);
+    border-top: none;
+    border-radius: 2px;
+}
+
+.gtb-header-content {
+    flex-grow: 1;
+    align-self: flex-end; /* align contents with bottom of parent bar */
+    display: flex;
+
+    border-bottom: 2px solid #DDD; 
+    padding-left: 25px;
+    margin-left: 10px;
+    height: 100%;
+}
+
+.gtb-header-title {
+    flex-grow: 1;
+    align-self: flex-end;
+    color: #EEE;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+.gtb-header-logo-ivdnt {
+    align-self: flex-start;
+    height:100%;
+    width: auto;
+    padding: 2px 0px 5px 0px;
+    display: block;
+}
+.gtb-header-logo-ivdnt>img {
+    height: 100%;
+    width: auto;
 }

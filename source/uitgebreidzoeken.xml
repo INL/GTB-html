@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ivdnt:formulier class="zoek-formulier" label="Uitgebreid zoeken" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-    <ivdnt:formulierregel>
-        <ivdnt:bronselectors/>
-    </ivdnt:formulierregel>
+<ivdnt:formulier class="form-horizontal zoek-formulier" label="Uitgebreid zoeken" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <ivdnt:bronselectors/>
     
-    <ivdnt:formulierregel>
-        <ivdnt:resultaatformaatselectors/>
-    </ivdnt:formulierregel>
+    <ivdnt:resultaatformaatselectors/>
     
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel/>
-        <ivdnt:formulierinput>
-            <ivdnt:include href="specialetekens.xml"/>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
+    <ivdnt:include href="specialetekens.xml"/>
     
-    <ivdnt:formulierregel><p><a href="#" data-showhidegroup="uitgebreidzoeken.lemma" class="gtb-expanded">Lemma</a></p></ivdnt:formulierregel>
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.lemma" class="gtb-expanded">Lemma</a></p>
     <ivdnt:include href="uitgebreidzoeken-lemma.xml"/>
     
-    <ivdnt:formulierregel><p><a href="#" data-showhidegroup="uitgebreidzoeken.betekenis" class="gtb-collapsed">Betekenis</a></p></ivdnt:formulierregel>
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.betekenis" class="gtb-collapsed">Betekenis</a></p>
     <ivdnt:include href="uitgebreidzoeken-betekenis.xml"/>
     
-    <ivdnt:formulierregel><p><a href="#" data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-collapsed">Citaten</a></p></ivdnt:formulierregel>
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-collapsed">Citaten</a></p>
     <ivdnt:include href="uitgebreidzoeken-citaten.xml"/>
-    
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel><a href="*** iets ***">Help</a></ivdnt:formulierlabel>
-        <ivdnt:include href="zoek-buttons.xml"/>
-    </ivdnt:formulierregel>
+
+    <ivdnt:include href="zoek-buttons.xml"/>
 </ivdnt:formulier>

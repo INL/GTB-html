@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div data-showhidegroup="uitgebreidzoeken.lemma" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel>Modern Nederlands trefwoord</ivdnt:formulierlabel>
-        <ivdnt:formulierinput>
-            <input type="text" name="lemmodern" class="form-control gtb-tekstveld typeahead" data-humanname="modern Nederlands trefwoord"/>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
-    
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel>Origineel trefwoord</ivdnt:formulierlabel>
-        <ivdnt:formulierinput>
-            <input type="text" name="lemma" class="form-control gtb-tekstveld typeahead"/>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
-    
-    <ivdnt:formulierregel>
-        <ivdnt:formulierlabel>Woordsoort</ivdnt:formulierlabel>
-        <ivdnt:formulierinput>
-            <input type="text" name="lemwrdsrt" data-humanname="woordsoort" data-modal-target-id="uitgebreidzoeken.lemwrdsrt" class="form-control gtb-woordsoortveld"/>
-            <ivdnt:modal type="woordsoortzoeken" target-input="uitgebreidzoeken.lemwrdsrt">
-                <ivdnt:modaltrigger><input type="image" class="woordsoortassistentieknop btn btn-secondary" src="toverstaf.png" alt="Icon met toverstaf" title="Klik voor hulp bij het invoeren van de woordsoort"/></ivdnt:modaltrigger>
-                <ivdnt:modalcontent>
-                    <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
-                    <ivdnt:include href="woordsoortassistentie.xml"/>
-                </ivdnt:modalcontent>
-            </ivdnt:modal>
-        </ivdnt:formulierinput>
-    </ivdnt:formulierregel>
+<div data-showhidegroup="uitgebreidzoeken.lemma" class="gtb-inspring" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <ivdnt:include href="basiszoeken-lemma.xml"/>
     
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Trefwoordvariant</ivdnt:formulierlabel>
@@ -35,38 +9,41 @@
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel class="gtb-inspring"><p><a href="#" data-showhidegroup="uitgebreidzoeken.etymologie" class="gtb-collapsed">Etymologie</a></p></ivdnt:formulierregel>
-    <div class="gtb-hidden" data-showhidegroup="uitgebreidzoeken.etymologie">
-        <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Verwante vorm</ivdnt:formulierlabel>
-            <ivdnt:formulierinput>
-                <input type="text" name="etymvorm" data-humanname="verwante vorm" class="form-control gtb-tekstveld typeahead"/>
-            </ivdnt:formulierinput>
-        </ivdnt:formulierregel>
-        <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">In de etymologische beschrijving genoemde taal</ivdnt:formulierlabel>
-            <ivdnt:formulierinput>
-                <input type="text" name="etymtaal" data-humanname="taal in etym. beschr." class="form-control gtb-tekstveld typeahead"/>
-            </ivdnt:formulierinput>
-        </ivdnt:formulierregel>
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.etymologie" class="gtb-collapsed">Etymologie</a></p>
+    <div data-showhidegroup="uitgebreidzoeken.etymologie" class="gtb-inspring gtb-hidden">
+       <ivdnt:formulierregel>
+           <ivdnt:formulierlabel>Verwante vorm</ivdnt:formulierlabel>
+           <ivdnt:formulierinput>
+               <input type="text" name="etymvorm" data-humanname="verwante vorm" class="form-control gtb-tekstveld typeahead"/>
+           </ivdnt:formulierinput>
+       </ivdnt:formulierregel>
+       
+       <ivdnt:formulierregel>
+           <ivdnt:formulierlabel>In de etymologische beschrijving genoemde taal</ivdnt:formulierlabel>
+           <ivdnt:formulierinput>
+               <input type="text" name="etymtaal" data-humanname="taal in etym. beschr." class="form-control gtb-tekstveld typeahead"/>
+           </ivdnt:formulierinput>
+       </ivdnt:formulierregel>
     </div>
     
-    <ivdnt:formulierregel class="gtb-inspring"><p><a href="#" data-showhidegroup="uitgebreidzoeken.morfologie" class="gtb-collapsed">Morfologie</a></p></ivdnt:formulierregel>
-    <div class="gtb-hidden" data-showhidegroup="uitgebreidzoeken.morfologie">
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.morfologie" class="gtb-collapsed">Morfologie</a></p>
+    <div data-showhidegroup="uitgebreidzoeken.morfologie" class="gtb-inspring gtb-hidden">
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Morfologisch element</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Morfologisch element</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="morfelem" data-humanname="morfologisch element" class="form-control gtb-tekstveld typeahead"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
+        
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Woorden in de morfologische beschrijving</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Woorden in de morfologische beschrijving</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="morfterm" data-humanname="woorden in morf. beschr." class="form-control gtb-tekstveld typeahead"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
+        
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Woordvormingstype</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Woordvormingstype</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <select name='morftype' data-humanname="woordvormingstype" class="form-control gtb-selectveld">
                     <option value="">---</option>
@@ -106,10 +83,10 @@
         </ivdnt:formulierregel>
     </div>
     
-    <ivdnt:formulierregel class="gtb-inspring"><p><a href="#" data-showhidegroup="uitgebreidzoeken.flexie" class="gtb-collapsed">Flexie</a></p></ivdnt:formulierregel>
-    <div class="gtb-hidden" data-showhidegroup="uitgebreidzoeken.flexie">
+    <p><a href="#" data-showhidegroup="uitgebreidzoeken.flexie" class="gtb-collapsed">Flexie</a></p>
+    <div data-showhidegroup="uitgebreidzoeken.flexie" class="gtb-inspring gtb-hidden" >
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Type</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Type</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <select name="flextype" data-humanname="flexietype" class="form-control gtb-selectveld">
                     <option value="">----</option>
@@ -226,7 +203,7 @@
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         <ivdnt:formulierregel>
-            <ivdnt:formulierlabel class="gtb-inspring">Vorm</ivdnt:formulierlabel>
+            <ivdnt:formulierlabel>Vorm</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="flexvorm" data-humanname="flexievorm" class="form-control gtb-tekstveld typeahead"/>
             </ivdnt:formulierinput>
