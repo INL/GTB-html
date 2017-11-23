@@ -6,10 +6,10 @@
     <body>
         <div class="gtb-header">
             <div class="container">
-                <img class="gtb-header-logo hidden-xs" src="img/gtb-logo-header.svg" alt="De Geïntegreerde Taalbank"/>
+                <img class="gtb-header-logo hidden-xs" src="img/gtb-logo-header.svg" alt="De Geïntegreerde Taalbank" ivdnt:versioninfo="git-versie-komt-hier"/>
                 <div class="gtb-header-content">
-                    <h3 class="gtb-header-title hidden-xs" ivdnt:versioninfo="">De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h3>
-                    <h4 class="gtb-header-title visible-xs" ivdnt:versioninfo="">De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h4>
+                    <h3 class="gtb-header-title hidden-xs" >De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h3>
+                    <h4 class="gtb-header-title visible-xs">De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h4>
                     <a class="gtb-header-logo-ivdnt" href="http://www.ivdnt.org/"><img src="img/ivdNt-logo-3regels-gebrokenwit.svg" alt="Instituut voor de Nederlandse Taal"/></a>
                 </div>
             </div>
