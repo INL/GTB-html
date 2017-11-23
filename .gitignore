@@ -4,3 +4,11 @@ target/*
 !target/README
 
 target\.test/
+
+*.magweg
+
+*.bak
+
+target\.sterculijn/
+
+maak-sterculijn\.sh

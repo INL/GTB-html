@@ -7,5 +7,5 @@ cd generate-gtb-html-files
   --alleen-index \
   "BASEARTICLEURL=http://gtb.inl.nl/iWDB/search?actie=article" \
   "BASEARTICLECONTENTURL=http://gtb.inl.nl/iWDB/search?actie=article_content" \
-  "BASESEARCHURL=../redirect.php?actie=results" \
-  "BASELISTURL=redirect.php?actie=list"
+  "BASESEARCHURL=http://localhost/redirect.php?actie=results" \
+  "BASELISTURL=http://localhost/redirect.php?actie=list"

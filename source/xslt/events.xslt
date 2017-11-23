@@ -51,12 +51,27 @@
         </xsl:for-each>
     </xsl:template>
     
-    <xsl:template match="div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)]" mode="ixsl:onkeypress">
+    <xsl:template match="div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS) and not(ivdnt:typeahead-is-ul-active())]" mode="ixsl:onkeypress">
         <xsl:variable name="event" select="ixsl:event()"/>
         <xsl:if test="xs:integer(ixsl:get($event, 'which')) eq 13">
             <!-- User pressed enter -->
             <xsl:call-template name="ivdnt:doe-zoeken">
                 <xsl:with-param name="formdiv" select="."/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+    
+    <!-- Redefine the standard typeahead template on order to start a search, but only if the user pressed enter (parameter for-click is false). -->
+    <xsl:template name="ivdnt:typeahead-after-select">
+        <xsl:param name="textfield" as="element(input)" required="yes"/>
+        <xsl:param name="for-click" as="xs:boolean" required="yes"/>
+        
+        <xsl:if test="not($for-click)">
+            <xsl:variable name="active-tabdiv" select="ivdnt:get-active-tabdiv($textfield)" as="element(div)"/>
+            <xsl:variable name="formdiv" as="element(div)" select="$active-tabdiv/div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)]"/>
+            
+            <xsl:call-template name="ivdnt:doe-zoeken">
+                <xsl:with-param name="formdiv" select="$formdiv"/>
             </xsl:call-template>
         </xsl:if>
     </xsl:template>

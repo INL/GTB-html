@@ -18,6 +18,8 @@
     <xsl:param name="baseArticleContentURL" as="xs:string" required="yes"/>
     <!-- Pass the start of the URL to which the query parameters (excluding the first part, ?actie=article_content - this is part of the parameter value) for retrieving the bron (source) will be appended: -->
     <xsl:param name="baseArticleURL" as="xs:string" required="yes"/>
+    <!-- Pass the start of the URL for the typeahead functionality. This is a sample URL: .../iWDB/search?wdb=onw%2Cvmnw%2Cmnw%2Cwnt%2Cwft%2C&actie=list&index=lemmodern&prefix=koe&sensitive=false&xmlerror=true -->
+    <xsl:param name="baseListURL" as="xs:string" required="yes"/>
     <!-- Pass (json) true or set here to true() if you want to see the full search URL (for development purposes): -->
     <xsl:param name="showLinkToSearchResultXml" as="xs:boolean" select="false()"/>
     <!-- Pass (json) true or set here to true() if you want to see the XML list containing all inputs and selects (for development purposes): -->
@@ -46,6 +48,7 @@
     <xsl:include href="render-results.xslt"/>
     <xsl:include href="history.xslt"/>
     <xsl:include href="events.xslt"/>
+    <xsl:include href="typeahead-impl.xslt"/>
     
     <xsl:function name="ivdnt:strip-hash-from-id"  as="xs:string">
         <xsl:param name="id-with-hash" as="xs:string"/>
@@ -251,7 +254,7 @@
                 <xsl:variable name="originating-formdiv-id" select="$originating-formdiv/@id" as="xs:string"/>
                 <div>
                     <p>De XML-lijst met alle inputs en selects</p>
-                    <pre><xsl:copy-of select="ivdnt:get-formdiv-inputs-and-selects(/html/body, $originating-formdiv-id)"/></pre> 
+                    <pre><xsl:copy-of select="ivdnt:get-formdiv-inputs-and-selects($originating-formdiv)"/></pre> 
                 </div>
             </xsl:if>
             <xsl:if test="$showLinkToSearchResultXml">
@@ -361,8 +364,7 @@
     
     <xsl:template name="ivdnt:doe-zoeken">
         <xsl:param name="formdiv" as="element(div)" required="yes"/>
-        <xsl:variable name="formdiv-id" as="xs:string" select="$formdiv/@id"/>
-        <xsl:variable name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-formdiv-inputs-and-selects(/html/body, $formdiv-id)"/>
+        <xsl:variable name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-formdiv-inputs-and-selects($formdiv)"/>
         <xsl:variable name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($formdiv-inputs-and-selects)"/>
         
         <xsl:call-template name="ivdnt:select-tab">

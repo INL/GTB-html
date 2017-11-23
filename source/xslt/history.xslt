@@ -13,14 +13,9 @@
          is placed into the generated element.
     -->
     <xsl:function name="ivdnt:get-formdiv-inputs-and-selects" as="element(inputs-and-selects)">
-        <xsl:param name="where-to-start" as="element()"/>
-        <xsl:param name="formdiv-id" as="xs:string"/>
+        <xsl:param name="formdiv" as="element()"/>
         <inputs-and-selects>
-            <xsl:for-each select="$where-to-start//div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS) and @id eq $formdiv-id][1]">
-                <!-- This iterates only one time -->
-                <xsl:variable name="formdiv" as="element(div)" select="."/>
-                <xsl:sequence select="ivdnt:create-input-or-select-elements($formdiv)"/>
-            </xsl:for-each>
+            <xsl:sequence select="ivdnt:create-input-or-select-elements($formdiv)"/>
         </inputs-and-selects>
     </xsl:function>
     
