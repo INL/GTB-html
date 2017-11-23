@@ -6,6 +6,15 @@
     expand-text="yes"
     version="3.0">
     
+    <xsl:function name="ivdnt:gen-data-modal-target-id" as="xs:string">
+        <xsl:param name="modal-textfield" as="element(input)"/>
+        <xsl:value-of select="'modaltarget.' || generate-id($modal-textfield)"/>
+    </xsl:function>
+    
+    <xsl:template match="@data-modal-target-id" mode="ivdnt:html-mode">
+        <xsl:attribute name="{name()}" select="ivdnt:gen-data-modal-target-id(..)"></xsl:attribute>
+    </xsl:template>
+    
     <xsl:template match="ivdnt:modal" mode="ivdnt:html-mode">
         <xsl:apply-templates select="ivdnt:modaltrigger/node()" mode="ivdnt:modal-mode"/>
     </xsl:template>
@@ -13,7 +22,7 @@
     <xsl:template match="ivdnt:modal" mode="ivdnt:modal-mode">
         <div id="{generate-id()}">
             <xsl:if test="@type"><xsl:attribute name="data-modaltype" select="@type"/></xsl:if>
-            <xsl:if test="@target-input"><xsl:attribute name="data-target-input" select="@target-input"/></xsl:if>
+            <xsl:if test="@target-input"><xsl:attribute name="data-target-input" select="ivdnt:gen-data-modal-target-id(preceding::input[@data-modal-target-id][1])"/></xsl:if>
             <xsl:copy-of select="ivdnt:add-class-values(@class, 'modal')"/>
             <div class="modal-dialog">
                 <xsl:copy-of select="@style"/>
