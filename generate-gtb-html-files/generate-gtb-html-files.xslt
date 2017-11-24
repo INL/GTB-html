@@ -289,9 +289,20 @@
             <a>
                 <xsl:attribute name="data-toggle" select="'collapse'"/>
                 <xsl:attribute name="href" select="concat('#', generate-id(.))"/>
-                <xsl:if test="ancestor::ivdnt:collapse">
+                <!-- alleen parent zetten wanneer eerste ancestor collapse accordion niet uitgeschakeld heeft -->
+                <xsl:if test="ancestor::ivdnt:collapse"> 
                     <xsl:attribute name="data-parent" select="concat('#', generate-id(ancestor::ivdnt:collapse[1]))"/>
                 </xsl:if>
+                
+                <xsl:choose>
+                    <xsl:when test="@open='true'">
+                        <xsl:attribute name="aria-expanded" select="'true'"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:attribute name="aria-expanded" select="'false'"/>
+                        <xsl:attribute name="class" select="'collapsed'"/>
+                    </xsl:otherwise>
+                </xsl:choose>
                 
                 <!-- altijd eentje verborgen door css -->
                 <span class="fa fa-lg fa-caret-right"></span>
@@ -304,7 +315,7 @@
     </xsl:template>
     
     <!-- 
-        Wanneer er een parent collapse is willen we accordion gedrag, dit houdt in dat wanneer de gebruiker een collapsible opent, 
+        Wanneer er een ancestor collapse bestaat willen we accordion gedrag, dit houdt in dat wanneer de gebruiker een collapsible opent, 
         de andere collapsibles in dezelfde parent automatisch sluiten.
         In bootstrap 3 werkt dit helaaas alleen wanneer alle collapsibles die moeten sluiten in een .panel zitten
         Vandaar dit template om dit even te enablen wanneer er een parent collapsible is.
@@ -317,16 +328,21 @@
     
     <xsl:template match="ivdnt:collapse" priority="80" mode="ivdnt:html-mode">
         <div>
+            <!-- 
+                Als er een label is, voeg .collapse class toe aan de content zodat we gesloten starten 
+                Wanneer er geen label is, zou de gebruiker hem nooit meer kunnen openen, dus doe het dan niet.
+            -->
             <xsl:choose>
-                <!-- 
-                    Als er een label is, voeg .collapse class toe aan de content zodat we gesloten starten 
-                    Wanneer er geen label is, zou de gebruiker hem nooit meer kunnen openen, dus doe het dan niet.
-                -->
+                <xsl:when test="@label and @open='true'"> <!-- open negeren als er geen label is -->
+                    <xsl:copy-of select="ivdnt:add-class-values(@class, 'gtb-collapse collapse in')"/>
+                    <xsl:attribute name="aria-expanded" select="'true'"/>
+                </xsl:when>
                 <xsl:when test="@label">
                     <xsl:copy-of select="ivdnt:add-class-values(@class, 'gtb-collapse collapse')"/>
+                    <xsl:attribute name="aria-expanded" select="'false'"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:attribute name="class" select="ivdnt:add-class-values(@class, 'gtb-collapse')"/>
+                    <xsl:copy-of select="ivdnt:add-class-values(@class, 'gtb-collapse')"/>
                 </xsl:otherwise>
             </xsl:choose>
             
