@@ -282,9 +282,57 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="ivdnt:woordsoorten" mode="ivdnt:html-mode">
-        <div class="woordsoorten" id="{ivdnt:get-showhide-id(.)}">
-            <xsl:apply-templates mode="ivdnt:ivdnt-woordsoort"></xsl:apply-templates>
+    <!-- collapse -->
+    
+    <xsl:template match="ivdnt:collapse[@label]" priority="100" mode="ivdnt:html-mode">
+        <p class="gtb-collapse-label">
+            <a>
+                <xsl:attribute name="data-toggle" select="'collapse'"/>
+                <xsl:attribute name="href" select="concat('#', generate-id(.))"/>
+                <xsl:if test="ancestor::ivdnt:collapse">
+                    <xsl:attribute name="data-parent" select="concat('#', generate-id(ancestor::ivdnt:collapse[1]))"/>
+                </xsl:if>
+                
+                <!-- altijd eentje verborgen door css -->
+                <span class="fa fa-lg fa-caret-right"></span>
+                <span class="fa fa-lg fa-caret-down"></span>
+                <xsl:value-of select="@label"/>
+            </a>
+        </p>
+        
+        <xsl:next-match/>
+    </xsl:template>
+    
+    <!-- 
+        Wanneer er een parent collapse is willen we accordion gedrag, dit houdt in dat wanneer de gebruiker een collapsible opent, 
+        de andere collapsibles in dezelfde parent automatisch sluiten.
+        In bootstrap 3 werkt dit helaaas alleen wanneer alle collapsibles die moeten sluiten in een .panel zitten
+        Vandaar dit template om dit even te enablen wanneer er een parent collapsible is.
+    -->
+    <xsl:template match="ivdnt:collapse[ancestor::ivdnt:collapse]" priority="90" mode="ivdnt:html-mode">
+        <div class="panel gtb-collapse-wrapper">
+            <xsl:next-match/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="ivdnt:collapse" priority="80" mode="ivdnt:html-mode">
+        <div>
+            <xsl:choose>
+                <!-- 
+                    Als er een label is, voeg .collapse class toe aan de content zodat we gesloten starten 
+                    Wanneer er geen label is, zou de gebruiker hem nooit meer kunnen openen, dus doe het dan niet.
+                -->
+                <xsl:when test="@label">
+                    <xsl:copy-of select="ivdnt:add-class-values(@class, 'gtb-collapse collapse')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:attribute name="class" select="ivdnt:add-class-values(@class, 'gtb-collapse')"/>
+                </xsl:otherwise>
+            </xsl:choose>
+            
+            <xsl:attribute name="id" select="generate-id(.)"/>
+            
+            <xsl:apply-templates select="node()" mode="ivdnt:html-mode"/>
         </div>
     </xsl:template>
     
@@ -293,58 +341,11 @@
         <xsl:value-of select="generate-id($element/ancestor-or-self::ivdnt:woordsoorten)"/>
     </xsl:function>
     
-    <xsl:template match="ivdnt:woordsoort" mode="ivdnt:ivdnt-woordsoort">
-        <div data-hoofdwoordsoort="{@toon}">
-            <p class="woordsoort" data-zoek="{@zoek}">
-                <xsl:choose>
-                    <xsl:when test="ivdnt:woordsoortitemgroep">
-                        <a href="#" data-showhidegroup="{ivdnt:get-showhide-id(.)}" class="gtb-collapsed">&#160;{@toon}</a>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <label>
-                            <!-- N.B.: value is expres leeg, dit maakt het onderscheid met subwaardes makkelijker. -->
-                            <input id="{ivdnt:generate-input-id(.)}" type="checkbox" value="" name="woordsoort.{generate-id()}"/><span>&#160;{@toon}</span>
-                        </label>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </p> 
-            <xsl:if test="ivdnt:woordsoortitemgroep">
-                <!-- We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.  -->
-                <div class="gtb-hidden" data-showhidegroup="{ivdnt:get-showhide-id(.)}">
-                    <table class="woordsoorttable">
-                        <xsl:if test="ivdnt:woordsoortitemgroep/@label">
-                            <thead>
-                                <tr>
-                                    <xsl:for-each select="ivdnt:woordsoortitemgroep">
-                                        <th>{@label}</th>
-                                    </xsl:for-each>
-                                </tr>
-                            </thead>
-                        </xsl:if>
-                        <tbody>
-                            <xsl:variable name="context" as="element(ivdnt:woordsoort)" select="."/>
-                            <xsl:variable name="numcols" as="xs:integer" select="count(ivdnt:woordsoortitemgroep)"/>
-                            <xsl:variable name="numrows" as="xs:integer" select="max(for $w in ivdnt:woordsoortitemgroep return count($w/ivdnt:woordsoortitem))"/>
-                            <xsl:for-each select="1 to $numrows">
-                                <xsl:variable name="row" as="xs:integer" select="."/>
-                                <tr>
-                                    <xsl:for-each select="1 to $numcols">
-                                        <xsl:variable name="col" as="xs:integer" select="."/>
-                                        <td><xsl:apply-templates select="$context/ivdnt:woordsoortitemgroep[$col]/ivdnt:woordsoortitem[$row]" mode="ivdnt:ivdnt-woordsoort"/></td>
-                                    </xsl:for-each>
-                                </tr>
-                            </xsl:for-each>
-                        </tbody>
-                    </table>
-                </div>
-            </xsl:if>
-        </div>
-    </xsl:template>
-    
-    <xsl:template match="ivdnt:woordsoortitem" mode="ivdnt:ivdnt-woordsoort">
-        <label>
-            <input id="{ivdnt:generate-input-id(.)}" type="checkbox" value="{@zoek}" name="woordsoortitem.{generate-id()}"/> <span>{@toon}</span>
-        </label>
+    <xsl:template match="ivdnt:woordsoort" mode="ivdnt:html-mode">
+       <label class="checkbox-inline gtb-woordsoort">
+            <input type="checkbox" value="{@zoek}"/>
+            {@toon}
+       </label>
     </xsl:template>
     
     <xsl:template match="ivdnt:specialetekens" mode="ivdnt:html-mode">
