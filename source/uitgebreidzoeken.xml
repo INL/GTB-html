@@ -6,14 +6,11 @@
     
     <ivdnt:include href="specialetekens.xml"/>
     
-    <p><a href="#" data-showhidegroup="uitgebreidzoeken.lemma" class="gtb-expanded">Lemma</a></p>
-    <ivdnt:include href="uitgebreidzoeken-lemma.xml"/>
+    <ivdnt:collapse>
+        <ivdnt:include href="uitgebreidzoeken-lemma.xml"/>
+        <ivdnt:include href="uitgebreidzoeken-betekenis.xml"/>
+        <ivdnt:include href="uitgebreidzoeken-citaten.xml"/>
+    </ivdnt:collapse>
     
-    <p><a href="#" data-showhidegroup="uitgebreidzoeken.betekenis" class="gtb-collapsed">Betekenis</a></p>
-    <ivdnt:include href="uitgebreidzoeken-betekenis.xml"/>
-    
-    <p><a href="#" data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-collapsed">Citaten</a></p>
-    <ivdnt:include href="uitgebreidzoeken-citaten.xml"/>
-
     <ivdnt:include href="zoek-buttons.xml"/>
 </ivdnt:formulier>

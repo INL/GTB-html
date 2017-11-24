@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div data-showhidegroup="uitgebreidzoeken.betekenis" class="gtb-inspring gtb-hidden" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<ivdnt:collapse label="Betekenis" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in betekenis</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
@@ -27,4 +27,4 @@
             <input type="text" name="betclass" class="form-control gtb-tekstveld typeahead" data-humanname="semantische classificatie"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
-</div>
+</ivdnt:collapse>

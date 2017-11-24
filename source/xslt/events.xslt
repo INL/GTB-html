@@ -8,31 +8,7 @@
     expand-text="yes"
     version="3.0">
     
-    <xsl:template match="a[@data-showhidegroup]" mode="ixsl:onclick">
-        <!-- Toon/verberg het eerstvolgende div met overeenkomstige @data-showhidegroup; bij het tonen van een div wordt een reeds zichtbare van dezelfde
-             groep weer verborgen.
-        -->
-        <xsl:variable name="next-div" as="element(div)" select="ivdnt:get-showhide-div(.)"/>
-        <xsl:for-each select="key('showhidegroup-divs', @data-showhidegroup)">
-            <xsl:choose>
-                <xsl:when test=". is $next-div">
-                    <xsl:choose>
-                        <xsl:when test="ivdnt:gtb-is-hidden(.)">
-                            <xsl:call-template name="ivdnt:gtb-show"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:call-template name="ivdnt:gtb-hide"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:call-template name="ivdnt:gtb-hide"/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:for-each>
-    </xsl:template>
-    
-    <xsl:template match="button[@data-dismiss eq 'modal' and not(ivdnt:class-contains(@class, 'close'))]" mode="ixsl:onclick">
+   <xsl:template match="button[@data-dismiss eq 'modal' and not(ivdnt:class-contains(@class, 'close'))]" mode="ixsl:onclick">
         <xsl:variable name="target-input-name" as="xs:string?" select="ancestor::div[@data-target-input][1]/@data-target-input"/>
         
         <xsl:if test="$target-input-name">
