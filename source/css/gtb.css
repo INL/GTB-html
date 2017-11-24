@@ -387,7 +387,6 @@ tr.gtb-result-row{
     float: right;
 }
 
-
 /* color variables for testing */
 :root {
     --main-blue: #00042E;
@@ -466,10 +465,54 @@ tr.gtb-result-row{
     color: #fff;
 }
 
-.card {
-    background: #FFF none repeat scroll 0% 0%;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-    margin-bottom: 30px;
+/* collapse */
+
+.gtb-collapse-wrapper.panel {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0px;
+    /* voorkom vervelende verspringende margins door de overflow:hidden op de .collapsing class van bootstrap
+     * die aan elementen wordt gehangen tijdens het expanden/collapsen 
+     */
+    overflow: hidden; 
+}
+
+.gtb-collapse-label {
+    font-weight: bold;
+    margin: 2px 0px;
+}
+
+.gtb-collapse-label > a {
+    position: relative;
+}
+.gtb-collapse-label > a > .fa {
+    position: relative;
+    left: -15px;
+    width: 0px;
+    overflow: visible;
+}
+.gtb-collapse-label > a[aria-expanded="true"] > .fa-caret-right {
+    display: none;
+}
+.gtb-collapse-label > a:not([aria-expanded="true"]) > .fa-caret-down {
+    display: none;
+}
+
+/*  woordsoorten */
+.gtb-woordsoort-container,
+.gtb-woordsoort-container .gtb-collapse {
+    padding-left: 15px;
+}
+
+.gtb-woordsoort.checkbox-inline {
+    display: block;
+}
+.gtb-woordsoort.checkbox-inline+.gtb-woordsoort.checkbox-inline {
+    margin-left: 0px;
+    margin-top: 3px;
 }
 
 /* header */
