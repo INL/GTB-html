@@ -336,10 +336,11 @@
         </div>
     </xsl:template>
     
-    <xsl:function name="ivdnt:get-showhide-id" as="xs:string">
-        <xsl:param name="element" as="element()"/>
-        <xsl:value-of select="generate-id($element/ancestor-or-self::ivdnt:woordsoorten)"/>
-    </xsl:function>
+    <xsl:template match="ivdnt:woordsoortgroep[@groep !='']" mode="ivdnt:html-mode">
+        <div class="gtb-woordsoortgroep" data-hoofdwoordsoort="{@groep}">
+            <xsl:apply-templates select="node()" mode="ivdnt:html-mode"/>
+        </div>
+    </xsl:template>
     
     <xsl:template match="ivdnt:woordsoort" mode="ivdnt:html-mode">
        <label class="checkbox-inline gtb-woordsoort">

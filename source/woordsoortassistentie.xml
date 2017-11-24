@@ -3,140 +3,162 @@
     <ivdnt:woordsoort zoek="Az" toon="Az"/>
     <ivdnt:woordsoort zoek="Bnw" toon="Bnw"/>
     <ivdnt:collapse label="Bw">
-        <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
-        <ivdnt:woordsoort zoek="betr" toon="betr"/>
-        <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
-        <ivdnt:woordsoort zoek="vr" toon="vr"/>
-        <ivdnt:woordsoort zoek="noemend" toon="noemend"/>
-        <ivdnt:woordsoort zoek="ontk" toon="ontk"/>
-        <ivdnt:woordsoort zoek="van,freq" toon="van freq"/>
-        <ivdnt:woordsoort zoek="van,graad" toon="van graad"/>
-        <ivdnt:woordsoort zoek="van,hoedanigheid" toon="van hoedanigheid"/>
-        <ivdnt:woordsoort zoek="van,hoeveelheid" toon="van hoeveelheid"/>
-        <ivdnt:woordsoort zoek="van,modaliteit" toon="van modaliteit"/>
-        <ivdnt:woordsoort zoek="van,plaats,of,richting" toon="van plaats of richting"/>
-        <ivdnt:woordsoort zoek="van,tijd" toon="van tijd"/>
-        <ivdnt:woordsoort zoek="voegw" toon="voegw"/>
+        <ivdnt:woordsoortgroep groep="Bw">
+            <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
+            <ivdnt:woordsoort zoek="betr" toon="betr"/>
+            <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
+            <ivdnt:woordsoort zoek="vr" toon="vr"/>
+            <ivdnt:woordsoort zoek="noemend" toon="noemend"/>
+            <ivdnt:woordsoort zoek="ontk" toon="ontk"/>
+            <ivdnt:woordsoort zoek="van,freq" toon="van freq"/>
+            <ivdnt:woordsoort zoek="van,graad" toon="van graad"/>
+            <ivdnt:woordsoort zoek="van,hoedanigheid" toon="van hoedanigheid"/>
+            <ivdnt:woordsoort zoek="van,hoeveelheid" toon="van hoeveelheid"/>
+            <ivdnt:woordsoort zoek="van,modaliteit" toon="van modaliteit"/>
+            <ivdnt:woordsoort zoek="van,plaats,of,richting" toon="van plaats of richting"/>
+            <ivdnt:woordsoort zoek="van,tijd" toon="van tijd"/>
+            <ivdnt:woordsoort zoek="voegw" toon="voegw"/>
+        </ivdnt:woordsoortgroep>
     </ivdnt:collapse>
     <ivdnt:collapse label="Lidw">
-        <ivdnt:woordsoort zoek="bep" toon="bep"/>
-        <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
+        <ivdnt:woordsoortgroep groep="Lidw">
+            <ivdnt:woordsoort zoek="bep" toon="bep"/>
+            <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
+        </ivdnt:woordsoortgroep>
     </ivdnt:collapse>
     <ivdnt:collapse label="Telw">
-        <ivdnt:woordsoort zoek="hoofd" toon="hoofd"/>
-        <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
-        <ivdnt:woordsoort zoek="rang" toon="rang"/>
-        <ivdnt:woordsoort zoek="collect" toon="collect"/>
+        <ivdnt:woordsoortgroep groep="Telw">
+            <ivdnt:woordsoort zoek="hoofd" toon="hoofd"/>
+            <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
+            <ivdnt:woordsoort zoek="rang" toon="rang"/>
+            <ivdnt:woordsoort zoek="collect" toon="collect"/>
+        </ivdnt:woordsoortgroep>
     </ivdnt:collapse>
     <ivdnt:woordsoort zoek="Tw" toon="Tw"/>
     <ivdnt:collapse label="Uitdr">
-        <ivdnt:woordsoort zoek="bijw" toon="bijw"/>
-        <ivdnt:woordsoort zoek="bijv" toon="bijv"/>
-        <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
-        <ivdnt:woordsoort zoek="vnw" toon="vnw"/>
+        <ivdnt:woordsoortgroep groep="Uitdr">
+            <ivdnt:woordsoort zoek="bijw" toon="bijw"/>
+            <ivdnt:woordsoort zoek="bijv" toon="bijv"/>
+            <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
+            <ivdnt:woordsoort zoek="vnw" toon="vnw"/>
+        </ivdnt:woordsoortgroep>
     </ivdnt:collapse>
     <ivdnt:collapse label="Vnw">
-        <ivdnt:collapse label="Type">
-            <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
-            <ivdnt:woordsoort zoek="betr" toon="betr"/>
-            <ivdnt:woordsoort zoek="bez" toon="bez"/>
-            <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
-            <ivdnt:woordsoort zoek="pers" toon="pers"/>
-            <ivdnt:woordsoort zoek="uitr" toon="uitr"/>
-            <ivdnt:woordsoort zoek="vr" toon="vr"/>
-            <ivdnt:woordsoort zoek="wdk" toon="wdk"/>
-            <ivdnt:woordsoort zoek="wdg" toon="wdg"/>
-        </ivdnt:collapse>
-        <ivdnt:collapse label="Persoon">
-            <ivdnt:woordsoort zoek="1e" toon="1e"/>
-            <ivdnt:woordsoort zoek="2e" toon="2e"/>
-            <ivdnt:woordsoort zoek="3e" toon="3e"/>
-        </ivdnt:collapse>
-        <ivdnt:collapse label="Geslacht">
-            <ivdnt:woordsoort zoek="m" toon="m"/>
-            <ivdnt:woordsoort zoek="v" toon="v"/>
-            <ivdnt:woordsoort zoek="o" toon="o"/>
-        </ivdnt:collapse>
-        <ivdnt:collapse label="Getal">
-            <ivdnt:woordsoort zoek="ev" toon="ev"/>
-            <ivdnt:woordsoort zoek="mv" toon="mv"/>
-        </ivdnt:collapse>
+        <ivdnt:woordsoortgroep groep="Vwn">
+             <ivdnt:collapse label="Type">
+                 <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
+                 <ivdnt:woordsoort zoek="betr" toon="betr"/>
+                 <ivdnt:woordsoort zoek="bez" toon="bez"/>
+                 <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
+                 <ivdnt:woordsoort zoek="pers" toon="pers"/>
+                 <ivdnt:woordsoort zoek="uitr" toon="uitr"/>
+                 <ivdnt:woordsoort zoek="vr" toon="vr"/>
+                 <ivdnt:woordsoort zoek="wdk" toon="wdk"/>
+                 <ivdnt:woordsoort zoek="wdg" toon="wdg"/>
+             </ivdnt:collapse>
+             <ivdnt:collapse label="Persoon">
+                 <ivdnt:woordsoort zoek="1e" toon="1e"/>
+                 <ivdnt:woordsoort zoek="2e" toon="2e"/>
+                 <ivdnt:woordsoort zoek="3e" toon="3e"/>
+             </ivdnt:collapse>
+             <ivdnt:collapse label="Geslacht">
+                 <ivdnt:woordsoort zoek="m" toon="m"/>
+                 <ivdnt:woordsoort zoek="v" toon="v"/>
+                 <ivdnt:woordsoort zoek="o" toon="o"/>
+             </ivdnt:collapse>
+             <ivdnt:collapse label="Getal">
+                 <ivdnt:woordsoort zoek="ev" toon="ev"/>
+                 <ivdnt:woordsoort zoek="mv" toon="mv"/>
+             </ivdnt:collapse>
+        </ivdnt:woordsoortgroep>
     </ivdnt:collapse>
     <ivdnt:collapse label="Vnw.bw">
-        <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
-        <ivdnt:woordsoort zoek="betr" toon="betr"/>
-        <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
-        <ivdnt:woordsoort zoek="vr" toon="vr"/>
-        <ivdnt:woordsoort zoek="van,mod" toon="van mod"/>
-        <ivdnt:woordsoort zoek="van,plaats,of,richting" toon="van plaats of richting"/>
-        <ivdnt:woordsoort zoek="van,tijd" toon="van tijd"/>
+        <ivdnt:woordsoortgroep groep="Vwn.bw">
+            <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
+            <ivdnt:woordsoort zoek="betr" toon="betr"/>
+            <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
+            <ivdnt:woordsoort zoek="vr" toon="vr"/>
+            <ivdnt:woordsoort zoek="van,mod" toon="van mod"/>
+            <ivdnt:woordsoort zoek="van,plaats,of,richting" toon="van plaats of richting"/>
+            <ivdnt:woordsoort zoek="van,tijd" toon="van tijd"/>
+        </ivdnt:woordsoortgroep>
     </ivdnt:collapse>
     <ivdnt:collapse label="Vw">
-        <ivdnt:woordsoort zoek="ondersch" toon="ondersch"/>
-        <ivdnt:woordsoort zoek="nevensch" toon="nevensch"/>
+        <ivdnt:woordsoortgroep groep="Vw">
+            <ivdnt:woordsoort zoek="ondersch" toon="ondersch"/>
+            <ivdnt:woordsoort zoek="nevensch" toon="nevensch"/>
+        </ivdnt:woordsoortgroep>
     </ivdnt:collapse>
     <ivdnt:collapse label="Vz">
-        <ivdnt:woordsoort zoek="met,gen" toon="met gen"/>
-        <ivdnt:woordsoort zoek="met,dat" toon="met dat"/>
-        <ivdnt:woordsoort zoek="met,acc" toon="met acc"/>
-    </ivdnt:collapse>
-    <ivdnt:collapse label="Woorddl">
-        <ivdnt:woordsoort zoek="prefix" toon="prefix"/>
-        <ivdnt:woordsoort zoek="suffix" toon="suffix"/>
-        <ivdnt:woordsoort zoek="suffixoïde" toon="suffixoïde"/>
-    </ivdnt:collapse>
-    <ivdnt:collapse label="Ww">
-        <ivdnt:collapse label="Vervoeging">
-            <ivdnt:woordsoort zoek="st" toon="st"/>
-            <ivdnt:woordsoort zoek="st.,kl.1" toon="st. kl.1"/>
-            <ivdnt:woordsoort zoek="st.,kl.2a" toon="st. kl.2a"/>
-            <ivdnt:woordsoort zoek="st.,kl.2b" toon="st. kl.2b"/>
-            <ivdnt:woordsoort zoek="st.,kl.3a" toon="st. kl.3a"/>
-            <ivdnt:woordsoort zoek="st.,kl.3b" toon="st. kl.3b"/>
-            <ivdnt:woordsoort zoek="st.,kl.4" toon="st. kl.4"/>
-            <ivdnt:woordsoort zoek="st.,kl.5" toon="st. kl.5"/>
-            <ivdnt:woordsoort zoek="st.,kl.6" toon="st. kl.6"/>
-            <ivdnt:woordsoort zoek="st.,kl.7" toon="st. kl.7"/>
-            <ivdnt:woordsoort zoek="zw" toon="zw"/>
-            <ivdnt:woordsoort zoek="onreg" toon="onreg"/>
-        </ivdnt:collapse>
-        <ivdnt:collapse label="Subcategorie">
-            <ivdnt:woordsoort zoek="trans" toon="trans"/>
-            <ivdnt:woordsoort zoek="intr" toon="intr"/>
-            <ivdnt:woordsoort zoek="refl" toon="refl"/>
-            <ivdnt:woordsoort zoek="onpers" toon="onpers"/>
-        </ivdnt:collapse>
-        <ivdnt:collapse label="Functie">
-            <ivdnt:woordsoort zoek="hulpww" toon="hulpww"/>
-            <ivdnt:woordsoort zoek="koppelww" toon="koppelww"/>
-            <ivdnt:woordsoort zoek="zelfst" toon="zelfst"/>
-        </ivdnt:collapse>
-        <ivdnt:collapse label="Combinaties">
+        <ivdnt:woordsoortgroep groep="Vz">
             <ivdnt:woordsoort zoek="met,gen" toon="met gen"/>
             <ivdnt:woordsoort zoek="met,dat" toon="met dat"/>
-            <ivdnt:woordsoort zoek="met,dat.,en,gen" toon="met dat. en gen"/>
-            <ivdnt:woordsoort zoek="met,dat.,en,acc" toon="met dat. en acc"/>
             <ivdnt:woordsoort zoek="met,acc" toon="met acc"/>
-            <ivdnt:woordsoort zoek="met,voorz" toon="met voorz"/>
-        </ivdnt:collapse>
+        </ivdnt:woordsoortgroep>
+    </ivdnt:collapse>
+    <ivdnt:collapse label="Woorddl">
+        <ivdnt:woordsoortgroep groep="Woorddl">
+            <ivdnt:woordsoort zoek="prefix" toon="prefix"/>
+            <ivdnt:woordsoort zoek="suffix" toon="suffix"/>
+            <ivdnt:woordsoort zoek="suffixoïde" toon="suffixoïde"/>
+        </ivdnt:woordsoortgroep>
+    </ivdnt:collapse>
+    <ivdnt:collapse label="Ww">
+        <ivdnt:woordsoortgroep groep="Ww">
+            <ivdnt:collapse label="Vervoeging">
+                <ivdnt:woordsoort zoek="st" toon="st"/>
+                <ivdnt:woordsoort zoek="st.,kl.1" toon="st. kl.1"/>
+                <ivdnt:woordsoort zoek="st.,kl.2a" toon="st. kl.2a"/>
+                <ivdnt:woordsoort zoek="st.,kl.2b" toon="st. kl.2b"/>
+                <ivdnt:woordsoort zoek="st.,kl.3a" toon="st. kl.3a"/>
+                <ivdnt:woordsoort zoek="st.,kl.3b" toon="st. kl.3b"/>
+                <ivdnt:woordsoort zoek="st.,kl.4" toon="st. kl.4"/>
+                <ivdnt:woordsoort zoek="st.,kl.5" toon="st. kl.5"/>
+                <ivdnt:woordsoort zoek="st.,kl.6" toon="st. kl.6"/>
+                <ivdnt:woordsoort zoek="st.,kl.7" toon="st. kl.7"/>
+                <ivdnt:woordsoort zoek="zw" toon="zw"/>
+                <ivdnt:woordsoort zoek="onreg" toon="onreg"/>
+            </ivdnt:collapse>
+            <ivdnt:collapse label="Subcategorie">
+                <ivdnt:woordsoort zoek="trans" toon="trans"/>
+                <ivdnt:woordsoort zoek="intr" toon="intr"/>
+                <ivdnt:woordsoort zoek="refl" toon="refl"/>
+                <ivdnt:woordsoort zoek="onpers" toon="onpers"/>
+            </ivdnt:collapse>
+            <ivdnt:collapse label="Functie">
+                <ivdnt:woordsoort zoek="hulpww" toon="hulpww"/>
+                <ivdnt:woordsoort zoek="koppelww" toon="koppelww"/>
+                <ivdnt:woordsoort zoek="zelfst" toon="zelfst"/>
+            </ivdnt:collapse>
+            <ivdnt:collapse label="Combinaties">
+                <ivdnt:woordsoort zoek="met,gen" toon="met gen"/>
+                <ivdnt:woordsoort zoek="met,dat" toon="met dat"/>
+                <ivdnt:woordsoort zoek="met,dat.,en,gen" toon="met dat. en gen"/>
+                <ivdnt:woordsoort zoek="met,dat.,en,acc" toon="met dat. en acc"/>
+                <ivdnt:woordsoort zoek="met,acc" toon="met acc"/>
+                <ivdnt:woordsoort zoek="met,voorz" toon="met voorz"/>
+            </ivdnt:collapse>
+        </ivdnt:woordsoortgroep>
     </ivdnt:collapse>
     <ivdnt:collapse label="Znw">
-        <ivdnt:collapse label="Geslacht">
-            <ivdnt:woordsoort zoek="m" toon="m"/>
-            <ivdnt:woordsoort zoek="m./o" toon="m./o"/>
-            <ivdnt:woordsoort zoek="m./v" toon="m./v"/>
-            <ivdnt:woordsoort zoek="m./v./o" toon="m./v./o"/>
-            <ivdnt:woordsoort zoek="o" toon="o"/>
-            <ivdnt:woordsoort zoek="v" toon="v"/>
-            <ivdnt:woordsoort zoek="v./o" toon="v./o"/>
-            <ivdnt:woordsoort zoek="gemeensl" toon="gemeensl"/>
-        </ivdnt:collapse>
-        <ivdnt:collapse label="Getal">
-            <ivdnt:woordsoort zoek="mv" toon="mv"/>
-        </ivdnt:collapse>
-        <ivdnt:collapse label="Aard">
-            <ivdnt:woordsoort zoek="naam" toon="naam"/>
-        </ivdnt:collapse>
+        <ivdnt:woordsoortgroep groep="Znw">
+           <ivdnt:collapse label="Geslacht">
+               <ivdnt:woordsoort zoek="m" toon="m"/>
+               <ivdnt:woordsoort zoek="m./o" toon="m./o"/>
+               <ivdnt:woordsoort zoek="m./v" toon="m./v"/>
+               <ivdnt:woordsoort zoek="m./v./o" toon="m./v./o"/>
+               <ivdnt:woordsoort zoek="o" toon="o"/>
+               <ivdnt:woordsoort zoek="v" toon="v"/>
+               <ivdnt:woordsoort zoek="v./o" toon="v./o"/>
+               <ivdnt:woordsoort zoek="gemeensl" toon="gemeensl"/>
+           </ivdnt:collapse>
+           <ivdnt:collapse label="Getal">
+               <ivdnt:woordsoort zoek="mv" toon="mv"/>
+           </ivdnt:collapse>
+           <ivdnt:collapse label="Aard">
+               <ivdnt:woordsoort zoek="naam" toon="naam"/>
+           </ivdnt:collapse>
+        </ivdnt:woordsoortgroep>
     </ivdnt:collapse>
     <ivdnt:woordsoort zoek="?" toon="?"/>
 </ivdnt:collapse>

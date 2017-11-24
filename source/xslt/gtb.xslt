@@ -247,6 +247,7 @@
     <xsl:function name="ivdnt:woordsoortvalue" as="xs:string">
         <xsl:param name="context" as="node()"/>
         <xsl:variable name="topdiv" select="$context/ancestor::div[@data-modaltype eq 'woordsoortzoeken'][1]"/>
+        
         <xsl:variable name="values" as="xs:string*">
             <xsl:for-each select="$topdiv//div[@data-hoofdwoordsoort][.//input[ivdnt:is-checked(.)]]">
                 <xsl:variable name="input-values" as="xs:string+" select="for $i in .//input[ivdnt:is-checked(.)] return ivdnt:get-input-value($i)"/>
@@ -254,6 +255,10 @@
                 <xsl:variable name="input-values-searchstring" as="xs:string" select="if ($input-values-joined eq '') then '' else '&lt;' || $input-values-joined || '&gt;'"/>
 
                 <xsl:value-of select="@data-hoofdwoordsoort || $input-values-searchstring || '.'"/>
+            </xsl:for-each>
+            
+            <xsl:for-each select="$topdiv//input[ivdnt:is-checked(.) and not(ancestor::div[@data-hoofdwoordsoort])]">
+                <xsl:value-of select="ivdnt:get-input-value(.) || '.'"/>
             </xsl:for-each>
         </xsl:variable>
         
