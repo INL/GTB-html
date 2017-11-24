@@ -29,7 +29,6 @@
     <!-- The order in which the results of dictionaries get listed in the results. Used to calculate line offsets when jumping to a dictionary. Space-separated value. -->
     <xsl:param name="dictionaryOutputOrder" select="'ONW VMNW MNW WNT WFT'"/>
     
-    <xsl:key name="showhidegroup-divs" match="div[@data-showhidegroup]" use="@data-showhidegroup"/>
     <xsl:key name="ids" match="*[@id]" use="@id"/>
     
     <!-- TODO Bijhouden van bezochte uri's is niet nodig. -->
@@ -55,16 +54,6 @@
         <xsl:value-of select="substring-after($id-with-hash, '#')"/>        
     </xsl:function>
     
-    <xsl:function name="ivdnt:get-showhide-div" as="element(div)">
-        <xsl:param as="element()" name="predecessor"/>
-        <xsl:sequence select="$predecessor/following::div[@data-showhidegroup eq $predecessor/@data-showhidegroup][1]"/>
-    </xsl:function>
-    
-    <xsl:function name="ivdnt:get-showhide-a" as="element(a)">
-        <xsl:param as="element()" name="successor"/>
-        <xsl:sequence select="$successor/preceding::a[@data-showhidegroup eq $successor/@data-showhidegroup][1]"/>
-    </xsl:function>
-    
     <xsl:function name="ivdnt:get-active-tabdiv" as="element(div)">
         <xsl:param name="node-inside-tab" as="node()"/>
         <xsl:variable name="tab-content" as="element(div)" select="$node-inside-tab/ancestor-or-self::div[ivdnt:class-contains(@class, 'tab-content')]"/>
@@ -75,43 +64,7 @@
         <!--<xsl:variable name="visited-uris" as="xs:string" select="''"/>
         <ixsl:set-property name="{$VISITED_URIS_PROPERTY}" select="$visited-uris" object="ixsl:page()"/>-->
     </xsl:template>
-    
-    <xsl:template name="ivdnt:gtb-collapse">
-        <xsl:for-each select="ivdnt:get-showhide-a(.)">
-            <!-- This iterates only once. -->
-            <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-expanded', 'gtb-collapsed')"/>
-        </xsl:for-each>
-    </xsl:template>
-    
-    <xsl:template name="ivdnt:gtb-expand">
-        <xsl:for-each select="ivdnt:get-showhide-a(.)">
-            <!-- Dit itereert slecht 1 keer -->
-            <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-collapsed', 'gtb-expanded')"/>
-        </xsl:for-each>
-    </xsl:template>
-    
-    <xsl:template name="ivdnt:gtb-hide">
-        <!-- Huidige context is een div-element dat wordt ingeklapt.
-             We gebruiken een eigen class in plaats van die van Bootstrap om te zorgen dat we beide namen kunnen
-             gebruiken zonder eventuele gekoppelde GTB-logica in XSLT of Javascript te verstoren.
-        -->
-        <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'gtb-hidden')"/>
-        <!-- Pas ook de de weergave aan van link die voor het inklappen zorgt: -->
-        <xsl:call-template name="ivdnt:gtb-collapse"/>
-    </xsl:template>
-    
-    <xsl:template name="ivdnt:gtb-show">
-        <!-- Huidige context is een div-element dat wordt uitgeklapt. -->
-        <ixsl:set-attribute name="class" select="ivdnt:remove-class-value(@class, 'gtb-hidden')"/>
-        <!-- Pas ook de de weergave aan van link die voor het uitklappen zorgt: -->
-        <xsl:call-template name="ivdnt:gtb-expand"/>
-    </xsl:template>
-    
-    <xsl:function name="ivdnt:gtb-is-hidden" as="xs:boolean">
-        <xsl:param as="element()" name="element"/>
-        <xsl:sequence select="ivdnt:class-contains($element/@class, 'gtb-hidden')"/>
-    </xsl:function>
-    
+ 
     <xsl:template name="ivdnt:deactivate-tab">
         <xsl:param name="tabdiv" as="element(div)" required="yes"/>
         <xsl:for-each select="$tabdiv">

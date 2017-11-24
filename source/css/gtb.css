@@ -467,6 +467,11 @@ tr.gtb-result-row{
 
 /* collapse */
 
+/* 
+ * bootstrap panel styling ongedaan maken
+ * Waarom in de eerste plaats collapsibles in een .panel wrapper hangen? 
+ * Omdat anders bootstrap collapse accordion niet werkt :(  
+ */
 .gtb-collapse-wrapper.panel {
     margin: 0px;
     padding: 0px;
@@ -474,15 +479,39 @@ tr.gtb-result-row{
     background: transparent;
     box-shadow: none;
     border-radius: 0px;
-    /* voorkom vervelende verspringende margins door de overflow:hidden op de .collapsing class van bootstrap
-     * die aan elementen wordt gehangen tijdens het expanden/collapsen 
-     */
-    overflow: hidden; 
+}
+
+/* 
+ * Zorg dat margins van alle child elementen binnen onze collapse wrapper blijft, en niet collapsed met elementen buiten de wrapper.
+ * 
+ * Waarom? nou, terwijl een bootstrap collapse element aan het in/uitklappen is, heeft hij overflow:hidden
+ * Dit is logisch omdat het collapsen alleen maar de height naar 0px schaalt en dan display:none doet.
+ * Als het zou kunnen overflowen zou je het collapsen niet kunnen zien.
+ * 
+ * Een bij-effect hiervan is dat de margins van het bovenste/onderste child in het collapse element tijdens het in/uitklappen
+ * niet langer overlappen met de margins van elementen boven/onder de container. 
+ * Dit zorgt er voor dat wanneer zo'n overlap groter is dan een paar px, 
+ * de boel tijdelijk verspringt tijdens het in/uitklappen.
+ * 
+ * Hiermee kunnen we zorgan dat die margins in de eerste plaats al niet overlappen
+ * gewoon altijd overflow:hidden zetten is een andere manier van dit doen, maar dan is je overflow weer niet zichtbaar meer
+ * en overflowen is wel handig om dingen als carets voor child collapsibles over de linkerkant van de container laten hangen. 
+ */
+.gtb-collapse-wrapper.panel:before,
+.gtb-collapse-wrapper.panel:after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-bottom: -1px;
+}
+
+.gtb-collapse .gtb-collapse {
+    padding-left: 15px;
 }
 
 .gtb-collapse-label {
     font-weight: bold;
-    margin: 2px 0px;
+    margin-bottom: 5px;
 }
 
 .gtb-collapse-label > a {
@@ -502,8 +531,7 @@ tr.gtb-result-row{
 }
 
 /*  woordsoorten */
-.gtb-woordsoort-container,
-.gtb-woordsoort-container .gtb-collapse {
+.gtb-woordsoort-container {
     padding-left: 15px;
 }
 

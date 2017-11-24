@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div data-showhidegroup="uitgebreidzoeken.citaten" class="gtb-inspring gtb-hidden" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<ivdnt:collapse label="Citaten" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <ivdnt:formulierregel>
         <ivdnt:formulierlabel>Woord in citaattekst</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
@@ -7,8 +7,7 @@
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <p><a href="#" data-showhidegroup="uitgebreidzoeken.brongegevens" class="gtb-collapsed">Brongegevens</a></p>
-    <div class="gtb-inspring gtb-hidden" data-showhidegroup="uitgebreidzoeken.brongegevens">
+    <ivdnt:collapse label="Brongegevens">
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel>Auteur citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
@@ -33,10 +32,9 @@
                 <input type="text" name="bronlocatie" class="form-control gtb-tekstveld typeahead"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
-    </div>
+    </ivdnt:collapse>
     
-    <p><a href="#" data-showhidegroup="uitgebreidzoeken.oudstecitaat" class="gtb-collapsed">Oudste citaat</a></p>
-    <div class="gtb-inspring gtb-hidden" data-showhidegroup="uitgebreidzoeken.oudstecitaat">
+    <ivdnt:collapse label="Oudste citaat">    
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel>Datering oudste citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
@@ -49,6 +47,6 @@
                 <input type="text" name="oudlocatie" class="form-control gtb-tekstveld typeahead" data-humanname="lokalisering oudste citaat"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
-    </div>
-</div>
+    </ivdnt:collapse>
+</ivdnt:collapse>
 

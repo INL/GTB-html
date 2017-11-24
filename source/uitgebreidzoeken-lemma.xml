@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div data-showhidegroup="uitgebreidzoeken.lemma" class="gtb-inspring" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+<ivdnt:collapse label="Lemma" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    
     <ivdnt:include href="basiszoeken-lemma.xml"/>
     
     <ivdnt:formulierregel>
@@ -9,8 +10,7 @@
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <p><a href="#" data-showhidegroup="uitgebreidzoeken.etymologie" class="gtb-collapsed">Etymologie</a></p>
-    <div data-showhidegroup="uitgebreidzoeken.etymologie" class="gtb-inspring gtb-hidden">
+    <ivdnt:collapse label="Etymologie">
        <ivdnt:formulierregel>
            <ivdnt:formulierlabel>Verwante vorm</ivdnt:formulierlabel>
            <ivdnt:formulierinput>
@@ -24,10 +24,11 @@
                <input type="text" name="etymtaal" data-humanname="taal in etym. beschr." class="form-control gtb-tekstveld typeahead"/>
            </ivdnt:formulierinput>
        </ivdnt:formulierregel>
-    </div>
+    </ivdnt:collapse>
     
-    <p><a href="#" data-showhidegroup="uitgebreidzoeken.morfologie" class="gtb-collapsed">Morfologie</a></p>
-    <div data-showhidegroup="uitgebreidzoeken.morfologie" class="gtb-inspring gtb-hidden">
+    
+    <ivdnt:collapse label="Morfologie">
+    
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel>Morfologisch element</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
@@ -81,10 +82,10 @@
                 </select>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
-    </div>
+    </ivdnt:collapse>
     
-    <p><a href="#" data-showhidegroup="uitgebreidzoeken.flexie" class="gtb-collapsed">Flexie</a></p>
-    <div data-showhidegroup="uitgebreidzoeken.flexie" class="gtb-inspring gtb-hidden" >
+    <ivdnt:collapse label="Flexie">
+        
         <ivdnt:formulierregel>
             <ivdnt:formulierlabel>Type</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
@@ -208,5 +209,6 @@
                 <input type="text" name="flexvorm" data-humanname="flexievorm" class="form-control gtb-tekstveld typeahead"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
-    </div>
-</div>
+    </ivdnt:collapse>
+</ivdnt:collapse>
+
