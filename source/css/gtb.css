@@ -37,7 +37,7 @@ body:before {
     content: " ";
     
     background-color: #FFF;
-    background-image: url(../img/gtb-logo-header.svg);
+    background-image: url(../img/gtb-logo.svg);
     background-repeat: no-repeat;
     
     opacity: 0.04;
