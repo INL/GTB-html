@@ -314,7 +314,7 @@
     <!-- 
         Wanneer er een ancestor collapse bestaat willen we accordion gedrag, dit houdt in dat wanneer de gebruiker een collapsible opent, 
         de andere collapsibles in dezelfde parent automatisch sluiten.
-        In bootstrap 3 werkt dit helaaas alleen wanneer alle collapsibles die moeten sluiten in een .panel zitten
+        In bootstrap 3 werkt dit helaas alleen wanneer alle collapsibles die moeten sluiten in een .panel zitten
         Vandaar dit template om dit even te enablen wanneer er een parent collapsible is.
     -->
     <xsl:template match="ivdnt:collapse[ancestor::ivdnt:collapse]" priority="90" mode="ivdnt:html-mode">
@@ -345,17 +345,15 @@
             
             <xsl:attribute name="id" select="generate-id(.)"/>
             
-            <xsl:apply-templates select="node()" mode="ivdnt:html-mode"/>
+            <xsl:apply-templates select="node()|@*" mode="ivdnt:html-mode"/>
         </div>
     </xsl:template>
     
-    <xsl:template match="ivdnt:woordsoortgroep[@groep !='']" mode="ivdnt:html-mode">
-        <div class="gtb-woordsoortgroep" data-hoofdwoordsoort="{@groep}">
-            <a class="gtb-selecteer-woordsoortgroep">alles selecteren</a>
-            <xsl:apply-templates select="node()" mode="ivdnt:html-mode"/>
-        </div>
-    </xsl:template>
-    
+    <xsl:template match="@woordsoortgroep" mode="ivdnt:html-mode">
+        <xsl:attribute name="data-woordsoortgroep" select="."/>
+		<a class="gtb-selecteer-woordsoortgroep">alles selecteren</a>
+	</xsl:template>
+   
     <xsl:template match="ivdnt:woordsoort" mode="ivdnt:html-mode">
        <label class="checkbox-inline gtb-woordsoort">
             <input type="checkbox" value="{@zoek}"/>
