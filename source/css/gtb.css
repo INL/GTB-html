@@ -160,24 +160,6 @@ td.speciaalteken:active{
     box-shadow: inset 0px 1px 6px -1px rgba(0,0,0,0.3);
 }
 
-.gtb-expanded,
-.gtb-collapsed {
-    position:relative;
-    font-weight: bolder;
-}
-
-.gtb-collapsed:before{
-    content: '▶';
-    position: absolute;
-    left: -15px;
-}
-
-.gtb-expanded:before{
-    content: '▼';
-    position: absolute;
-    left: -15px;
-}
-
 .gtbcheckbox, .gtbradio{
 }
 
@@ -489,6 +471,12 @@ div.gtb-cell-large {
 }
 
 /* collapse */
+
+/* Disable sliding effect van collapse */
+.collapsing {
+    transition-duration: 0s;
+    transition-property: none;
+}
 
 /* 
  * bootstrap panel styling ongedaan maken
