@@ -18,6 +18,16 @@
     src: url('../fonts/INLVBI__.TTF');
 }
 
+@font-face {
+    font-family: 'schoolboek';
+    src: url('../fonts/Schoolboek-Regular.eot');
+    src: url('../fonts/Schoolboek-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Schoolboek-Regular.woff') format('woff'), url('../fonts/Schoolboek-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
 body {
     font-family: verdana, helvetica, sans-serif
 }
@@ -245,6 +255,14 @@ input[type=checkbox]:after, .gtbcheckbox:after {
     /*  rest */
 }
 
+.gtb-wdb-onw,
+.gtb-wdb-vmnw,
+.gtb-wdb-mnw,
+.gtb-wdb-wnt,
+.gtb-wdb-wft {
+    font-weight: bold;
+}
+
 div.gtb-results{
     font-family: Verdana, sans-serif, gtb;
     max-height: 70vh;
@@ -345,26 +363,6 @@ div.gtb-cell-large {
     cursor: pointer;
 }
 
-.gtb-wdb-onw{
-    color: orange;
-}
-
-.gtb-wdb-vmnw{
-    color: red;
-}
-
-.gtb-wdb-mnw{
-    color: green;
-}
-
-.gtb-wdb-wnt{
-    color: brown;
-}
-
-.gtb-wdb-wft{
-    color: blue;
-}
-
 .gtb-homoniemnr{
     vertical-align: super;
     font-size: 80%;
@@ -394,10 +392,9 @@ div.gtb-cell-large {
 
 /* color variables for testing */
 :root {
-    --main-blue: #00042E;
-    --main-blue-lighter: #040a49;
-    --light-blue: #4285F4;
-    --header-gradient: #29617d;
+    --dark-blue: #00042E;
+    --light-blue: #111971;
+    --light-blue-darker: #111971;
 }
 
 /* Bootstrap */
@@ -436,6 +433,21 @@ div.gtb-cell-large {
     color: #666;
     margin-right: 0px;
     background: transparent;
+    text-align:center;
+}
+/* 
+ * Maak ruimte voor bold text door een invisible elementje te maken met daarin de alvast gebolde text
+ * op basis van de title attribute
+ * Dit zodat de tabjes niet breder worden bij hoveren omdat de text bold (en daarmee breder) wordt 
+ */
+.nav-tabs > li > a::before {
+  content: attr(title);
+  display: block;
+  font-weight: bold;
+  height: 1px;
+  margin-top: -1px;
+  color: transparent;
+  opacity: 0;
 }
 
 .nav-tabs>li>a:hover,
@@ -450,7 +462,7 @@ div.gtb-cell-large {
 
 .nav-tabs>li>a::after {
     content: "";
-    background: var(--light-blue);
+    background-color: var(--light-blue);
     height: 2px;
     position: absolute;
     width: 100%;
@@ -565,11 +577,12 @@ div.gtb-cell-large {
 
     background-color: var(--main-blue);
 
-    height: 100px;
-    padding-bottom: 12px;
-    margin-bottom: 25px;
+    height: 150px;
+    margin-bottom: 40px;
 
-    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15)
+    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
+    
+    font-family: "schoolboek";
 }
 
 .gtb-header > .container {
@@ -583,44 +596,100 @@ div.gtb-cell-large {
 }
 
 .gtb-header-logo {
-    height: calc(100% + 20px); /* break out of the parent container by 12px padding + 8px for effect  */
+    height: 100%; 
     width: auto;
-    
-    background-color: white;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.15);
-    padding: 1px;
-    padding-top: 0px;
-    border: 2px solid var(--main-blue);
-    border-top: none;
-    border-radius: 2px;
+    padding-bottom: 10px;
 }
 
 .gtb-header-content {
     flex-grow: 1;
     align-self: flex-end; /* align contents with bottom of parent bar */
+    
     display: flex;
+    align-items: baseline;
 
-    border-bottom: 2px solid #DDD; 
-    padding-left: 25px;
-    margin-left: 10px;
     height: 100%;
+    padding-top: 10px;
+    padding-left: 35px;    
 }
 
 .gtb-header-title {
+    font-size: 37px;
+    line-height: 42px;
+    letter-spacing: 0.5px;
     flex-grow: 1;
-    align-self: flex-end;
     color: #EEE;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+.gtb-header-subtitle {
+    font-size: 70%;
+    color: #CCC;
     text-shadow: 0px 0px 10px rgba(0,0,0,0.7);
 }
 
 .gtb-header-logo-ivdnt {
-    align-self: flex-start;
-    height:100%;
-    width: auto;
-    padding: 2px 0px 5px 0px;
-    display: block;
+    font-size: 30px;
+    line-height: 42px;
+    letter-spacing: 2px;
+    color: #EEE;
 }
-.gtb-header-logo-ivdnt>img {
-    height: 100%;
-    width: auto;
+.gtb-header-logo-ivdnt:hover,
+.gtb-header-logo-ivdnt:focus {
+    color: #EEE;
+    text-decoration: none;
+}
+
+/* colors */
+.gtb-header {
+    background-color: var(--dark-blue);
+}
+.btn-primary {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+}
+.btn-primary:hover,
+.btn-primary:active {
+    background-color: var(--light-blue-darker);
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus{
+    color: var(--light-blue);
+    font-weight: bold;
+}
+.nav-tabs > li > a::after {
+    background-color: var(--light-blue);
+}
+
+a,
+a:hover,
+a:focus {
+    color: var(--light-blue);
+}
+
+.pagination>li>a,
+.pagination>li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>span,
+.pagination>li>span:hover,
+.pagination>li>span:focus{
+    color: var(--light-blue);
+}
+
+.pagination>.active>a,
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+}
+
+.dropdown-menu>.active>a, 
+.dropdown-menu>.active>a:focus, 
+.dropdown-menu>.active>a:hover {
+    background-color: var(--light-blue);
 }
