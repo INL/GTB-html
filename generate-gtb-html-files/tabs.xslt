@@ -27,7 +27,10 @@
     <li>
       <xsl:copy-of select="parent::ivdnt:tab/@id"/>
       <xsl:copy-of select="ivdnt:add-class-values(@class, (if (not(parent::ivdnt:tab/preceding-sibling::ivdnt:tab)) then ('active') else (), 'tabtitle'))"/>
-      <a data-toggle="tab" href="{'#' || generate-id(parent::ivdnt:tab)}"><xsl:apply-templates select="node() | @* except @class" mode="ivdnt:html-mode"/></a>
+      <a data-toggle="tab" href="{'#' || generate-id(parent::ivdnt:tab)}">
+        <xsl:attribute name="title" select="text()"/>
+        <xsl:apply-templates select="node() | @* except @class" mode="ivdnt:html-mode"/>
+      </a>
     </li>
   </xsl:template>
   

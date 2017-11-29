@@ -8,9 +8,8 @@
             <div class="container">
                 <img class="gtb-header-logo hidden-xs" src="img/gtb-logo-header.svg" alt="De Geïntegreerde Taalbank" ivdnt:versioninfo="git-versie-komt-hier"/>
                 <div class="gtb-header-content">
-                    <h3 class="gtb-header-title hidden-xs" >De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h3>
-                    <h4 class="gtb-header-title visible-xs">De geïntegreerde taalbank <br/><small>Historische woordenboeken op internet</small></h4>
-                    <a class="gtb-header-logo-ivdnt" href="http://www.ivdnt.org/"><img src="img/ivdNt-logo-3regels-gebrokenwit.svg" alt="Instituut voor de Nederlandse Taal"/></a>
+                    <span class="gtb-header-title">Historische&#160;woordenboeken<br/><small class="gtb-header-subtitle">van het Nederlands en het Fries</small></span>
+                    <a class="gtb-header-logo-ivdnt" href="http://www.ivdnt.org/" title="Instituut voor de Nederlandse Taal">/instituut&#160;voor<br/>de&#160;Nederlandse<br/>taal/</a>
                 </div>
             </div>
         </div>
