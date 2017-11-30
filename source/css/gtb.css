@@ -576,7 +576,7 @@ div.gtb-cell-large {
     background:      -o-linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%); 
     background:         linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%);  */
 
-    background-color: var(--main-blue);
+    background-color: var(--dark-blue);
 
     height: 150px;
     margin-bottom: 40px;
@@ -584,6 +584,8 @@ div.gtb-cell-large {
     box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
     
     font-family: "schoolboek";
+    
+    transition: height 0.15s;
 }
 
 .gtb-header > .container {
@@ -602,27 +604,30 @@ div.gtb-cell-large {
     padding-bottom: 10px;
 }
 
+.gtb-header-spacer {
+    height: 100%;
+    flex-basis: 15px;
+    flex-grow: 0.5;
+    max-width: 35px;
+}
+
 .gtb-header-content {
     flex-grow: 1;
-    align-self: flex-end; /* align contents with bottom of parent bar */
+    height: 100%;
+    padding: 19px 0px;
     
     display: flex;
-    align-items: baseline;
-
-    height: 100%;
-    padding-top: 10px;
-    padding-left: 35px;    
 }
 
 .gtb-header-title {
+    display: block;
+    flex-grow: 1;
+    
     font-size: 37px;
     line-height: 42px;
     letter-spacing: 0.5px;
-    flex-grow: 1;
     color: #EEE;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.7);
-    position: relative;
-    top: 9px;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.7);  
 }
 .gtb-header-subtitle {
     font-size: 70%;
@@ -631,15 +636,86 @@ div.gtb-cell-large {
 }
 
 .gtb-header-logo-ivdnt {
-    font-size: 30px;
-    line-height: 42px;
-    letter-spacing: 2px;
-    color: #EEE;
+    display: block;
+    height: 100%;
+    margin-top: 3px;
+    
+    /* fix voor verkeerde positioning bij transition klein scherm -> groot scherm */
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
 }
-.gtb-header-logo-ivdnt:hover,
-.gtb-header-logo-ivdnt:focus {
-    color: #EEE;
-    text-decoration: none;
+.gtb-header-logo-ivdnt > img {
+    height: 100%;
+    width: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .gtb-header > .container {
+        width: 100%;
+    }
+    .gtb-header-logo-ivdnt {
+        height: 86%;
+        margin-top: 5px;
+    }
+    
+    .gtb-header-title {
+        font-size: 34px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .gtb-header {
+        height: 120px;
+    }
+    
+    .gtb-header-content {
+        padding: 17px 0px;
+    }
+    
+    .gtb-header-title {
+        font-size: 29px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .gtb-header-content {
+        align-items: baseline;
+    }
+
+    .gtb-header-title {
+        font-size: 24px;
+        line-heigh: 26px;
+    }
+
+    .gtb-header-logo-ivdnt::before {
+        content: "/IvdNT/";
+    }
+    .gtb-header-logo-ivdnt {
+        display: inline-block;
+        height: auto;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        letter-spacing: 2px;
+        font-size: 26px;
+        color: #EEE;
+        font-family: schoolboek;
+        margin-top: -10px;
+    }
+    .gtb-header-logo-ivdnt:hover,
+    .gtb-header-logo-ivdnt:active,
+    .gtb-header-logo-ivdnt:focus {
+        color: #EEE;
+        text-decoration: none;
+    }
+    .gtb-header-logo-ivdnt > img {
+        display: none;
+    }
+    .gtb-header-logo-ivdnt-small {
+        display: inline-block;
+    }
 }
 
 /* colors */
