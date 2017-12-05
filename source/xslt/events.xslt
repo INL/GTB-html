@@ -45,10 +45,8 @@
         <xsl:choose>
             <xsl:when test="ivdnt:contains-wildcard-character($textbox-value)">
                 <!-- Do nothing, leave the textbox as it is. -->
-                <xsl:message>wildcard</xsl:message>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:message>geen wildcard</xsl:message>
                 <!-- Use the value from the typeahead list: -->
                 <xsl:variable name="typeahead-value" select="ivdnt:get-typeahead-value-from-listitem($selected-listitem)"/>
                 <xsl:call-template name="ivdnt:typeahead-update-textbox">
