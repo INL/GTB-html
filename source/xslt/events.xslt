@@ -37,7 +37,29 @@
         </xsl:if>
     </xsl:template>
     
-    <!-- Redefine the standard typeahead template on order to start a search, but only if the user pressed enter (parameter for-click is false). -->
+    <!-- Redefine the standard typeahead template in order to prevent selecting the word in the typeahead list if the textbox contains a wildcard character. -->
+    <xsl:template name="ivdnt:typeahead-select">
+        <xsl:param name="selected-listitem" as="element(li)" required="yes"/>
+        <xsl:variable name="textbox" as="element(input)" select="ivdnt:get-my-typeahead-textfield($selected-listitem/parent::ul)"/>
+        <xsl:variable name="textbox-value" as="xs:string" select="ivdnt:get-input-value($textbox)"/>
+        <xsl:choose>
+            <xsl:when test="ivdnt:contains-wildcard-character($textbox-value)">
+                <!-- Do nothing, leave the textbox as it is. -->
+                <xsl:message>wildcard</xsl:message>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:message>geen wildcard</xsl:message>
+                <!-- Use the value from the typeahead list: -->
+                <xsl:variable name="typeahead-value" select="ivdnt:get-typeahead-value-from-listitem($selected-listitem)"/>
+                <xsl:call-template name="ivdnt:typeahead-update-textbox">
+                    <xsl:with-param name="textbox" as="element(input)" select="ivdnt:get-my-typeahead-textfield($selected-listitem/parent::ul)"/>
+                    <xsl:with-param name="value" as="xs:string" select="$typeahead-value"/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- Redefine the standard typeahead template in order to start a search, but only if the user pressed enter (parameter for-click is false). -->
     <xsl:template name="ivdnt:typeahead-after-select">
         <xsl:param name="textfield" as="element(input)" required="yes"/>
         <xsl:param name="for-click" as="xs:boolean" required="yes"/>

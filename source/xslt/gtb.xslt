@@ -329,6 +329,11 @@
         <xsl:sequence select="ixsl:page()//input[@data-modal-target-id eq $data-target-id][1]"/>
     </xsl:function>
     
+    <xsl:function name="ivdnt:contains-wildcard-character"  as="xs:boolean">
+        <xsl:param name="str" as="xs:string"/>
+        <xsl:sequence select="contains($str, '*') or contains($str, '?')"/>
+    </xsl:function>
+    
     <xsl:template name="ivdnt:doe-zoeken">
         <xsl:param name="formdiv" as="element(div)" required="yes"/>
         <xsl:variable name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-formdiv-inputs-and-selects($formdiv)"/>
