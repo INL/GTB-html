@@ -340,6 +340,18 @@ tr.gtb-result-row{
     /* cursor: pointer; */
 }
 
+div.gtb-betekenis-small, div.gtb-conc-small {
+    height: 3em;
+    max-height: 3em;
+    overflow-y:auto;
+    cursor: pointer;
+}
+
+div.gtb-betekenis-large, div.gtb-conc-large {
+    min-height: 3em;
+    cursor: pointer;
+}
+
 .gtb-wdb-onw{
     color: orange;
 }

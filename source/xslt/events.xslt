@@ -285,6 +285,13 @@
         </xsl:if>
     </xsl:template>
     
+    <!-- Assuming one class value only for gtb-betekenis-large/gtb-betekenis-small/gtb-conc-large/gtb-conc-small, changing it will also discard any other value -->
+    <xsl:template match="div[matches(@class, '^gtb-(betekenis|conc)-(small|large)$')]" mode="ixsl:onclick">
+        <xsl:variable name="newclass" select="if (ends-with(@class, '-large')) then replace(@class, '^(.*)-large$', '$1-small') else replace(@class, '^(.*)-small$', '$1-large')"/>
+        <ixsl:set-attribute name="class" select="$newclass"/>
+        <ixsl:set-attribute name="title" select="if (ends-with(@class, '-large')) then $min-hoogte-title else $max-hoogte-title"/>
+    </xsl:template>
+    
     <xsl:template match="input[@type eq 'text']" mode="ixsl:onfocusin">
         <!--<xsl:message select="'Text box with name ' || @name || ' just received focus'"/>-->
         <ixsl:set-property name="{$FOCUSSED_TEXTBOX_PROPERTY}" select="." object="ixsl:page()"/>

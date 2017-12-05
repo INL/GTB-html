@@ -8,6 +8,9 @@
     expand-text="yes"
     version="3.0">
     
+    <xsl:variable name="max-hoogte-title" as="xs:string" select="'Klik voor maximale hoogte'"/>
+    <xsl:variable name="min-hoogte-title" as="xs:string" select="'Klik voor de normale hoogte'"/>
+    
     <xsl:function name="ivdnt:quote" as="xs:string">
         <xsl:param name="string" as="xs:string"/>
         <xsl:value-of select="'&quot;' || replace($string, '&quot;', '\\&quot;') || '&quot;'"/>
@@ -199,7 +202,7 @@
                 <xsl:when test="conc">
                     <xsl:apply-templates select="@hits" mode="render-results"/>
                     <td class="gtb-conc">
-                        <xsl:apply-templates select="conc" mode="render-results"/>
+                        <div class="gtb-conc-small" title="{$max-hoogte-title}"><xsl:apply-templates select="conc" mode="render-results"/></div>
                     </td>
                 </xsl:when>
                 <xsl:when test="@Betekenis"><xsl:apply-templates select="@Betekenis" mode="render-results"/></xsl:when>
@@ -230,9 +233,16 @@
     
     <xsl:template match="result/@*" mode="render-results">
         <xsl:variable name="wdbclass" select="if (local-name(.) eq 'Wdb') then ' gtb-wdb-' || translate(lower-case(.), ' ', '_') else ''"/>
-        <td class="{'gtb-' || lower-case(local-name(.)) || $wdbclass}">
-            <xsl:apply-templates select="." mode="render-result-attributes"/>
-        </td>
+        <xsl:variable name="class" as="xs:string" select="'gtb-' || lower-case(local-name(.)) || $wdbclass"/>
+        <xsl:choose>
+            <xsl:when test="lower-case(local-name()) eq 'betekenis'">
+                <td class="{$class}"><div class="{$class || '-small'}" title="{$max-hoogte-title}"><xsl:apply-templates select="." mode="render-result-attributes"/></div></td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td class="{$class}"><xsl:apply-templates select="." mode="render-result-attributes"/></td>
+            </xsl:otherwise>
+        </xsl:choose>
+        
     </xsl:template>
     
     <xsl:template match="@van" mode="render-result-attributes">
