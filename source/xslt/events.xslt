@@ -191,6 +191,12 @@
         </xsl:for-each>
     </xsl:template>
     
+    <xsl:template match="a[ivdnt:class-contains(@class, 'gtb-selecteer-woordsoortgroep')]" mode="ixsl:onclick">
+        <xsl:for-each select="ancestor::div[@data-hoofdwoordsoort]//input[@type eq 'checkbox']">
+            <xsl:call-template name="ivdnt:check"><xsl:with-param name="checkbox" select="."/></xsl:call-template>
+        </xsl:for-each>
+    </xsl:template>
+    
     <xsl:template match="button[@name eq 'doe-selecteervraag']" mode="ixsl:onclick">
         <!-- Bepaal het nummer van het geselecteerde item.
              Selecteer het overeenkomstige XML-element in de lijst van $FORMDIV_INPUTS_AND_SELECTS_PROPERTY (gegeven het tabblad)

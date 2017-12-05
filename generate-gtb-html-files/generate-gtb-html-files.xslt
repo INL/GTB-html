@@ -354,6 +354,7 @@
     
     <xsl:template match="ivdnt:woordsoortgroep[@groep !='']" mode="ivdnt:html-mode">
         <div class="gtb-woordsoortgroep" data-hoofdwoordsoort="{@groep}">
+            <a class="gtb-selecteer-woordsoortgroep">alles selecteren</a>
             <xsl:apply-templates select="node()" mode="ivdnt:html-mode"/>
         </div>
     </xsl:template>
