@@ -76,7 +76,7 @@
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:comment>
                 HTML-bestand gegenereerd op basis van index.xml op {current-dateTime()} met behulp van XSLT 3.0, verwerkt door de Saxon XSLT-processor (http://www.saxonica.com).
-                Interactieve uitbreidingen met behulp van Saxon-JS (XSLT in de browser), Bootstrap (http://getbootstrap.com/) en Datatables (https://datatables.net/).
+                Interactieve uitbreidingen met behulp van Saxon-JS (XSLT in de browser), Bootstrap (http://getbootstrap.com/).
                 Deze software werd ontwikkeld in opdracht van het instituut voor de Nederlandse taal (http://www.ivdnt.org) door Pieter Masereeuw (http://www.masereeuw.nl).
             </xsl:comment>
             <xsl:apply-templates select="node()" mode="#current"/>
@@ -92,15 +92,12 @@
             
             <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/bootstrap.min.css" type="text/css"/>
-            <link rel="stylesheet" media="screen" href="css/datatables.min.css" type="text/css" />
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/gtb-artikel.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/gtb-typeahead.css" type="text/css"/>
             
             <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
             <script src="js/bootstrap.min.js" type="text/javascript"></script>
-            <!--<script src="js/bootstrap3-typeahead.min.js" type="text/javascript"></script>-->
-            <script src="js/datatables.min.js" type="text/javascript"></script>
             <script src="js/download.js" type="text/javascript"></script>
             <!-- baseListURL contains the baseurl for the typeahead functionality. This is a sample URL:
                  .../iWDB/search?wdb=onw%2Cvmnw%2Cmnw%2Cwnt%2Cwft%2C&actie=list&index=lemmodern&prefix=koe&sensitive=false&xmlerror=true

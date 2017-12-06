@@ -30,54 +30,29 @@
             <xsl:apply-templates select="statistics" mode="render-results"/>
             <!-- Note: the id 'gtb-result-table' is used on several places in this file and in js/gtb.js -->
             <table id="gtb-result-table" class="table table-striped table-hover table-condensed">
-                <colgroup>
-                    <col class="gtb-wdbcol-line"/>
-                    <col class="gtb-wdbcol-wdb"/>
-                    <xsl:choose>
-                        <xsl:when test="ivdnt:is-bronnenlijst-result(.)">
-                            <col class="gtb-wdbcol-auteur"/>
-                            <col class="gtb-wdbcol-titel"/>
-                            <col class="gtb-wdbcol-datering"/>
-                            <col class="gtb-wdbcol-lokalisering"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <col class="gtb-wdbcol-modern_lemma"/>
-                            <col class="gtb-wdbcol-lemma"/>
-                            <col class="gtb-wdbcol-woordsoort"/>
-                            <xsl:if test="$first-result/@Verbinding">
-                                <!-- Extra kolom: nooit meer dan één, namelijk Verbinding, Kopsectie of Citaat. Verbinding komt voor de betekenis, de rest erna -->
-                                <col class="gtb-wdbcol-anders"/>
-                            </xsl:if>
-                            <col class="gtb-wdbcol-anders"/>
-                            <xsl:if test="$first-result/@Kopsectie | $first-result/@Citaat">
-                                <col class="gtb-wdbcol-anders"/>
-                            </xsl:if>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </colgroup>
                 <thead>
                     <tr>
-                        <th>Nr.</th>
-                        <th>Wdb</th>
+                        <th class="gtb-wdbcol-line">Nr.</th>
+                        <th class="gtb-wdbcol-wdb">Wdb</th>
                         <xsl:choose>
                             <xsl:when test="ivdnt:is-bronnenlijst-result(.)">
-                                <th>Auteur</th>
-                                <th>Titel</th>
-                                <th>Datering</th>
-                                <th>Lokalisering</th>
+                                <th class="gtb-wdbcol-auteur">Auteur</th>
+                                <th class="gtb-wdbcol-titel">Titel</th>
+                                <th class="gtb-wdbcol-datering">Datering</th>
+                                <th class="gtb-wdbcol-lokalisering">Lokalisering</th>
                             </xsl:when>
                             <xsl:otherwise>
-                                <th>Mod. Ned. trefwoord</th>
-                                <th>Origineel trefwoord</th>
-                                <th>Woordsoort</th>
-                                <xsl:if test="$first-result/@Verbinding"><th>Verbinding</th></xsl:if>
-                                <xsl:if test="$first-result/@hits and $first-result/conc"><th>Freq. </th></xsl:if>
+                                <th class="gtb-wdbcol-modern_lemma">Mod. Ned. trefwoord</th>
+                                <th class="gtb-wdbcol-lemma">Origineel trefwoord</th>
+                                <th class="gtb-wdbcol-woordsoort">Woordsoort</th>
+                                <xsl:if test="$first-result/@Verbinding"><th class="gtb-wdbcol-anders">Verbinding</th></xsl:if>
+                                <xsl:if test="$first-result/@hits and $first-result/conc"><th class="gtb-wdbcol-anders">Freq. </th></xsl:if>
                                 <xsl:choose>
-                                    <xsl:when test="$first-result/conc"><th>Concordantie</th></xsl:when>
-                                    <xsl:when test="$first-result/@Betekenis"><th>Betekenis</th></xsl:when>
+                                    <xsl:when test="$first-result/conc"><th class="gtb-wdbcol-anders">Concordantie</th></xsl:when>
+                                    <xsl:when test="$first-result/@Betekenis"><th class="gtb-wdbcol-anders">Betekenis</th></xsl:when>
                                 </xsl:choose>
-                                <xsl:if test="$first-result/@Kopsectie"><th>Kopsectie</th></xsl:if>
-                                <xsl:if test="$first-result/@Citaat"><th>Citaat</th></xsl:if>
+                                <xsl:if test="$first-result/@Kopsectie"><th class="gtb-wdbcol-anders">Kopsectie</th></xsl:if>
+                                <xsl:if test="$first-result/@Citaat"><th class="gtb-wdbcol-anders">Citaat</th></xsl:if>
                             </xsl:otherwise>
                         </xsl:choose>                        
                     </tr>
@@ -88,8 +63,7 @@
             </table>
         </div>
         
-        <!-- waarom datatables kopieren als het niet gebruikt wordt!? -->
-        <div class="dataTables_paginate paging_simple_numbers gtb-pagineringsknoppen pull-right" id="gtb-result-table_paginate">
+        <div class="gtb-pagineringsknoppen" id="gtb-result-table_paginate">
             <ul class="pagination">
                 <xsl:call-template name="ivdnt:gen-pagination">
                     <xsl:with-param name="statistics" select="statistics"/>
@@ -234,12 +208,13 @@
     <xsl:template match="result/@*" mode="render-results">
         <xsl:variable name="wdbclass" select="if (local-name(.) eq 'Wdb') then ' gtb-wdb-' || translate(lower-case(.), ' ', '_') else ''"/>
         <xsl:variable name="class" as="xs:string" select="'gtb-' || lower-case(local-name(.)) || $wdbclass"/>
+        <xsl:variable name="colclass" as="xs:string" select="'gtb-wdbcol-' || lower-case(local-name(.)) || $wdbclass"/>
         <xsl:choose>
             <xsl:when test="lower-case(local-name()) eq 'betekenis'">
-                <td class="{$class}"><div class="{$class || ' gtb-cell-small'}" title="{$max-hoogte-title}"><xsl:apply-templates select="." mode="render-result-attributes"/></div></td>
+                <td class="{$class} {$colclass}"><div class="{$class || ' gtb-cell-small'}" title="{$max-hoogte-title}"><xsl:apply-templates select="." mode="render-result-attributes"/></div></td>
             </xsl:when>
             <xsl:otherwise>
-                <td class="{$class}"><xsl:apply-templates select="." mode="render-result-attributes"/></td>
+                <td class="{$class} {$colclass}"><xsl:apply-templates select="." mode="render-result-attributes"/></td>
             </xsl:otherwise>
         </xsl:choose>
         

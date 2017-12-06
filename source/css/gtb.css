@@ -327,6 +327,17 @@ div.gtb-zoekvragen-geschiedenis {
     font-weight: bold;
 }
 
+#gtb-result-table thead {
+    display: block;
+}
+
+#gtb-result-table tbody {
+    display: block;
+    min-height: 40vh;
+    max-height: 40vh;
+    overflow:auto;    
+}
+
 #gtb-result-table th {
     text-align: left;
 }
