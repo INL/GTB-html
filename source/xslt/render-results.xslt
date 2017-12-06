@@ -208,7 +208,7 @@
     <xsl:template match="result/@*" mode="render-results">
         <xsl:variable name="wdbclass" select="if (local-name(.) eq 'Wdb') then ' gtb-wdb-' || translate(lower-case(.), ' ', '_') else ''"/>
         <xsl:variable name="class" as="xs:string" select="'gtb-' || lower-case(local-name(.)) || $wdbclass"/>
-        <xsl:variable name="colclass" as="xs:string" select="'gtb-wdbcol-' || lower-case(local-name(.)) || $wdbclass"/>
+        <xsl:variable name="colclass" as="xs:string" select="'gtb-wdbcol-' || lower-case(local-name(.))"/>
         <xsl:choose>
             <xsl:when test="lower-case(local-name()) eq 'betekenis'">
                 <td class="{$class} {$colclass}"><div class="{$class || ' gtb-cell-small'}" title="{$max-hoogte-title}"><xsl:apply-templates select="." mode="render-result-attributes"/></div></td>
