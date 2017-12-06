@@ -285,11 +285,14 @@
         </xsl:if>
     </xsl:template>
     
-    <!-- Assuming one class value only for gtb-betekenis-large/gtb-betekenis-small/gtb-conc-large/gtb-conc-small, changing it will also discard any other value -->
-    <xsl:template match="div[matches(@class, '^gtb-(betekenis|conc)-(small|large)$')]" mode="ixsl:onclick">
-        <xsl:variable name="newclass" select="if (ends-with(@class, '-large')) then replace(@class, '^(.*)-large$', '$1-small') else replace(@class, '^(.*)-small$', '$1-large')"/>
-        <ixsl:set-attribute name="class" select="$newclass"/>
-        <ixsl:set-attribute name="title" select="if (ends-with(@class, '-large')) then $min-hoogte-title else $max-hoogte-title"/>
+    <xsl:template match="div[ivdnt:class-contains(@class, 'gtb-cell-small')]" mode="ixsl:onclick">
+        <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-cell-small', 'gtb-cell-large')"/>
+        <ixsl:set-attribute name="title" select="$min-hoogte-title"/>
+    </xsl:template>
+    
+    <xsl:template match="div[ivdnt:class-contains(@class, 'gtb-cell-large')]" mode="ixsl:onclick">
+        <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-cell-large', 'gtb-cell-small')"/>
+        <ixsl:set-attribute name="title" select="$max-hoogte-title"/>
     </xsl:template>
     
     <xsl:template match="input[@type eq 'text']" mode="ixsl:onfocusin">

@@ -202,7 +202,7 @@
                 <xsl:when test="conc">
                     <xsl:apply-templates select="@hits" mode="render-results"/>
                     <td class="gtb-conc">
-                        <div class="gtb-conc-small" title="{$max-hoogte-title}"><xsl:apply-templates select="conc" mode="render-results"/></div>
+                        <div class="gtb-conc gtb-cell-small" title="{$max-hoogte-title}"><xsl:apply-templates select="conc" mode="render-results"/></div>
                     </td>
                 </xsl:when>
                 <xsl:when test="@Betekenis"><xsl:apply-templates select="@Betekenis" mode="render-results"/></xsl:when>
@@ -236,7 +236,7 @@
         <xsl:variable name="class" as="xs:string" select="'gtb-' || lower-case(local-name(.)) || $wdbclass"/>
         <xsl:choose>
             <xsl:when test="lower-case(local-name()) eq 'betekenis'">
-                <td class="{$class}"><div class="{$class || '-small'}" title="{$max-hoogte-title}"><xsl:apply-templates select="." mode="render-result-attributes"/></div></td>
+                <td class="{$class}"><div class="{$class || ' gtb-cell-small'}" title="{$max-hoogte-title}"><xsl:apply-templates select="." mode="render-result-attributes"/></div></td>
             </xsl:when>
             <xsl:otherwise>
                 <td class="{$class}"><xsl:apply-templates select="." mode="render-result-attributes"/></td>
