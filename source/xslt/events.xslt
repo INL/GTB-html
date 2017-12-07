@@ -212,7 +212,7 @@
     </xsl:template>
     
     <xsl:template match="a[ivdnt:class-contains(@class, 'gtb-selecteer-woordsoortgroep')]" mode="ixsl:onclick">
-        <xsl:for-each select="ancestor::div[@data-hoofdwoordsoort]//input[@type eq 'checkbox']">
+        <xsl:for-each select="ancestor::div[@data-woordsoortgroep]//input[@type eq 'checkbox']">
             <xsl:call-template name="ivdnt:check"><xsl:with-param name="checkbox" select="."/></xsl:call-template>
         </xsl:for-each>
     </xsl:template>
