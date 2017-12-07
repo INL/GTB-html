@@ -226,31 +226,55 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 }
 
 .gtb-wdbcol-line{
-    width: 5%;
+    /*width: 5%;*/
+    width: 2em;
+    min-width: 2em;
+    max-width: 2em;
 }
 .gtb-wdbcol-wdb{
-    width: 10%;
+    /*width: 10%;*/
+    width: 4em;
+    min-width: 4em;
+    max-width: 4em;
 }
 .gtb-wdbcol-modern_lemma{
-    width: 15%;
+    /*width: 15%;*/
+    width: 15em;
+    min-width: 15em;
+    max-width: 15em;
 }
 .gtb-wdbcol-lemma{
-    width: 15%;
+    /*width: 15%;*/
 }
 .gtb-wdbcol-woordsoort{
-    width: 15%;
+    /*width: 15%;*/
+    width: 15em;
+    min-width: 15em;
+    max-width: 15em;
 }
 .gtb-wdbcol-auteur{
-    width: 15%;
+    /*width: 15%;*/
+    width: 15em;
+    min-width: 15em;
+    max-width: 15em;
 }
 .gtb-wdbcol-titel{
-    width: 50%;
+    /*width: 50%;*/
+    width: 50em;
+    min-width: 50em;
+    max-width: 50em;
 }
 .gtb-wdbcol-datering{
-    width: 10%;
+    /*width: 10%;*/
+    width: 10em;
+    min-width: 10em;
+    max-width: 10em;
 }
 .gtb-wdbcol-lokalisering{
-    width: 10%;
+    /*width: 10%;*/
+    width: 10em;
+    min-width: 10em;
+    max-width: 10em;
 }
 .gtb-wdbcol-anders{
     /*  rest */
