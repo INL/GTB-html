@@ -45,6 +45,7 @@
 
     <xsl:include href="utilities.xslt"/>
     <xsl:include href="render-results.xslt"/>
+    <xsl:include href="render-help.xslt"/>
     <xsl:include href="history.xslt"/>
     <xsl:include href="events.xslt"/>
     <xsl:include href="typeahead-impl.xslt"/>
@@ -357,5 +358,12 @@
             <xsl:otherwise><xsl:value-of select="$url-for-content"/></xsl:otherwise>
         </xsl:choose>
     </xsl:function>
+    
+    <xsl:template name="ivdnt:load-help">
+        <xsl:param name="href" as="xs:string"/>
+        <xsl:result-document href="#help" method="ixsl:replace-content">
+            <xsl:apply-templates select="doc($href)" mode="render-help"/>
+        </xsl:result-document>
+    </xsl:template>
     
 </xsl:stylesheet>

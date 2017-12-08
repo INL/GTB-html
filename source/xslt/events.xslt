@@ -308,4 +308,15 @@
         <ixsl:set-property name="{$FOCUSSED_TEXTBOX_PROPERTY}" select="." object="ixsl:page()"/>
     </xsl:template>
     
+    <xsl:template match="a[@data-help]" mode="ixsl:onclick">
+        <xsl:message>base uri van / is: "{ixsl:location()}"</xsl:message>
+        <xsl:variable name="href" select="resolve-uri(@data-help, ixsl:location())"/>
+        <xsl:message>href="{$href}"</xsl:message>
+        <ixsl:schedule-action document="{$href}">
+            <xsl:call-template name="ivdnt:load-help">
+                <xsl:with-param name="href" select="$href"/>
+            </xsl:call-template>
+        </ixsl:schedule-action>
+    </xsl:template>
+    
 </xsl:stylesheet>

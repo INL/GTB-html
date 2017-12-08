@@ -1,4 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-    <p>Waarlijk wijzen weten wel waarom.</p>
+<div id="help">
+    <h1>
+        <a href="https://www.youtube.com/watch?v=61eIRl8BQFY" target="_blank">Help</a>
+    </h1>
+    <p>Zie de FAQ voor veelgestelde vragen. Meer informatie over de GTB vindt u op de <a href="http://www.ivdnt.org">website</a> van het instituut voor de Nederlandse taal. Heeft u vragen of opmerkingen over het programma? Stuur ons dan een <a href="mailto:servicedesk@ivdnt.org">e-mail</a>
+        a.u.b.</p>
+    <!-- TODO Werkt servicedesk@ivdnt.org? Het was servicedesk@inl.nl -->
+    <ul>
+        <li>Help</li>
+        <ul>
+            <li>
+                <a class="helplink" href="#" data-help="help/algemeen.xml">Algemeen</a>
+            </li>
+            <li>
+                <a class="helplink" href="#" data-help="help/basiszoeken.xml">Basiszoeken</a>
+            </li>
+            <li>
+                <a class="helplink" href="#" data-help="help/uitgebreidzoeken.xml">Uitgebreid zoeken</a>
+            </li>
+            <li>
+                <a class="helplink" href="#" data-help="help/zoekeninbronnenlijst.xml">Zoeken in bronnenlijst</a>
+            </li>
+            <li>
+                <a class="helplink" href="#" data-help="help/resultaat.xml">Resultaat</a>
+            </li>
+            <li>
+                <a class="helplink" href="#" data-help="help/koppelingen.xml">Koppelingen</a>
+            </li>
+        </ul>
+        <li>Over het ONW</li>
+        <ul>
+            <li>to be done</li>
+        </ul>
+        <li>Over het VNMW </li>
+        <ul>
+            <li>to be done</li>
+        </ul>
+        <li>Over het MNW</li>
+        <ul>
+            <li>to be done</li>
+        </ul>
+        <li>Over het WNT</li>
+        <ul>
+            <li>to be done</li>
+        </ul>
+        <li>Over het WFT</li>
+        <ul>
+            <li>to be done</li>
+        </ul>
+        <li>Over de GTB</li>
+        <ul>
+            <li>to be done</li>
+        </ul>
+    </ul>
 </div>

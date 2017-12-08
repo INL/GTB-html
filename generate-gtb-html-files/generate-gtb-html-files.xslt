@@ -20,6 +20,7 @@
     <xsl:include href="include.xslt"/>
     <xsl:include href="tabs.xslt"/>
     <xsl:include href="modal.xslt"/>
+    <xsl:include href="../source/xslt/render-help.xslt"/>
     
     <xsl:variable name="zoekformulier-label-column-class" as="xs:string" select="'col-sm-4'"/>
     <xsl:variable name="zoekformulier-input-column-class" as="xs:string" select="'col-sm-8'"/>
@@ -140,6 +141,12 @@
     
     <xsl:template match="node() | @*" mode="ivdnt:html-mode" priority="-1">
         <xsl:copy><xsl:apply-templates select="node() | @*" mode="#current"/></xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="div[@id eq 'help']" mode="ivdnt:include-mode">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()" mode="render-help"/>
+        </xsl:copy>
     </xsl:template>
     
     <xsl:template match="input | select" mode="ivdnt:html-mode">
