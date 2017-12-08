@@ -376,6 +376,14 @@ tr.gtb-result-row{
     /* cursor: pointer; */
 }
 
+a.gtb-selecteer-woordsoortgroep.off:before {
+    content: 'alles aanvinken';
+}
+
+a.gtb-selecteer-woordsoortgroep.on:before {
+    content: 'alles uitvinken ';
+}
+
 div.gtb-cell-small {
     height: 3em;
     max-height: 3em;

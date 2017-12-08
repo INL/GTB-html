@@ -351,7 +351,7 @@
     
     <xsl:template match="@woordsoortgroep" mode="ivdnt:html-mode">
         <xsl:attribute name="data-woordsoortgroep" select="."/>
-		<a class="gtb-selecteer-woordsoortgroep">alles selecteren</a>
+		<a class="gtb-selecteer-woordsoortgroep off"/>
 	</xsl:template>
    
     <xsl:template match="ivdnt:woordsoort" mode="ivdnt:html-mode">
