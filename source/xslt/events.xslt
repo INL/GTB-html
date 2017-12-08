@@ -293,13 +293,13 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="div[ivdnt:class-contains(@class, 'gtb-cell-small')]" mode="ixsl:onclick">
-        <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-cell-small', 'gtb-cell-large')"/>
+    <xsl:template match="div[ivdnt:class-contains(@class, 'gtb-cell-reduced')]" mode="ixsl:onclick">
+        <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-cell-reduced', 'gtb-cell-expanded')"/>
         <ixsl:set-attribute name="title" select="$min-hoogte-title"/>
     </xsl:template>
     
-    <xsl:template match="div[ivdnt:class-contains(@class, 'gtb-cell-large')]" mode="ixsl:onclick">
-        <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-cell-large', 'gtb-cell-small')"/>
+    <xsl:template match="div[ivdnt:class-contains(@class, 'gtb-cell-expanded')]" mode="ixsl:onclick">
+        <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'gtb-cell-expanded', 'gtb-cell-reduced')"/>
         <ixsl:set-attribute name="title" select="$max-hoogte-title"/>
     </xsl:template>
     
