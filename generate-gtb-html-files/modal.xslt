@@ -67,4 +67,9 @@
             <xsl:apply-templates select="node()" mode="ivdnt:html-mode"/>
         </div>
     </xsl:template>
+    
+    <xsl:template match="ivdnt:retrieve-help-text" mode="ivdnt:html-mode">
+        <xsl:variable name="helptext" as="xs:string" select="ancestor::*[@helptext][1]/@helptext"/>
+        <xsl:copy-of select="doc(resolve-uri($helptext,$BASE-URI))"/>
+    </xsl:template>
 </xsl:stylesheet>

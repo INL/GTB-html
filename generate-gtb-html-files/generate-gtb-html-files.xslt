@@ -22,6 +22,8 @@
     <xsl:include href="modal.xslt"/>
     <xsl:include href="help.xslt"/>
     
+    <xsl:variable name="BASE-URI" as="xs:string" select="base-uri(/)"/>
+    
     <xsl:variable name="zoekformulier-label-column-class" as="xs:string" select="'col-sm-4'"/>
     <xsl:variable name="zoekformulier-input-column-class" as="xs:string" select="'col-sm-8'"/>
     <xsl:variable name="zoekformulier-vantot-label-class" as="xs:string" select="'col-sm-4'"/>
@@ -65,6 +67,8 @@
         <xsl:variable name="includes-resolved" as="element()">
             <xsl:apply-templates select="/" mode="ivdnt:include-mode"/>
         </xsl:variable>
+        
+        <!--<xsl:result-document href="/tmp/debug.xml"><xsl:copy-of select="$includes-resolved"/></xsl:result-document>-->
         
         <!-- Stap 2: doe de normale conversie -->
         <xsl:copy>

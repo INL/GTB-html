@@ -18,19 +18,19 @@
         </div>
         
         <ivdnt:tabs class="container">
-            <ivdnt:tab>
+            <ivdnt:tab helptext="help/basiszoeken.xml">
                 <ivdnt:tabtitle>Basiszoeken</ivdnt:tabtitle>
                 <ivdnt:include href="basiszoeken.xml"/>
             </ivdnt:tab>
-            <ivdnt:tab>
+            <ivdnt:tab helptext="help/uitgebreidzoeken.xml">
                 <ivdnt:tabtitle>Uitgebreid zoeken</ivdnt:tabtitle>
                 <ivdnt:include href="uitgebreidzoeken.xml"/>
             </ivdnt:tab>
-            <ivdnt:tab>
+            <ivdnt:tab helptext="help/zoekeninbronnenlijst.xml">
                 <ivdnt:tabtitle>Zoeken in bronnenlijst</ivdnt:tabtitle>
                 <ivdnt:include href="bronnenlijstzoeken.xml"/>
             </ivdnt:tab>
-            <ivdnt:tab id="resultaat">
+            <ivdnt:tab id="resultaat" helptext="help/resultaat.xml">
                 <ivdnt:tabtitle>Resultaat</ivdnt:tabtitle>
                 <ivdnt:include href="resultaat.xml"/>
             </ivdnt:tab>

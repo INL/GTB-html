@@ -5,7 +5,19 @@
         <!-- submit buttons als eerste element zodat de andere elementen wrappen en de button op dezelfde plaats blijft ipv andersom -->
         <button class="btn btn-primary pull-right gtb-zoek-button" name="start-zoeken" type="submit">Zoek</button>
 
-        <a class="btn btn-default" href="*** iets ***">Help</a>
+        <!--<a class="btn btn-default" href="*** iets ***">Help</a>-->
+        <ivdnt:modal type="help" suppress-ok-button="true" style="width: 70vw">
+            <ivdnt:modaltrigger><button type="button" name="help" class="helpknop btn btn-default">Help...</button></ivdnt:modaltrigger>
+            <ivdnt:modalcontent>
+                <ivdnt:modaltitle><h4 class="modal-title">Help</h4></ivdnt:modaltitle>
+                
+                <ivdnt:retrieve-help-text/>
+                
+                <div class="modal-footer">
+                    <p><button type="button" name="annuleer-help" class="btn btn-secondary" data-dismiss="modal" >Ok</button></p>
+                </div>
+            </ivdnt:modalcontent>
+        </ivdnt:modal>
         
         <ivdnt:modal type="geschiedenis" suppress-ok-button="true" style="width: 70vw">
           <ivdnt:modaltrigger><button type="button" name="geschiedenis" class="geschiedenisknop btn btn-default">Geschiedenis...</button></ivdnt:modaltrigger>
@@ -18,7 +30,7 @@
               <div class="modal-footer">
                   <p class="row">
                       <button type="button" name="doe-selecteervraag" class="btn btn-default btn-primary" data-dismiss="modal">Selecteer</button>
-                      <button type="button" name="annuleer-sorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
+                      <button type="button" name="annuleer-geschiedenis" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
                   </p>
               </div>
           </ivdnt:modalcontent>
