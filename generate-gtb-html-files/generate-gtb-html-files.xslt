@@ -20,6 +20,7 @@
     <xsl:include href="include.xslt"/>
     <xsl:include href="tabs.xslt"/>
     <xsl:include href="modal.xslt"/>
+    <xsl:include href="help.xslt"/>
     
     <xsl:variable name="zoekformulier-label-column-class" as="xs:string" select="'col-sm-4'"/>
     <xsl:variable name="zoekformulier-input-column-class" as="xs:string" select="'col-sm-8'"/>

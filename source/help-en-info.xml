@@ -1,54 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div id="help" class="helptext helptext-level1">
-    <h1>Help</h1>
+<div class="row" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <p>Zie de FAQ voor veelgestelde vragen. Meer informatie over de GTB vindt u op de <a href="http://www.ivdnt.org">website</a> van het instituut voor de Nederlandse taal. Heeft u vragen of opmerkingen over het programma? Stuur ons dan een <a href="mailto:servicedesk@ivdnt.org">e-mail</a>
         a.u.b.</p>
     <!-- TODO Werkt servicedesk@ivdnt.org? Het was servicedesk@inl.nl -->
-    <ul>
-        <li>Help</li>
-        <ul>
-            <li>
-                <a class="helplink" href="#" data-help="help/algemeen.xml">Algemeen</a>
-            </li>
-            <li>
-                <a class="helplink" href="#" data-help="help/basiszoeken.xml">Basiszoeken</a>
-            </li>
-            <li>
-                <a class="helplink" href="#" data-help="help/uitgebreidzoeken.xml">Uitgebreid zoeken</a>
-            </li>
-            <li>
-                <a class="helplink" href="#" data-help="help/zoekeninbronnenlijst.xml">Zoeken in bronnenlijst</a>
-            </li>
-            <li>
-                <a class="helplink" href="#" data-help="help/resultaat.xml">Resultaat</a>
-            </li>
-            <li>
-                <a class="helplink" href="#" data-help="help/koppelingen.xml">Koppelingen</a>
-            </li>
-        </ul>
-        <li>Over het ONW</li>
-        <ul>
-            <li>to be done</li>
-        </ul>
-        <li>Over het VNMW </li>
-        <ul>
-            <li>to be done</li>
-        </ul>
-        <li>Over het MNW</li>
-        <ul>
-            <li>to be done</li>
-        </ul>
-        <li>Over het WNT</li>
-        <ul>
-            <li>to be done</li>
-        </ul>
-        <li>Over het WFT</li>
-        <ul>
-            <li>to be done</li>
-        </ul>
-        <li>Over de GTB</li>
-        <ul>
-            <li>to be done</li>
-        </ul>
-    </ul>
+    <div class="col-xs-4">
+        <h1>Help</h1>        
+        <ivdnt:hulpgroup>
+            <ivdnt:hulp>Help</ivdnt:hulp>
+            <ivdnt:hulpgroup>
+                <ivdnt:hulp href="help/algemeen.xml">Algemeen</ivdnt:hulp>
+                <ivdnt:hulp href="help/basiszoeken.xml">Basiszoeken</ivdnt:hulp>
+                <ivdnt:hulp href="help/uitgebreidzoeken.xml">Uitgebreid zoeken</ivdnt:hulp>
+                <ivdnt:hulp href="help/zoekeninbronnenlijst.xml">Zoeken in bronnenlijst</ivdnt:hulp>
+                <ivdnt:hulp href="help/resultaat.xml">Resultaat</ivdnt:hulp>
+                <ivdnt:hulp href="help/koppelingen.xml">Koppelingen</ivdnt:hulp>
+            </ivdnt:hulpgroup>
+            <ivdnt:hulp>Over het ONW</ivdnt:hulp>
+            <ivdnt:hulpgroup>
+                <ivdnt:hulp href="help/onw-algemeen.xml">Algemeen</ivdnt:hulp>
+                <ivdnt:hulp href="help/onw-afkortingen.xml">Afkortingen</ivdnt:hulp>
+                <ivdnt:hulp href="help/onw-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
+            </ivdnt:hulpgroup>
+            <ivdnt:hulp>Over het VNMW </ivdnt:hulp>
+            <ivdnt:hulpgroup>
+                <ivdnt:hulp href="help/vnmw-algemeen.xml">Algemeen</ivdnt:hulp>
+                <ivdnt:hulp href="help/vnmw-afkortingen.xml">Afkortingen</ivdnt:hulp>
+                <ivdnt:hulp href="help/vnmw-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
+            </ivdnt:hulpgroup>
+            <ivdnt:hulp>Over het MNW</ivdnt:hulp>
+            <ivdnt:hulpgroup>
+                <ivdnt:hulp href="help/mnw-algemeen.xml">Algemeen</ivdnt:hulp>
+                <ivdnt:hulp href="help/mnw-afkortingen.xml">Afkortingen</ivdnt:hulp>
+                <ivdnt:hulp href="help/mnw-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
+            </ivdnt:hulpgroup>
+            <ivdnt:hulp>Over het WNT</ivdnt:hulp>
+            <ivdnt:hulpgroup>
+                <ivdnt:hulp href="help/wnt-algemeen.xml">Algemeen</ivdnt:hulp>
+                <ivdnt:hulp href="help/wnt-afkortingen.xml">Afkortingen</ivdnt:hulp>
+                <ivdnt:hulp href="help/wnt-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
+            </ivdnt:hulpgroup>
+            <ivdnt:hulp>Over het WFT</ivdnt:hulp>
+            <ivdnt:hulpgroup>
+                <ivdnt:hulp href="help/wft-algemeen.xml">Algemeen</ivdnt:hulp>
+                <ivdnt:hulp href="help/wft-afkortingen.xml">Afkortingen</ivdnt:hulp>
+                <ivdnt:hulp href="help/wft-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
+            </ivdnt:hulpgroup>
+            <ivdnt:hulp>Over de GTB</ivdnt:hulp>
+            <ivdnt:hulpgroup>
+                <ivdnt:hulp href="help/gtb-algemeen.xml">Algemeen</ivdnt:hulp>
+                <ivdnt:hulp href="help/gtb-software.xml">Software</ivdnt:hulp>
+                <ivdnt:hulp href="help/gtb-medewerkers.xml">Medewerkers</ivdnt:hulp>
+            </ivdnt:hulpgroup>
+            <ivdnt:hulp href="help/versie-informatie.xml">Versie-informatie</ivdnt:hulp>
+        </ivdnt:hulpgroup>
+    </div>
+    <div class="col-xs-8" id="help"></div>
 </div>

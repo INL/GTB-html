@@ -1,60 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <div class="helptext helptext-level1">
-    <p>
-        <a href="#" data-help="help/help-en-info.xml">Overzicht</a>
-    </p>
-    <h1 class="helptext">Zoeken in bronnenlijst</h1>
-    <br/>
-    <br/>
-    Met het zoekformulier op dit tabblad kan in de bronnenlijsten van de woordenboeken gezocht worden. Voorafgaand aan iedere zoekactie moet eerst een keuze uit de woordenboeken worden gemaakt (zie "Algemeen"). Niet alle zoekmogelijkheden zijn voor alle woordenboeken van toepassing. Afhankelijk van de woordenboekselectie kan er al dan niet in bepaalde zoekvelden gezocht worden. Hieronder wordt 'Zoeken in bronnenlijst' nader toegelicht. Lees ook hierboven de informatie onder 'Algemeen' voor de informatie die voor alle zoekformulieren (tabblad 'Basiszoeken', tabblad 'Uitgebreid zoeken' en tabblad 'Zoeken in bronnenlijst') van toepassing is. Omdat het werk aan de bronnenlijst van het WNT nog volop bezig is, zijn correcties en/of aanvulling van harte welkom. <br/>
-    <br/>
-    <div class="helptext helptext-level2">
-        <h2 class="helptext">Zoekvelden</h2> 
-        De zoekvelden waarmee de bronnenlijsten van de woordenboeken doorzocht kunnen worden zijn <i>Auteur</i>, <i>Verkorte brontitel</i>, <i>Woorden in titel</i>, <i>Datering</i>, <i>Lokalisering</i> en <i>Signatuur</i>. De laatste twee velden zijn voor het WNT niet relevant omdat daar geen informatie over in de bronnenlijst staat. De zoekvelden worden hieronder beschreven, voor zover ze (reeds) op het WNT van toepassing zijn. Er kan informatie in een zoekveld worden ingevoerd door de cursor op gewenste veld te zetten en dan te klikken. <br/>
-        <br/>
-    </div>
-    <div class="helptext helptext-level2">
-        <h2 class="helptext">Meelopende lijsten</h2>
-        Een aantal zoekvelden (<i>Auteur</i>, <i>Verkorte brontitel</i>, <i>Woorden in titel</i>, <i>Lokalisering</i>, <i>Signatuur</i> en <i>Woord in bronartikel</i>)
-        zijn voorzien van een meelopende lijst, die op basis van de ingetikte letters in alfabetische volgorde tien suggesties bevat van wat er gezocht zou kunnen worden. Bij iedere suggestie wordt meegegeven in welk(e) woordenboek(en) de vorm voorkomt. Elk item van de gepresenteerde lijst komt in een gekleurde balk te staan als er met de muis overheen wordt gegaan. Door te klikken op een 'gekleurd' item wordt het item in het invulveld gekopieerd. De inhoud van de meelopende lijst wordt bepaald door de laatste aaneengesloten reeks van karakters in het veld die geen interpunctie, operatorkarakters of spatie zijn. De meelopende lijst kan derhalve verdwijnen en verschijnen binnen één zoekveld. Uiteraard is het hierbij steeds ook mogelijk onafhankelijk van deze lijsten een woord of woorddeel als zoekterm in te voeren. <br/>
-        <br/>
-    </div>
-    <div class="helptext helptext-level2">
-        <h2 class="helptext">Auteur</h2> Er kan in de bronnenlijsten van de woordenboeken gezocht worden naar werken van een bepaalde auteur. Daarvoor wordt
-        gezocht op de naam van een auteur, zoals deze in de bibliografische beschrijving van elke bron in de bronnenlijst is te vinden. Het zoekveld <i>Auteur</i> is voorzien van een meelopende lijst (zie hierboven), waarvan de items de volledige auteursaanduiding (inclusief voorletters) weergeven. <br/>
-        <br/>
-    </div>
-    <div class="helptext helptext-level2">
-        <h2 class="helptext">Verkorte brontitel</h2> 
-        Er kan in de bronnenlijsten van de woordenboeken ook gezocht worden naar werken met behulp van de verkorte brontitel waarmee ze in de bronvermelding bij citaten in de woordenboeken worden aangehaald. Dit zoekveld <i>Verkorte brontitel</i> is voorzien van een meelopende lijst (zie hierboven), waarvan de items de volledige verkorte titel weergeven.? <br/>
-        <br/>
-    </div>
-    <div class="helptext helptext-level2">
-        <h2 class="helptext">Woorden in titel</h2>
-        Er kan in de bronnenlijsten van de woordenboeken gezocht worden naar werken met behulp van de titel zoals deze in de bibliografische beschrijving van elke bron in de bronnenlijst is te vinden. Het zoekveld <i>Woorden in titel</i> is voorzien van een meelopende lijst (zie hierboven), waarmee het zoeken naar een bepaalde titel vergemakkelijkt wordt. <br/>
-        <br/>
-    </div>
-    <div class="helptext helptext-level2">
-        <h2 class="helptext">Datering</h2> Door het invoeren van een begindatum en/of een einddatum is het mogelijk om in de bronnenlijsten van de woordenboeken te zoeken naar werken uit een bepaalde periode of van een bepaalde datum. Wanneer de begindatum wordt opengelaten en alleen een einddatum wordt ingevuld, wordt gezocht naar alle werken met een datering tot aan de gevraagde einddatum. Wanneer de einddatum wordt opengelaten, en alleen een begindatum wordt ingevuld, krijgt men alle werken die niet ouder zijn dan de ingevulde begindatum. Om werken uit bijv. 1508 op te vragen, moet zowel bij begin- als einddatum 1508 worden ingevuld. <br/>
-        <br/>
-    </div>
-    <div class="helptext helptext-level2">
-        <h2 class="helptext">Lokalisering</h2> 
-        In het VMNW wordt elke aanhaling uit het ambtelijke materiaal gelokaliseerd door middel van de naam van de plaats waar het betreffende document geschreven is, bijv. <i>Brugge</i>. De literaire teksten kunnen echter - evenals enkele ambtelijke bescheiden- niet nauwkeuriger gelokaliseerd worden dan d.m.v. een regio-aanduiding, bijv. <i>West-Vlaanderen</i>. Elke plaatsnaam is ook gekoppeld aan een regio-aanduiding Er kan naar bronnen met een bepaalde lokalisering worden gezocht door selectie van een regio- en of plaatsaanduiding uit de meelopende lijst. Ook het ONW geeft waar mogelijk lokalisering van de bron.<br/>
-        <br/>
-    </div>
-    <div class="helptext helptext-level2">
-        <h2 class="helptext">Signatuur</h2> 
-        In het VMNW is van elk document de verblijfplaats, inclusief signatuur opgenomen. Er kan op signatuur gezocht worden door een of meerdere woorden in het betreffende veld in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
-        <br/>
-    </div>
-    <div class="helptext helptext-level2">
-        <h2 class="helptext">Woord in bronartikel</h2> 
-        Er kan voor elk van de vier woordenboeken gezocht worden naar een woord of woordcombinatie uit een bronartikel door een of meerdere woorden in het veld <i>Woord in bronartikel</i> in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
-        <br/>
-        <p>
-            <a href="#" data-help="help/help-en-info.xml">Overzicht</a>
-        </p>
-    </div>
+	
+		<h1 class="helptext">Zoeken in bronnenlijst</h1>
+		<br/>
+   <br/>
+Met het zoekformulier op dit tabblad kan in de bronnenlijsten van de woordenboeken gezocht worden. Voorafgaand aan iedere zoekactie moet eerst een keuze uit de woordenboeken worden gemaakt (zie "Algemeen"). Niet alle zoekmogelijkheden zijn voor alle woordenboeken van toepassing. Afhankelijk van de woordenboekselectie kan er al dan niet in bepaalde zoekvelden gezocht worden. Hieronder wordt 'Zoeken in bronnenlijst' nader toegelicht. Lees ook hierboven de informatie onder 'Algemeen' voor de informatie die voor alle zoekformulieren (tabblad 'Basiszoeken', tabblad 'Uitgebreid zoeken' en tabblad 'Zoeken in bronnenlijst') van toepassing is. Omdat het werk aan de bronnenlijst van het WNT nog volop bezig is, zijn correcties en/of aanvulling van harte welkom. <br/>
+   <br/>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Zoekvelden</h2> 
+De zoekvelden waarmee de bronnenlijsten van de woordenboeken doorzocht kunnen worden zijn <i>Auteur</i>, <i>Verkorte brontitel</i>, <i>Woorden in titel</i>, <i>Datering</i>, <i>Lokalisering</i> en <i>Signatuur</i>. De laatste twee velden zijn voor het WNT niet relevant omdat daar geen informatie over in de bronnenlijst staat. De zoekvelden worden hieronder beschreven, voor zover ze (reeds) op het WNT van toepassing zijn. Er kan informatie in een zoekveld worden ingevoerd door de cursor op gewenste veld te zetten en dan te klikken. <br/>
+      <br/>
+   </div>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Meelopende lijsten</h2>
+Een aantal zoekvelden (<i>Auteur</i>, <i>Verkorte brontitel</i>, <i>Woorden in titel</i>, <i>Lokalisering</i>, <i>Signatuur</i> en <i>Woord in bronartikel</i>)
+zijn voorzien van een meelopende lijst, die op basis van de ingetikte letters in alfabetische volgorde tien suggesties bevat van wat er gezocht zou kunnen worden. Bij iedere suggestie wordt meegegeven in welk(e) woordenboek(en) de vorm voorkomt. Elk item van de gepresenteerde lijst komt in een gekleurde balk te staan als er met de muis overheen wordt gegaan. Door te klikken op een 'gekleurd' item wordt het item in het invulveld gekopieerd. De inhoud van de meelopende lijst wordt bepaald door de laatste aaneengesloten reeks van karakters in het veld die geen interpunctie, operatorkarakters of spatie zijn. De meelopende lijst kan derhalve verdwijnen en verschijnen binnen één zoekveld. Uiteraard is het hierbij steeds ook mogelijk onafhankelijk van deze lijsten een woord of woorddeel als zoekterm in te voeren. <br/>
+      <br/>
+   </div>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Auteur</h2> Er kan in de bronnenlijsten van de woordenboeken gezocht worden naar werken van een bepaalde auteur. Daarvoor wordt
+gezocht op de naam van een auteur, zoals deze in de bibliografische beschrijving van elke bron in de bronnenlijst is te vinden. Het zoekveld <i>Auteur</i> is voorzien van een meelopende lijst (zie hierboven), waarvan de items de volledige auteursaanduiding (inclusief voorletters) weergeven. <br/>
+      <br/>
+   </div>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Verkorte brontitel</h2> 
+Er kan in de bronnenlijsten van de woordenboeken ook gezocht worden naar werken met behulp van de verkorte brontitel waarmee ze in de bronvermelding bij citaten in de woordenboeken worden aangehaald. Dit zoekveld <i>Verkorte brontitel</i> is voorzien van een meelopende lijst (zie hierboven), waarvan de items de volledige verkorte titel weergeven.? <br/>
+      <br/>
+   </div>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Woorden in titel</h2>
+Er kan in de bronnenlijsten van de woordenboeken gezocht worden naar werken met behulp van de titel zoals deze in de bibliografische beschrijving van elke bron in de bronnenlijst is te vinden. Het zoekveld <i>Woorden in titel</i> is voorzien van een meelopende lijst (zie hierboven), waarmee het zoeken naar een bepaalde titel vergemakkelijkt wordt. <br/>
+      <br/>
+   </div>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Datering</h2> Door het invoeren van een begindatum en/of een einddatum is het mogelijk om in de bronnenlijsten van de woordenboeken te zoeken naar werken uit een bepaalde periode of van een bepaalde datum. Wanneer de begindatum wordt opengelaten en alleen een einddatum wordt ingevuld, wordt gezocht naar alle werken met een datering tot aan de gevraagde einddatum. Wanneer de einddatum wordt opengelaten, en alleen een begindatum wordt ingevuld, krijgt men alle werken die niet ouder zijn dan de ingevulde begindatum. Om werken uit bijv. 1508 op te vragen, moet zowel bij begin- als einddatum 1508 worden ingevuld. <br/>
+      <br/>
+   </div>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Lokalisering</h2> 
+In het VMNW wordt elke aanhaling uit het ambtelijke materiaal gelokaliseerd door middel van de naam van de plaats waar het betreffende document geschreven is, bijv. <i>Brugge</i>. De literaire teksten kunnen echter - evenals enkele ambtelijke bescheiden- niet nauwkeuriger gelokaliseerd worden dan d.m.v. een regio-aanduiding, bijv. <i>West-Vlaanderen</i>. Elke plaatsnaam is ook gekoppeld aan een regio-aanduiding Er kan naar bronnen met een bepaalde lokalisering worden gezocht door selectie van een regio- en of plaatsaanduiding uit de meelopende lijst. Ook het ONW geeft waar mogelijk lokalisering van de bron.<br/>
+      <br/>
+   </div>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Signatuur</h2> 
+In het VMNW is van elk document de verblijfplaats, inclusief signatuur opgenomen. Er kan op signatuur gezocht worden door een of meerdere woorden in het betreffende veld in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
+      <br/>
+   </div>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Woord in bronartikel</h2> 
+Er kan voor elk van de vier woordenboeken gezocht worden naar een woord of woordcombinatie uit een bronartikel door een of meerdere woorden in het veld <i>Woord in bronartikel</i> in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
+      <br/>
+	  </div>
 </div>
 
