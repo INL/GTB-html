@@ -1,5 +1,138 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<div>
-    <h1>TO BE DONE</h1>
-    <p><a href="#" data-help="help/help-en-info.xml">Terug</a></p>
+<?xml version="1.0" encoding="UTF-8"?> 
+<div class="helptext helptext-level1">
+    <p>
+        <a href="#" data-help="help/help-en-info.xml">Overzicht</a>
+    </p>
+    <h1 class="helptext">Algemeen</h1>
+    <br/>
+    <br/>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Introductie</h2> In deze woordenboekenapplicatie zijn de vier grote historische woordenboeken van het Nederlands online te raadplegen: het <i>Oudnederlands Woordenboek</i> (ONW), het <i>Vroegmiddelnederlands Woordenboek</i> (VMNW), <i>het Middelnederlandsch Woordenboek</i>
+        (MNW) en het <i>Woordenboek der Nederlandsche Taal</i> (WNT), die gezamenlijk de periode tussen ca. 500 en 1976 beslaan. De woordenboeken kunnen afzonderlijk geraadpleegd worden of met meer tegelijk. Omdat de trefwoorden in al deze woordenboeken verschillen is hieraan ook een trefwoord in de
+        huidige spelling toegevoegd. Dit Modern Nederlandse trefwoord vergemakkelijkt niet alleen het zoeken in de woordenboeken, maar vormt ook de sleutel waarmee de woordenboeken onderling verbonden zijn. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Zoekmogelijkheden</h2> De applicatie bestaat uit een aantal tabbladen, waarvan er drie zoekformulieren bevatten: <i>Basiszoeken</i>, waarmee op een snelle en eenvoudige manier naar artikelen kan worden gezocht die aan bepaalde zoekcriteria voldoen, <i>Uitgebreid
+            zoeken</i>, waarin complexere zoekvragen kunnen worden gesteld, en <i>Zoeken in bronnenlijst</i> waarmee gericht naar de bronnen van de woordenboeken kan worden gezocht. Het resultaat van iedere zoekvraag verschijnt in het tabblad <i>Resultaat</i>.<br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Woordenboekselectie</h2> Voordat men gaat zoeken, moet gekozen worden in welk(e) woordenboek(en) dat moet gebeuren. De te selecteren woordenboeken staan, voorafgegaan door een aanvinkveld, bovenin de zoekformulieren vermeld. Door op het aanvinkveld te klikken wordt een
+        woordenboek ge(de)selecteerd. De gekozen selectie geldt vervolgens voor alle zoekvragen totdat deze handmatig wordt aangepast.<br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Zoekvelden</h2> Elk zoekformulier bevat een aantal velden waarin de te zoeken woorden of woorddelen ingetikt kunnen worden. Aan deze velden is ofwel een meelopende lijst met suggesties gekoppeld ofwel een selectielijst waaruit een of meerdere elementen geselecteerd kunnen
+        worden. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Hoofdletter- en accentgevoelig zoeken</h2> Bij het zoeken wordt standaard geen onderscheid gemaakt tussen hoofdletters en kleine letters en tussen lettertekens met of zonder accent. Het is echter wel mogelijk om hoofdletter- en accentgevoelig te zoeken door onder in het
+        scherm de optie H(oofdletters) &amp; A(ccenten) aan te klikken. De meelopende lijsten passen zich hierbij aan. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Bijzondere lettertekens</h2> Bij het invoeren van woorden of woorddelen kan men voor de bijzondere lettertekens gebruik maken van de functie 'symbool' onder aan het scherm. Hiermee wordt een tabel opgeroepen waarin alle in de woordenboeken voorkomende bijzondere
+        lettertekens zijn opgenomen. Selectie van een letterteken gebeurt door te klikken op het letterteken en daarna te klikken op de optie 'Invoegen'. Om bepaalde bijzondere lettertekens in de GTB-applicatie te kunnen zien, heeft u het INL-woordenboekenfont nodig. Dat kan gedownloaded worden op de
+        startpagina. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Zoeken met wildcards</h2> De wildcards waarmee gezocht kan worden zijn '?' (willekeurig karakter) en '*' (nul of meer willekeurige karakters). <br/> Voorbeelden: Zoeken in het WNT naar het originele trefwoord: b?k, levert op: <i>bak, bek, bik, bok, buk</i>. Zoeken in het
+        WNT naar het originele trefwoord: *woord, levert o.m. op: <i>antwoord, bastaardwoord, bijnaamwoord, bijwoord, godswoord</i> etc. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Zoeken met operatoren</h2> Het is binnen de zoekvelden ook mogelijk om met behulp van operatoren op combinaties van woorden en/of woorddelen te zoeken. De operatoren die gebruikt kunnen worden zijn en (&amp;), of (|), niet (!) en afstand (#, en "). <br/>
+        <br/>
+        <i>EN.</i> De operator 'en' heeft de vorm &amp;. Een combinatie van meer dan twee termen is mogelijk, bijv. <i>appel &amp; peer &amp; mispel</i>. Een combinatie van zoektermen zonder operatoren wordt eveneens geïnterpreteerd als een logische EN. <br/>
+        <br/>
+        <i>Voorbeeld</i>: <i>appel &amp; peer</i> in veld citaat.<br/>
+        <i>Resultaat</i>: <pre>
+	... De Peer en de Appel...
+	... een peer of eenen appel ...
+</pre>
+        <br/>
+        <i>OF.</i> De operator 'of' heeft de vorm "|".<br/>
+        <i>Voorbeeld</i>: <i>mensch | menschen</i> in veld betekenis<br/>
+        <i>Resultaat</i>: betekenissen waarvan de omschrijving ofwel 'mensch' ofwel 'menschen' bevat. <br/>
+        <br/>
+        <i>NIET</i>. De operator '!' staat voor de uit te sluiten zoekterm. Een zoekvraag moet voor ieder ingevuld veld tenminste een positieve zoekterm bevatten.<br/>
+        <i>Voorbeeld</i>: behoeve ! ten in citaat.<br/>
+        <i>Resultaat</i>: citaten die "behoeve" bevatten, maar niet "ten".<br/>
+        <pre>
+	... te zijnen behoeve. ...
+	... t'hunnen behoeve ...
+</pre>
+        <br/>
+        <i>AFSTAND</i>. De afstandsoperator heeft drie verschijningsvormen: een eenvoudige waarmee volgorde-onafhankelijk gezocht wordt, een uitgebreide waarmee ook de volgorde te beregelen is, en de syntax van de onderliggende search engine (lucene). <br/>
+        <br/> 1) Eenvoudige syntax (ongevoelig voor de volgorde van de zoektermen). De notatie is '#n', waarbij n het aantal woorden tussen de zoektermen aangeeft.<br/>
+        <i>Voorbeeld</i>: appel #2 peer<br/>
+        <i>Resultaat</i>:<br/>
+        <pre>
+	... De Appel en de Peer ...
+	... een peer of eenen appel ...
+</pre>
+        <br/>2) Uitgebreide syntax. De notatie is #n1..n2. De parameters n1..n2 geven het minimale en maximale aantal woorden tussen de gevonden zoektermen aan. Een negatieve waarde geeft aan dat de tweede zoekterm voor de eerste staat.<br/>
+        <i>Voorbeeld</i>: eerste zoekterm gevolgd door tweede: citaat=hond #0..1 kat<br/>
+        <i>Resultaat</i>:<br/>
+        <pre>
+	... (dierfiguren, zooals hond, vogel, kat), ...
+	... hond, kat, kanarievogel enz. ...
+</pre>
+        <br/>
+        <i>Voorbeeld</i>: eerste zoekterm voorafgegaan door tweede: citaat=hond #-2..-1 kat<br/>
+        <i>Resultaat</i>:<br/>
+        <pre>
+	Een kat of een hond ...
+	... kat, of hond? ...
+</pre>
+        <br/>3) Lucene syntax. Een aantal woorden binnen dubbele aanhalingstekens, mogelijk gevolgd door "~<i>k</i>", waarbij k de maximale afstand tussen de zoektermen geeft.<br/>
+        <i>Voorbeeld</i>: <i>"hond vogel kat"~6</i>. <br/>
+        <br/>
+        <i>Opmerkingen</i>:<br/>
+        <br/> Wildcards kunnen binnen een van de operanden van de afstand-operator gebruikt worden.<br/>
+        <i>Voorbeeld</i>: grenz*lo* #1..1 *heid binnen citaat in WNT:<br/>
+        <pre>
+	Die grenzenlooze onbeschoftheid ... .
+	... eene grenzenlooze uitgestrektheid ...
+</pre>
+        <br/>Op het moment kunnen slechts twee termen worden ingevoerd. Wie een proximity van drie of meer wil, moet de lucene syntax gebruiken.<br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Zoeken met reguliere expressies</h2> Er kan binnen elk zoekveld ook met reguliere expressies worden gezocht. Elke reguliere expressie dient daarvoor voorafgegaan te worden door 'regex='. De reguliere expressie matcht woorddelen. Om het patroon het hele woord te laten
+        matchen dient men het te laten beginnen met '^' en het te laten eindigen met '$'. <br/> Voorbeeld: (<i>opsporen van participium preverbale in het WNT</i>) 'regex=^ge.*[fkschp]t$' in het zoekveld met het originele trefwoord, gecombineerd met de keuze bnw. bij woordsoort, levert o.m. op:
+        <i>gebanvloekt, gebeeldwerkt, gebeft, gebekt, geblokt</i> etc. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Starten zoekactie</h2> Het starten van een zoekactie gebeurt door na het invullen van de gewenste zoekvelden te klikken op de optie 'Start zoeken'. Hierna verschijnt een venster met een klokje dat loopt zolang de zoekactie bezig is. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Afbreken zoekactie</h2> Een begonnen zoekactie kan afgebroken worden door in het venster met het meelopende klokje te klikken op de optie 'Afbreken'. Hierdoor wordt de zoekactie afgebroken en komt men terug in het tabblad vanwaaruit de zoekvraag was gesteld. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Foutmeldingen</h2> Wanneer een zoekvraag geen resultaat oplevert, kan dat twee oorzaken hebben: er is geen data die aan de gevraagde criteria voldoet of er is een fout in de vraagstelling. In beide gevallen verschijnt er na het starten van de zoekactie een venster met
+        suggesties voor een mogelijke oplossing. Het venster kan gesloten worden door de optie 'Sluiten' te kiezen. Wanneer een zoekvraag te veel resultaten oplevert, wordt verzocht om de vraag wat specifieker te stellen.<br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Wis velden</h2> Wanneer men een compleet nieuwe zoekvraag wil stellen, is het verstandig om het zoekformulier in één keer leeg te maken met de optie 'Wis velden', die onder aan het scherm gevonden wordt. Zo is er, met name bij 'Uitgebreid zoeken', minder risico op een
+        verkeerd resultaat door het zoeken met ongewenste elementen uit eerdere zoekvragen. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Geschiedenis</h2> Bij elk zoekformulier kan de gebruiker een overzicht krijgen van de vragen die hij binnen zijn sessie gesteld heeft. Uit dat overzicht kan hij een vraag selecteren voor hergebruik. De zoekgeschiedenis verschijnt in een apart venster na het klikken op de
+        optie 'Geschiedenis' onderaan het scherm. Er wordt een lijst met maximaal 50 zoekvragen gepresenteerd, waarbij de meest recente zoekvraag bovenaan staat. Het weergeven van de vragen gebeurt door een opsomming van de velden waarbinnen gezocht is en de waarde(s) die in dat veld zijn ingevoerd.
+        Door met de muis te dubbelklikken op een eerder gestelde zoekvraag wordt deze geselecteerd en naar het betreffende zoekformulier gekopieerd. <br/>
+        <br/>
+        <p>
+            <a href="#" data-help="help/help-en-info.xml">Overzicht</a>
+        </p>
+    </div>
+    
 </div>

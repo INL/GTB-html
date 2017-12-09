@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div>
-    <h1>TO BE DONE</h1>
-    <p><a href="#" data-help="help/help-en-info.xml">Terug</a></p>
+<div class="helptext helptext-level1">
+    <p>
+        <a href="#" data-help="help/help-en-info.xml">Overzicht</a>
+    </p>
+    <h1 class="helptext">Basiszoeken</h1>
+    <br/>
+    <br/>
+    'Basiszoeken' biedt een eenvoudige toegang tot het woordenboekmateriaal. Het resultaat van een zoekactie bevat steeds een lijst met artikelen die aan het gezochte beantwoorden. Vanuit die lijst kan doorgeklikt worden naar de afzonderlijke woordenboekartikelen. Voorafgaand aan iedere zoekactie moet eerst een keuze uit de woordenboeken worden gemaakt (zie "Algemeen"). Hieronder wordt 'Basiszoeken' nader toegelicht. Lees ook hierboven de informatie onder 'Algemeen' voor de informatie die voor alle zoekformulieren (tabblad 'Basiszoeken', tabblad 'Uitgebreid zoeken' en tabblad 'Zoeken in bronnenlijst') van toepassing is. <br/>
+    <br/>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Zoekvelden</h2> 
+        In 'Basiszoeken' kan gezocht worden op trefwoord in de huidige spelling (<i>Mod. Ned. trefwoord</i>), op origineel trefwoord van het betreffende historische woordenboek (<i>Origineel trefwoord</i>), op woordsoort (<i>Woordsoort</i>), in de betekenisomschrijvingen van de woordenboekartikelen (<i>Woord in betekenis</i>, in de citaten van de woordenboekartikelen (<i>Woord in citaat</i>) en in de volledige woordenboekartikelen zelf (<i>Woord in artikel</i>). De zoekvelden worden hieronder beschreven. Er kan informatie in een zoekveld worden ingevoerd door de cursor in het betreffende veld te zetten en dan te klikken. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Meelopende lijsten</h2> 
+        Een aantal zoekvelden (<i>Mod. Ned. Trefwoord</i>, <i>Origineel trefwoord</i>, <i>Woord in betekenis</i>, <i>Woord in citaat</i> en <i>Woord in artikel</i>) is voorzien van een meelopende lijst, die op basis van de ingetikte karakters in alfabetische volgorde tien suggesties bevat van wat er gezocht zou kunnen worden. Bij iedere suggestie wordt meegegeven in welk(e) woordenboek(en) de vorm voorkomt. Elk item van de gepresenteerde lijst komt in een gekleurde balk te staan als er met de muis overheen wordt gegaan. Door te klikken op een 'gekleurd' item wordt dat naar het invulveld gekopieerd. De inhoud van de meelopende lijst wordt bepaald door de laatste
+        aaneengesloten reeks van karakters in het veld die geen interpunctie, operatorkarakters of spatie zijn. De meelopende lijst kan derhalve verdwijnen en verschijnen binnen één zoekveld. Uiteraard is het ook mogelijk onafhankelijk van deze lijsten een woord of woorddeel als zoekterm in te voeren. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Selectielijst</h2> 
+        De informatie voor het zoekveld <i>Woordsoort</i> is ondergebracht in een in twee lagen opgebouwde selectielijst met vaste items. De eerste laag bestaat uit een lijst hoofdwoordsoorten die zichtbaar wordt door op de pijltjes links van het invulveld te klikken. De eventueel aanwezige features van een hoofdwoordsoort verschijnen in een venster door te klikken op de hoofdwoordsoort in de primaire lijst. Hoofdwoordsoorten zonder onderverdeling worden geselecteerd (en in het zoekveld gekopieerd) door er in de lijst op te klikken. Bij hoofdwoordsoorten met onderverdeling kan voor alle features gekozen worden door in het venster met features alleen op de optie 'ok' te klikken, waarna de aanduiding van de hoofdwoordsoort in het invulveld wordt gekopieerd. Feature-selectie gebeurt een of meer opties aan te vinken en vervolgens op 'ok' te klikken. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Trefwoord</h2> 
+        <i>Hoofd- vs. subtrefwoord</i> Het trefwoord is het woord dat in het woordenboekartikel verklaard wordt. In tegenstelling tot het VMNW bevatten het ONW, het WNT en het MNW hoofdtrefwoorden en subtrefwoorden. Hoofdtrefwoorden zijn woorden die in een 'eigen' woordenboekartikel worden beschreven. Ze staan aan het begin van een woordenboekartikel in hoofdletters afgedrukt, zoals bijv. uit het WNT: BOEK (II), ZEGGEN (I) en ZILT. Subtrefwoorden, ook wel opnoemers genaamd, zijn woorden die geen 'eigen' woordenboekartikel hebben gekregen, maar die vermeld worden bij het hoofdtrefwoord waar ze een afleiding of samenstelling van zijn. Ze staan in het WNT aan het eind van de woordenboekartikelen, achter de laatste betekenisomschrijving, cursief gedrukt, zoals: <i>Vragenboek</i>, <i>Zegsvrouw</i>
+        en <i>Ziltheid</i>. In het ONW zijn de subtrefwoorden toponiemen, en staan ze in de betekenissectie van de artikelen. Voor de internetapplicatie hoeft men bij het zoeken niet te bedenken of het gezochte woord hoofd- dan wel subtrefwoord is en wordt men vanzelf naar de goede plek in het woordenboek geleid. <br/>
+        <i>Hedendaagse vs. origineel trefwoord</i> De trefwoorden van de historische woordenboeken zijn gespeld in de spelling die hoort bij de periode die het woordenboek beschrijft. Voor het WNT is dat bijvoorbeeld de al lang niet meer gangbare spelling De Vries/Te Winkel uit 1863. Deze verouderde spelling geeft bij het zoeken naar woorden nogal eens misverstanden, omdat het voor de hedendaagse gebruiker zeer lastig is om steeds te bedenken wat de originele (historische) spelling geweest is. Een voorbeeld daarvan zijn de woorden die in de huidige spelling met de letter <i>f-</i> beginnen. In het WNT, geschreven in de spelling De Vries/Te Winkel, beginnen die nog met <i>ph-</i>. Ook het vinden van de woorden die bij De Vries/Te Winkel de spelling <i>-ae-</i> bevatten, waar we tegenwoordig een enkele <i>-e-</i> schrijven is vaak lastig. Maar de originele trefwoorden in de diverse woordenboeken leveren ook problemen als een trefwoord in verschillende woordenboeken tegelijk wordt gezocht. Het WNT heeft bijvoorbeeld het trefwoord <i>afscheuren</i>, terwijl datzelfde woord in het MNW als <i>afscoren</i> is gespeld en in het VMNW voorkomt als <i>avescueren</i>. Om het mogelijk te maken deze woorden toch in één keer te kunnen opvragen is aan alle trefwoorden van de woordenboeken een equivalent in de huidige spelling toegevoegd. Voor de hedendaagse gebruiker wordt het hierdoor gemakkelijker om de woorden die hij zoekt te vinden en als hij eenzelfde woord in verschillende woordenboeken zoekt kan hij de mogelijk verschillend gespelde trefwoorden toch in zijn zoekresultaat bij elkaar krijgen. In het zoekveld <i>Mod. Ned. Trefwoord</i> kunnen de trefwoorden worden opgevraagd in de hedendaagse spelling. In het zoekveld <i>Origineel trefwoord</i> kunnen ze worden opgevraagd in de spelling van het woordenboek zelf. Beide zoekvelden zijn voorzien van een meelopende lijst (zie hierboven), die steun kan bieden bij het vinden van het juiste trefwoord. Op het moment zijn helaas nog niet alle trefwoorden beschikbaar in de spelling van het Groene Boekje 2005. Wij streven ernaar om bij een tweede release van het WNT online (in april 2007) de volledige trefwoordenlijst van het WNT en het dan ook beschikbare VMNW in de huidige spelling aan te kunnen bieden. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Woordsoort</h2> 
+        In het zoekveld <i>Woordsoort</i> kan aangegeven worden tot welke woordsoort de trefwoorden die men zoekt, moeten behoren. Met behulp van een selectielijst (zie hierboven) kan een bepaalde hoofdwoordsoort worden gekozen, bijvoorbeeld znw. of ww., die vervolgens naar behoeven nog nader kan worden gespecificeerd, bijv. vr. (vrouwelijk) of trans. (transitief). Het gecombineerd zoeken naar een trefwoord in de originele of huidige spelling met woordsoort kan gebruikt worden om homonieme trefwoorden vooraf van elkaar te onderscheiden (bijv. KOUD als znw. en KOUD als bnw./bw.). Daarnaast kan het zelfstandig worden gebruikt om tegelijkertijd verschillende trefwoorden die tot een bepaalde woordsoort behoren te selecteren, bijv. alle trefwoorden met als woordsoort tussenw. (tussenwerpsel) of vnw.pers. (persoonlijk voornaamwoord). De woordsoortaanduidingen uit de verschillende woordenboeken zijn geüniformeerd. Dit wil zeggen dat bijvoorbeeld de aanduiding 'bedr.', die in het WNT wordt gebruikt, ten behoeve van het zoeken voor de applicatie vertaald is naar 'trans.' <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Woord in betekenis</h2> 
+        Met het zoekveld <i>Woord in betekenis</i> kan gezocht worden in alle definities of betekenisomschrijvingen van de trefwoorden. Hierdoor wordt het mogelijk om verschillende trefwoorden bij elkaar te krijgen die op eenzelfde manier of met eenzelfde term worden gedefinieerd. Wie bijvoorbeeld op zoek is naar woorden voor soorten gereedschap, kan zoeken naar termen als 'werktuig' of 'gereedschap' en krijgt vervolgens een overzicht van alle trefwoorden waar deze termen in een van de definities zijn aangetroffen. Het is van belang om te
+        weten dat bij het WNT en het MNW de betekenisomschrijvingen, net als de overige redactionele tekst, niet in de huidige spelling zijn geschreven en dat dit de gebruiker van deze functie soms voor onverwachte verrassingen kan stellen. Daarom is ook dit zoekvelden voorzien van een meelopende lijst (zie hierboven), die steun kan bieden bij het vinden van het juiste woord. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Woord in citaat</h2> 
+        Met het zoekveld <i>Woord in citaat</i> kan gezocht worden in de aanhalingen of citaten die ter illustratie bij de betekenisomschrijvingen zijn gevoegd. Deze citaten bestaan uit de uit de bron geciteerde tekst en de bronvermelding. Uit beide gedeelten van het citaat kan met dit zoekveld informatie worden opgevraagd. Het is dus bijvoorbeeld mogelijk te zoeken op alle artikelen die de woordvorm <i>dunnebier</i> bevatten of op alle artikelen die citaten uit een van de werken van Kiliaan bevatten. Maar er kan natuurlijk ook specifieker gezocht worden door dit veld te combineren met een of meer van de overige zoekvelden in Basiszoeken. Ook dit zoekveld is voorzien van een meelopende lijst (zie hierboven), die steun kan bieden bij het vinden van het juiste woord. <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Woord in artikel</h2> 
+        Het zoeken met behulp van het zoekveld <i>Woord in artikel</i> is zoeken in de volledige tekst van de woordenboekartikelen. Ook dit zoekveld is voorzien van een meelopende lijst (zie hierboven), die steun kan bieden bij het vinden van het juiste woord.<br/>
+        <br/>
+        <p>
+            <a href="#" data-help="help/help-en-info.xml">Overzicht</a>
+        </p>
+    </div>
 </div>
+

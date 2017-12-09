@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div id="help">
-    <h1>
-        <a href="https://www.youtube.com/watch?v=61eIRl8BQFY" target="_blank">Help</a>
-    </h1>
+<div id="help" class="helptext helptext-level1">
+    <h1>Help</h1>
     <p>Zie de FAQ voor veelgestelde vragen. Meer informatie over de GTB vindt u op de <a href="http://www.ivdnt.org">website</a> van het instituut voor de Nederlandse taal. Heeft u vragen of opmerkingen over het programma? Stuur ons dan een <a href="mailto:servicedesk@ivdnt.org">e-mail</a>
         a.u.b.</p>
     <!-- TODO Werkt servicedesk@ivdnt.org? Het was servicedesk@inl.nl -->

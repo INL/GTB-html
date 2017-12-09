@@ -1,5 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<div>
-    <h1>TO BE DONE</h1>
-    <p><a href="#" data-help="help/help-en-info.xml">Terug</a></p>
+<?xml version="1.0" encoding="UTF-8"?>    
+<div class="helptext helptext-level1">
+    <p>
+        <a href="#" data-help="help/help-en-info.xml">Overzicht</a>
+    </p>
+    <h1 class="helptext">Koppelingen</h1>
+    <br/>
+    <br/>
+    Aan diverse woordenboekartikelen zijn een of meer koppelingen naar interne en externe informatie toegevoegd. Deze koppelingen zijn te vinden in een apart schermpje rechtsboven op het beeldscherm.<br/>
+    <br/>
+    
+    
+    
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Koppelingen aan het WNT</h2>
+        Hier zijn interne koppelingen te vinden naar het vorige en het volgende woordenboekartikel en naar eventuele informatie met betrekking tot het trefwoord in het Supplement en/of de Aanvullingen.
+        <br/>
+        Ook kan een trefwoord een of meer koppelingen bevatten naar externe informatie. De externe informatie is onderverdeeld in vier hoofdcategorieën: etymologie, dialectologie, afbeeldingen en overige informatie. <br/>
+        Onder etymologie zijn koppelingen opgenomen naar M. Philippa (e.a.), <i>Etymologisch woordenboek van het Nederlands</i>. Amsterdam: AUP, 2004 -  (afgekort als EWN) en naar G.J. van Wyk (e.a.), <i>Etimologiewoordeboek van Afrikaans</i>. Stellenbosch: Buro van die WAT, 2003 (afgekort als EWA).<br/> 
+        Bij dialectologie zijn koppelingen opgenomen naar L. Grootaers en G.G. Kloeke, <i>Taalatlas van Noord- en Zuid-Nederland</i>. Leiden: E.J. Brill, 1939 (afgekort als Taalatlas) en gedeeltelijk ook al naar de drie grote regionale woordenboeken, <i>het Woordenboek van de Brabantse Dialecten</i> (WBD), het <i>Woordenboek van de Limburgse Dialecten</i> (WLD) en het <i>Woordenboek van de Vlaamse Dialecten</i> (WVD). <br/>
+        
+        De categorie afbeeldingen bevat koppelingen naar R. Dodoens, <i>Cruijdeboeck, In den welcken die gheheele historie van den Cruyden met grooter neerstichheyt begrepen ende verclaert es</i>. Antwerpen: Jan van der Loe, 1554 en naar L.A.J. Burgersdijk, <i>De Dieren afgebeeld, beschreven en in hunnen levenswijze geschetst</i>. Leiden: D. Noothoven van Goor, 1864-1873. <br/>
+        Door met de cursor op de betreffende koppeling te gaan staan en vervolgens te klikken komt men bij deze informatie terecht. Het aanbrengen van externe koppelingen in het WNT wordt in de komende tijd voortgezet. Van tijd tot tijd zal de bestaande versie van het WNT online worden geactualiseerd. <br/>
+        <br/>
+        
+        
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Koppelingen aan het VMNW</h2>Hier zijn interne koppelingen te vinden naar het voorafgaande en het volgende woordenboekartikel. Er zijn ook koppelingen te vinden naar de kaarten uit de dissertatie van A. Berteloot, <i>Bijdrage tot een klankatlas van het dertiende-eeuwse Middelnederlands</i>. Gent, 1984. Tot slot is er bij elk woordenboekartikel een koppeling naar een interactieve kaartenapplicatie waarmee online kaarten getekend kunnen worden van klankverschijnselen die bij het betreffende woordenboekartikel zijn opgemerkt.
+        
+        <br/>
+        <br/>
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Koppelingen aan het ONW</h2>Bij ieder lemma in het ONW is uitgezocht wat de overeenkomstige lemmata in de overige historische woordenboeken zijn. Voorzover mogelijk zijn de betreffende koppelingen aangebracht in het koppelingenschermpje. <br/>
+        <br/>
+        
+    </div>
+    <div class="helptext helptext-level2">
+        <h2 class="helptext">Koppelingen aan het MNW</h2>In het koppelingenschermpje zijn interne koppelingen te vinden naar het voorafgaande en het volgende woordenboekartikel. Bij lemmata waarvoor een overeenkomstig lemma in het ONW te vinden is, is eveneens een koppeling aangebracht; koppelingen met de overige historische woordenboeken zullen bij volgende releases aangebracht worden. <br/>
+        <br/>
+        
+        <p>
+            <a href="#" data-help="help/help-en-info.xml">Overzicht</a>
+        </p>
+    </div>
 </div>
+
