@@ -6,9 +6,8 @@
 		<h1 class="helptext">Lijst met gebruikte afkortingen</h1>
 		<br/>
    <br/>
-   <font face="courier new, courier">
-      <pre>
-a.                  anno
+   <div class="monospace">
+      <pre>a.                  anno
 a.h.w.              als het ware
 a.w.                aangehaald werk
 aand.               aanduiding
@@ -692,9 +691,8 @@ zw.                 zwak
 Zw.                 Zweeds
 zwab.               Zwabisch
 zwe.                Zweeds
-zwits.              Zwitsers
-</pre>
-   </font>
+zwits.              Zwitsers</pre>
+   </div>
 	
 </div>
 

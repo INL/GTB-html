@@ -6,9 +6,8 @@
 		<h1 class="helptext">Lijst met gebruikte afkortingen</h1>
 		<br/>
    <br/>
-   <font face="courier new, courier">
-      <pre>
-aanh.               aanhaling
+   <div class="monospace">
+      <pre>aanh.               aanhaling
 aansl.              aansluiting
 aanw.               aanwijzend
 abs.                absoluut
@@ -216,9 +215,8 @@ ww.                 werkwoord
 zelfst.             zelfstandig
 zgn.                zogenaamde
 znw.                zelfstandig naamwoord
-zw.                 zwak
-</pre>
-   </font>
+zw.                 zwak</pre>
+   </div>
 	
 </div>
 

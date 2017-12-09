@@ -3,7 +3,7 @@
 <div class="helptext helptext-level1">
 		<h1 class="helptext">Lijst van redactionele afkortingen</h1>
       <p>(<a target="_blank" href="http://www.inl.nl/images/stories/onderzoek_en_onderwijs/lexicologie_en_lexicografie/wft_fonetische_tekens.pdf">Informatie over <u>fonetische transcripties</u></a>)</p>
-   <pre><div style="font-family: 'courier new', courier, fixed, monospace">a.                ante, voor 
+   <pre><div class="monospace">a.                ante, voor 
 aant.             aantekening 
 abs.              absoluut 
 abstr.            abstract 

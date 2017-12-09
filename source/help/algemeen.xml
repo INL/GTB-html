@@ -52,10 +52,8 @@
                         <i>Voorbeeld</i>: <i>appel &amp; peer</i> in veld citaat.<br/>
                         <i>Resultaat</i>:
                         
-                        <pre>
-	... De Peer en de Appel...
-	... een peer of eenen appel ...
-</pre>
+                        <pre>	... De Peer en de Appel...
+	... een peer of eenen appel ...</pre>
                         
                         <br/>
       <i>OF.</i> De operator 'of' heeft de vorm "|".<br/>
@@ -69,10 +67,8 @@
                         <i>Voorbeeld</i>: behoeve ! ten in citaat.<br/>
                         <i>Resultaat</i>: citaten die "behoeve" bevatten, maar niet "ten".<br/>
                         
-                        <pre>
-	... te zijnen behoeve. ...
-	... t'hunnen behoeve ...
-</pre>
+                        <pre>	... te zijnen behoeve. ...
+	... t'hunnen behoeve ...</pre>
                         
                         <br/>
       <i>AFSTAND</i>. De afstandsoperator heeft drie verschijningsvormen: een
@@ -86,29 +82,23 @@
                         <i>Voorbeeld</i>: appel #2 peer<br/>
                         <i>Resultaat</i>:<br/>
                         
-                        <pre>
-	... De Appel en de Peer ...
-	... een peer of eenen appel ...
-</pre>
+                        <pre>	... De Appel en de Peer ...
+	... een peer of eenen appel ...</pre>
                         
                         <br/>2) Uitgebreide syntax. De notatie is #n1..n2. De parameters n1..n2 geven het minimale en maximale aantal woorden tussen de gevonden zoektermen aan. Een negatieve waarde geeft aan dat de tweede zoekterm voor de eerste staat.<br/>
                         <i>Voorbeeld</i>: eerste zoekterm gevolgd door tweede: citaat=hond #0..1 kat<br/>
                         <i>Resultaat</i>:<br/>
                         
-                        <pre>
-	... (dierfiguren, zooals hond, vogel, kat), ...
-	... hond, kat, kanarievogel enz. ...
-</pre>
+                        <pre>	... (dierfiguren, zooals hond, vogel, kat), ...
+	... hond, kat, kanarievogel enz. ...</pre>
                         
                         <br/>
       <i>Voorbeeld</i>: eerste zoekterm voorafgegaan door tweede:
                         citaat=hond #-2..-1 kat<br/>
                         <i>Resultaat</i>:<br/>
                         
-                        <pre>
-	Een kat of een hond ...
-	... kat, of hond? ...
-</pre>
+                        <pre>	Een kat of een hond ...
+	... kat, of hond? ...</pre>
                         
                         <br/>3) Lucene syntax. Een aantal woorden binnen dubbele aanhalingstekens,
                         mogelijk gevolgd door "~<i>k</i>", waarbij k de maximale afstand
@@ -122,10 +112,8 @@
                         Wildcards kunnen binnen een van de operanden van de afstand-operator gebruikt worden.<br/>
                         <i>Voorbeeld</i>: grenz*lo* #1..1 *heid binnen citaat in WNT:<br/>
                         
-                        <pre>
-	Die grenzenlooze onbeschoftheid ... .
-	... eene grenzenlooze uitgestrektheid ...
-</pre>
+                        <pre>	Die grenzenlooze onbeschoftheid ... .
+	... eene grenzenlooze uitgestrektheid ...</pre>
                         
                         <br/>Op het moment kunnen slechts twee termen worden ingevoerd. Wie een proximity van drie of meer wil, moet de lucene syntax gebruiken.<br/>
                         <br/>

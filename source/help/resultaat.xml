@@ -97,8 +97,7 @@
       <h2 class="helptext">Woordenboekartikel</h2>
             Bij klikken op de onderstreepte kolom in de resultaatlijst verschijnt het artikelscherm. Dit is een weergave van een woordenboekartikel in een nieuw browservenster of tab, afhankelijk van uw browserinstellingen. Eerder geopende artikelen verdwijnen niet wanneer een nieuw artikel opgeroepen wordt.<br/>
             Het artikelscherm bestaat uit de volgende onderdelen:<br/>
-            <pre>
-1. De eigenlijke artikelweergave. Hierin worden aanvankelijk alleen
+            <pre>1. De eigenlijke artikelweergave. Hierin worden aanvankelijk alleen
     de minst diepe niveaus in de betekenishierarchie getoond; de citaten
     bij de betekenissen zijn nog verborgen. Wanneer er dieper gelegen
     niveaus zijn, zijn deze op te roepen door het aanklikken van de
@@ -114,8 +113,7 @@
 3. Het <i>koppelingenscherm</i> bevat links naar vorig en volgend artikel,
     en, indien van toepassing links naar supplements- en aanvullings-
     informatie bij het artikel, alsmede koppelingen naar externe data.
-    Voor een beschrijving van deze laatste zie aldaar.
-</pre>
+    Voor een beschrijving van deze laatste zie aldaar.</pre>
             <br/>
    </div>
    <div class="helptext helptext-level2">
