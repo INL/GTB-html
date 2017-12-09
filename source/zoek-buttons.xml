@@ -8,8 +8,8 @@
         <!--<a class="btn btn-default" href="*** iets ***">Help</a>-->
         <ivdnt:modal type="help" suppress-ok-button="true" style="width: 70vw">
             <ivdnt:modaltrigger><button type="button" name="help" class="helpknop btn btn-default">Help...</button></ivdnt:modaltrigger>
-            <ivdnt:modalcontent>
-                <ivdnt:modaltitle><h4 class="modal-title">Help</h4></ivdnt:modaltitle>
+            <ivdnt:modalcontent modal-body-class="gtb-modal-body">
+                <ivdnt:modaltitle><h3 class="modal-title">Help</h3></ivdnt:modaltitle>
                 
                 <ivdnt:retrieve-help-text/>
                 
@@ -22,7 +22,7 @@
         <ivdnt:modal type="geschiedenis" suppress-ok-button="true" style="width: 70vw">
           <ivdnt:modaltrigger><button type="button" name="geschiedenis" class="geschiedenisknop btn btn-default">Geschiedenis...</button></ivdnt:modaltrigger>
           <ivdnt:modalcontent>
-              <ivdnt:modaltitle><h4 class="modal-title">Overzicht eerder gestelde zoekvragen</h4></ivdnt:modaltitle>
+              <ivdnt:modaltitle><h3 class="modal-title">Overzicht eerder gestelde zoekvragen</h3></ivdnt:modaltitle>
         
               <div class="gtb-zoekvragen-geschiedenis">
                   <!-- Hier worden de zoekvragen in geplaatst -->

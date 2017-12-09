@@ -48,7 +48,7 @@
             <button type="button" class="close" data-dismiss="modal">&#x00d7;</button> <!-- &#x00d7; is &times;, multiplication character -->
             <xsl:apply-templates select="ivdnt:modaltitle" mode="ivdnt:modal-mode"/>
         </div>
-        <div class="modal-body">
+        <div class="modal-body {@modal-body-class}">
             <xsl:apply-templates select="node() except ivdnt:modaltitle" mode="ivdnt:html-mode"/>
         </div>
         <xsl:if test="not(ancestor::ivdnt:modal/@suppress-ok-button eq 'true')">

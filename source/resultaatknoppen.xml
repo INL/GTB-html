@@ -4,7 +4,7 @@
     <ivdnt:modal type="sorteren" suppress-ok-button="true">
         <ivdnt:modaltrigger><button type="button" class="sorteerknop btn btn-default">Sorteren...</button></ivdnt:modaltrigger>
         <ivdnt:modalcontent>
-            <ivdnt:modaltitle><h4 class="modal-title">Sorteren tussenresultaat</h4></ivdnt:modaltitle>
+            <ivdnt:modaltitle><h3 class="modal-title">Sorteren tussenresultaat</h3></ivdnt:modaltitle>
             <div class="form-horizontal" id="sleutels">
                 
                 <ivdnt:formulierregel>

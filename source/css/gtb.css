@@ -82,6 +82,14 @@ body:before {
 .helpregel {
     margin-top: 35px;
 }
+.modal-title {
+    color: var(--light-blue);    
+}
+
+.gtb-modal-body {
+    height: 60vh;
+    overflow-y: auto;
+}
 
 .gtb-disabled{
     opacity: 0.5;

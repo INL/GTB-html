@@ -2,6 +2,6 @@
     font-family: 'courier new', courier, fixed, monospace;
 }
 
-div.helptext h1, div.helptext h2, div.helptext h3, div.helptext b {
+#help-subjects h1, div.helptext h1, div.helptext h2, div.helptext h3, div.helptext b {
     color: #111971; /*  light-blue, as also defined in gtb.css, --light-blue. */
 }

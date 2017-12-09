@@ -27,7 +27,7 @@
                             </button>
                         </ivdnt:modaltrigger>
                         <ivdnt:modalcontent>
-                            <ivdnt:modaltitle><h4 class="modal-title">Woordsoortassistentie</h4></ivdnt:modaltitle>
+                            <ivdnt:modaltitle><h3 class="modal-title">Woordsoortassistentie</h3></ivdnt:modaltitle>
                             <ivdnt:include href="woordsoortassistentie.xml"/>
                         </ivdnt:modalcontent>
                     </ivdnt:modal>
