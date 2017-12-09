@@ -362,7 +362,7 @@
     <xsl:template name="ivdnt:load-help">
         <xsl:param name="href" as="xs:string"/>
         <xsl:result-document href="#help" method="ixsl:replace-content">
-            <xsl:apply-templates select="doc($href)" mode="render-help"/>
+            <xsl:copy-of select="doc($href)"/>
         </xsl:result-document>
     </xsl:template>
     
