@@ -1,4 +1,276 @@
-<?xml version="1.0" encoding="UTF-8"?>    
+<?xml version="1.0" encoding="UTF-8"?>
+
 <div class="helptext helptext-level1">
-      <h1 class="helptext">TO BE DONE</h1>
+	
+		<br/>
+		<h1 class="helptext">Lijst met gebruikte afkortingen</h1>
+		<br/>
+   <br/>
+   <font face="courier new, courier">
+      <pre>
+aanh.               aanhaling
+aansl.              aansluiting
+aanw.               aanwijzend
+abs.                absoluut
+abstr.              abstract
+acc.                accusatief
+act.                actief
+afh.                afhankelijke
+afl.                afleiding
+ald.                aldaar
+alg.                algemeen
+ambt.               ambtelijk(e)
+ap                  accusatief pluralis
+art.                artikel
+as                  accusatief singularis
+as/pa               accusatief singularis/pluralis
+astrol.             astrologie, astrologisch
+attr.               attributief
+az.                 achterzetsel
+B                   België
+bep.                bepaald, bepaling
+bet.                betekenis
+betr.               betrekkelijk
+bez.                bezittelijk
+bijb.               bijbel, bijbels
+bijv.               bijvoeglijk
+bijz.               bijzonder
+bnw.                bijvoeglijk naamwoord
+bouwk.              bouwkunde, bouwkundig
+b.v.                bijvoorbeeld
+bovenst.            bovenstaand(e)
+bw.                 bijwoord, bijwoordelijk(e)
+ca.                 circa
+cap.                caput
+cit.                citaat
+coll.               collectief
+comp.               comparatief
+concr.              concreet
+conj.               conjunctief
+D                   Duitsland
+d/ap                datief/accusatief pluralis
+d/as                datief/accusatief singularis
+dat.                datief
+dep.                departement
+derg.               dergelijke
+d.i.                dat, dit is
+dierk.              dierkunde
+dijkw.              dijkwezen
+dim.                diminutief
+div.                divers(e)
+dl.                 deel
+d.m.v.              door middel van
+dp                  datief pluralis
+ds                  datief singularis
+ds/p                datief singularis/pluralis
+dur.                duratief
+e.                  eeuw
+e.d.                en dergelijke
+ed.                 editie, editeur(s)
+eig.                eigenlijk
+encl.               enclitisch
+Eng.                Engels
+enkelv.             enkelvoud
+enz.                enzovoorts
+etc.                etcetera
+eufem.              eufemisme, eufemistisch
+e.v.                en volgende(n)
+ev.                 enkelvoud
+evt.                eventueel
+F                   Frankrijk
+f.                  femininum
+fig.                figuurlijk
+F                   Frankrijk
+Fra.                Frans
+Gall.               Gallisch
+Gallorom.           Galloromaans
+GB                  Groot-Brittannië
+g/ds                genitief/datief singularis
+gebr.               gebruik, gebruikt
+gen.                genitief
+geneesk.            geneeskunde, geneeskundig
+Germ.               Germaans, Germaanse
+gerund.             gerundium
+gest.               gesticht, gestorven
+gesubst.            gesubstantiveerd
+gew.                gewest
+gildew.             gildewezen
+gp                  genitief pluralis
+Gr.                 Grieks
+graf.kans.          grafelijke kanselarij
+gs                  genitief singularis
+gs/p                genitief singularis/pluralis
+H.                  Heilige
+hetz.               hetzelfde
+hoofdst.            hoofdstedelijk
+hoofdtelw.          hoofdtelwoord
+hs.                 handschrift
+hulpww.             hulpwerkwoord
+id.                 idem
+imp.                imperatief
+ind.                indicatief
+inf.                infinitief
+Ingw.               Ingweoons(e)
+intr.               intransitief
+inz.                inzonderheid
+i.p.v.              in plaats van
+i.t.t.              in tegenstelling tot
+i.v.                in voce
+i.v.m.              in verband met
+jur.                juridisch
+kans.               kanselarij
+Kelt.               Keltisch(e)
+koppelww.           koppelwerkwoord
+l.                  lees
+lakenind.           lakenindustrie
+Lat.                Latijn, Latijnse
+lett.               letterlijk
+lib.                liber
+lidw.               lidwoord
+Limb                Limburg
+lit.                literair(e)
+m.                  mannelijk, masculinum
+mann.               mannelijk
+m.b.t.              met betrekking tot
+med.                medisch
+meerv.              meervoud
+Meng.               Middelengels
+meton.              metonymisch
+Mgr.                Middelgrieks
+Mhd.                Middelhoogduits
+Mlat.               Middellatijn
+Mnd.                Middelnederduits
+Mnl.                Middelnederlands
+m.n.                met name
+mog.                mogelijk
+molenb.             molenbouw
+muntw.              muntwezen
+mv.                 meervoud
+myst.               mystiek
+myth.               mythologie, mythologisch(e)
+n.                  neutrum
+n/as                nominatief/accusatief singularis
+Nbra                Brabant-Noord
+n.C.                na Christus
+nevensch.           nevenschikkend
+Nfra.               Nieuwfrans
+nl.                 namelijk
+NL                  Nederland
+nom.                nominatief
+np                  nominatief pluralis
+Nrijn               Nederrijn
+ns                  nominatief singularis
+ns/p                nominatief singularis/pluralis
+N.T.                Nieuwe Testament
+o.                  onzijdig
+obj.                object
+Obra                Brabant-Oost
+Oeng.               Oudengels
+Ofra.               Oudfrans(e)
+Ogerm.              Oudgermaans
+Ohd.                Oudhoogduits
+Ohol                Holland-Oost
+o.i.v.              onder invloed van
+o.l.v.              onder leiding van
+On.                 Oudnoors
+onbep.              onbepaald
+ondersch.           onderschikkend
+onderst.            onderstaande
+Oned                Oost-Nederland
+oneig.              oneigenlijk
+Onl.                Oudnederlands
+onpers.             onpersoonlijk
+onreg.              onregelmatig
+onz.                onzijdig
+oorspr.             oorsprong, oorspronkelijk
+oostel.             oostelijk
+Opic.               Oudpicardisch
+Oprov.              Oudprovencaals
+Osa.                Oudsaksisch
+O.T.                Oude Testament
+overdr.             overdrachtelijk
+p.                  pagina
+part.               participium
+pass.               passief
+pejor.              pejoratief
+perf.               perfectum
+pers.               persoonlijk
+Pic.                Picardisch
+pl.                 pluralis
+plantk.             plantkunde, plantkundig
+pleon.              pleonasme, pleonastisch
+plur.               pluralis
+postpos.            postpositie
+pred.               predicatief
+pregn.              pregnant
+pres.               presens
+pret.               preteritum
+procl.              proclitisch
+prov.               provincie
+rangtelw.           rangtelwoord
+red.                redactie
+refl.               reflexief
+rel.                religieus
+relat.              relatief
+resp.               respectievelijk
+R.K.                Rooms Katholiek
+Rom.                Romaans(e)
+scheepsb.           scheepsbouw
+scheepv.            scheepvaart
+sg.                 singularis
+sing.               singularis
+sluisb.             sluisbouw
+st.                 sterk
+subj.               subject
+sup(erl).           superlatief
+s.v.                sub voce
+taalk.              taalkunde, taalkundig
+tautol.             tautologie, tautologisch
+telw.               telwoord
+temp.               temporeel
+tgov.               tegenover
+toep.               toepassingen
+trans.              transitief
+t.w.                te weten
+tw.                 tussenwerpsel
+uitbr.              uitbreiding
+uitdr.              uitdrukking
+Utre                Utrecht
+v.                  vrouwelijk
+var.                variant
+v.C.                voor Christus
+verb.               verbinding
+verg.               vergelijking
+versch.             verschillend(e)
+vgl.                vergelijk
+viss.               visserij
+Vmnl.               Vroegmiddelnederlands
+vnl.                voornamelijk
+vnw.                voornaamwoord, voornaamwoordelijk(e)
+voc.                vocatief
+voegw.              voegwoord, voegwoordelijk(e)
+voorm.              voormalig
+vr.                 vragend
+vrag.               vragend
+vw.                 voegwoord, voegwoordelijk(e)
+vz.                 voorzetsel
+wdk.                wederkerend
+wederk.             wederkerend, wederkerig
+west.               westelijk(e)
+Wbra                Brabant-West
+Wgerm.              Westgermaans
+Whol                Holland-West
+wkg.                wederkerig
+wsch.               waarschijnlijk
+Wvla                West-Vlaanderen
+ww.                 werkwoord
+Zeel                Zeeland
+zelfst.             zelfstandig
+zgn.                zogenaamde
+znw.                zelfstandig naamwoord
+zw.                 zwak
+</pre>
+   </font>
+	
 </div>
+

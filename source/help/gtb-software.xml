@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>    
+<?xml version="1.0" encoding="UTF-8"?>
+
 <div class="helptext helptext-level1">
-    <h1 class="helptext">TO BE DONE</h1>
+	
+		<h1 class="helptext">Software</h1>
+		<p>De user interface is ontwikkeld met Saxon-JS (XSLT in de browser) en Bootstrap. De search engine is in Java geprogrammeerd met gebruikmaking van Lucene en MySQL. De gebruikte servlet engine is Tomcat.</p>	
 </div>
+

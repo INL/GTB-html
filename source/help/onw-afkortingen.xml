@@ -1,4 +1,224 @@
-<?xml version="1.0" encoding="UTF-8"?>    
+<?xml version="1.0" encoding="UTF-8"?>
+
 <div class="helptext helptext-level1">
-      <h1 class="helptext">TO BE DONE</h1>
+	
+		<br/>
+		<h1 class="helptext">Lijst met gebruikte afkortingen</h1>
+		<br/>
+   <br/>
+   <font face="courier new, courier">
+      <pre>
+aanh.               aanhaling
+aansl.              aansluiting
+aanw.               aanwijzend
+abs.                absoluut
+abstr.              abstract
+acc.                accusatief
+act.                actief
+afh.                afhankelijke
+afl.                afleiding
+ald.                aldaar
+alg.                algemeen
+art.                artikel
+attr.               attributief
+az.                 achterzetsel
+bep.                bepaald, bepaling
+bet.                betekenis
+betr.               betrekkelijk
+bez.                bezittelijk
+bijb.               bijbel, bijbels
+bijv.               bijvoeglijk
+bijz.               bijzonder
+bnw.                bijvoeglijk naamwoord
+b.v.                bijvoorbeeld
+bovenst.            bovenstaand(e)
+bw.                 bijwoord, bijwoordelijk(e)
+ca.                 circa
+cap.                caput
+cit.                citaat
+coll.               collectief
+comp.               comparatief
+concr.              concreet
+conj.               conjunctief
+dat.                datief
+dep.                departement
+derg.               dergelijke
+d.i.                dat, dit is
+dim.                diminutief
+div.                divers(e)
+dl.                 deel
+d.m.v.              door middel van
+du.                 duits
+dur.                duratief
+e.                  eeuw
+e.d.                en dergelijke
+ed.                 editie, editeur(s)
+eig.                eigenlijk
+encl.               enclitisch
+eng.                engels
+enkelv.             enkelvoud
+enz.                enzovoorts
+etc.                etcetera
+e.v.                en volgende(n)
+ev.                 enkelvoud
+evt.                eventueel
+f.                  femininum
+fig.                figuurlijk
+fra.                frans
+gall.               gallisch
+gallorom.           galloromaans
+gebr.               gebruik, gebruikt
+gen.                genitief
+germ.               germaans, germaanse
+gerund.             gerundium
+gest.               gesticht, gestorven
+gesubst.            gesubstantiveerd
+gew.                gewest
+gildew.             gildewezen
+gr.                 grieks
+graf.kans.          grafelijke kanselarij
+H.                  Heilige
+hetz.               hetzelfde
+hoofdst.            hoofdstedelijk
+hoofdtelw.          hoofdtelwoord
+hs.                 handschrift
+hulpww.             hulpwerkwoord
+id.                 idem
+imp.                imperatief
+ind.                indicatief
+inf.                infinitief
+intr.               intransitief
+inz.                inzonderheid
+i.p.v.              in plaats van
+i.t.t.              in tegenstelling tot
+i.v.                in voce
+i.v.m.              in verband met
+jur.                juridisch
+kans.               kanselarij
+kelt.               keltisch(e)
+koppelww.           koppelwerkwoord
+l.                  lees
+lakenind.           lakenindustrie
+lat.                latijn, latijnse
+lett.               letterlijk
+lib.                liber
+lidw.               lidwoord
+lit.                literair(e)
+m.                  mannelijk, masculinum
+mann.               mannelijk
+m.b.t.              met betrekking tot
+meerv.              meervoud
+me.                 middelengels
+meton.              metonymisch
+mgr.                middelgrieks
+mhd.                middelhoogduits
+mlat.               middellatijn
+mnd.                middelnederduits
+mnl.                middelnederlands
+m.n.                met name
+mog.                mogelijk
+mv.                 meervoud
+n.                  neutrum
+n.C.                na Christus
+nevensch.           nevenschikkend
+nfra.               nieuwfrans
+nl.                 namelijk
+nom.                nominatief
+N.T.                Nieuwe Testament
+o.                  onzijdig
+obj.                object
+oe.                 oudengels
+ofra.               oudfrans(e)
+ogerm.              oudgermaans
+ohd.                oudhoogduits
+o.i.v.              onder invloed van
+o.l.v.              onder leiding van
+on.                 oudnoors
+onbep.              onbepaald
+ondersch.           onderschikkend
+onderst.            onderstaande
+oneig.              oneigenlijk
+onl.                oudnederlands
+onpers.             onpersoonlijk
+onreg.              onregelmatig
+onz.                onzijdig
+oorspr.             oorsprong, oorspronkelijk
+oostel.             oostelijk
+opic.               oudpicardisch
+oprov.              oudprovencaals
+osa.                oudsaksisch
+O.T.                Oude Testament
+overdr.             overdrachtelijk
+p.                  pagina
+part.               participium
+pass.               passief
+pejor.              pejoratief
+perf.               perfectum
+pers.               persoonlijk
+pic.                picardisch
+pl.                 pluralis
+plur.               pluralis
+postpos.            postpositie
+pred.               predicatief
+pres.               presens
+pret.               preteritum
+procl.              proclitisch
+prov.               provincie
+rangtelw.           rangtelwoord
+red.                redactie
+refl.               reflexief
+rel.                religieus
+relat.              relatief
+resp.               respectievelijk
+R.K.                Rooms Katholiek
+rom.                romaans(e)
+sg.                 singularis
+sing.               singularis
+st.                 sterk
+subj.               subject
+sup(erl).           superlatief
+s.v.                sub voce
+taalk.              taalkunde, taalkundig
+tautol.             tautologie, tautologisch
+telw.               telwoord
+temp.               temporeel
+tgov.               tegenover
+toep.               toepassingen
+trans.              transitief
+t.w.                te weten
+tw.                 tussenwerpsel
+uitbr.              uitbreiding
+uitdr.              uitdrukking
+v.                  vrouwelijk
+var.                variant
+v.C.                voor Christus
+verb.               verbinding
+verg.               vergelijking
+versch.             verschillend(e)
+vgl.                vergelijk
+vmnl.               vroegmiddelnederlands
+vnl.                voornamelijk
+vnw.                voornaamwoord, voornaamwoordelijk(e)
+voc.                vocatief
+voegw.              voegwoord, voegwoordelijk(e)
+voorm.              voormalig
+vr.                 vragend
+vrag.               vragend
+vw.                 voegwoord, voegwoordelijk(e)
+vz.                 voorzetsel
+wdk.                wederkerend
+wederk.             wederkerend, wederkerig
+west.               westelijk(e)
+wgerm.              westgermaans
+wkg.                wederkerig
+wsch.               waarschijnlijk
+ww.                 werkwoord
+zelfst.             zelfstandig
+zgn.                zogenaamde
+znw.                zelfstandig naamwoord
+zw.                 zwak
+</pre>
+   </font>
+	
 </div>
+

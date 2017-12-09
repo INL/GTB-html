@@ -1,4 +1,233 @@
-<?xml version="1.0" encoding="UTF-8"?>    
+<?xml version="1.0" encoding="UTF-8"?>
+
 <div class="helptext helptext-level1">
-    <h1 class="helptext">TO BE DONE</h1>
+		<h1 class="helptext">Lijst van redactionele afkortingen</h1>
+      <p>(<a target="_blank" href="http://www.inl.nl/images/stories/onderzoek_en_onderwijs/lexicologie_en_lexicografie/wft_fonetische_tekens.pdf">Informatie over <u>fonetische transcripties</u></a>)</p>
+   <pre><div style="font-family: 'courier new', courier, fixed, monospace">a.                ante, voor 
+aant.             aantekening 
+abs.              absoluut 
+abstr.            abstract 
+acc.              accusatief 
+Achtk.            Achtkarspelen 
+act.              actief 
+adj.              adjectief, adjectivisch
+adv.              adverbium, adverbiaal 
+afl.              aflevering 
+Am.               Ameland(s) 
+Angl.             Anglicisme 
+Arab.             Arabisch 
+art.              artikel 
+attrib.           attribuut, attributief 
+B                 Bijbeltaal 
+Baardl.           Baarderadeel 
+Barradl.          Barradeel 
+ben.              benaming 
+bep.              bepaling, bepaald(e) 
+bet.              betekenis 
+betr.             betreft, betreffende, betrekking 
+Bi.               Het Bildt, Bildts 
+bijvoegl.         bijvoeglijk 
+bijz.             bijzonder(e) 
+Bolsw.            Bolsward
+b.v.              bij voorbeeld 
+ca.               circa 
+coll.             collectivum 
+comp.             compositum, comparatief 
+concr.            concreet
+conf.             confer 
+conj.             conjunctie 
+conjug.           conjugatie 
+D.                Duits 
+Dant.             Dantumadeel 
+dat.              datief 
+De.               Deens 
+defin.            definitum 
+dem.              demonstrativum 
+deriv.            derivatum 
+determ.           determinativum
+dial.             dialect 
+dim.              diminutief 
+dl.               deel 
+Dokk.             Dokkum 
+Dong.             Dongeradeel, -delen
+Doniaw.           Doniawerstal 
+E.                Engels 
+eigl.             eigenlijk 
+ell.              elliptisch 
+enclit.           enclitisch 
+enz.              enzovoort 
+etym.             etymologie, etymologisch
+euf.              eufemisme, eufemistisch 
+F                 Familiair 
+fem.              femininum 
+Ferwdl.           Ferwerderadeel
+fig.              figuurlijk 
+fon.              fonetisch 
+Fr.               Frans 
+Fran.             Franeker 
+Frandl.           Franekeradeel 
+Fri.              Fries 
+Friesl.           Friesland 
+Ga.               Gaasterland 
+Gall.             Gallicisme 
+gebr.             gebruik(t) 
+gem.              gemeenzaam 
+gen.              genitief
+geol.             geologisch
+Germ.             Germaans, Germanisme 
+gez.              gezegd 
+Gr.               Grieks 
+gramm.            grammaticaal 
+Gron.             Groningen, Gronings
+H                 Hollandisme (Neerlandisme)
+Harl.             Harlingen 
+Haskerl.          Haskerland 
+Heerenv.          Heerenveen 
+Hem.Old.          Hemelumer Oldeferd
+Henn.             Hennaarderadeel 
+Hi.               Hindeloopen(s) 
+Hs                handschrift, manuscript
+humor.            humoristisch 
+ibid.             ibidem 
+id.               idem 
+Idaardl.          Idaarderadeel 
+iem.              iemand 
+imperat.          imperatief 
+imperf.           imperfectum 
+indic.            indicatief 
+indef.            indefinitum 
+indiv.            individueel taalgebruik
+Indn.             Indonesisch 
+inf.              infinitief 
+interj.           interjectie 
+interr.           interrogativum 
+intrans.          intransitief 
+inz.              inzonderheid 
+iron.             ironisch 
+Ital.             Italiaans 
+Kl.               Kleigebied 
+Koll.             Kollumerland
+Lat.              Latijn 
+Leeuw.            Leeuwarden 
+Leeuwdl.          Leeuwarderadeel 
+Lemst.            Lemsterland 
+lett.             letterlijk 
+litt.             literatuur, literair
+masc.             masculinum
+m.b.t.            met betrekking tot
+Mendl.            Menaldumadeel 
+metaf.            metafoor, metaforisch
+meton.            metonymia, metonymisch 
+mfr.              Middelfries 
+Mi.               Midsland(s) 
+Mi.Fr.            Midden Friesland 
+mlat.             Middellatijn
+mnd.              Middelnederduits 
+mnl.              Middelnederlands 
+Molkw.            Molkwerum 
+N.                Nederlands 
+nd.               Nederduits 
+neg.              negatief
+neol.             neologisme 
+neutr.            neutrum 
+NKl.              Noordkl.
+nl.               namelijk
+nmv.              naamval, casus 
+No.               noordoosten 
+nom.              nominatief 
+nom.prop.         nomen proprietatum 
+num.              numerale 
+NWKl.             Noordwestelijke Klei
+NWo.              Noordelijke Wouden
+o.a.              onder andere(n)
+obj.              object 
+oeng.             Oudengels
+ofr.              Oudfrans 
+ofri.             Oudfries 
+ohd.              Oudhoogduits 
+oneigl.           oneigenlijk 
+onpers.           onpersoonlijk 
+onregelm.         onregelmatig 
+oorspr.           oorspronkelijk 
+Oostdong.         Oostdongeradeel 
+opg.              opgave 
+opm.              opmerking 
+Opst.             Opsterland 
+osaks.            Oudsaksisch 
+OT.               Oosterschelling 
+overdr.           overdrachtelijk 
+P                 purisme
+p.                post, na 
+pag.              pagina, paginering 
+part.             participium 
+pass.             passief 
+perf.             perfectum 
+pers.             persoon, personale 
+plur.             pluralis 
+poss.             possessivum 
+p.p.              participium perfecti 
+pred.             predicatief 
+pref.             prefix 
+pregn.            pregnant 
+prep.             prepositie 
+pres.             presens
+pret.             preteritum 
+pron.             pronomen 
+prov.             proverbium 
+Rauwhm.           Rauwerderhem 
+reflex.           reflexief, reflexivum 
+reg.              register
+rel.              relativum 
+resp.             respectievelijk
+S                 sport en spel 
+s.                substantief 
+samenkopp.        samenkoppeling 
+Sch.              Schiermonnikoog(s)
+sing.             singularis 
+Small.            Smallingerland 
+Sp.               Spaans 
+spec.             speciaal 
+spor.             sporadisch 
+st.               sterk
+Sta.              Stadfries 
+Stav.             Stavoren 
+Stell.            Stellingwerven, -werfs 
+subj.             subject 
+subst.            substantief, substantivisch 
+suff.             suffix 
+superl.           superlatief 
+s.v.              sub voce 
+tegenw.           tegenwoordig 
+T.                Terschellings 
+Tietjdl./Tytsjdl. Tietjerksteradeel/Tytsjerksteradiel
+t.o.              tegenover 
+toep.             toepassing 
+trans.            transitief 
+triv.             triviaal 
+uitbr.            uitbreiding 
+uitdr.            uitdrukking 
+Uting.            Utingeradeel 
+v.                verbum
+veracht.          verachtelijk 
+vgl.              vergelijk 
+Vliel.            Vlieland 
+voc.              vocativus
+Volksgez.         Volksgezegde
+waarschl.         waarschijnlijk 
+Westdong.         Westdongeradeel 
+Wo.               de Wouden 
+WKl.              Westergose Klei 
+Wonsdl.           Wonseradeel 
+WT.               Westerschelling 
+Wymbr.            Wymbritseradeel 
+zegsw.            zegswijze 
+zelfst.           zelfstandig 
+Zh.               Zuidhoek 
+Zoh.              Zuidoosthoek 
+Zwh.              Zuidwesthoek
+ZKl.              Zuidelijke Klei 
+zw.               zwak 
+ZWo.              Zuidelijke Wouden </div></pre>
+
 </div>
+

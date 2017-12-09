@@ -45,7 +45,6 @@
 
     <xsl:include href="utilities.xslt"/>
     <xsl:include href="render-results.xslt"/>
-    <xsl:include href="render-help.xslt"/>
     <xsl:include href="history.xslt"/>
     <xsl:include href="events.xslt"/>
     <xsl:include href="typeahead-impl.xslt"/>

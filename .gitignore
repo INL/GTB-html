@@ -12,3 +12,5 @@ target\.test/
 target\.sterculijn/
 
 maak-sterculijn\.sh
+
+lzx-help2html\.xslt

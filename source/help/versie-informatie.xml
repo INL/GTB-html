@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?>    
+<?xml version="1.0" encoding="UTF-8"?>
+
 <div class="helptext helptext-level1">
-      <h1 class="helptext">TO BE DONE</h1>
+	
+		<font color="#B800000" size="14">
+      <b>GTB-applicatie</b>
+   </font>
+   <br/>
+		<br/>
+      <font color="#B800000">v1.4, 23 april 2012.</font>
+   <br/>
+      * Lex Salica-materiaal toegevoegd in ONW<br/>
+      <br/>
+      <font color="#B800000">v1.3, 2 juli 2010.</font>
+   <br/>
+      * WFT toegevoegd; diverse kleine verbeteringen.<br/> 
+      * Verplichte registratie en authenticatie uitgeschakeld.<br/>      
+      * Applicatie op diverse punten versneld.<br/> 
+      * Links naar artikelen en door resultaten bladeren in HTML export.<br/> 
+      * Mogelijkheid tot direct naar een artikel linken op lemma.<br/> 
+      <br/>
+      <font color="#B800000">v1.2.4, 17 december 2009.</font>
+   <br/>
+      * Een aantal kleine verbeteringen.<br/> 
+      <br/>
+      <font color="#B800000">v1.2.3, 11 december 2009.</font>
+   <br/>
+      * MNW en MNW bronnenlijst toegevoegd.<br/>
+      * ONW: talrijke correcties, toponymisch materiaal toegevoegd, aangevulde literatuurlijst, Oudfriese cognaten toegevoegd, koppeling met het Middelnederlandsch woordenboek aangebracht.<br/>
+      * Nieuwe WNT bronnenlijst.<br/>
+      * Alle woordenboeken: moderne lemmatoekenning verbeterd.<br/>
+      * Applicatie: Aan het tabblad 'Help &amp; Info' is een knop voor het uitprinten van helpteksten toegevoegd. Zoeken in bronartikel toegevoegd; diverse kleine verbeteringen.<br/>
+      <br/>
+      <font color="#B800000">v1.2.2, 19 mei 2009.</font>
+   <br/>
+      * ONW toegevoegd.<br/>
+      * Het woordsoortenschema is verder uitgebreid.<br/>
+      * Bij uitgebreid zoeken is aan het onderdeel morfologie het woordvormingstype toegevoegd.<br/>
+      * Het INL lettertype is uitgebreid met enkele nieuwe symbolen die u hier kunt 
+      <a href="http://gtb.inl.nl/" target="_blank">
+      <u>downloaden</u>
+   </a>.<br/>
+      * Kleine tekstuele wijzigingen.<br/>
+      <br/>
+		<font color="#B800000">v1.2.1, 29 oktober 2007.</font>
+   <br/>
+		* Nieuwe WNT dataversie.<br/>
+		* Nieuwe WNT bronnenlijst.<br/>
+		* INL font installer geschikt gemaakt voor Windows Vista.<br/>
+		* FAQ bijgewerkt.<br/>
+		* Kleine tekstuele wijzigingen.<br/>
+		<br/>
+		<font color="#B800000">v1.2.0, 3 juli 2007.</font>
+   <br/>
+		* Er is een nieuwe versie van het INL lettertype beschikbaar (te downloaden vanaf de openingspagina).
+		  Speciale tekens moeten nu beter werken.<br/>
+		* Enkele tikfouten zijn verbeterd.<br/>
+		* Enkele problemen met het zoeken in het hele artikel zijn opgelost.<br/>
+		* Meelopende lijsten verschenen soms ten onrechte in het resultaatscherm; dit is opgelost.<br/>
+		<br/>
+		<font color="#B800000">v1.1.0, 1 mei 2007.</font>
+   <br/>
+		* VMNW toegevoegd en applicatie verhuisd naar gtb.inl.nl<br/>
+		* INL lettertype aangepast (compatibiliteitsproblemen opgelost)<br/>
+		* Problemen bij invoeren van symbolen opgelost (history, copy/paste)<br/>
+		* Initiële laadtijd van de applicatie verkort.<br/>
+		* Applicatie is nu bruikbaar bij 800x600 en is resizable.<br/>
+		<br/>
+		<font color="#B800000">v1.0.4, 1 februari 2007.</font>
+   <br/>
+		* Startprobleem applicatie ('beige scherm') opgelost.<br/>
+		* Afdrukken in resultaatscherm geïmplementeerd.<br/>
+		* Foutmeldingen voorzien van meldcode.<br/>
+		* Fout bij highlighten in artikel van woorden met speciale tekens opgelost.<br/>
+		* Probleem loginscherm op Safari en Konqueror opgelost.<br/>
+		* Probleem onzichtbare FAQ op Safari en Konqueror opgelost<br/>
+		* Help &amp; Info en FAQ bijgewerkt.<br/>
+		<br/>
+		<font color="#B800000">v1.0.2, 26 januari 2007.</font>
+   <br/>
+		Eerste release.<br/>
+
+	
 </div>
+

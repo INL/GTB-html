@@ -1,4 +1,700 @@
-<?xml version="1.0" encoding="UTF-8"?>    
+<?xml version="1.0" encoding="UTF-8"?>
+
 <div class="helptext helptext-level1">
-    <h1 class="helptext">TO BE DONE</h1>
+	
+		<br/>
+		<h1 class="helptext">Lijst met gebruikte afkortingen</h1>
+		<br/>
+   <br/>
+   <font face="courier new, courier">
+      <pre>
+a.                  anno
+a.h.w.              als het ware
+a.w.                aangehaald werk
+aand.               aanduiding
+aangeh.             aangehaald
+aanh.               aanhaling(en)
+aansl.              aansluitend, aansluiting
+aant.               aantekening(en)
+aant. w.            aantonende wijs (indicatief)
+aanv. w.            aanvoegende wijs (conjunctief)
+aanw.               aanwijzend
+aardrk.             aardrijkskunde, aardrijkskundig
+abl.                ablatief, ablativisch
+abs.                absoluut, absolute
+absol.              absoluut
+abstr.              abstract, abstractum, abstracta
+acc.                accusatief, accusativisch
+achterv.            achtervoegsel
+act.                actief
+adj.                adjectief, adjectivisch
+adm.                administratie, administratief
+adv.                adverbium, adverbiaal
+afl.                afleiding(en)
+afrik.              afrikaans
+afz.                afzonderlijk
+ags., Ags.          Angelsaksisch
+ald.                aldaar
+alg.                algemeen, algemene
+amer.               Amerikaans
+amer.-eng.          Amerikaans-Engels
+Amst.               Amsterdam, Amsterdams
+an.                 Oudnoords
+anal.               analogie, analogisch
+anat.               anatomie, anatomisch
+anglic.             anglicisme
+anthrop.            anthropologie, anthropologisch
+Antw.               Antwerpen, Antwerps
+apoth.              apothekersvak
+arab., Arab.        Arabisch
+arch.               archaïsme, archaïstisch
+archaeol.           archeologie, archeologisch
+aret.               aretijns
+art.                artikel(en)
+artill.             artillerie
+artsen.             artsenijbereiding, artsenijbereidkunde
+astrol.             astrologie, astrologisch
+attrib.             attribuut, attributief
+b.v.                bijvoorbeeld
+barg.               bargoens
+barg.               bargoens
+bedr.               bedrijvend (transitief)
+beeldh.             beeldhouwkunst
+bei.                Beiers
+belg.               Belgisch
+Belg.-Brab.         Belgisch Brabant
+Belg.-Limb.         Belgisch Limburg
+ben.                benaming(en)
+bep.                bepaling(en), bepaald, bepaaldelijk, be¬palen(d)
+bestuursk.          bestuurskunde, bestuurskundig
+bestuurst.          bestuurstaal
+bet.                betekenis(sen)
+Bet.                Betuwe
+betr.               betrekkelijk (relatief), betrek¬king; betreffende
+beurst.             beursterm, beurstaal
+bez.                bezittelijk (possessief)
+bierbr.             bierbrouwerij
+bijb.               bijbels, bijbelse uitdrukking, in bijbelstijl
+bijent.             bijenteelt
+bijv.               bijvoeglijk
+bijw.               bijwoord (adverbium), bijwoor¬delijk
+bijz.               bijzonder
+bijz. st.           in bijzondere stijl
+bilj.               biljartspel
+biol.               biologie, biologisch
+blz.                bladzijde
+bnw.                bijvoeglijk naamwoord (adjectief)
+boekb.              boekbinderij
+boekdr.             boekdrukkunst
+boh.                boheems
+boschb.             bosbouw
+bouwk.              bouwkunde, bouwkundig
+brab., Brab.        Brabants, Brabant
+c.                  circa
+caus.               causatief
+centraalfr.         centraalfrankisch
+cf.                 confer, vergelijk
+coll.               collectief
+comp.               comparatief, comparativisch
+comput.             computerterm, computertaal
+concr.              concreet, concretum, concreta
+conj.               conjunctief, conjunctivisch
+constr.             constructie
+d. i.               dat is
+d.m.v.              door middel van
+d.w.z.              dat wil zeggen
+dat.                datief
+de., dee.           Deens
+deelw.              deelwoord
+deft.               in deftige stijl
+delfst.             delfstofkunde
+dem.                demonstratief
+derg.               dergelijk
+dez.                dezelfde
+dial.               dialect, dialectisch
+diam.               bij diamant(be)werkers
+dicht.              dichterlijk
+dichtk.             dichtkunde, dichtkunst, dichtkundig
+diergeneesk.        diergeneeskunde, diergeneeskundig
+dierk.              dierkunde, dierkundig
+dievent.            dieventaal
+dijkw.              dijkwezen
+Dl.                 Deel
+dr., Dr.            Drents, Drente
+drukk.              bij drukkers
+du.                 Duits
+e.                  eeuw, eeuws(e)
+e.a.                en andere(n)
+e.d.                en dergelijke(n)
+e.v.                en volgende
+econ.               economie, economisch
+ed.                 editie
+eert.               eertijds
+eig.                eigenlijk
+electr.             elektriciteitsleer, elektrisch
+electron.           elektronica, elektronisch
+ellipt.             elliptisch
+eng., Eng.          Engels
+enk.                enkelvoud, enkelvoudig
+enz.                enzovoort(s)
+epenth.             epenthesis, epenthetisch
+etym.               etymologie, etymologisch
+eufem.              eufemisme, eufemistisch
+evt.                eventueel, eventuele
+fem.                femininum
+fig.                figuurlijk
+fr., Fr.            Frans
+Fr.-Vl.             Frans-Vlaanderen
+fra., Fra.          Frans
+freq.               frequentatief
+fri., Fri.          Fries
+Friesl.             Friesland
+g. mv.              geen meervoud
+gallic.             gallicisme
+geb. wijs           gebiedende wijs (imperatief)
+gebr.               gebruik
+geestesw.           geesteswetenschappen
+geld., Geld.        Gelders, Gelderland
+geldw.              geldwezen
+gelijkbet.          gelijkbetekenend
+gemeensl.           gemeenslachtig
+gemeenz.            gemeenzaam
+gen.                genitief
+geneesk.            geneeskunde, geneeskundig
+geol.               geologie, geologisch
+germ., Germ.        Germaans
+german.             germanisme
+gesch.              geschiedenis
+geschr. t.          geschreven taal
+gespr. t.           gesproken taal
+gewest.             gewestelijk
+glasbl.             glasblazerij
+glazenm.            bij glazenmakers
+godg.               godgeleerdheid
+godsd.              godsdienst, godsdienstig
+got., Got.          Gotisch
+goth., Goth.        Gotisch
+gr.                 grieks
+gramm.              grammaticaal
+grav.               graveerkunst
+gron., Gron.        Gronings, Groningen
+gymn.               gymnastiek
+H.                  Hoogduits
+handelst.           handelstaal, handelsterm
+handw.              bij het handwerken
+hd., Hd.            Hoogduits
+hebr.               Hebreeuws
+heelk.              heelkunde, heelkunst, heelkundig
+helgol.             Helgolands
+herald.             heraldiek
+Herv.               Hervormd
+hetz.               hetzelfde
+hgd.                Hoogduits
+hind.               Hindi
+Hindust.            Hindoestaans
+hist.               historisch
+histor.             historisch, historiserend
+holl., Holl.        Hollands
+holst.              Holsteins
+hong.               Hongaars
+hoog. st.           in hogere stijl
+hoogd.              Hoogduits
+houth.              houthandel
+hs.                 handschrift
+hulpww.             hulpwerkwoord
+i.c.                in casu
+i.pl.v.             in plaats van
+i.t.t.              in tegenstelling tot
+i.v.                in voce, op dat woord
+i.v.m.              in verband met
+idg.                indogermaans
+iem.                iemand
+ijsl.               ijslands
+imp.                imperatief
+imperf.             imperfectum
+incl.               inclusief
+ind., Ind.          Indisch of Indonesisch, O.-Indië of Indonesië
+indic.              indicatief
+Indoportug.         Indoportugees
+inf.                infinitief
+informat.           informatica
+interj.             interjectie
+intr.               intransitief
+inz.                inzonderheid
+iron.               ironisch
+isr.                Israëlietisch
+it., It.            Italiaans
+ital.               Italiaans
+jag.                jagerstaal
+jap.                Japans
+jav.                Javaans
+jidd.               jiddisch
+jur.                juridisch
+juw.                bij juweliers
+kaartsp.            kaartspel
+kaasm.              kaasmakerij
+kath.               katholiek
+kerk.               kerkelijk
+kerklat.            kerklatijn
+kernphys.           kernfysica
+kindert.            kindertaal
+kl.                 klasse
+klankl.             klankleer
+klass.              klassiek
+kleerm.             bij kleermakers
+klemt.              klemtoon
+klomp.              bij klompenmakers
+kookk.              kookkunst
+kooph.              koophandel
+koopv.              koopvaardij
+kopp.               koppeling
+kosmogr.            kosmografie, kosmografisch
+kosmol.             kosmologie, kosmologisch
+krijgsk.            krijgskunde, krijgskundig
+krijgsw.            krijgswezen
+kuip.               bij kuipers
+kunsthist.          kunsthistorie, kunsthistorisch
+kurhess.            kurhessisch
+kymr.               Kymrisch
+laatlat., Laatlat.  Laatlatijn
+landb.              landbouw
+landm.              landmeetkunde, bij landmeters
+langob.             Langobardisch
+lat., Lat.          Latijn, latijns
+lett.               letterlijk
+lett.               Lets
+letterk.            letterkunde, letterkundig
+lidw.               lidwoord
+limb., Limb.        Limburgs
+lit.                Litouws
+litt. t.            litteraire taal
+log.                logica, logisch
+luchtv.             luchtvaart (vliegtechniek enz.)
+m.                  mannelijk
+m. betr. t.         met betrekking tot
+m.a.w.              met andere woorden
+M.E.                middeleeuwen
+m.m.                mutatis mutandis
+m.n.                met name
+mal., Mal.          Maleis
+mar.                marine
+md.                 Middelduits
+mde.                Middeldeens
+mechan.             mechanica
+mecklenb.           Mecklenburgs
+med.                medisch
+meetk.              meetkunde, meetkundig
+meng., Meng.        Middelengels
+mensw.              menswetenschappen
+metaalbew.          bij metaalbewerkers
+metaalg.            metaalgieterij
+metaalw.            bij metaalwerkers
+metaf.              metaforisch
+meteorol.           meteorologie, meteorologisch
+meton.              metonymisch
+mets.               bij metselaars
+mexic.              Mexicaans
+mfr.                Middelfrans, Middelfries
+mfra.               Middelfrans
+mhd., Mhd.          Middelhoogduits
+middellat.          Middellatijn
+mijnw.              mijnwezen
+mil.                militair
+milan.              Milanees
+minacht.            minachtend
+miner.              mineralogie, mineralogisch
+mlat., Mlat.        Middellatijn, Middellatijns
+mnd., Mnd.          Middelnederduits
+mndd., Mndd.        Middelnederduits
+mnl., Mnl.          Middelnederlands
+mog.                mogelijk
+mol.                bij molenaars
+molenb.             molenbouw
+morphol.            morfologie, morfologisch
+muz.                muziekterm
+mv.                 meervoud, meervoudig
+mythol.             mythologie, mythologisch
+mzw.                Middelzwabisch
+N.                  Noord, Noorden
+N.-Brab.            Noord-Brabant
+N.-Holl.            Noord-Holland
+N.-Nederl.          Noord-Nederland
+N.T.                Nieuwe Testament
+nat. hist.          natuurlijke historie, natuurhistorisch
+natuurk.            natuurkunde, natuurkundig
+natuurw.            natuurwetenschappen, natuurwetenschappelijk
+nd., Nd.            Nederduits
+ndd., Ndd.          Nederduits
+nde.                Nieuwdeens
+ndl., Ndl.          Nederlands
+Ned.-Brab.          Nederlands Brabant
+Ned.-Limb.          Nederlands Limburg
+nederl., Nederl.    Nederlands
+nedl.               Nederlands
+negerholl.          Negerhollands
+neng.               Nieuwengels
+neolat.             Neolatijn
+nevensch.           nevenschikkend
+nfr.                Nieuwfrans, Nieuwfries
+nfra.               Nieuwfrans
+nfri., Nfri.        Nieuwfries
+ngm.                Noordgermaans
+nhd., Nhd.          Nieuwhoogduits
+nieuwfr.            Nieuwfrans
+nieuwlat.           Nieuwlatijn
+nl.                 namelijk
+nl.                 Nederlands
+nlat.               Nieuwlatijn
+nn.                 Nieuwnederlands
+nnd., Nnd.          Nieuwnederduits
+nndl., Nndl.        Nieuwnederlands
+nnl., Nnl.          Nieuwnederlands
+nnr.                Noordnederrijns
+no.                 Noors
+nom.                nominatief
+noord.              noordelijk
+noordfr.            Noordfrans, Noordfries
+noordfri.           Noordfries
+noordgerm.          Noordgermaans
+noordholl.          Noordhollands
+noordndl.           Noordnederlands
+noorw.              Noors
+northumbr.          Northumbrisch
+nr.                 Noors
+nsp.                Nieuwspaans
+nv.                 naamval
+nvl.                Noordvlaams
+nw.                 naamwoord
+nwfri.              noordwestfries
+nzwe.               Nieuwzweeds/Noordzweeds
+O.                  Oost, Oosten
+o.a.                onder andere(n)
+O.-Brab.            Oost-Brabant
+O.-I.               in Oost-Indië
+o.m.                onder meer
+O.T.                Oude Testament
+O.-V1.              Oost-Vlaanderen
+obj.                object
+obulg.              Oudbulgaars
+oeng.               Oudengels
+oeng.               Oudengels
+oerg.               Oergermaans
+ofr., Ofr.          Oudfrans
+ofra.               Oudfrans
+ofri., Ofri.        Oudfries
+ofris.              Oudfries
+ogerm., Ogerm.      Oudgermaans
+ohd., Ohd.          Oudhoogduits
+oier.               Oudiers
+okorn.              Oudkornisch (cornwalls)
+oliesl.             olieslagerij
+Omnl.               Oostmiddelnederlands
+on., On.            Oudnoors
+onbep.              onbepaald
+ond.                onderwerp
+ond., Ond.          Oudnederduits
+ondd.               Oostnederduits
+ondl.               Oudnederlands
+oneig.              oneigenlijk
+onfr., Onfr.        Oudnederfrankisch
+onfra., Onfra.      Oudnederfrankisch
+onfrank.            Oostnederfrankisch
+ongew.              ongewoon
+onhd.               Oostnieuwhoogduits ?
+onl.                Oudnederlands
+ono, Ono.           Oudnoors
+onomat.             onomatopée, onomatopoeëtisch
+onpers.             onpersoonlijk
+onr.                onregelmatig
+Onr.                Oudnoors
+onrd.               Oudnoords
+onstoff.            onstoffelijk
+ontleedk.           ontleedkunde
+onverb.             onverbuigbaar, onverbogen
+onvolt.             onvoltooid
+onz.                onzijdig (neutrum en intransitief)
+oofri.              Oudoostfries
+oorspr.             oorsprong, oorspronkelijk
+oost.               oostelijk
+oostfr., Oostfr.    Oostfrankisch/Oostfries
+oostfri.            Oostfries
+Oostmnl.            Oostmiddelnederlands
+oostnfr.            Oostnederfrankisch
+oostnfra.           Oostnederfrankisch
+oostvl.             Oostvlaams
+opm.                opmerking
+opperd.             Opperduits
+opvoedk.            opvoedkunde, opvoedkundig
+orgelm.             bij orgelmakers
+ornam.              ornamentleer
+os., Os.            Oudsaksisch (oudnederduits)
+osa.                Oudsaksisch
+osaks.              Oudsaksisch
+osl.                Oudslavisch
+oslav.              Oudslavisch
+osp.                Oudspaans
+oudeng.             Oudengels
+ouderw.             ouderwets
+oudfr.              Oudfrans
+oudgerm.            Oudgermaans
+oudnoordfra.        Oudnoordfrankisch
+oudnoordit.         Oudnoorditaliaans
+oudprov.            Oudprovencaals
+ouds.               Oudsaksisch
+oudslav.            Oudslavisch
+oudt.               oudtijds
+oufr.               Oudfries
+Ov.                 Overijsel
+ov. tr.             overtreffende trap, superlatief
+overdr.             overdracht, overdrachtelijk
+overijs., Overijs.  Overijssels
+owfri.              Oudwestfries
+ozw.                Oudzweeds
+ozwe.               Oudzweeds
+paedag.             pedagogie, pedagogisch
+pap.                papierfabricage
+part.               participium
+pass.               passief
+pejor.              pejoratief
+perf.               perfectum
+pers.               persoon, personen, persoonlijk
+pers.               Perzisch
+persp.              perspectiefleer
+peruv.              Peruviaans
+perz.               Perzisch
+pharm.              farmacie, farmaceutisch
+philat.             filatelie, filatelistisch
+phonol.             fonologie, fonologisch
+phot.               fotografie, fotografisch
+physiol.            fysiologie, fysiologisch
+pl.                 plaats
+plantk.             plantkunde, plantkundig
+plur.               pluralis
+politicol.          politicologie, politocologisch
+port., Port.        Portugees
+portug., Portug.    portugees
+posit.              positief (stellende trap)
+poss.               possessief
+praed.              predicaat, predicatief
+praet.              preteritum, preteritaal
+pregn.              pregnant, in pregnant gebruik
+pron.               pronomen, pronominaal
+prot.               protestants
+prov.               Provençaals
+psych.              psychologie, psychologisch
+R.-C.               Rooms-Katholiek
+R.-K.               Rooms-Katholiek
+recht.              rechtswezen, bij de rechtsbedeeling
+rechtst.            rechtstaal, rechtsterm
+recl.               reclameterm, reclametaal
+regelm.             regelmatig
+rekenk.             rekenkunde, rekenkundig
+relat.              relatief
+resp.               respectievelijk
+rijnl.              Rijnlands
+rom.                Romaans
+Rott.               Rotterdam, Rotterdams
+ruimtev.            ruimtevaart
+russ., Russ.        Russisch
+s.v.                sub voce, onder dit woord
+saks.               Saksisch
+samenst.            samenstelling(en)
+samenst. afl.       samenstellende afleiding(en)
+sanskr.             Sanskrit
+'s-Bosch            's-Hertogenbosch
+scheepsb.           scheepsbouw, scheepsbouwkunde, scheepsbouwkundig
+scheepv.            scheepvaart
+scheidb.            scheidbaar
+scheik.             scheikunde, scheikundig
+scherts.            schertsend
+schild.             schilderkunst, bij schilders
+schoenm.            bij schoenmakers
+schrijft.           schrijftaal
+schrijnw.           bij schrijnwerkers
+serv.               Servisch
+'s-Hage             's-Gravenhage
+shetl.              Shetlands
+Sicamb.             Sicambisch
+sicil.              Siciliaans
+sig.                bij sigarenmakers
+sing.               singularis
+skand.              Scandinavisch
+skr.                Sanskrit
+slag.               bij slagers
+slav.               Slavisch
+smed.               bij smeden
+sociol.             sociologie, sociologisch
+soend.              Soendanees
+Soendan.            Soendanees
+sold.               soldatentaal
+soortn.             soortnaam
+sp.                 Spaans
+spa.                Spaans
+spell.              spelling
+spinn.              spinnerij
+spoorw.             spoorwegen
+spraakk.            spraakkunst, spraakkunstig
+spreekt.            spreektaal
+spreekw.            spreekwoord(en), spreekwoordelijk
+st.                 sterk; stijl
+staatk.             staatkunde, staatkundig
+statist.            statistiek, statistisch
+steenb.             steenbakkerij, bij steenbakkers
+steenh.             steenhouwerij, bij steenhouwers
+steil. tr.          stellende trap, positief
+sterr.              sterrenkunde, sterrenkundig
+stijll.             stijlleer
+stoff.              stoffelijk
+stofn.              stofnaam
+stud.               studententaal
+subj.               subject
+superl.             superlatief (overtreffende trap)
+Suppl.              Supplement W.N.T.
+syn.                synoniem
+t.                  taal
+t.a.p.              ter aangehaalder plaatse
+t.a.v.              ten aanzien van
+t.g.v.              ten gevolge van
+t.o.v.              ten opzichte van
+t.w.                te weten
+taalk.              taalkunde of taalwetenschap, taalkundig
+tabak               tabaksindustrie
+tandh.              tandheelkunde, tandheelkundig
+techn.              techniek, technisch
+technol.            technologie, technologisch
+tegenst.            tegenstelling
+tegenw.             tegenwoordig
+telecomm.           telecommunicatie
+telegr.             telegraafwezen
+teleph.             telefoonwezen
+telev.              televisie
+telw.               telwoord
+Teuth.              Teutoons
+text.               textielindustrie
+tgov.               tegenover
+theat.              theater
+timm.               bij timmerlieden
+toek. tijd          toekomende tijd (futurum)
+toep.               toepassing(en)
+toon.               bij het toneel
+tr.                 trap
+trans.              transitief
+tuinb.              tuinbouw
+tusschenw.          tussenwerpsel
+Tw.                 Twente
+uitbr.              uitbreiding
+uitdr.              uitdrukking(en)
+uitsl.              uitsluitend
+utr., Utr.          Utrecht, Utrechts
+uurw.               bij uurwerkmakers
+v.o.                van onderen
+vakt.               vaktaal
+vand.               vandaar
+veearts.            veeartsenijkunde, veeartsenijkundig
+veend.              veenderij
+Vel.                Veluwe
+verb.               verbinding(en)
+verg.               vergelijking(en)
+vergr. tr.          vergrotende trap, comparatief
+verh. st.           in verheven stijl
+verkl.              verkleinvorm, verkleinwoord
+verl.               verleden
+verlosk.            verloskunde, verloskundig
+vernederl.          vernederlandsing, vernederlandst
+veroud.             verouderd
+versch.             verschillende
+vert.               vertaling
+vest.               vestingbouwkunde, vestingbouwkundig
+vgl.                vergelijk
+vissch.             visserijterm
+vl., Vl.            Vlaams, Vlaanderen
+Vl.-België          Vlaams België
+Vl.-Belgisch        Vlaams Belgisch
+vla.                Vlaams
+vliegw.             vliegwezen
+vnl.                voornamelijk
+vnw.                voornaamwoord, voornaamwoordelijk
+vocat.              vocatief
+voegw.              voegwoord (conjunctie), voegwoordelijk
+voetb.              voetbalspel
+volg.               volgende
+volkenk.            volkenkunde, volkenkundig
+volksetym           volksetymologie, volksetymologisch
+volksk.             volkskunde, volkskundig
+volkslat.           volkslatijn
+volksn.             volksnaam
+volkst.             volkstaal
+volt.               voltooid
+voorb.              voorbeeld(en)
+voorv.              voorvoegsel
+voorw.              voorwerp
+voorwerpsn.         voorwerpsnaam
+voorz.              voorzetsel
+vr.                 vrouwelijk
+vrag.               vragend
+vroegnndl.          Vroegnieuwnederlands
+vs.                 vers
+vulg.-lat.          Vulgairlatijn, Vulgairlatijns
+W.                  West, Westen
+W.-Brab.            West-Brabant
+w.g.                weinig gebruikelijk
+W.-I.               West-Indië
+W.-VI.              West-Vlaanderen
+wa.                 Waals
+wapenk.             wapenkunde, wapenkundig
+waterb.             waterbouwkunde, waterbouwkundig
+waterst.            waterstaat
+wdb.                woordenboek(en)
+wederk.             wederkerend
+weerk.              weerkunde, weerkundig
+welsch              Welsh
+werkt.              werktuigkunde, werktuigkundig
+west.               westelijk
+westf., Westf.      Westfaals
+westvl., Westvl.    Westvlaams
+westvla.            Westvlaams
+wetensch.           wetenschap, wetenschappelijk
+wgm.                Westgermaans
+wijsb.              wijsbegeerte
+wisk.               wiskunde, wiskundig
+wsch.               waarschijnlijk
+wvl.                Westvlaams
+wvla.               Westvlaams
+ww.                 werkwoord(en), werkwoordelijk
+Z.                  Zuid, Zuiden
+Z.-Afr.             Zuid-Afrika
+Z.-Bev.             Zuid-Beveland
+z.g.                zogenaamd
+Z.-Holl.            Zuid-Holland
+Z.-Nederl.          Zuid-Nederland
+Z.-O.-V1.           Zuid-Oost-Vlaanderen
+z.ovl.              Zuidoostvlaams
+zadelm.             zadelmakerij
+ze.                 Zeeuws
+Ze.-Vl.             Zeeuws-Vlaanderen
+Zeel.               Zeeland
+zeem.               zeemanswoord
+zeew.               in het zeewezen
+zegsw.              zegswijze
+zeilm.              zeilmakerij
+zeilv.              zeilvaart
+zelfst.             zelfstandig
+zndl.               Zuidnederlands
+znw.                zelfstandig naamwoord
+zoutz.              zoutziederij
+zuid.               zuidelijk
+zuidchin.           Zuidchinees
+zuidholl.           Zuidhollands
+zuidndl.            Zuidnederlands
+zuidnederl.         Zuidnederlands
+zuivelb.            zuivelbereiding
+zw.                 zwak
+Zw.                 Zweeds
+zwab.               Zwabisch
+zwe.                Zweeds
+zwits.              Zwitsers
+</pre>
+   </font>
+	
 </div>
+

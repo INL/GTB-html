@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>    
+<?xml version="1.0" encoding="UTF-8"?>
+
 <div class="helptext helptext-level1">
-    <h1 class="helptext">TO BE DONE</h1>
+
+	
+		<h1 class="helptext">Algemeen</h1>
+      <br/>
+   <br/>Het <i>Middelnederlandsch Woordenboek</i> van Verwijs en
+      Verdam (hierna: <i>MNW</i>) beschrijft de middeleeuwse Nederlandse woordenschat
+      uit de periode ca. 1250 tot ca. 1550. Het woordenboek bevat 60.000 trefwoorden
+      (exclusief 14.000 verwijslemmata) en telt negen delen, waarvan het eerste in
+      1885 verscheen, het laatste in 1929. Ondanks zijn respectabele leeftijd, is het
+      woordenboek nog steeds onmisbaar als werkinstrument voor iedereen die zich
+      bezighoudt met de taal- en letterkunde van onze middeleeuwen.
+      <br/>
+   <br/>In 1941 verscheen nog een deel met <i>Aanvullingen en
+      verbeteringen op het gebied van dijk- en waterschapsrecht, bodem en water,
+      aardrijkskunde enz.</i>, samengesteld door A. Beekman. Vanwege zijn inhoudelijk
+      en formeel zeer afwijkende karakter zal dit deel pas in een volgende release in
+      de applicatie opgenomen worden.
+      <br/>
+   <br/>Het <i>MNW</i> is een alfabetisch geordend woordenboek. Een
+      probleem voor de samenstellers daarbij was de grote spellingvariatie binnen het
+      Middelnederlands. Om dit probleem op te lossen zijn alle trefwoorden gespeld in
+      een gereconstrueerd, “genormaliseerd” Middelnederlands. De gebruikers moeten er
+      o.a. rekening mee houden dat woorden die met <i>c-</i> beginnen onder de <i>K</i>
+      opgenomen zijn wanneer de <i>c-</i> als <i>k-</i> wordt uitgesproken (b.v. <i>confessie</i>,
+      <i>costume</i>); woorden met een <i>z-</i> als beginletter zijn te vinden onder
+      de <i>S</i> (<i>sac</i>, <i>so</i>, <i>seggen</i>, <i>sonde</i>). O.m. om deze
+      en andere spellingproblemen van het Middelnederlands zoveel mogelijk uit te
+      schakelen is in de internetapplicatie aan elk lemma ook een trefwoord in de moderne
+      spelling gevoegd.
+      <br/>
+   <br/>Net zoals in het <i>ONW</i>, <i>VMNW</i> en <i>WNT</i>
+      worden bij elke betekenis citaten gegeven ter illustratie en controle van de
+      redactionele tekst. Deze aanhalingen zijn in het grafische <i>MNW</i> doorgaans
+      niet voorzien van lokaliserings- en dateringsinformatie. Deze informatie is,
+      via de bronaanduiding bij een citaat, met enig zoekwerk wel terug te vinden in
+      de <i>Bouwstoffen</i> of bronnenlijst (<i>MNW</i>, dl. 10). Ook dit aspect is
+      in de applicatie gebruikersvriendelijker gemaakt.
+      <br/>
+   <br/>
+   <div class="helptext helptext-level2">
+      <h2 class="helptext">Van <i>MNW</i> naar <i>MNW online</i>
+      </h2>
+      <br/>Het digitale leven van het <i>Middelnederlandsch
+      Woordenboek</i> begon in 1998<i>.</i> Samen met het <i>Corpus Gysseling</i>
+      (het bronmateriaal voor het <i>VMNW</i>) en een collectie van nog eens bijna
+      300 Middelnederlandse rijm- en prozateksten, verscheen het dat jaar op de <i>Cd-rom
+      Middelnederlands</i>. Het digitale bestand van het woordenboek op deze door het
+      INL uitgebrachte cd-rom vormt de basis voor het <i>MNW</i> binnen de
+      internetapplicatie. Er komt echter nog altijd behoorlijk wat bij kijken vooraleer
+      een dergelijk woordenboekbestand optimaal binnen een systeem als de
+      woordenboekapplicatie kan functioneren: 1) elk woordenboek moet op dezelfde
+      manier bevraagd kunnen worden, 2) men moet identieke onderdelen en
+      informatiecategorieën (grammaticale en etymologische gegevens, de
+      woordbetekenissen, het citatenmateriaal) op identieke wijze kunnen onderzoeken,
+      en 3) een bepaalde zoekvraag moet desgewenst ook tegelijkertijd aan
+      verschillende woordenboeken binnen de applicatie gesteld kunnen worden. Een
+      extra probleem hierbij is dat de applicatie zowel woordenboeken bevat die
+      volledig digitaal tot stand gekomen zijn (het <i>ONW</i> en het <i>VMNW</i>),
+      als gedigitaliseerde grafische producten (het <i>WNT</i> en het <i>MNW</i>) die
+      ook nog eens geschoeid blijken op een 19de-eeuwse lexicografische
+      leest. Werken aan het <i>MNW online</i> biedt echter ook, net zoals het werk
+      aan het <i>WNT online</i>, extra kansen. Het is de voor de hand liggende
+      gelegenheid tot verrijking en correctie van het bestand, waarbij ook op een
+      uiterst vruchtbare manier gebruik gemaakt kan worden zowel van
+      computerlinguistische toepassingen (het “draaien” van diverse scripts op het
+      bestand) als van de combinatie van semi-automatische en handmatige
+      bestandsbewerkingen. Dit heeft, in een ruimere zin, mede geleid tot het niet
+      onbelangrijk inzicht, dat een van de INL-troeven bij het werken met grote
+      digitale bestanden juist ook de efficiënte combinatie van computer en handwerk
+      kan zijn. In wat volgt worden enkele voorbeelden gegeven van bewerkingen van
+      dit combinatietype die er de afgelopen jaren op het <i>MNW</i>-bestand
+      uitgevoerd werden ten behoeve van opname ervan in de GTB-applicatie. Of: hoe er
+      gewerkt werd aan de digitale toekomst van het verleden, onontbeerlijk om een 19de-eeuws
+      lexicografisch monument als het <i>MNW</i> overeind en bruikbaar te houden.
+      <br/>
+      <br/>
+      <a target="_blank"
+         href="http://www.inl.nl/images/stories/onderzoek_en_onderwijs/lexicologie_en_lexicografie/mnw_inleiding.pdf">
+         <u>Lees verder...</u>
+      </a>
+
+      <br/>
+      <br/>
+	  </div>
 </div>
+
