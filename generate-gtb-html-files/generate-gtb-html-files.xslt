@@ -22,6 +22,7 @@
     <xsl:include href="modal.xslt"/>
     <xsl:include href="help.xslt"/>
     
+    <xsl:variable name="ROOT" as="document-node()" select="/"/>
     <xsl:variable name="BASE-URI" as="xs:string" select="base-uri(/)"/>
     
     <xsl:variable name="zoekformulier-label-column-class" as="xs:string" select="'col-sm-4'"/>

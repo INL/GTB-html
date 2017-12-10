@@ -69,7 +69,13 @@
     </xsl:template>
     
     <xsl:template match="ivdnt:retrieve-help-text" mode="ivdnt:html-mode">
-        <xsl:variable name="helptext" as="xs:string" select="ancestor::*[@helptext][1]/@helptext"/>
+        <!-- Bij de resultaat-tab worden de knoppen later gegenereerd, dus moet de tab gevonden worden aan de hand van zijn id. In de andere gevallen
+             is omhoog klimmen naar de tab met attribuut @helptext genoeg.
+        -->
+        <xsl:variable name="tabid" as="xs:string?" select="@from-tab-with-id"/>
+
+        <!-- Note that $ROOT refers to the original document, while current processing is based on the variable with resolved include files. -->
+        <xsl:variable name="helptext" as="xs:string" select="if ($tabid) then $ROOT//ivdnt:tab[@id eq $tabid]/@helptext else ancestor::*[@helptext][1]/@helptext"/>
         <xsl:copy-of select="doc(resolve-uri($helptext,$BASE-URI))"/>
     </xsl:template>
 </xsl:stylesheet>
