@@ -5,7 +5,6 @@
         <!-- submit buttons als eerste element zodat de andere elementen wrappen en de button op dezelfde plaats blijft ipv andersom -->
         <button class="btn btn-primary pull-right gtb-zoek-button" name="start-zoeken" type="submit">Zoek</button>
 
-        <!--<a class="btn btn-default" href="*** iets ***">Help</a>-->
         <ivdnt:modal type="help" suppress-ok-button="true" style="width: 70vw">
             <ivdnt:modaltrigger><button type="button" name="help" class="helpknop btn btn-default">Help...</button></ivdnt:modaltrigger>
             <ivdnt:modalcontent modal-body-class="gtb-modal-body">

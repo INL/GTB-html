@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="helptext helptext-level2">
+	<h2>Omschrijving</h2>
+	<p>Met 'Uitgebreid zoeken' kunnen woordenboekartikelen gezocht worden via een of meer van de onderstaande zoekvelden. Selecteer eerst een weergaveoptie. Vanwege de grote hoeveelheid zoekvelden, is het zoekformulier hiërarchisch gestructureerd en kunnen onderdelen in- of uitgeklapt worden. Binnen
+		de meeste zoekvelden kan ook gezocht worden met wildcards, operatoren en reguliere expressies. Lees meer hierover in het tabblad 'Help &amp; Info'. </p>
+	<div class="helptext helptext-level3">
+		<h3>Knoppen</h3>
+		<p>Klikken op <code>
+				<b>Start zoeken</b>
+			</code> zorgt ervoor dat het zoeken begint; klikken op <code>
+				<b>Wis velden</b>
+			</code> zorgt ervoor dat de velden voor een nieuwe zoekvraag worden leeggemaakt. Om een overzicht te krijgen van de reeds gestelde zoekvragen, klik op <code>
+				<b>Geschiedenis</b>
+			</code>. Om hoofdletter- en accentgevoelig te kunnen zoeken, klik op <code>
+				<b>H(oofdletters) &amp; A(ccenten)</b>
+			</code>. Klikken op <code>
+				<b>Symbool</b>
+			</code> zorgt ervoor dat de lijst met bijzondere lettertekens verschijnt. Door op <code>
+				<b>Toon alle niveaus</b>
+			</code> te klikken, klapt de volledige hiërarchie van het zoekformulier open. Door <code>
+				<b>Toon beginniveau</b>
+			</code> aan te klikken, wordt de beginsituatie hersteld. </p>
+	</div>
+</div>

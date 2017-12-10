@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="helptext helptext-level2">
+	<h2>Omschrijving</h2>
+	<p>Hiermee kan de bronnenlijst doorzocht worden op een of meer van de onderstaande zoekvelden. Binnen de meeste zoekvelden kan ook gezocht worden met wildcards, operatoren en reguliere expressies. Lees meer hierover in het tabblad 'Help &amp; Info'.</p>
+	
+	<div class="helptext helptext-level3">
+		<h3>Auteur</h3>
+		<p>In dit veld kan gezocht worden naar werken van een bepaald auteur. Voorbeeld: (WNT) Tik in: <i>bijns</i> en selecteer vervolgens in de meelopende lijst <i>bijns,a.</i> om zo de werken van Anna Bijns te kunnen vinden. Lees hierover meer in het tabblad 'Help &amp; Info'.</p>
+		
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Verkorte brontitel</h3>
+		<p>In dit veld kan aan de hand van de brontitel bij de citaten in de woordenboeken gezocht worden naar de hiermee corresponderende bron. Voorbeeld: (WNT) Tik in: <i>klaagged</i> en selecteer vervolgens in de meelopende lijst <i>klaagged. v. ovid.</i>. Lees hierover meer in het tabblad 'Help
+			&amp; Info'.</p>
+		
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Woorden in titel</h3>
+		<p>In dit veld kan gezocht worden naar een woord dat in de bibliografische beschrijving van de bron in de bronnenlijst voorkomt. Voorbeeld: (WNT) Tik in: <i>mechanica</i> en het levert twee bronnen op met dit woord in de titelbeschrijving.</p>
+		
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Datering bron</h3>
+		<p>In dit veld wordt naar citaten gezocht uit een bepaalde periode of van een bepaalde datum. Voorbeeld: (WNT) Wanneer men bij 'vanaf' <i>1650</i> intikt, worden alle citaten vanaf 1650 gevonden. Wanneer men bij 'tot/met'<i>1700</i> intikt, worden alle citaten tot en met 1700 gevonden. Wanneer
+			men bij zowel 'vanaf' als 'tot/met' <i>1508</i> intikt, worden alle citaten met die precieze datering en alle citaten met een datering waarbinnen dit jaartal valt, gevonden.</p>
+		
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Lokalisering</h3>
+		<p>In dit veld wordt gezocht op bronnen met een bepaalde lokalisering. Voorbeeld: typ <i>Brugge</i>. Er wordt gezocht naar bronnen uit Brugge. Alleen in ONW en VMNW.</p>
+		
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Signatuur</h3>
+		<p>In dit veld wordt gezocht op verblijfplaats/signatuur van een bron. Voorbeeld: tik in <i>Kortrijk</i> en alle bronnen met verblijfplaats in Kortrijk worden gevonden. Niet in het ONW en WNT.</p>
+		
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Woord in bronartikel</h3>
+		<p>In dit veld wordt gezocht op een woord in een bronartikel. Voorbeeld: tik in <i>??????</i> en alle bronnen met ????? worden gevonden. Niet in het ONW, WNT en VMNW.</p>
+		
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Knoppen</h3>
+		<p>Klikken op <code>
+			<b>Start zoeken</b>
+		</code> zorgt ervoor dat het zoeken begint; klikken op <code>
+			<b>Wis velden</b>
+		</code> zorgt ervoor dat de velden voor een nieuwe zoekvraag worden leeggemaakt. Om een overzicht te krijgen van de reeds gestelde zoekvragen, klik op <code>
+			<b>Geschiedenis</b>
+		</code>. Om hoofdletter- en accentgevoelig te kunnen zoeken, klik op <code>
+			<b>H(oofdletters) &amp; A(ccenten)</b>
+		</code>. Klikken op <code>
+			<b>Symbool</b>
+		</code> zorgt ervoor dat de lijst met bijzondere lettertekens verschijnt.</p>
+	</div>
+</div>

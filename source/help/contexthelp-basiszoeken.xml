@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="helptext helptext-level2">
+	<h2>Omschrijving</h2>
+	<p>Met 'Basiszoeken' kunnen woordenboekartikelen gezocht worden via een of meer van de onderstaande zoekvelden. Binnen de zoekvelden kan ook gezocht worden met wildcards, operatoren en reguliere expressies. Lees meer hierover in het tabblad 'Help &amp; Info'. </p>
+	<div class="helptext helptext-level3">
+		<h3>Mod. Ned. trefwoord</h3>
+		<p>In dit veld wordt gezocht in de huidige spelling. Voorbeeld: <i>fenomeen</i> (= in de originele spelling in het WNT: <i>phaenomeen</i>).</p>
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Origineel trefwoord</h3>
+		
+		<p>In dit veld wordt gezocht in de oorspronkelijke spelling. Voorbeeld: (WNT) <i>phaenomeen</i> (= in de huidige spelling <i>fenomeen</i>).</p>
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Woordsoort</h3>
+		
+		<p>In dit veld wordt op woordsoortcategorie gezocht.Voorbeeld: klik op pijltjes links van het invulveld, klik op <i>Znw.</i> en vink vervolgens <i>m.</i> aan en klik op <code>
+			<b>ok</b>
+		</code>. Er wordt gezocht naar woordenboekartikelen met als woordsoortaanduiding 'substantief
+			mannelijk'.</p>
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Woord in betekenis</h3>
+		
+		<p>In dit veld wordt alleen in de betekenisomschrijvingen gezocht. Voorbeeld: (WNT) <i>plant</i>. Er wordt gezocht naar woordenboekartikelen met een betekenisomschrijving die het woord <i>plant</i> bevat.</p>
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Woord in citaat</h3>
+		
+		<p>In dit veld wordt alleen in de citaten (citaattekst + bronvermelding) gezocht. Voorbeeld: (WNT) Tik in: <i>verrassingsvrees</i> of <i>everaert</i>. Er wordt gezocht naar woordenboekartikelen met een citaat dat het woord <i>verrassingsvrees</i> resp. de bronvermelding <i>everaert</i>
+			bevat.
+		</p>
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Woord in artikel</h3>
+		
+		<p>In dit veld wordt in de volledige woordenboekartikelen gezocht. Voorbeeld: (WNT) <i>kletsaf</i>. Er wordt gezocht naar woordenboekartikelen die het woord <i>kletsaf</i> bevatten.</p>
+	</div>
+	<div class="helptext helptext-level3">
+		<h3>Knoppen</h3>
+		
+		<p>Klikken op <code>
+			<b>Start zoeken</b>
+		</code> zorgt ervoor dat het zoeken begint; klikken op <code>
+			<b>Wis velden</b>
+		</code> zorgt ervoor dat de velden voor een nieuwe zoekvraag worden leeggemaakt. Om een overzicht te krijgen van de reeds gestelde zoekvragen,
+			klik op <code>
+				<b>Geschiedenis</b>
+			</code>. Om hoofdletter- en accentgevoelig te kunnen zoeken, klik op <code>
+				<b>H(oofdletters) &amp; A(ccenten)</b>
+			</code>. Klikken op <code>
+				<b>Symbool</b>
+			</code> zorgt ervoor dat de lijst met bijzondere
+			lettertekens verschijnt.</p>
+	</div>
+</div>

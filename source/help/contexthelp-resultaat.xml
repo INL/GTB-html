@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="helptext helptext-level2">
+    <h2>Omschrijving</h2>
+    <p>Het tabblad tussenresultaat bevat een in tabelvorm gepresenteerde lijst met zoekresultaten van de drie zoekformulieren. De inhoud varieert, afhankelijk van de zoekopties. Grote zoekresultaten (&gt;250 items) worden gesplitst. Een woordenboekartikel verschijnt via een link op het Mod. Ned.
+        trefwoord in originele spelling, een bronnenlijstartikel door te klikken op de volledige resultaatregel. Lees hierover meer in het tabblad 'Help &amp; Info'.</p>
+    
+    <div class="helptext helptext-level3">
+        <h3>Resizen kolommen</h3>
+        <p>Behalve bij de kolom met concordanties kan bij elke kolom in de tabel de breedte worden aangepast door met de muis de randen van de kolom naar buiten (of binnen) te trekken.</p>
+    </div>
+    <div class="helptext helptext-level3">
+        <h3>Expanderen cel</h3>
+        <p>De volledige inhoud van 'Betekenis', 'Verbinding', 'Citaat' en 'Kopsectie' wordt getoond wanneer op de cel geklikt wordt. Door op een cel in de kolom 'concordanties' te klikken, opent men een popup-scherm waarin alle concordanties binnen het betreffende artikel getoond worden.</p>
+    </div>
+    <div class="helptext helptext-level3">
+        <h3>Knoppen</h3>
+        <p>Klikken op <code>
+            <b>Sorteren</b>
+        </code> opent de sorteerdialoog; klikken op <code>
+            <b>Exporteren</b>
+        </code> geeft de mogelijkheid het tussenresulaat als html-bestand, xml-bestand of csv-bestand op te slaan. Klikken op <code>
+            <b>Afdrukken</b>
+        </code> geeft de mogelijkheid een html-weergave van het tussenresultaat af te drukken. Wanneer men in het veld <code>
+            <b>'Toon resultaten vanaf regel'</b>
+        </code> een regelnummer intikt en vervolgens op <code>
+            <b>Ga!</b>
+        </code> klikt,
+            worden de resultaten vanaf het in het invulvak ingevoerde regelnummer getoond.</p>
+    </div>
+</div>
