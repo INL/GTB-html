@@ -236,12 +236,7 @@
             </xsl:for-each>
         </xsl:result-document>
         
-        <!--<xsl:if test="not(ivdnt:is-visited-uri($url-for-content))"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></xsl:if>-->
-        <ixsl:schedule-action wait="100"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></ixsl:schedule-action>
-        
-        <!--<xsl:call-template name="ivdnt:add-visited-uri">
-            <xsl:with-param name="uri" select="$url-for-content"/>
-        </xsl:call-template>-->
+        <ixsl:schedule-action wait="100"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></ixsl:schedule-action>        
     </xsl:template>
     
     <xsl:function name="ivdnt:woordsoortvalue" as="xs:string">
