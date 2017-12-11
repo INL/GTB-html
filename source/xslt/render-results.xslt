@@ -38,8 +38,8 @@
                             <xsl:when test="ivdnt:is-bronnenlijst-result(.)">
                                 <th class="gtb-wdbcol-auteur">Auteur</th>
                                 <th class="gtb-wdbcol-titel">Titel</th>
-                                <th class="gtb-wdbcol-datering">Datering</th>
-                                <th class="gtb-wdbcol-lokalisering">Lokalisering</th>
+                                <th class="gtb-wdbcol-van">Datering</th>
+                                <th class="gtb-wdbcol-locatie">Lokalisering</th>
                             </xsl:when>
                             <xsl:otherwise>
                                 <th class="gtb-wdbcol-modern_lemma">Mod. Ned. trefwoord</th>
@@ -222,7 +222,7 @@
     
     <xsl:template match="@van" mode="render-result-attributes">
         <xsl:variable name="datering" as="xs:string" select="if (. eq ../@tot) then . else . || ' - ' || ../@tot"/>
-        <td class="gtb-van">{$datering}</td>
+        {$datering}
     </xsl:template>
     
     <xsl:template match="@Line | @Wdb | @Woordsoort | @locatie | @hits" mode="render-result-attributes">
