@@ -8,3 +8,7 @@ function exportResult(url, clientFilename, mimetype) {
 function openNewWindow(url) {
     window.open(url);
 }
+
+function hasOwnProperty(object, property) {
+    return object.hasOwnProperty(property);
+}

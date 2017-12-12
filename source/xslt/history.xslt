@@ -4,6 +4,7 @@
     xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
     xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces"
+    xmlns:js="http://saxonica.com/ns/globalJS"
     exclude-result-prefixes="xs math"
     expand-text="yes"
     version="3.0">
@@ -59,8 +60,9 @@
         <xsl:param name="tabdiv" as="element(div)"/>
         <xsl:param name="formdiv-inputs-and-selects" as="element(inputs-and-selects)"/>
         
-        <!-- Note that the first time, ixsl:get issues a console warning when retrieving the value of $FORMDIV_INPUTS_AND_SELECTS_PROPERTY. So be it. -->
-        <xsl:variable name="existing-inputs-and-selects-list" as="element(inputs-and-selects-list)?" select="ixsl:get($tabdiv, $FORMDIV_INPUTS_AND_SELECTS_PROPERTY)"/>
+        <!-- Calling our hasOwnProperty function prevents an unncessary console warning if the given property has not yet been set. There is currenly no saxon-js way to do that. -->
+        <xsl:variable name="propertyExists" as="xs:boolean" select="js:hasOwnProperty($tabdiv, $FORMDIV_INPUTS_AND_SELECTS_PROPERTY)" />
+        <xsl:variable name="existing-inputs-and-selects-list" as="element(inputs-and-selects-list)?" select="if ($propertyExists) then ixsl:get($tabdiv, $FORMDIV_INPUTS_AND_SELECTS_PROPERTY) else ()"/>
         
         <inputs-and-selects-list>
             <xsl:copy-of select="$existing-inputs-and-selects-list/*"/>
