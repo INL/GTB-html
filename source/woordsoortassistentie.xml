@@ -35,7 +35,7 @@
         <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
         <ivdnt:woordsoort zoek="vnw" toon="vnw"/>
     </ivdnt:collapse>
-    <ivdnt:collapse label="Vnw" woordsoortgroep="Vwn">
+    <ivdnt:collapse label="Vnw" woordsoortgroep="Vnw">
          <ivdnt:collapse label="Type">
              <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
              <ivdnt:woordsoort zoek="betr" toon="betr"/>
@@ -62,7 +62,7 @@
              <ivdnt:woordsoort zoek="mv" toon="mv"/>
          </ivdnt:collapse>
     </ivdnt:collapse>
-    <ivdnt:collapse label="Vnw.bw" woordsoortgroep="Vwn.bw">
+    <ivdnt:collapse label="Vnw.bw" woordsoortgroep="Vnw.bw">
         <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
         <ivdnt:woordsoort zoek="betr" toon="betr"/>
         <ivdnt:woordsoort zoek="onbep" toon="onbep"/>
