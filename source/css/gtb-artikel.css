@@ -10,3 +10,8 @@
 .gtb-art-sc {
     font-variant: small-caps;
 }
+
+span.gtb-art-xr:before {
+    content: ' zie ook ';
+    font-style: italic;
+}
