@@ -59,7 +59,14 @@
             <xsl:if test="not(preceding-sibling::result)">
                 <xsl:attribute name="class" select="'active'"/>
             </xsl:if>
-            <a class="dropdown-item" href="#" role="option"><span class="gtb-typeahead-word">{@Lemma}</span><span class="gtb-typeahead-wdb">{@Wdb}</span></a>
+            <a class="dropdown-item" href="#" role="option">
+                <!-- Web en Lemma worden in andere volgorde getoond dan de volgorde van onderstaande spans.
+                     Dat komt door de float in de style van gtb-typeahead-wdb. De reden om dit zo te doen is dat Firefox
+                     anders de eerste twee lijst-items toont zonder info over de woordenboeken.
+                -->
+                <span class="gtb-typeahead-wdb">{@Wdb}</span>
+                <span class="gtb-typeahead-word">{@Lemma}</span>
+            </a>
         </li>
     </xsl:template>
     
