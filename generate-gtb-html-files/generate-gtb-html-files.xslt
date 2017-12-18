@@ -139,6 +139,7 @@
     <xsl:template match="body" mode="ivdnt:html-mode">
         <xsl:copy>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
+            <div id="flybyhelp" class="flybyhelp" style="position:fixed; visibility:hidden; left:0px; top:0px"><a href="http://www.masereeuw.nl" class="flybyhelp">Informatie...</a></div>
         </xsl:copy>
     </xsl:template>
     
