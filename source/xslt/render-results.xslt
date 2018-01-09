@@ -71,10 +71,43 @@
                 </xsl:call-template>
             </ul>
         </div>
+
         <!-- /node() ipv /* om whitespace te behouden, belangrijk voor spacing tussen inline-block elementen zoals buttons -->
-        <xsl:copy-of select="$html/key('ids', 'resultaatknoppen')/node()"/>
-        
+        <xsl:apply-templates select="$html/key('ids', 'resultaatknoppen')/node()" mode="render-resultaatknoppen">
+            <xsl:with-param name="vereist-sorteertype" as="xs:string" select="if (ivdnt:is-bronnenlijst-result(.)) then 'sorteren-bronnen' else 'sorteren-normaal'" tunnel="yes"/>
+        </xsl:apply-templates>
     </xsl:template>
+    
+    <xsl:template match="node() | @*" mode="render-resultaatknoppen">
+        <xsl:copy>
+            <xsl:apply-templates select="node() | @*" mode="render-resultaatknoppen"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="button[@data-sorteertype]" mode="render-resultaatknoppen">
+        <xsl:param name="vereist-sorteertype" as="xs:string" required="yes" tunnel="yes"/>
+        <xsl:choose>
+            <xsl:when test="@data-sorteertype eq $vereist-sorteertype">
+                <xsl:copy>
+                    <xsl:apply-templates select="node() | @*" mode="render-resultaatknoppen"/>
+                </xsl:copy>
+            </xsl:when>
+            <!-- Anders: toon de knop niet -->
+            <xsl:otherwise/>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!--<xsl:template match="input[@type eq 'radio']" mode="render-resultaatknoppen">
+        <xsl:message select="'input: ' || @name"></xsl:message>
+        <xsl:copy>
+            <xsl:apply-templates select="@*"/>
+            <xsl:if test="exists(@checked)">
+                <xsl:message select="'checked: ' || @name"/>
+                <ixsl:set-property name="checked" select="'checked'"/>
+            </xsl:if>
+            <xsl:apply-templates select="node()"/>
+        </xsl:copy>
+    </xsl:template>-->
     
     <xsl:function name="ivdnt:range-title"  as="xs:string">
         <xsl:param name="firstOfRange" as="xs:integer"/>

@@ -96,6 +96,13 @@ body:before {
     cursor: wait;
 }
 
+/*.gtb-tooltip {
+    background-color: #96433D;
+	color: white;
+	font-size: 8pt;
+	font-style:normal;
+}*/
+
 .gtb-wait{
     z-index: 2000;
     position: absolute;

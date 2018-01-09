@@ -37,6 +37,22 @@
         </xsl:if>
     </xsl:template>
     
+    <!--<xsl:template match="div[ivdnt:class-contains(@class, 'formulierregel')]" mode="ixsl:onmouseover">
+        <xsl:for-each select="//div[@id eq 'flybyhelp']">
+            <!-\- Iterates only once. -\->
+            <ixsl:set-style name="left" select="concat(ixsl:get(ixsl:event(), 'clientX') + 30, 'px')"/>
+            <ixsl:set-style name="top" select="concat(ixsl:get(ixsl:event(), 'clientY') + 15, 'px')"/>
+            <ixsl:set-style name="visibility" select="'visible'"/>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template match="div[ivdnt:class-contains(@class, 'formulierregel')]" mode="ixsl:onmouseout">
+        <xsl:for-each select="//div[@id eq 'flybyhelp']">
+            <!-\- Iterates only once. -\->
+            <ixsl:set-style name="visibility" select="'hidden'"/>
+        </xsl:for-each>
+    </xsl:template>-->
+
     <!-- Redefine the standard typeahead template in order to prevent selecting the word in the typeahead list if the textbox contains a wildcard character. -->
     <xsl:template name="ivdnt:typeahead-select">
         <xsl:param name="selected-listitem" as="element(li)" required="yes"/>
@@ -108,16 +124,16 @@
     </xsl:template>
     
     <xsl:template match="button[@name eq 'wis-sorteren']" mode="ixsl:onclick">
-        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@data-modaltype eq 'sorteren'][1]"/>
+        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[starts-with(@data-modaltype, 'sorteren-')][1]"/>
         <xsl:for-each select="$topdiv//select">
             <ixsl:set-property name="value" select="option[1]/@value" object="."/>
         </xsl:for-each>
     </xsl:template>
     
     <xsl:template match="button[@name eq 'doe-sorteren']" mode="ixsl:onclick">
-        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@data-modaltype eq 'sorteren'][1]"/>
+        <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[starts-with(@data-modaltype, 'sorteren-')][1]"/>
         <xsl:variable name="keys" as="xs:string*" select="for $select in $topdiv//select return ivdnt:get-input-value($select)[. ne '']"/>
-        <xsl:variable name="value-of-reversed-input" as="xs:string" select="ivdnt:get-input-value($topdiv//input[@name eq 'sorteervolgorde' and ivdnt:is-checked(.)])"/>
+        <xsl:variable name="value-of-reversed-input" as="xs:string" select="ivdnt:get-input-value($topdiv//input[starts-with(@name, 'sorteervolgorde-') and ivdnt:is-checked(.)])"/>
         <xsl:variable name="reversed" as="xs:string" select="if ($value-of-reversed-input eq 'aflopend') then 'true' else 'false'"/>
         
         <xsl:choose>
