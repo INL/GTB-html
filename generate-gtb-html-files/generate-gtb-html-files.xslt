@@ -390,10 +390,8 @@
         <td class="speciaalteken" data-dismiss="modal"><xsl:apply-templates mode="ivdnt:ivdnt-teken"/></td>
     </xsl:template>
     
-    <xsl:template match="ivdnt:sorteeropties" mode="ivdnt:html-mode">
-        <!-- TODO Wanneer zijn welke opties enabled/disabled?
-             TODO De opties zijn afhandelijk van de aard van het resultaat, dus waarschijnlijk dynamisch bepalen.
-             
+    <xsl:template match="ivdnt:sorteeropties[ancestor::ivdnt:modal/@type eq 'sorteren-normaal']" mode="ivdnt:html-mode">
+        <!-- TODO Wanneer zijn welke opties enabled/disabled?             
              De technische sleutelnamen, zoals "hits","wdb","mdl","lemma","woordsoort", zijn afkomstig uit Sorteren.lzx
         -->
         <select id="{ivdnt:generate-input-id(.)}" name="{@name}" class="form-control">
@@ -403,6 +401,20 @@
             <option value="mdl">Mod. Ned. trefwoord</option>
             <option value="lemma">Origineel trefwoord</option>
             <option value="woordsoort">Woordsoort</option>
+        </select>
+    </xsl:template>
+
+    <xsl:template match="ivdnt:sorteeropties[ancestor::ivdnt:modal/@type eq 'sorteren-bronnen']" mode="ivdnt:html-mode">
+        <!-- TODO Wanneer zijn welke opties enabled/disabled?             
+             De technische sleutelnamen, zoals "wdb","auteur","bron","datering","loc", zijn afkomstig uit Sorteren.lzx
+        -->
+        <select id="{ivdnt:generate-input-id(.)}" name="{@name}" class="form-control">
+            <option value=""></option>
+            <option value="wdb">Woordenboek</option>
+            <option value="auteur">Auteur</option>
+            <option value="bron">Titel</option>
+            <option value="datering">Datering</option>
+            <option value="loc">Lokalisering</option>
         </select>
     </xsl:template>
 </xsl:stylesheet>

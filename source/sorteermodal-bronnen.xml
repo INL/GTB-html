@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivdnt:modal type="sorteren-bronnen" suppress-ok-button="true" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+    <ivdnt:modaltrigger data-sorteertype="sorteren-bronnen"><button type="button" class="sorteerknop btn btn-default">Sorteren...</button></ivdnt:modaltrigger>
+    <ivdnt:modalcontent>
+        <ivdnt:modaltitle><h3 class="modal-title">Sorteren tussenresultaat</h3></ivdnt:modaltitle>
+        <div class="form-horizontal" id="sleutels">
+            
+            <ivdnt:formulierregel>
+                <ivdnt:formulierlabel>Eerste sleutel:</ivdnt:formulierlabel>
+                <ivdnt:formulierinput>
+                    <ivdnt:sorteeropties name="sleutel1"/>
+                </ivdnt:formulierinput>
+            </ivdnt:formulierregel>
+            <ivdnt:formulierregel>
+                <ivdnt:formulierlabel>Tweede sleutel:</ivdnt:formulierlabel>
+                <ivdnt:formulierinput>
+                    <ivdnt:sorteeropties name="sleutel2"/>
+                </ivdnt:formulierinput>
+            </ivdnt:formulierregel>
+            <ivdnt:formulierregel>
+                <ivdnt:formulierlabel>Derde sleutel:</ivdnt:formulierlabel>
+                <ivdnt:formulierinput>
+                    <ivdnt:sorteeropties name="sleutel3"/>
+                </ivdnt:formulierinput>
+            </ivdnt:formulierregel>
+            <ivdnt:formulierregel>
+                <ivdnt:formulierlabel>Vierde sleutel:</ivdnt:formulierlabel>
+                <ivdnt:formulierinput>
+                    <ivdnt:sorteeropties name="sleutel4"/>
+                </ivdnt:formulierinput>
+            </ivdnt:formulierregel>
+            
+            
+            <ivdnt:formulierregel>
+                <ivdnt:formulierlabel>Sorteren</ivdnt:formulierlabel>
+                <ivdnt:formulierinput>
+                    <label class="radio-inline gtbradio"><input type="radio" name="sorteervolgorde-bronnen" value="oplopend" checked="checked"/>oplopend</label>
+                    <label class="radio-inline gtbradio"><input type="radio" name="sorteervolgorde-bronnen" value="aflopend"/>aflopend</label>
+                </ivdnt:formulierinput>
+            </ivdnt:formulierregel>
+        </div>
+    </ivdnt:modalcontent>
+    <ivdnt:modalfooter>
+        <button type="button" name="doe-sorteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="sorteren-bronnen">Sorteren</button>
+        <button type="button" name="wis-sorteren" class="btn btn-secondary">Wissen</button>
+        <button type="button" name="annuleer-sorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
+    </ivdnt:modalfooter>    
+</ivdnt:modal>

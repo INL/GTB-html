@@ -40,8 +40,15 @@
             </ivdnt:tab>
         </ivdnt:tabs>
         <div class="auxiliaries">
-            <!-- Verborgen hulpstukken -->            
-            <ivdnt:include href="resultaatknoppen.xml"/>
+            <!-- Verborgen hulpstukken -->
+            <ivdnt:formulier class="gtb-resultaatknoppen" id="resultaatknoppen" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
+                <ivdnt:include href="helpmodal.xml"/>
+                <ivdnt:include href="sorteermodal-normal.xml"/>
+                <ivdnt:include href="sorteermodal-bronnen.xml"/>
+                <ivdnt:include href="exporteermodal.xml"/>
+                <button class="exporteerknop btn btn-default" name="doe-afdrukken">Afdrukken...</button>
+                <!-- De resterende col-md-6 gaat naar de navigatieknoppen -->
+            </ivdnt:formulier>
         </div>
     </body>
 </html>

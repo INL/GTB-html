@@ -38,6 +38,7 @@
             <xsl:attribute name="class" select="ivdnt:add-class-values(@class, 'modaltrigger')"/>
             <xsl:attribute name="data-toggle" select="'modal'"/>
             <xsl:attribute name="data-target" select="'#' || generate-id(ancestor::ivdnt:modal[1])"/>
+            <xsl:copy-of select="parent::*/@data-sorteertype"/>
             <xsl:apply-templates select="@* except (@class, @data-toggle, @data-target)" mode="ivdnt:html-mode"/>
             <xsl:apply-templates select="node()" mode="ivdnt:html-mode"/>
         </xsl:copy>
