@@ -37,9 +37,9 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="div[ivdnt:class-contains(@class, 'formulierregel')]" mode="ixsl:onmouseover">
+    <!--<xsl:template match="div[ivdnt:class-contains(@class, 'formulierregel')]" mode="ixsl:onmouseover">
         <xsl:for-each select="//div[@id eq 'flybyhelp']">
-            <!-- Iterates only once. -->
+            <!-\- Iterates only once. -\->
             <ixsl:set-style name="left" select="concat(ixsl:get(ixsl:event(), 'clientX') + 30, 'px')"/>
             <ixsl:set-style name="top" select="concat(ixsl:get(ixsl:event(), 'clientY') + 15, 'px')"/>
             <ixsl:set-style name="visibility" select="'visible'"/>
@@ -48,10 +48,10 @@
     
     <xsl:template match="div[ivdnt:class-contains(@class, 'formulierregel')]" mode="ixsl:onmouseout">
         <xsl:for-each select="//div[@id eq 'flybyhelp']">
-            <!-- Iterates only once. -->
+            <!-\- Iterates only once. -\->
             <ixsl:set-style name="visibility" select="'hidden'"/>
         </xsl:for-each>
-    </xsl:template>
+    </xsl:template>-->
 
     <!-- Redefine the standard typeahead template in order to prevent selecting the word in the typeahead list if the textbox contains a wildcard character. -->
     <xsl:template name="ivdnt:typeahead-select">
