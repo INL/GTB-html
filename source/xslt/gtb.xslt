@@ -88,7 +88,7 @@
                         <!--<xsl:message>deactivate (does not exist)</xsl:message>-->
                         <div class="gtb-wait">
                             <!-- TODO waarom draait het icoontje niet? Cf. https://www.bootply.com/128062 -->
-                            <button class="btn btn-lg btn-info"><span class="gtb-waiticon"/>&#160;Even geduld a.u.b. ...</button>
+                            <button class="btn btn-lg btn-primary"><span class="gtb-waiticon"/>&#160;Even geduld a.u.b. ...</button>
                         </div>
                     </xsl:result-document>
                 </xsl:otherwise>

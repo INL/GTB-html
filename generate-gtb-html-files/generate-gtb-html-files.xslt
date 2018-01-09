@@ -359,7 +359,7 @@
     
     <xsl:template match="@woordsoortgroep" mode="ivdnt:html-mode">
         <xsl:attribute name="data-woordsoortgroep" select="."/>
-		<a class="gtb-selecteer-woordsoortgroep off"/>
+		<a class="gtb-selecteer-woordsoortgroep off btn btn-default btn-sm">alles selecteren</a>
 	</xsl:template>
    
     <xsl:template match="ivdnt:woordsoort" mode="ivdnt:html-mode">
