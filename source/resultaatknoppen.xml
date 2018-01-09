@@ -78,23 +78,6 @@
                     </ivdnt:formulierinput>
                 </ivdnt:formulierregel>
             </div>
-            
-            <!-- 
-            <p class="row">
-                <label class="col-md-6" for="xx">Formaat</label>
-                <span class="col-md-6">
-                    <input name="uitvoer" type="radio" value="html" checked="checked" class="radio-inline"/> HTML
-                    <input name="uitvoer" type="radio" value="xml" class="radio-inline"/> XML
-                    <input name="uitvoer" type="radio" value="csv" class="radio-inline"/> CSV (Excel)
-                </span>
-            </p>
-            <div class="modal-footer">
-                <p class="row">
-                    <button type="button" name="doe-exporteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="exporteren">Exporteren</button>
-                    <button type="button" name="annuleer-exportorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
-                </p>
-            </div>
-            -->
         </ivdnt:modalcontent>
         <ivdnt:modalfooter>
             <button type="button" name="doe-exporteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="exporteren">Exporteren</button>
