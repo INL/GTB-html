@@ -74,6 +74,10 @@
 
         <!-- /node() ipv /* om whitespace te behouden, belangrijk voor spacing tussen inline-block elementen zoals buttons -->
         <xsl:apply-templates select="$html/key('ids', 'resultaatknoppen')/node()" mode="render-resultaatknoppen">
+            <!-- TODO als de namen van de sorteersleutels te koppelen zijn aan de attributen van de <result> items, zouden we de select/option-items kunnen genereren op basis van
+                 het zoekresultaat (<results>-XML). Dan is de omslachtige constructie met meerdere sorteer-modaldefinities niet meer nodig.
+                 Het zou mooi zijn als de attribuutnamen gelijk waren geweest aan de sorteersleutels, bijv. sleutel=mdl maar attribuut=Modern_lemma (Mod. Ned. trefwoord).
+            -->
             <xsl:with-param name="vereist-sorteertype" as="xs:string" select="if (ivdnt:is-bronnenlijst-result(.)) then 'sorteren-bronnen' else 'sorteren-normaal'" tunnel="yes"/>
         </xsl:apply-templates>
     </xsl:template>
@@ -96,18 +100,6 @@
             <xsl:otherwise/>
         </xsl:choose>
     </xsl:template>
-    
-    <!--<xsl:template match="input[@type eq 'radio']" mode="render-resultaatknoppen">
-        <xsl:message select="'input: ' || @name"></xsl:message>
-        <xsl:copy>
-            <xsl:apply-templates select="@*"/>
-            <xsl:if test="exists(@checked)">
-                <xsl:message select="'checked: ' || @name"/>
-                <ixsl:set-property name="checked" select="'checked'"/>
-            </xsl:if>
-            <xsl:apply-templates select="node()"/>
-        </xsl:copy>
-    </xsl:template>-->
     
     <xsl:function name="ivdnt:range-title"  as="xs:string">
         <xsl:param name="firstOfRange" as="xs:integer"/>
