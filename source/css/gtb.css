@@ -528,20 +528,6 @@ ul.gtb-list-subject-level2 li {
 }
 
 /* 
- * bootstrap panel styling ongedaan maken
- * Waarom in de eerste plaats collapsibles in een .panel wrapper hangen? 
- * Omdat anders bootstrap collapse accordion niet werkt :(  
- */
-.gtb-collapse-wrapper.panel {
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0px;
-}
-
-/* 
  * Zorg dat margins van alle child elementen binnen onze collapse wrapper blijft, en niet collapsed met elementen buiten de wrapper.
  * 
  * Waarom? nou, terwijl een bootstrap collapse element aan het in/uitklappen is, heeft hij overflow:hidden
@@ -557,16 +543,12 @@ ul.gtb-list-subject-level2 li {
  * gewoon altijd overflow:hidden zetten is een andere manier van dit doen, maar dan is je overflow weer niet zichtbaar meer
  * en overflowen is wel handig om dingen als carets voor child collapsibles over de linkerkant van de container laten hangen. 
  */
-.gtb-collapse-wrapper.panel:before,
-.gtb-collapse-wrapper.panel:after {
-    content: "";
+.gtb-collapse {
+    padding-left: 15px;
+	content: "";
     display: block;
     height: 1px;
     margin-bottom: -1px;
-}
-
-.gtb-collapse {
-    padding-left: 15px;
 }
 
 .gtb-collapse-label {
@@ -663,12 +645,12 @@ ul.gtb-list-subject-level2 li {
     line-height: 42px;
     letter-spacing: 0.5px;
     color: #EEE;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.7);  
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.7);  
 }
 .gtb-header-subtitle {
     font-size: 70%;
     color: #CCC;
-    text-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.7);
 }
 
 .gtb-header-logo-ivdnt {
@@ -678,13 +660,15 @@ ul.gtb-list-subject-level2 li {
     color: #EEE;
     
     /* fix voor verkeerde positioning bij transition klein scherm -> groot scherm */
-    -webkit-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
-    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
 }
 .gtb-header-logo-ivdnt > img {
     height: 100%;
     width: auto;
+	
+	color: #EEE!important; /* alt-text */
 }
 
 @media only screen and (max-width: 1200px) {

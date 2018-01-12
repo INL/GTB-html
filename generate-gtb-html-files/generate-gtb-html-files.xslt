@@ -294,10 +294,6 @@
             <a>
                 <xsl:attribute name="data-toggle" select="'collapse'"/>
                 <xsl:attribute name="href" select="concat('#', generate-id(.))"/>
-                <!-- alleen parent zetten wanneer eerste ancestor collapse accordion niet uitgeschakeld heeft -->
-                <xsl:if test="ancestor::ivdnt:collapse"> 
-                    <xsl:attribute name="data-parent" select="concat('#', generate-id(ancestor::ivdnt:collapse[1]))"/>
-                </xsl:if>
                 
                 <xsl:choose>
                     <xsl:when test="@open='true'">
@@ -317,18 +313,6 @@
         </p>
         
         <xsl:next-match/>
-    </xsl:template>
-    
-    <!-- 
-        Wanneer er een ancestor collapse bestaat willen we accordion gedrag, dit houdt in dat wanneer de gebruiker een collapsible opent, 
-        de andere collapsibles in dezelfde parent automatisch sluiten.
-        In bootstrap 3 werkt dit helaas alleen wanneer alle collapsibles die moeten sluiten in een .panel zitten
-        Vandaar dit template om dit even te enablen wanneer er een parent collapsible is.
-    -->
-    <xsl:template match="ivdnt:collapse[ancestor::ivdnt:collapse]" priority="90" mode="ivdnt:html-mode">
-        <div class="panel gtb-collapse-wrapper">
-            <xsl:next-match/>
-        </div>
     </xsl:template>
     
     <xsl:template match="ivdnt:collapse" priority="80" mode="ivdnt:html-mode">
