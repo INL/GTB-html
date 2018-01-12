@@ -173,8 +173,15 @@
     </xsl:function>
     
     <xsl:template match="statistics" mode="render-results">
+        <xsl:variable name="this" as="element(statistics)" select="."/>
+        <xsl:variable name="dictionaries" as="xs:string+" select="tokenize($dictionaryOutputOrder, '\s+')"/>
         <p class="gtb-statistics">
-            <xsl:apply-templates mode="render-results"/>
+            <!-- Output the results in chronological dictionary order: -->
+            <xsl:for-each select="$dictionaries">
+                <xsl:apply-templates select="$this/stat[@item eq .]"/>
+            </xsl:for-each>
+            <!-- This should generate no output, but just to be sure: -->
+            <xsl:apply-templates mode="render-results" select="$this/stat[not(@item = $dictionaries)]"/>
         </p>
     </xsl:template>
     
