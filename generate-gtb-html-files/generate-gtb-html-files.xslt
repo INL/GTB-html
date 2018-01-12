@@ -209,9 +209,9 @@
     
     <xsl:template match="ivdnt:bronselectors" mode="ivdnt:html-mode">
         <!-- use suffix attribute to add a suffix to the dictionary names, e.g. suffix="bronnen" yields name="onwbronnen" -->
-       
+        <xsl:variable name="bronnen-title" as="xs:string" select="if (@suffix eq 'bronnen') then 'Bronnen bij' else 'Woordenboeken'"/>
         <div class="formulierregel form-group">
-            <label class="{$zoekformulier-label-column-class} formulierlabel">Bronnen</label>
+            <label class="{$zoekformulier-label-column-class} formulierlabel">{$bronnen-title}</label>
     
             <div class="{$zoekformulier-input-column-class}">
                 <div class="row">
