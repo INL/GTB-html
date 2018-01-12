@@ -176,12 +176,14 @@
         <xsl:variable name="this" as="element(statistics)" select="."/>
         <xsl:variable name="dictionaries" as="xs:string+" select="tokenize($dictionaryOutputOrder, '\s+')"/>
         <p class="gtb-statistics">
+            <!-- This should generate only output for the "total count" line: -->
+            <xsl:apply-templates mode="render-results" select="$this/stat[not(@item = $dictionaries)]"/>
+            
             <!-- Output the results in chronological dictionary order: -->
             <xsl:for-each select="$dictionaries">
-                <xsl:apply-templates select="$this/stat[@item eq .]"/>
+                <xsl:variable name="dict" as="xs:string" select="."/>
+                <xsl:apply-templates select="$this/stat[@item eq $dict]" mode="render-results"/>
             </xsl:for-each>
-            <!-- This should generate no output, but just to be sure: -->
-            <xsl:apply-templates mode="render-results" select="$this/stat[not(@item = $dictionaries)]"/>
         </p>
     </xsl:template>
     
@@ -190,7 +192,7 @@
         <xsl:variable name="searchstring" as="xs:string" select="if (preceding-sibling::stat) then @item else ''"/>
         <span class="gtbstatitem"><a href="#" data-startline="{if (not(preceding-sibling::stat)) then 1 else ivdnt:calculate-dictionary-startline(parent::statistics, @item)}">{@item}</a>:&#160;</span>
         <span class="gtb-statcount" title="aantal hits: {@hits} in {@count} {$documenten}">{@count}</span>
-        <xsl:if test="following-sibling::stat">
+        <xsl:if test="@item ne tokenize($dictionaryOutputOrder)[last()]">
             <span class="gtb-statseparator"><xsl:text>&#32;-&#32;</xsl:text></span>
         </xsl:if>
     </xsl:template>
