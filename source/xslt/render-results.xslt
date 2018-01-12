@@ -190,7 +190,13 @@
     <xsl:template match="stat" mode="render-results">
         <xsl:variable name="documenten" as="xs:string" select="if (xs:integer(@count) eq 1) then 'document' else 'documenten'"/>
         <xsl:variable name="searchstring" as="xs:string" select="if (preceding-sibling::stat) then @item else ''"/>
-        <span class="gtbstatitem"><a href="#" data-startline="{if (not(preceding-sibling::stat)) then 1 else ivdnt:calculate-dictionary-startline(parent::statistics, @item)}">{@item}</a>:&#160;</span>
+        <xsl:variable name="flyby" as="xs:string" select="if (preceding-sibling::stat) then 'Ga naar de eerste regel van ' || @item else ''"/>
+        <span class="gtbstatitem">
+            <a href="#" data-startline="{if (not(preceding-sibling::stat)) then 1 else ivdnt:calculate-dictionary-startline(parent::statistics, @item)}">
+                <xsl:if test="$flyby ne ''"><xsl:attribute name="title" select="$flyby"/></xsl:if>
+                <xsl:value-of select="@item"/>
+            </a>:&#160;
+        </span>
         <span class="gtb-statcount" title="aantal hits: {@hits} in {@count} {$documenten}">{@count}</span>
         <xsl:if test="@item ne tokenize($dictionaryOutputOrder)[last()]">
             <span class="gtb-statseparator"><xsl:text>&#32;-&#32;</xsl:text></span>
