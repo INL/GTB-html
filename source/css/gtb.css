@@ -675,6 +675,7 @@ ul.gtb-list-subject-level2 li {
     display: block;
     height: 100%;
     margin-top: 3px;
+    color: #EEE;
     
     /* fix voor verkeerde positioning bij transition klein scherm -> groot scherm */
     -webkit-writing-mode: vertical-lr;
