@@ -545,10 +545,6 @@ ul.gtb-list-subject-level2 li {
  */
 .gtb-collapse {
     padding-left: 15px;
-	content: "";
-    display: block;
-    height: 1px;
-    margin-bottom: -1px;
 }
 
 .gtb-collapse-label {

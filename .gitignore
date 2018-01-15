@@ -9,6 +9,8 @@ target\.test/
 
 *.bak
 
+*.xpr
+
 target\.sterculijn/
 
 maak-sterculijn\.sh
