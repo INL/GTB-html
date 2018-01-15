@@ -659,7 +659,7 @@ ul.gtb-list-subject-level2 li {
     
     /* fix voor verkeerde positioning bij transition klein scherm -> groot scherm */
     -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
 }
 .gtb-header-logo-ivdnt > img {
@@ -721,7 +721,8 @@ ul.gtb-list-subject-level2 li {
         font-size: 26px;
         color: #EEE;
         font-family: schoolboek;
-        margin-top: -10px;
+        position: relative;
+        top: -10px; /* IE11 doesn't apply negative margin to rotated text? */
     }
     .gtb-header-logo-ivdnt:hover,
     .gtb-header-logo-ivdnt:active,
