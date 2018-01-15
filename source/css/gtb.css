@@ -83,7 +83,7 @@ body:before {
     margin-top: 35px;
 }
 .modal-title {
-    color: var(--light-blue);    
+    color: #111971;    
 }
 
 .gtb-modal-body {
@@ -427,13 +427,6 @@ ul.gtb-list-subject-level2 li {
     float: right;
 }
 
-/* color variables for testing */
-:root {
-    --dark-blue: #00042E;
-    --light-blue: #111971;
-    --light-blue-darker: #111971;
-}
-
 /* Bootstrap */
 
 .tab-content {
@@ -495,7 +488,7 @@ ul.gtb-list-subject-level2 li {
 .nav-tabs > li:focus:after,
 .nav-tabs > li.active:after {
     transform: scaleX(1);
-    background-color: var(--light-blue);
+    background-color: #111971;
     opacity: 1;
 }
 
@@ -531,7 +524,7 @@ ul.gtb-list-subject-level2 li {
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:focus,
 .nav-tabs>li.active>a:hover{
-    color: var(--light-blue);
+    color: #111971;
 }
 
 /* collapse */
@@ -599,7 +592,7 @@ ul.gtb-list-subject-level2 li {
 /* header */
 
 .gtb-header {
-    background-color: var(--dark-blue);
+    background-color: #00042E;
 
     height: 150px;
     margin-bottom: 40px;
@@ -746,36 +739,36 @@ ul.gtb-list-subject-level2 li {
 
 /* colors */
 .gtb-header {
-    background-color: var(--dark-blue);
+    background-color: #00042E;
 }
 .btn-primary {
-    background-color: var(--light-blue);
-    border-color: var(--light-blue);
+    background-color: #111971;
+    border-color: #111971;
 }
 .btn-primary:hover,
 .btn-primary:active {
-    background-color: var(--light-blue-darker);
+    background-color: #111971;
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus,
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus{
-    color: var(--light-blue);
+    color: #111971;
     font-weight: bold;
 }
 .nav-tabs > li > a::after {
-    background-color: var(--light-blue);
+    background-color: #111971;
 }
 
 .list-group > .list-group-item {
-    color: var(--light-blue);
+    color: #111971;
 }
 .list-group > .list-group-item > a:hover {
     font-weight: bold;
 }
 .list-group > .list-group-item.active {
-    background-color: var(--light-blue);
+    background-color: #111971;
     font-weight: bold;
 }
 .list-group > .list-group-item.active > a {
@@ -785,11 +778,10 @@ ul.gtb-list-subject-level2 li {
     border-radius: 0px;
 }
 
-
 a,
 a:hover,
 a:focus {
-    color: var(--light-blue);
+    color: #111971;
 }
 
 .pagination>li>a,
@@ -798,7 +790,7 @@ a:focus {
 .pagination>li>span,
 .pagination>li>span:hover,
 .pagination>li>span:focus{
-    color: var(--light-blue);
+    color: #111971;
 }
 
 .pagination>.active>a,
@@ -807,8 +799,8 @@ a:focus {
 .pagination>.active>span
 .pagination>.active>span:hover,
 .pagination>.active>span:focus {
-    background-color: var(--light-blue);
-    border-color: var(--light-blue);
+    background-color: #111971;
+    border-color: #111971;
 }
 
 .dropdown-item {
@@ -817,5 +809,5 @@ a:focus {
 .dropdown-menu>.active>a, 
 .dropdown-menu>.active>a:focus, 
 .dropdown-menu>.active>a:hover {
-    background-color: var(--light-blue);
+    background-color: #111971;
 }
