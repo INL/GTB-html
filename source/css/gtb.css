@@ -462,16 +462,55 @@ ul.gtb-list-subject-level2 li {
 /* tabs */
 /* tabs */
 .nav-tabs {
-    border-bottom: 2px solid #DDD;
+    border-bottom: none!important;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-tabs > li {
+    border: none!important;
+    padding: 0px!important;
+    margin: 0px!important;
+    border-bottom: 2px solid #ddd!important;
+    flex-grow: 1;
+}
+
+.nav-tabs > li:after {
+    display: block;
+    content: " ";
+    
+    background-color: white;
+    opacity: 0;
+    
+    height: 2px;
+    margin-bottom: -2px;
+    transform: scaleX(0);
+    
+    transition: all 250ms ease 0s;
+}
+
+.nav-tabs > li:hover:after,
+.nav-tabs > li:active:after,
+.nav-tabs > li:focus:after,
+.nav-tabs > li.active:after {
+    transform: scaleX(1);
+    background-color: var(--light-blue);
+    opacity: 1;
 }
 
 .nav-tabs>li>a {
-    border: none;
+    border: none!important;
+    margin: 0px!important;
+    padding: 10px 15px!important;
+    background: transparent!important;
+    
+    display: block;
+    
     color: #666;
-    margin-right: 0px;
-    background: transparent;
     text-align:center;
 }
+
 /* 
  * Maak ruimte voor bold text door een invisible elementje te maken met daarin de alvast gebolde text
  * op basis van de title attribute
@@ -492,31 +531,7 @@ ul.gtb-list-subject-level2 li {
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:focus,
 .nav-tabs>li.active>a:hover{
-    background-color: transparent;
     color: var(--light-blue);
-    border: none;
-}
-
-.nav-tabs>li>a::after {
-    content: "";
-    background-color: var(--light-blue);
-    height: 2px;
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    bottom: -1px;
-    transition: all 250ms ease 0s;
-    transform: scale(0);
-}
-
-.nav-tabs>li.active>a::after,
-.nav-tabs>li:hover>a::after {
-    transform: scale(1);
-}
-
-.tab-nav>li>a::after {
-    background: #21527d none repeat scroll 0% 0%;
-    color: #fff;
 }
 
 /* collapse */
@@ -584,12 +599,6 @@ ul.gtb-list-subject-level2 li {
 /* header */
 
 .gtb-header {
-    /* background: -webkit-linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%); 
-    background:    -moz-linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%); 
-    background:     -ms-linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%); 
-    background:      -o-linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%); 
-    background:         linear-gradient(90deg, var(--main-blue) 10%, var(--header-gradient) 90%);  */
-
     background-color: var(--dark-blue);
 
     height: 150px;
@@ -758,6 +767,24 @@ ul.gtb-list-subject-level2 li {
 .nav-tabs > li > a::after {
     background-color: var(--light-blue);
 }
+
+.list-group > .list-group-item {
+    color: var(--light-blue);
+}
+.list-group > .list-group-item > a:hover {
+    font-weight: bold;
+}
+.list-group > .list-group-item.active {
+    background-color: var(--light-blue);
+    font-weight: bold;
+}
+.list-group > .list-group-item.active > a {
+    color: white;
+}
+.list-group > .list-group-item:first-child {
+    border-radius: 0px;
+}
+
 
 a,
 a:hover,
