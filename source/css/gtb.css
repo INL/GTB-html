@@ -311,13 +311,13 @@ td.conc {
 .gtb-conc-line {
     white-space: nowrap;
     clear: both;
+    overflow:hidden;
 }
 .gtb-conc-voor {
-    overflow: hidden;
-    text-overflow: ellipsis;
     display: inline-block;
-    direction: rtl;
     width: 15em;
+    direction: rtl;
+    text-align:right;
     vertical-align: top;
 }
 
@@ -325,6 +325,7 @@ td.conc {
     font-weight: bold;
     vertical-align: top;
     display: inline-block;
+    vertical-align: top;
 }
 
 .gtb-conc-na {
@@ -407,6 +408,7 @@ ul.gtb-list-subject-level2 li {
 
 .gtb-pagineringsknoppen{
     float: right;
+    line-height: 0; /* fix voor random extra height van container door whitespace in source */
 }
 .resultaatknop {
     margin-top: 1.5em;
@@ -439,6 +441,7 @@ ul.gtb-list-subject-level2 li {
 
 .pagination {
     margin: 0px;
+    line-height: 0; /* fix voor random extra height van container door whitespace in source */
 }
 
 .pagination > li {
@@ -722,7 +725,7 @@ ul.gtb-list-subject-level2 li {
         color: #EEE;
         font-family: schoolboek;
         position: relative;
-        top: -10px; /* IE11 doesn't apply negative margin to rotated text? */
+        top: -10px; /* IE11 doesn't apply negative margin to rotated text */
     }
     .gtb-header-logo-ivdnt:hover,
     .gtb-header-logo-ivdnt:active,
