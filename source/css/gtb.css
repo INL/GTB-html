@@ -190,7 +190,8 @@ td.speciaalteken:active{
 }
 
 #resultaathouder {
-    background-color: rgba(255,255,255,0.8);
+    /* background-color: rgba(255,255,255,0.8);*/
+    background: transparent;
 }
 
 .gtb-resultaatknoppen {
@@ -326,13 +327,13 @@ td.conc {
 .gtb-conc-line {
     white-space: nowrap;
     clear: both;
+    overflow:hidden;
 }
 .gtb-conc-voor {
-    overflow: hidden;
-    text-overflow: ellipsis;
     display: inline-block;
-    direction: rtl;
     width: 15em;
+    direction: rtl;
+    text-align:right;
     vertical-align: top;
 }
 
@@ -340,6 +341,7 @@ td.conc {
     font-weight: bold;
     vertical-align: top;
     display: inline-block;
+    vertical-align: top;
 }
 
 .gtb-conc-na {
@@ -382,6 +384,10 @@ div.gtb-zoekvragen-geschiedenis {
     text-align: left;
 }
 
+.table-striped>tbody>tr:nth-of-type(odd):not(:hover) {
+    background-color: rgba(111, 189, 255, 0.04);
+}
+
 tr.gtb-result-row > td{
     height: 3em;
     vertical-align: top;
@@ -422,6 +428,7 @@ ul.gtb-list-subject-level2 li {
 
 .gtb-pagineringsknoppen{
     float: right;
+    line-height: 0; /* fix voor random extra height van container door whitespace in source */
 }
 .resultaatknop {
     margin-top: 1.5em;
@@ -454,6 +461,7 @@ ul.gtb-list-subject-level2 li {
 
 .pagination {
     margin: 0px;
+    line-height: 0; /* fix voor random extra height van container door whitespace in source */
 }
 
 .pagination > li {
@@ -674,7 +682,7 @@ ul.gtb-list-subject-level2 li {
     
     /* fix voor verkeerde positioning bij transition klein scherm -> groot scherm */
     -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
 }
 .gtb-header-logo-ivdnt > img {
@@ -736,7 +744,8 @@ ul.gtb-list-subject-level2 li {
         font-size: 26px;
         color: #EEE;
         font-family: schoolboek;
-        margin-top: -10px;
+        position: relative;
+        top: -10px; /* IE11 doesn't apply negative margin to rotated text */
     }
     .gtb-header-logo-ivdnt:hover,
     .gtb-header-logo-ivdnt:active,
