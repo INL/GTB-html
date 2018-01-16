@@ -3,6 +3,6 @@
 <div class="helptext helptext-level1">
 	
 		<h1 class="helptext">Software</h1>
-		<p>De user interface is ontwikkeld met Saxon-JS (XSLT in de browser) en Bootstrap. De search engine is in Java geprogrammeerd met gebruikmaking van Lucene en MySQL. De gebruikte servlet engine is Tomcat.</p>	
+	<p>De user interface is ontwikkeld met <a href="http://www.saxonica.com/saxon-js/index.xml">Saxon-JS</a> (XSLT in de browser) en <a href="http://getbootstrap.com/">Bootstrap</a>. De search engine is in Java geprogrammeerd met gebruikmaking van Lucene en MySQL. De gebruikte servlet engine is Tomcat.</p>	
 </div>
 
