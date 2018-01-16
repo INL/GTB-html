@@ -307,36 +307,6 @@ div.gtb-results b i{
     font-family: Verdana, sans-serif, gtbbi;
 }
 
-td.conc {
-}
-.gtb-conc-line {
-    white-space: nowrap;
-    clear: both;
-    overflow:hidden;
-}
-.gtb-conc-voor {
-    display: inline-block;
-    width: 15em;
-    direction: rtl;
-    text-align:right;
-    vertical-align: top;
-}
-
-.gtb-conc-zoekwoord {
-    font-weight: bold;
-    vertical-align: top;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.gtb-conc-na {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 15em;
-    display: inline-block;
-    vertical-align: top;
-}
-
 div.gtb-zoekvragen-geschiedenis {
     min-height: 40vh;
     max-height: 40vh;
@@ -347,10 +317,10 @@ div.gtb-zoekvragen-geschiedenis {
     font-size: smaller;
 }
 
-
 .gtb-input-value {
     font-weight: bold;
 }
+
 
 #gtb-result-table thead {
     display: block;
@@ -359,7 +329,7 @@ div.gtb-zoekvragen-geschiedenis {
 
 #gtb-result-table tbody {
     display: block;
-    overflow:auto;
+    overflow-y:auto;
     /* dit zodat de tabel meeschaalt met je schermgrootte, moet aangepast als de andere content op de pagina drastisch verandert */
     max-height: calc(100vh - 475px);
     min-height: 300px;
@@ -374,32 +344,65 @@ div.gtb-zoekvragen-geschiedenis {
 }
 
 tr.gtb-result-row > td{
-    height: 3em;
-    vertical-align: top;
+    
 }
 
 tr.gtb-result-row{
-    /* cursor: pointer; */
+    
 }
 
-a.gtb-selecteer-woordsoortgroep.off:before {
-    content: 'alles aanvinken';
+
+td.gtb-conc {
+    
 }
 
-a.gtb-selecteer-woordsoortgroep.on:before {
-    content: 'alles uitvinken ';
-}
-
-div.gtb-cell-reduced {
-    height: 3em;
-    max-height: 3em;
-    overflow-y:auto;
+td.gtb-conc > .gtb-conc {
+    line-height: 1.42858; /* 20 / 14, so 20px for font-size 14px */
+    font-size: 14px;
+    white-space: nowrap;
+    height: auto;
+    overflow: auto;
+    min-height: 60px; /*  3 lines */
+    
     cursor: pointer;
 }
+td.gtb-conc > .gtb-conc.gtb-cell-reduced {
+    overflow-y: auto;
+    height: 60px;
+}
+td.gtb-conc > .gtb-conc.gtb-cell-expanded {
+    height: auto;
+    overflow: visible; /* shouldn't happen */
+}
 
-div.gtb-cell-expanded {
-    min-height: 3em;
-    cursor: pointer;
+.gtb-conc-line {
+    display: block;
+    overflow: hidden; 
+}
+
+.gtb-conc-voor {
+    display: inline-block;
+    width: 15em;
+    direction: rtl;
+    text-align: right;
+    overflow: hidden;
+    vertical-align: top;
+}
+.gtb-conc-zoekwoord {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    vertical-align: top;
+}
+.gtb-conc-na {
+    display: inline-block;
+    width: 15em;
+    text-align: left;
+    overflow: hidden;
+    vertical-align: top;
+    text-overflow: ellipsis;
 }
 
 ul.gtb-list-subject-level2 li {
@@ -595,6 +598,14 @@ ul.gtb-list-subject-level2 li {
 .gtb-woordsoort.checkbox-inline+.gtb-woordsoort.checkbox-inline {
     margin-left: 0px;
     margin-top: 3px;
+}
+
+a.gtb-selecteer-woordsoortgroep.off:before {
+    content: 'alles aanvinken';
+}
+
+a.gtb-selecteer-woordsoortgroep.on:before {
+    content: 'alles uitvinken ';
 }
 
 /* header */
