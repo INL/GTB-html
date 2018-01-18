@@ -12,6 +12,7 @@
 }
 
 span.gtb-art-xr:before {
-    content: ' zie ook ';
+    content: '\20\25b6\a0'; // Donker driehoekje, wijst naar rechts
     font-style: italic;
+    color: #111971;
 }
