@@ -13,6 +13,7 @@
     <xsl:param name="BASEARTICLECONTENTURL" as="xs:string" required="yes"/> <!-- for development use: "http://gtb.inl.nl/iWDB/search?actie=article_content", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=article_content" -->
     <xsl:param name="BASESEARCHURL" as="xs:string" required="yes"/> <!-- for development use: "../redirect.php?actie=results", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=results" -->
     <xsl:param name="BASELISTURL" as="xs:string" required="yes"/> <!-- for development use: "redirect.php?actie=list", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=list" -->
+    <xsl:param name="GA_TRACKING_CODE" as="xs:string" select="''"/> <!-- Google Analytics tracking code; if not supplied, no tracking code will be generated (useful during debugging/testing). -->
     
     <!-- Space-separated dictionary abbreviations. Default is all dictionaries. -->
     <xsl:param name="SELECTED_SOURCES" select="'onw vmnw mnw wnt wft'"/>
@@ -121,11 +122,25 @@
                              baseArticleURL: "<xsl:value-of select="$BASEARTICLEURL"/>",
                              baseArticleContentURL: "<xsl:value-of select="$BASEARTICLECONTENTURL"/>",
                              baseSearchURL: "<xsl:value-of select="$BASESEARCHURL"/>",
-                             baseListURL: "<xsl:value-of select="$BASELISTURL"/>"
+                             baseListURL: "<xsl:value-of select="$BASELISTURL"/>",
+                             gaTrackingCode: "<xsl:value-of select="$GA_TRACKING_CODE"/>"
                         }
                     });
                 }
             </script>
+            <xsl:if test="$GA_TRACKING_CODE ne ''">
+                <xsl:comment>Global site tag (gtag.js) - Google Analytics</xsl:comment>
+                <script type="text/javascript" async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-57793092-1"></script>
+                <script type="text/javascript" xsl:expand-text="no">
+                    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+                    
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    
+                    gtag('config', '<xsl:value-of select="$GA_TRACKING_CODE"/>');
+                </script>
+            </xsl:if>
             <xsl:apply-templates select="node()" mode="#current"/>
         </xsl:copy>
     </xsl:template>

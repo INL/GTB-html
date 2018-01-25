@@ -325,7 +325,7 @@
     </xsl:template>
     
     <xsl:template match="a[@data-help]" mode="ixsl:onclick">
-        <xsl:message>base uri van / is: "{ixsl:location()}"</xsl:message>
+        <!--<xsl:message>base uri van / is: "{ixsl:location()}"</xsl:message>-->
         <xsl:variable name="href" select="resolve-uri(@data-help, ixsl:location())"/>
         <xsl:variable name="this" as="element(li)" select="ancestor::li[1]"/>
         <xsl:for-each select="key('ids', 'help-subjects')//li">

@@ -11,7 +11,8 @@ cd generate-gtb-html-files
   "BASEARTICLEURL=http://gtb.ato.inl.nl/iWDB/search?actie=article" \
   "BASEARTICLECONTENTURL=http://gtb.ato.inl.nl/iWDB/search?actie=article_content" \
   "BASESEARCHURL=http://gtb.ato.inl.nl/iWDB/search?actie=results" \
-  "BASELISTURL=http://gtb.ato.inl.nl/iWDB/search?actie=list"
+  "BASELISTURL=http://gtb.ato.inl.nl/iWDB/search?actie=list" \
+  "GA_TRACKING_CODE=UA-57793092-1"
   
 cd "$SAVEPWD"
 rm $BASE_TARGET_DIR/redirect.php
