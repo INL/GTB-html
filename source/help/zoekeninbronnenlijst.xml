@@ -5,7 +5,7 @@
 		<h1 class="helptext">Zoeken in bronnenlijst</h1>
 		<br/>
    <br/>
-Met het zoekformulier op dit tabblad kan in de bronnenlijsten van de woordenboeken gezocht worden. Voorafgaand aan iedere zoekactie moet eerst een keuze uit de woordenboeken worden gemaakt (zie "Algemeen"). Niet alle zoekmogelijkheden zijn voor alle woordenboeken van toepassing. Afhankelijk van de woordenboekselectie kan er al dan niet in bepaalde zoekvelden gezocht worden. Hieronder wordt 'Zoeken in bronnenlijst' nader toegelicht. Lees ook hierboven de informatie onder 'Algemeen' voor de informatie die voor alle zoekformulieren (tabblad 'Basiszoeken', tabblad 'Uitgebreid zoeken' en tabblad 'Zoeken in bronnenlijst') van toepassing is. Omdat het werk aan de bronnenlijst van het WNT nog volop bezig is, zijn correcties en/of aanvulling van harte welkom. <br/>
+Met het zoekformulier op dit tabblad kan in de bronnenlijsten van de woordenboeken gezocht worden. Voorafgaand aan iedere zoekactie moet eerst een keuze uit de woordenboeken worden gemaakt (zie "Algemeen"). Niet alle zoekmogelijkheden zijn voor alle woordenboeken van toepassing. Afhankelijk van de woordenboekselectie kan er al dan niet in bepaalde zoekvelden gezocht worden. Hieronder wordt 'Zoeken in bronnenlijst' nader toegelicht. Lees ook hierboven de informatie onder 'Algemeen' voor de informatie die voor alle zoekformulieren (tabblad 'Basiszoeken', tabblad 'Uitgebreid zoeken' en tabblad 'Zoeken in bronnenlijst') van toepassing is. Omdat het werk aan de bronnenlijst van het WNT nog niet volledig is, zijn correcties en/of aanvulling van harte welkom. <br/>
    <br/>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Zoekvelden</h2> 
@@ -39,17 +39,22 @@ Er kan in de bronnenlijsten van de woordenboeken gezocht worden naar werken met 
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Lokalisering</h2> 
-In het VMNW wordt elke aanhaling uit het ambtelijke materiaal gelokaliseerd door middel van de naam van de plaats waar het betreffende document geschreven is, bijv. <i>Brugge</i>. De literaire teksten kunnen echter - evenals enkele ambtelijke bescheiden- niet nauwkeuriger gelokaliseerd worden dan d.m.v. een regio-aanduiding, bijv. <i>West-Vlaanderen</i>. Elke plaatsnaam is ook gekoppeld aan een regio-aanduiding Er kan naar bronnen met een bepaalde lokalisering worden gezocht door selectie van een regio- en of plaatsaanduiding uit de meelopende lijst. Ook het ONW geeft waar mogelijk lokalisering van de bron.<br/>
+In het VMNW wordt elke aanhaling uit het ambtelijke materiaal gelokaliseerd door middel van de naam van de plaats waar het betreffende document geschreven is, bijv. <i>Brugge</i>. De literaire teksten kunnen echter - evenals enkele ambtelijke bescheiden- niet nauwkeuriger gelokaliseerd worden dan d.m.v. een regio-aanduiding, bijv. <i>West-Vlaanderen</i>. Elke plaatsnaam is ook gekoppeld aan een regio-aanduiding Er kan naar bronnen met een bepaalde lokalisering worden gezocht door selectie van een regio- en of plaatsaanduiding uit de meelopende lijst. Ook het ONW, MNW en WFT geven waar mogelijk lokalisering van de bron.<br/>
+Voor meer informatie zie: <br/> <i>Lokalisering van
+taalmateriaal uit ONW, VMNW en MNW t.b.v. de Taalbankinternetapplicatie</i>, 
+Marijke Mooijaart i.s.m. Dirk Geirnaert en Hans Westgeest,
+INL Working Papers - Taalbank Nederlands 1,
+Leiden, 2010 <a href="http://ivdnt.org/images/stories/onderzoek_en_onderwijs/publicaties/TaalbankWorkingpaper1.pdf">(PDF)</a>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Signatuur</h2> 
-In het VMNW is van elk document de verblijfplaats, inclusief signatuur opgenomen. Er kan op signatuur gezocht worden door een of meerdere woorden in het betreffende veld in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
+In het VMNW, ONW en MNW is informatie opgenomen over verblijfplaats, inclusief signatuur, van bronnen. Er kan op signatuur gezocht worden door een of meerdere woorden in het betreffende veld in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Woord in bronartikel</h2> 
-Er kan voor elk van de vier woordenboeken gezocht worden naar een woord of woordcombinatie uit een bronartikel door een of meerdere woorden in het veld <i>Woord in bronartikel</i> in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
+Er kan voor elk van de vijf woordenboeken gezocht worden naar een woord of woordcombinatie uit een bronartikel door een of meerdere woorden in het veld <i>Woord in bronartikel</i> in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
       <br/>
 	  </div>
 </div>

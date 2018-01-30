@@ -58,10 +58,10 @@
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext"> cel</h2>
-            Cellen van de tabel kunnen geëxpandeerd worden om de volledige inhoud ervan te kunnen lezen. Dat kan op drie manieren: 1. Door het
+            Cellen van de tabel kunnen geëxpandeerd worden om de volledige inhoud ervan te kunnen lezen. Dat kan op twee manieren: 1. Door het
             resizen van de kolom (zie hierboven)<br/>
-            2. Door het klikken op een cel: een tooltip verschijnt waarin in een groter font de inhoud van de betreffende cel wordt gepresenteerd. Dit kan voor de cellen in de kolommen 'Betekenis', 'Verbinding', 'Citaat' en 'Kopsectie'.<br/>
-            3. Door het klikken op een cel verschijnt een pop-up venster waarin de inhoud van de betreffende cel wordt gepresenteerd. Dit kan voor de cellen in de kolom 'Concordanties'. <br/>
+            2. Door het klikken op een cel. Dit kan voor de cellen in de kolommen 'Betekenis', 'Verbinding', 'Citaat' en 'Kopsectie'. Hetzelfde geldt voor de kolom 'Concordantie', die getoond wordt wanneer in het basiszoeken op woord in betekenisomschrijving, citaat of artikel gezocht is.<br/>
+            <br/>
             <br/>
             </div>
    <div class="helptext helptext-level2">

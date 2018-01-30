@@ -27,31 +27,31 @@
 	</div>
 	<div class="helptext helptext-level3">
 		<h3>Lokalisering</h3>
-		<p>In dit veld wordt gezocht op bronnen met een bepaalde lokalisering. Voorbeeld: typ <i>Brugge</i>. Er wordt gezocht naar bronnen uit Brugge. Alleen in ONW en VMNW.</p>
+		<p>In dit veld wordt gezocht op bronnen met een bepaalde lokalisering. Voorbeeld: typ <i>Brugge</i>. Er wordt gezocht naar bronnen uit Brugge. Alleen in ONW, VMNW, MNW en WFT.</p>
 		
 	</div>
 	<div class="helptext helptext-level3">
 		<h3>Signatuur</h3>
-		<p>In dit veld wordt gezocht op verblijfplaats/signatuur van een bron. Voorbeeld: tik in <i>Kortrijk</i> en alle bronnen met verblijfplaats in Kortrijk worden gevonden. Niet in het ONW en WNT.</p>
+		<p>In dit veld wordt gezocht op verblijfplaats/signatuur van een bron. Voorbeeld: tik in <i>Kortrijk</i> en alle bronnen met verblijfplaats in Kortrijk worden gevonden. Niet in het WNT en WFT.</p>
 		
 	</div>
 	<div class="helptext helptext-level3">
 		<h3>Woord in bronartikel</h3>
-		<p>In dit veld wordt gezocht op een woord in een bronartikel. Voorbeeld: tik in <i>??????</i> en alle bronnen met ????? worden gevonden. Niet in het ONW, WNT en VMNW.</p>
+		<p>In dit veld wordt gezocht op een woord in een bronartikel. Voorbeeld: tik in <i>??????</i> en alle bronnen met ????? worden gevonden.</p>
 		
 	</div>
 	<div class="helptext helptext-level3">
 		<h3>Knoppen</h3>
 		<p>Klikken op <code>
-			<b>Start zoeken</b>
+			<b>Zoek</b>
 		</code> zorgt ervoor dat het zoeken begint; klikken op <code>
-			<b>Wis velden</b>
-		</code> zorgt ervoor dat de velden voor een nieuwe zoekvraag worden leeggemaakt. Om een overzicht te krijgen van de reeds gestelde zoekvragen, klik op <code>
-			<b>Geschiedenis</b>
-		</code>. Om hoofdletter- en accentgevoelig te kunnen zoeken, klik op <code>
-			<b>H(oofdletters) &amp; A(ccenten)</b>
-		</code>. Klikken op <code>
-			<b>Symbool</b>
-		</code> zorgt ervoor dat de lijst met bijzondere lettertekens verschijnt.</p>
+			<b>Wis</b>
+		</code> zorgt ervoor dat de velden voor een nieuwe zoekvraag worden leeggemaakt. Om een overzicht te krijgen van de reeds gestelde zoekvragen,
+			klik op <code>
+				<b>Geschiedenis</b></code>. Om hoofdletter- en accentgevoelig te kunnen zoeken, klik op <code>
+				<b>Letters exact</b></code>. Klikken op <code>
+				<b>Speciale tekens</b>
+			</code> zorgt ervoor dat de lijst met bijzondere
+			lettertekens verschijnt.</p>
 	</div>
 </div>
