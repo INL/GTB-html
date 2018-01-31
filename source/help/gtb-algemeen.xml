@@ -1,12 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <div class="helptext helptext-level1">
-	
-		<h1 class="helptext">Algemeen</h1>
-		<br/>
-   <br/>
-		De online historische woordenboeken, ook wel de Geïntegreerde Taalbank (GTB) genoemd, vormen de eerste component van de infrastructuur voor historisch Nederlands die door het INT wordt ontwikkeld. De infrastructuur bestaat uit de historische woordenboeken van het Nederlands, computationele lexica (<a href="http://www.ivdnt.org/onderzoek-a-onderwijs/projecten/gigant">GiGaNT</a> en <a href="http://www.ivdnt.org/onderzoek-a-onderwijs/projecten/clariah#diamant">DiaMaNT</a>) en synchrone en diachrone corpora die onderzoek naar de vele aspecten van de Nederlandse taal (en cultuur) door de eeuwen heen moet faciliteren.<br/>
-   <br/>
-		Het <i>Woordenboek der Nederlandsche Taal</i> was de eerste module van het woordenboekenportaal. In april 2007 is het <i>Vroegmiddelnederlands Woordenboek</i> beschikbaar gekomen en in 2009 zijn het <i>Oudnederlands Woordenboek</i> en het <i>Middelnederlandsch Woordenboek</i> toegevoegd. In het kader van het CLARIN-project GTB-WFT is in 2010 het WFT toegevoegd. 
+	<script style="text/javascript">
+function toggleHiddenText()
+{	
+	var x = document.getElementById('licenseText')	
+	if (x.style.display=='none') x.style.display='block';	
+	else x.style.display='none';
+}
+</script>
+	<h1 class="helptext">Algemeen</h1>
+	<br/>
+	<br/>		De online historische woordenboeken, ook wel de Geïntegreerde Taalbank (GTB) genoemd, vormen de eerste component van de infrastructuur voor historisch Nederlands die door het INT wordt ontwikkeld. De infrastructuur bestaat uit de historische woordenboeken van het Nederlands, computationele lexica (		
+	<a href="http://www.ivdnt.org/onderzoek-a-onderwijs/projecten/gigant">GiGaNT</a> en 		
+	<a href="http://www.ivdnt.org/onderzoek-a-onderwijs/projecten/clariah#diamant">DiaMaNT</a>) en synchrone en diachrone corpora die onderzoek naar de vele aspecten van de Nederlandse taal (en cultuur) door de eeuwen heen moet faciliteren.		
+	<br/>
+	<br/>		Het 		
+	<i>Woordenboek der Nederlandsche Taal</i> was de eerste module van het woordenboekenportaal. In april 2007 is het 		
+	<i>Vroegmiddelnederlands Woordenboek</i> beschikbaar gekomen en in 2009 zijn het 		
+	<i>Oudnederlands Woordenboek</i> en het 		
+	<i>Middelnederlandsch Woordenboek</i> toegevoegd. In het kader van het CLARIN-project GTB-WFT is in 2010 het WFT toegevoegd. 		
+	<div id="licenseAccept">
+		<p>				Door te klikken op 'Start de applicatie' gaat u akkoord met de Eindgebruikersovereenkomst.			</p>
+		<div id="licenseRead">
+			<p>
+				<a href="javascript:toggleHiddenText();">Lees de overeenkomst</a>
+			</p>
+			<div id="licenseText" style="display: none;">
+				<div id="licenseTextContent">
+					<div id="licenseTextButton">
+						<input type="button" value="Sluiten" onclick="javascript:toggleHiddenText();"/>
+					</div>
+					<h1>Eindgebruikersovereenkomst</h1>
+					<p>Dit is een Eindgebruikersovereenkomst tussen u (Eindgebruiker) enerzijds en het Instituut voor Nederlandse Lexicologie (INL) en de Nederlandse Taalunie (NTU) anderzijds voor het gebruik van de Geintegreerde Taalbank online (GTB).</p>
+					<p>Eindgebruiker heeft het recht om de GTB te raadplegen en te gebruiken voor eigen oefening, studie of gebruik, op voorwaarde dat Eindgebruiker dat doet zonder direct of indirect economisch of commercieel  winstoogmerk.</p>
+					<ol>
+						<li>Eindgebruiker mag de GTB of een kwalitatief of kwantitatief substantieel gedeelte van de GTB niet reproduceren, verveelvoudigen of openbaarmaken en het niet beschikbaar stellen aan derden. Ook mag Eindgebruiker op basis van de GTB geen afgeleide producten vervaardigen of beschikbaar stellen aan derden.</li>
+						<li>Eindgebruiker verkrijgt geen eigendom, auteursrechten, databankrechten en/of andere rechten ten aanzien van de GTB of een gedeelte ervan.</li>
+						<li>Eindgebruiker erkent dat het gebruik van de GTB onderworpen is aan restricties die door het auteursrecht en andere vormen van wettelijke bescherming, waaronder begrepen maar niet beperkt tot de naburige rechten, auteursrechten, het databankenrecht en rechten op software, volgens Nederlands recht worden opgelegd, en dat schendingen van zulke restricties leiden tot wettelijke aansprakelijkheid. Eindgebruiker onthoudt zich van het schenden van restricties. Bijgevolg publiceert of neemt Eindgebruiker geen teksten of andersoortige data op, anders dan korte voorbeelden in wetenschappelijke publicaties en presentaties.</li>
+						<li>Indien Eindgebruiker in welk onderdeel dan ook van de GTB fouten (bugs), onvolkomenheden, inconsequenties etc. aantreft, wordt Eindgebruiker verzocht die aan INL schriftelijk of elektronisch te melden. Het publiceren van lijsten van fouten, onvolkomenheden etc. is voorbehouden aan INL en NTU.</li>
+						<li>Eindgebruiker zal in iedere openbare presentatie of in iedere wetenschappelijke publicatie of publicatie voor onderwijsdoeleinden, waarin verwezen wordt naar de GTB en/of waarin melding wordt gemaakt van het gebruik van de GTB en/of verslag wordt gedaan van werk waarbij van de GTB gebruik is gemaakt, melden dat de onder deze overeenkomst geboden faciliteit mede door de NTU en het INL mogelijk is gemaakt.</li>
+						<li>De rechten die in deze overeenkomst aan Eindgebruiker zijn verleend, zijn niet overdraagbaar. Eindgebruiker heeft niet het recht de middels deze overeenkomst verleende licentie in sublicentie te geven.</li>
+						<li>INL en NTU geven geen enkele garantie en accepteren geen enkele verantwoordelijkheid voor welke beperkingen of fouten in de GTB dan ook, zowel wat betreft data, tools als systemen, en accepteren geen enkele aansprakelijkheid voor schade, verlies of ongerief dat zou kunnen voortkomen uit het gebruik van de GTB of de gegevens vallend onder deze overeenkomst. INL en NTU geven geen enkele garantie dat de GTB of een gedeelte ervan voor bepaalde specifieke doeleinden kan worden gebruikt.</li>
+						<li>Op deze overeenkomst is het Nederlands recht van toepassing. Geschillen zullen bij uitsluiting worden voorgelegd aan de bevoegde rechtbank te Den Haag.</li>
+					</ol>
+					<div id="licenseTextButton">
+						<input type="button" value="Sluiten" onclick="javascript:toggleHiddenText();"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='fontje'>								Het lettertype voor de bijzondere symbolen kunt u hier downloaden:               				
+		<a href="../../../font/gtbfont.exe">Windows</a>,               				
+		<a href="../../../font/inlfonts.zip">Mac</a> of               				
+		<a href="../../../font/inlfonts.zip">Linux</a>.		
+	</div>
+	<div id="copyright">
+		<p>         © 2007-2018, 								
+			<a target="_top" href="http://www.inl.nl">Instituut voor Nederlandse Lexicologie</a>. Laatste wijzigingen: februari 2018. Dit project wordt via de 								
+			<a target="_top" href="http://www.taalunieversum.org">Nederlandse Taalunie</a> gefinancierd door het 								
+			<a target="_top" href="http://www.minocw.nl/">Ministerie van OCW</a> en het 								
+			<a target="_top" href="http://www.vlaanderen.be/">Ministerie van de Vlaamse Gemeenschap</a>.         Het toevoegen van het WFT is mede tot stand gekomen dankzij 								
+			<a href="http://www.clarin.nl">CLARIN-NL</a>.         Het WFT is een product van de 								
+			<a href="http://www.fryske-akademy.nl">Fryske Akademy</a>.      						
+		</p>
+		<div id="partners" style="text-align:center">
+			<span>
+				<a target="_blank" href="http://www.ntu.nl"><img width="55" title="Nederlandse Taalunie" src="../img/ntu_logo.png"/></a>
+			</span>
+			<span id="vertlinesOne">
+				<a target="_blank" href="http://www.clarin.nl"><img height="50" title="Common Language Resources and Technology Infrastructure" src="../img/CLARIN-Logo-NL200.bmp"/></a>
+			</span>
+			<span>
+				<a target="_blank" href="http://www.rijksoverheid.nl/ministeries/ocw"><img width="50" title="Ministerie van Onderwijs, Cultuur en Wetenschap" src="../img/ocw_logo_cw.gif"/></a>
+			</span>
+			<span id="vertlinesTwo">
+				<a target="_blank" href="http://www.ond.vlaanderen.be/"><img height="50" title="Vlaams Ministerie van Onderwijs en Vorming" src="../img/vlaamse-overheid-wit.GIF"/></a>
+			</span>
+			<span>
+				<a target="_blank" href="http://www.fa.knaw.nl"><img width="220" style="position: relative; margin-top: 5px;" title="Fryske Akademy" src="../img/logo FA-transparant.jpg"/></a>
+			</span>
+		</div>
+	</div>
 </div>
-
