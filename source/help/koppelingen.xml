@@ -14,6 +14,8 @@
       <h2 class="helptext">Koppelingen aan het WNT</h2>
             Hier zijn interne koppelingen te vinden naar het vorige en het volgende woordenboekartikel en naar eventuele informatie met betrekking tot het trefwoord in het Supplement en/of de Aanvullingen.
             <br/>
+            Er is een koppeling naar het overeenkomstige lemma in het MNW, indien van toepassing.
+            <br/>
             Ook kan een trefwoord een of meer koppelingen bevatten naar externe informatie. De externe informatie is onderverdeeld in vier hoofdcategorieën: etymologie, dialectologie, afbeeldingen en overige informatie. <br/>
             Onder etymologie zijn koppelingen opgenomen naar M. Philippa (e.a.), <i>Etymologisch woordenboek van het Nederlands</i>. Amsterdam: AUP, 2004 -  (afgekort als EWN) en naar G.J. van Wyk (e.a.), <i>Etimologiewoordeboek van Afrikaans</i>. Stellenbosch: Buro van die WAT, 2003 (afgekort als EWA).<br/> 
             Bij dialectologie zijn koppelingen opgenomen naar L. Grootaers en G.G. Kloeke, <i>Taalatlas van Noord- en Zuid-Nederland</i>. Leiden: E.J. Brill, 1939 (afgekort als Taalatlas) en gedeeltelijk ook al naar de drie grote regionale woordenboeken, <i>het Woordenboek van de Brabantse Dialecten</i> (WBD), het <i>Woordenboek van de Limburgse Dialecten</i> (WLD) en het <i>Woordenboek van de Vlaamse Dialecten</i> (WVD). <br/>
@@ -36,7 +38,7 @@
             
             </div>
    <div class="helptext helptext-level2">
-      <h2 class="helptext">Koppelingen aan het MNW</h2>In het koppelingenschermpje zijn interne koppelingen te vinden naar het voorafgaande en het volgende woordenboekartikel. Bij lemmata waarvoor een overeenkomstig lemma in het ONW te vinden is, is eveneens een koppeling aangebracht; koppelingen met de overige historische woordenboeken zullen bij volgende releases aangebracht worden. <br/>
+      <h2 class="helptext">Koppelingen aan het MNW</h2>In het koppelingenschermpje zijn interne koppelingen te vinden naar het voorafgaande en het volgende woordenboekartikel. Bij lemmata waarvoor een overeenkomstig lemma in het ONW of WNT te vinden is, is eveneens een koppeling aangebracht; koppelingen met het VMNW zullen bij volgende releases aangebracht worden. <br/>
       <br/>
             
         </div>

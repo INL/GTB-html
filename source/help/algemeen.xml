@@ -28,12 +28,12 @@
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Hoofdletter- en accentgevoelig zoeken</h2> 
-                        Bij het zoeken wordt standaard geen onderscheid gemaakt tussen hoofdletters en kleine letters en tussen lettertekens met of zonder accent. Het is echter wel mogelijk om hoofdletter- en accentgevoelig te zoeken door onder in het scherm de optie <i>Letters exact</i> aan te vinken. De meelopende lijsten passen zich hierbij aan. <br/>
+                        Bij het zoeken wordt standaard geen onderscheid gemaakt tussen hoofdletters en kleine letters en tussen lettertekens met of zonder accent. Het is echter wel mogelijk om hoofdletter- en accentgevoelig te zoeken door onder in het scherm de optie <code class='knop'>Letters exact</code> aan te vinken. De meelopende lijsten passen zich hierbij aan. <br/>
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Bijzondere lettertekens</h2> 
-                        Bij het invoeren van woorden of woorddelen kan men voor de bijzondere lettertekens gebruik maken van de functie 'Speciale tekens' onder aan het scherm. Hiermee wordt een tabel opgeroepen waarin alle in de woordenboeken voorkomende bijzondere lettertekens zijn opgenomen. Selectie van een letterteken gebeurt door te klikken op het letterteken. Door nogmaals op 'Speciale tekens' te klikken kan men de tabel weer verbergen. Om bepaalde bijzondere lettertekens in de GTB-applicatie te kunnen zien, heeft u het INL-woordenboekenfont nodig. Dat kan gedownloaded worden op de startpagina. <br/>
+                        Bij het invoeren van woorden of woorddelen kan men voor de bijzondere lettertekens gebruik maken van de functie 'Speciale tekens' onder aan het scherm. Hiermee wordt een tabel opgeroepen waarin alle in de woordenboeken voorkomende bijzondere lettertekens zijn opgenomen. Selectie van een letterteken gebeurt door te klikken op het letterteken. Door nogmaals op <code class='knop'>Speciale tekens</code> te klikken kan men de tabel weer verbergen. Om bepaalde bijzondere lettertekens in de GTB-applicatie te kunnen zien, heeft u het INL-woordenboekenfont nodig. Dat kan gedownloaded worden op de startpagina. <br/>
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
@@ -46,7 +46,7 @@
       <h2 class="helptext">Zoeken met operatoren</h2> 
                         Het is binnen de zoekvelden ook mogelijk om met behulp van operatoren op combinaties van woorden en/of woorddelen te zoeken. De operatoren die gebruikt kunnen worden zijn en (&amp;), of (|), niet (!) en afstand (#, en "). <br/>
                         <br/>
-                        <i>EN.</i> De operator 'en' heeft de vorm &amp;. Een combinatie van meer dan twee termen is mogelijk, bijv. <i>appel &amp; peer &amp; mispel</i>. Een combinatie van zoektermen zonder operatoren wordt eveneens
+                        <i>EN</i><br/> De operator 'en' heeft de vorm &amp;. Een combinatie van meer dan twee termen is mogelijk, bijv. <i>appel &amp; peer &amp; mispel</i>. Een combinatie van zoektermen zonder operatoren wordt eveneens
                         geïnterpreteerd als een logische EN. <br/>
       <br/>
                         <i>Voorbeeld</i>: <i>appel &amp; peer</i> in veld citaat.<br/>
@@ -56,13 +56,13 @@
 	... een peer of eenen appel ...</pre>
                         
                         <br/>
-      <i>OF.</i> De operator 'of' heeft de vorm "|".<br/>
+      <i>OF</i><br/> De operator 'of' heeft de vorm "|".<br/>
                         <i>Voorbeeld</i>: <i>mensch | menschen</i> in veld betekenis<br/>
                         <i>Resultaat</i>: betekenissen waarvan de omschrijving ofwel 'mensch' ofwel 'menschen' bevat.
                         
                         <br/>
       <br/>
-      <i>NIET</i>. De operator '!' staat voor de uit te sluiten zoekterm. Een
+      <i>NIET</i><br/> De operator '!' staat voor de uit te sluiten zoekterm. Een
                         zoekvraag moet voor ieder ingevuld veld tenminste een positieve zoekterm bevatten.<br/>
                         <i>Voorbeeld</i>: behoeve ! ten in citaat.<br/>
                         <i>Resultaat</i>: citaten die "behoeve" bevatten, maar niet "ten".<br/>
@@ -71,7 +71,7 @@
 	... t'hunnen behoeve ...</pre>
                         
                         <br/>
-      <i>AFSTAND</i>. De afstandsoperator heeft drie verschijningsvormen: een
+      <i>AFSTAND</i><br/> De afstandsoperator heeft drie verschijningsvormen: een
                         eenvoudige waarmee volgorde-onafhankelijk gezocht wordt, een uitgebreide
                         waarmee ook de volgorde te beregelen is, en de syntax van de onderliggende
                         search engine (lucene).
@@ -127,17 +127,17 @@
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Starten zoekactie</h2> 
-                        Het starten van een zoekactie gebeurt door na het invullen van de gewenste zoekvelden te klikken op de optie 'Zoek'.<br/>
+                        Het starten van een zoekactie gebeurt door na het invullen van de gewenste zoekvelden te klikken op de optie <code class='knop'>Zoek</code> of een &lt;enter&gt; in te geven.<br/>
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Afbreken zoekactie</h2> 
-                        In deze versie is het helaas nog niet mogelijk een zoekactie af te breken. De applicatie wordt hiervoor zo spoedig mogelijk aangepast. U kunt vooralsnog uw scherm verversen in de browser.<br/>
+                        In deze versie is het helaas nog niet mogelijk een zoekactie af te breken. De applicatie wordt hiervoor zo spoedig mogelijk aangepast. U kunt vooralsnog uw venster verversen in de browser.<br/>
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Foutmeldingen</h2> 
-                        Wanneer een zoekvraag geen resultaat oplevert, kan dat twee oorzaken hebben: er is geen data die aan de gevraagde criteria voldoet of er is een fout in de vraagstelling. In het tweede geval verschijnt er na het starten van de zoekactie een melding op het tablad 'resultaat' met suggesties voor een mogelijke oplossing. Wanneer een zoekvraag te veel resultaten oplevert, wordt verzocht om de vraag wat specifieker te stellen.<br/>
+                        Wanneer een zoekvraag geen resultaat oplevert, kan dat twee oorzaken hebben: er is geen data die aan de gevraagde criteria voldoet of er is een fout in de vraagstelling. In het tweede geval verschijnt er na het starten van de zoekactie een melding op het tablad <i>resultaat</i> met suggesties voor een mogelijke oplossing. Wanneer een zoekvraag te veel resultaten oplevert, wordt verzocht om de vraag wat specifieker te stellen.<br/>
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
@@ -147,7 +147,7 @@
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Geschiedenis</h2> 
-                        Bij elk zoekformulier kan de gebruiker een overzicht krijgen van de vragen die hij binnen zijn sessie gesteld heeft. Uit dat overzicht kan hij een vraag selecteren voor hergebruik. De zoekgeschiedenis verschijnt in een apart venster na het klikken op de optie 'Geschiedenis' onderaan het scherm. Er wordt een lijst met zoekvragen gepresenteerd, waarbij de meest recente zoekvraag bovenaan staat. Het weergeven van de vragen gebeurt door een opsomming van de velden waarbinnen gezocht is en de waarde(s) die in dat veld zijn ingevoerd. Door met de muis te dubbelklikken op een eerder gestelde zoekvraag wordt deze geselecteerd en naar het betreffende zoekformulier gekopieerd. <br/>
+                        Bij elk zoekformulier kan de gebruiker een overzicht krijgen van de vragen die hij binnen zijn sessie gesteld heeft. Uit dat overzicht kan hij een vraag selecteren voor hergebruik. De zoekgeschiedenis verschijnt in een apart venster na het klikken op de optie <code class='knop'>Geschiedenis</code> onderaan het scherm. Er wordt een lijst met zoekvragen gepresenteerd, waarbij de meest recente zoekvraag bovenaan staat. Het weergeven van de vragen gebeurt door een opsomming van de velden waarbinnen gezocht is en de waarde(s) die in dat veld zijn ingevoerd. Door met de muis te dubbelklikken op een eerder gestelde zoekvraag wordt deze geselecteerd en naar het betreffende zoekformulier gekopieerd. <br/>
       <br/>
                 </div>
                 

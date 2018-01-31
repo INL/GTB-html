@@ -5,16 +5,8 @@
 		de meeste zoekvelden kan ook gezocht worden met wildcards, operatoren en reguliere expressies. Lees meer hierover in het tabblad 'Help &amp; Info'. </p>
 	<div class="helptext helptext-level3">
 		<h3>Knoppen</h3>
-		<p>Klikken op <code>
-			<b>Zoek</b>
-		</code> zorgt ervoor dat het zoeken begint; klikken op <code>
-			<b>Wis</b>
-		</code> zorgt ervoor dat de velden voor een nieuwe zoekvraag worden leeggemaakt. Om een overzicht te krijgen van de reeds gestelde zoekvragen,
-			klik op <code>
-				<b>Geschiedenis</b></code>. Om hoofdletter- en accentgevoelig te kunnen zoeken, klik op <code>
-				<b>Letters exact</b></code>. Klikken op <code>
-				<b>Speciale tekens</b>
-			</code> zorgt ervoor dat de lijst met bijzondere
+		<p>Klikken op <code class='knop'><b>Zoek</b></code> zorgt ervoor dat het zoeken begint; klikken op <code class='knop'><b>Wis</b></code> zorgt ervoor dat de velden voor een nieuwe zoekvraag worden leeggemaakt. Om een overzicht te krijgen van de reeds gestelde zoekvragen,
+			klik op <code class="knop"><b>Geschiedenis</b></code>. Om hoofdletter- en accentgevoelig te kunnen zoeken, klik op <code class="knop"><b>Letters exact</b></code>. Klikken op <code class="knop"><b>Speciale tekens</b></code> zorgt ervoor dat de lijst met bijzondere
 			lettertekens verschijnt.</p>
 <!--
 			Door op <code>

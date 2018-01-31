@@ -37,21 +37,13 @@
 	</div>
 	<div class="helptext helptext-level3">
 		<h3>Woord in bronartikel</h3>
-		<p>In dit veld wordt gezocht op een woord in een bronartikel. Voorbeeld: tik in <i>??????</i> en alle bronnen met ????? worden gevonden.</p>
+		<p>In dit veld wordt gezocht op een woord in een bronartikel. Voorbeeld: tik in <i>moddeworst</i> en alle bronnen met 'moddeworst' worden gevonden.</p>
 		
 	</div>
 	<div class="helptext helptext-level3">
 		<h3>Knoppen</h3>
-		<p>Klikken op <code>
-			<b>Zoek</b>
-		</code> zorgt ervoor dat het zoeken begint; klikken op <code>
-			<b>Wis</b>
-		</code> zorgt ervoor dat de velden voor een nieuwe zoekvraag worden leeggemaakt. Om een overzicht te krijgen van de reeds gestelde zoekvragen,
-			klik op <code>
-				<b>Geschiedenis</b></code>. Om hoofdletter- en accentgevoelig te kunnen zoeken, klik op <code>
-				<b>Letters exact</b></code>. Klikken op <code>
-				<b>Speciale tekens</b>
-			</code> zorgt ervoor dat de lijst met bijzondere
+		<p>Klikken op <code class='knop'><b>Zoek</b></code> zorgt ervoor dat het zoeken begint; klikken op <code class="knop"><b>Wis</b></code> zorgt ervoor dat de velden voor een nieuwe zoekvraag worden leeggemaakt. Om een overzicht te krijgen van de reeds gestelde zoekvragen,
+			klik op <code class="knop"><b>Geschiedenis</b></code>. Om hoofdletter- en accentgevoelig te kunnen zoeken, klik op <code class="knop"><b>Letters exact</b></code>. Klikken op <code class="knop"><b>Speciale tekens</b></code> zorgt ervoor dat de lijst met bijzondere
 			lettertekens verschijnt.</p>
 	</div>
 </div>
