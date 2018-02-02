@@ -226,7 +226,9 @@
             <h4 class="gtb-zoekvraag-description">Zoekvraag = <xsl:copy-of select="ixsl:get(ixsl:page(), $CURRENT_QUESTION_DESCRIPTION_PROPERTY)"/></h4>
             
             <!-- First inform Google analytics: -->
-            <xsl:sequence select="js:sendGooglePageView($url-for-content)[ivdnt:always-false()]" />
+            <xsl:if test="$gaTrackingCode ne ''">
+                <xsl:sequence select="js:sendGooglePageView($url-for-content)[ivdnt:always-false()]"/>
+            </xsl:if>
             
             <!-- Now, load en show the result of the query: -->
             <xsl:apply-templates select="doc($url-for-content)" mode="render-results">
@@ -362,7 +364,9 @@
     <xsl:template name="ivdnt:load-help">
         <xsl:param name="href" as="xs:string"/>
         <!-- First inform Google analytics: -->
-        <xsl:sequence select="js:sendGooglePageView($href)[ivdnt:always-false()]" />
+        <xsl:if test="$gaTrackingCode ne ''">
+            <xsl:sequence select="js:sendGooglePageView($href)[ivdnt:always-false()]"/>
+        </xsl:if>
         <xsl:result-document href="#help" method="ixsl:replace-content">
             <xsl:copy-of select="doc($href)"/>
         </xsl:result-document>
