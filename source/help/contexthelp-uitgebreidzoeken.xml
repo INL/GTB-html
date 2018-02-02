@@ -16,4 +16,29 @@
 			</code> aan te klikken, wordt de beginsituatie hersteld. 
 		--> 
 	</div>
+
+<div class="helptext helptext-level3">
+<h3 class="helptext">Morfologie</h3>
+<b>Morfologisch element</b><br/>In het ONW en VMNW kan in dit veld gezocht worden naar morfologische bestanddelen van trefwoorden. Voorbeeld: VMNW: <i>-lijc</i> of <i>-nesse</i>.  Lees meer hierover in het tabblad 'Help &amp; Info'. Nog niet in het WNT.<br/><br/><b>Woorden in de morfologische beschrijving</b><br/>In het ONW en VMNW kan gezocht worden in de redactionele tekst van de morfologische beschrijving van een woord. Voorbeeld: VMNW: <i>vleivorm</i> of <i>vleisuffix</i>. Lees meer hierover in het tabblad 'Help &amp; Info'. Nog niet in het WNT.<br/><br/><b>Woordvormingstype</b><br/>In het ONW kan gezocht worden op woordvorming. Voorbeeld: ONW: selecteer in de combobox <i>samenst. bw+znw</i>.<br/>
+</div>
+<div class="helptext helptext-level3">
+<h3 class="helptext">Betekenis</h3>
+<b>Woord in betekenis</b><br/>In dit veld wordt alleen in de betekenisomschrijvingen gezocht. Voorbeeld: (WNT) <i>plant</i>. Er wordt gezocht naar woordenboekartikelen met een betekenisomschrijving die het woord <i>plant</i> bevat.<br/><br/><b>Label bij betekenis</b><br/> In dit veld wordt gezocht op een label bij een betekenis. Voorbeeld: klik op de pijltjes rechts van het invulveld, klik op <i>Lakenind.</i>.  Er wordt gezocht naar trefwoorden die een bijzondere betekenis in de lakenindustrie hebben. Nog niet in het WNT.<br/><br/> <b>Collocaties/verbindingen</b><br/>In dit veld wordt gezocht op collocaties/verbindingen. Voorbeeld: VMNW: <i>crucen</i> intikken levert de verbinding <i>der heiligher crucen, des heilighen crucen avont</i> bij het trefwoord <i>avont</i> op. Nog niet in het WNT<br/><br/><b>Semantische classificatie</b><br/>In dit veld wordt gezocht op semantische classificatie. Voorbeeld: klik op de pijltjes rechts van het invulveld, klik op <i>Boomnaam</i>. Er wordt gezocht naar trefwoorden die namen van bomen zijn. Alleen in het VMNW.<br/>
+</div>
+<div class="helptext helptext-level3">
+<h3 class="helptext">Citaten</h3>
+In dit veld wordt alleen in de citaatteksten gezocht (zonder bronvermelding). Voorbeeld: (WNT) <i>verrassingsvrees</i>. Er wordt gezocht naar alle woordenboekartikelen met een citaat dat het woord <i>verrassingsvrees</i> bevat.
+</div>
+<div class="helptext helptext-level3">
+<h3 class="helptext">Brongegevens</h3>
+<b>Auteur citaat</b><br/>In dit veld wordt naar citaten van een bepaald auteur gezocht. Voorbeeld: (WNT)  <i>bijns</i>. Advies: bekijk de verschenen meelopende lijst en werk indien nodig met wildcards of operatoren. Lees hierover meer in het tabblad 'Help &amp; Info'. Niet in het ONW en VMNW opvraagbaar.<br/><br/><b>Verkorte brontitlel</b><br/>In dit veld wordt naar citaten uit bronnen met een bepaalde titel gezocht. Voorbeeld: (WNT) Tik in: <i>klaagged</i>. Advies: bekijk de verschenen meelopende lijst en werk indien nodig met wildcards of operatoren. Lees hierover meer in het tabblad 'Help &amp; Info'.<br/><br/><b>Datering bron</b><br/>In dit veld wordt naar citaten gezocht uit een bepaalde periode of van een bepaalde datum. Voorbeeld: (WNT) Wanneer men bij 'vanaf' <i>1650</i> intikt, worden alle citaten vanaf 1650 gevonden. Wanneer men bij 'tot/met'<i>1700</i> intikt, worden alle citaten tot en met 1700 gevonden. Wanneer men bij zowel 'vanaf' als 'tot/met' <i>1508</i> intikt, worden alle citaten met die precieze datering en alle citaten met een datering waarbinnen dit jaartal valt, gevonden.<br/><br/><b>Lokalisering bron</b><br/>In dit veld wordt gezocht op lokalisering van de bron. Voorbeeld: typ <i>Brugge</i>. Er wordt gezocht naar citaten uit Brugge. Alleen in het ONW en VMNW.
+</div>
+<div class="helptext helptext-level3">
+<h3 class="helptext">Oudste citaat</h3>
+<b>Datering oudste citaat</b><br/>In dit veld wordt gezocht op datering van het oudste citaat. Voorbeeld: (VMNW) Waneer men bij 'vanaf' <i>1200</i> intikt, worden alle artikelen met een oudste citaat uit 1200 gevonden. Wanneer men bij 'tot/met' <i>1240</i> intikt, worden alle artikelen gevonden met een oudste vindplaats tot en met 1240. Wanneer men bij zowel 'vanaf' als 'tot/met' <i>1240</i> intikt, worden alle artikelen gevonden met een oudste vindplaats met precies die datering. Nog niet in het WNT opvraagbaar. <br/><br/><b>Lokalisering oudste citaat</b><br/>In dit veld wordt gezocht op lokalisering van het oudste citaat. Voorbeeld: klik op de pijltjes rechts van het invulveld, klik op <i>Brugge</i>. Er wordt gezocht naar trefwoorden waarvan de oudste vindplaats uit Brugge komt. Niet in ONW en WNT.<br/>
+</div>
+<div class="helptext helptext-level3">
+<h3 class="helptext">Flexie</h3>
+<b>Type</b><br/>In dit veld wordt gezocht op flexietype. Voorbeeld: klik op de pijltjes rechts van het invulveld, klik op <i>datief pluralis</i>.  Er wordt gezocht naar trefwoorden waarvan de dativus pluralis is aangetroffen en beschreven. Alleen in het ONW en VMNW.<br/><br/><b>Vorm</b><br/>In dit veld wordt gezocht op flexievorm. Voorbeeld: zoek eerst op flexietype <i>genitief singularis</i> en vul vervolgens bij flexievorm in <i>-s</i>. Er wordt gezocht naar trefwoorden waarvan een genitivus singularis  op <i>-s</i> is aangetroffen en beschreven. Alleen in het ONW en VMNW.<br/>
+</div>
 </div>
