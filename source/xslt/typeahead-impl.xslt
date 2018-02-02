@@ -29,7 +29,7 @@
         <xsl:variable name="sensitivity" as="xs:string" select="xs:string(ivdnt:is-checked($sensitivity-input))"/>
         
         <xsl:variable name="url" as="xs:string" select="$baseListURL || '&amp;index=' || $textfield-name || '&amp;prefix=' || encode-for-uri($textfield-value) || '&amp;wdb=' || $wdb-inputs || '&amp;sensitive=' || $sensitivity"/>
-        
+        <xsl:message select="'url=' || $url"/>
         <ixsl:schedule-action document="{$url}">
             <xsl:call-template name="ivdnt:retrieve-typeahead-listitems">
                 <xsl:with-param name="url" select="$url"/>
@@ -59,13 +59,22 @@
             <xsl:if test="not(preceding-sibling::result)">
                 <xsl:attribute name="class" select="'active'"/>
             </xsl:if>
+            <xsl:variable name="lemma">
+                <xsl:try>
+                    <xsl:value-of select="if (matches(@Lemma, '&lt;.*&gt;')) then string(parse-xml-fragment(@Lemma)) else string(@Lemma)"/>
+                    <xsl:catch>
+                        <xsl:message>Fout bij parseren van typeahead-lemma, input={@Lemma}</xsl:message>
+                        <xsl:sequence select="''"/>
+                    </xsl:catch>
+                </xsl:try>
+            </xsl:variable>
             <a class="dropdown-item" href="#" role="option">
                 <!-- Web en Lemma worden in andere volgorde getoond dan de volgorde van onderstaande spans.
                      Dat komt door de float in de style van gtb-typeahead-wdb. De reden om dit zo te doen is dat Firefox
                      anders de eerste twee lijst-items toont zonder info over de woordenboeken.
                 -->
                 <span class="gtb-typeahead-wdb">{@Wdb}</span>
-                <span class="gtb-typeahead-word">{@Lemma}</span>
+                <span class="gtb-typeahead-word">{$lemma}</span>
             </a>
         </li>
     </xsl:template>
