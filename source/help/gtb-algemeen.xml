@@ -66,19 +66,19 @@ function toggleHiddenText()
 		</p>
 		<div id="partners" style="text-align:center">
 			<span>
-				<a target="_blank" href="http://www.ntu.nl"><img width="55" title="Nederlandse Taalunie" src="../img/ntu_logo.png"/></a>
+				<a target="_blank" href="http://www.ntu.nl"><img width="55" title="Nederlandse Taalunie" src="img/ntu_logo.png"/></a>
 			</span>
 			<span id="vertlinesOne">
-				<a target="_blank" href="http://www.clarin.nl"><img height="50" title="Common Language Resources and Technology Infrastructure" src="../img/CLARIN-Logo-NL200.bmp"/></a>
+				<a target="_blank" href="http://www.clarin.nl"><img height="50" title="Common Language Resources and Technology Infrastructure" src="img/CLARIN-Logo-NL200.bmp"/></a>
 			</span>
 			<span>
-				<a target="_blank" href="http://www.rijksoverheid.nl/ministeries/ocw"><img width="50" title="Ministerie van Onderwijs, Cultuur en Wetenschap" src="../img/ocw_logo_cw.gif"/></a>
+				<a target="_blank" href="http://www.rijksoverheid.nl/ministeries/ocw"><img width="50" title="Ministerie van Onderwijs, Cultuur en Wetenschap" src="img/ocw_logo_cw.gif"/></a>
 			</span>
 			<span id="vertlinesTwo">
-				<a target="_blank" href="http://www.ond.vlaanderen.be/"><img height="50" title="Vlaams Ministerie van Onderwijs en Vorming" src="../img/vlaamse-overheid-wit.GIF"/></a>
+				<a target="_blank" href="http://www.ond.vlaanderen.be/"><img height="50" title="Vlaams Ministerie van Onderwijs en Vorming" src="img/vlaamse-overheid-wit.GIF"/></a>
 			</span>
 			<span>
-				<a target="_blank" href="http://www.fa.knaw.nl"><img width="220" style="position: relative; margin-top: 5px;" title="Fryske Akademy" src="../img/logo FA-transparant.jpg"/></a>
+				<a target="_blank" href="http://www.fa.knaw.nl"><img width="220" style="position: relative; margin-top: 5px;" title="Fryske Akademy" src="img/logo FA-transparant.jpg"/></a>
 			</span>
 		</div>
 	</div>
