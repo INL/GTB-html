@@ -59,15 +59,8 @@
             <xsl:if test="not(preceding-sibling::result)">
                 <xsl:attribute name="class" select="'active'"/>
             </xsl:if>
-            <xsl:variable name="lemma">
-                <xsl:try>
-                    <xsl:value-of select="if (matches(@Lemma, '&lt;.*&gt;')) then string(parse-xml-fragment(@Lemma)) else string(@Lemma)"/>
-                    <xsl:catch>
-                        <xsl:message>Fout bij parseren van typeahead-lemma, input={@Lemma}</xsl:message>
-                        <xsl:sequence select="''"/>
-                    </xsl:catch>
-                </xsl:try>
-            </xsl:variable>
+            <!-- Delete any escaped markup in @Lemma. Initial version, using parse-xml-fragment in a try-catch, was overdone. -->
+            <xsl:variable name="lemma" select="replace(@Lemma, '&lt;[^&gt;]+&gt;', '')"/>
             <a class="dropdown-item" href="#" role="option">
                 <!-- Web en Lemma worden in andere volgorde getoond dan de volgorde van onderstaande spans.
                      Dat komt door de float in de style van gtb-typeahead-wdb. De reden om dit zo te doen is dat Firefox
