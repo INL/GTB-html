@@ -54,14 +54,26 @@
         <xsl:sequence select="ixsl:get($input, 'value')"/>
     </xsl:function>
     
+    <xsl:template name="ivdnt:set-checked">
+        <xsl:param name="checkbox" as="element(input)" required="yes"/>
+        <xsl:param name="checked" as="xs:boolean" required="yes"/>
+        <ixsl:set-property name="checked" object="$checkbox" select="$checked"/>
+    </xsl:template>
+    
     <xsl:template name="ivdnt:check">
         <xsl:param name="checkbox" as="element(input)" required="yes"/>
-        <ixsl:set-property name="checked" object="$checkbox" select="true()"/>
+        <xsl:call-template name="ivdnt:set-checked">
+            <xsl:with-param name="checkbox" select="$checkbox"/>
+            <xsl:with-param name="checked" select="true()"/>
+        </xsl:call-template>
     </xsl:template>
     
     <xsl:template name="ivdnt:uncheck">
         <xsl:param name="checkbox" as="element(input)" required="yes"/>
-        <ixsl:set-property name="checked" object="$checkbox" select="false()"/>
+        <xsl:call-template name="ivdnt:set-checked">
+            <xsl:with-param name="checkbox" select="$checkbox"/>
+            <xsl:with-param name="checked" select="false()"/>
+        </xsl:call-template>
         <!-- note that <ixsl:remove-attribute name="checked"> does not work (the current context is the input, equal to parameter $checkbox, so it could have worked). -->
     </xsl:template>
 </xsl:stylesheet>
