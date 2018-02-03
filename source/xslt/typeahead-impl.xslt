@@ -29,7 +29,7 @@
         <xsl:variable name="sensitivity" as="xs:string" select="xs:string(ivdnt:is-checked($sensitivity-input))"/>
         
         <xsl:variable name="url" as="xs:string" select="$baseListURL || '&amp;index=' || $textfield-name || '&amp;prefix=' || encode-for-uri($textfield-value) || '&amp;wdb=' || $wdb-inputs || '&amp;sensitive=' || $sensitivity"/>
-        <xsl:message select="'url=' || $url"/>
+
         <ixsl:schedule-action document="{$url}">
             <xsl:call-template name="ivdnt:retrieve-typeahead-listitems">
                 <xsl:with-param name="url" select="$url"/>
