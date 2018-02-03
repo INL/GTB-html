@@ -43,7 +43,8 @@
     <xsl:variable name="RESULT_SORTKEYS_PROPERTY" as="xs:string" select="'result-sortkeys'"/>
     <xsl:variable name="RESULT_SORTREVERSE_PROPERTY" as="xs:string" select="'result-sortreverse'"/>
     <xsl:variable name="FOCUSSED_TEXTBOX_PROPERTY" as="xs:string" select="'focussed_textbox-id'"/>
-    <xsl:variable name="ZOEK_FORMULIER_CLASS" as="xs:string" select="'zoek-formulier'"/>    
+    <xsl:variable name="ZOEK_FORMULIER_CLASS" as="xs:string" select="'zoek-formulier'"/> 
+    <xsl:variable name="QUERYSTRING_WDB_PARAM" as="xs:string" select="'wdb'"/>
 
     <xsl:include href="utilities.xslt"/>
     <xsl:include href="render-results.xslt"/>
@@ -63,8 +64,24 @@
     </xsl:function>
     
     <xsl:template name="initialize">
-        <!--<xsl:variable name="visited-uris" as="xs:string" select="''"/>
-        <ixsl:set-property name="{$VISITED_URIS_PROPERTY}" select="$visited-uris" object="ixsl:page()"/>-->
+        <xsl:call-template name="ivdnt:enable-dictionaries"/>
+    </xsl:template>
+    
+    <xsl:template name="ivdnt:enable-dictionaries">
+        <xsl:variable name="params" as="map(xs:string, xs:string*)" select="ixsl:query-params()"/>
+        <xsl:variable name="dictionarynames" select="$params($QUERYSTRING_WDB_PARAM)" as="xs:string*"/>
+        <xsl:variable name="dictionarynames-with-bronnen" as="xs:string*" select="for $d in $dictionarynames return ($d, $d || 'bronnen')"/>
+        
+        <xsl:if test="exists($dictionarynames-with-bronnen)">
+            <xsl:for-each select="ixsl:page()//input[@data-inputname eq 'wdb' and @type eq 'checkbox']">
+                <xsl:variable name="is-checked" as="xs:boolean" select="@name = $dictionarynames-with-bronnen"/>
+
+                <xsl:call-template name="ivdnt:set-checked">
+                    <xsl:with-param name="checkbox" select="."/>
+                    <xsl:with-param name="checked" select="$is-checked"/>
+                </xsl:call-template>
+            </xsl:for-each>
+        </xsl:if>
     </xsl:template>
  
     <xsl:template name="ivdnt:deactivate-tab">

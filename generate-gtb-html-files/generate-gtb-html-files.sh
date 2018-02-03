@@ -3,14 +3,6 @@
 WHEREAMI=$(dirname $(realpath $0))
 . "$WHEREAMI"/sourceme
 
-if [ "$1" = "--alleen-index" ]
-then
-    ALLEEN_INDEX=jawel
-    shift
-else
-    ALLEEN_INDEX=
-fi
-
 PROJECTDIR=`dirname "$WHEREAMI"`
 
 if [ -z "$BASE_TARGET_DIR" ]
@@ -37,15 +29,6 @@ VERSIONINFO=`git describe --tags`
 
 # Transform index.xml to index.html:
 $JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform "$SOURCEDIR"/index.xml "$WHEREAMI"/generate-gtb-html-files.xslt "$@" >"$TARGETDIR"/index.html "VERSIONINFO=$VERSIONINFO"
-
-if [ -z "$ALLEEN_INDEX" ]
-then
-    # Transform index.xml to wnt.html, onw.html, etc.:
-    for wdb in onw vmnw mnw wnt wft
-    do
-        $JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform "$SOURCEDIR"/index.xml "$WHEREAMI"/generate-gtb-html-files.xslt "$@" >"$TARGETDIR"/$wdb.html "VERSIONINFO=$VERSIONINFO" "SELECTED_SOURCES=$wdb"
-    done
-fi
 
 
 # Compile Saxon-JS XSLT stylesheet"

@@ -257,10 +257,10 @@
                 <xsl:choose>
                     <xsl:when test="@type = ('radio', 'checkbox')">
                         <xsl:variable name="is-checked" as="xs:boolean" select="exists(.[@checked eq 'checked'])"/>
-                        <xsl:choose>
-                            <xsl:when test="$is-checked"><xsl:call-template name="ivdnt:check"><xsl:with-param name="checkbox" select="$input-or-select-element"/></xsl:call-template></xsl:when>
-                            <xsl:otherwise><xsl:call-template name="ivdnt:uncheck"><xsl:with-param name="checkbox" select="$input-or-select-element"/></xsl:call-template></xsl:otherwise>
-                        </xsl:choose>
+                        <xsl:call-template name="ivdnt:set-checked">
+                            <xsl:with-param name="checkbox" select="$input-or-select-element"/>
+                            <xsl:with-param name="checked" select="$is-checked"/>
+                        </xsl:call-template>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:variable name="val" as="xs:string" select="@value"/>
