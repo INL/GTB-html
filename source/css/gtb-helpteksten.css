@@ -10,3 +10,10 @@ code .knop {
   font-weight: bold;
   border-style: outset
 }
+
+
+/* help links */
+.gtb-helplink {
+    display: block; 
+    padding: 6px 12px 6px 0px;
+}

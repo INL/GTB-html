@@ -28,7 +28,7 @@ rm -Rf "$TARGETDIR"/*/notused
 VERSIONINFO=`git describe --tags`
 
 # Transform index.xml to index.html:
-$JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform "$SOURCEDIR"/index.xml "$WHEREAMI"/generate-gtb-html-files.xslt "$@" >"$TARGETDIR"/index.html "VERSIONINFO=$VERSIONINFO"
+"$JAVACMD" -classpath "$SAXONJAR" net.sf.saxon.Transform "$SOURCEDIR"/index.xml "$WHEREAMI"/generate-gtb-html-files.xslt "$@" >"$TARGETDIR"/index.html "VERSIONINFO=$VERSIONINFO"
 
 
 # Compile Saxon-JS XSLT stylesheet"

@@ -148,7 +148,6 @@ body:before {
 }
 
 .gtb-woordsoortveld{
-    width: 75%;
     display: inline;
 }
 
@@ -243,9 +242,9 @@ input[type=checkbox]:after, .gtbcheckbox:after {
 
 .gtb-wdbcol-line{
     /*width: 5%;*/
-    width: 2em;
+    width: auto;
     min-width: 2em;
-    max-width: 2em;
+    max-width: 3.5em;
 }
 .gtb-wdbcol-wdb{
     /*width: 10%;*/
@@ -479,7 +478,6 @@ ul.gtb-list-subject-level2 li {
 }
 
 /* tabs */
-/* tabs */
 .nav-tabs {
     border-bottom: none!important;
     display: flex;
@@ -521,7 +519,7 @@ ul.gtb-list-subject-level2 li {
 .nav-tabs>li>a {
     border: none!important;
     margin: 0px!important;
-    padding: 10px 15px!important;
+    padding: 10px 4px!important;
     background: transparent!important;
     
     display: block;
@@ -739,7 +737,7 @@ a.gtb-selecteer-woordsoortgroep.on:before {
 
     .gtb-header-title {
         font-size: 24px;
-        line-heigh: 26px;
+        line-height: 26px;
     }
 
     .gtb-header-logo-ivdnt::before {

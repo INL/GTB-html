@@ -97,6 +97,17 @@
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             
+            <!-- favicons for a billion different devices -->
+            <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+            <link rel="manifest" href="/img/site.webmanifest" />
+            <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5" />
+            <link rel="shortcut icon" href="/img/favicon.ico" />
+            <meta name="msapplication-TileColor" content="#2b5797" />
+            <meta name="msapplication-config" content="/img/browserconfig.xml" />
+            <meta name="theme-color" content="#001475" />
+
             <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/bootstrap.min.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
@@ -357,7 +368,7 @@
     
     <xsl:template match="@woordsoortgroep" mode="ivdnt:html-mode">
         <xsl:attribute name="data-woordsoortgroep" select="."/>
-		<a class="gtb-selecteer-woordsoortgroep off btn btn-default btn-sm">alles selecteren</a>
+		<a class="gtb-selecteer-woordsoortgroep off btn btn-default btn-sm"></a>
 	</xsl:template>
    
     <xsl:template match="ivdnt:woordsoort" mode="ivdnt:html-mode">

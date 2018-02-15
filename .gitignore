@@ -16,3 +16,6 @@ target\.sterculijn/
 maak-sterculijn\.sh
 
 lzx-help2html\.xslt
+
+#vscode editor files
+/.vscode

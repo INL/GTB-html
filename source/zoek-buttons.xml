@@ -37,9 +37,20 @@
         
         <button class="btn btn-default" name="wis-zoeken" title="Wis zoekvelden">Wis</button>
         <button class="btn btn-default" name="open-speciale-tekens" title="Klik om speciale tekens in te voeren">Speciale tekens</button>
+       
+       
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default" title="Hoofdletter- en accentgevoelig zoeken">
+                <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" title="Hoofdletter- en accentgevoelig zoeken" name="sensitive"/>
+                Aàa
+            </label>
+        </div>
+
+        <!-- 
         <label class="checkbox-inline gtbcheckbox">
-          <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" name="sensitive"/> Letters exact
+          <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" title="Hoofdletter- en accentgevoelig zoeken" name="sensitive"/> Letters exact
         </label>
+        -->    
 
     </div>
 </ivdnt:formulierregel>

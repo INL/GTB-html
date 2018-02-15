@@ -11,10 +11,8 @@
         <ul class="list-group gtb-list-subject-level{$level}"><xsl:apply-templates mode="ivdnt:help-mode"/></ul>
     </xsl:template>
     
-    <xsl:template match="ivdnt:hulp[@href]" mode="ivdnt:help-mode">
-        <li class="list-group-item">
-            <a class="gtb-helplink" href="#" data-help="{@href}"><xsl:apply-templates mode="ivdnt:help-mode"/></a>
-        </li>
+    <xsl:template match="ivdnt:hulp[@href]" mode="ivdnt:html-mode ivdnt:help-mode">
+        <a class="gtb-helplink" href="#" data-help="{@href}"><xsl:apply-templates mode="ivdnt:help-mode"/></a>
     </xsl:template>
 
     <xsl:template match="ivdnt:hulp[not(@href)]" mode="ivdnt:help-mode">

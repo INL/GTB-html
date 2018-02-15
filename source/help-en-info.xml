@@ -1,58 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div class="row" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
-    <p>Zie de FAQ voor veelgestelde vragen. Meer informatie over de GTB vindt u op de <a href="http://www.ivdnt.org">website</a> van het instituut voor de Nederlandse taal. Heeft u vragen of opmerkingen over het programma? Stuur ons dan een <a href="mailto:servicedesk@ivdnt.org">e-mail</a>
-        a.u.b.</p>
-    <!-- TODO Werkt servicedesk@ivdnt.org? Het was servicedesk@inl.nl -->
+    <div class="col-xs-12">
+        <p>Zie de FAQ voor veelgestelde vragen. Meer informatie over de GTB vindt u op de <a href="http://www.ivdnt.org">website</a> van het instituut voor de Nederlandse taal. Heeft u vragen of opmerkingen over het programma? Stuur ons dan een <a href="mailto:servicedesk@ivdnt.org">e-mail</a>
+            a.u.b.</p>
+        <!-- TODO Werkt servicedesk@ivdnt.org? Het was servicedesk@inl.nl -->
+    </div>
     <div class="col-xs-4" id="help-subjects">
-        <h1>Help</h1>        
-        <ivdnt:hulpgroup>
-            <ivdnt:hulp>Help</ivdnt:hulp>
-            <ivdnt:hulpgroup>
+        <h1 style="color:#111971;">Help</h1>
+        <ivdnt:collapse>
+            <ivdnt:collapse label="Help" open="true">
                 <ivdnt:hulp href="help/algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/basiszoeken.xml">Basiszoeken</ivdnt:hulp>
                 <ivdnt:hulp href="help/uitgebreidzoeken.xml">Uitgebreid zoeken</ivdnt:hulp>
                 <ivdnt:hulp href="help/zoekeninbronnenlijst.xml">Zoeken in bronnenlijst</ivdnt:hulp>
                 <ivdnt:hulp href="help/resultaat.xml">Resultaat</ivdnt:hulp>
                 <ivdnt:hulp href="help/koppelingen.xml">Koppelingen</ivdnt:hulp>
-            </ivdnt:hulpgroup>
-            <ivdnt:hulp>Over het ONW</ivdnt:hulp>
-            <ivdnt:hulpgroup>
+            </ivdnt:collapse>
+
+            <ivdnt:collapse label="Over het ONW">
                 <ivdnt:hulp href="help/onw-algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/onw-afkortingen.xml">Afkortingen</ivdnt:hulp>
                 <ivdnt:hulp href="help/onw-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
-            </ivdnt:hulpgroup>
-            <ivdnt:hulp>Over het VNMW </ivdnt:hulp>
-            <ivdnt:hulpgroup>
+            </ivdnt:collapse>
+
+            <ivdnt:collapse label="Over het VNMW">
                 <ivdnt:hulp href="help/vnmw-algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/vnmw-afkortingen.xml">Afkortingen</ivdnt:hulp>
                 <ivdnt:hulp href="help/vnmw-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
-            </ivdnt:hulpgroup>
-            <ivdnt:hulp>Over het MNW</ivdnt:hulp>
-            <ivdnt:hulpgroup>
+            </ivdnt:collapse>
+
+            <ivdnt:collapse label="Over het MNW">
                 <ivdnt:hulp href="help/mnw-algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/mnw-afkortingen.xml">Afkortingen</ivdnt:hulp>
                 <ivdnt:hulp href="help/mnw-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
-            </ivdnt:hulpgroup>
-            <ivdnt:hulp>Over het WNT</ivdnt:hulp>
-            <ivdnt:hulpgroup>
+            </ivdnt:collapse>
+            
+            <ivdnt:collapse label="Over het WNT">
                 <ivdnt:hulp href="help/wnt-algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/wnt-afkortingen.xml">Afkortingen</ivdnt:hulp>
                 <ivdnt:hulp href="help/wnt-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
-            </ivdnt:hulpgroup>
-            <ivdnt:hulp>Over het WFT</ivdnt:hulp>
-            <ivdnt:hulpgroup>
+            </ivdnt:collapse>
+            
+            <ivdnt:collapse label="Over het WFT">
                 <ivdnt:hulp href="help/wft-algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/wft-afkortingen.xml">Afkortingen</ivdnt:hulp>
                 <ivdnt:hulp href="help/wft-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
-            </ivdnt:hulpgroup>
-            <ivdnt:hulp>Over de GTB</ivdnt:hulp>
-            <ivdnt:hulpgroup>
+            </ivdnt:collapse>
+
+            <ivdnt:collapse label="Over de GTB">
                 <ivdnt:hulp href="help/gtb-algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/gtb-software.xml">Software</ivdnt:hulp>
                 <ivdnt:hulp href="help/gtb-medewerkers.xml">Medewerkers</ivdnt:hulp>
-            </ivdnt:hulpgroup>
-            <ivdnt:hulp href="help/versie-informatie.xml">Versie-informatie</ivdnt:hulp>
-        </ivdnt:hulpgroup>
+                <ivdnt:hulp href="help/versie-informatie.xml">Versie-informatie</ivdnt:hulp>
+            </ivdnt:collapse>
+        </ivdnt:collapse>
     </div>
-    <div class="col-xs-8" id="help"></div>
+    <div class="col-xs-8" id="help">
+        <ivdnt:include href="help/algemeen.xml"/>
+    </div>
 </div>
