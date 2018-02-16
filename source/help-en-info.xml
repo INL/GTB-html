@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div class="row" xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <div class="col-xs-12">
-        <p>Zie de FAQ voor veelgestelde vragen. Meer informatie over de GTB vindt u op de <a href="http://www.ivdnt.org">website</a> van het instituut voor de Nederlandse taal. Heeft u vragen of opmerkingen over het programma? Stuur ons dan een <a href="mailto:servicedesk@ivdnt.org">e-mail</a>
+        <p>Meer informatie over de GTB vindt u op de <a href="http://www.ivdnt.org">website</a> van het instituut voor de Nederlandse taal. Heeft u vragen of opmerkingen over het programma? Stuur ons dan een <a href="mailto:servicedesk@ivdnt.org">e-mail</a>
             a.u.b.</p>
         <!-- TODO Werkt servicedesk@ivdnt.org? Het was servicedesk@inl.nl -->
     </div>
     <div class="col-xs-4" id="help-subjects">
         <h1 style="color:#111971;">Help</h1>
-        <ivdnt:collapse>
-            <ivdnt:collapse label="Help" open="true">
+
+            <ivdnt:collapse label="Over het project" open="true">
+                <ivdnt:hulp href="help/gtb-algemeen.xml">Algemeen</ivdnt:hulp>
+                <ivdnt:hulp href="help/gtb-software.xml">Software</ivdnt:hulp>
+                <ivdnt:hulp href="help/gtb-medewerkers.xml">Medewerkers</ivdnt:hulp>
+                <ivdnt:hulp href="help/versie-informatie.xml">Versie-informatie</ivdnt:hulp>
+            </ivdnt:collapse>
+
+            <ivdnt:collapse label="Help">
                 <ivdnt:hulp href="help/algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/basiszoeken.xml">Basiszoeken</ivdnt:hulp>
                 <ivdnt:hulp href="help/uitgebreidzoeken.xml">Uitgebreid zoeken</ivdnt:hulp>
@@ -46,16 +53,8 @@
                 <ivdnt:hulp href="help/wft-afkortingen.xml">Afkortingen</ivdnt:hulp>
                 <ivdnt:hulp href="help/wft-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
             </ivdnt:collapse>
-
-            <ivdnt:collapse label="Over de GTB">
-                <ivdnt:hulp href="help/gtb-algemeen.xml">Algemeen</ivdnt:hulp>
-                <ivdnt:hulp href="help/gtb-software.xml">Software</ivdnt:hulp>
-                <ivdnt:hulp href="help/gtb-medewerkers.xml">Medewerkers</ivdnt:hulp>
-                <ivdnt:hulp href="help/versie-informatie.xml">Versie-informatie</ivdnt:hulp>
-            </ivdnt:collapse>
-        </ivdnt:collapse>
     </div>
     <div class="col-xs-8" id="help">
-        <ivdnt:include href="help/algemeen.xml"/>
+        <ivdnt:include href="help/gtb-algemeen.xml"/>
     </div>
 </div>

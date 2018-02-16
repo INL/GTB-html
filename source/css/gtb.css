@@ -688,11 +688,6 @@ a.gtb-selecteer-woordsoortgroep.on:before {
     height: 100%;
     margin-top: 3px;
     color: #EEE;
-    
-    /* fix voor verkeerde positioning bij transition klein scherm -> groot scherm */
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
 }
 .gtb-header-logo-ivdnt > img {
     height: 100%;
@@ -701,7 +696,7 @@ a.gtb-selecteer-woordsoortgroep.on:before {
 	color: #EEE!important; /* alt-text */
 }
 
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
     .gtb-header > .container {
         width: 100%;
     }
@@ -715,7 +710,7 @@ a.gtb-selecteer-woordsoortgroep.on:before {
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media (max-width: 992px) {
     .gtb-header {
         height: 120px;
     }
@@ -730,43 +725,14 @@ a.gtb-selecteer-woordsoortgroep.on:before {
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .gtb-header-content {
-        align-items: baseline;
-    }
-
+@media (max-width: 600px) {
     .gtb-header-title {
         font-size: 24px;
         line-height: 26px;
     }
 
-    .gtb-header-logo-ivdnt::before {
-        content: "/IvdNT/";
-    }
     .gtb-header-logo-ivdnt {
-        display: inline-block;
-        height: auto;
-        width: auto;
-        margin: 0;
-        padding: 0;
-        letter-spacing: 2px;
-        font-size: 26px;
-        color: #EEE;
-        font-family: schoolboek;
-        position: relative;
-        top: -10px; /* IE11 doesn't apply negative margin to rotated text */
-    }
-    .gtb-header-logo-ivdnt:hover,
-    .gtb-header-logo-ivdnt:active,
-    .gtb-header-logo-ivdnt:focus {
-        color: #EEE;
-        text-decoration: none;
-    }
-    .gtb-header-logo-ivdnt > img {
-        display: none;
-    }
-    .gtb-header-logo-ivdnt-small {
-        display: inline-block;
+        margin: 0px;
     }
 }
 

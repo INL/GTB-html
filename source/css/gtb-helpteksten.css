@@ -17,3 +17,11 @@ code .knop {
     display: block; 
     padding: 6px 12px 6px 0px;
 }
+
+.gtb-helplink:hover,
+.gtb-helplink:active
+.gtb-helplink:focus,
+.gtb-helplink.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
