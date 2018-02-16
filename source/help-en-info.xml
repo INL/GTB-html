@@ -12,7 +12,6 @@
                 <ivdnt:hulp href="help/gtb-algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/gtb-software.xml">Software</ivdnt:hulp>
                 <ivdnt:hulp href="help/gtb-medewerkers.xml">Medewerkers</ivdnt:hulp>
-                <ivdnt:hulp href="help/versie-informatie.xml">Versie-informatie</ivdnt:hulp>
             </ivdnt:collapse>
 
             <ivdnt:collapse label="Help">
@@ -53,6 +52,9 @@
                 <ivdnt:hulp href="help/wft-afkortingen.xml">Afkortingen</ivdnt:hulp>
                 <ivdnt:hulp href="help/wft-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
             </ivdnt:collapse>
+
+            <ivdnt:hulp href="help/versie-informatie.xml">Versie-informatie</ivdnt:hulp>
+
     </div>
     <div class="col-xs-8" id="help">
         <ivdnt:include href="help/gtb-algemeen.xml"/>

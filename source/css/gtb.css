@@ -70,6 +70,31 @@ body:before {
     
 }
 
+.gtb-bronselectors,
+.gtb-resultaatformaatselectors {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.gtb-bronselectors .gtbcheckbox {
+    margin: 0px 10px 0px 0px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+}
+.gtb-resultaatformaatselectors .gtbradio {
+    margin: 0px 10px 0px 0px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+}
+
 .formulierinput .form-control[type=text] {
     height: 30px;
     padding: 4px 8px;
@@ -231,17 +256,6 @@ td.speciaalteken:active{
 .gtb-inspring {
     padding-left: 15px;
 }
-
-/*input[type=checkbox]:before, .gtbcheckbox:before {
-    content: "[";
-    display: inline;
-    color:red;
-}
-input[type=checkbox]:after, .gtbcheckbox:after {
-    content: "]";
-    display: inline;
-    color:red;
-}*/
 
 .woordsoorttable{
     margin-left: 2em;

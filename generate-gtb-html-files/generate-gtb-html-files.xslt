@@ -239,60 +239,48 @@
             <label class="{$zoekformulier-label-column-class} formulierlabel">{$bronnen-title}</label>
     
             <div class="{$zoekformulier-input-column-class}">
-                <div class="row">
-                    <div class="{$bronselector-column-class}">
-                        <label title="Oudnederlands Woordenboek" class="checkbox-inline gtbcheckbox">
-                            <input id="{ivdnt:generate-input-id(.)}.onw" data-inputname="wdb" data-humanname="zoek in ONW" type="checkbox" name="onw{@suffix}">
-                                <xsl:if test="'onw' = $selected_sources_sequence">
-                                    <xsl:attribute name="checked">checked</xsl:attribute>
-                                </xsl:if>
-                            </input> 
-                            ONW
-                        </label>
-                    </div>
-                    
-                    <div class="{$bronselector-column-class}">
-                        <label title="Vroegmiddelnederlands Woordenboek" class="checkbox-inline gtbcheckbox">
-                            <input id="{ivdnt:generate-input-id(.)}.vmnw" data-inputname="wdb" data-humanname="zoek in VMNW" type="checkbox" name="vmnw{@suffix}">
-                                <xsl:if test="'vmnw' = $selected_sources_sequence">
-                                    <xsl:attribute name="checked">checked</xsl:attribute>
-                                </xsl:if>
-                            </input>
-                            VMNW
-                        </label>
-                    </div>
-                    <div class="col-xs-2">
-                        <label title="Middelnederlandsch Woordenboek" class="checkbox-inline gtbcheckbox">
-                            <input id="{ivdnt:generate-input-id(.)}.mnw" data-inputname="wdb" data-humanname="zoek in MNW" type="checkbox" name="mnw{@suffix}">
-                                <xsl:if test="'mnw' = $selected_sources_sequence">
-                                    <xsl:attribute name="checked">checked</xsl:attribute>
-                                </xsl:if>
-                            </input>
-                            MNW
-                        </label>
-                    </div>
-                    <div class="{$bronselector-column-class}">
-                        <label title="Woordenboek der Nederlandsche Taal" class="checkbox-inline gtbcheckbox">
-                            <input id="{ivdnt:generate-input-id(.)}.wnt" data-inputname="wdb" data-humanname="zoek in WNT" type="checkbox" name="wnt{@suffix}">
-                                <xsl:if test="'wnt' = $selected_sources_sequence">
-                                    <xsl:attribute name="checked">checked</xsl:attribute>
-                                </xsl:if>
-                            </input>
-                            WNT
-                        </label>
-                    </div>
-                    <div class="{$bronselector-column-class}">
-                        <label title="Woordenboek der Friese taal" class="checkbox-inline gtbcheckbox">
-                            <input id="{ivdnt:generate-input-id(.)}.wft" data-inputname="wdb" data-humanname="zoek in WFT" type="checkbox" name="wft{@suffix}">
-                                <xsl:if test="'wft' = $selected_sources_sequence">
-                                    <xsl:attribute name="checked">checked</xsl:attribute>
-                                </xsl:if>
-                            </input>
-                            WFT
-                        </label>
-                    </div>
+                <div class="gtb-bronselectors">
+                    <label title="Oudnederlands Woordenboek" class="checkbox-inline gtbcheckbox">
+                        <input id="{ivdnt:generate-input-id(.)}.onw" data-inputname="wdb" data-humanname="zoek in ONW" type="checkbox" name="onw{@suffix}">
+                            <xsl:if test="'onw' = $selected_sources_sequence">
+                                <xsl:attribute name="checked">checked</xsl:attribute>
+                            </xsl:if>
+                        </input> 
+                        ONW
+                    </label>
+                    <label title="Vroegmiddelnederlands Woordenboek" class="checkbox-inline gtbcheckbox">
+                        <input id="{ivdnt:generate-input-id(.)}.vmnw" data-inputname="wdb" data-humanname="zoek in VMNW" type="checkbox" name="vmnw{@suffix}">
+                            <xsl:if test="'vmnw' = $selected_sources_sequence">
+                                <xsl:attribute name="checked">checked</xsl:attribute>
+                            </xsl:if>
+                        </input>
+                        VMNW
+                    </label>
+                    <label title="Middelnederlandsch Woordenboek" class="checkbox-inline gtbcheckbox">
+                        <input id="{ivdnt:generate-input-id(.)}.mnw" data-inputname="wdb" data-humanname="zoek in MNW" type="checkbox" name="mnw{@suffix}">
+                            <xsl:if test="'mnw' = $selected_sources_sequence">
+                                <xsl:attribute name="checked">checked</xsl:attribute>
+                            </xsl:if>
+                        </input>
+                        MNW
+                    </label>
+                    <label title="Woordenboek der Nederlandsche Taal" class="checkbox-inline gtbcheckbox">
+                        <input id="{ivdnt:generate-input-id(.)}.wnt" data-inputname="wdb" data-humanname="zoek in WNT" type="checkbox" name="wnt{@suffix}">
+                            <xsl:if test="'wnt' = $selected_sources_sequence">
+                                <xsl:attribute name="checked">checked</xsl:attribute>
+                            </xsl:if>
+                        </input>
+                        WNT
+                    </label>
+                    <label title="Woordenboek der Friese taal" class="checkbox-inline gtbcheckbox">
+                        <input id="{ivdnt:generate-input-id(.)}.wft" data-inputname="wdb" data-humanname="zoek in WFT" type="checkbox" name="wft{@suffix}">
+                            <xsl:if test="'wft' = $selected_sources_sequence">
+                                <xsl:attribute name="checked">checked</xsl:attribute>
+                            </xsl:if>
+                        </input>
+                        WFT
+                    </label>
                 </div>
-            
             </div>
         </div>
     </xsl:template>
@@ -301,12 +289,12 @@
         <div class="formulierregel form-group">
             <label class="{$zoekformulier-label-column-class} formulierlabel">Resultaten weergeven als </label>
             <div class="{$zoekformulier-input-column-class}">
-                <div class="row">
-                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met artikelen"><input id="{ivdnt:generate-input-id(.)}.0" checked="checked" data-inputname="domein" data-humanname="toon artikelen" type="radio" name="domein" value="0"/>Artikelen</label></div>
-                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met betekenisomschrijvingen"><input id="{ivdnt:generate-input-id(.)}.1" data-inputname="domein" data-humanname="toon omschrijvingen" type="radio" name="domein" value="1"/>Omschr.</label></div>
-                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met citaten"><input id="{ivdnt:generate-input-id(.)}.2" data-inputname="domein" data-humanname="toon citaten" type="radio" name="domein" value="2"/>Citaten</label></div>
-                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met kopsecties"><input id="{ivdnt:generate-input-id(.)}.3" data-inputname="domein" data-humanname="toon kopsecties" type="radio" name="domein" value="3"/>Kopsecties</label></div>
-                    <div class="{$bronselector-column-class}"><label class="radio-inline gtbradio" title="Toon een lijst met verbindingen"><input id="{ivdnt:generate-input-id(.)}.4" data-inputname="domein" data-humanname="toon verbindingen" type="radio" name="domein" value="4"/>Verbind.</label></div>
+                <div class="gtb-resultaatformaatselectors">
+                    <label class="radio-inline gtbradio" title="Toon een lijst met artikelen"><input id="{ivdnt:generate-input-id(.)}.0" checked="checked" data-inputname="domein" data-humanname="toon artikelen" type="radio" name="domein" value="0"/>Artikelen</label>
+                    <label class="radio-inline gtbradio" title="Toon een lijst met betekenisomschrijvingen"><input id="{ivdnt:generate-input-id(.)}.1" data-inputname="domein" data-humanname="toon omschrijvingen" type="radio" name="domein" value="1"/>Definities</label>
+                    <label class="radio-inline gtbradio" title="Toon een lijst met citaten"><input id="{ivdnt:generate-input-id(.)}.2" data-inputname="domein" data-humanname="toon citaten" type="radio" name="domein" value="2"/>Citaten</label>
+                    <label class="radio-inline gtbradio" title="Toon een lijst met kopsecties"><input id="{ivdnt:generate-input-id(.)}.3" data-inputname="domein" data-humanname="toon kopsecties" type="radio" name="domein" value="3"/>Kopsecties</label>
+                    <label class="radio-inline gtbradio" title="Toon een lijst met verbindingen"><input id="{ivdnt:generate-input-id(.)}.4" data-inputname="domein" data-humanname="toon verbindingen" type="radio" name="domein" value="4"/>Verbind.</label>
                 </div>
             </div>
         </div>
