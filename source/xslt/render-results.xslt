@@ -234,9 +234,9 @@
     
     <xsl:template match="conc" mode="render-results">
         <span class="gtb-conc-line">
-            <span class="gtb-conc-voor"><xsl:text>&#160;</xsl:text><xsl:apply-templates select="@voor" mode="render-conc-attributes"/></span>
+            <span class="gtb-conc-voor clearfix"><span><xsl:apply-templates select="@voor" mode="render-conc-attributes"/></span></span>
             <span class="gtb-conc-zoekwoord"><xsl:apply-templates select="@zoekwoord" mode="render-conc-attributes"/></span>
-            <span class="gtb-conc-na"><xsl:text>&#160;</xsl:text><xsl:apply-templates select="@na" mode="render-conc-attributes"/></span>
+            <span class="gtb-conc-na"><xsl:apply-templates select="@na" mode="render-conc-attributes"/></span>
             <br/>
         </span>
     </xsl:template>
