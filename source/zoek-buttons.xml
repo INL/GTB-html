@@ -42,7 +42,7 @@
         <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-default" title="Hoofdletter- en accentgevoelig zoeken">
                 <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" title="Hoofdletter- en accentgevoelig zoeken" name="sensitive"/>
-                Aàa
+                Aaà
             </label>
         </div>
 
