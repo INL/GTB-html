@@ -118,13 +118,20 @@ body:before {
 }
 
 .gtb-waiticon{
-    animation-name: tolletje;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-direction:normal;
-    animation-iteration-count:infinite;
-    animation-play-state: running;
+    -webkit-animation-name: tolletje;
+            animation-name: tolletje;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-direction:normal;
+            animation-direction:normal;
+    -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
     
     display: inline-block;
     font-style: normal;
@@ -134,12 +141,25 @@ body:before {
     top: 1px;
 }
 
-@keyframes tolletje {
+@-webkit-keyframes tolletje {
     from {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+@keyframes tolletje {
+    from {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
     }
 }
 
@@ -173,7 +193,8 @@ td.speciaalteken{
     cursor: pointer;
     /* bootstrap inputs nadoen */
     border: 1px solid #CCC!important; /*  bootstrap override het een en ander */
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 }
 
 td.speciaalteken:hover{
@@ -182,7 +203,8 @@ td.speciaalteken:hover{
 
 td.speciaalteken:active{
     background-color: #DDD;
-    box-shadow: inset 0px 1px 6px -1px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0px 1px 6px -1px rgba(0,0,0,0.3);
+            box-shadow: inset 0px 1px 6px -1px rgba(0,0,0,0.3);
 }
 
 .gtbcheckbox, .gtbradio{
@@ -480,9 +502,14 @@ ul.gtb-list-subject-level2 li {
 /* tabs */
 .nav-tabs {
     border-bottom: none!important;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .nav-tabs > li {
@@ -490,7 +517,9 @@ ul.gtb-list-subject-level2 li {
     padding: 0px!important;
     margin: 0px!important;
     border-bottom: 2px solid #ddd!important;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .nav-tabs > li:after {
@@ -502,7 +531,10 @@ ul.gtb-list-subject-level2 li {
     
     height: 2px;
     margin-bottom: -2px;
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    
+    -webkit-transition: all 250ms ease 0s;
     
     transition: all 250ms ease 0s;
 }
@@ -511,7 +543,8 @@ ul.gtb-list-subject-level2 li {
 .nav-tabs > li:active:after,
 .nav-tabs > li:focus:after,
 .nav-tabs > li.active:after {
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
     background-color: #111971;
     opacity: 1;
 }
@@ -555,7 +588,9 @@ ul.gtb-list-subject-level2 li {
 
 /* Disable sliding effect van collapse */
 .collapsing {
-    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+    -webkit-transition-property: none;
     transition-property: none;
 }
 
@@ -629,20 +664,28 @@ a.gtb-selecteer-woordsoortgroep.on:before {
     height: 150px;
     margin-bottom: 40px;
 
-    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
+
+            box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
     
     font-family: "schoolboek";
+    
+    -webkit-transition: height 0.15s;
     
     transition: height 0.15s;
 }
 
 .gtb-header > .container {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .gtb-header-flex-container {
     max-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -654,22 +697,33 @@ a.gtb-selecteer-woordsoortgroep.on:before {
 
 .gtb-header-spacer {
     height: 100%;
-    flex-basis: 15px;
-    flex-grow: 0.5;
+    -ms-flex-preferred-size: 15px;
+        flex-basis: 15px;
+    -webkit-box-flex: 0.5;
+        -ms-flex-positive: 0.5;
+            flex-grow: 0.5;
     max-width: 35px;
 }
 
 .gtb-header-content {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     height: 100%;
     padding: 19px 0px;
+    
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
     
     display: flex;
 }
 
 .gtb-header-title {
     display: block;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     
     font-size: 37px;
     line-height: 42px;
