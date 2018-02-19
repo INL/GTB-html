@@ -82,8 +82,39 @@
                 </xsl:call-template>
             </xsl:for-each>
         </xsl:if>
+        
+        <!-- Disable or enable fields given the dictionary selection: -->
+        <xsl:for-each select="ixsl:page()//div[ivdnt:class-contains(@class, 'tab-pane')]">
+            <!-- TODO consider doing this only for the first and second tab, perhaps even only for the second tab ("uitgebreid zoeken"). -->
+            <xsl:call-template name="enable-fields-for-dict-selection">
+                <xsl:with-param name="current-tab" select="."/>
+            </xsl:call-template>
+        </xsl:for-each>
     </xsl:template>
- 
+    
+    <xsl:template name="enable-fields-for-dict-selection">
+        <xsl:param name="current-tab" as="element(div)" required="yes"/>
+        
+        <xsl:variable name="checked-dicts" as="xs:string*"
+            select="for $input in $current-tab//input[@type eq 'checkbox' and @data-inputname eq 'wdb' and ivdnt:is-checked(.)] return $input/@name"/>
+        
+        <xsl:for-each select="$current-tab//*[self::input or self::select][@data-onlydicts]">
+            <!-- Check if at least one of the dictionary names in @data-onlydict occurs in the list with check wdbs. If so, enable the field
+                 otherwise, disable it.
+            -->
+            <xsl:variable name="onlydicts" as="xs:string*" select="tokenize(@data-onlydicts, '\s+')"/>
+            <xsl:variable name="has-enabled-dict" as="xs:boolean" select="some $dict in $onlydicts satisfies $dict = $checked-dicts"/>
+            <xsl:choose>
+                <xsl:when test="$has-enabled-dict">
+                    <ixsl:remove-attribute name="disabled"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <ixsl:set-attribute name="disabled" select="'disabled'"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+    </xsl:template>
+    
     <xsl:template name="ivdnt:deactivate-tab">
         <xsl:param name="tabdiv" as="element(div)" required="yes"/>
         <xsl:for-each select="$tabdiv">

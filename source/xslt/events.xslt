@@ -37,22 +37,6 @@
         </xsl:if>
     </xsl:template>
     
-    <!--<xsl:template match="div[ivdnt:class-contains(@class, 'formulierregel')]" mode="ixsl:onmouseover">
-        <xsl:for-each select="//div[@id eq 'flybyhelp']">
-            <!-\- Iterates only once. -\->
-            <ixsl:set-style name="left" select="concat(ixsl:get(ixsl:event(), 'clientX') + 30, 'px')"/>
-            <ixsl:set-style name="top" select="concat(ixsl:get(ixsl:event(), 'clientY') + 15, 'px')"/>
-            <ixsl:set-style name="visibility" select="'visible'"/>
-        </xsl:for-each>
-    </xsl:template>
-    
-    <xsl:template match="div[ivdnt:class-contains(@class, 'formulierregel')]" mode="ixsl:onmouseout">
-        <xsl:for-each select="//div[@id eq 'flybyhelp']">
-            <!-\- Iterates only once. -\->
-            <ixsl:set-style name="visibility" select="'hidden'"/>
-        </xsl:for-each>
-    </xsl:template>-->
-
     <!-- Redefine the standard typeahead template in order to prevent selecting the word in the typeahead list if the textbox contains a wildcard character. -->
     <xsl:template name="ivdnt:typeahead-select">
         <xsl:param name="selected-listitem" as="element(li)" required="yes"/>
@@ -158,6 +142,14 @@
             <xsl:with-param name="startline" select="1" as="xs:integer"/>
             <xsl:with-param name="originating-tabdiv" select="$current-tab"/>
             <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xsl:template match="input[@data-inputname eq 'wdb']" mode="ixsl:onchange">
+        <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
+        
+        <xsl:call-template name="enable-fields-for-dict-selection">
+            <xsl:with-param name="current-tab" select="$current-tab"/>
         </xsl:call-template>
     </xsl:template>
     
