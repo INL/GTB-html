@@ -6,6 +6,6 @@
     expand-text="yes"
     version="3.0">
     <xsl:template match="ivdnt:hulp[@href]" mode="ivdnt:html-mode ivdnt:help-mode">
-        <a class="gtb-helplink" href="#" data-help="{@href}"><xsl:apply-templates mode="ivdnt:help-mode"/></a>
+        <a class="gtb-helplink" href="#" data-help="{@href}"><xsl:apply-templates mode="ivdnt:help-mode"/></a><br/>
     </xsl:template>
 </xsl:stylesheet>

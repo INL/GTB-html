@@ -11,11 +11,12 @@ code .knop {
   border-style: outset
 }
 
-
 /* help links */
 .gtb-helplink {
-    display: block; 
+    display: inline-block; 
     padding: 6px 12px 6px 0px;
+    position: relative;
+    text-decoration: none!important;
 }
 
 .gtb-helplink:hover,
@@ -23,5 +24,28 @@ code .knop {
 .gtb-helplink:focus,
 .gtb-helplink.active {
     font-weight: bold;
-    text-decoration: underline;
+}
+
+.gtb-helplink:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: -3px;
+    border-bottom: 2px solid white;
+    -webkit-transition: all 250ms ease 0s;
+            transition: all 250ms ease 0s;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+}
+
+.gtb-helplink:hover:after,
+.gtb-helplink:active:after,
+.gtb-helplink:focus:after,
+.gtb-helplink.active:after {
+    border-bottom-color: #111971;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
 }

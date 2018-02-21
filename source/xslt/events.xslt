@@ -319,8 +319,9 @@
     <xsl:template match="a[@data-help]" mode="ixsl:onclick">
         <!--<xsl:message>base uri van / is: "{ixsl:location()}"</xsl:message>-->
         <xsl:variable name="href" select="resolve-uri(@data-help, ixsl:location())"/>
-        <xsl:variable name="this" as="element(li)" select="ancestor::li[1]"/>
-        <xsl:for-each select="key('ids', 'help-subjects')//li">
+        <xsl:variable name="this" as="element(a)" select="."/>
+
+        <xsl:for-each select="key('ids', 'help-subjects')//a">
             <xsl:choose>
                 <xsl:when test=". is $this">
                     <ixsl:set-attribute name="class" select="ivdnt:add-class-values(@class, 'active')"/>
