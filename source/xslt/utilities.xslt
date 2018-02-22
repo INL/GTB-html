@@ -76,4 +76,9 @@
         </xsl:call-template>
         <!-- note that <ixsl:remove-attribute name="checked"> does not work (the current context is the input, equal to parameter $checkbox, so it could have worked). -->
     </xsl:template>
+    
+    <xsl:function name="ivdnt:remove-escaped-tags" as="xs:string">
+        <xsl:param name="string" as="xs:string"/>
+        <xsl:value-of select="replace($string, '&lt;[^&gt;]+&gt;', '')"/>
+    </xsl:function>
 </xsl:stylesheet>

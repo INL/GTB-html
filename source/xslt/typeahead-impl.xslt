@@ -60,7 +60,7 @@
                 <xsl:attribute name="class" select="'active'"/>
             </xsl:if>
             <!-- Delete any escaped markup in @Lemma. Initial version, using parse-xml-fragment in a try-catch, was overdone. -->
-            <xsl:variable name="lemma" select="replace(@Lemma, '&lt;[^&gt;]+&gt;', '')"/>
+            <xsl:variable name="lemma" select="ivdnt:remove-escaped-tags(@Lemma)"/>
             <a class="dropdown-item" href="#" role="option">
                 <!-- Web en Lemma worden in andere volgorde getoond dan de volgorde van onderstaande spans.
                      Dat komt door de float in de style van gtb-typeahead-wdb. De reden om dit zo te doen is dat Firefox
