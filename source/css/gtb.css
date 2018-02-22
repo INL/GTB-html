@@ -4,18 +4,22 @@
 }
 
 @font-face{
-    font-family: gtbi;
+    font-family: gtb;
     src: url('../fonts/INLVI___.TTF');
+    font-style: italic;
 }
 
 @font-face{
-    font-family: gtbb;
+    font-family: gtb;
     src: url('../fonts/INLVB___.TTF');
+    font-weight: bold;
 }
 
 @font-face{
-    font-family: gtbbi;
+    font-family: gtb;
     src: url('../fonts/INLVBI__.TTF');
+    font-weight: bold;
+    font-style: italic;
 }
 
 @font-face {
@@ -120,13 +124,6 @@ body:before {
     opacity: 0.5;
     cursor: wait;
 }
-
-/*.gtb-tooltip {
-    background-color: #96433D;
-	color: white;
-	font-size: 8pt;
-	font-style:normal;
-}*/
 
 .gtb-wait{
     z-index: 2000;
@@ -345,16 +342,20 @@ div.gtb-results{
 }
 
 div.gtb-results i{
-    font-family: Verdana, sans-serif, gtbi;
+    font-family: Verdana, sans-serif, gtb;
+    font-style: italic;
 }
 
 div.gtb-results b{
-    font-family: Verdana, sans-serif, gtbb;
+    font-family: Verdana, sans-serif, gtb;
+    font-weight: bold;
 }
 
 div.gtb-results i b,
 div.gtb-results b i{
-    font-family: Verdana, sans-serif, gtbbi;
+    font-family: Verdana, sans-serif, gtb;
+    font-style: italic;
+    font-weight: bold;
 }
 
 div.gtb-zoekvragen-geschiedenis {
