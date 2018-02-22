@@ -177,6 +177,8 @@
     
     <xsl:template match="input | select" mode="ivdnt:html-mode">
         <xsl:copy>
+            <!-- Als er een attribuut data-onlydicts is bij de bovenliggende formulierregel, kopieer het: -->
+            <xsl:copy-of select="ancestor::ivdnt:formulierregel/@data-onlydicts"/>
             <xsl:attribute name="id" select="ivdnt:generate-input-id(.)"/>
             <xsl:apply-templates select="node() | @*" mode="#current"/>
         </xsl:copy>
@@ -214,6 +216,8 @@
 
     <xsl:template match="ivdnt:formulierinput/input | ivdnt:formulierinput/select" mode="ivdnt:html-mode">
         <xsl:copy>
+            <!-- Als er een attribuut data-onlydicts is bij de bovenliggende formulierregel, kopieer het: -->
+            <xsl:copy-of select="ancestor::ivdnt:formulierregel/@data-onlydicts"/>
             <xsl:attribute name="id" select="ivdnt:generate-input-id(.)"/>
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:attribute name="data-label" select="ancestor::ivdnt:formulierregel[1]/ivdnt:formulierlabel"/>
@@ -226,9 +230,15 @@
     
     <xsl:template match="ivdnt:van-tot-velden" mode="ivdnt:html-mode">
         <div class="{normalize-space('input-group ' || @class)}">
-            <input id="{ivdnt:generate-input-id(.)}.van" type="text" name="{@van}" data-humanname="{@data-humanname-van}" class="form-control"/>
+            <input id="{ivdnt:generate-input-id(.)}.van" type="text" name="{@van}" data-humanname="{@data-humanname-van}" class="form-control">
+                <!-- Als er een attribuut data-onlydicts is bij de bovenliggende formulierregel, kopieer het: -->
+                <xsl:copy-of select="ancestor::ivdnt:formulierregel/@data-onlydicts"/>
+            </input>
             <span class="input-group-addon">tot / met</span>
-            <input id="{ivdnt:generate-input-id(.)}.tot" type="text" name="{@tot}" data-humanname="{@data-humanname-tot}" class="form-control"/>
+            <input id="{ivdnt:generate-input-id(.)}.tot" type="text" name="{@tot}" data-humanname="{@data-humanname-tot}" class="form-control">
+                <!-- Als er een attribuut data-onlydicts is bij de bovenliggende formulierregel, kopieer het: -->
+                <xsl:copy-of select="ancestor::ivdnt:formulierregel/@data-onlydicts"/>
+            </input>
         </div>
     </xsl:template>
     
