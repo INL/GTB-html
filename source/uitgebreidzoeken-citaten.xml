@@ -8,7 +8,7 @@
     </ivdnt:formulierregel>
     
     <ivdnt:collapse label="Brongegevens">
-        <ivdnt:formulierregel>
+        <ivdnt:formulierregel data-onlydicts="onw mnw wnt wft">
             <ivdnt:formulierlabel>Auteur citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="bronauteur" class="form-control gtb-tekstveld typeahead" data-humanname="auteur citaat"/>
@@ -26,7 +26,7 @@
                 <ivdnt:van-tot-velden van="bronvan" tot="brontot" data-humanname-van="vanaf-datering citaat" data-humanname-tot="tot-datering citaat"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
-        <ivdnt:formulierregel>
+        <ivdnt:formulierregel data-onlydicts="onw vmnw mnw wft">
             <ivdnt:formulierlabel>Lokalisering bron</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="bronlocatie" class="form-control gtb-tekstveld typeahead"/>
@@ -35,13 +35,13 @@
     </ivdnt:collapse>
     
     <ivdnt:collapse label="Oudste citaat">    
-        <ivdnt:formulierregel>
+        <ivdnt:formulierregel data-onlydicts="onw vmnw wft">
             <ivdnt:formulierlabel>Datering oudste citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <ivdnt:van-tot-velden van="oudvan" tot="oudtot" data-humanname-van="vanaf-datering oudste citaat" data-humanname-tot="tot-datering oudste citaat"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
-        <ivdnt:formulierregel>
+        <ivdnt:formulierregel data-onlydicts="vmnw">
             <ivdnt:formulierlabel>Lokalisering oudste citaat</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="oudlocatie" class="form-control gtb-tekstveld typeahead" data-humanname="lokalisering oudste citaat"/>

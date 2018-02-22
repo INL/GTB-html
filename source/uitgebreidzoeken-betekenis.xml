@@ -7,7 +7,7 @@
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel>
+    <ivdnt:formulierregel data-onlydicts="onw vmnw wft">
         <ivdnt:formulierlabel>Label bij betekenis</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
             <input type="text" name="betlabel" class="form-control gtb-tekstveld typeahead" data-humanname="label bij betekenis"/>
@@ -21,7 +21,7 @@
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel>
+    <ivdnt:formulierregel data-onlydicts="vmnw">
         <ivdnt:formulierlabel>Semantische classificatie</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
             <input type="text" name="betclass" class="form-control gtb-tekstveld typeahead" data-humanname="semantische classificatie"/>

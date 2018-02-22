@@ -11,7 +11,7 @@
     </ivdnt:formulierregel>
     
     <ivdnt:collapse label="Etymologie">
-       <ivdnt:formulierregel>
+       <ivdnt:formulierregel data-onlydicts="onw vmnw wft">
            <ivdnt:formulierlabel>Verwante vorm</ivdnt:formulierlabel>
            <ivdnt:formulierinput>
                <input type="text" name="etymvorm" data-humanname="verwante vorm" class="form-control gtb-tekstveld typeahead"/>
@@ -29,21 +29,21 @@
     
     <ivdnt:collapse label="Morfologie">
     
-        <ivdnt:formulierregel>
+        <ivdnt:formulierregel data-onlydicts="onw vmnw">
             <ivdnt:formulierlabel>Morfologisch element</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="morfelem" data-humanname="morfologisch element" class="form-control gtb-tekstveld typeahead"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         
-        <ivdnt:formulierregel>
+        <ivdnt:formulierregel data-onlydicts="onw vmnw">
             <ivdnt:formulierlabel>Woorden in de morfologische beschrijving</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="morfterm" data-humanname="woorden in morf. beschr." class="form-control gtb-tekstveld typeahead"/>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
         
-        <ivdnt:formulierregel>
+        <ivdnt:formulierregel data-onlydicts="onw">
             <ivdnt:formulierlabel>Woordvormingstype</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <select name='morftype' data-humanname="woordvormingstype" class="form-control gtb-selectveld">
@@ -86,7 +86,7 @@
     
     <ivdnt:collapse label="Flexie">
         
-        <ivdnt:formulierregel>
+        <ivdnt:formulierregel data-onlydicts="onw vmnw">
             <ivdnt:formulierlabel>Type</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <select name="flextype" data-humanname="flexietype" class="form-control gtb-selectveld">
@@ -203,7 +203,7 @@
                 </select>
             </ivdnt:formulierinput>
         </ivdnt:formulierregel>
-        <ivdnt:formulierregel>
+        <ivdnt:formulierregel data-onlydicts="onw vmnw">
             <ivdnt:formulierlabel>Vorm</ivdnt:formulierlabel>
             <ivdnt:formulierinput>
                 <input type="text" name="flexvorm" data-humanname="flexievorm" class="form-control gtb-tekstveld typeahead"/>
