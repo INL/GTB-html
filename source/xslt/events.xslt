@@ -148,9 +148,12 @@
     <xsl:template match="input[@data-inputname eq 'wdb']" mode="ixsl:onchange">
         <xsl:variable name="current-tab" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
         
-        <xsl:call-template name="enable-fields-for-dict-selection">
-            <xsl:with-param name="current-tab" select="$current-tab"/>
-        </xsl:call-template>
+        <ixsl:schedule-action wait="1">
+            <!-- Update de velden asynchroon, want het kan soms even duren. -->
+            <xsl:call-template name="enable-fields-for-dict-selection">
+                <xsl:with-param name="current-tab" select="$current-tab"/>
+            </xsl:call-template>
+        </ixsl:schedule-action>
     </xsl:template>
     
     <xsl:template match="select[matches(@name, '^sleutel[1-4]$')]" mode="ixsl:onchange">
