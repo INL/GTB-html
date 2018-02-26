@@ -1,23 +1,23 @@
 @font-face{
     font-family: gtb;
-    src: url('../fonts/INLVRG__.TTF');
+    src: url('../fonts/INLVRG__.TTF') format('truetype');
 }
 
 @font-face{
     font-family: gtb;
-    src: url('../fonts/INLVI___.TTF');
+    src: url('../fonts/INLVI___.TTF') format('truetype');
     font-style: italic;
 }
 
 @font-face{
     font-family: gtb;
-    src: url('../fonts/INLVB___.TTF');
+    src: url('../fonts/INLVB___.TTF') format('truetype');
     font-weight: bold;
 }
 
 @font-face{
     font-family: gtb;
-    src: url('../fonts/INLVBI__.TTF');
+    src: url('../fonts/INLVBI__.TTF') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
@@ -274,10 +274,7 @@ td.speciaalteken:active{
 }
 
 .gtb-wdbcol-line{
-    /*width: 5%;*/
-    width: auto;
-    min-width: 2em;
-    max-width: 3.5em;
+    width: 4em;
 }
 .gtb-wdbcol-wdb{
     /*width: 10%;*/
@@ -342,20 +339,16 @@ div.gtb-results{
 }
 
 div.gtb-results i{
-    font-family: Verdana, sans-serif, gtb;
-    font-style: italic;
+    font-family: Verdana, sans-serif, gtbi;
 }
 
 div.gtb-results b{
-    font-family: Verdana, sans-serif, gtb;
-    font-weight: bold;
+    font-family: Verdana, sans-serif, gtbb;
 }
 
 div.gtb-results i b,
 div.gtb-results b i{
-    font-family: Verdana, sans-serif, gtb;
-    font-style: italic;
-    font-weight: bold;
+    font-family: Verdana, sans-serif, gtbbi;
 }
 
 div.gtb-zoekvragen-geschiedenis {

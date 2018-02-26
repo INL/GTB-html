@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <package xmlns="http://ns.saxonica.com/xslt/export" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vv="http://saxon.sf.net/generated-variable" xmlns:java-type="http://saxon.sf.net/java-type" version="30" packageVersion="1" saxonVersion="9.7.0.19" timeStamp="2018-02-22T15:23:08.204+01:00" target="JS">
+=======
+<package xmlns="http://ns.saxonica.com/xslt/export" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vv="http://saxon.sf.net/generated-variable" xmlns:java-type="http://saxon.sf.net/java-type" version="30" packageVersion="1" saxonVersion="9.7.0.19" timeStamp="2018-02-26T10:30:16.228+01:00" target="JS">
+>>>>>>> Fix font issue in IE11
  <co id="0" binds="">
   <globalVariable name="Q{}RESULT_SORTKEYS_PROPERTY" type="xs:string" line="43" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <str val="result-sortkeys"/>
@@ -1145,7 +1149,11 @@
        <fn name="concat">
         <fn name="concat">
          <fn name="concat">
+<<<<<<< HEAD
           <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg850046832" bSlot="0"/>
+=======
+          <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg90814046" bSlot="0"/>
+>>>>>>> Fix font issue in IE11
           <varRef name="text-input-uri-params" slot="0"/>
          </fn>
          <str val="&amp;wdb="/>
@@ -1178,7 +1186,11 @@
           <cvUntyped to="xs:boolean">
            <data>
             <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:call" type="item()*">
+<<<<<<< HEAD
              <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg696757012" bSlot="0"/>
+=======
+             <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg176362512" bSlot="0"/>
+>>>>>>> Fix font issue in IE11
              <str val="hasOwnProperty"/>
              <arrayBlock>
               <varRef name="tabdiv" slot="0"/>
@@ -1280,7 +1292,11 @@
           <fn name="concat">
            <fn name="concat">
             <fn name="concat">
+<<<<<<< HEAD
              <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg981398670" bSlot="1"/>
+=======
+             <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg692679428" bSlot="1"/>
+>>>>>>> Fix font issue in IE11
              <check line="16" card="1" diag="3|0|XTTE0570|textfield-name">
               <cvUntyped to="xs:string">
                <data>
@@ -1449,7 +1465,11 @@
     </param>
     <filter line="237" flags="ib">
      <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:call" type="item()*">
+<<<<<<< HEAD
       <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg2023125280" bSlot="0"/>
+=======
+      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1776780649" bSlot="0"/>
+>>>>>>> Fix font issue in IE11
       <str val="exportResult"/>
       <arrayBlock>
        <varRef name="url-for-content" slot="0"/>
@@ -1457,7 +1477,11 @@
        <varRef name="mimetype" slot="2"/>
       </arrayBlock>
      </ifCall>
+<<<<<<< HEAD
      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1181407352" bSlot="1"/>
+=======
+     <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg480579606" bSlot="1"/>
+>>>>>>> Fix font issue in IE11
     </filter>
    </sequence>
   </template>
@@ -1812,7 +1836,11 @@
       </check>
      </treat>
     </param>
+<<<<<<< HEAD
     <resultDoc line="254" global="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;" local="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xA;">
+=======
+    <resultDoc line="254" global="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;" local="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xD;&#xA;">
+>>>>>>> Fix font issue in IE11
      <str role="href" val="#resultaathouder"/>
      <sequence role="content" line="255">
       <choose>
@@ -1910,8 +1938,13 @@
       </elem>
       <choose line="277">
        <gVarRef name="Q{}gaTrackingCode" bSlot="3"/>
+<<<<<<< HEAD
        <let line="278" var="vv:loc401239600" as="xs:boolean" slot="5" eval="7">
         <vc baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/utilities.xslt" line="13" op="lt" comp="CalVC">
+=======
+       <let line="278" var="vv:loc1444736157" as="xs:boolean" slot="5" eval="7">
+        <vc baseUri="file:/D:/code/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" module="file:/D:/code/GTB-html/source/xslt/utilities.xslt" line="13" op="lt" comp="CalVC">
+>>>>>>> Fix font issue in IE11
          <fn name="current-date"/>
          <atomic val="1957-11-05" type="xs:date"/>
         </vc>
@@ -1925,7 +1958,11 @@
            <varRef name="url-for-content" slot="0"/>
           </arrayBlock>
          </ifCall>
+<<<<<<< HEAD
          <varRef name="vv:loc401239600" slot="5"/>
+=======
+         <varRef name="vv:loc1444736157" slot="5"/>
+>>>>>>> Fix font issue in IE11
         </filter>
        </let>
       </choose>
@@ -2072,7 +2109,11 @@
          </ifCall>
         </forEach>
         <true/>
+<<<<<<< HEAD
         <resultDoc line="137" global="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;" local="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;method={http\://saxonica.com/ns/interactiveXSLT}append-content&#xA;">
+=======
+        <resultDoc line="137" global="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;" local="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;method={http\://saxonica.com/ns/interactiveXSLT}append-content&#xD;&#xA;">
+>>>>>>> Fix font issue in IE11
          <str role="href" val="?."/>
          <elem role="content" line="139" name="div" namespaces="xs=http://www.w3.org/2001/XMLSchema ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS array=http://www.w3.org/2005/xpath-functions/array ivdnt=http://www.ivdnt.org/xslt/namespaces">
           <sequence>
@@ -2236,7 +2277,11 @@
              <str val="focus"/>
              <arrayBlock/>
             </ifCall>
+<<<<<<< HEAD
             <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1960399734" bSlot="1"/>
+=======
+            <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg985260506" bSlot="1"/>
+>>>>>>> Fix font issue in IE11
            </filter>
           </sequence>
          </let>
@@ -2949,7 +2994,11 @@
          </fn>
         </filter>
        </check>
+<<<<<<< HEAD
        <resultDoc line="212" global="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;" local="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xA;">
+=======
+       <resultDoc line="209" global="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;" local="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xD;&#xA;">
+>>>>>>> Fix font issue in IE11
         <str role="href" val="?."/>
         <applyT role="content" line="213" mode="Q{}geschiedenis-lijst" bSlot="21">
          <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" role="select" name="ixsl:get" type="item()*">
@@ -3822,9 +3871,15 @@
    </let>
   </template>
  </co>
+<<<<<<< HEAD
  <co id="80" binds="81">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}always-false" line="12" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/utilities.xslt" eval="1" flags="pU" as="xs:boolean" slots="0">
    <gVarRef role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="-1" name="Q{http://saxon.sf.net/generated-variable}gg2094507980" bSlot="0"/>
+=======
+ <co id="79" binds="80">
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}always-false" line="12" module="file:/D:/code/GTB-html/source/xslt/utilities.xslt" eval="1" flags="pU" as="xs:boolean" slots="0">
+   <gVarRef role="body" vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="-1" name="Q{http://saxon.sf.net/generated-variable}gg350462080" bSlot="0"/>
+>>>>>>> Fix font issue in IE11
   </function>
  </co>
  <co id="38" binds="">
@@ -3878,7 +3933,11 @@
    <arith role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="172" op="+" calc="i+i">
     <ufCall name="Q{http://www.ivdnt.org/xslt/namespaces}get-preceding-dict-linecount" tailCall="false" bSlot="0" eval="6 4 6">
      <varRef name="statistics" slot="0"/>
+<<<<<<< HEAD
      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg889017988" bSlot="1"/>
+=======
+     <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1365813444" bSlot="1"/>
+>>>>>>> Fix font issue in IE11
      <varRef name="dictname" slot="1"/>
     </ufCall>
     <int val="1"/>
@@ -3933,10 +3992,33 @@
    </templateRule>
   </mode>
  </co>
+<<<<<<< HEAD
  <co id="62" vis="PUBLIC" binds="">
+=======
+ <co id="87" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg2985678" type="xs:boolean" line="13" module="file:/D:/code/GTB-html/source/xslt/utilities.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <vc vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="13" op="lt" comp="CalVC">
+    <fn name="current-date"/>
+    <atomic val="1957-11-05" type="xs:date"/>
+   </vc>
+  </globalVariable>
+ </co>
+ <co id="61" vis="PUBLIC" binds="">
+>>>>>>> Fix font issue in IE11
   <globalParam name="Q{}showLinkToSearchResultXml" type="xs:boolean" line="0" visibility="PUBLIC" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <false/>
   </globalParam>
+ </co>
+ <co id="36" binds="56">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg90814046" type="xs:string" line="377" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <fn vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="377" name="concat">
+    <fn name="concat">
+     <gVarRef name="Q{}baseSearchURL" bSlot="0"/>
+     <str val="&amp;conc=true&amp;xmlerror=true"/>
+    </fn>
+    <str val="&amp;"/>
+   </fn>
+  </globalVariable>
  </co>
  <co id="16" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-my-typeahead-ul" line="70" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/typeahead.xslt" eval="7" flags="pU" as="element(Q{}ul)" slots="1">
@@ -3965,8 +4047,13 @@
    </check>
   </function>
  </co>
+<<<<<<< HEAD
  <co id="88" binds="65">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}range-title" line="104" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" eval="8" flags="pU" as="xs:string" slots="2">
+=======
+ <co id="88" binds="64">
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}range-title" line="104" module="file:/D:/code/GTB-html/source/xslt/render-results.xslt" eval="8" flags="pU" as="xs:string" slots="2">
+>>>>>>> Fix font issue in IE11
    <arg name="firstOfRange" as="xs:integer"/>
    <arg name="maxLineNumber" as="xs:integer"/>
    <cvUntyped role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="109" to="xs:string">
@@ -4001,12 +4088,20 @@
   </function>
  </co>
  <co id="89" binds="">
+<<<<<<< HEAD
   <globalVariable name="Q{}ZOEK_FORMULIER_CLASS" type="xs:string" line="46" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+=======
+  <globalVariable name="Q{}ZOEK_FORMULIER_CLASS" type="xs:string" line="46" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+>>>>>>> Fix font issue in IE11
    <str val="zoek-formulier"/>
   </globalVariable>
  </co>
  <co id="90" binds="">
+<<<<<<< HEAD
   <globalVariable name="Q{}URL_FOR_CONTENT_PROPERTY" type="xs:string" line="38" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+=======
+  <globalVariable name="Q{}URL_FOR_CONTENT_PROPERTY" type="xs:string" line="38" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+>>>>>>> Fix font issue in IE11
    <str val="url-for-content"/>
   </globalVariable>
  </co>
@@ -4154,9 +4249,15 @@
    <str val=""/>
   </globalParam>
  </co>
+<<<<<<< HEAD
  <co id="91" binds="65 65 65 65 65 65 65 65 65 88 88 88 65 65 88 88">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}gen-pagination" flags="os" line="112" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" slots="8">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="113">
+=======
+ <co id="91" binds="64 64 64 64 64 64 64 64 64 88 88 88 64 64 88 88">
+  <template name="Q{http://www.ivdnt.org/xslt/namespaces}gen-pagination" flags="os" line="112" module="file:/D:/code/GTB-html/source/xslt/render-results.xslt" slots="8">
+   <sequence role="body" vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="113">
+>>>>>>> Fix font issue in IE11
     <param name="statistics" slot="0" flags="r" as="element(Q{}statistics)">
      <treat role="conversion" as="element(Q{}statistics)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='statistics';" diag="8|0|XTTE0590|statistics">
       <check card="1" diag="8|0|XTTE0590|statistics">
@@ -4757,7 +4858,11 @@
   </mode>
  </co>
  <co id="92" binds="">
+<<<<<<< HEAD
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-wdb-field" line="92" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="8" flags="pU" as="xs:boolean" slots="1">
+=======
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-wdb-field" line="92" module="file:/D:/code/GTB-html/source/xslt/history.xslt" eval="8" flags="pU" as="xs:boolean" slots="1">
+>>>>>>> Fix font issue in IE11
    <arg name="input" as="element(Q{}input-or-select)"/>
    <fn role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="94" name="exists">
     <filter flags="b">
@@ -4781,7 +4886,11 @@
   </function>
  </co>
  <co id="37" binds="93">
+<<<<<<< HEAD
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-wdb-inputs-for-url" line="348" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="xs:string" slots="2">
+=======
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-wdb-inputs-for-url" line="348" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" eval="7" flags="pU" as="xs:string" slots="2">
+>>>>>>> Fix font issue in IE11
    <arg name="formdiv-inputs-and-selects" as="element(Q{}inputs-and-selects)"/>
    <let role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="351" var="names" as="xs:string*" slot="1" eval="3">
     <cvUntyped line="352" to="xs:string">
@@ -4833,7 +4942,11 @@
          <fn name="empty">
           <varRef name="names" slot="1"/>
          </fn>
+<<<<<<< HEAD
          <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg923465867" bSlot="0"/>
+=======
+         <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1317906765" bSlot="0"/>
+>>>>>>> Fix font issue in IE11
         </choose>
         <cast line="359" as="xs:untypedAtomic" emptiable="0">
          <fn name="encode-for-uri">
@@ -4871,7 +4984,11 @@
     <true/>
     <let line="161" var="stat" as="element(Q{}stat)?" slot="3" eval="7">
      <check card="?" diag="3|0|XTTE0570|stat">
+<<<<<<< HEAD
       <let var="vv:loc477747816" as="xs:string?" slot="4" eval="7">
+=======
+      <let var="vv:loc652186885" as="xs:string?" slot="4" eval="7">
+>>>>>>> Fix font issue in IE11
        <first>
         <varRef name="dictnames" slot="1"/>
        </first>
@@ -4884,7 +5001,11 @@
          <data>
           <axis name="attribute" nodeTest="attribute(Q{}item)" jsTest="return item.name=='item'"/>
          </data>
+<<<<<<< HEAD
          <varRef name="vv:loc477747816" slot="4"/>
+=======
+         <varRef name="vv:loc652186885" slot="4"/>
+>>>>>>> Fix font issue in IE11
         </vc>
        </filter>
       </let>
@@ -4941,7 +5062,11 @@
   </template>
  </co>
  <co id="94" binds="">
+<<<<<<< HEAD
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-active-li" line="81" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/typeahead.xslt" eval="7" flags="pU" as="xs:boolean" slots="1">
+=======
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-active-li" line="81" module="file:/D:/code/GTB-html/source/xslt/typeahead.xslt" eval="7" flags="pU" as="xs:boolean" slots="1">
+>>>>>>> Fix font issue in IE11
    <arg name="li" as="element(Q{}li)?"/>
    <and role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/typeahead.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="83" op="and">
     <fn name="exists">
@@ -5009,8 +5134,13 @@
   </function>
  </co>
  <co id="7" binds="95 1">
+<<<<<<< HEAD
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}doe-zoeken" flags="os" line="390" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="1">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="391">
+=======
+  <template name="Q{http://www.ivdnt.org/xslt/namespaces}doe-zoeken" flags="os" line="390" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" slots="1">
+   <sequence role="body" vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="391">
+>>>>>>> Fix font issue in IE11
     <param name="formdiv" slot="0" flags="r" as="element(Q{}div)">
      <treat role="conversion" as="element(Q{}div)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='div';" diag="8|0|XTTE0590|formdiv">
       <check card="1" diag="8|0|XTTE0590|formdiv">
@@ -5031,9 +5161,15 @@
    </sequence>
   </template>
  </co>
+<<<<<<< HEAD
  <co id="70" binds="63 96 97">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}load-help" flags="os" line="412" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="1">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="413">
+=======
+ <co id="69" binds="62 96 97">
+  <template name="Q{http://www.ivdnt.org/xslt/namespaces}load-help" flags="os" line="412" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" slots="1">
+   <sequence role="body" vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="413">
+>>>>>>> Fix font issue in IE11
     <param name="href" slot="0" flags="i" as="xs:string">
      <treat role="conversion" as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="8|0|XTTE0590|href">
       <check card="1" diag="8|0|XTTE0590|href">
@@ -5049,16 +5185,27 @@
      <gVarRef name="Q{}gaTrackingCode" bSlot="0"/>
      <filter line="416" flags="ib">
       <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:call" type="item()*">
+<<<<<<< HEAD
        <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1987433568" bSlot="1"/>
+=======
+       <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg882957395" bSlot="1"/>
+>>>>>>> Fix font issue in IE11
        <str val="sendGooglePageView"/>
        <arrayBlock>
         <varRef name="href" slot="0"/>
        </arrayBlock>
       </ifCall>
+<<<<<<< HEAD
       <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1513657706" bSlot="2"/>
      </filter>
     </choose>
     <resultDoc line="418" global="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;" local="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xA;">
+=======
+      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg163163771" bSlot="2"/>
+     </filter>
+    </choose>
+    <resultDoc line="418" global="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;" local="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xD;&#xA;">
+>>>>>>> Fix font issue in IE11
      <str role="href" val="#help"/>
      <copyOf role="content" line="419" flags="vsc">
       <fn name="doc">
@@ -5262,6 +5409,7 @@
    </sequence>
   </template>
  </co>
+<<<<<<< HEAD
  <co id="99" binds="100">
   <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg753247835" type="xs:string" line="307" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="307" name="concat">
@@ -5287,17 +5435,81 @@
   <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg682416291" type="xs:string" line="285" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <fn vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="285" name="concat">
     <gVarRef name="Q{}baseArticleURL" bSlot="0"/>
+=======
+ <co id="99" binds="10">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg886200793" type="xs:string+" line="177" module="file:/D:/code/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n&gt;=1;};">
+   <check vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="177" card="+" diag="3|0|XTTE0570|dictionaries">
+    <fn name="tokenize">
+     <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="0|0||tokenize">
+      <check card="?" diag="0|0||tokenize">
+       <cvUntyped to="xs:string">
+        <data>
+         <gVarRef name="Q{}dictionaryOutputOrder" bSlot="0"/>
+        </data>
+       </cvUntyped>
+      </check>
+     </treat>
+     <str val="\s+"/>
+     <str val=""/>
+    </fn>
+   </check>
+  </globalVariable>
+ </co>
+ <co id="52" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg480579606" type="xs:boolean" line="13" module="file:/D:/code/GTB-html/source/xslt/utilities.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <vc vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="13" op="lt" comp="CalVC">
+    <fn name="current-date"/>
+    <atomic val="1957-11-05" type="xs:date"/>
+   </vc>
+  </globalVariable>
+ </co>
+ <co id="68" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg985260506" type="xs:boolean" line="13" module="file:/D:/code/GTB-html/source/xslt/utilities.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <vc vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="13" op="lt" comp="CalVC">
+    <fn name="current-date"/>
+    <atomic val="1957-11-05" type="xs:date"/>
+   </vc>
+  </globalVariable>
+ </co>
+ <co id="100" binds="101">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg319819391" type="xs:string" line="307" module="file:/D:/code/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <fn vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="307" name="concat">
+    <gVarRef name="Q{}baseArticleContentURL" bSlot="0"/>
+>>>>>>> Fix font issue in IE11
     <str val="&amp;wdb="/>
    </fn>
   </globalVariable>
  </co>
+<<<<<<< HEAD
  <co id="40" binds="">
   <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg696757012" type="item()" line="64" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
    <check vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="64" card="1" diag="0|0||ixsl:call">
+=======
+ <co id="80" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg350462080" type="xs:boolean" line="13" module="file:/D:/code/GTB-html/source/xslt/utilities.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <vc vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="13" op="lt" comp="CalVC">
+    <fn name="current-date"/>
+    <atomic val="1957-11-05" type="xs:date"/>
+   </vc>
+  </globalVariable>
+ </co>
+ <co id="97" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg163163771" type="xs:boolean" line="13" module="file:/D:/code/GTB-html/source/xslt/utilities.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <vc vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="13" op="lt" comp="CalVC">
+    <fn name="current-date"/>
+    <atomic val="1957-11-05" type="xs:date"/>
+   </vc>
+  </globalVariable>
+ </co>
+ <co id="40" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg176362512" type="item()" line="64" module="file:/D:/code/GTB-html/source/xslt/history.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
+   <check vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="64" card="1" diag="0|0||ixsl:call">
+>>>>>>> Fix font issue in IE11
     <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:window" type="item()?"/>
    </check>
   </globalVariable>
  </co>
+<<<<<<< HEAD
  <co id="102" binds="10">
   <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg912969687" type="xs:string?" line="201" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n&lt;=1;};">
    <lastOf vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="201">
@@ -5369,6 +5581,48 @@
  <co id="96" binds="">
   <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1987433568" type="item()" line="416" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
    <check vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="416" card="1" diag="0|0||ixsl:call">
+=======
+ <co id="102" binds="">
+  <globalVariable name="Q{}RESULT_SORTREVERSE_PROPERTY" type="xs:string" line="44" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <str val="result-sortreverse"/>
+  </globalVariable>
+ </co>
+ <co id="103" binds="">
+  <globalVariable name="Q{}RESULT_TABDIV_ID_PROPERTY" type="xs:string" line="42" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <str val="result-tabdiv-id"/>
+  </globalVariable>
+ </co>
+ <co id="104" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg884738941" type="item()" line="243" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
+   <check vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="243" card="1" diag="0|0||ixsl:call">
+    <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:window" type="item()?"/>
+   </check>
+  </globalVariable>
+ </co>
+ <co id="96" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg882957395" type="item()" line="416" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
+   <check vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="416" card="1" diag="0|0||ixsl:call">
+    <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:window" type="item()?"/>
+   </check>
+  </globalVariable>
+ </co>
+ <co id="105" binds="">
+  <globalVariable name="Q{}min-hoogte-title" type="xs:string" line="12" module="file:/D:/code/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <str val="Klik voor de normale hoogte"/>
+  </globalVariable>
+ </co>
+ <co id="46" binds="98">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg692679428" type="xs:string" line="31" module="file:/D:/code/GTB-html/source/xslt/typeahead-impl.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <fn vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/typeahead-impl.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="31" name="concat">
+    <gVarRef name="Q{}baseListURL" bSlot="0"/>
+    <str val="&amp;index="/>
+   </fn>
+  </globalVariable>
+ </co>
+ <co id="51" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1776780649" type="item()" line="237" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return val;" jsCardCheck="function c(n) {return n==1;};">
+   <check vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="237" card="1" diag="0|0||ixsl:call">
+>>>>>>> Fix font issue in IE11
     <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:window" type="item()?"/>
    </check>
   </globalVariable>
@@ -5402,9 +5656,32 @@
    </sequence>
   </template>
  </co>
+<<<<<<< HEAD
  <co id="95" binds="106 35 5 4 8 11 39 73">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}select-tab" flags="os" line="170" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="7">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="171">
+=======
+ <co id="106" binds="10">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1606459087" type="xs:string?" line="201" module="file:/D:/code/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n&lt;=1;};">
+   <lastOf vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="201">
+    <fn name="tokenize">
+     <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="0|0||tokenize">
+      <check card="?" diag="0|0||tokenize">
+       <cvUntyped to="xs:string">
+        <data>
+         <gVarRef name="Q{}dictionaryOutputOrder" bSlot="0"/>
+        </data>
+       </cvUntyped>
+      </check>
+     </treat>
+    </fn>
+   </lastOf>
+  </globalVariable>
+ </co>
+ <co id="95" binds="107 35 5 4 8 11 39 72">
+  <template name="Q{http://www.ivdnt.org/xslt/namespaces}select-tab" flags="os" line="170" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" slots="7">
+   <sequence role="body" vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="171">
+>>>>>>> Fix font issue in IE11
     <param name="tabid" slot="0" flags="r" as="xs:string">
      <treat role="conversion" as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="8|0|XTTE0590|tabid">
       <check card="1" diag="8|0|XTTE0590|tabid">
@@ -5586,8 +5863,13 @@
    </sequence>
   </template>
  </co>
+<<<<<<< HEAD
  <co id="107" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-text-or-select-field" line="87" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" eval="8" flags="pU" as="xs:boolean" slots="1">
+=======
+ <co id="108" binds="">
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}is-text-or-select-field" line="87" module="file:/D:/code/GTB-html/source/xslt/history.xslt" eval="8" flags="pU" as="xs:boolean" slots="1">
+>>>>>>> Fix font issue in IE11
    <arg name="input" as="element(Q{}input-or-select)"/>
    <fn role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/history.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="89" name="exists">
     <filter flags="b">
@@ -5610,7 +5892,11 @@
    </fn>
   </function>
  </co>
+<<<<<<< HEAD
  <co id="64" binds="87 87 87 82 102 64 64 91 34 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 64 108 108 64 109 109">
+=======
+ <co id="63" binds="86 86 86 81 106 63 63 91 34 63 63 63 63 63 63 63 63 63 63 63 63 63 63 63 63 99 99 63 109 109">
+>>>>>>> Fix font issue in IE11
   <mode name="Q{}render-results" onNo="TC" flags="W" patternSlots="0">
    <templateRule prec="1" prio="0.0" seq="4" rank="0" minImp="0" slots="0" flags="os" line="235" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="element(Q{}conc)" jsTest="var q=SaxonJS.U.nameOfNode(item); return SaxonJS.U.isNode(item) &amp;&amp; item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='conc';"/>
@@ -5831,7 +6117,11 @@
         <data>
          <axis name="attribute" nodeTest="attribute(Q{}item)" jsTest="return item.name=='item'"/>
         </data>
+<<<<<<< HEAD
         <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg912969687" bSlot="4"/>
+=======
+        <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1606459087" bSlot="4"/>
+>>>>>>> Fix font issue in IE11
        </vc>
        <elem line="202" name="span" namespaces="ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces">
         <sequence>
@@ -6288,7 +6578,11 @@
          </slash>
          <fn name="not">
           <gcEE op="=" card="N:1" comp="CCC">
+<<<<<<< HEAD
            <gVarRef line="177" name="Q{http://saxon.sf.net/generated-variable}gg1723586917" bSlot="25"/>
+=======
+           <gVarRef line="177" name="Q{http://saxon.sf.net/generated-variable}gg886200793" bSlot="25"/>
+>>>>>>> Fix font issue in IE11
            <data>
             <axis name="attribute" nodeTest="attribute(Q{}item)" jsTest="return item.name=='item'"/>
            </data>
@@ -6296,18 +6590,30 @@
          </fn>
         </filter>
        </applyT>
+<<<<<<< HEAD
        <let line="183" var="vv:loc2067791435" as="element(Q{}stat)*" indexable="true" slot="1" eval="3">
+=======
+       <let line="183" var="vv:loc1882340581" as="element(Q{}stat)*" indexable="true" slot="1" eval="3">
+>>>>>>> Fix font issue in IE11
         <slash line="185" simple="1">
          <varRef name="this" slot="0"/>
          <axis name="child" nodeTest="element(Q{}stat)" jsTest="var q=SaxonJS.U.nameOfNode(item); return item.nodeType==1 &amp;&amp; q.uri==''&amp;&amp;q.local=='stat';"/>
         </slash>
         <forEach>
+<<<<<<< HEAD
          <gVarRef line="177" name="Q{http://saxon.sf.net/generated-variable}gg1723586917" bSlot="26"/>
+=======
+         <gVarRef line="177" name="Q{http://saxon.sf.net/generated-variable}gg886200793" bSlot="26"/>
+>>>>>>> Fix font issue in IE11
          <let line="184" var="dict" as="xs:string" slot="2" eval="7">
           <dot type="xs:string"/>
           <applyT line="185" mode="Q{}render-results" bSlot="27">
            <indexedFilter role="select" line="183" use="left">
+<<<<<<< HEAD
             <varRef name="vv:loc2067791435" slot="1"/>
+=======
+            <varRef name="vv:loc1882340581" slot="1"/>
+>>>>>>> Fix font issue in IE11
             <vc line="185" op="eq" comp="CCC">
              <data>
               <axis name="attribute" nodeTest="attribute(Q{}item)" jsTest="return item.name=='item'"/>
@@ -6429,6 +6735,7 @@
    </templateRule>
   </mode>
  </co>
+<<<<<<< HEAD
  <co id="52" binds="">
   <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1181407352" type="xs:boolean" line="13" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/utilities.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <vc vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="13" op="lt" comp="CalVC">
@@ -6437,6 +6744,8 @@
    </vc>
   </globalVariable>
  </co>
+=======
+>>>>>>> Fix font issue in IE11
  <co id="24" binds="21 20">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}typeahead-next-value" flags="os" line="268" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/typeahead.xslt" slots="2">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/typeahead.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="269">
@@ -6490,6 +6799,7 @@
    </sequence>
   </template>
  </co>
+<<<<<<< HEAD
  <co id="81" binds="">
   <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg2094507980" type="xs:boolean" line="13" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/utilities.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.boolean.cast(val);" jsCardCheck="function c(n) {return n==1;};">
    <vc vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/utilities.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="13" op="lt" comp="CalVC">
@@ -6556,6 +6866,47 @@
   </globalVariable>
  </co>
  <co id="109" binds="41 101 41 99 41">
+=======
+ <co id="110" binds="48">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1923400154" type="xs:string" line="285" module="file:/D:/code/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};">
+   <fn vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="285" name="concat">
+    <gVarRef name="Q{}baseArticleURL" bSlot="0"/>
+    <str val="&amp;wdb="/>
+   </fn>
+  </globalVariable>
+ </co>
+ <co id="93" binds="">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1317906765" type="xs:anyAtomicType*" line="357" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.anyAtomicType.cast(val);" jsCardCheck="function c() {return true;};">
+   <data vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="357">
+    <message>
+     <valueOf role="select" flags="e">
+      <str val="Geen woordenboeken geselecteerd"/>
+     </valueOf>
+     <str role="terminate" val="no"/>
+     <str role="error" val="Q{http://www.w3.org/2005/xqt-errors}XTMM9000"/>
+    </message>
+   </data>
+  </globalVariable>
+ </co>
+ <co id="83" binds="10">
+  <globalVariable name="Q{http://saxon.sf.net/generated-variable}gg1365813444" type="xs:string*" line="172" module="file:/D:/code/GTB-html/source/xslt/render-results.xslt" visibility="PRIVATE" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c() {return true;};">
+   <fn vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/render-results.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema math=http://www.w3.org/2005/xpath-functions/math" line="172" name="tokenize">
+    <treat as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="0|0||tokenize">
+     <check card="?" diag="0|0||tokenize">
+      <cvUntyped to="xs:string">
+       <data>
+        <gVarRef name="Q{}dictionaryOutputOrder" bSlot="0"/>
+       </data>
+      </cvUntyped>
+     </check>
+    </treat>
+    <str val="\s+"/>
+    <str val=""/>
+   </fn>
+  </globalVariable>
+ </co>
+ <co id="109" binds="41 110 41 100 41">
+>>>>>>> Fix font issue in IE11
   <mode name="Q{}render-result-attributes" onNo="TC" flags="W" patternSlots="0">
    <templateRule prec="1" prio="0.0" seq="1" rank="0" minImp="0" slots="0" flags="os" line="268" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/render-results.xslt">
     <p.nodeTest role="match" test="attribute(Q{}Woordsoort)" jsTest="return SaxonJS.U.isAttr(item) &amp;&amp; item.name=='Woordsoort'"/>
@@ -6673,7 +7024,7 @@
         </atomSing>
         <atomSing card="?" diag="1|1||eq">
          <slash>
-          <axis name="parent" nodeTest="(document-node()|element())" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType==9||item.nodeType==11||item.nodeType==1);"/>
+          <axis name="parent" nodeTest="(element()|document-node())" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType==9||item.nodeType==11||item.nodeType==1);"/>
           <axis name="attribute" nodeTest="attribute(Q{}tot)" jsTest="return item.name=='tot'"/>
          </slash>
         </atomSing>
@@ -6693,7 +7044,7 @@
         </fn>
         <atomSing card="?" diag="0|1||concat">
          <slash>
-          <axis name="parent" nodeTest="(document-node()|element())" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType==9||item.nodeType==11||item.nodeType==1);"/>
+          <axis name="parent" nodeTest="(element()|document-node())" jsTest="return SaxonJS.U.isNode(item) &amp;&amp; (item.nodeType==9||item.nodeType==11||item.nodeType==1);"/>
           <axis name="attribute" nodeTest="attribute(Q{}tot)" jsTest="return item.name=='tot'"/>
          </slash>
         </atomSing>
@@ -6725,7 +7076,11 @@
           <fn name="concat">
            <fn name="concat">
             <fn name="concat">
+<<<<<<< HEAD
              <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg682416291" bSlot="1"/>
+=======
+             <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1923400154" bSlot="1"/>
+>>>>>>> Fix font issue in IE11
              <atomSing card="?" diag="0|1||concat">
               <slash>
                <axis name="parent" nodeTest="element()" jsTest="return item.nodeType==1;"/>
@@ -6797,7 +7152,11 @@
           <fn name="concat">
            <fn name="concat">
             <fn name="concat">
+<<<<<<< HEAD
              <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg753247835" bSlot="3"/>
+=======
+             <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg319819391" bSlot="3"/>
+>>>>>>> Fix font issue in IE11
              <atomSing card="?" diag="0|1||concat">
               <slash>
                <axis name="parent" nodeTest="element()" jsTest="return item.nodeType==1;"/>
@@ -7196,7 +7555,11 @@
    </let>
   </function>
  </co>
+<<<<<<< HEAD
  <co id="100" vis="PUBLIC" binds="">
+=======
+ <co id="101" vis="PUBLIC" binds="">
+>>>>>>> Fix font issue in IE11
   <globalParam name="Q{}baseArticleContentURL" type="xs:string" line="0" visibility="PUBLIC" flags="r" jsAcceptor="return SaxonJS.U.Atomic.string.cast(val);" jsCardCheck="function c(n) {return n==1;};"/>
  </co>
  <co id="74" binds="">
@@ -7586,7 +7949,11 @@
       </check>
      </treat>
     </param>
+<<<<<<< HEAD
     <resultDoc line="48" global="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;" local="#&#xA;#Thu Feb 22 15:23:08 CET 2018&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xA;">
+=======
+    <resultDoc line="48" global="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;" local="#&#xD;&#xA;#Mon Feb 26 10:30:16 CET 2018&#xD;&#xA;method={http\://saxonica.com/ns/interactiveXSLT}replace-content&#xD;&#xA;">
+>>>>>>> Fix font issue in IE11
      <str role="href" val="?."/>
      <applyT role="content" line="49" mode="Q{}render-typeahead-results" bSlot="0">
       <fn role="select" name="doc">
@@ -7602,8 +7969,13 @@
    <str val="Klik voor maximale hoogte"/>
   </globalVariable>
  </co>
+<<<<<<< HEAD
  <co id="106" binds="">
   <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-value-inputs-for-url" line="331" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" eval="8" flags="pU" as="xs:string" slots="3">
+=======
+ <co id="107" binds="">
+  <function name="Q{http://www.ivdnt.org/xslt/namespaces}get-value-inputs-for-url" line="331" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" eval="8" flags="pU" as="xs:string" slots="3">
+>>>>>>> Fix font issue in IE11
    <arg name="formdiv-inputs-and-selects" as="element(Q{}inputs-and-selects)"/>
    <let role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="340" var="domeininput" as="element(Q{}input-or-select)?" slot="1" eval="7">
     <check card="?" diag="3|0|XTTE0570|domeininput">
@@ -7747,9 +8119,15 @@
    <str val="text-input-uri-params"/>
   </globalVariable>
  </co>
+<<<<<<< HEAD
  <co id="75" binds="110 111">
   <template name="Q{http://www.ivdnt.org/xslt/namespaces}print-result" flags="os" line="240" module="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" slots="1">
    <sequence role="body" vn="31" baseUri="file:/home/pieter/ivdnt/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="241">
+=======
+ <co id="74" binds="104 87">
+  <template name="Q{http://www.ivdnt.org/xslt/namespaces}print-result" flags="os" line="240" module="file:/D:/code/GTB-html/source/xslt/gtb.xslt" slots="1">
+   <sequence role="body" vn="31" baseUri="file:/D:/code/GTB-html/source/xslt/gtb.xslt" ns="xsl=http://www.w3.org/1999/XSL/Transform ixsl=http://saxonica.com/ns/interactiveXSLT js=http://saxonica.com/ns/globalJS ivdnt=http://www.ivdnt.org/xslt/namespaces xs=http://www.w3.org/2001/XMLSchema array=http://www.w3.org/2005/xpath-functions/array" line="241">
+>>>>>>> Fix font issue in IE11
     <param name="url-for-content" slot="0" flags="r" as="xs:string">
      <treat role="conversion" as="xs:string" jsTest="return SaxonJS.U.Atomic.string.matches(item);" diag="8|0|XTTE0590|url-for-content">
       <check card="1" diag="8|0|XTTE0590|url-for-content">
@@ -7763,13 +8141,21 @@
     </param>
     <filter line="243" flags="ib">
      <ifCall xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT" name="ixsl:call" type="item()*">
+<<<<<<< HEAD
       <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1555958774" bSlot="0"/>
+=======
+      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg884738941" bSlot="0"/>
+>>>>>>> Fix font issue in IE11
       <str val="openNewWindow"/>
       <arrayBlock>
        <varRef name="url-for-content" slot="0"/>
       </arrayBlock>
      </ifCall>
+<<<<<<< HEAD
      <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg1275573014" bSlot="1"/>
+=======
+     <gVarRef name="Q{http://saxon.sf.net/generated-variable}gg2985678" bSlot="1"/>
+>>>>>>> Fix font issue in IE11
     </filter>
    </sequence>
   </template>
@@ -7825,4 +8211,8 @@
  </output>
  <decimalFormat decimal-separator="46" grouping-separator="44" digit="35" minus-sign="45" percent="37" per-mille="8240" zero-digit="48" exponent-separator="101" pattern-separator="59" infinity="Infinity" NaN="NaN"/>
 </package>
+<<<<<<< HEAD
 <?Σ 1895cddb?>
+=======
+<?Σ 9e649ffa?>
+>>>>>>> Fix font issue in IE11
