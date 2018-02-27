@@ -273,84 +273,6 @@ td.speciaalteken:active{
     font-weight: bold;
 }
 
-.gtb-wdbcol-line{
-    width: 4em;
-}
-.gtb-wdbcol-wdb{
-    /*width: 10%;*/
-    width: 4em;
-    min-width: 4em;
-    max-width: 4em;
-}
-.gtb-wdbcol-modern_lemma{
-    /*width: 15%;*/
-    width: 15em;
-    min-width: 15em;
-    max-width: 15em;
-}
-.gtb-wdbcol-lemma{
-    /*width: 15%;*/
-}
-.gtb-wdbcol-woordsoort{
-    /*width: 15%;*/
-    width: 15em;
-    min-width: 15em;
-    max-width: 15em;
-}
-.gtb-wdbcol-auteur{
-    /*width: 15%;*/
-    width: 15em;
-    min-width: 15em;
-    max-width: 15em;
-}
-.gtb-wdbcol-titel{
-    /*width: 50%;*/
-    width: 50em;
-    min-width: 50em;
-    max-width: 50em;
-}
-.gtb-wdbcol-datering{
-    /*width: 10%;*/
-    width: 10em;
-    min-width: 10em;
-    max-width: 10em;
-}
-.gtb-wdbcol-lokalisering{
-    /*width: 10%;*/
-    width: 10em;
-    min-width: 10em;
-    max-width: 10em;
-}
-.gtb-wdbcol-anders{
-    /*  rest */
-}
-
-.gtb-wdb-onw,
-.gtb-wdb-vmnw,
-.gtb-wdb-mnw,
-.gtb-wdb-wnt,
-.gtb-wdb-wft {
-    font-weight: bold;
-}
-
-div.gtb-results{
-    font-family: Verdana, sans-serif, gtb;
-    margin-bottom: 35px;
-}
-
-div.gtb-results i{
-    font-family: Verdana, sans-serif, gtbi;
-}
-
-div.gtb-results b{
-    font-family: Verdana, sans-serif, gtbb;
-}
-
-div.gtb-results i b,
-div.gtb-results b i{
-    font-family: Verdana, sans-serif, gtbbi;
-}
-
 div.gtb-zoekvragen-geschiedenis {
     min-height: 40vh;
     max-height: 40vh;
@@ -365,63 +287,140 @@ div.gtb-zoekvragen-geschiedenis {
     font-weight: bold;
 }
 
-
-#gtb-result-table thead {
-    display: block;
-    padding-right: 17px; /* alignen met scrollbar in tbody */
+.gtb-results i{
+    font-family: Verdana, sans-serif, gtbi;
 }
 
-#gtb-result-table tbody {
-    display: block;
-    overflow-y:auto;
+.gtb-results b{
+    font-family: Verdana, sans-serif, gtbb;
+}
+
+.gtb-results i b,
+.gtb-results b i{
+    font-family: Verdana, sans-serif, gtbbi;
+}
+
+.gtb-results{
+    font-family: Verdana, sans-serif, gtb;
+    margin-bottom: 35px;
+    overflow-x: auto;
+}
+
+.gtb-results-head {
+    border-bottom: 2px solid #DDD;
+    /* inline-flex expands to fit children, whereas regular flex expands to parent 
+    Since the idea is to overflow our parent on purpose, flex wouldn't make sense. */
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; 
+    -ms-flex-wrap: nowrap; 
+        flex-wrap: nowrap;
+    font-weight: bold;
+    margin-bottom: 6px;
+    min-width: 100%;
+}
+
+.gtb-results-body {
+    /* Same as with .gtb-results-head, overflow parent on purpose */
+    display: inline-block;
     /* dit zodat de tabel meeschaalt met je schermgrootte, moet aangepast als de andere content op de pagina drastisch verandert */
     max-height: calc(100vh - 475px);
     min-height: 300px;
+    min-width: 100%;
+    overflow-x: hidden;
+    overflow-y:auto;
 }
 
-#gtb-result-table th {
-    text-align: left;
+.gtb-result-row {
+    background-clip: padding-box;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+}
+.gtb-result-row:nth-child(odd) {
+    background-color: rgba(0,0,0,0.05);
 }
 
-.table-striped>tbody>tr:nth-of-type(odd):not(:hover) {
-    background-color: rgba(111, 189, 255, 0.04);
+.gtb-results-head > div,
+.gtb-result-row > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gtb-results-head {
+    /* match body scrollbar */
+    padding-right: 17px; 
 }
 
-tr.gtb-result-row > td{
-    
+.gtb-wdbcol-anders {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 8em;
+            flex: 1 0 8em;
 }
 
-tr.gtb-result-row{
-    
+.gtb-wdbcol-line,
+.gtb-wdbcol-hits,
+.gtb-wdbcol-wdb {
+   -webkit-box-flex: 0;
+       -ms-flex: none;
+           flex: none;
+   width: 4em;
 }
 
-
-td.gtb-conc {
-    
+.gtb-wdbcol-modern_lemma,
+.gtb-wdbcol-lemma {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 7em;
+            flex: 1 0 7em;
+    max-width: 15em;
 }
 
-td.gtb-conc > .gtb-conc {
-    line-height: 1.42858; /* 20 / 14, so 20px for font-size 14px */
-    font-size: 14px;
-    white-space: nowrap;
-    height: auto;
-    overflow: auto;
-    min-height: 60px; /*  3 lines */
-    
-    cursor: pointer;
+.gtb-wdbcol-woordsoort {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 8em;
+            flex: 1 0 8em;
+    max-width: 12em;
 }
-td.gtb-conc > .gtb-conc.gtb-cell-reduced {
-    overflow-y: auto;
-    height: 60px;
+
+.gtb-wdbcol-auteur {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 15em;
+            flex: 1 0 15em;
+    max-width: 20em;
 }
-td.gtb-conc > .gtb-conc.gtb-cell-expanded {
-    height: auto;
-    overflow: visible; /* shouldn't happen */
+.gtb-wdbcol-titel {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 50em;
 }
+.gtb-wdbcol-datering,
+.gtb-wdbcol-lokalisering {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 10em;
+}
+
+.gtb-wdbcol-betekenis {
+    -webkit-box-flex: 3;
+        -ms-flex: 3 0 10em;
+            flex: 3 0 10em;
+}
+
+.gtb-wdbcol-conc {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 32em;
+            flex: 0 0 32em;
+}
+
 
 .gtb-conc-line {
     display: block;
-    overflow: hidden; 
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .gtb-conc-voor {
@@ -453,6 +452,41 @@ as it causes issues issues with brackets and punctuation being repositioned with
     vertical-align: top;
     text-overflow: ellipsis;
 }
+
+
+
+
+
+
+.gtb-cell-reduced,
+.gtb-cell-expanded {
+    line-height: 1.42858; /* 20 / 14, so 20px for font-size 14px */
+    font-size: 14px;
+    min-height: 60px; /*  3 lines */
+    cursor: pointer;
+}
+
+.gtb-cell-reduced {
+    height: 60px;
+    overflow-y: auto;
+}
+
+.gtb-cell-expanded {
+    height: auto;
+}
+
+
+
+
+
+.gtb-wdb-onw,
+.gtb-wdb-vmnw,
+.gtb-wdb-mnw,
+.gtb-wdb-wnt,
+.gtb-wdb-wft {
+    font-weight: bold;
+}
+
 
 ul.gtb-list-subject-level2 li {
     margin-left: 1em;

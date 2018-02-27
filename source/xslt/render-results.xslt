@@ -26,41 +26,38 @@
         <xsl:param name="startline" as="xs:integer" required="yes"/>
         
         <xsl:variable name="first-result" as="element(result)?" select="result[1]"/>
+        <xsl:apply-templates select="statistics" mode="render-results"/>
+        
         <div class="gtb-results">
-            <xsl:apply-templates select="statistics" mode="render-results"/>
-            <!-- Note: the id 'gtb-result-table' is used on several places in this file and in js/gtb.js -->
-            <table id="gtb-result-table" class="table table-striped table-hover table-condensed">
-                <thead>
-                    <tr>
-                        <th class="gtb-wdbcol-line">Nr.</th>
-                        <th class="gtb-wdbcol-wdb">Wdb</th>
+            <div class="gtb-results-head">
+                <div class="gtb-wdbcol-line">Nr.</div>
+                <div class="gtb-wdbcol-wdb">Wdb</div>
+                <xsl:choose>
+                    <xsl:when test="ivdnt:is-bronnenlijst-result(.)">
+                        <div class="gtb-wdbcol-auteur">Auteur</div>
+                        <div class="gtb-wdbcol-titel">Titel</div>
+                        <div class="gtb-wdbcol-van">Datering</div>
+                        <div class="gtb-wdbcol-locatie">Lokalisering</div>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <div class="gtb-wdbcol-modern_lemma">Mod. Ned. trefwoord</div>
+                        <div class="gtb-wdbcol-lemma">Origineel trefwoord</div>
+                        <div class="gtb-wdbcol-woordsoort">Woordsoort</div>
+                        <xsl:if test="$first-result/@Verbinding"><div class="gtb-wdbcol-anders">Verbinding</div></xsl:if>
+                        <xsl:if test="$first-result/@hits and $first-result/conc"><div class="gtb-wdbcol-hits">Freq. </div></xsl:if>
                         <xsl:choose>
-                            <xsl:when test="ivdnt:is-bronnenlijst-result(.)">
-                                <th class="gtb-wdbcol-auteur">Auteur</th>
-                                <th class="gtb-wdbcol-titel">Titel</th>
-                                <th class="gtb-wdbcol-van">Datering</th>
-                                <th class="gtb-wdbcol-locatie">Lokalisering</th>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <th class="gtb-wdbcol-modern_lemma">Mod. Ned. trefwoord</th>
-                                <th class="gtb-wdbcol-lemma">Origineel trefwoord</th>
-                                <th class="gtb-wdbcol-woordsoort">Woordsoort</th>
-                                <xsl:if test="$first-result/@Verbinding"><th class="gtb-wdbcol-anders">Verbinding</th></xsl:if>
-                                <xsl:if test="$first-result/@hits and $first-result/conc"><th class="gtb-wdbcol-anders">Freq. </th></xsl:if>
-                                <xsl:choose>
-                                    <xsl:when test="$first-result/conc"><th class="gtb-wdbcol-anders">Concordantie</th></xsl:when>
-                                    <xsl:when test="$first-result/@Betekenis"><th class="gtb-wdbcol-anders">Betekenis</th></xsl:when>
-                                </xsl:choose>
-                                <xsl:if test="$first-result/@Kopsectie"><th class="gtb-wdbcol-anders">Kopsectie</th></xsl:if>
-                                <xsl:if test="$first-result/@Citaat"><th class="gtb-wdbcol-anders">Citaat</th></xsl:if>
-                            </xsl:otherwise>
-                        </xsl:choose>                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <xsl:apply-templates select="result" mode="render-results"/>
-                </tbody>
-            </table>
+                            <xsl:when test="$first-result/conc"><div class="gtb-wdbcol-conc">Concordantie</div></xsl:when>
+                            <xsl:when test="$first-result/@Betekenis"><div class="gtb-wdbcol-betekenis">Betekenis</div></xsl:when>
+                        </xsl:choose>
+                        <xsl:if test="$first-result/@Kopsectie"><div class="gtb-wdbcol-anders">Kopsectie</div></xsl:if>
+                        <xsl:if test="$first-result/@Citaat"><div class="gtb-wdbcol-anders">Citaat</div></xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>                        
+            </div>
+
+            <div class="gtb-results-body">
+                <xsl:apply-templates select="result" mode="render-results"/>
+            </div>
         </div>
         
         <div class="gtb-pagineringsknoppen" id="gtb-result-table_paginate">
@@ -205,7 +202,7 @@
     
     <xsl:template match="result" mode="render-results">
         <!-- TODO Ignore attributes Homoniemnr and hits? -->
-        <tr class="gtb-result-row">
+        <div class="gtb-result-row">
             <xsl:apply-templates select="@line" mode="render-results"/>
             <xsl:apply-templates select="@Wdb" mode="render-results"/>
             <xsl:apply-templates select="@Modern_lemma" mode="render-results"/>
@@ -215,9 +212,7 @@
             <xsl:choose>
                 <xsl:when test="conc">
                     <xsl:apply-templates select="@hits" mode="render-results"/>
-                    <td class="gtb-conc">
-                        <div class="gtb-conc gtb-cell-reduced" title="{$max-hoogte-title}"><xsl:apply-templates select="conc" mode="render-results"/></div>
-                    </td>
+                    <div class="gtb-wdbcol-conc gtb-cell-reduced" title="{$max-hoogte-title}"><xsl:apply-templates select="conc" mode="render-results"/></div>
                 </xsl:when>
                 <xsl:when test="@Betekenis"><xsl:apply-templates select="@Betekenis" mode="render-results"/></xsl:when>
             </xsl:choose>
@@ -229,7 +224,7 @@
             <xsl:apply-templates select="@titel" mode="render-results"/>
             <xsl:apply-templates select="@van" mode="render-results"/>
             <xsl:apply-templates select="@locatie" mode="render-results"/>
-        </tr>
+        </div>
     </xsl:template>
     
     <xsl:template match="conc" mode="render-results">
@@ -251,10 +246,10 @@
         <xsl:variable name="colclass" as="xs:string" select="'gtb-wdbcol-' || lower-case(local-name(.))"/>
         <xsl:choose>
             <xsl:when test="lower-case(local-name()) eq 'betekenis'">
-                <td class="{$class} {$colclass}"><div class="{$class || ' gtb-cell-reduced'}" title="{$max-hoogte-title}"><xsl:apply-templates select="." mode="render-result-attributes"/></div></td>
+                <div class="{$class} {$colclass} gtb-cell-reduced" title="{$max-hoogte-title}"><xsl:apply-templates select="." mode="render-result-attributes"/></div>
             </xsl:when>
             <xsl:otherwise>
-                <td class="{$class} {$colclass}"><xsl:apply-templates select="." mode="render-result-attributes"/></td>
+                <div class="{$class} {$colclass}"><xsl:apply-templates select="." mode="render-result-attributes"/></div>
             </xsl:otherwise>
         </xsl:choose>
         
