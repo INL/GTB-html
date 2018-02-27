@@ -303,7 +303,7 @@
                     <label class="radio-inline gtbradio" title="Toon een lijst met betekenisomschrijvingen"><input id="{ivdnt:generate-input-id(.)}.1" data-inputname="domein" data-humanname="toon omschrijvingen" type="radio" name="domein" value="1"/>Definities</label>
                     <label class="radio-inline gtbradio" title="Toon een lijst met citaten"><input id="{ivdnt:generate-input-id(.)}.2" data-inputname="domein" data-humanname="toon citaten" type="radio" name="domein" value="2"/>Citaten</label>
                     <label class="radio-inline gtbradio" title="Toon een lijst met kopsecties"><input id="{ivdnt:generate-input-id(.)}.3" data-inputname="domein" data-humanname="toon kopsecties" type="radio" name="domein" value="3"/>Kopsecties</label>
-                    <label class="radio-inline gtbradio" title="Toon een lijst met verbindingen"><input id="{ivdnt:generate-input-id(.)}.4" data-inputname="domein" data-humanname="toon verbindingen" type="radio" name="domein" value="4"/>Verbind.</label>
+                    <label class="radio-inline gtbradio" title="Toon een lijst met verbindingen"><input id="{ivdnt:generate-input-id(.)}.4" data-inputname="domein" data-humanname="toon verbindingen" type="radio" name="domein" value="4"/>Verbindingen</label>
                 </div>
             </div>
         </div>
