@@ -10,8 +10,7 @@ function toggleHiddenText()
 </script>
 	<h1 class="helptext">Algemeen</h1>
 	<br/>
-	<br/>		De online historische woordenboeken, ook wel de Geïntegreerde Taalbank (GTB) genoemd, vormen de eerste component van de infrastructuur voor historisch Nederlands die door het INT wordt ontwikkeld. De infrastructuur bestaat uit de historische woordenboeken van het Nederlands, computationele lexica (		
-	<a href="http://www.ivdnt.org/onderzoek-a-onderwijs/projecten/gigant">GiGaNT</a> en 		
+	<br/>		De online historische woordenboeken, ook wel de Geïntegreerde Taalbank (GTB) genoemd, vormen de eerste component van de infrastructuur voor historisch Nederlands die door het INT wordt ontwikkeld. De infrastructuur bestaat uit de historische woordenboeken van het Nederlands, computationele lexica (<a href="http://www.ivdnt.org/onderzoek-a-onderwijs/projecten/gigant">GiGaNT</a> en 		
 	<a href="http://www.ivdnt.org/onderzoek-a-onderwijs/projecten/clariah#diamant">DiaMaNT</a>) en synchrone en diachrone corpora die onderzoek naar de vele aspecten van de Nederlandse taal (en cultuur) door de eeuwen heen moet faciliteren.		
 	<br/>
 	<br/>		Het 		
