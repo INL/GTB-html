@@ -43,14 +43,14 @@
                         <div class="gtb-wdbcol-modern_lemma">Mod. Ned. trefwoord</div>
                         <div class="gtb-wdbcol-lemma">Origineel trefwoord</div>
                         <div class="gtb-wdbcol-woordsoort">Woordsoort</div>
-                        <xsl:if test="$first-result/@Verbinding"><div class="gtb-wdbcol-anders">Verbinding</div></xsl:if>
+                        <xsl:if test="$first-result/@Verbinding"><div class="gtb-wdbcol-verbinding">Verbinding</div></xsl:if>
                         <xsl:if test="$first-result/@hits and $first-result/conc"><div class="gtb-wdbcol-hits">Freq. </div></xsl:if>
                         <xsl:choose>
                             <xsl:when test="$first-result/conc"><div class="gtb-wdbcol-conc">Concordantie</div></xsl:when>
                             <xsl:when test="$first-result/@Betekenis"><div class="gtb-wdbcol-betekenis">Betekenis</div></xsl:when>
                         </xsl:choose>
-                        <xsl:if test="$first-result/@Kopsectie"><div class="gtb-wdbcol-anders">Kopsectie</div></xsl:if>
-                        <xsl:if test="$first-result/@Citaat"><div class="gtb-wdbcol-anders">Citaat</div></xsl:if>
+                        <xsl:if test="$first-result/@Kopsectie"><div class="gtb-wdbcol-kopsectie">Kopsectie</div></xsl:if>
+                        <xsl:if test="$first-result/@Citaat"><div class="gtb-wdbcol-citaat">Citaat</div></xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>                        
             </div>

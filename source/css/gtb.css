@@ -132,7 +132,6 @@ body:before {
     background-color: transparent;
     top: 45%;
     left: 45%;
-    text-align: center;
 }
 
 .gtb-waiticon:before{
@@ -371,7 +370,8 @@ div.gtb-zoekvragen-geschiedenis {
 }
 
 .gtb-wdbcol-modern_lemma,
-.gtb-wdbcol-lemma {
+.gtb-wdbcol-lemma,
+.gtb-wdbcol-verbinding {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 7em;
             flex: 1 0 7em;
@@ -405,7 +405,9 @@ div.gtb-zoekvragen-geschiedenis {
     width: 10em;
 }
 
-.gtb-wdbcol-betekenis {
+.gtb-wdbcol-betekenis,
+.gtb-wdbcol-kopsectie,
+.gtb-wdbcol-citaat {
     -webkit-box-flex: 3;
         -ms-flex: 3 0 10em;
             flex: 3 0 10em;
@@ -416,7 +418,6 @@ div.gtb-zoekvragen-geschiedenis {
         -ms-flex: 0 0 32em;
             flex: 0 0 32em;
 }
-
 
 .gtb-conc-line {
     display: block;
