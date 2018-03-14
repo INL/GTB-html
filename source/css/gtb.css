@@ -469,15 +469,13 @@ as it causes issues issues with brackets and punctuation being repositioned with
 }
 
 .gtb-cell-reduced {
-    height: 60px;
-    overflow-y: auto;
+    height: 60px!important;
+    overflow-y: auto!important;
 }
 
 .gtb-cell-expanded {
-    height: auto;
+    height: auto!important;
 }
-
-
 
 
 
@@ -492,11 +490,6 @@ as it causes issues issues with brackets and punctuation being repositioned with
 
 ul.gtb-list-subject-level2 li {
     margin-left: 1em;
-}
-
-.gtb-homoniemnr{
-    vertical-align: super;
-    font-size: 80%;
 }
 
 .gtb-pagineringsknoppen{

@@ -269,7 +269,7 @@
         <xsl:call-template name="parse-result-attributes"/>
         
         <xsl:if test="(local-name() eq 'Lemma') and (parent::*/@Homoniemnr ne '')">
-            <span class="gtb-homoniemnr">{parent::*/@Homoniemnr}</span>
+            <sup class="gtb-homoniemnr">{parent::*/@Homoniemnr}</sup>
         </xsl:if>
     </xsl:template>
     
@@ -280,7 +280,7 @@
         <xsl:variable name="href" as="xs:string" select="$baseArticleURL || '&amp;wdb=' || parent::*/@Wdb || '&amp;id=' || parent::*/@id || '&amp;' || $text-input-uri-params"/>
         <a href="{$href}" target="_blank">
             <xsl:call-template name="parse-result-attributes"/>
-            <span class="gtb-homoniemnr">{parent::*/@Homoniemnr}</span>
+            <sup class="gtb-homoniemnr">{parent::*/@Homoniemnr}</sup>
         </a>
     </xsl:template>
     
