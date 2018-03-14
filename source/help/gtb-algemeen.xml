@@ -50,11 +50,6 @@ function toggleHiddenText()
 			</div>
 		</div>
 	</div>
-	<div id='fontje'>								Het lettertype voor de bijzondere symbolen kunt u hier downloaden:               				
-		<a href="../../../font/gtbfont.exe">Windows</a>,               				
-		<a href="../../../font/inlfonts.zip">Mac</a> of               				
-		<a href="../../../font/inlfonts.zip">Linux</a>.		
-	</div>
 	<div id="copyright">
 		<p>         © 2007-2018, 								
 			<a target="_top" href="http://www.inl.nl">Instituut voor Nederlandse Lexicologie</a>. Laatste wijzigingen: februari 2018. Dit project wordt via de 								
