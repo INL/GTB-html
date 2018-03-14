@@ -132,6 +132,7 @@ body:before {
     background-color: transparent;
     top: 45%;
     left: 45%;
+    text-align: center;
 }
 
 .gtb-waiticon:before{

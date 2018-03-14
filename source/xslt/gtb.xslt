@@ -33,12 +33,12 @@
     
     <xsl:key name="ids" match="*[@id]" use="@id"/>
     
-    <!-- TODO Bijhouden van bezochte uri's is niet nodig. -->
-    <!--<xsl:variable name="VISITED_URIS_PROPERTY" as="xs:string" select="'visited-uris'"/>-->
     <xsl:variable name="URL_FOR_CONTENT_PROPERTY" as="xs:string" select="'url-for-content'"/>
     <xsl:variable name="TEXT_INPUT_URI_PARAMS_PROPERTY" as="xs:string" select="'text-input-uri-params'"/>
     <xsl:variable name="CURRENT_QUESTION_DESCRIPTION_PROPERTY" as="xs:string" select="'current-question-description'"/>
     <xsl:variable name="FORMDIV_INPUTS_AND_SELECTS_PROPERTY" as="xs:string" select="'formdiv-inputs-and-selects'"/>
+    <xsl:variable name="RUNNING_QUERY_IDS_PROPERTY" as="xs:string" select="'running-query-ids'"/>
+    <xsl:variable name="ID_OF_TAB_WITH_ORIGINATING_QUERY" as="xs:string" select="'id-of-tab-with-originating-query'"/>
     <xsl:variable name="RESULT_TABDIV_ID_PROPERTY" as="xs:string" select="'result-tabdiv-id'"/>
     <xsl:variable name="RESULT_SORTKEYS_PROPERTY" as="xs:string" select="'result-sortkeys'"/>
     <xsl:variable name="RESULT_SORTREVERSE_PROPERTY" as="xs:string" select="'result-sortreverse'"/>
@@ -117,6 +117,8 @@
     
     <xsl:template name="ivdnt:deactivate-tab">
         <xsl:param name="tabdiv" as="element(div)" required="yes"/>
+        <xsl:param name="running-query-id" as="xs:string" required="yes"/>
+        
         <xsl:for-each select="$tabdiv">
             <!-- Only one iteration -->
             <!--<xsl:message>deactivate id={@id}</xsl:message>-->
@@ -135,10 +137,10 @@
                 <xsl:otherwise>
                     <!-- Create it: -->
                     <xsl:result-document href="?." method="ixsl:append-content">
-                        <!--<xsl:message>deactivate (does not exist)</xsl:message>-->
                         <div class="gtb-wait">
-                            <!-- TODO waarom draait het icoontje niet? Cf. https://www.bootply.com/128062 -->
                             <button class="btn btn-lg btn-primary"><span class="gtb-waiticon"/>&#160;Even geduld a.u.b. ...</button>
+                            <br/>
+                            <button name="onderbreek-zoeken" class="btn btn-lg btn-danger" value="{$running-query-id}" style="margin-top: 1em">Afbreken</button>
                         </div>
                     </xsl:result-document>
                 </xsl:otherwise>
@@ -167,7 +169,7 @@
         </xsl:for-each>
     </xsl:template>
     
-    <xsl:template name="ivdnt:select-tab">
+    <xsl:template name="ivdnt:select-and-fill-results-tab">
         <xsl:param name="tabid" as="xs:string" required="yes"/>
         <xsl:param name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" required="yes"/>
         
@@ -215,8 +217,13 @@
         <xsl:param name="originating-tabdiv" as="element(div)" required="yes"/>
         <xsl:param name="text-input-uri-params" as="xs:string" required="no" tunnel="yes"/>
         
-        <!--<xsl:if test="not(ivdnt:is-visited-uri($url-for-content))"><xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></xsl:if>-->
-        <xsl:call-template name="ivdnt:deactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template>
+        <xsl:variable name="running-query-id" as="xs:string" select="ivdnt:generate-running-query-id()"/>
+        <xsl:call-template name="ivdnt:add-running-query-id"><xsl:with-param name="running-query-id" select="$running-query-id"/></xsl:call-template>
+        
+        <xsl:call-template name="ivdnt:deactivate-tab">
+            <xsl:with-param name="tabdiv" select="$originating-tabdiv"/>
+            <xsl:with-param name="running-query-id" select="$running-query-id"/>
+        </xsl:call-template>
         
         <ixsl:schedule-action document="{$url-for-content}">
             <xsl:call-template name="ivdnt:render-results">
@@ -225,6 +232,7 @@
                 <xsl:with-param name="startline" select="$startline" as="xs:integer"/>
                 <xsl:with-param name="originating-tabdiv" select="$originating-tabdiv"/>
                 <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
+                <xsl:with-param name="running-query-id" select="$running-query-id"/>
             </xsl:call-template>
         </ixsl:schedule-action>
     </xsl:template>
@@ -249,50 +257,111 @@
         <xsl:param name="startline" as="xs:integer" required="yes"/>
         <xsl:param name="originating-tabdiv" as="element(div)" required="yes"/>
         <xsl:param name="text-input-uri-params" as="xs:string" required="yes" tunnel="yes"/>
+        <xsl:param name="running-query-id" as="xs:string" required="yes"/>
         
-        <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
-        <xsl:result-document href="#resultaathouder" method="ixsl:replace-content">
-            <xsl:if test="$showInputsAndSelectsXML">
-                <xsl:variable name="originating-formdiv" select="$originating-tabdiv//div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)][1]" as="element(div)"/>
-                <xsl:variable name="originating-formdiv-id" select="$originating-formdiv/@id" as="xs:string"/>
-                <div>
-                    <p>De XML-lijst met alle inputs en selects</p>
-                    <pre><xsl:copy-of select="ivdnt:get-formdiv-inputs-and-selects($originating-formdiv)"/></pre> 
-                </div>
-            </xsl:if>
-            <xsl:if test="$showLinkToSearchResultXml">
-                <div>
-                    <p>Dit is de uitgerekende URL:</p>
-                    <pre style="font-weight: bold"><a target="_blank" href="{$url-for-content}">{$url-for-content}</a></pre>
-                </div> 
-                <!--<pre>
+        <!--<xsl:message>render-results, running-query-id={$running-query-id}</xsl:message>-->
+        <!-- If the running query id wasn't removed by the user, remove it now and then display the page. After that, remove the "wait" effect.
+             If the runninq query id *was* removed by the user, do not display the page; the "wait" effect should already have been removed.
+        -->
+        <xsl:if test="ivdnt:running-query-id-exists($running-query-id)">
+            <xsl:call-template name="ivdnt:remove-running-query-id"><xsl:with-param name="running-query-id" select="$running-query-id"/></xsl:call-template>
+
+            <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
+            <xsl:result-document href="#resultaathouder" method="ixsl:replace-content">
+                <xsl:if test="$showInputsAndSelectsXML">
+                    <xsl:variable name="originating-formdiv" select="$originating-tabdiv//div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS)][1]" as="element(div)"/>
+                    <xsl:variable name="originating-formdiv-id" select="$originating-formdiv/@id" as="xs:string"/>
+                    <div>
+                        <p>De XML-lijst met alle inputs en selects</p>
+                        <pre><xsl:copy-of select="ivdnt:get-formdiv-inputs-and-selects($originating-formdiv)"/></pre> 
+                    </div>
+                </xsl:if>
+                <xsl:if test="$showLinkToSearchResultXml">
+                    <div>
+                        <p>Dit is de uitgerekende URL:</p>
+                        <pre style="font-weight: bold"><a target="_blank" href="{$url-for-content}">{$url-for-content}</a></pre>
+                    </div> 
+                    <!--<pre>
                     <!-\- Hier het rauwe XML: -\->
                     <xsl:copy-of select="doc($url-for-content)"/>
                 </pre>-->
-            </xsl:if>
-            
-            <h4 class="gtb-zoekvraag-description">Zoekvraag = <xsl:copy-of select="ixsl:get(ixsl:page(), $CURRENT_QUESTION_DESCRIPTION_PROPERTY)"/></h4>
-            
-            <!-- First inform Google analytics: -->
-            <xsl:if test="$gaTrackingCode ne ''">
-                <xsl:sequence select="js:sendGooglePageView($url-for-content)[ivdnt:always-false()]"/>
-            </xsl:if>
-            
-            <!-- Now, load en show the result of the query: -->
-            <xsl:apply-templates select="doc($url-for-content)" mode="render-results">
-                <xsl:with-param name="html" select="/html"/>
-                <xsl:with-param name="startline" select="$startline" as="xs:integer"/>
-            </xsl:apply-templates>
-            
-            <xsl:for-each select="$tabdiv/parent::*/*">
-                <xsl:variable name="class-without-active" select="ivdnt:remove-class-value(@class, 'active')" as="attribute(class)"/>
-                <xsl:variable name="class-without-active-and-in" select="ivdnt:remove-class-value($class-without-active, 'in')" as="attribute(class)"/>
-                <xsl:variable name="new-class" as="attribute(class)" select="ivdnt:add-class-values($class-without-active-and-in, if (@id eq $tabdiv-id) then ('in', 'active') else ())"/>
-                <ixsl:set-attribute name="class" select="$new-class"/>
-            </xsl:for-each>
-        </xsl:result-document>
+                </xsl:if>
+                
+                <h4 class="gtb-zoekvraag-description">Zoekvraag = <xsl:copy-of select="ixsl:get(ixsl:page(), $CURRENT_QUESTION_DESCRIPTION_PROPERTY)"/></h4>
+                
+                <!-- First inform Google analytics: -->
+                <xsl:if test="$gaTrackingCode ne ''">
+                    <xsl:sequence select="js:sendGooglePageView($url-for-content)[ivdnt:always-false()]"/>
+                </xsl:if>
+                
+                <!-- Now, load en show the result of the query: -->
+                <xsl:apply-templates select="doc($url-for-content)" mode="render-results">
+                    <xsl:with-param name="html" select="/html"/>
+                    <xsl:with-param name="startline" select="$startline" as="xs:integer"/>
+                </xsl:apply-templates>
+                
+                <xsl:call-template name="ivdnt:switch-to-tab">
+                    <xsl:with-param name="current-tab-div" select="$tabdiv"/>
+                    <xsl:with-param name="id-of-wanted-tab" select="$tabdiv-id"/>
+                </xsl:call-template>
+            </xsl:result-document>            
+
+            <ixsl:schedule-action wait="100"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></ixsl:schedule-action>        
+        </xsl:if>        
+    </xsl:template>
+    
+    <xsl:template name="ivdnt:switch-to-tab">
+        <xsl:param name="current-tab-div" as="element(div)" required="yes"/>
+        <xsl:param name="id-of-wanted-tab" as="xs:string" required="yes"/>
+        <xsl:message>switch to {$id-of-wanted-tab}</xsl:message>
+        <xsl:for-each select="$current-tab-div/parent::*/*">
+            <xsl:variable name="class-without-active" select="ivdnt:remove-class-value(@class, 'active')" as="attribute(class)"/>
+            <xsl:variable name="class-without-active-and-in" select="ivdnt:remove-class-value($class-without-active, 'in')" as="attribute(class)"/>
+            <xsl:variable name="new-class" as="attribute(class)" select="ivdnt:add-class-values($class-without-active-and-in, if (@id eq $id-of-wanted-tab) then ('in', 'active') else ())"/>
+            <ixsl:set-attribute name="class" select="$new-class"/>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:function name="ivdnt:generate-running-query-id"  as="xs:string">
+        <xsl:value-of select="'q-' || js:getCurrentTimeMillis()"/>
+    </xsl:function>
+    
+    <xsl:function name="ivdnt:retrieve-running-query-id-set" as="xs:string*">
+        <!-- Since ixsl:set-property does not allow sequences (including the empty sequence), query id's are stored as a space separated string. -->
+        <xsl:sequence select="if (js:hasOwnProperty(ixsl:page(), $RUNNING_QUERY_IDS_PROPERTY))
+                              then tokenize(ixsl:get(ixsl:page(), $RUNNING_QUERY_IDS_PROPERTY), ' ')
+                              else ()"/>
+    </xsl:function>
+    
+    <xsl:template name="ivdnt:update-running-query-id-set">
+        <xsl:param name="running-query-ids" as="xs:string*" required="yes"/>
+        <xsl:message>update {$RUNNING_QUERY_IDS_PROPERTY}, nieuwe waarde is: "{string-join($running-query-ids, ' ')}"</xsl:message>
+        <!-- Since ixsl:set-property does not allow sequences (including the empty sequence), we store the query id's as a space separated string. -->
+        <ixsl:set-property name="{$RUNNING_QUERY_IDS_PROPERTY}" select="string-join($running-query-ids, ' ')" object="ixsl:page()"/>
+    </xsl:template>
+    
+    <xsl:function name="ivdnt:running-query-id-exists"  as="xs:boolean">
+        <xsl:param name="running-query-id" as="xs:string"/>
+        <xsl:variable name="running-query-id-set" as="xs:string*" select="ivdnt:retrieve-running-query-id-set()"/>
+        <xsl:sequence select="$running-query-id = $running-query-id-set"/>
+    </xsl:function>
+    
+    <xsl:template name="ivdnt:add-running-query-id">
+        <xsl:param name="running-query-id" as="xs:string" required="yes"/>
+        <xsl:variable name="running-query-id-set" as="xs:string*" select="ivdnt:retrieve-running-query-id-set()"/>
         
-        <ixsl:schedule-action wait="100"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></ixsl:schedule-action>        
+        <!-- Note the (( )) sequence construction in the parameter of distinct-values(): -->
+        <xsl:variable name="new-running-query-id-set" as="xs:string+" select="distinct-values(($running-query-id-set, $running-query-id))"/>
+        <xsl:call-template name="ivdnt:update-running-query-id-set"><xsl:with-param name="running-query-ids" select="$new-running-query-id-set"/></xsl:call-template>
+    </xsl:template>
+    
+    <xsl:template name="ivdnt:remove-running-query-id">
+        <xsl:param name="running-query-id" as="xs:string" required="yes"/>
+        <xsl:variable name="running-query-id-set" as="xs:string*" select="ivdnt:retrieve-running-query-id-set()"/>
+
+        <xsl:variable name="new-running-query-id-set" as="xs:string*" select="$running-query-id-set[. ne $running-query-id]"/>
+        
+        <xsl:call-template name="ivdnt:update-running-query-id-set"><xsl:with-param name="running-query-ids" select="$new-running-query-id-set"/></xsl:call-template>
     </xsl:template>
     
     <xsl:function name="ivdnt:woordsoortvalue" as="xs:string">
@@ -392,7 +461,10 @@
         <xsl:variable name="formdiv-inputs-and-selects" as="element(inputs-and-selects)" select="ivdnt:get-formdiv-inputs-and-selects($formdiv)"/>
         <xsl:variable name="text-input-uri-params" as="xs:string" select="ivdnt:get-value-inputs-for-url($formdiv-inputs-and-selects)"/>
         
-        <xsl:call-template name="ivdnt:select-tab">
+        <!-- Save the id of the currently active tab (containing the query) so that we may switch back to it if the user cancels the query: -->
+        <ixsl:set-property name="{$ID_OF_TAB_WITH_ORIGINATING_QUERY}" select="ivdnt:get-active-tabdiv($formdiv)/@id" object="ixsl:page()"/>
+        
+        <xsl:call-template name="ivdnt:select-and-fill-results-tab">
             <xsl:with-param name="tabid" select="'resultaat'"/>
             <xsl:with-param name="formdiv-inputs-and-selects" select="$formdiv-inputs-and-selects"/>
         </xsl:call-template>
