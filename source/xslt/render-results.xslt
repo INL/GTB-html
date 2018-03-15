@@ -28,6 +28,8 @@
         <xsl:variable name="first-result" as="element(result)?" select="result[1]"/>
         <xsl:apply-templates select="statistics" mode="render-results"/>
         
+        <xsl:variable name="selected-domein" as="xs:string" select="$html/key('ids', 'resultaatformaatselectors')//input[@type eq 'radio' and @name eq 'domein' and ivdnt:is-checked(.)]/@value"/>
+        
         <div class="gtb-results">
             <div class="gtb-results-head">
                 <div class="gtb-wdbcol-line">Nr.</div>
@@ -56,7 +58,9 @@
             </div>
 
             <div class="gtb-results-body">
-                <xsl:apply-templates select="result" mode="render-results"/>
+                <xsl:apply-templates select="result" mode="render-results">
+                    <xsl:with-param name="selected-domein" select="$selected-domein" tunnel="yes"/>
+                </xsl:apply-templates>
             </div>
         </div>
         
@@ -275,9 +279,27 @@
     
     <xsl:template match="@Lemma" mode="render-result-attributes">
         <xsl:param name="text-input-uri-params" as="xs:string" tunnel="yes"/>
+        <xsl:param name="selected-domein" as="xs:string" tunnel="yes"/>
         
+        <xsl:variable name="amp-plus-domeinqueryparam" as="xs:string">
+            <xsl:choose>
+                <xsl:when test="$selected-domein = ('1', '4')">
+                    <!-- 1 (definities), 4 (verbindingen) -->
+                    <xsl:value-of select="'&amp;Betekenis_id=' || ../@Betekenis_id"/>
+                </xsl:when>
+                <xsl:when test="$selected-domein eq '2'">
+                    <!-- 2 (citaten) -->
+                    <xsl:value-of select="'&amp;Citaat_id=' || ../@Citaat_id"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <!-- 0 (artikelen), 3 (kopsecties) of iets geks: lege string -->
+                    <xsl:value-of select="''"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+
         <!-- Assume url encoding is not needed for dictionary name or id. -->
-        <xsl:variable name="href" as="xs:string" select="$baseArticleURL || '&amp;wdb=' || parent::*/@Wdb || '&amp;id=' || parent::*/@id || '&amp;' || $text-input-uri-params"/>
+        <xsl:variable name="href" as="xs:string" select="$baseArticleURL || '&amp;wdb=' || parent::*/@Wdb || '&amp;id=' || parent::*/@id || $amp-plus-domeinqueryparam || '&amp;' || $text-input-uri-params"/>
         <a href="{$href}" target="_blank">
             <xsl:call-template name="parse-result-attributes"/>
             <sup class="gtb-homoniemnr">{parent::*/@Homoniemnr}</sup>
@@ -300,7 +322,7 @@
         <!-- Assume url encoding is not needed for dictionary name or id; the name of the author is wrapped in a b element. -->
         <!-- TODO auteur komt niet uit b element, maar uit query string van vraag. Is de auteur wel nodig in de href? -->
         <xsl:variable name="href" as="xs:string" select="$baseArticleContentURL || '&amp;wdb=' || parent::*/@Wdb || 'BRONNEN&amp;id=' || parent::*/@id || '&amp;' || $text-input-uri-params"/>
-        <a href="{$href}" target="_blank">
+        <a data-href="{$href}" target="_blank">
             <xsl:call-template name="parse-result-attributes"/>
         </a>
     </xsl:template>

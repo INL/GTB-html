@@ -298,7 +298,7 @@
         <div class="formulierregel form-group">
             <label class="{$zoekformulier-label-column-class} formulierlabel">Resultaten weergeven als </label>
             <div class="{$zoekformulier-input-column-class}">
-                <div class="gtb-resultaatformaatselectors">
+                <div id="resultaatformaatselectors" class="gtb-resultaatformaatselectors">
                     <label class="radio-inline gtbradio" title="Toon een lijst met artikelen"><input id="{ivdnt:generate-input-id(.)}.0" checked="checked" data-inputname="domein" data-humanname="toon artikelen" type="radio" name="domein" value="0"/>Artikelen</label>
                     <label class="radio-inline gtbradio" title="Toon een lijst met betekenisomschrijvingen"><input id="{ivdnt:generate-input-id(.)}.1" data-inputname="domein" data-humanname="toon omschrijvingen" type="radio" name="domein" value="1"/>Definities</label>
                     <label class="radio-inline gtbradio" title="Toon een lijst met citaten"><input id="{ivdnt:generate-input-id(.)}.2" data-inputname="domein" data-humanname="toon citaten" type="radio" name="domein" value="2"/>Citaten</label>
