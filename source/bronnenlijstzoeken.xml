@@ -32,14 +32,14 @@
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel data-onlydicts="onw vmnw mnw">
+    <ivdnt:formulierregel data-onlydicts="onwbronnen vmnwbronnen mnwbronnen">
         <ivdnt:formulierlabel>Lokalisering</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
             <input type="text" name="bronlocatie" class="form-control gtb-tekstveld typeahead" data-humanname="lokalisering"/>
         </ivdnt:formulierinput>
     </ivdnt:formulierregel>
     
-    <ivdnt:formulierregel data-onlydicts="onw vmnw mnw">
+    <ivdnt:formulierregel data-onlydicts="onwbronnen vmnwbronnen mnwbronnen">
         <ivdnt:formulierlabel>Signatuur</ivdnt:formulierlabel>
         <ivdnt:formulierinput>
             <input type="text" name="bronsig" class="form-control gtb-tekstveld typeahead" data-humanname="signatuur"/>
