@@ -15,4 +15,4 @@ cd generate-gtb-html-files
   "GA_TRACKING_CODE=UA-57793092-1"
   
 cd "$SAVEPWD"
-rm $BASE_TARGET_DIR/redirect.php
+rm "$BASE_TARGET_DIR/redirect.php"

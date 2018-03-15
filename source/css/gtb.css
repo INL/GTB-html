@@ -684,10 +684,26 @@ ul.gtb-list-subject-level2 li {
 
 .gtb-woordsoort.checkbox-inline {
     display: block;
+    color: #111971;
+    position: relative;
+    left: -16px;
+    padding-left: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.gtb-woordsoort > input[type="checkbox"] {
+    margin-left: -16px;
 }
 .gtb-woordsoort.checkbox-inline+.gtb-woordsoort.checkbox-inline {
     margin-left: 0px;
     margin-top: 3px;
+}
+
+.gtb-collapse .gtb-woordsoort.checkbox-inline {
+    left: auto;
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 0px;
 }
 
 a.gtb-selecteer-woordsoortgroep.off:before {
