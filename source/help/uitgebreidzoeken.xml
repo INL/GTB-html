@@ -40,8 +40,7 @@ Een aantal zoekvelden is voorzien van een meelopende lijst, die op basis van de 
       <h2 class="helptext">Selectielijsten</h2> 
   De selectielijst voor woordsoort en grammaticale kenmerken wordt opgeroepen door op het potloodje rechts van het invulveld te klikken. Het is mogelijk alleen een hoofdwoordsoort te kiezen door eerst (bij woordsoorten zonder verdere kenmerken) de checkbox aan te vinken of (bij woordsoorten met kenmerken) <code class="knop">alles selecteren</code> aan te klikken, en vervolgens <code class="knop">ok</code> te klikken. Indien gewenst kunnen een of meerdere kenmerken woorden geselecteerd.
 <br/><br/>
-    <i>Voorbeeld</i>: klik op <i>Znw.</i> en vink vervolgens onder <i>Geslacht</i> <i>m.</i> aan en klik op <code class="knop">
-         <b>ok</b></code>. Er wordt dan gezocht naar woordenboekartikelen met als woordsoortaanduiding 'substantief
+    <i>Voorbeeld</i>: klik op <i>Znw.</i> en vink vervolgens onder <i>Geslacht</i> <i>m.</i> aan en klik op <code class="knop"> ok</code>. Er wordt dan gezocht naar woordenboekartikelen met als woordsoortaanduiding 'substantief
          mannelijk'.
       <br/>
 <br/>

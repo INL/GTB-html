@@ -6,7 +6,6 @@
         <!-- TODO Werkt servicedesk@ivdnt.org? Het was servicedesk@inl.nl -->
     </div>
     <div class="col-xs-4" id="help-subjects">
-        <h1 style="color:#111971;">Help</h1>
 
             <ivdnt:collapse label="Over het project" open="true">
                 <ivdnt:hulp href="help/gtb-algemeen.xml">Algemeen</ivdnt:hulp>
