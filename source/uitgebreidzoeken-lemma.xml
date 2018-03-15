@@ -21,7 +21,37 @@
        <ivdnt:formulierregel>
            <ivdnt:formulierlabel>In de etymologische beschrijving genoemde taal</ivdnt:formulierlabel>
            <ivdnt:formulierinput>
-               <input type="text" name="etymtaal" data-humanname="taal in etym. beschr." class="form-control gtb-tekstveld typeahead"/>
+               <select name='etymtaal' data-humanname="taal in etym. beschr." class="form-control gtb-selectveld">
+                   <option value="">---</option>
+                   <option value='Eng.'>Engels</option>
+                   <option value='Fra.'>Frans</option>
+                   <option value='Gall.'>Gallisch</option>
+                   <option value='Gallorom.'>Galloromaans</option>
+                   <option value='Germ.'>Germaans, Germaanse</option>
+                   <option value='Gr.'>Grieks</option>
+                   <option value='Ingw.'>Ingweoons(e)</option>
+                   <option value='Kelt.'>Keltisch(e)</option>
+                   <option value='Meng.'>Middelengels</option>
+                   <option value='Mgr.'>Middelgrieks</option>
+                   <option value='Mhd.'>Middelhoogduits</option>
+                   <option value='Mlat.'>Middellatijn</option>
+                   <option value='Mnd.'>Middelnederduits</option>
+                   <option value='Mnl.'>Middelnederlands</option>
+                   <option value='Nfra.'>Nieuwfrans</option>
+                   <option value='Oeng.'>Oudengels</option>
+                   <option value='Ofra.'>Oudfrans(e)</option>
+                   <option value='Ogerm.'>Oudgermaans</option>
+                   <option value='Ohd.'>Oudhoogduits</option>
+                   <option value='On.'>Oudnoors</option>
+                   <option value='Onl.'>Oudnederlands</option>
+                   <option value='Opic.'>Oudpicardisch</option>
+                   <option value='Oprov.'>Oudprovencaals</option>
+                   <option value='Osa.'>Oudsaksisch</option>
+                   <option value='Pic.'>Picardisch</option>
+                   <option value='Rom.'>Romaans(e)</option>
+                   <option value='Vmnl.'>Vroegmiddelnederlands</option>
+                   <option value='Wgerm.'>Westgermaans</option>
+               </select>
            </ivdnt:formulierinput>
        </ivdnt:formulierregel>
     </ivdnt:collapse>
@@ -126,15 +156,15 @@
                     
                     <option data-dict="ONW,VMNW"  value="(accusatief singularis)|(as)|(acc.sg.)">accusatief singularis (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(accusatief singularis mannelijk)|(as mannelijk)">accusatief singularis mannelijk (ONW,VMNW)</option>
-                    <option data-dict="VMNW" display="accusatief singularis mannelijk/onzijdig (VMNW)" value="(as mannelijk/onzijdig)"/>
-                    <option data-dict="VMNW" display="accusatief singularis mannelijk/vrouwelijk (VMNW)" value="(as mannelijk/vrouwelijk)"/>
+                    <option data-dict="VMNW" value="(as mannelijk/onzijdig)">accusatief singularis mannelijk/onzijdig (VMNW)</option>
+                    <option data-dict="VMNW" value="(as mannelijk/vrouwelijk)">accusatief singularis mannelijk/vrouwelijk (VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(accusatief singularis onzijdig)|(as onzijdig)">accusatief singularis onzijdig (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(accusatief singularis vrouwelijk)|(as vrouwelijk)">accusatief singularis vrouwelijk (ONW,VMNW)</option>
-                    <option data-dict="VMNW" display="accusatief singularis vrouwelijk/onzijdig (VMNW)" value="(as vrouwelijk/onzijdig)"/>
+                    <option data-dict="VMNW" value="(as vrouwelijk/onzijdig)">accusatief singularis vrouwelijk/onzijdig (VMNW)</option>
                     
                     <option data-dict="ONW"  value="(als deel van een toponiem)">als deel van een toponiem (ONW)</option>
                     
-                    <option data-dict="ONW,VMNW" display="datief (ONW,VMNW)" value="(datief)|(ds)|(dp)|(ds/p)"/>
+                    <option data-dict="ONW,VMNW" value="(datief)|(ds)|(dp)|(ds/p)">datief (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(datief pluralis)|(dp)|(dat.pl.)">datief pluralis (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(datief pluralis mannelijk)|(dp mannelijk)">datief pluralis mannelijk (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(datief pluralis onzijdig)|(dp onzijdig)">datief pluralis onzijdig (ONW,VMNW)</option>
@@ -142,11 +172,11 @@
                     
                     <option data-dict="ONW,VMNW"  value="(datief singularis)|(ds)|(dat.sg.)">datief singularis (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(datief singularis mannelijk)|(ds mannelijk)">datief singularis mannelijk (ONW,VMNW)</option>
-                    <option data-dict="VMNW" display="datief singularis mannelijk/onzijdig (VMNW)" value="(ds mannelijk/onzijdig)"/>
-                    <option data-dict="VMNW" display="datief singularis mannelijk/vrouwelijk (VMNW)" value="(ds mannelijk/vrouwelijk)"/>
+                    <option data-dict="VMNW" value="(ds mannelijk/onzijdig)">datief singularis mannelijk/onzijdig (VMNW)</option>
+                    <option data-dict="VMNW" value="(ds mannelijk/vrouwelijk)">datief singularis mannelijk/vrouwelijk (VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(datief singularis onzijdig)|(ds onzijdig)">datief singularis onzijdig (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(datief singularis vrouwelijk)|(ds vrouwelijk)">datief singularis vrouwelijk (ONW,VMNW)</option>
-                    <option data-dict="VMNW" display="datief singularis vrouwelijk/onzijdig (VMNW)" value="(ds vrouwelijk/onzijdig)"/>
+                    <option data-dict="VMNW" value="(ds vrouwelijk/onzijdig)">datief singularis vrouwelijk/onzijdig (VMNW)</option>
                     
                     <option data-dict="ONW,VMNW"  value="(genitief)|(gen.)">genitief (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(genitief pluralis)|(gp)">genitief pluralis (ONW,VMNW)</option>
@@ -154,11 +184,11 @@
                     
                     <option data-dict="ONW,VMNW"  value="(genitief singularis)|(gs)">genitief singularis (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(genitief singularis mannelijk)|(gs mannelijk)">genitief singularis mannelijk (ONW,VMNW)</option>
-                    <option data-dict="VMNW" display="genitief singularis mannelijk/onzijdig (VMNW)" value="(gs mannelijk/onzijdig)"/>
-                    <option data-dict="VMNW" display="genitief singularis mannelijk/vrouwelijk (VMNW)" value="(gs mannelijk/vrouwelijk)"/>
+                    <option data-dict="VMNW" value="(gs mannelijk/onzijdig)">genitief singularis mannelijk/onzijdig (VMNW)</option>
+                    <option data-dict="VMNW" value="(gs mannelijk/vrouwelijk)">genitief singularis mannelijk/vrouwelijk (VMNW)</option>
                     <option data-dict="ONW"  value="(genitief singularis onzijdig)">genitief singularis onzijdig (ONW)</option>
                     <option data-dict="ONW"  value="(genitief singularis vrouwelijk)">genitief singularis vrouwelijk (ONW)</option>
-                    <option data-dict="VMNW" display="genitief singularis vrouwelijk/onzijdig (VMNW)" value="(gs vrouwelijk/onzijdig)"/>
+                    <option data-dict="VMNW" value="(gs vrouwelijk/onzijdig)">genitief singularis vrouwelijk/onzijdig (VMNW)</option>
                     
                     <option data-dict="ONW,VMNW"  value="(gerundium)|(gerund.)">gerundium (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(imp.pl.)">imp.pl. (ONW,VMNW)</option>
@@ -166,14 +196,14 @@
                     <option data-dict="ONW,VMNW"  value="(infinitief)|(inf.)">infinitief (ONW,VMNW)</option>
                     <option data-dict="ONW"  value="(In Latijnse context)">in Latijnse context (ONW)</option>
                     
-                    <option data-dict="VMNW" display="nominatief (VMNW)" value="(nom.)|(ns/p)"/>
+                    <option data-dict="VMNW" value="(nom.)|(ns/p)">nominatief (VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(nominatief pluralis)|(np)|(nom.pl.)">nominatief pluralis (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(nominatief pluralis mannelijk)|(np mannelijk)">nominatief pluralis mannelijk (ONW,VMNW)</option>
-                    <option data-dict="VMNW" display="nominatief pluralis mannelijk/onzijdig (VMNW)" value="(np mannelijk/onzijdig)"/>
-                    <option data-dict="VMNW" display="nominatief pluralis mannelijk/vrouwelijk (VMNW)" value="(np mannelijk/vrouwelijk)"/>
+                    <option data-dict="VMNW" value="(np mannelijk/onzijdig)">nominatief pluralis mannelijk/onzijdig (VMNW)</option>
+                    <option data-dict="VMNW" value="(np mannelijk/vrouwelijk)">nominatief pluralis mannelijk/vrouwelijk (VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(nominatief pluralis onzijdig)|(np onzijdig)">nominatief pluralis onzijdig (ONW,VMNW)</option>
                     <option data-dict="ONW,VMNW"  value="(nominatief pluralis vrouwelijk)|(np vrouwelijk)">nominatief pluralis vrouwelijk (ONW,VMNW)</option>
-                    <option data-dict="VMNW" display="nominatief pluralis vrouwelijk/onzijdig (VMNW)" value="(np vrouwelijk/onzijdig)"/>
+                    <option data-dict="VMNW" value="(np vrouwelijk/onzijdig)">nominatief pluralis vrouwelijk/onzijdig (VMNW)</option>
                     
                     
                     <option data-dict="ONW,VMNW"  value="(nominatief singularis)|(ns)">nominatief singularis (ONW,VMNW)</option>
@@ -197,7 +227,7 @@
                     
                     <option data-dict="ONW,VMNW"  value="(voltooid deelwoord)|(part.perf)">voltooid deelwoord (ONW,VMNW)</option>
                     <option data-dict="ONW"  value="(voltooid deelwoord+hebben)">voltooid deelwoord+hebben (ONW)</option>
-                    <option data-dict="ONW" display="voltooid deelwoord+hebben/zijn (ONW)" value="(voltooid deelwoord+hebben/zijn)"/>
+                    <option data-dict="ONW" value="(voltooid deelwoord+hebben/zijn)">voltooid deelwoord+hebben/zijn (ONW)</option>
                     <option data-dict="ONW"  value="(voltooid deelwoord+worden)">voltooid deelwoord+worden (ONW)</option>
                     <option data-dict="ONW"  value="(voltooid deelwoord+zijn)">voltooid deelwoord+zijn (ONW)</option>
                 </select>
