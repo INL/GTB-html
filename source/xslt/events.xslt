@@ -25,6 +25,9 @@
         <xsl:for-each select="$topdiv//input[@type eq 'checkbox' and ivdnt:is-checked(.)]">
             <xsl:call-template name="ivdnt:uncheck"><xsl:with-param name="checkbox" select="."/></xsl:call-template>
         </xsl:for-each>
+        <xsl:for-each select="$topdiv//a[ivdnt:class-contains(@class, 'gtb-selecteer-woordsoortgroep')][ivdnt:class-contains(@class, 'on')]">
+            <ixsl:set-attribute name="class" select="ivdnt:replace-class-value(@class, 'on', 'off')"/>
+        </xsl:for-each>
     </xsl:template>
     
     <xsl:template match="div[ivdnt:class-contains(@class, $ZOEK_FORMULIER_CLASS) and not(ivdnt:typeahead-is-ul-active())]" mode="ixsl:onkeypress">
