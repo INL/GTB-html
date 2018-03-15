@@ -260,11 +260,13 @@
         <xsl:param name="running-query-id" as="xs:string" required="yes"/>
         
         <!--<xsl:message>render-results, running-query-id={$running-query-id}</xsl:message>-->
-        <!-- If the running query id wasn't removed by the user, remove it now and then display the page. After that, remove the "wait" effect.
-             If the runninq query id *was* removed by the user, do not display the page; the "wait" effect should already have been removed.
+        <!-- If the running query id wasn't removed by the user, remove it now, remove the "wait" effect and then display the page.
+             If the runninq query id was already removed by the user, do not display the page; the "wait" effect should already have been removed.
         -->
         <xsl:if test="ivdnt:running-query-id-exists($running-query-id)">
             <xsl:call-template name="ivdnt:remove-running-query-id"><xsl:with-param name="running-query-id" select="$running-query-id"/></xsl:call-template>
+            
+            <ixsl:schedule-action wait="100"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></ixsl:schedule-action>        
 
             <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
             <xsl:result-document href="#resultaathouder" method="ixsl:replace-content">
@@ -305,8 +307,6 @@
                     <xsl:with-param name="id-of-wanted-tab" select="$tabdiv-id"/>
                 </xsl:call-template>
             </xsl:result-document>            
-
-            <ixsl:schedule-action wait="100"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$originating-tabdiv"/></xsl:call-template></ixsl:schedule-action>        
         </xsl:if>        
     </xsl:template>
     
