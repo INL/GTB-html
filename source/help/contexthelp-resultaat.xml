@@ -14,8 +14,7 @@
     </div>
     <div class="helptext helptext-level3">
         <h3>Knoppen</h3>
-        <p>Klikken op <code class='knop'><b>Sorteren</b></code> opent de sorteerdialoog; klikken op <code class='knop'><b>Exporteren</b>
-        </code> geeft de mogelijkheid het tussenresulaat als html-bestand, xml-bestand of csv-bestand op te slaan. Klikken op <code class='knop'><b>Afdrukken</b></code> geeft de mogelijkheid een html-weergave van het tussenresultaat af te drukken. 
+        <p>Klikken op <code class='knop'>Sorteren</code> opent de sorteerdialoog; klikken op <code class='knop'>Exporteren </code> geeft de mogelijkheid het tussenresulaat als html-bestand, xml-bestand of csv-bestand op te slaan. Klikken op <code class='knop'>Afdrukken</code> geeft de mogelijkheid een html-weergave van het tussenresultaat af te drukken. 
         Met de knoppen <code class='knop'>Eerste</code>, <code class='knop'>Vorige</code>, <code class='knop'>Volgende</code>, <code class='knop'>Laatste</code> en de deelsetnummerknoppen (rechts onder in het scherm) navigeert men door het resultaat. 
     </p>
     </div>
