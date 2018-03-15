@@ -19,7 +19,7 @@ function toggleHiddenText()
 	<i>Oudnederlands Woordenboek</i> en het 		
 	<i>Middelnederlandsch Woordenboek</i> toegevoegd. In het kader van het CLARIN-project GTB-WFT is in 2010 het WFT toegevoegd. 		
 	<div id="licenseAccept">
-		<p>				Door te klikken op 'Start de applicatie' gaat u akkoord met de Eindgebruikersovereenkomst.			</p>
+		<p>				Door de applicatie te gebruiken gaat u akkoord met de Eindgebruikersovereenkomst.			</p>
 		<div id="licenseRead">
 			<p>
 				<a href="javascript:toggleHiddenText();">Lees de overeenkomst</a>
