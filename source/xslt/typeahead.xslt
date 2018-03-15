@@ -83,19 +83,23 @@
         <xsl:sequence select="exists($li) and ivdnt:class-contains($li/@class, 'active')"/>
     </xsl:function>
     
-    <xsl:function name="ivdnt:find-active-li" as="element(li)">
+    <!-- ivdnt:find-active-li() may return the empty sequence if there are no list  items (yet, for instance due to network latency) -->
+    <xsl:function name="ivdnt:find-active-li" as="element(li)?">
         <xsl:param name="ul" as="element(ul)"/>
         <xsl:sequence select="$ul/li[ivdnt:is-active-li(.)]"/>
     </xsl:function>
     
     <!-- Stores the value of the selected item in the typeahead list into the corresponding typeahead textfield. -->
     <xsl:template name="ivdnt:typeahead-select">
-        <xsl:param name="selected-listitem" as="element(li)" required="yes"/>
-        <xsl:variable name="value" select="ivdnt:get-typeahead-value-from-listitem($selected-listitem)"/>
-        <xsl:call-template name="ivdnt:typeahead-update-textbox">
-            <xsl:with-param name="textbox" as="element(input)" select="ivdnt:get-my-typeahead-textfield($selected-listitem/parent::ul)"/>
-            <xsl:with-param name="value" as="xs:string" select="$value"/>
-        </xsl:call-template>
+        <xsl:param name="selected-listitem" as="element(li)?" required="yes"/>
+        <xsl:if test="exists($selected-listitem)">
+            <!-- $selected-listitem may be the empty sequence if no list item exists (yet, for instance due to network latency) -->
+            <xsl:variable name="value" select="ivdnt:get-typeahead-value-from-listitem($selected-listitem)"/>
+            <xsl:call-template name="ivdnt:typeahead-update-textbox">
+                <xsl:with-param name="textbox" as="element(input)" select="ivdnt:get-my-typeahead-textfield($selected-listitem/parent::ul)"/>
+                <xsl:with-param name="value" as="xs:string" select="$value"/>
+            </xsl:call-template>
+        </xsl:if>
     </xsl:template>
     
     <!-- Deal with a keyup event by calling idvnt:typeahead-key -->
@@ -248,7 +252,7 @@
     <!-- Select the previous item in the typeahead ul -->
     <xsl:template name="ivdnt:typeahead-previous-value">
         <xsl:param name="ul" as="element(ul)" required="yes"/>
-        <xsl:variable name="active-li" as="element(li)" select="ivdnt:find-active-li($ul)"/>
+        <xsl:variable name="active-li" as="element(li)?" select="ivdnt:find-active-li($ul)"/>
         <xsl:for-each select="$ul/li">
             <xsl:choose>
                 <xsl:when test="following-sibling::li[1] is $active-li">
@@ -267,7 +271,7 @@
     <!-- Select the next item in the typeahead ul -->
     <xsl:template name="ivdnt:typeahead-next-value">
         <xsl:param name="ul" as="element(ul)" required="yes"/>
-        <xsl:variable name="active-li" as="element(li)" select="ivdnt:find-active-li($ul)"/>
+        <xsl:variable name="active-li" as="element(li)?" select="ivdnt:find-active-li($ul)"/>
         <xsl:for-each select="$ul/li">
             <xsl:choose>
                 <xsl:when test="preceding-sibling::li[1] is $active-li">
