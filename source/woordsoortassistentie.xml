@@ -29,7 +29,7 @@
         <ivdnt:woordsoort zoek="collect" toon="collect"/>
     </ivdnt:collapse>
     <ivdnt:woordsoort zoek="Tw" toon="Tw"/>
-    <ivdnt:collapse label="Uitdr" woordsoortgroep="Tw">
+    <ivdnt:collapse label="Uitdr" woordsoortgroep="Uitdr">
         <ivdnt:woordsoort zoek="bijw" toon="bijw"/>
         <ivdnt:woordsoort zoek="bijv" toon="bijv"/>
         <ivdnt:woordsoort zoek="aanw" toon="aanw"/>
