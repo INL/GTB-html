@@ -14,7 +14,7 @@ function toggleHiddenText()
 	<a href="http://www.ivdnt.org/onderzoek-a-onderwijs/projecten/clariah#diamant">DiaMaNT</a>) en synchrone en diachrone corpora die onderzoek naar de vele aspecten van de Nederlandse taal (en cultuur) door de eeuwen heen moet faciliteren.		
 	<br/>
 	<br/>		Het 		
-	<i>Woordenboek der Nederlandsche Taal</i> was de eerste module van het woordenboekenportaal. In april 2007 is het 		
+	<i>Woordenboek der Nederlandsche Taal</i> was de eerste module van het woordenboekenportaal (januari 2007). In april 2007 is het 		
 	<i>Vroegmiddelnederlands Woordenboek</i> beschikbaar gekomen en in 2009 zijn het 		
 	<i>Oudnederlands Woordenboek</i> en het 		
 	<i>Middelnederlandsch Woordenboek</i> toegevoegd. In het kader van het CLARIN-project GTB-WFT is in 2010 het WFT toegevoegd. 		
@@ -30,7 +30,7 @@ function toggleHiddenText()
 						<input type="button" value="Sluiten" onclick="javascript:toggleHiddenText();"/>
 					</div>
 					<h1>Eindgebruikersovereenkomst</h1>
-					<p>Dit is een Eindgebruikersovereenkomst tussen u (Eindgebruiker) enerzijds en het Instituut voor Nederlandse Lexicologie (INT) en de Nederlandse Taalunie (NTU) anderzijds voor het gebruik van de Geintegreerde Taalbank online (GTB).</p>
+					<p>Dit is een Eindgebruikersovereenkomst tussen u (Eindgebruiker) enerzijds en het Instituut voor de Nederlands Taal (INT) en de Nederlandse Taalunie (NTU) anderzijds voor het gebruik van de Geintegreerde Taalbank online (GTB).</p>
 					<p>Eindgebruiker heeft het recht om de GTB te raadplegen en te gebruiken voor eigen oefening, studie of gebruik, op voorwaarde dat Eindgebruiker dat doet zonder direct of indirect economisch of commercieel  winstoogmerk.</p>
 					<ol>
 						<li>Eindgebruiker mag de GTB of een kwalitatief of kwantitatief substantieel gedeelte van de GTB niet reproduceren, verveelvoudigen of openbaarmaken en het niet beschikbaar stellen aan derden. Ook mag Eindgebruiker op basis van de GTB geen afgeleide producten vervaardigen of beschikbaar stellen aan derden.</li>
@@ -51,7 +51,7 @@ function toggleHiddenText()
 	</div>
 	<div id="copyright">
 		<p>         © 2007-2018, 								
-			<a target="_top" href="http://www.inl.nl">Instituut voor Nederlandse Lexicologie</a>. Laatste wijzigingen: februari 2018. Dit project wordt via de 								
+			<a target="_top" href="http://www.ivdnt.org">Instituut voor de Nederlandse Taal</a>. Laatste wijzigingen: maart 2018. Dit project wordt via de 								
 			<a target="_top" href="http://www.taalunieversum.org">Nederlandse Taalunie</a> gefinancierd door het 								
 			<a target="_top" href="http://www.minocw.nl/">Ministerie van OCW</a> en het 								
 			<a target="_top" href="http://www.vlaanderen.be/">Ministerie van de Vlaamse Gemeenschap</a>.         Het toevoegen van het WFT is mede tot stand gekomen dankzij 								

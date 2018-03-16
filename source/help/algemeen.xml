@@ -136,7 +136,7 @@
       <h2 class="helptext">Afbreken zoekactie</h2> 
 <!--                        In deze versie is het helaas nog niet mogelijk een zoekactie af te breken. De applicatie wordt hiervoor zo spoedig mogelijk aangepast. U kunt vooralsnog uw venster verversen in de browser.<br/>
 -->
-U kunt een gestarte zoekactie afbreken door het knopje 'Afbreken' dat verschijnt na het opstarten van de zoekactie. Deze functionaliteit is niet beschikbaar in Internet Explorer, versie 11.
+U kunt een gestarte zoekactie afbreken door het knopje 'Afbreken' dat verschijnt na het opstarten van de zoekactie. Deze functionaliteit werkt niet correct in Internet Explorer, versie 11.
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
