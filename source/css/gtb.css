@@ -513,6 +513,17 @@ ul.gtb-list-subject-level2 li {
     float: right;
 }
 
+#help-subjects > p:first-child {
+    margin-top: 20px;
+    height: 36px;
+    position: relative;
+}
+
+#help-subjects > p:first-child > a:first-child {
+    position: absolute;
+    bottom: 0px;
+}
+
 #partners {
     background: white;
     border-top: 2px solid #ddd;
@@ -729,7 +740,8 @@ a.gtb-selecteer-woordsoortgroep.on:before {
     background-color: #00042E;
     font-family: "schoolboek";
     margin-bottom: 40px;
-    padding: 20px 0px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     height: auto;
     
     -webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
@@ -773,7 +785,6 @@ a.gtb-selecteer-woordsoortgroep.on:before {
     font-size: 40px;
     line-height: 80%;
     text-align: center;
-    margin-top: -1vw;
 }
 
 .gtb-header-title {
