@@ -130,8 +130,10 @@ body:before {
     position: absolute;
     /*  De percentages zijn een grove benadering. */
     background-color: transparent;
-    top: 45%;
-    left: 45%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
 }
 
 .gtb-waiticon:before{
@@ -725,131 +727,69 @@ a.gtb-selecteer-woordsoortgroep.on:before {
 
 .gtb-header {
     background-color: #00042E;
-    height: 150px;
-    margin-bottom: 40px;
     font-family: "schoolboek";
-
+    margin-bottom: 40px;
+    padding: 20px 0px;
+    height: auto;
+    
     -webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
             box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
-    
-    -webkit-transition: height 0.15s;
-            transition: height 0.15s; 
 }
 
-.gtb-header > .container {
-    height: 100%;
+.gtb-header-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 15px;
+    max-width: 1170px;
+    margin: 0px auto;
 }
 
-.gtb-header-flex-container {
-    max-height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.gtb-header-logo-container {
+    width: 20%;
+    max-width: 175px;
+    display: block;
+}
+.gtb-header-logo  {
+    height: auto;
+    width: 90%;
+    float: right;
 }
 
-.gtb-header-logo {
-    height: 92%;
-    width: auto;
-    margin-right: 5px;
+.gtb-header-logo-int {
+    height: auto;
+    width: 100%;
+    float: left;
 }
 
-.gtb-header-spacer {
-    height: 100%;
-    -ms-flex-preferred-size: 15px;
-        flex-basis: 15px;
-    -webkit-box-flex: 0.5;
-        -ms-flex-positive: 0.5;
-            flex-grow: 0.5;
-    max-width: 35px;
-}
-
-.gtb-header-content {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    height: 100%;
-    padding: 19px 0px;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
+.gtb-header-title-container {
+    color: #EEE;
+    font-size: 40px;
+    line-height: 80%;
+    text-align: center;
+    margin-top: -1vw;
 }
 
 .gtb-header-title {
-    display: block;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     
-    font-size: 37px;
-    line-height: 42px;
-    letter-spacing: 0.5px;
-    color: #EEE;
-    text-shadow: 0px 0px 4px rgba(0,0,0,0.7);  
 }
 .gtb-header-subtitle {
-    font-size: 70%;
-    color: #CCC;
-    text-shadow: 0px 0px 3px rgba(0,0,0,0.7);
+    font-size: 60%;
+    color: #ddd;
 }
 
-.gtb-header-logo-ivdnt {
-    display: block;
-    height: 100%;
-    margin-top: 3px;
-    color: #EEE;
-}
-.gtb-header-logo-ivdnt > img {
-    height: 100%;
-    width: auto;
-	
-	color: #EEE!important; /* alt-text */
-}
-
-@media (max-width: 1200px) {
-    .gtb-header > .container {
-        width: 100%;
-    }
-    .gtb-header-logo-ivdnt {
-        height: 86%;
-        margin-top: 5px;
-    }
-    
-    .gtb-header-title {
-        font-size: 34px;
+@media (max-width: 997px) {
+    .gtb-header-title-container {
+        font-size: 4.1vw;
     }
 }
 
-@media (max-width: 992px) {
-    .gtb-header {
-        height: 120px;
-    }
-    
-    .gtb-header-content {
-        padding: 17px 0px;
-    }
-    
-    .gtb-header-title {
-        font-size: 29px;
-        line-height: 32px;
-    }
-}
-
-@media (max-width: 600px) {
-    .gtb-header-title {
-        font-size: 24px;
-        line-height: 26px;
-    }
-
-    .gtb-header-logo-ivdnt {
-        margin: 0px;
-    }
-}
 
 /* colors */
 .gtb-header {
@@ -861,7 +801,7 @@ a.gtb-selecteer-woordsoortgroep.on:before {
 }
 .btn-primary:hover,
 .btn-primary:active {
-    background-color: #111971;
+    background-color: #111971!important;
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus,

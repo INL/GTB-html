@@ -140,7 +140,7 @@
                         <div class="gtb-wait">
                             <button class="btn btn-lg btn-primary"><span class="gtb-waiticon"/>&#160;Even geduld a.u.b. ...</button>
                             <br/>
-                            <button name="onderbreek-zoeken" class="btn btn-lg btn-danger" value="{$running-query-id}" style="margin-top: 1em">Afbreken</button>
+                            <button id="onderbreek-zoeken" name="onderbreek-zoeken" class="btn btn-primary" value="{$running-query-id}" style="margin-top: 1em">Afbreken</button>
                         </div>
                     </xsl:result-document>
                 </xsl:otherwise>

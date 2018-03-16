@@ -2,17 +2,22 @@
 <html xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces">
     <head>
         <title>Historische woordenboeken</title>
+
     </head>
     <body>
         <div class="gtb-header">
-            <div class="container">
-                <img class="gtb-header-logo hidden-xs" src="img/gtb-logo-header.svg" alt="De Geïntegreerde Taalbank" ivdnt:versioninfo="git-versie-komt-hier"/>
-                <div class="gtb-header-spacer visible-md visible-lg"></div>
-                <div class="gtb-header-content">
-                    <span class="gtb-header-title">Historische&#160;woordenboeken<br/><small class="gtb-header-subtitle">van het Nederlands en het Fries</small></span>
-                    <a class="gtb-header-logo-ivdnt" href="http://www.ivdnt.org/" target="_blank" title="Instituut voor de Nederlandse Taal">
-                        <img src="img/ivdNt-logo-3regels-gebrokenwit.svg" alt="Instituut voor de Nederlandse Taal"></img>
-                    </a>
+            <div class="gtb-header-container">
+                <a class="gtb-header-logo-container" href="http://www.ivdnt.org/" target="_blank" title="Instituut voor de Nederlandse Taal">
+                    <img class="gtb-header-logo-int" src="img/ivdNt-logo-3regels-gebrokenwit.svg" alt="Instituut voor de Nederlandse Taal"></img>
+                </a>
+                
+                <div class="gtb-header-title-container">
+                    <div class="gtb-header-title">Historische&#160;woordenboeken</div>
+                    <div class="gtb-header-subtitle">Nederlands en Fries</div>
+                </div>
+                
+                <div class="gtb-header-logo-container">
+                    <img class="gtb-header-logo" src="img/gtb-logo-header.svg" alt="De Geïntegreerde Taalbank" ivdnt:versioninfo="git-versie-komt-hier"></img>
                 </div>
             </div>
         </div>

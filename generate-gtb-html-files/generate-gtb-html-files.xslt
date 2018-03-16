@@ -151,6 +151,7 @@
                     ga('send', 'pageview');
                 </script>
             </xsl:if>
+
             <xsl:apply-templates select="node()" mode="#current"/>
         </xsl:copy>
     </xsl:template>
