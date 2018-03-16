@@ -456,10 +456,6 @@ as it causes issues issues with brackets and punctuation being repositioned with
 }
 
 
-
-
-
-
 .gtb-cell-reduced,
 .gtb-cell-expanded {
     line-height: 1.42858; /* 20 / 14, so 20px for font-size 14px */
@@ -513,6 +509,17 @@ ul.gtb-list-subject-level2 li {
     font-style: italic;
     padding-left: 4em;
     float: right;
+}
+
+#partners {
+    background: white;
+    border-top: 2px solid #ddd;
+    margin-top: 40px;
+    padding: 12px 15px;
+    text-align: center;
+}
+#partners > a {
+    display: inline-block;
 }
 
 /* Bootstrap */
@@ -718,19 +725,15 @@ a.gtb-selecteer-woordsoortgroep.on:before {
 
 .gtb-header {
     background-color: #00042E;
-
     height: 150px;
     margin-bottom: 40px;
+    font-family: "schoolboek";
 
     -webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
-
             box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.15);
     
-    font-family: "schoolboek";
-    
     -webkit-transition: height 0.15s;
-    
-    transition: height 0.15s;
+            transition: height 0.15s; 
 }
 
 .gtb-header > .container {
