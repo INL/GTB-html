@@ -90,7 +90,8 @@
     <xsl:template name="ivdnt:enable-dictionaries">
         <xsl:variable name="params" as="map(xs:string, xs:string*)" select="ixsl:query-params()"/>
         <xsl:variable name="dictionarynames" select="$params($QUERYSTRING_WDB_PARAM)" as="xs:string*"/>
-        <xsl:variable name="dictionarynames-with-bronnen" as="xs:string*" select="for $d in $dictionarynames return ($d, $d || 'bronnen')"/>
+        <xsl:variable name="dictionarynames-lc" select="for $d in $dictionarynames return lower-case($d)" as="xs:string*"/>
+        <xsl:variable name="dictionarynames-with-bronnen" as="xs:string*" select="for $d in $dictionarynames-lc return ($d, $d || 'bronnen')"/>
         
         <xsl:if test="exists($dictionarynames-with-bronnen)">
             <xsl:for-each select="ixsl:page()//input[@data-inputname eq 'wdb' and @type eq 'checkbox']">
