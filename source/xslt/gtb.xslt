@@ -44,7 +44,7 @@
     <xsl:variable name="RESULT_SORTREVERSE_PROPERTY" as="xs:string" select="'result-sortreverse'"/>
     <xsl:variable name="FOCUSSED_TEXTBOX_PROPERTY" as="xs:string" select="'focussed_textbox-id'"/>
     <xsl:variable name="ZOEK_FORMULIER_CLASS" as="xs:string" select="'zoek-formulier'"/> 
-    <xsl:variable name="QUERYSTRING_WDB_PARAM" as="xs:string" select="'wdb'"/>
+    <xsl:variable name="QUERYSTRING_WDB_PARAM" as="xs:string" select="'owner'"/>
     
     <xsl:variable name="baseSearchURL-expanded" as="xs:string" select="ivdnt:expand-my-url($baseSearchURL)"/>
     <xsl:variable name="baseArticleContentURL-expanded" as="xs:string" select="ivdnt:expand-my-url($baseArticleContentURL)"/>
