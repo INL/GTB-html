@@ -1,7 +1,11 @@
 function exportResult(url, clientFilename, mimetype) {
     $.ajax({
         url: url,
-        success: download.bind(true, mimetype, clientFilename)
+        dataType: "text",
+        //success: download.bind(true, mimetype, clientFilename)
+        success: function (data, textStatus, jqXHR) {
+            download(data, clientFilename, mimetype);
+        }
     });
 }
 
