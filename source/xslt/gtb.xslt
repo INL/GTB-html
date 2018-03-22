@@ -59,15 +59,17 @@
     
     <xsl:function name="ivdnt:expand-my-url"  as="xs:string">
         <xsl:param name="absolute-context-path" as="xs:string"/>
-        <xsl:message select="$absolute-context-path"></xsl:message>
+
         <xsl:choose>
             <xsl:when test="matches($absolute-context-path, '^https?://')">
                 <xsl:value-of select="$absolute-context-path"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:variable name="protocol" as="xs:string" select="ixsl:get(ixsl:window(), 'location.protocol')"/>
+                <!-- Note: protocol ends with a colon. -->
                 <xsl:variable name="hostname" as="xs:string" select="ixsl:get(ixsl:window(), 'location.hostname')"/>
-                <xsl:value-of select="$protocol || '://' || $hostname || $absolute-context-path"/>
+                
+                <xsl:value-of select="$protocol || '//' || $hostname || $absolute-context-path"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
