@@ -28,7 +28,7 @@
         <xsl:variable name="wdb-inputs" as="xs:string" select="string-join($wdbs, ',')"/>
         <xsl:variable name="sensitivity" as="xs:string" select="xs:string(ivdnt:is-checked($sensitivity-input))"/>
         
-        <xsl:variable name="url" as="xs:string" select="$baseListURL || '&amp;index=' || $textfield-name || '&amp;prefix=' || encode-for-uri($textfield-value) || '&amp;wdb=' || $wdb-inputs || '&amp;sensitive=' || $sensitivity"/>
+        <xsl:variable name="url" as="xs:string" select="$baseListURL-expanded || '&amp;index=' || $textfield-name || '&amp;prefix=' || encode-for-uri($textfield-value) || '&amp;wdb=' || $wdb-inputs || '&amp;sensitive=' || $sensitivity"/>
 
         <ixsl:schedule-action document="{$url}">
             <xsl:call-template name="ivdnt:retrieve-typeahead-listitems">

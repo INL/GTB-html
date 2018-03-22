@@ -45,12 +45,32 @@
     <xsl:variable name="FOCUSSED_TEXTBOX_PROPERTY" as="xs:string" select="'focussed_textbox-id'"/>
     <xsl:variable name="ZOEK_FORMULIER_CLASS" as="xs:string" select="'zoek-formulier'"/> 
     <xsl:variable name="QUERYSTRING_WDB_PARAM" as="xs:string" select="'wdb'"/>
+    
+    <xsl:variable name="baseSearchURL-expanded" as="xs:string" select="ivdnt:expand-my-url($baseSearchURL)"/>
+    <xsl:variable name="baseArticleContentURL-expanded" as="xs:string" select="ivdnt:expand-my-url($baseArticleContentURL)"/>
+    <xsl:variable name="baseArticleURL-expanded" as="xs:string" select="ivdnt:expand-my-url($baseArticleURL)"/>
+    <xsl:variable name="baseListURL-expanded" as="xs:string" select="ivdnt:expand-my-url($baseListURL)"/>
 
     <xsl:include href="utilities.xslt"/>
     <xsl:include href="render-results.xslt"/>
     <xsl:include href="history.xslt"/>
     <xsl:include href="events.xslt"/>
     <xsl:include href="typeahead-impl.xslt"/>
+    
+    <xsl:function name="ivdnt:expand-my-url"  as="xs:string">
+        <xsl:param name="absolute-context-path" as="xs:string"/>
+        <xsl:message select="$absolute-context-path"></xsl:message>
+        <xsl:choose>
+            <xsl:when test="matches($absolute-context-path, '^https?://')">
+                <xsl:value-of select="$absolute-context-path"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:variable name="protocol" as="xs:string" select="ixsl:get(ixsl:window(), 'location.protocol')"/>
+                <xsl:variable name="hostname" as="xs:string" select="ixsl:get(ixsl:window(), 'location.hostname')"/>
+                <xsl:value-of select="$protocol || '://' || $hostname || $absolute-context-path"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
     
     <xsl:function name="ivdnt:strip-hash-from-id"  as="xs:string">
         <xsl:param name="id-with-hash" as="xs:string"/>
@@ -313,7 +333,7 @@
     <xsl:template name="ivdnt:switch-to-tab">
         <xsl:param name="current-tab-div" as="element(div)" required="yes"/>
         <xsl:param name="id-of-wanted-tab" as="xs:string" required="yes"/>
-        <xsl:message>switch to {$id-of-wanted-tab}</xsl:message>
+
         <xsl:for-each select="$current-tab-div/parent::*/*">
             <xsl:variable name="class-without-active" select="ivdnt:remove-class-value(@class, 'active')" as="attribute(class)"/>
             <xsl:variable name="class-without-active-and-in" select="ivdnt:remove-class-value($class-without-active, 'in')" as="attribute(class)"/>
@@ -335,7 +355,7 @@
     
     <xsl:template name="ivdnt:update-running-query-id-set">
         <xsl:param name="running-query-ids" as="xs:string*" required="yes"/>
-        <xsl:message>update {$RUNNING_QUERY_IDS_PROPERTY}, nieuwe waarde is: "{string-join($running-query-ids, ' ')}"</xsl:message>
+
         <!-- Since ixsl:set-property does not allow sequences (including the empty sequence), we store the query id's as a space separated string. -->
         <ixsl:set-property name="{$RUNNING_QUERY_IDS_PROPERTY}" select="string-join($running-query-ids, ' ')" object="ixsl:page()"/>
     </xsl:template>
@@ -443,7 +463,7 @@
         <xsl:variable name="sensitivity" as="xs:string" select="ivdnt:get-sensitivity-for-url($formdiv-inputs-and-selects)"/>
         <!-- TODO dynamically determine other-params. -->
         <xsl:variable name="other-params" as="xs:string" select="'&amp;conc=true&amp;xmlerror=true'"/>
-        <xsl:value-of select="$baseSearchURL || $other-params || '&amp;' || $text-input-uri-params || '&amp;wdb=' || $wdb-inputs || '&amp;' || $sensitivity"/>
+        <xsl:value-of select="$baseSearchURL-expanded || $other-params || '&amp;' || $text-input-uri-params || '&amp;wdb=' || $wdb-inputs || '&amp;' || $sensitivity"/>
     </xsl:function>
     
     <xsl:function name="ivdnt:get-target-input" as="element(input)">

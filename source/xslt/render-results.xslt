@@ -299,7 +299,7 @@
         </xsl:variable>
 
         <!-- Assume url encoding is not needed for dictionary name or id. -->
-        <xsl:variable name="href" as="xs:string" select="$baseArticleURL || '&amp;wdb=' || parent::*/@Wdb || '&amp;id=' || parent::*/@id || $amp-plus-domeinqueryparam || '&amp;' || $text-input-uri-params"/>
+        <xsl:variable name="href" as="xs:string" select="$baseArticleURL-expanded || '&amp;wdb=' || parent::*/@Wdb || '&amp;id=' || parent::*/@id || $amp-plus-domeinqueryparam || '&amp;' || $text-input-uri-params"/>
         <a href="{$href}" target="_blank">
             <xsl:call-template name="parse-result-attributes"/>
             <sup class="gtb-homoniemnr">{parent::*/@Homoniemnr}</sup>
@@ -321,7 +321,7 @@
         
         <!-- Assume url encoding is not needed for dictionary name or id; the name of the author is wrapped in a b element. -->
         <!-- TODO auteur komt niet uit b element, maar uit query string van vraag. Is de auteur wel nodig in de href? -->
-        <xsl:variable name="href" as="xs:string" select="$baseArticleContentURL || '&amp;wdb=' || parent::*/@Wdb || 'BRONNEN&amp;id=' || parent::*/@id || '&amp;' || $text-input-uri-params"/>
+        <xsl:variable name="href" as="xs:string" select="$baseArticleContentURL-expanded || '&amp;wdb=' || parent::*/@Wdb || 'BRONNEN&amp;id=' || parent::*/@id || '&amp;' || $text-input-uri-params"/>
         <a data-href="{$href}" target="_blank">
             <xsl:call-template name="parse-result-attributes"/>
         </a>

@@ -104,13 +104,11 @@
     </xsl:template>
     
     <xsl:template match="button[@name eq 'onderbreek-zoeken']" mode="ixsl:onclick">
-        <xsl:message>onderbreek zoeken</xsl:message>
         <xsl:variable name="tabdiv" as="element(div)" select="ivdnt:get-active-tabdiv(.)"/>
-        <!--<xsl:message>onderbreek zoeken, button value={@value}</xsl:message>-->
         <xsl:call-template name="ivdnt:remove-running-query-id"><xsl:with-param name="running-query-id" select="@value"/></xsl:call-template>
         <ixsl:schedule-action wait="100"><xsl:call-template name="ivdnt:reactivate-tab"><xsl:with-param name="tabdiv" select="$tabdiv"/></xsl:call-template></ixsl:schedule-action>
         <xsl:variable name="id-of-tab-with-originating-query" select="ixsl:get(ixsl:page(), $ID_OF_TAB_WITH_ORIGINATING_QUERY)" as="xs:string"/>
-        <xsl:message>id-of-tab-with-originating-query={$id-of-tab-with-originating-query}</xsl:message>
+
         <xsl:call-template name="ivdnt:switch-to-tab">
             <xsl:with-param name="current-tab-div" select="$tabdiv"/>
             <xsl:with-param name="id-of-wanted-tab" select="$id-of-tab-with-originating-query"/>
