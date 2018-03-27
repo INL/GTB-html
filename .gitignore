@@ -4,6 +4,7 @@ target/*
 !target/README
 
 target\.test/
+target\.dev/
 
 *.magweg
 
