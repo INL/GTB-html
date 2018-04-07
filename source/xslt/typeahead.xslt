@@ -290,8 +290,10 @@
     <xsl:template name="ivdnt:typeahead-update-textbox">
         <xsl:param name="textbox" as="element(input)" required="yes"/>
         <xsl:param name="value" as="xs:string" required="yes"/>
-        
-        <ixsl:set-property name="value" select="$value" object="$textbox"/>
+        <xsl:variable name="textbox-cur-value" as="xs:string" select="ixsl:get($textbox, 'value')"/>
+        <xsl:variable name="textbox-new-value" as="xs:string" select="replace($textbox-cur-value, '^(.*\s+)?\S+$', '$1' || $value)"/>
+
+        <ixsl:set-property name="value" select="$textbox-new-value" object="$textbox"/>
     </xsl:template>
     
 </xsl:stylesheet>
