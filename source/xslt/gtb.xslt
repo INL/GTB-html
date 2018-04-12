@@ -243,21 +243,38 @@
         <xsl:variable name="running-query-id" as="xs:string" select="ivdnt:generate-running-query-id()"/>
         <xsl:call-template name="ivdnt:add-running-query-id"><xsl:with-param name="running-query-id" select="$running-query-id"/></xsl:call-template>
         
-        <xsl:call-template name="ivdnt:deactivate-tab">
-            <xsl:with-param name="tabdiv" select="$originating-tabdiv"/>
-            <xsl:with-param name="running-query-id" select="$running-query-id"/>
-        </xsl:call-template>
+        <xsl:variable name="dicts-are-selected" select="exists($originating-tabdiv//input[@type eq 'checkbox' and @data-inputname eq 'wdb' and ivdnt:is-checked(.)])"/>
         
-        <ixsl:schedule-action document="{$url-for-content}">
-            <xsl:call-template name="ivdnt:render-results">
-                <xsl:with-param name="url-for-content" select="$url-for-content"/>
-                <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
-                <xsl:with-param name="startline" select="$startline" as="xs:integer"/>
-                <xsl:with-param name="originating-tabdiv" select="$originating-tabdiv"/>
-                <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
-                <xsl:with-param name="running-query-id" select="$running-query-id"/>
-            </xsl:call-template>
-        </ixsl:schedule-action>
+        <xsl:choose>
+            <xsl:when test="$dicts-are-selected">
+                <xsl:call-template name="ivdnt:deactivate-tab">
+                    <xsl:with-param name="tabdiv" select="$originating-tabdiv"/>
+                    <xsl:with-param name="running-query-id" select="$running-query-id"/>
+                </xsl:call-template>
+                
+                <ixsl:schedule-action document="{$url-for-content}">
+                    <xsl:call-template name="ivdnt:render-results">
+                        <xsl:with-param name="url-for-content" select="$url-for-content"/>
+                        <xsl:with-param name="tabdiv-id" select="$tabdiv-id"/>
+                        <xsl:with-param name="startline" select="$startline" as="xs:integer"/>
+                        <xsl:with-param name="originating-tabdiv" select="$originating-tabdiv"/>
+                        <xsl:with-param name="text-input-uri-params" select="$text-input-uri-params" tunnel="yes"/>
+                        <xsl:with-param name="running-query-id" select="$running-query-id"/>
+                    </xsl:call-template>
+                </ixsl:schedule-action>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:variable name="tabdiv" as="element()" select="key('ids', $tabdiv-id)"/>
+                <xsl:for-each select="$tabdiv/parent::*/*">
+                    <xsl:variable name="class-without-active" select="ivdnt:remove-class-value(@class, 'active')" as="attribute(class)"/>
+                    <ixsl:set-attribute name="class" select="ivdnt:add-class-values($class-without-active, if (@id eq $tabdiv-id) then ('active') else ())"/>
+                </xsl:for-each>     
+                
+                <xsl:result-document href="#resultaathouder" method="ixsl:replace-content">
+                    <p>Selecteer a.u.b. tenminste &#xe9;&#xe9;n woordenboek.</p>
+                </xsl:result-document>
+            </xsl:otherwise>
+        </xsl:choose>        
     </xsl:template>
     
     <xsl:template name="ivdnt:export-result">

@@ -24,17 +24,28 @@
                 <xsl:value-of select="@name"/>
             </xsl:for-each>
         </xsl:variable>
-        <xsl:variable name="sensitivity-input" as="element(input)" select="$tabdiv//input[@data-inputname eq 'sensitive']"/>
-        <xsl:variable name="wdb-inputs" as="xs:string" select="string-join($wdbs, ',')"/>
-        <xsl:variable name="sensitivity" as="xs:string" select="xs:string(ivdnt:is-checked($sensitivity-input))"/>
         
-        <xsl:variable name="url" as="xs:string" select="$baseListURL-expanded || '&amp;index=' || $textfield-name || '&amp;prefix=' || encode-for-uri($textfield-value) || '&amp;wdb=' || $wdb-inputs || '&amp;sensitive=' || $sensitivity"/>
-
-        <ixsl:schedule-action document="{$url}">
-            <xsl:call-template name="ivdnt:retrieve-typeahead-listitems">
-                <xsl:with-param name="url" select="$url"/>
-            </xsl:call-template>
-        </ixsl:schedule-action>
+        <xsl:choose>
+            <xsl:when test="exists($wdbs)">
+                <xsl:variable name="sensitivity-input" as="element(input)" select="$tabdiv//input[@data-inputname eq 'sensitive']"/>
+                <xsl:variable name="wdb-inputs" as="xs:string" select="string-join($wdbs, ',')"/>
+                <xsl:variable name="sensitivity" as="xs:string" select="xs:string(ivdnt:is-checked($sensitivity-input))"/>
+                
+                <xsl:variable name="url" as="xs:string" select="$baseListURL-expanded || '&amp;index=' || $textfield-name || '&amp;prefix=' || encode-for-uri($textfield-value) || '&amp;wdb=' || $wdb-inputs || '&amp;sensitive=' || $sensitivity"/>
+                
+                <ixsl:schedule-action document="{$url}">
+                    <xsl:call-template name="ivdnt:retrieve-typeahead-listitems">
+                        <xsl:with-param name="url" select="$url"/>
+                    </xsl:call-template>
+                </ixsl:schedule-action>
+            </xsl:when>
+            <xsl:otherwise>
+                <!-- Geen typeahead zonder woordenboeken -->
+                <xsl:result-document href="?." method="ixsl:replace-content">
+                    <li>&#x2620;</li>
+                </xsl:result-document>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:function name="ivdnt:get-typeahead-value-from-listitem"  as="xs:string">
