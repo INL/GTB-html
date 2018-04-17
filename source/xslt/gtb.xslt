@@ -96,8 +96,19 @@
         <xsl:variable name="dictionarynames-with-bronnen" as="xs:string*" select="for $d in $dictionarynames-lc return ($d, $d || 'bronnen')"/>
         
         <xsl:if test="exists($dictionarynames-with-bronnen)">
-            <xsl:for-each select="ixsl:page()//input[@data-inputname eq 'wdb' and @type eq 'checkbox']">
-                <xsl:variable name="is-checked" as="xs:boolean" select="@name = $dictionarynames-with-bronnen"/>
+            <xsl:variable name="all-wdb-inputs" as="element(input)+" select="ixsl:page()//input[@data-inputname eq 'wdb' and @type eq 'checkbox']"/>
+            <xsl:variable name="all-wdb-input-names" as="xs:string+" select="for $n in $all-wdb-inputs return $n/@name"/>
+            
+            <!-- Calculate the intersection of all-wdb-input-names and the queryparameters (dictionarynames). Note that the intersect operator cannot be used here,
+                 because it operates only on nodes.
+            -->
+            <xsl:variable name="intersect" as="xs:string*" select="distinct-values($all-wdb-input-names[. =  $dictionarynames])"/>
+            
+            <!-- If no valid dictionarynames are passed in the queryparameters, select all dictionaries. We use this flag for that purpose: -->
+            <xsl:variable name="force-all-checked" as="xs:boolean" select="count($intersect) eq 0"/>
+            
+            <xsl:for-each select="$all-wdb-inputs">
+                <xsl:variable name="is-checked" as="xs:boolean" select="$force-all-checked or (@name = $dictionarynames-with-bronnen)"/>
 
                 <xsl:call-template name="ivdnt:set-checked">
                     <xsl:with-param name="checkbox" select="."/>
