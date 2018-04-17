@@ -8,6 +8,8 @@
     
     <xsl:output method="html" version="5.0" encoding="UTF-8"/>
     
+    <xsl:param name="UUID" as="xs:string" required="yes"/>
+    
     <xsl:param name="VERSIONINFO" as="xs:string" select="''"/>
     <xsl:param name="BASEARTICLEURL" as="xs:string" required="yes"/> <!-- for development use: "http://gtb.inl.nl/iWDB/search?actie=article", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=article" -->
     <xsl:param name="BASEARTICLECONTENTURL" as="xs:string" required="yes"/> <!-- for development use: "http://gtb.inl.nl/iWDB/search?actie=article_content", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=article_content" -->
@@ -64,6 +66,11 @@
         <xsl:value-of select="$prefix || '.' || generate-id($input-or-select-element)"/>
     </xsl:function>
     
+    <xsl:function name="ivdnt:gen-unique-filename"  as="xs:string">
+       <xsl:param name="path" as="xs:string"/>
+       <xsl:value-of select="replace($path, '^(.*/)?([^/]+)$', '$1' || $UUID || '.$2')"/>        
+    </xsl:function>
+    
     <xsl:template match="/">
         <!-- Stap 1: los alle includes op, dat maakt het navigeren makkelijker, bijvoorbeeld om na te gaan of een formulier modals heeft. -->
         <xsl:variable name="includes-resolved" as="element()">
@@ -109,25 +116,25 @@
             <meta name="theme-color" content="#001475" />
 
             <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
-            <link rel="stylesheet" media="screen" href="css/bootstrap.min.css" type="text/css"/>
-            <link rel="stylesheet" media="screen" href="css/gtb.css" type="text/css"/>
-            <link rel="stylesheet" media="screen" href="css/gtb-artikel.css" type="text/css"/>
-            <link rel="stylesheet" media="screen" href="css/gtb-helpteksten.css" type="text/css"/>
-            <link rel="stylesheet" media="screen" href="css/gtb-typeahead.css" type="text/css"/>
+            <link rel="stylesheet" media="screen" href="{ivdnt:gen-unique-filename('css/bootstrap.min.css')}" type="text/css"/>
+            <link rel="stylesheet" media="screen" href="{ivdnt:gen-unique-filename('css/gtb.css')}" type="text/css"/>
+            <link rel="stylesheet" media="screen" href="{ivdnt:gen-unique-filename('css/gtb-artikel.css')}" type="text/css"/>
+            <link rel="stylesheet" media="screen" href="{ivdnt:gen-unique-filename('css/gtb-helpteksten.css')}" type="text/css"/>
+            <link rel="stylesheet" media="screen" href="{ivdnt:gen-unique-filename('css/gtb-typeahead.css')}" type="text/css"/>
             
-            <script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
-            <script src="js/bootstrap.min.js" type="text/javascript"></script>
-            <script src="js/download.js" type="text/javascript"></script>
+            <script src="{ivdnt:gen-unique-filename('js/jquery-3.2.0.min.js')}" type="text/javascript"></script>
+            <script src="{ivdnt:gen-unique-filename('js/bootstrap.min.js')}" type="text/javascript"></script>
+            <script src="{ivdnt:gen-unique-filename('js/download.js')}" type="text/javascript"></script>
             <!-- baseListURL contains the baseurl for the typeahead functionality. This is a sample URL:
                  .../iWDB/search?wdb=onw%2Cvmnw%2Cmnw%2Cwnt%2Cwft%2C&actie=list&index=lemmodern&prefix=koe&sensitive=false&xmlerror=true
             -->
-            <script src="js/gtb.js" type="text/javascript"></script>
+            <script src="{ivdnt:gen-unique-filename('js/gtb.js')}" type="text/javascript"></script>
                         
-            <script type="text/javascript" src="saxonjs/SaxonJS.min.js"></script>
+            <script type="text/javascript" src="{ivdnt:gen-unique-filename('saxonjs/SaxonJS.min.js')}"></script>
             <script type="text/javascript" xsl:expand-text="no">
                 window.onload = function() {
                     SaxonJS.transform({
-                        stylesheetLocation: "xslt/gtb.sef",
+                    stylesheetLocation: "<xsl:value-of select="ivdnt:gen-unique-filename('xslt/gtb.sef')"/>",
                         initialTemplate: "initialize",
                         stylesheetParams: {
                              baseArticleURL: "<xsl:value-of select="$BASEARTICLEURL"/>",
