@@ -65,7 +65,7 @@
                         <br/>
       <br/>
       <i>NIET</i><br/> De operator '!' staat voor de uit te sluiten zoekterm. Een
-                        zoekvraag moet voor ieder ingevuld veld tenminste een positieve zoekterm bevatten.<br/>
+                        zoekvraag moet voor ieder ingevuld veld ten minste een positieve zoekterm bevatten.<br/>
                         <i>Voorbeeld</i>: behoeve ! ten in citaat.<br/>
                         <i>Resultaat</i>: citaten die "behoeve" bevatten, maar niet "ten".<br/>
                         

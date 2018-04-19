@@ -291,7 +291,7 @@
                 </xsl:for-each>     
                 
                 <xsl:result-document href="#resultaathouder" method="ixsl:replace-content">
-                    <p>Selecteer a.u.b. tenminste &#xe9;&#xe9;n woordenboek.</p>
+                    <p>Selecteer a.u.b. ten minste &#xe9;&#xe9;n woordenboek.</p>
                 </xsl:result-document>
             </xsl:otherwise>
         </xsl:choose>        
