@@ -68,7 +68,7 @@
     
     <xsl:function name="ivdnt:gen-unique-filename"  as="xs:string">
        <xsl:param name="path" as="xs:string"/>
-       <xsl:value-of select="replace($path, '^(.*/)?([^/]+)$', '$1' || $UUID || '.$2')"/>        
+       <xsl:value-of select="$path || '?uuid=' || $UUID"/>        
     </xsl:function>
     
     <xsl:template match="/">

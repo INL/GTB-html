@@ -32,12 +32,6 @@ VERSIONINFO=`git describe --tags`
 # Transform index.xml to index.html:
 "$JAVACMD" -classpath "$SAXONJAR" net.sf.saxon.Transform "$SOURCEDIR"/index.xml "$WHEREAMI"/generate-gtb-html-files.xslt "$@" >"$TARGETDIR"/index.html "VERSIONINFO=$VERSIONINFO" "UUID=$UUID"
 
-for dir in css js xslt
-do
-   (cd "$TARGETDIR/$dir"; for f in *; do mv "$f" "$UUID.$f"; done)
-done
-   (cd "$TARGETDIR/saxonjs"; for f in *.js; do mv "$f" "$UUID.$f"; done)
-
 # Compile Saxon-JS XSLT stylesheet"
 # ### This requires Saxon-EE. Therefore, compile the stylesheet in the source folder using Oxygen
 #$JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform -t -xsl:"$SOURCEDIR"/xslt/gtb.xslt -export:$TARGETDIR"/xslt/gtb.sef -target:JS -nogo
