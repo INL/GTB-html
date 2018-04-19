@@ -1,9 +1,8 @@
 aux/
 gtb\.xpr
-target/*
-!target/README
+target\.test/*
+!target\.test/README
 
-target\.test/
 target\.dev/
 
 *.magweg
