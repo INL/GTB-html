@@ -85,6 +85,11 @@
         <xsl:sequence select="$tab-content/div[ivdnt:class-contains(@class, 'active')]"/>
     </xsl:function>
     
+    <xsl:function name="ivdnt:is-below-resultaathouder" as="xs:boolean">
+        <xsl:param name="node" as="node()"/>
+        <xsl:sequence select="exists($node/ancestor::div[@id eq 'resultaathouder'])"/>
+    </xsl:function>
+    
     <xsl:template name="initialize">
         <xsl:call-template name="ivdnt:enable-dictionaries"/>
     </xsl:template>
@@ -254,10 +259,14 @@
         <xsl:variable name="running-query-id" as="xs:string" select="ivdnt:generate-running-query-id()"/>
         <xsl:call-template name="ivdnt:add-running-query-id"><xsl:with-param name="running-query-id" select="$running-query-id"/></xsl:call-template>
         
-        <xsl:variable name="dicts-are-selected" select="exists($originating-tabdiv//input[@type eq 'checkbox' and @data-inputname eq 'wdb' and ivdnt:is-checked(.)])"/>
+        <!-- Als er een click is in de resultatenpagina (pagineringsknop) hoeven we niet te kijken of er wel een woordenboekselectie is; dat bespaart tevens de moeite om
+             uit te zoeken uit welke zoektab de oorspronkelijke query kwam.
+        -->
+        <xsl:variable name="mayContinue" as="xs:boolean"
+            select="if (ivdnt:is-below-resultaathouder(.)) then true() else exists($originating-tabdiv//input[@type eq 'checkbox' and @data-inputname eq 'wdb' and ivdnt:is-checked(.)])"/>
         
         <xsl:choose>
-            <xsl:when test="$dicts-are-selected">
+            <xsl:when test="$mayContinue">
                 <xsl:call-template name="ivdnt:deactivate-tab">
                     <xsl:with-param name="tabdiv" select="$originating-tabdiv"/>
                     <xsl:with-param name="running-query-id" select="$running-query-id"/>
