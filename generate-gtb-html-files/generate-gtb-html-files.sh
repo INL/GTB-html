@@ -39,4 +39,6 @@ VERSIONINFO=`git describe --tags`
 
 # Compile Saxon-JS XSLT stylesheet"
 # ### This requires Saxon-EE. Therefore, compile the stylesheet in the source folder using Oxygen
-#$JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform -t -xsl:"$SOURCEDIR"/xslt/gtb.xslt -export:"$TARGETDIR"/xslt/gtb.sef -target:JS -nogo
+if [ "$SAXON_EE_AVAILABLE" = true ]; then
+    $JAVACMD -classpath "$SAXONJAR" net.sf.saxon.Transform -t -xsl:"$SOURCEDIR"/xslt/gtb.xslt -export:"$TARGETDIR"/xslt/gtb.sef -target:JS -nogo
+fi

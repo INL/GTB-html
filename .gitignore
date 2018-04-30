@@ -19,3 +19,5 @@ lzx-help2html\.xslt
 
 #vscode editor files
 /.vscode
+
+generate-gtb-html-files/sourceme

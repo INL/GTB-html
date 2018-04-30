@@ -1,0 +1,12 @@
+# Example settings file.
+# Copy this to a file named 'sourceme' and tweak as necessary.
+
+# How to run JAVA
+export JAVACMD=/usr/bin/java
+
+# Where Saxon is installed
+export SAXONFOLDER=/usr/local/saxon
+export SAXONJAR=$SAXONFOLDER/saxon9ee.jar
+
+# If our Saxon is an EE version we can compile the Saxon-JS XSLT stylesheet without Oxygen
+export SAXON_EE_AVAILABLE=true

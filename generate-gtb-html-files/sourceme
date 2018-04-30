@@ -1,3 +1,0 @@
-export JAVACMD=/usr/local/jdk/bin/java
-export SAXONFOLDER=/usr/local/saxon
-export SAXONJAR=$SAXONFOLDER/saxon9pe.jar
