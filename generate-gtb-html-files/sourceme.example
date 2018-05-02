@@ -4,7 +4,7 @@
 # How to run JAVA
 export JAVACMD=/usr/bin/java
 
-# Where Saxon is installed
+# Where Saxon is installed (note: you may also need to adapt the name of the Saxon jar for the professional or home version).
 export SAXONFOLDER=/usr/local/saxon
 export SAXONJAR=$SAXONFOLDER/saxon9ee.jar
 
