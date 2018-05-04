@@ -10,13 +10,20 @@ then
     BASE_TARGET_DIR=target
 fi
 
-SOURCEDIR=$PROJECTDIR/source
-TARGETDIR=$PROJECTDIR/$BASE_TARGET_DIR
+SOURCEDIR="$PROJECTDIR"/source
+TARGETDIR="$PROJECTDIR"/$BASE_TARGET_DIR
+# linux
 UUID=`uuid`
 
 if [ ! $? -eq 0 ]; then
-    echo "Error running uuid. Install if necessary."
-    exit 1
+    # windows
+	echo "Running windows? trying alternative UUID..."
+	UUID=`powershell -inputformat none -Command "[guid]::NewGuid().ToString()"`
+	if [ ! $? -eq 0 ]; then
+		echo "Error running uuid. Install if necessary."
+		exit 1
+	fi
+	echo "Succesfully generated UUID"
 fi
 
 if [ -d "$TARGETDIR" ]
