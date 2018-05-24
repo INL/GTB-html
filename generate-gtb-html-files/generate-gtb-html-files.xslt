@@ -155,6 +155,7 @@
                     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
                     
                     ga('create', '<xsl:value-of select="$GA_TRACKING_CODE"/>', 'auto');
+                    ga('set', 'anonymizeIp', true);
                     ga('send', 'pageview');
                 </script>
             </xsl:if>
