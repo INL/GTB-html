@@ -416,6 +416,10 @@
             <option value="mdl">Mod. Ned. trefwoord</option>
             <option value="lemma">Origineel trefwoord</option>
             <option value="woordsoort">Woordsoort</option>
+            <option value="auteur">Auteur citaat</option>
+            <option value="bron">Titel citaat</option>
+            <option value="datering">Datering citaat</option>
+            <option value="loc">Lokalisering citaat</option>
         </select>
     </xsl:template>
 
