@@ -17,7 +17,7 @@
         </div>
     </ivdnt:modalcontent>
     <ivdnt:modalfooter>
-        <button type="button" name="doe-exporteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="exporteren">Exporteren</button>
-        <button type="button" name="annuleer-exportorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button> 
+        <button type="button" name="doe-exporteren" class="btn btn-primary" data-dismiss="modal" data-modaltype="exporteren">Exporteren</button>
+        <button type="button" name="annuleer-exportorteren" class="btn btn-default" data-dismiss="modal" >Annuleren</button> 
     </ivdnt:modalfooter>
 </ivdnt:modal>

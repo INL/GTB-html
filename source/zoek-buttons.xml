@@ -13,7 +13,7 @@
                 <ivdnt:retrieve-help-text/>
                 
                 <div class="modal-footer">
-                    <p><button type="button" name="annuleer-help" class="btn btn-secondary" data-dismiss="modal" >Ok</button></p>
+                    <p><button type="button" name="annuleer-help" class="btn btn-default" data-dismiss="modal" >Ok</button></p>
                 </div>
             </ivdnt:modalcontent>
         </ivdnt:modal>
@@ -28,8 +28,8 @@
               </div>
               <div class="modal-footer">
                   <p class="row">
-                      <button type="button" name="doe-selecteervraag" class="btn btn-default btn-primary" data-dismiss="modal">Selecteer</button>
-                      <button type="button" name="annuleer-geschiedenis" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
+                      <button type="button" name="doe-selecteervraag" class="btn btn-primary" data-dismiss="modal">Selecteer</button>
+                      <button type="button" name="annuleer-geschiedenis" class="btn btn-default" data-dismiss="modal" >Annuleren</button>
                   </p>
               </div>
           </ivdnt:modalcontent>
