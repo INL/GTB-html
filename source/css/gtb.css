@@ -819,8 +819,12 @@ a.gtb-selecteer-woordsoortgroep.on:before {
     border-color: #111971;
 }
 .btn-primary:hover,
+.btn-primary:focus {
+    background-color: #0e155d!important;
+    border-color: #0e155d!important;
+}
 .btn-primary:active {
-    background-color: #111971!important;
+    background-color: #0b1047!important;
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus,
