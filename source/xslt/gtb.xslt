@@ -22,6 +22,8 @@
     <xsl:param name="baseListURL" as="xs:string" required="yes"/>
     <!-- Pass (json) the Google Analytics tracking code or, for development purposes, pass an empty string: -->
     <xsl:param name="gaTrackingCode" as="xs:string" select="''"/>
+    <!-- Pass a string that contains the current front end version: -->
+    <xsl:param name="gtbFrontEndVersion" as="xs:string" select="''"/>
     <!-- Pass (json) true or set here to true() if you want to see the full search URL (for development purposes): -->
     <xsl:param name="showLinkToSearchResultXml" as="xs:boolean" select="false()"/>
     <!-- Pass (json) true or set here to true() if you want to see the XML list containing all inputs and selects (for development purposes): -->
@@ -92,6 +94,7 @@
     </xsl:function>
     
     <xsl:template name="initialize">
+        <xsl:message>GTB XSLT front-end, {$gtbFrontEndVersion}</xsl:message>
         <xsl:call-template name="ivdnt:enable-dictionaries"/>
     </xsl:template>
     

@@ -141,7 +141,8 @@
                              baseArticleContentURL: "<xsl:value-of select="$BASEARTICLECONTENTURL"/>",
                              baseSearchURL: "<xsl:value-of select="$BASESEARCHURL"/>",
                              baseListURL: "<xsl:value-of select="$BASELISTURL"/>",
-                             gaTrackingCode: "<xsl:value-of select="$GA_TRACKING_CODE"/>"
+                             gaTrackingCode: "<xsl:value-of select="$GA_TRACKING_CODE"/>",
+                             gtbFrontEndVersion: "<xsl:value-of select="$VERSIONINFO"/>"
                         }
                     });
                 }
