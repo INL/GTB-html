@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:ixsl="http://saxonica.com/ns/interactiveXSLT"
+    xmlns:js="http://saxonica.com/ns/globalJS"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
     xmlns:ivdnt="http://www.ivdnt.org/xslt/namespaces"
     exclude-result-prefixes="xs math"
@@ -202,8 +203,10 @@
         <xsl:variable name="topdiv" as="element(div)" select="ancestor::div[@data-modaltype eq 'exporteren'][1]"/>
         <xsl:variable name="value-of-format-input" as="xs:string" select="ivdnt:get-input-value($topdiv//input[@name eq 'uitvoer' and ivdnt:is-checked(.)])"/>
         
-        <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content() || '&amp;uitvoer=' || $value-of-format-input || '&amp;start=0&amp;aantal=' || $MAX_EXPORT_ENTRIES"/>
+        <xsl:variable name="startline" as="xs:integer" select="if (js:hasOwnProperty(ixsl:page(), $CURRENT_STARTLINE_PROPERTY)) then xs:integer(ixsl:get(ixsl:page(), $CURRENT_STARTLINE_PROPERTY)) else 1"/>
         
+        <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content() || '&amp;uitvoer=' || $value-of-format-input || '&amp;start=' || $startline || '&amp;aantal=' || $MAX_EXPORT_ENTRIES"/>
+
         <xsl:choose>
             <xsl:when test="$value-of-format-input eq 'html'">
                 <xsl:call-template name="ivdnt:print-result">

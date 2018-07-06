@@ -44,10 +44,11 @@
     <xsl:variable name="RESULT_TABDIV_ID_PROPERTY" as="xs:string" select="'result-tabdiv-id'"/>
     <xsl:variable name="RESULT_SORTKEYS_PROPERTY" as="xs:string" select="'result-sortkeys'"/>
     <xsl:variable name="RESULT_SORTREVERSE_PROPERTY" as="xs:string" select="'result-sortreverse'"/>
+    <xsl:variable name="CURRENT_STARTLINE_PROPERTY" as="xs:string" select="'current-startline'"/>
     <xsl:variable name="FOCUSSED_TEXTBOX_PROPERTY" as="xs:string" select="'focussed_textbox-id'"/>
     <xsl:variable name="ZOEK_FORMULIER_CLASS" as="xs:string" select="'zoek-formulier'"/> 
     <xsl:variable name="QUERYSTRING_WDB_PARAM" as="xs:string" select="'owner'"/>
-    <xsl:variable name="MAX_EXPORT_ENTRIES" as="xs:integer" select="50000"/>
+    <xsl:variable name="MAX_EXPORT_ENTRIES" as="xs:integer" select="$maxLinesInResultPage"/>
     
     <xsl:variable name="baseSearchURL-expanded" as="xs:string" select="ivdnt:expand-my-url($baseSearchURL)"/>
     <xsl:variable name="baseArticleContentURL-expanded" as="xs:string" select="ivdnt:expand-my-url($baseArticleContentURL)"/>
