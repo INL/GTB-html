@@ -360,6 +360,7 @@ div.gtb-zoekvragen-geschiedenis {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 8em;
             flex: 1 0 8em;
+    min-width: 8em;
 }
 
 .gtb-wdbcol-line,
@@ -378,6 +379,7 @@ div.gtb-zoekvragen-geschiedenis {
         -ms-flex: 1 0 7em;
             flex: 1 0 7em;
     max-width: 15em;
+    min-width: 7em;
 }
 
 .gtb-wdbcol-woordsoort {
@@ -385,13 +387,17 @@ div.gtb-zoekvragen-geschiedenis {
         -ms-flex: 1 0 8em;
             flex: 1 0 8em;
     max-width: 12em;
+    min-width: 8em;
 }
 
-.gtb-wdbcol-auteur {
+.gtb-wdbcol-auteur,
+.gtb-wdbcol-van,
+.gtb-wdbcol-locatie {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 15em;
             flex: 1 0 15em;
     max-width: 20em;
+    min-width: 15em;
 }
 .gtb-wdbcol-titel {
     -webkit-box-flex: 0;
@@ -413,12 +419,14 @@ div.gtb-zoekvragen-geschiedenis {
     -webkit-box-flex: 3;
         -ms-flex: 3 0 10em;
             flex: 3 0 10em;
+    min-width: 10em;
 }
 
 .gtb-wdbcol-conc {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 32em;
             flex: 0 0 32em;
+    min-width: 32em;
 }
 
 .gtb-conc-line {
@@ -811,8 +819,12 @@ a.gtb-selecteer-woordsoortgroep.on:before {
     border-color: #111971;
 }
 .btn-primary:hover,
+.btn-primary:focus {
+    background-color: #0e155d!important;
+    border-color: #0e155d!important;
+}
 .btn-primary:active {
-    background-color: #111971!important;
+    background-color: #0b1047!important;
 }
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus,

@@ -7,7 +7,7 @@
         <ivdnt:retrieve-help-text from-tab-with-id="resultaat"/>
         
         <div class="modal-footer">
-            <p><button type="button" name="annuleer-help" class="btn btn-secondary" data-dismiss="modal" >Ok</button></p>
+            <p><button type="button" name="annuleer-help" class="btn btn-default" data-dismiss="modal" >Ok</button></p>
         </div>
     </ivdnt:modalcontent>
 </ivdnt:modal>

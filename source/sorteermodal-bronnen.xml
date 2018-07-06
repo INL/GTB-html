@@ -41,8 +41,8 @@
         </div>
     </ivdnt:modalcontent>
     <ivdnt:modalfooter>
-        <button type="button" name="doe-sorteren" class="btn btn-default btn-primary" data-dismiss="modal" data-modaltype="sorteren-bronnen">Sorteren</button>
-        <button type="button" name="wis-sorteren" class="btn btn-secondary">Wissen</button>
-        <button type="button" name="annuleer-sorteren" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
+        <button type="button" name="doe-sorteren" class="btn btn-primary" data-dismiss="modal" data-modaltype="sorteren-bronnen">Sorteren</button>
+        <button type="button" name="wis-sorteren" class="btn btn-default">Wissen</button>
+        <button type="button" name="annuleer-sorteren" class="btn btn-default" data-dismiss="modal" >Annuleren</button>
     </ivdnt:modalfooter>    
 </ivdnt:modal>

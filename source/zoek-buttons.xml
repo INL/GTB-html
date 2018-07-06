@@ -5,19 +5,16 @@
         <!-- submit buttons als eerste element zodat de andere elementen wrappen en de button op dezelfde plaats blijft ipv andersom -->
         <button class="btn btn-primary pull-right gtb-zoek-button" name="start-zoeken" type="submit">Zoek</button>
 
-        <ivdnt:modal type="help" suppress-ok-button="true" style="width: 70vw">
-            <ivdnt:modaltrigger><button type="button" name="help" class="helpknop btn btn-default">Help...</button></ivdnt:modaltrigger>
-            <ivdnt:modalcontent modal-body-class="gtb-modal-body">
-                <ivdnt:modaltitle><h3 class="modal-title">Help</h3></ivdnt:modaltitle>
-                
-                <ivdnt:retrieve-help-text/>
-                
-                <div class="modal-footer">
-                    <p><button type="button" name="annuleer-help" class="btn btn-secondary" data-dismiss="modal" >Ok</button></p>
-                </div>
-            </ivdnt:modalcontent>
-        </ivdnt:modal>
-        
+        <button class="btn btn-default" name="wis-zoeken" title="Wis zoekvelden">Wis</button>
+        <button class="btn btn-default" name="open-speciale-tekens" title="Klik om speciale tekens in te voeren">Speciale tekens</button>
+              
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default" title="Hoofdletter- en accentgevoelig zoeken">
+                <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" title="Hoofdletter- en accentgevoelig zoeken" name="sensitive"/>
+                Aaà
+            </label>
+        </div>
+
         <ivdnt:modal type="geschiedenis" suppress-ok-button="true" style="width: 70vw">
           <ivdnt:modaltrigger><button type="button" name="geschiedenis" class="geschiedenisknop btn btn-default">Geschiedenis...</button></ivdnt:modaltrigger>
           <ivdnt:modalcontent>
@@ -28,23 +25,26 @@
               </div>
               <div class="modal-footer">
                   <p class="row">
-                      <button type="button" name="doe-selecteervraag" class="btn btn-default btn-primary" data-dismiss="modal">Selecteer</button>
-                      <button type="button" name="annuleer-geschiedenis" class="btn btn-secondary" data-dismiss="modal" >Annuleren</button>
+                      <button type="button" name="doe-selecteervraag" class="btn btn-primary" data-dismiss="modal">Selecteer</button>
+                      <button type="button" name="annuleer-geschiedenis" class="btn btn-default" data-dismiss="modal" >Annuleren</button>
                   </p>
               </div>
           </ivdnt:modalcontent>
         </ivdnt:modal>
-        
-        <button class="btn btn-default" name="wis-zoeken" title="Wis zoekvelden">Wis</button>
-        <button class="btn btn-default" name="open-speciale-tekens" title="Klik om speciale tekens in te voeren">Speciale tekens</button>
-       
-       
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default" title="Hoofdletter- en accentgevoelig zoeken">
-                <input data-inputname="sensitive" data-humanname="letters exact" type="checkbox" title="Hoofdletter- en accentgevoelig zoeken" name="sensitive"/>
-                Aaà
-            </label>
-        </div>
+
+        <ivdnt:modal type="help" suppress-ok-button="true" style="width: 70vw">
+            <ivdnt:modaltrigger><button type="button" name="help" class="helpknop btn btn-default">Help...</button></ivdnt:modaltrigger>
+            <ivdnt:modalcontent modal-body-class="gtb-modal-body">
+                <ivdnt:modaltitle><h3 class="modal-title">Help</h3></ivdnt:modaltitle>
+                
+                <ivdnt:retrieve-help-text/>
+                
+                <div class="modal-footer">
+                    <p><button type="button" name="annuleer-help" class="btn btn-default" data-dismiss="modal" >Ok</button></p>
+                </div>
+            </ivdnt:modalcontent>
+        </ivdnt:modal>
+
 
         <!-- 
         <label class="checkbox-inline gtbcheckbox">
