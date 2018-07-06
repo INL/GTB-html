@@ -89,9 +89,9 @@
         <xsl:sequence select="$tab-content/div[ivdnt:class-contains(@class, 'active')]"/>
     </xsl:function>
     
-    <xsl:function name="ivdnt:is-below-resultaathouder" as="xs:boolean">
-        <xsl:param name="node" as="node()"/>
-        <xsl:sequence select="exists($node/ancestor::div[@id eq 'resultaathouder'])"/>
+    <xsl:function name="ivdnt:div-contains-resultaathouder" as="xs:boolean">
+        <xsl:param name="div" as="node()"/>
+        <xsl:sequence select="exists($div/div[@id eq 'resultaathouder'])"/>
     </xsl:function>
     
     <xsl:template name="initialize">
@@ -268,7 +268,7 @@
              uit te zoeken uit welke zoektab de oorspronkelijke query kwam.
         -->
         <xsl:variable name="mayContinue" as="xs:boolean"
-            select="if (ivdnt:is-below-resultaathouder(.)) then true() else exists($originating-tabdiv//input[@type eq 'checkbox' and @data-inputname eq 'wdb' and ivdnt:is-checked(.)])"/>
+            select="if (ivdnt:div-contains-resultaathouder($originating-tabdiv)) then true() else exists($originating-tabdiv//input[@type eq 'checkbox' and @data-inputname eq 'wdb' and ivdnt:is-checked(.)])"/>
         
         <xsl:choose>
             <xsl:when test="$mayContinue">
