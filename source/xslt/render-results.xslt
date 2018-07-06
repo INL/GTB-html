@@ -124,6 +124,8 @@
         
         <xsl:variable name="surroundingStartlines" select="($prevStartLine, $currentStartLine, $nextStartLine, $beyondNextStartLine)" as="xs:integer+"/>
         
+        <ixsl:set-property name="{$CURRENT_STARTLINE_PROPERTY}" select="$currentStartLine" object="ixsl:page()"/>
+        
         <li class="gtb-paginate_button "><a href="#" data-startline="1" title="{ivdnt:range-title(1, $highestLineNumber)}">Eerste</a></li>
         <li class="gtb-paginate_button previous {if ($prevStartLine eq 0) then 'disabled' else ''}" id="gtb-result-table_previous">
             <xsl:variable name="line" as="xs:integer" select="max(($prevStartLine, 1))"/>
