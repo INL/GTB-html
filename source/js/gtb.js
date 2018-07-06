@@ -35,3 +35,8 @@ function getCurrentTimeMillis() {
     var d = new Date();
     return d.getTime();
 }
+
+function pushState(tabId) {
+    var stateObj = { "tabId": tabId };
+    history.pushState(stateObj, null, null);
+}

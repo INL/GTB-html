@@ -97,6 +97,14 @@
     <xsl:template name="initialize">
         <xsl:message>GTB XSLT front-end, {$gtbFrontEndVersion}</xsl:message>
         <xsl:call-template name="ivdnt:enable-dictionaries"/>
+        
+        <!-- De volgende code gaan we waarschijnlijk nodig hebben zodra we echt tab-id's in de history gaan plaatsen.:
+            
+        <xsl:variable name="startTab" as="element(div)" select="ixsl:page()//div[ivdnt:class-contains(@class, 'tab-content')]/div[1]"/>
+        <xsl:sequence select="js:pushState(string($startTab/@id))[ivdnt:always-false()]"/>
+        
+        Nu volstaan we echter met: -->
+        <xsl:sequence select="js:pushState('dummy')[ivdnt:always-false()]"/>
     </xsl:template>
     
     <xsl:template name="ivdnt:enable-dictionaries">

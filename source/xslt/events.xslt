@@ -363,4 +363,8 @@
         </ixsl:schedule-action>
     </xsl:template>
     
+    <xsl:template match="." mode="ixsl:onpopstate">
+        <xsl:sequence select="ixsl:call(ixsl:window(), 'alert', ['Let op: als u nog een keer op de terugtoets klikt, maakt u kans om de GTB-applicatie te verlaten'])[ivdnt:always-false()]"/>
+    </xsl:template>
+    
 </xsl:stylesheet>
