@@ -21,3 +21,5 @@ lzx-help2html\.xslt
 /.vscode
 
 generate-gtb-html-files/sourceme
+
+scripts/
