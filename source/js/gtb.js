@@ -1,4 +1,9 @@
 function exportResult(url, clientFilename, mimetype) {
+    // Just open the backend link.
+    // It will automatically download as a file.
+    window.open(url, '_blank');
+
+    /* JN 2018-07-12: disabled in favour of opening backend link
     $.ajax({
         url: url,
         dataType: "text",
@@ -7,6 +12,7 @@ function exportResult(url, clientFilename, mimetype) {
             download(data, clientFilename, mimetype);
         }
     });
+    */
 }
 
 function openNewWindow(url) {

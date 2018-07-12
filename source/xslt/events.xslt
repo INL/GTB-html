@@ -205,7 +205,7 @@
         
         <xsl:variable name="startline" as="xs:integer" select="if (js:hasOwnProperty(ixsl:page(), $CURRENT_STARTLINE_PROPERTY)) then xs:integer(ixsl:get(ixsl:page(), $CURRENT_STARTLINE_PROPERTY)) else 1"/>
         
-        <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content() || '&amp;uitvoer=' || $value-of-format-input || '&amp;start=' || $startline || '&amp;aantal=' || $MAX_EXPORT_ENTRIES"/>
+        <xsl:variable name="url-for-content" as="xs:string" select="ivdnt:get-url-for-content() || '&amp;export=true&amp;uitvoer=' || $value-of-format-input || '&amp;start=' || $startline || '&amp;aantal=' || $MAX_EXPORT_ENTRIES"/>
 
         <xsl:choose>
             <xsl:when test="$value-of-format-input eq 'html'">
@@ -363,8 +363,10 @@
         </ixsl:schedule-action>
     </xsl:template>
     
+    <!-- JN 2018-07-12: disabled for now, switched to beforeunload event
     <xsl:template match="." mode="ixsl:onpopstate">
         <xsl:sequence select="ixsl:call(ixsl:window(), 'alert', ['Let op: als u nog een keer op de terugtoets klikt, maakt u kans om de GTB-applicatie te verlaten'])[ivdnt:always-false()]"/>
     </xsl:template>
+    -->
     
 </xsl:stylesheet>
