@@ -104,7 +104,9 @@
         <xsl:sequence select="js:pushState(string($startTab/@id))[ivdnt:always-false()]"/>
         
         Nu volstaan we echter met: -->
+        <!-- JN 2018-07-12: disabled for now, switched to using beforeunload event
         <xsl:sequence select="js:pushState('dummy')[ivdnt:always-false()]"/>
+        -->
     </xsl:template>
     
     <xsl:template name="ivdnt:enable-dictionaries">

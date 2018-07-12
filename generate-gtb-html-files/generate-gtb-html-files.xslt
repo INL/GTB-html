@@ -145,7 +145,18 @@
                              gtbFrontEndVersion: "<xsl:value-of select="$VERSIONINFO"/>"
                         }
                     });
-                }
+                };
+
+                // Try to warn that the Back button won't nagivate within the site.
+                window.addEventListener("beforeunload", function (e) {
+                    // NOTE: most modern browsers don't display custom messages anymore, but will display their own message
+                    // (or the event may even be ignored if the user hasn't interacted with the page yet)
+                    var confirmationMessage = "Let op, u verlaat hiermee de applicatie. Wilt u de applicatie verlaten?\n\n(navigeren binnen de applicatie kan met behulp van de tabbladen)";
+
+                    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+                    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+                });
+
             </script>
             <xsl:if test="$GA_TRACKING_CODE ne ''" >
                 <xsl:comment>Google Analytics</xsl:comment>
