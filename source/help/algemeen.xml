@@ -12,7 +12,7 @@
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Zoekmogelijkheden</h2> 
-                        De applicatie bestaat uit een aantal tabbladen, waarvan er drie zoekformulieren bevatten: <i>Basiszoeken</i>, waarmee op een snelle en eenvoudige manier naar artikelen kan worden gezocht die aan bepaalde zoekcriteria voldoen, <i>Uitgebreid zoeken</i>, waarin complexere zoekvragen kunnen worden gesteld, en <i>Zoeken in
+                        De applicatie bestaat uit een aantal tabbladen, waarvan er drie zoekformulieren bevatten: <i>Basiszoeken</i>, waarmee op een snelle en eenvoudige manier kan worden gezocht, <i>Uitgebreid zoeken</i>, waarin complexere zoekvragen kunnen worden gesteld, en <i>Zoeken in
                                 bronnenlijst</i> waarmee gericht naar de bronnen van de woordenboeken kan worden gezocht. Het resultaat van iedere zoekvraag verschijnt in het tabblad <i>Resultaat</i>.<br/>
                         <br/>
                         </div>
@@ -28,7 +28,7 @@
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Hoofdletter- en accentgevoelig zoeken</h2> 
-                        Bij het zoeken wordt standaard geen onderscheid gemaakt tussen hoofdletters en kleine letters en tussen lettertekens met of zonder accent. Het is echter wel mogelijk om hoofdletter- en accentgevoelig te zoeken door onder in het scherm de optie <code class='knop'>Letters exact</code> aan te vinken. De meelopende lijsten passen zich hierbij aan. <br/>
+                        Bij het zoeken wordt standaard geen onderscheid gemaakt tussen hoofdletters en kleine letters en tussen lettertekens met of zonder accent. Het is echter wel mogelijk om hoofdletter- en accentgevoelig te zoeken door onder in het scherm de optie <code class='knop'>Aaà</code> aan te vinken. De meelopende lijsten passen zich hierbij aan. <br/>
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
@@ -51,7 +51,7 @@
                         <i>EN</i><br/> De operator 'en' heeft de vorm &amp;. Een combinatie van meer dan twee termen is mogelijk, bijv. <i>appel &amp; peer &amp; mispel</i>. Een combinatie van zoektermen zonder operatoren wordt eveneens
                         geïnterpreteerd als een logische EN. <br/>
       <br/>
-                        <i>Voorbeeld</i>: <i>appel &amp; peer</i> in veld citaat.<br/>
+                        <i>Voorbeeld</i>: <i>appel &amp; peer</i> in veld Woord in citaat.<br/>
                         <i>Resultaat</i>:
                         
                         <pre>	... De Peer en de Appel...
@@ -59,14 +59,14 @@
                         
                         <br/>
       <i>OF</i><br/> De operator 'of' heeft de vorm "|".<br/>
-                        <i>Voorbeeld</i>: <i>mensch | menschen</i> in veld betekenis<br/>
+                        <i>Voorbeeld</i>: <i>mensch | menschen</i> in veld Woord in betekenis<br/>
                         <i>Resultaat</i>: betekenissen waarvan de omschrijving ofwel 'mensch' ofwel 'menschen' bevat.
                         
                         <br/>
       <br/>
       <i>NIET</i><br/> De operator '!' staat voor de uit te sluiten zoekterm. Een
-                        zoekvraag moet voor ieder ingevuld veld ten minste een positieve zoekterm bevatten.<br/>
-                        <i>Voorbeeld</i>: behoeve ! ten in citaat.<br/>
+                        zoekvraag moet voor ieder ingevuld veld ten minste één positieve zoekterm bevatten.<br/>
+                        <i>Voorbeeld</i>: <i>behoeve</i> ! <i>ten</i> in veld Woord in citaat.<br/>
                         <i>Resultaat</i>: citaten die "behoeve" bevatten, maar niet "ten".<br/>
                         
                         <pre>	... te zijnen behoeve. ...
@@ -81,43 +81,45 @@
       <br/>
                         1) Eenvoudige syntax (ongevoelig voor de volgorde van de zoektermen). De
                         notatie is '#n', waarbij n het aantal woorden tussen de zoektermen aangeeft.<br/>
-                        <i>Voorbeeld</i>: appel #2 peer<br/>
+                        <i>Voorbeeld</i>: <i>appel</i> #2 <i>peer</i> in veld Woord in betekenis<br/>
                         <i>Resultaat</i>:<br/>
                         
                         <pre>	... De Appel en de Peer ...
 	... een peer of eenen appel ...</pre>
                         
                         <br/>2) Uitgebreide syntax. De notatie is #n1..n2. De parameters n1..n2 geven het minimale en maximale aantal woorden tussen de gevonden zoektermen aan. Een negatieve waarde geeft aan dat de tweede zoekterm voor de eerste staat.<br/>
-                        <i>Voorbeeld</i>: eerste zoekterm gevolgd door tweede: citaat=hond #0..1 kat<br/>
+                        <i>Voorbeeld</i>: <i>hond</i> #0..1 <i>kat</i> (eerste zoekterm gevolgd door tweede), in veld Woord in citaat<br/>
                         <i>Resultaat</i>:<br/>
                         
                         <pre>	... (dierfiguren, zooals hond, vogel, kat), ...
 	... hond, kat, kanarievogel enz. ...</pre>
                         
                         <br/>
-      <i>Voorbeeld</i>: eerste zoekterm voorafgegaan door tweede:
-                        citaat=hond #-2..-1 kat<br/>
+      <i>Voorbeeld</i>: <i>hond</i> #-2..-1 <i>kat</i> (eerste zoekterm voorafgegaan door tweede), in veld Woord in citaat<br/>           
                         <i>Resultaat</i>:<br/>
                         
                         <pre>	Een kat of een hond ...
 	... kat, of hond? ...</pre>
                         
                         <br/>3) Lucene syntax. Een aantal woorden binnen dubbele aanhalingstekens,
-                        mogelijk gevolgd door "~<i>k</i>", waarbij k de maximale afstand
-                        tussen de zoektermen geeft.<br/>
-                        <i>Voorbeeld</i>: <i>"hond vogel kat"~6</i>.
-                        
+                        mogelijk gevolgd door "~<i>k</i>", waarbij <i>k</i> de maximale afstand
+                        tussen de zoektermen geeft. Let op: start deze zoekopdracht met de knop Zoek, niet met een enter.<br/>
+                        <i>Voorbeeld</i>: <i>"hond vogel kat"~6</i>, in veld Woord in citaat<br/>
+                        <i>Resultaat</i>:<br/>
+      
+                        <pre>	... (dierfiguren, zooals hond, vogel, kat), ...
+	... hond, kat, kanarievogel enz. ...</pre>
                         <br/>
       <br/>
       <i>Opmerkingen</i>:<br/>
       <br/>
                         Wildcards kunnen binnen een van de operanden van de afstand-operator gebruikt worden.<br/>
-                        <i>Voorbeeld</i>: grenz*lo* #1..1 *heid binnen citaat in WNT:<br/>
+                        <i>Voorbeeld</i>: grenz*lo* #0..0 *heid in veld Woord in citaat:<br/>
                         
                         <pre>	Die grenzenlooze onbeschoftheid ... .
 	... eene grenzenlooze uitgestrektheid ...</pre>
                         
-                        <br/>Op het moment kunnen slechts twee termen worden ingevoerd. Wie een proximity van drie of meer wil, moet de lucene syntax gebruiken.<br/>
+                        <br/>Op het moment kunnen bij de afstand-operator slechts twee zoektermen worden ingevoerd, zoals hierboven beschreven bij 1) en 2). Wie een proximity van drie of meer wil, moet de lucene syntax gebruiken.<br/>
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
@@ -136,12 +138,12 @@
       <h2 class="helptext">Afbreken zoekactie</h2> 
 <!--                        In deze versie is het helaas nog niet mogelijk een zoekactie af te breken. De applicatie wordt hiervoor zo spoedig mogelijk aangepast. U kunt vooralsnog uw venster verversen in de browser.<br/>
 -->
-U kunt een gestarte zoekactie afbreken door het knopje 'Afbreken' dat verschijnt na het opstarten van de zoekactie. Deze functionaliteit werkt niet correct in Internet Explorer, versie 11.
+U kunt een gestarte zoekactie afbreken door het knopje 'Afbreken' dat verschijnt na het opstarten van de zoekactie. 
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Foutmeldingen</h2> 
-                        Wanneer een zoekvraag geen resultaat oplevert, kan dat twee oorzaken hebben: er is geen data die aan de gevraagde criteria voldoet of er is een fout in de vraagstelling. In het tweede geval verschijnt er na het starten van de zoekactie een melding op het tablad <i>resultaat</i> met suggesties voor een mogelijke oplossing. Wanneer een zoekvraag te veel resultaten oplevert, wordt verzocht om de vraag wat specifieker te stellen.<br/>
+                        Wanneer een zoekvraag geen resultaat oplevert, kan dat twee oorzaken hebben: er zijn geen data die aan de gevraagde criteria voldoet óf er is een fout in de vraagstelling. In het tweede geval verschijnt er na het starten van de zoekactie een melding op het tablad <i>resultaat</i> met suggesties voor een mogelijke oplossing. Wanneer een zoekvraag te veel resultaten oplevert, wordt verzocht om de vraag wat specifieker te stellen.<br/>
                         <br/>
                         </div>
    <div class="helptext helptext-level2">
@@ -151,7 +153,7 @@ U kunt een gestarte zoekactie afbreken door het knopje 'Afbreken' dat verschijnt
                         </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Geschiedenis</h2> 
-                        Bij elk zoekformulier kan de gebruiker een overzicht krijgen van de vragen die hij binnen zijn sessie gesteld heeft. Uit dat overzicht kan hij een vraag selecteren voor hergebruik. De zoekgeschiedenis verschijnt in een apart venster na het klikken op de optie <code class='knop'>Geschiedenis</code> onderaan het scherm. Er wordt een lijst met zoekvragen gepresenteerd, waarbij de meest recente zoekvraag bovenaan staat. Het weergeven van de vragen gebeurt door een opsomming van de velden waarbinnen gezocht is en de waarde(s) die in dat veld zijn ingevoerd. Door met de muis te dubbelklikken op een eerder gestelde zoekvraag wordt deze geselecteerd en naar het betreffende zoekformulier gekopieerd. <br/>
+                        Bij elk zoekformulier kan de gebruiker een overzicht krijgen van de vragen die hij binnen zijn sessie gesteld heeft. Uit dat overzicht kan hij een vraag selecteren voor hergebruik. De zoekgeschiedenis verschijnt in een apart venster na het klikken op de optie <code class='knop'>Geschiedenis</code> onderaan het scherm. Er wordt een lijst met zoekvragen gepresenteerd, waarbij de meest recente zoekvraag bovenaan staat. Het weergeven van de vragen gebeurt door een opsomming van de velden waarbinnen gezocht is en de waarde(s) die in dat veld zijn ingevoerd. <br/>
       <br/>
                 </div>
                 

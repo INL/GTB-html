@@ -9,14 +9,16 @@
    <br/>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Presentatie resultaat</h2> 
-In <i>Uitgebreid zoeken</i> kan men aangeven hoe de resultaten van de zoekvraag gepresenteerd moeten worden. Men kan daarbij kiezen tussen een overzicht van artikelen, van betekenisomschrijvingen (optie 'definities'), van kopsecties, van verbindingen of van citaten. Door in de bovenste balk van het zoekformulier van deze functie een van de bovenstaande opties aan te klikken, krijgt men de data die beantwoordt aan de zoekvraag in
+In <i>Uitgebreid zoeken</i> kan men aangeven hoe de resultaten van de zoekvraag gepresenteerd moeten worden. Men kan daarbij kiezen tussen een overzicht van artikelen, van betekenisomschrijvingen (optie 'definities'), van citaten, van kopsecties of van verbindingen. Door in het bovenste gedeelte van dit zoekformulier een van de bovenstaande opties aan te klikken, krijgt men de data die beantwoorden aan de zoekvraag, in
 het gewenste formaat gepresenteerd. Zie voor de verdere mogelijkheden die het resultaatscherm biedt, hieronder bij 'Resultaat'. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Zoekvelden</h2> 
-Het zoekformulier <i>Uitgebreid zoeken</i> bevat 22 zoekvelden, gegroepeerd in drie hoofdcategoriën <i>Lemma</i>, <i>Betekenis</i> en <i>Citaten</i>. 'Lemma' bevat het zoeken op <i>Modern Nederlands trefwoord (in huidige en originele spelling)</i> en op informatiecategorieën die tot de kop van een woordenboekartikel behoren, zoals <i>Woordsoort, Etymologie, Morfologie</i> en <i>Flexie</i>. Daarbij is Etymologie opgesplitst in de zoekvelden <i>Verwante vorm</i> en <i>In de etymologische beschrijving genoemde taal</i> en Morfologie in de zoekvelden <i>Morfologische element</i>, <i>Woorden in de morfologische beschrijving</i> en <i>Woordvormingstype</i>. In Flexie zijn de zoekvelden <i>Type</i> en <i>Vorm</i> opgenomen. 'Betekenis' bestaat uit de zoekvelden <i>Woord in betekenis</i>, <i>Label bij betekenis</i>, <i>Collocaties/verbindingen</i> en <i>Semantische classificatie</i>. In 'Citaten' worden de zoekvelden <i>Woorden in citaattekst</i>, <i>Auteur citaat</i>, <i>Verkorte brontitel</i>, <i>Datering bron</i>, <i>Lokalisering bron</i>, <i>Datering oudste citaat</i> en <i>Lokalisering oudste citaat</i> aangetroffen. De zoekvelden zijn niet allemaal voor alle woordenboeken relevant, ofwel omdat de woordenboekartikelen in dit woordenboek
-niet alle hierboven genoemde informatiecategorieën bevatten, ofwel omdat de informatie uit het woordenboek (nog) niet voldoende gestructureerd is om erop te kunnen zoeken. De zoekvelden worden hieronder beschreven. Er kan informatie in een zoekveld worden ingevoerd door met de cursor het gewenste zoekveld aan te klikken. <br/>
+Het zoekformulier <i>Uitgebreid zoeken</i> bevat 22 zoekvelden, gegroepeerd in drie hoofdcategorieën <i>Lemma</i>, <i>Betekenis</i> en <i>Citaten</i>. 'Lemma' bevat het zoeken op <i>Modern Nederlands trefwoord</i>, <i>Origineel trefwoord</i>, <i>Woordsoort</i> en <i>Trefwoordvariant</i>. Daarnaast kun je binnen 'Lemma' zoeken op andere informatiecategorieën die tot de kop van een woordenboekartikel behoren, zoals <i>Etymologie, Morfologie</i> en <i>Flexie</i>. Daarbij is 'Etymologie' opgesplitst in de zoekvelden <i>Verwante vorm</i> en <i>In de etymologische beschrijving genoemde taal</i> en 'Morfologie' in de zoekvelden <i>Morfologisch element</i>, <i>Woorden in de morfologische beschrijving</i> en <i>Woordvormingstype</i>. In 'Flexie' zijn de zoekvelden <i>Type</i> en <i>Vorm</i> opgenomen. 'Betekenis' bestaat uit de zoekvelden <i>Woord in betekenis</i>, <i>Label bij betekenis</i>, <i>Collocaties/verbindingen met</i> en <i>Semantische classificatie</i>. In 'Citaten' worden de zoekvelden <i>Woord in citaattekst</i>, <i>Brongegevens</i>, te weten <i>Auteur citaat</i>, <i>Verkorte brontitel</i>, <i>Datering bron</i> en <i>Lokalisering bron</i>, en het zoekveld <i>Oudste citaat</i>, met daarin <i>Datering oudste citaat</i> en <i>Lokalisering oudste citaat</i> aangetroffen. <br/>
+      De zoekvelden zijn niet allemaal voor alle woordenboeken relevant, ofwel omdat de woordenboekartikelen in dit woordenboek
+niet alle hierboven genoemde informatiecategorieën bevatten, ofwel omdat de informatie uit het woordenboek (nog) niet voldoende gestructureerd is om erop te kunnen zoeken. <br/>
+      De zoekvelden worden hieronder beschreven. Er kan informatie in een zoekveld worden ingevoerd door met de cursor het gewenste zoekveld aan te klikken. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
@@ -33,19 +35,20 @@ manieren, per categorie of alle categorieën tegelijk. Per categorie kan in- en 
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Meelopende lijsten</h2> 
-Een aantal zoekvelden is voorzien van een meelopende lijst, die op basis van de ingetikte letters in alfabetische volgorde tien suggesties bevat van wat er gezocht zou kunnen worden. Het betreft de velden <i>Modern Nederlands trefwoord</i>, <i>Origineel trefwoord</i> en <i>Trefwoordvariant</i>; <i>Verwante vorm</i> en <i>In de etymologische beschrijving genoemde taal</i>; <i>Morfologische element</i> en <i>Woorden in de morfologische beschrijving</i>; <i>Vorm</i>; <i>Woord in betekenis</i> en <i>Collocaties/verbindingen</i>; <i>Woorden in citaattekst</i>, <i>Auteur citaat</i>, <i>Verkorte brontitel</i>, <i>Lokalisering bron</i> en <i>Lokalisering oudste citaat</i>. Bij iedere suggestie wordt meegegeven in welk(e) woordenboek(en) de vorm voorkomt. Elk item van de gepresenteerde lijst komt in een  gekleurde balk te staan als er met de muis overheen wordt gegaan. Door te klikken op een 'gekleurd' item wordt dat in het zoekveld gekopieerd. De inhoud van de meelopende lijst wordt bepaald door de laatste aaneengesloten reeks van karakters in het veld die geen interpunctie, operatorkarakters of spatie zijn. De meelopende lijst kan derhalve verdwijnen en verschijnen binnen één zoekveld. Uiteraard is het hierbij steeds ook mogelijk onafhankelijk van deze lijsten een woord of woorddeel als zoekterm in te voeren. <br/>
+      Een aantal zoekvelden is voorzien van een meelopende lijst, die op basis van de ingetikte letters in alfabetische volgorde tien suggesties bevat van wat er gezocht zou kunnen worden. Het betreft de velden <i>Modern Nederlands trefwoord</i>, <i>Origineel trefwoord</i> en <i>Trefwoordvariant</i>; <i>
+         vorm</i>; <i>Morfologisch element</i> en <i>Woorden in de morfologische beschrijving</i>; <i>Vorm</i>; <i>Woord in betekenis</i> en <i>Collocaties/verbindingen met</i>; <i>Woord in citaattekst</i>, <i>Auteur citaat</i>, <i>Verkorte brontitel</i>, <i>Lokalisering bron</i> en <i>Lokalisering oudste citaat</i>. Bij iedere suggestie wordt meegegeven in welk(e) woordenboek(en) de vorm voorkomt. Het eerste item van de gepresenteerde lijst komt in een gekleurde balk te staan. Met behulp van de pijltjestoetsen kan naar het gewenste item worden genavigeerd. Door te klikken op een 'gekleurd' item wordt dat naar het invulveld gekopieerd. Het is ook mogelijk met behulp van de muis de cursor op het gewenste woord van de gepresenteerde lijst te plaatsen. Door op het geselecteerde item te klikken wordt dat naar het invulveld gekopieerd. De inhoud van de meelopende lijst wordt bepaald door de laatste aaneengesloten reeks van karakters in het veld die geen interpunctie, operatorkarakters of spatie zijn. De meelopende lijst kan derhalve verdwijnen en verschijnen binnen één zoekveld. Uiteraard is het hierbij steeds ook mogelijk onafhankelijk van deze lijsten een woord of woorddeel als zoekterm in te voeren. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Selectielijsten</h2> 
-  De selectielijst voor woordsoort en grammaticale kenmerken wordt opgeroepen door op het potloodje rechts van het invulveld te klikken. Het is mogelijk alleen een hoofdwoordsoort te kiezen door eerst (bij woordsoorten zonder verdere kenmerken) de checkbox aan te vinken of (bij woordsoorten met kenmerken) <code class="knop">alles selecteren</code> aan te klikken, en vervolgens <code class="knop">ok</code> te klikken. Indien gewenst kunnen een of meerdere kenmerken worden geselecteerd.
+  De selectielijst voor woordsoort en de bijbehorende grammaticale kenmerken wordt opgeroepen door op het potloodje rechts van het invulveld Woordsoort (onder 'Lemma') te klikken. Het is mogelijk alleen een hoofdwoordsoort te kiezen door eerst (bij woordsoorten zonder verdere kenmerken) de checkbox aan te vinken of (bij woordsoorten met kenmerken) <code class="knop">alles selecteren</code> aan te klikken, en vervolgens <code class="knop">ok</code> te klikken. Indien gewenst kunnen een of meerdere kenmerken worden geselecteerd.
 <br/><br/>
     <i>Voorbeeld</i>: klik op <i>Znw.</i> en vink vervolgens onder <i>Geslacht</i> <i>m.</i> aan en klik op <code class="knop"> ok</code>. Er wordt dan gezocht naar woordenboekartikelen met als woordsoortaanduiding 'substantief
          mannelijk'.
       <br/>
 <br/>
-Andere zoekvelden die een selectielijst bevatten zijn <i>Label bij betekenis</i> (Betekenis), <i>Semantische classificatie</i>
-(Betekenis), <i>Type</i> (Flexie) en <i>Woordvormingstype</i> (Morfologie). Deze selectielijsten worden zichtbaar als geklikt wordt het pijltje rechts van het invulveld. Door op een item in de lijst te klikken wordt het geselecteerd (en in het zoekveld gekopieerd). <br/>
+      Andere zoekvelden die een selectielijst bevatten zijn <i>In de etymologische beschrijving genoemde taal</i> (Etymologie), <i>Woordvormingstype</i> (Morfologie), <i>Type</i> (Flexie), <i>Label bij betekenis</i> (Betekenis) en <i>Semantische classificatie</i>
+(Betekenis). Deze selectielijsten worden zichtbaar als geklikt wordt het pijltje rechts van het invulveld. Door op een item in de lijst te klikken wordt het geselecteerd (en in het zoekveld gekopieerd). <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
@@ -57,8 +60,9 @@ Andere zoekvelden die een selectielijst bevatten zijn <i>Label bij betekenis</i>
       <h2 class="helptext">Trefwoord</h2> 
 
    <i>Hoofd- vs. subtrefwoord</i> <br/>Het trefwoord is het woord dat in het woordenboekartikel verklaard wordt. In tegenstelling tot het VMNW bevatten het ONW, het WNT en het MNW hoofdtrefwoorden en subtrefwoorden. Hoofdtrefwoorden zijn woorden die in een 'eigen' woordenboekartikel worden beschreven. Ze staan aan het begin van een woordenboekartikel in hoofdletters afgedrukt, zoals bijv. uit het WNT: BOEK (II), ZEGGEN (I) en ZILT. Subtrefwoorden, ook wel opnoemers genaamd, zijn woorden die geen 'eigen' woordenboekartikel hebben gekregen, maar die vermeld worden bij het hoofdtrefwoord waar ze een afleiding of samenstelling van zijn. Ze staan in het WNT aan het eind van de woordenboekartikelen, achter de laatste betekenisomschrijving, cursief gedrukt, zoals: <i>Vragenboek</i>, <i>Zegsvrouw</i>
-en <i>Ziltheid</i>. In het ONW zijn de subtrefwoorden toponiemen, en staan ze in de betekenissectie van de artikelen. Voor de internetapplicatie hoeft men bij het zoeken niet te bedenken of het gezochte woord hoofd- dan wel subtrefwoord is en wordt men vanzelf naar de goede plek in het woordenboek geleid. <br/>
-      <i>Modern Nederlands trefwoord vs. Origineel trefwoord</i><br/> De trefwoorden van de historische woordenboeken zijn gespeld in de spelling die hoort bij de periode die het woordenboek beschrijft. Voor het WNT is dat bijvoorbeeld de al lang niet meer gangbare spelling De Vries/Te Winkel uit 1863. Deze verouderde spelling geeft bij het zoeken naar woorden nogal eens misverstanden, omdat het voor de hedendaagse gebruiker zeer lastig is om steeds te bedenken wat de originele (historische) spelling geweest is. Een voorbeeld daarvan zijn de woorden die in de huidige spelling met de letter <i>f-</i> beginnen. In het WNT, geschreven in de spelling De Vries/Te Winkel, beginnen die nog met <i>ph-</i>. Ook het vinden van de woorden die bij De Vries/Te Winkel de spelling <i>-ae-</i> bevatten, waar we tegenwoordig een enkele <i>-e-</i> schrijven is vaak lastig. Maar de originele trefwoorden in de diverse woordenboeken leveren ook problemen als een trefwoord in verschillende woordenboeken tegelijk wordt gezocht. Het WNT heeft bijvoorbeeld het trefwoord <i>afscheuren</i>, terwijl datzelfde woord in het MNW als <i>afscoren</i> is gespeld en in het VMNW voorkomt als <i>avescueren</i>. Om het mogelijk te maken deze woorden toch in één keer te kunnen opvragen is aan alle trefwoorden van de woordenboeken een equivalent in de huidige spelling toegevoegd. Voor de hedendaagse gebruiker wordt het hierdoor gemakkelijker om de woorden die hij zoekt te vinden en als hij eenzelfde woord in verschillende woordenboeken zoekt kan hij de mogelijk verschillend gespelde trefwoorden toch in zijn zoekresultaat bij elkaar krijgen. 
+en <i>Ziltheid</i>. In het ONW zijn de subtrefwoorden toponiemen, en staan ze in de betekenissectie van de artikelen. <br/>
+      Voor de internetapplicatie hoeft men bij het zoeken niet te bedenken of het gezochte woord hoofd- dan wel subtrefwoord is en wordt men vanzelf naar de goede plek in het woordenboek geleid. <br/>
+      <i>Modern Nederlands trefwoord vs. Origineel trefwoord</i><br/> De trefwoorden van de historische woordenboeken zijn gespeld in de spelling die hoort bij de periode die het woordenboek beschrijft. Voor het WNT is dat bijvoorbeeld de al lang niet meer gangbare spelling De Vries/Te Winkel uit 1863. Deze verouderde spelling geeft bij het zoeken naar woorden nogal eens misverstanden, omdat het voor de hedendaagse gebruiker zeer lastig is om steeds te bedenken wat de originele (historische) spelling geweest is. Een voorbeeld daarvan zijn de woorden die in de huidige spelling met de letter <i>f-</i> beginnen. In het WNT, geschreven in de spelling De Vries/Te Winkel, beginnen die nog met <i>ph-</i>. Ook het vinden van de woorden die bij De Vries/Te Winkel de spelling <i>-ae-</i> bevatten, waar we tegenwoordig een enkele <i>-e-</i> schrijven, is vaak lastig. Maar de originele trefwoorden in de diverse woordenboeken leveren ook problemen als een trefwoord in verschillende woordenboeken tegelijk wordt gezocht. Het WNT heeft bijvoorbeeld het trefwoord <i>afscheuren</i>, terwijl datzelfde woord in het MNW als <i>afscoren</i> is gespeld en in het VMNW voorkomt als <i>avescueren</i>. Om het mogelijk te maken deze woorden toch in één keer op te vragen is aan alle trefwoorden van de woordenboeken een equivalent in de huidige spelling toegevoegd. Voor de hedendaagse gebruiker wordt het hierdoor gemakkelijker om de woorden die hij zoekt te vinden en als hij eenzelfde woord in verschillende woordenboeken zoekt, kan hij de mogelijk verschillend gespelde trefwoorden toch in zijn zoekresultaat bij elkaar krijgen. 
 
       In het zoekveld <i>Modern Nederlands trefwoord</i> kunnen de trefwoorden worden opgevraagd in de hedendaagse spelling. In het zoekveld <i>Origineel trefwoord</i> kunnen ze worden opgevraagd in de spelling van het woordenboek zelf. Beide zoekvelden zijn voorzien van een meelopende lijst (zie hierboven), die steun kan bieden bij het vinden van het juiste trefwoord. <br/>
 
@@ -66,14 +70,14 @@ en <i>Ziltheid</i>. In het ONW zijn de subtrefwoorden toponiemen, en staan ze in
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Woordsoort</h2> 
-In het zoekveld <i>Woordsoort</i> kan aangegeven worden tot welke woordsoort de trefwoorden die men zoekt, moeten behoren. Met behulp van een selectielijst (zie hierboven) kan een bepaalde hoofdwoordsoort worden gekozen, bijvoorbeeld znw. of ww., die vervolgens naar behoeven nog nader kan worden gespecificeerd, bijv. vr. (vrouwelijk) of trans. (transitief). Het gecombineerd zoeken naar een trefwoord in de originele of huidige spelling met woordsoort kan gebruikt worden om homonieme trefwoorden vooraf van elkaar te onderscheiden (bijv. KOUD als znw. en KOUD als bnw./bw.). Daarnaast kan het zelfstandig worden gebruikt om tegelijkertijd verschillende trefwoorden die tot een bepaalde woordsoort behoren te selecteren (bijv. alle trefwoorden met als woordsoort tussenw. of vnw.pers.). De
+      In het zoekveld <i>Woordsoort</i> kan aangegeven worden tot welke woordsoort de trefwoorden die men zoekt, moeten behoren. Met behulp van een selectielijst (zie hierboven) kan een bepaalde hoofdwoordsoort worden gekozen, bijvoorbeeld znw. of ww., die vervolgens naar behoeven nog nader kan worden gespecificeerd, bijv. vr. (vrouwelijk) of trans. (transitief). Het zoeken naar een Modern Nederlands trefwoord of Origineel trefwoord kan in combinatie met woordsoort gebruikt worden om homonieme trefwoorden vooraf van elkaar te onderscheiden (bijv. KOUD als znw. en KOUD als bnw./bw.). Daarnaast kan het zelfstandig worden gebruikt om tegelijkertijd verschillende trefwoorden die tot een bepaalde woordsoort behoren te selecteren (bijv. alle trefwoorden met als woordsoort tussenw. of vnw.pers.). De
 woordsoortaanduidingen uit de verschillende woordenboeken zijn geüniformeerd. Dit wil zeggen dat bijvoorbeeld de aanduiding 'bedr.', die in het gedrukte WNT wordt gebruikt, ten behoeve van het zoeken voor de applicatie vertaald is naar 'trans.' <br/>
 Let wel, deze functie geldt momenteel alleen voor de hoofdtrefwoorden, nog niet voor de subtrefwoorden. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Trefwoordvariant</h2> 
-Er kan op vormvarianten van het trefwoord gezocht worden.  In het VMNW zijn alle voorkomende vormvarianten van het trefwoord gegeven, zij het niet allemaal voluit geschreven. Soms wordt alleen melding gemaakt van een variant van een deel van het trefwoord. Het WNT beschrijft niet een maar vijf eeuwen. Het is onmogelijk om alle aangetroffen vormvarianten op te nemen. Aparte vermelding van incidentele gevallen is doorgaans achterwege gebleven, maar ook vanzelfsprekende, zeer frequente vormvarianten zijn soms achterwege gelaten (bijv. <i>uut</i> voor <i>uit</i>). <br/>
+Er kan op vormvarianten van het trefwoord gezocht worden.  In het VMNW zijn alle voorkomende vormvarianten van het trefwoord gegeven, zij het niet allemaal voluit geschreven. Soms wordt alleen melding gemaakt van een variant van een deel van het trefwoord. Het WNT beschrijft niet één maar vijf eeuwen. Het is onmogelijk om alle aangetroffen vormvarianten op te nemen. Aparte vermelding van incidentele gevallen is doorgaans achterwege gebleven, maar ook vanzelfsprekende, zeer frequente vormvarianten zijn soms achterwege gelaten (bijv. <i>uut</i> voor <i>uit</i>). <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
@@ -83,13 +87,15 @@ Er kan op vormvarianten van het trefwoord gezocht worden.  In het VMNW zijn alle
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Verwante vorm</h2> 
-Er kan in het VMNW en het ONW gezocht worden naar etymologisch verwante vormen van het trefwoord uit een andere taal, bijv. Ofra. <i>abandoner</i> bij het lemma <i>abandoneren</i>. De meelopende lijst biedt hierbij ondersteuning. Omdat deze zoekoptie gerealiseerd wordt door op niet-cursieve vormen in de etymologische beschrijving van een trefwoord in het VMNW te zoeken, kan het echter zijn dat in de meelopende lijst ook andere dan strikt etymologisch verwante vormen aangeeft.  Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat')<br/>
+      Er kan in het VMNW en het ONW gezocht worden naar etymologisch verwante vormen van het trefwoord uit een andere taal. Zoeken naar het Oudfrans(e) <i>abandoner</i> bijvoorbeeld leidt naar het Origineel trefwoord <i>abandoneren</i>. De meelopende lijst biedt hierbij ondersteuning. Omdat deze zoekoptie gerealiseerd wordt door op niet-cursieve vormen in de etymologische beschrijving van een trefwoord in het VMNW te zoeken, kan het echter zijn dat in de meelopende lijst ook andere dan strikt etymologisch verwante vormen aangeeft. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
-      <h2 class="helptext">Taalnaam in etymologische beschrijving</h2> 
-Er kan in de woordenboekartikelen gerichter gezocht worden naar etymologische informatie in de woordenboeken. De gebruiker heeft hiervoor een meelopende lijst met taalnamen ter beschikking (zie hierboven) die in de woordenboeken voorkomen. De taalnamen in de meelopende lijst zijn in de huidige spelling en voluit vermeld, maar corresponderen met de in de woordenboeken voor deze talen
-gebruikte afkortingen en schrijfwijzen. Omdat deze lijst wat betreft het WNT is opgesteld op basis van de afkortingenlijst en een aantal steekproeven uit het woordenboek is de kans groot dat hij nog niet helemaal compleet is. Aanvullingen hierop zijn daarom altijd van harte welkom. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat'). <br/>
+      <h2 class="helptext">In de etymologische beschrijving genoemde taal</h2> 
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      Er kan in de woordenboekartikelen gerichter gezocht worden naar etymologische informatie in de woordenboeken. De gebruiker heeft hiervoor een meelopende lijst ter beschikking met de talen die genoemd worden in de etymologische beschrijvingen. De taalnamen in de selectielijst zijn in de huidige spelling en voluit vermeld, maar corresponderen met de in de woordenboeken voor deze talen
+gebruikte afkortingen en schrijfwijzen (dus Oudfrans(e) naast Ofra). Omdat deze lijst wat betreft het WNT is opgesteld op basis van de afkortingenlijst en een aantal steekproeven uit het woordenboek is de kans groot dat hij nog niet helemaal compleet is. Aanvullingen hierop zijn daarom altijd van harte welkom. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
@@ -99,17 +105,18 @@ gebruikte afkortingen en schrijfwijzen. Omdat deze lijst wat betreft het WNT is 
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Morfologisch element</h2>
-Er kan in het ONW en VMNW gezocht worden naar morfologische bestanddelen van trefwoorden, bijv. <i>-lijc</i> of <i>-nesse</i>. De meelopende lijst biedt hierbij ondersteuning. Omdat deze zoekoptie gerealiseerd wordt door op niet-cursieve vormen in de morfologische beschrijving van een trefwoord in het VMNW te zoeken, kan het echter zijn dat in de meelopende lijst ook andere Vroegmiddelnederlandse vormen dan morfologische bestanddelen voorkomen. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      Er kan in het ONW en VMNW gezocht worden naar morfologische elementen van trefwoorden, bijv. <i>-lijc</i> of <i>-nesse</i>. De meelopende lijst biedt hierbij ondersteuning. Omdat deze zoekoptie gerealiseerd wordt door op niet-cursieve vormen in de morfologische beschrijving van een trefwoord in het VMNW te zoeken, kan het echter zijn dat in de meelopende lijst ook andere Vroegmiddelnederlandse vormen dan morfologische bestanddelen voorkomen. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Woorden in de morfologische beschrijving</h2>
-Er kan in het ONW en VMNW gezocht worden in de redactionele tekst van de morfologische beschrijving van een woord, voorbeeld: <i>vleivorm</i> of <i>vleisuffix</i>. De meelopende lijst biedt hierbij ondersteuning.  De morfologische beschrijving in het VMNW is niet altijd volgens vaste formuleringen gebeurd. Wel systematisch is de beschrijving van samenstellingen: <i>Uit</i> ... <i>en</i>..., en afleidingen: <i>Van</i> ... <i>met</i>... .<br/>
+Er kan in het ONW en VMNW gezocht worden in de redactionele tekst van de morfologische beschrijving van een woord, bij voorbeeld <i>persoonsnaam</i> of <i>vleivorm</i>. De meelopende lijst biedt hierbij ondersteuning. Ook bij eerdere zoekopdrachten aangetroffen redactionele aanduidingen kunnen worden ingevoerd als zoekterm. De morfologische beschrijving in het VMNW is niet altijd volgens vaste formuleringen gebeurd. Wel systematisch is de beschrijving van samenstellingen: <i>Uit</i> ... <i>en</i>..., en afleidingen: <i>Van</i> ... <i>met</i>... .<br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Woordvormingstype</h2>
-In het ONW kan gezocht worden op woordvorming. Voorbeeld: ONW: selecteer in de combobox <i>samenst. bw+znw</i>.
+In het ONW kan gezocht worden op woordvormingstype. Kies in de selectielijst bijvoorbeeld <i>samenst. bw+znw</i>.
 <br/>
       <br/>
    </div>
@@ -120,12 +127,14 @@ In het ONW kan gezocht worden op woordvorming. Voorbeeld: ONW: selecteer in de c
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Type</h2>
-In het ONW en VMNW is de flexie van ieder trefwoord beschreven. Er  kan gezocht worden op flexietype, bijv. <i>dat. pl.</i>:  er wordt gezocht naar trefwoorden waarvan de dativus pluralis is aangetroffen en beschreven. De selectielijst biedt hierbij ondersteuning. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat'). <br/>
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      In het ONW en VMNW is de flexie van ieder trefwoord beschreven. Er kan gezocht worden op flexietype, bijv. <i>datief pluralis</i>:  er wordt gezocht naar trefwoorden waarvan de dativus pluralis is aangetroffen en beschreven. De selectielijst biedt hierbij ondersteuning.  <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Vorm</h2>
-Er kan in het ONW en VMNW niet alleen op flexietype worden gezocht, maar ook op de mogelijke flexievormen die zijn aangetroffen, bijv. <i>-s</i> in combinatie met type <i>gen. sg.</i>: er wordt gezocht naar trefwoorden waarvan een genitivus singularis  op <i>-s</i> is aangetroffen en beschreven. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat'). <br/>
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Kopsecties' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      Er kan in het ONW en VMNW niet alleen op flexietype worden gezocht, maar ook op de mogelijke flexievormen die zijn aangetroffen, bijv. <i>-s</i> in combinatie met type <i>genitief singularis</i>: er wordt gezocht naar trefwoorden waarvan een genitivus singularis  op <i>-s</i> is aangetroffen en beschreven.  <br/>
       <br/>
 
    </div>
@@ -136,23 +145,26 @@ Er kan in het ONW en VMNW niet alleen op flexietype worden gezocht, maar ook op 
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Woord in betekenis</h2> 
-Met het zoekveld <i>Woord in betekenis</i> kan gezocht worden in alle definities of betekenisomschrijvingen van de trefwoorden. Hierdoor wordt het mogelijk om verschillende trefwoorden bij elkaar te krijgen die op eenzelfde manier of met eenzelfde term worden gedefinieerd. Wie bijvoorbeeld op zoek is naar woorden voor soorten gereedschap, kan zoeken naar termen als werktuig of gereedschap en krijgt vervolgens een overzicht van alle trefwoorden waar deze termen in een van de definities zijn aangetroffen. Het is van belang om te weten
-dat bij het WNT (en het MNW) de betekenisomschrijvingen, net als de overige redactionele tekst, niet in de huidige spelling zijn geschreven en dat dit de gebruiker van deze functie soms voor onverwachte verrassingen kan stellen. Daarom is ook dit zoekveld voorzien van een meelopende lijst (zie hierboven), die steun kan bieden bij het vinden van het juiste woord. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Betekenisomschrijvingen' te kiezen (zie ook hieronder bij 'Resultaat'). <br/>
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Definities' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      Met het zoekveld <i>Woord in betekenis</i> kan gezocht worden in alle definities of betekenisomschrijvingen van de trefwoorden. Hierdoor wordt het mogelijk om verschillende trefwoorden bij elkaar te krijgen die op eenzelfde manier of met eenzelfde term worden gedefinieerd. Wie bijvoorbeeld op zoek is naar woorden voor soorten gereedschap, kan zoeken naar termen als werktuig of gereedschap en krijgt vervolgens een overzicht van alle trefwoorden waar deze termen in een van de definities zijn aangetroffen. Het is van belang om te weten
+dat bij het WNT (en het MNW) de betekenisomschrijvingen, net als de overige redactionele tekst, niet in de huidige spelling zijn geschreven en dat dit de gebruiker van deze functie soms voor onverwachte verrassingen kan stellen. Daarom is ook dit zoekveld voorzien van een meelopende lijst (zie hierboven), die steun kan bieden bij het vinden van het juiste woord.  <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Label bij betekenis</h2> 
-Per betekenis kan er een label gegeven zijn, dat de definitie karakteriseert of aangeeft in welke gebruikssfeer een aanhaling wordt aangetroffen. Het betreft labels van verschillende aard: grammaticale labels,  semantische labels, morfo-semantische labels, temporele labels, geografische labels, stilistische labels, frequentielabels an domeinlabels.  Zoeken op label gebeurt door selectie van een label in de selectielijst. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Betekenisomschrijvingen' te kiezen (zie ook hieronder bij 'Resultaat'). Opvraagbaar in ONW en VMNW.<br/>
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Definities' te kiezen (zie ook hieronder bij 'Resultaat')<br/>
+      In het ONW en VMNW kan er een label gegeven zijn, dat de definitie karakteriseert of aangeeft in welke gebruikssfeer een aanhaling wordt aangetroffen. Het betreft labels van verschillende aard: grammaticale labels,  semantische labels, morfo-semantische labels, temporele labels, geografische labels, stilistische labels, frequentielabels en domeinlabels. Zoeken op label gebeurt door selectie van een label in de selectielijst.<br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
-      <h2 class="helptext">Collocaties/verbindingen</h2> 
-Er kan in de woordenboekartikelen gezocht worden naar collocaties/verbindingen met een bepaald woord, bijv. <i>crucen</i> intikken levert de verbinding <i>der heiligher crucen, des heilighen crucen avont</i> bij het trefwoord <i>avont</i> op in het VMNW. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Verbindingen' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      <h2 class="helptext">Collocaties/verbindingen met</h2> 
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Verbindingen' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      Er kan in de woordenboekartikelen gezocht worden naar collocaties/verbindingen met een bepaald woord. In het VMNW levert de combinatie Origineel trefwoord <i>avont</i> met <i>crucen</i> als collocatie de verbindingen <i>der heiligher crucen</i> en <i>des heilighen crucen avont</i> op.<br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Semantische classificatie</h2> 
-Op de zelfstandige naamwoorden in het VMNW is een eenvoudige semantische classificatie toegepast. Dat betekent dat er bijvoorbeeld gezocht kan worden op boomnamen, persoonsnamen, plaatsnamen etc. Zoeken op semantische classificatie gebeurt met behulp van de selectielijst. Deze optie is niet beschikbaar in de andere woordenboeken. <br/>
+      Op de zelfstandige naamwoorden in het VMNW is een eenvoudige semantische classificatie toegepast. Dat betekent dat er bijvoorbeeld gezocht kan worden op boomnamen, persoonsnamen, plaatsnamen etc. Zoeken op semantische classificatie gebeurt met behulp van de selectielijst. Deze optie is niet beschikbaar in de andere woordenboeken. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
@@ -161,8 +173,9 @@ Op de zelfstandige naamwoorden in het VMNW is een eenvoudige semantische classif
       </h2> 
    </div>
    <div class="helptext helptext-level2">
-      <h2 class="helptext">Woorden in citaattekst</h2> 
-Met het zoekveld <i>Woorden in citaattekst</i> kan gezocht worden in de aanhalingen of citaten die ter illustratie bij de betekenisomschrijvingen zijn gevoegd. In tegenstelling tot het zoekveld 'Woord in citaat' in Basiszoeken, wordt hier alleen in de tekst van de citaten gezocht, niet in de bronvermelding bij de citaten. Het zoeken in dit veld kan gecombineerd worden met een of meer van de overige velden in Uitgebreid zoeken. Men kan bijvoorbeeld zoeken naar citaten uit het trefwoord <i>water</i> die het woord <i>vuur</i> bevatten. Ook dit zoekveld is voorzien van een meelopende lijst (zie hierboven), die steun kan vinden bij het vinden van het juiste woord. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Citaten' te kiezen (zie ook hieronder bij 'Resultaat'). <br/>
+      <h2 class="helptext">Woord in citaattekst</h2> 
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Citaten' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      Met het zoekveld <i>Woord in citaattekst</i> kan gezocht worden in de aanhalingen of citaten die ter illustratie bij de betekenisomschrijvingen zijn gevoegd. In tegenstelling tot het zoekveld 'Woord in citaat' in Basiszoeken, wordt hier alleen in de tekst van de citaten gezocht, niet in de bronvermelding bij de citaten. Het zoeken in dit veld kan gecombineerd worden met een of meer van de overige velden in Uitgebreid zoeken. Men kan bijvoorbeeld zoeken naar citaten uit het trefwoord <i>water</i> die het woord <i>vuur</i> bevatten. Ook dit zoekveld is voorzien van een meelopende lijst (zie hierboven), die steun kan vinden bij het vinden van het juiste woord. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
@@ -173,26 +186,28 @@ Met het zoekveld <i>Woorden in citaattekst</i> kan gezocht worden in de aanhalin
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Auteur citaat</h2> 
-Er kan in de woordenboeken gezocht worden naar citaten van een bepaald auteur. Daarvoor wordt binnen de bronvermelding van elk citaat in de woordenboeken gezocht naar de naam van een auteur, zoals die in de woordenboeken vermeld wordt. Het zoekveld <i>Auteur citaat</i> is voorzien van een meelopende lijst (zie hierboven), waarvan de items de volledige auteursaanduiding bij een citaat weergeven. Dit wil zeggen dat als bijv. (bij selectie van het WNT) <i>huygens</i> wordt ingetikt, er de volgende items in de meelopende lijst verschijnen: <i>c. huygens, chr. huygens, const. huygens, corn. huygens, g. huygens, huygens</i>. Uit de lijst in dit voorbeeld blijkt dat het werk aan de uniformering van de bronvermeldingen bij het WNT nog niet is afgerond. We hopen bovendien door de verdere bewerking van de bronnenlijst van het WNT tot nog betere resultaten te komen wat betreft afbakening en dus doorzoekbaarheid van auteursaanduidingen bij citaten. Omdat de bronnenlijst nog steeds in bewerking is, zijn correcties en/of aanvullingen hierop van harte welkom. Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Citaten' te kiezen (zie ook hieronder bij 'Resultaat').  Voor het VMNW komt deze zoekoptie in een volgende release ter beschikking.<br/>
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Citaten' te kiezen (zie ook hieronder bij 'Resultaat'). <br/>
+      Er kan in de woordenboeken gezocht worden naar citaten van een bepaald auteur. Daarvoor wordt binnen de bronvermelding van elk citaat in de woordenboeken gezocht naar de naam van een auteur, zoals die in de woordenboeken vermeld wordt. Het zoekveld <i>Auteur citaat</i> is voorzien van een meelopende lijst (zie hierboven), waarvan de items de volledige auteursaanduiding bij een citaat weergeven. Dit wil zeggen dat als bijv. (bij selectie van het WNT) <i>huygens</i> wordt ingetikt, er de volgende items in de meelopende lijst verschijnen: <i>c. huygens, chr. huygens, const. huygens, corn. huygens, g. huygens, huygens</i>. Uit de lijst in dit voorbeeld blijkt dat het werk aan de uniformering van de bronvermeldingen bij het WNT nog niet is afgerond. We hopen bovendien door de verdere bewerking van de bronnenlijst van het WNT tot nog betere resultaten te komen wat betreft afbakening en dus doorzoekbaarheid van auteursaanduidingen bij citaten. Omdat de bronnenlijst nog steeds in bewerking is, zijn correcties en/of aanvullingen hierop van harte welkom. Voor het VMNW komt deze zoekoptie in een volgende release ter beschikking.<br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Verkorte brontitel</h2> 
-Er kan in de woordenboeken ook gezocht worden naar citaten uit werken met een bepaalde titel. Daarvoor wordt binnen de bronvermelding van elk citaat in de woordenboeken gezocht naar een de verkorte titel, zoals die in de woordenboeken vermeld wordt. Dit zoekveld <i>Verkorte brontitel</i> is voorzien van een meelopende lijst (zie hierboven), die steun kan bieden bij het vinden van het juiste woord. Wanneer deze zoekoptie gebruikt wordt, is het advies om de  weergaveoptie 'Citaten' te kiezen (zie ook hieronder bij 'Resultaat'). <br/>
+      Wanneer deze zoekoptie gebruikt wordt, is het advies om de  weergaveoptie 'Citaten' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
+      Er kan in de woordenboeken ook gezocht worden naar citaten uit werken met een bepaalde titel. Daarvoor wordt binnen de bronvermelding van elk citaat in de woordenboeken gezocht naar de verkorte titel zoals die in de woordenboeken vermeld wordt. Dit zoekveld <i>Verkorte brontitel</i> is voorzien van een meelopende lijst (zie hierboven), die steun kan bieden bij het vinden van het juiste woord.  <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Datering bron</h2> 
+Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Citaten' te kiezen (zie ook hieronder bij 'Resultaat').<br/>
 Door het invoeren van een begindatum en/of een einddatum is het mogelijk om in de woordenboeken te zoeken naar citaten uit een bepaalde periode of van een bepaalde datum. Wanneer de begindatum wordt opengelaten en alleen een einddatum wordt ingevuld, wordt gezocht naar alle citaten met een datering tot aan de gevraagde einddatum. Wanneer de einddatum wordt opengelaten, en alleen een begindatum wordt ingevuld, krijgt men alle citaten die niet ouder zijn dan de ingevulde begindatum. Om citaten uit bijv. 1508 op te vragen, moet zowel bij begin- als einddatum 1508 worden ingevuld.
 <br/>Let wel:<br/>
-1) Het werk aan de bronnenlijst van het WNT en MNW is nog niet voltooid, waardoor naast het uniformeren van de bronvermeldingen, ook het dateren van de citaten niet  volledig is doorgevoerd. Een zoekvraag naar citaten van een bepaalde datum of uit een bepaalde periode levert dus wat betreft het WNT alleen resultaten op voor zover de citaten gedateerd zijn.<br/>
+1) Het werk aan de bronnenlijst van het WNT en MNW is nog niet voltooid, waardoor naast het uniformeren van de bronvermeldingen, ook het dateren van de citaten niet  volledig is doorgevoerd. Een zoekvraag naar citaten van een bepaalde datum of uit een bepaalde periode levert dus wat betreft het MNW en WNT alleen resultaten op voor zover de citaten gedateerd zijn.<br/>
 2) Er wordt op een niet-strikte manier gezocht. Wanneer een bron bijvoorbeeld gedateerd is in het tijdvak tussen 1600 en 1610, wordt deze als mogelijk zoekresultaat voor een dateringszoekvraag met als begin- en einddatum 1605 teruggegeven. <br/>
-Wanneer deze zoekoptie gebruikt wordt, is het advies om de weergaveoptie 'Citaten' te kiezen (zie ook hieronder bij 'Resultaat'). <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Lokalisering Bron </h2>
-In het VMNW wordt elke aanhaling uit het ambtelijke materiaal gelokaliseerd door middel van de naam van de plaats waar het betreffende document geschreven is, bijv. <i>Brugge</i>. De literaire teksten kunnen echter - evenals enkele ambtelijke bescheiden- niet nauwkeuriger gelokaliseerd worden dan d.m.v. een regio-aanduiding, bijv. <i>West-Vlaanderen</i>. Elke plaatsnaam is ook gekoppeld aan een regio-aanduiding Er kan naar bronnen met een bepaalde lokalisering worden gezocht door selectie van een regio- en of plaatsaanduiding uit de meelopende lijst. Ook het ONW, MNW en WFT geven waar mogelijk lokalisering van de bron.<br/>
+In het VMNW wordt elke aanhaling uit het ambtelijke materiaal gelokaliseerd door middel van de naam van de plaats waar het betreffende document geschreven is, bijv. <i>Brugge</i>. De literaire teksten kunnen echter - evenals enkele ambtelijke bescheiden - niet nauwkeuriger gelokaliseerd worden dan d.m.v. een regio-aanduiding, bijv. <i>West-Vlaanderen</i>. Elke plaatsnaam is ook gekoppeld aan een regio-aanduiding. Er kan naar bronnen met een bepaalde lokalisering worden gezocht door selectie van een regio- en of plaatsaanduiding uit de meelopende lijst. Ook het ONW, MNW en WFT geven waar mogelijk lokalisering van de bron.<br/>
 Voor meer informatie zie: <br/> <i>Lokalisering van
 taalmateriaal uit ONW, VMNW en MNW t.b.v. de Taalbankinternetapplicatie</i>, 
 Marijke Mooijaart i.s.m. Dirk Geirnaert en Hans Westgeest,
@@ -204,12 +219,12 @@ Leiden, 2010 <a href="http://ivdnt.org/images/stories/onderzoek_en_onderwijs/pub
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Datering oudste citaat</h2> 
-Van elk woordenboekartikel in het ONW en VMNW is vastgesteld wat de datering van het oudste citaat is. Zoeken op datering vanaf <i>1200</i> bijv. levert alle trefwoorden op waarvan de oudste vindplaats 1200 is. Deze informatie is nog niet opvraagbaar in het WNT. <br/>
+Van elk woordenboekartikel in het ONW en VMNW is vastgesteld wat de datering van het oudste citaat is. Zoeken op datering vanaf <i>1200</i> bijv. levert alle trefwoorden op waarvan de oudste vindplaats 1200 is. Deze informatie is nog niet opvraagbaar in het MNW en het WNT. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Lokalisering oudste citaat</h2> 
-Alleen in het VMNW is van elke woordenboekartikel ook vastgesteld wat de lokalisering van het oudste citaat is. Zoeken op bijv. <i>Brugge</i> levert alle trefwoorden op waarvan de oudste vindplaats uit Brugge komt. Er kan op regio-aanduiding of meer specifiek op plaats gezocht worden door selectie van een regio en/of plaats in de selectielijst. Zie ook hierboven bij 'Lokalisering Bron'.<br/>
+Alleen in het VMNW is van elk woordenboekartikel ook vastgesteld wat de lokalisering van het oudste citaat is. Zoeken op bijv. <i>Brugge</i> levert alle trefwoorden op waarvan de oudste vindplaats uit Brugge komt. Er kan op regio-aanduiding of meer specifiek op plaats gezocht worden door selectie van een regio en/of plaats in de selectielijst. Zie ook hierboven bij 'Lokalisering Bron'.<br/>
 	  </div>
 </div>
 

@@ -5,49 +5,50 @@
             <h1 class="helptext">Resultaat</h1>
             <br/>
    <br/>
-            Zoeken in de tabbladen <i>Basiszoeken</i>, <i>Uitgebreid zoeken</i> of in <i>Zoeken in bronnenlijst</i> levert altijd een in tabelvorm gepresenteerde lijst met zoekresultaten op in het tabblad <i>Resultaat</i>, van waaruit de gebruiker via een link op het trefwoord in originele spelling door kan naar een afzonderlijk woordenboekartikel resp. bron uit de bronnenlijst. Afhankelijk van wat er in de woordenboeken gezocht wordt (Basiszoeken, Zoeken in bronnenlijst) of de weergave die gekozen is (in <i>Uitgebreid zoeken</i>: <i>Artikelen</i>, <i>Betekenisomschrijvingen</i>, <i>Citaten</i>, <i>Kopsecties</i> of <i>Verbindingen</i>) kan het aantal kolommen van de tabel, en het type informatie erin variëren. De zoekresultaten worden gepresenteerd in deelsets van max. 250. De deelsets met resultaten kunnen naar op de computer van de gebruiker worden opgeslagen, maar ook geprint. Eerst worden de verschillende tabeltypes beschreven, daarna de vaste functionaliteiten van dit tabblad. Tot slot wordt respectievelijk een woordenboekartikel en een bronnenlijstartikel beschreven. <br/>
+            Zoeken in de tabbladen <i>Basiszoeken</i>, <i>Uitgebreid zoeken</i> of in <i>Zoeken in bronnenlijst</i> levert altijd een in tabelvorm gepresenteerde lijst met zoekresultaten op in het tabblad <i>Resultaat</i>, van waaruit de gebruiker via een link op het trefwoord in de kolom 'Origineel trefwoord' of via een link in de kolom 'Titel' door kan naar een afzonderlijk woordenboekartikel respectievelijk naar een afzonderlijke bron uit de bronnenlijst. Afhankelijk van wat er in de woordenboeken gezocht wordt (<i>Basiszoeken</i>i, <i>Zoeken in bronnenlijst</i>) of de weergave die gekozen is (in <i>Uitgebreid zoeken</i>: <i>Artikelen</i>, <i>Definities</i>, <i>Citaten</i>, <i>Kopsecties</i> of <i>Verbindingen</i>) kan het aantal kolommen van de tabel, en het type informatie erin variëren. De zoekresultaten worden gepresenteerd in deelsets van max. 250. De deelsets met resultaten kunnen op de computer van de gebruiker worden opgeslagen, maar ook geprint. Eerst worden de verschillende tabeltypes beschreven, daarna de vaste functionaliteiten van dit tabblad. Tot slot wordt respectievelijk een woordenboekartikel en een bronnenlijstartikel beschreven. <br/>
             <br/>
             <div class="helptext helptext-level2">
       <h2 class="helptext">Beschrijving van de tabellen bij het zoeken in woordenboekartikelen (tabblad <i>Basiszoeken</i> en <i>Uitgebreid zoeken</i>)</h2> 
-            De gebruiker krijgt als (tussen)resultaat van het zoeken in de woordenboeken 5 types resultaten:<br/>
+            De gebruiker krijgt als (tussen)resultaat van het zoeken in de woordenboeken een van de volgende vijf types resultaten:<br/>
             - lijst met artikelen<br/>
-            - lijst met betekenissen<br/>
+            - lijst met definities<br/>
             - lijst met citaten<br/>
-            - lijst met verbindingen<br/>
             - lijst met kopsecties<br/>
+            - lijst met verbindingen<br/>
             <br/>
-            In het tabblad <i>Uitgebreid zoeken</i> kan de gebruiker één van deze vijf weergavemogelijkheden kiezen. Wanneer gezocht wordt vanuit het tabblad <i>Basiszoeken</i>, dan bestaat die keuzemogelijkheid niet, en krijgt de gebruiker een lijst met artikelen.<br/>
+            Wanneer gezocht wordt vanuit het tabblad <i>Basiszoeken</i>, dan krijgt de gebruiker uitsluitend een lijst met artikelen. In het tabblad <i>Uitgebreid zoeken</i> kan de gebruiker zelf één van de vijf weergavemogelijkheden kiezen. <br/>
             Elk type resultaat impliceert een andere invulling van de kolommen in het tussenresultaat. Hieronder worden de kolomnamen gegeven, met daar waar nodig uitleg over de inhoud van een kolom.<br/>
             <br/>
             <i>lijst</i>
       <i> met artikelen</i> 
       <br/>
-            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Modern Nederlands trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>) en betekenis (<i>Betekenis</i>). De laatste kolom (<i>Betekenis</i>) bevat in het VMNW de synopsis van alle betekenissen van een lemma, in het WNT en MNW de eerste betekenisomschrijving die binnen het artikel staat. Dit als hulpmiddel om homoniemen te onderscheiden. <br/>
+            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Mod. Ned. trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>) en betekenis (<i>Betekenis</i>). De laatste kolom (<i>Betekenis</i>) bevat in het VMNW de synopsis van alle betekenissen van een lemma, in het MNW en het WNT de eerste betekenisomschrijving die binnen het artikel staat. Dit als hulpmiddel om homoniemen te onderscheiden. <br/>
             In <i>Basiszoeken</i> krijgt de gebruiker concordanties terug wanneer hij een zoekterm heeft ingevuld bij <i>Woord in betekenis</i>, <i>Woord in citaat</i>, of <i>Woord in artikel</i> . De concordanties staan in een aparte kolom (<i>Concordanties</i>). Ze zijn gegroepeerd per artikel, en worden vergezeld in de daaraan voorafgaande kolom van frequentiegegevens (<i>Freq.</i>). De concordanties binnen iedere cel worden gecentreerd op de gevonden zoekterm. <i>Freq.</i> en <i>Concordanties</i> komen in de plaats van <i>Betekenis</i>. <br/>
             <br/>
             <i>lijst</i>
-      <i> met betekenissen</i> 
+      <i> met definities</i> 
       <br/>
-            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Modern Nederlands trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>) en betekenis (<i>Betekenis</i>). De laatste kolom (<i>Betekenis</i>) bevat alle betekenisomschrijvingen die aan de zoekvraag voldoen. <br/>
+            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Mod. Ned. trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>) en betekenis (<i>Betekenis</i>). De laatste kolom (<i>Betekenis</i>) bevat alle betekenisomschrijvingen die aan de zoekvraag voldoen. <br/>
             <br/>
             <i>lijst</i>
       <i> met citaten</i> 
       <br/>
-            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Modern Nedernlands trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>), betekenis (<i>Betekenis</i>), en citaat (<i>Citaat</i>). De laatste kolom (<i>Citaat</i>) bevat alle citaten die aan de zoekvraag voldoen. De kolom <i>Betekenis</i> geeft de betekenisomschrijving waaronder een gevonden citaat is opgenomen. <br/>
+            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Mod. Ned. trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>), betekenis (<i>Betekenis</i>), en citaat (<i>Citaat</i>). De laatste kolom (<i>Citaat</i>) bevat alle citaten die aan de zoekvraag voldoen. De kolom <i>Betekenis</i> geeft de betekenisomschrijving waaronder een gevonden citaat is opgenomen. <br/>
             <br/>
+      <i>lijst</i><i> met kopsecties</i> 
+            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Mod. Ned. trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>) en kopsectie (<i>Kopsectie</i>).<br/>
+                  <br/>
             <i>lijst</i>
       <i> met verbindingen</i> 
       <br/>
-            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), lemma (<i>Lemma</i>), modern Nederlands lemma (<i>Modern lemma</i>), woordsoort (<i>Woordsoort</i>), verbinding (Verbinding), betekenis (<i>Betekenis</i>). De voorlaatste kolom (<i>Verbinding</i>) bevat alle verbindingen die aan de zoekvraag voldoen. De kolom <i>Betekenis</i> geeft de betekenisomschrijving van iedere aangetroffen verbinding. <br/>
+            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Mod. Ned. trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>), verbinding (<i>Verbinding</i>) en betekenis (<i>Betekenis</i>). De voorlaatste kolom (<i>Verbinding</i>) bevat alle verbindingen die aan de zoekvraag voldoen. De kolom <i>Betekenis</i> geeft de betekenisomschrijving van iedere aangetroffen verbinding. <br/>
             <br/>
-            <i>lijst</i>
-      <i> met kopsecties</i> Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), lemma (<i>Lemma</i>), modern Nederlands lemma (<i>Modern lemma</i>), woordsoort (<i>Woordsoort</i>) en kopsectie (<i>Kopsectie</i>). <br/>
-            <br/>
+  
             </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Beschrijving van de tabel bij het zoeken in de bronnenlijsten (tabblad <i>Zoeken in bronnenlijst</i>)</h2> 
             Bij het zoeken in de bronnenlijsten komen de volgende kolommen in het tussenresultaat voor:<br/>
-            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), auteur van de bron (<i>Auteur</i>), titel (<i>Titel</i>), datering (<i>Datering</i>) en lokalisering (<i>Lokalisering</i>). <br/>
+            Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), auteur van de bron (<i>Auteur</i>), titel (<i>Titel</i>), datering (<i>Datering</i>) en lokalisering (<i>Lokalisering</i>). Let op, de laatste kolom is niet altijd direct zichtbaar. Verplaats de schuifbalk naar rechts om deze kolom te kunnen zien. <br/>
             <br/>
             </div>
             <!--
@@ -60,59 +61,59 @@
  -->
    <div class="helptext helptext-level2">
       <h2 class="helptext">Expanderen cel</h2>
-            Cellen van de tabel kunnen geëxpandeerd worden om de volledige inhoud ervan te kunnen lezen door binnen de cel te klikken. Dit kan voor de cellen in de kolommen <i>Betekenis</i>, <i>Verbinding</i>, <i>Citaat</i> en <i>Kopsectie</i>. Hetzelfde geldt voor de kolom <i>Concordantie</i>, die getoond wordt wanneer in het basiszoeken op woord in betekenisomschrijving, citaat of artikel gezocht is.<br/>
+            Cellen van de tabel kunnen geëxpandeerd worden om de volledige inhoud ervan te kunnen lezen door binnen de cel te klikken. Dit kan voor de cel in de kolom <i>Betekenis</i>. Hetzelfde geldt voor de kolom <i>Concordantie</i>, die getoond wordt wanneer in het tabblad <i>Basiszoeken</i> op Woord in betekenis, Woord in citaat of Woord in artikel gezocht is.<br/>
             <br/>
             <br/>
             </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Deelsets</h2> 
-            De tussenresultaten worden gepresenteerd in deelsets per 250. Links in een balk boven de tabel staan de aantallen resultaten per woordenboek van links naar rechts. Rechts bovenin staat aangegeven welke deelset gepresenteerd wordt: 'RESULTATEN: n1 T/M n2'.<br/>
+            De tussenresultaten worden gepresenteerd in deelsets per 250. Links in een balk boven de tabel staan de aantallen resultaten per woordenboek van links naar rechts. Rechts onderin staat aangegeven welke deelset gepresenteerd wordt. Blauw omkaderd is het nummer van de deelset die getoond wordt.<br/>
             Navigatie door de resultaten kan op 2 manieren:<br/>
-            - Een deelset kan doorlopen worden met behulp van de pijltjestoetsen, <i>Page Up</i> of <i>Page Down</i>, <i>End</i> of <i>Home</i> op het toetsenbord of door het verslepen met de muis van de scrollbar.<br/>
+            - Een deelset kan doorlopen worden met behulp van de pijltjestoetsen, <i>Page Up</i> of <i>Page Down</i>, <i>End</i> of <i>Home</i> op het toetsenbord of door het verslepen met de muis van de schuifbalk.<br/>
             <!-- - Wanneer een gebruiker een bepaald regelnummer wil zien, kan hij ook gebruik maken van de optie <i>Toon resultaten vanaf regel</i>. De ingevulde regel komt bovenin de tabel te staan, en vormt het eerste resultaat van een nieuwe deelset.<br/> -->
-            - Wanneer in meerdere woordenboeken tegelijk is gezocht en meerdere woordenboeken hebben resultaten opgeleverd, vormt de naam van het woordenboek in het overzicht met frequentiegegevens een hyperlink. Door erop te klikken wordt komt het eerste gevonden resultaat in het aangeklikte woordenboek bovenin de tabel te staan, en vormt het eerste resultaat van een nieuwe deelset. Deze optie vervalt wanneer voor een andere primaire sortering dan die op woordenboek is gekozen (zie hierna). <br/>
+            - Wanneer in meerdere woordenboeken tegelijk is gezocht en meerdere woordenboeken hebben resultaten opgeleverd, dan vormt de naam van het woordenboek in het overzicht met frequentiegegevens een hyperlink. Door erop te klikken komt het eerste gevonden resultaat in het aangeklikte woordenboek bovenin de tabel te staan, en vormt het eerste resultaat van een nieuwe deelset. Deze optie vervalt wanneer voor een andere primaire sortering dan die op woordenboek is gekozen (zie hierna). <br/>
             <br/>
             </div>
+   <div class="helptext helptext-level2">
+          <h2 class="helptext">Sorteren</h2> 
+          De gebruiker kan het tussenresultaat sorteren. Er kunnen maximaal vier sorteersleutels opgegeven worden, en er kan gekozen worden voor (alfabetisch) oplopend dan wel aflopend. De informatie waarop gesorteerd kan worden is afhankelijk van het gepresenteerde resultaat. Er kan in principe gesorteerd worden op <i>Woordenboek</i>, <i>Aantal  concordanties</i>, <i>Mod. Ned. trefwoord</i>, <i>Origineel trefwoord</i>, <i>Woordsoort</i>, <i>Auteur citaat</i>, <i>Titel citaat</i>, <i>Datering citaat</i> en <i>Lokalisering citaat</i>.<br/>
+          Sorteeropties die niet van toepassing zijn worden geblokkeerd. Door het klikken op de optie <i>Sorteren</i> verschijnt een venster met onder elkaar vier selectielijsten, die de sleutels bevatten waarop gesorteerd kan worden. De selectielijsten worden voorafgegaan door respectievelijk de teksten <i>Eerste sleutel</i>, <i>Tweede sleutel</i>, <i>Derde sleutel</i> en <i>Vierde sleutel</i>. Een zoeksleutel van een selectielijst wordt geselecteerd door erop te klikken. Een zoeksleutel die in de ene selectielijst is gekozen, komt uiteraard niet meer als zoeksleutel bij de volgende selectielijsten voor. <br/>
+          <br/>
+    </div>
+  <div class="helptext helptext-level2">
+          <h2 class="helptext">Exporteren</h2> 
+          Tussenresultaten kunnen per actieve deelset geëxporteerd worden. Wanneer op de optie <code class="knop">Exporteren</code> wordt geklikt, verschijnt een versie met de mogelijke exportformaten <i>HTML</i>, <i>XML</i> en <i>CSV</i> (Excel). <br/>
+          HTML geeft een gemakkelijk leesbaar en afdrukbaar bestand. CSV geeft een bestand dat met Excel ingelezen en bewerkt kan worden. Er kan ook voor XML gekozen worden.
+          <br/>
+          Advies: sla de bestanden met de juiste extensie op (.html, .csv, .xml).
+          <br/>
+          <br/>
+          </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Afdrukken</h2>
             Tussenresultaten kunnen per actieve deelset afgedrukt worden. Wanneer op de optie <code class="knop">Afdrukken</code> wordt geklikt, verschijnt een venster met het af te drukken tussenresultaat. Door op de knop <code class="knop">Afdrukken</code> te klikken, wordt het printen gestart. <br/>
             <br/>
             </div>
-   <div class="helptext helptext-level2">
-      <h2 class="helptext">Exporteren</h2> 
-            Tussenresultaten kunnen per actieve deelset geëxporteerd worden. Wanneer op de optie <code class="knop">Exporteren</code> wordt geklikt, verschijnt een versie met de mogelijke exportformaten <i>HTML</i>, <i>XML</i> en <i>CSV</i> (Excel). <br/>
-            HTML geeft een gemakkelijk leesbaar en afdrukbaar bestand. CSV geeft een bestand dat met Excel ingelezen en bewerkt kan worden. Er kan ook voor XML gekozen worden.
-            <br/>
-            Advies: sla de bestanden met de juiste extensie op (.html, .csv, .xml).
-            <br/>
-            <br/>
-            </div>
-   <div class="helptext helptext-level2">
-      <h2 class="helptext">Sorteren</h2> 
-            De gebruiker kan het tussenresultaat sorteren. Er kunnen maximaal vier sorteersleutels opgegeven worden, en er kan gekozen worden voor (alfabetisch) oplopend dan wel aflopend. De informatie waarop gesorteerd kan worden is afhankelijk van het gepresenteerde resultaat. Er kan in principe gesorteerd worden op <i>Woordenboek</i>, <i>Modern Nederlands trefwoord</i> (huidige spelling en originele spelling), <i>Woordsoort</i>, <i>Frequentie</i>, <i>Auteur en titel citaat</i>, <i>Datering citaat</i>, en <i>Lokalisering citaat</i>.<br/>
-            Sorteeropties die niet van toepassing zijn worden geblokkeerd. Door het klikken op de optie <i>Sorteren</i> verschijnt een venster met onder elkaar vier selectielijsten, die de sleutels bevatten waarop gesorteerd kan worden. De selectielijsten worden voorafgegaan door respectievelijk de teksten <i>Eerste sleutel</i>, <i>Tweede sleutel</i>, <i>Derde sleutel</i> en <i>Vierde sleutel</i>. Een zoeksleutel van een selectielijst wordt geselecteerd door erop te klikken. Een zoeksleutel die in de ene selectielijst is gekozen, komt uiteraard niet meer als zoeksleutel bij de volgende selectielijsten voor. <br/>
-            <br/>
-            </div>
+
+
    <div class="helptext helptext-level2">
       <h2 class="helptext">Woordenboekartikel</h2>
-            Bij klikken op de onderstreepte kolom in de resultaatlijst verschijnt het artikelscherm. Dit is een weergave van een woordenboekartikel in een nieuw browservenster of tab, afhankelijk van uw browserinstellingen. Eerder geopende artikelen verdwijnen niet wanneer een nieuw artikel opgeroepen wordt.<br/>
+            Bij klikken op een trefwoord in de kolom Origineel trefwoord in de resultaatlijst verschijnt het artikelscherm. Dit is een weergave van een woordenboekartikel in een nieuw browservenster of tab, afhankelijk van uw browserinstellingen. Eerder geopende artikelen verdwijnen niet wanneer een nieuw artikel opgeroepen wordt.<br/>
             Het artikelscherm bestaat uit de volgende onderdelen:<br/>
             <ol><li> De eigenlijke artikelweergave. Hierin worden aanvankelijk alleen
-    de minst diepe niveaus in de betekenishierarchie getoond; de citaten
+    de minst diepe niveaus in de betekenishiërarchie getoond; de citaten
     bij de betekenissen zijn nog verborgen. Wanneer er dieper gelegen
     niveaus zijn, zijn deze op te roepen door het aanklikken van de
-    <i>+</i>-tekens in de linkermarge van het artikel. Bij openen wordt de
-    <i>+</i> vervangen door een <i>-</i>; bij aanklikken hiervan worden de dieper
+    +-tekens in de linkermarge van het artikel. Bij openen wordt de
+    + vervangen door een <i>-</i>; bij aanklikken hiervan worden de dieper
     gelegen betekenisniveaus weer gesloten.
-    Door middel van het donkerrode pijltje in de marge kunnen de citaten
+    Door middel van het pijltje in de marge kunnen de citaten
     bij een betekenis getoond en weer verborgen worden.</li>
  <li> De <i>menubalk</i> bevat aanvinkvakken waarmee alle betekenisniveaus
     resp. alle citaten tegelijk zichtbaar of onzichtbaar gemaakt kunnen
-    worden, alsmede een onderstreepte link waarmee het koppelingen-
-    scherm op te roepen is.</li>
+    worden, alsmede een onderstreepte link waarmee het koppelingen-scherm op te roepen is.</li>
   <li> Het <i>koppelingenscherm</i> bevat links naar vorig en volgend artikel,
-    en, indien van toepassing links naar supplements- en aanvullings-
-    informatie bij het artikel, alsmede koppelingen naar externe data.
+    en, indien van toepassing links naar supplements- en aanvullings-informatie bij het artikel, alsmede koppelingen naar externe data.
     Voor een beschrijving van deze laatste zie aldaar.</li>
             </ol>
    </div>

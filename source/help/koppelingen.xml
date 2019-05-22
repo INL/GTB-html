@@ -7,9 +7,22 @@
    <br/>
             Aan diverse woordenboekartikelen zijn een of meer koppelingen naar interne en externe informatie toegevoegd. Deze koppelingen zijn te vinden in een apart schermpje rechtsboven op het beeldscherm.<br/>
    <br/>
-            
-            
-            
+          <div class="helptext helptext-level2">
+                <h2 class="helptext">Koppelingen aan het ONW</h2>Bij ieder lemma in het ONW is uitgezocht wat de overeenkomstige lemmata in de overige historische woordenboeken zijn. Voorzover mogelijk zijn de betreffende koppelingen aangebracht in het koppelingenschermpje. <br/>
+                <br/>
+                
+          </div>      
+          <div class="helptext helptext-level2">
+                <h2 class="helptext">Koppelingen aan het VMNW</h2>Hier zijn interne koppelingen te vinden naar het voorafgaande en het volgende woordenboekartikel. Er zijn ook koppelingen te vinden naar de kaarten uit de dissertatie van A. Berteloot, <i>Bijdrage tot een klankatlas van het dertiende-eeuwse Middelnederlands</i>. Gent, 1984. Tot slot is er bij elk woordenboekartikel een koppeling naar een interactieve kaartenapplicatie waarmee online kaarten getekend kunnen worden van klankverschijnselen die bij het betreffende woordenboekartikel zijn opgemerkt.
+                
+                <br/>
+                <br/>
+          </div>          
+          <div class="helptext helptext-level2">
+                <h2 class="helptext">Koppelingen aan het MNW</h2>In het koppelingenschermpje zijn interne koppelingen te vinden naar het voorafgaande en het volgende woordenboekartikel. Bij lemmata waarvoor een overeenkomstig lemma in het ONW of WNT te vinden is, is eveneens een koppeling aangebracht; koppelingen met het VMNW zullen bij volgende releases aangebracht worden. <br/>
+                <br/>
+                
+          </div>    
             <div class="helptext helptext-level2">
       <h2 class="helptext">Koppelingen aan het WNT</h2>
             Hier zijn interne koppelingen te vinden naar het vorige en het volgende woordenboekartikel en naar eventuele informatie met betrekking tot het trefwoord in het Supplement en/of de Aanvullingen.
@@ -22,25 +35,7 @@
             
             De categorie afbeeldingen bevat koppelingen naar R. Dodoens, <i>Cruijdeboeck, In den welcken die gheheele historie van den Cruyden met grooter neerstichheyt begrepen ende verclaert es</i>. Antwerpen: Jan van der Loe, 1554 en naar L.A.J. Burgersdijk, <i>De Dieren afgebeeld, beschreven en in hunnen levenswijze geschetst</i>. Leiden: D. Noothoven van Goor, 1864-1873. <br/>
             Door met de cursor op de betreffende koppeling te gaan staan en vervolgens te klikken komt men bij deze informatie terecht. Het aanbrengen van externe koppelingen in het WNT wordt in de komende tijd voortgezet. Van tijd tot tijd zal de bestaande versie van het WNT online worden geactualiseerd. <br/>
-      <br/>
-            
-            
+      <br/>          
             </div>
-   <div class="helptext helptext-level2">
-      <h2 class="helptext">Koppelingen aan het VMNW</h2>Hier zijn interne koppelingen te vinden naar het voorafgaande en het volgende woordenboekartikel. Er zijn ook koppelingen te vinden naar de kaarten uit de dissertatie van A. Berteloot, <i>Bijdrage tot een klankatlas van het dertiende-eeuwse Middelnederlands</i>. Gent, 1984. Tot slot is er bij elk woordenboekartikel een koppeling naar een interactieve kaartenapplicatie waarmee online kaarten getekend kunnen worden van klankverschijnselen die bij het betreffende woordenboekartikel zijn opgemerkt.
-            
-            <br/>
-      <br/>
-            </div>
-   <div class="helptext helptext-level2">
-      <h2 class="helptext">Koppelingen aan het ONW</h2>Bij ieder lemma in het ONW is uitgezocht wat de overeenkomstige lemmata in de overige historische woordenboeken zijn. Voorzover mogelijk zijn de betreffende koppelingen aangebracht in het koppelingenschermpje. <br/>
-      <br/>
-            
-            </div>
-   <div class="helptext helptext-level2">
-      <h2 class="helptext">Koppelingen aan het MNW</h2>In het koppelingenschermpje zijn interne koppelingen te vinden naar het voorafgaande en het volgende woordenboekartikel. Bij lemmata waarvoor een overeenkomstig lemma in het ONW of WNT te vinden is, is eveneens een koppeling aangebracht; koppelingen met het VMNW zullen bij volgende releases aangebracht worden. <br/>
-      <br/>
-            
-        </div>
     </div>
 

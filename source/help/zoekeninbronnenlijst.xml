@@ -9,13 +9,13 @@ Met het zoekformulier op dit tabblad kan in de bronnenlijsten van de woordenboek
    <br/>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Zoekvelden</h2> 
-De zoekvelden waarmee de bronnenlijsten van de woordenboeken doorzocht kunnen worden zijn <i>Auteur</i>, <i>Verkorte brontitel</i>, <i>Woorden in titel</i>, <i>Datering</i>, <i>Lokalisering</i> en <i>Signatuur</i>. De laatste twee velden zijn voor het WNT niet relevant omdat daar geen informatie over in de bronnenlijst staat. De zoekvelden worden hieronder beschreven, voor zover ze (reeds) op het WNT van toepassing zijn. Er kan informatie in een zoekveld worden ingevoerd door de cursor op gewenste veld te zetten en dan te klikken. <br/>
+De zoekvelden waarmee de bronnenlijsten van de woordenboeken doorzocht kunnen worden zijn <i>Auteur</i>, <i>Verkorte titel</i>, <i>Woorden in titel</i>, <i>Datering</i>, <i>Lokalisering</i>, <i>Signatuur</i> en <i>Woord in bronartikel</i>. De velden <i>Lokalisering</i> en <i>Signatuur</i> zijn voor het WNT niet relevant omdat daar geen informatie over in de bronnenlijst staat. De zoekvelden worden hieronder beschreven, voor zover ze (reeds) op het WNT van toepassing zijn. Er kan informatie in een zoekveld worden ingevoerd door de cursor op het gewenste veld te zetten en dan te klikken. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Meelopende lijsten</h2>
-Een aantal zoekvelden (<i>Auteur</i>, <i>Verkorte brontitel</i>, <i>Woorden in titel</i>, <i>Lokalisering</i>, <i>Signatuur</i> en <i>Woord in bronartikel</i>)
-zijn voorzien van een meelopende lijst, die op basis van de ingetikte letters in alfabetische volgorde tien suggesties bevat van wat er gezocht zou kunnen worden. Bij iedere suggestie wordt meegegeven in welk(e) woordenboek(en) de vorm voorkomt. Elk item van de gepresenteerde lijst komt in een gekleurde balk te staan als er met de muis overheen wordt gegaan. Door te klikken op een 'gekleurd' item wordt het item in het invulveld gekopieerd. De inhoud van de meelopende lijst wordt bepaald door de laatste aaneengesloten reeks van karakters in het veld die geen interpunctie, operatorkarakters of spatie zijn. De meelopende lijst kan derhalve verdwijnen en verschijnen binnen één zoekveld. Uiteraard is het hierbij steeds ook mogelijk onafhankelijk van deze lijsten een woord of woorddeel als zoekterm in te voeren. <br/>
+Een aantal zoekvelden (<i>Auteur</i>, <i>Verkorte titel</i>, <i>Woorden in titel</i>, <i>Lokalisering</i>, <i>Signatuur</i> en <i>Woord in bronartikel</i>)
+zijn voorzien van een meelopende lijst, die op basis van de ingetikte letters in alfabetische volgorde tien suggesties bevat van wat er gezocht zou kunnen worden. Bij iedere suggestie wordt meegegeven in welk(e) woordenboek(en) de vorm voorkomt. Elk item van de gepresenteerde lijst komt in een gekleurde balk te staan als er met de muis overheen wordt gegaan. Door te klikken op een 'gekleurd' item wordt het item in het invulveld gekopieerd. De inhoud van de meelopende lijst wordt bepaald door de laatste aaneengesloten reeks van karakters in het veld die geen interpunctie, operatorkarakters - zoals en (&amp;), of (|), niet (!) en afstand (#, en ") of spatie zijn; de wildcards '?' en '*' zijn wel geldig. De meelopende lijst kan derhalve verdwijnen en verschijnen binnen één zoekveld. Uiteraard is het hierbij steeds ook mogelijk onafhankelijk van deze lijsten een woord of woorddeel als zoekterm in te voeren. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
@@ -24,8 +24,8 @@ gezocht op de naam van een auteur, zoals deze in de bibliografische beschrijving
       <br/>
    </div>
    <div class="helptext helptext-level2">
-      <h2 class="helptext">Verkorte brontitel</h2> 
-Er kan in de bronnenlijsten van de woordenboeken ook gezocht worden naar werken met behulp van de verkorte brontitel waarmee ze in de bronvermelding bij citaten in de woordenboeken worden aangehaald. Dit zoekveld <i>Verkorte brontitel</i> is voorzien van een meelopende lijst (zie hierboven), waarvan de items de volledige verkorte titel weergeven.? <br/>
+      <h2 class="helptext">Verkorte titel</h2> 
+Er kan in de bronnenlijsten van de woordenboeken ook gezocht worden naar werken met behulp van de verkorte titel waarmee ze in de bronvermelding bij citaten in de woordenboeken worden aangehaald. Dit zoekveld <i>Verkorte brontitel</i> is voorzien van een meelopende lijst (zie hierboven), waarvan de items de volledige verkorte titel weergeven. <br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
@@ -39,7 +39,7 @@ Er kan in de bronnenlijsten van de woordenboeken gezocht worden naar werken met 
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Lokalisering</h2> 
-In het VMNW wordt elke aanhaling uit het ambtelijke materiaal gelokaliseerd door middel van de naam van de plaats waar het betreffende document geschreven is, bijv. <i>Brugge</i>. De literaire teksten kunnen echter - evenals enkele ambtelijke bescheiden- niet nauwkeuriger gelokaliseerd worden dan d.m.v. een regio-aanduiding, bijv. <i>West-Vlaanderen</i>. Elke plaatsnaam is ook gekoppeld aan een regio-aanduiding Er kan naar bronnen met een bepaalde lokalisering worden gezocht door selectie van een regio- en of plaatsaanduiding uit de meelopende lijst. Ook het ONW, MNW en WFT geven waar mogelijk lokalisering van de bron.<br/>
+In het VMNW wordt elke aanhaling uit het ambtelijke materiaal gelokaliseerd door middel van de naam van de plaats waar het betreffende document geschreven is, bijv. <i>Brugge</i>. De literaire teksten kunnen echter - evenals enkele ambtelijke bescheiden - niet nauwkeuriger gelokaliseerd worden dan d.m.v. een regio-aanduiding, bijv. <i>West-Vlaanderen</i>. Elke plaatsnaam is ook gekoppeld aan een regio-aanduiding Er kan naar bronnen met een bepaalde lokalisering worden gezocht door selectie van een regio- en/of plaatsaanduiding uit de meelopende lijst. Ook het ONW, MNW en WFT geven waar mogelijk lokalisering van de bron.<br/>
 Voor meer informatie zie: <br/> <i>Lokalisering van
 taalmateriaal uit ONW, VMNW en MNW t.b.v. de Taalbankinternetapplicatie</i>, 
 Marijke Mooijaart i.s.m. Dirk Geirnaert en Hans Westgeest,
@@ -49,7 +49,7 @@ Leiden, 2010 <a href="http://ivdnt.org/images/stories/onderzoek_en_onderwijs/pub
    </div>
    <div class="helptext helptext-level2">
       <h2 class="helptext">Signatuur</h2> 
-In het VMNW, ONW en MNW is informatie opgenomen over verblijfplaats, inclusief signatuur, van bronnen. Er kan op signatuur gezocht worden door een of meerdere woorden in het betreffende veld in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
+In het ONW, VMNW en MNW is informatie opgenomen over verblijfplaats, inclusief signatuur, van bronnen. Er kan op signatuur gezocht worden door een of meerdere woorden in het betreffende veld in te tikken. De meelopende lijst biedt hiervoor ondersteuning.<br/>
       <br/>
    </div>
    <div class="helptext helptext-level2">
