@@ -5,7 +5,7 @@
             <h1 class="helptext">Resultaat</h1>
             <br/>
    <br/>
-            Zoeken in de tabbladen <i>Basiszoeken</i>, <i>Uitgebreid zoeken</i> of in <i>Zoeken in bronnenlijst</i> levert altijd een in tabelvorm gepresenteerde lijst met zoekresultaten op in het tabblad <i>Resultaat</i>, van waaruit de gebruiker via een link op het trefwoord in de kolom 'Origineel trefwoord' of via een link in de kolom 'Titel' door kan naar een afzonderlijk woordenboekartikel respectievelijk naar een afzonderlijke bron uit de bronnenlijst. Afhankelijk van wat er in de woordenboeken gezocht wordt (<i>Basiszoeken</i>i, <i>Zoeken in bronnenlijst</i>) of de weergave die gekozen is (in <i>Uitgebreid zoeken</i>: <i>Artikelen</i>, <i>Definities</i>, <i>Citaten</i>, <i>Kopsecties</i> of <i>Verbindingen</i>) kan het aantal kolommen van de tabel, en het type informatie erin variëren. De zoekresultaten worden gepresenteerd in deelsets van max. 250. De deelsets met resultaten kunnen op de computer van de gebruiker worden opgeslagen, maar ook geprint. Eerst worden de verschillende tabeltypes beschreven, daarna de vaste functionaliteiten van dit tabblad. Tot slot wordt respectievelijk een woordenboekartikel en een bronnenlijstartikel beschreven. <br/>
+            Zoeken in de tabbladen <i>Basiszoeken</i>, <i>Uitgebreid zoeken</i> of in <i>Zoeken in bronnenlijst</i> levert altijd een in tabelvorm gepresenteerde lijst met zoekresultaten op in het tabblad <i>Resultaat</i>, van waaruit de gebruiker via een link op het trefwoord in de kolom 'Origineel trefwoord' of via een link in de kolom 'Titel' door kan naar een afzonderlijk woordenboekartikel respectievelijk naar een afzonderlijke bron uit de bronnenlijst. Afhankelijk van wat er in de woordenboeken gezocht wordt (<i>Basiszoeken</i>, <i>Zoeken in bronnenlijst</i>) of de weergave die gekozen is (in <i>Uitgebreid zoeken</i>: <i>Artikelen</i>, <i>Definities</i>, <i>Citaten</i>, <i>Kopsecties</i> of <i>Verbindingen</i>) kan het aantal kolommen van de tabel, en het type informatie erin variëren. De zoekresultaten worden gepresenteerd in deelsets van max. 250. De deelsets met resultaten kunnen op de computer van de gebruiker worden opgeslagen, maar ook geprint. Eerst worden de verschillende tabeltypes beschreven, daarna de vaste functionaliteiten van dit tabblad. Tot slot wordt respectievelijk een woordenboekartikel en een bronnenlijstartikel beschreven. <br/>
             <br/>
             <div class="helptext helptext-level2">
       <h2 class="helptext">Beschrijving van de tabellen bij het zoeken in woordenboekartikelen (tabblad <i>Basiszoeken</i> en <i>Uitgebreid zoeken</i>)</h2> 
@@ -35,7 +35,8 @@
       <br/>
             Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Mod. Ned. trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>), betekenis (<i>Betekenis</i>), en citaat (<i>Citaat</i>). De laatste kolom (<i>Citaat</i>) bevat alle citaten die aan de zoekvraag voldoen. De kolom <i>Betekenis</i> geeft de betekenisomschrijving waaronder een gevonden citaat is opgenomen. <br/>
             <br/>
-      <i>lijst</i><i> met kopsecties</i> 
+      <i>lijst</i><i> met kopsecties</i>
+      <br/>
             Nummer van het resultaat (<i>Nr.</i>), woordenboek (<i>Wdb</i>), trefwoord in huidige spelling (<i>Mod. Ned. trefwoord</i>), trefwoord in originele spelling (<i>Origineel trefwoord</i>), woordsoort (<i>Woordsoort</i>) en kopsectie (<i>Kopsectie</i>).<br/>
                   <br/>
             <i>lijst</i>
