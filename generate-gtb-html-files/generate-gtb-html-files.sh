@@ -1,6 +1,8 @@
 #!/bin/bash
 
-WHEREAMI=$(dirname $(realpath $0))
+#WHEREAMI=$(dirname $(realpath $0))   # breaks under certain conditions? (CentOS)
+WHEREAMI="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 . "$WHEREAMI"/sourceme
 
 PROJECTDIR=`dirname "$WHEREAMI"`
