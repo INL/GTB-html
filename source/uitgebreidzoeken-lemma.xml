@@ -37,7 +37,6 @@
                  <option value="Galloromaans">Galloromaans</option>
                  <option value="Germaans">Germaans</option>
                  <option value="Gotisch">Gotisch</option>
-                 <option value="Grieks">"Grieks"</option>
                  <option value="Grieks">Grieks</option>
                  <option value="Gronings">Gronings</option>
                  <option value="Hebreeuws">Hebreeuws</option>
@@ -59,7 +58,6 @@
                  <option value="Kurhessisch">Kurhessisch</option>
                  <option value="Kymrisch">Kymrisch</option>
                  <option value="Laatlatijn">Laatlatijn</option>
-                 <option value="Latijn">"Latijn"</option>
                  <option value="Latijn">Latijn</option>
                  <option value="Lets">Lets</option>
                  <option value="Limburgs">Limburgs</option>
@@ -74,7 +72,6 @@
                  <option value="Middelfries">Middelfries</option>
                  <option value="Middelgrieks">Middelgrieks</option>
                  <option value="Middelhoogduits">Middelhoogduits</option>
-                 <option value="Middellatijn">"Middellatijn"</option>
                  <option value="Middellatijn">Middellatijn</option>
                  <option value="Middelnederduits">Middelnederduits</option>
                  <option value="Middelnederlands">Middelnederlands</option>
@@ -112,7 +109,6 @@
                  <option value="Oudfrans">Oudfrans</option>
                  <option value="Oudfries">Oudfries</option>
                  <option value="Oudgermaans">Oudgermaans</option>
-                 <option value="Oudhoogduits">"Oudhoogduits"</option>
                  <option value="Oudhoogduits">Oudhoogduits</option>
                  <option value="Oudiers">Oudiers</option>
                  <option value="Ouditaliaans">Ouditaliaans</option>
@@ -128,7 +124,6 @@
                  <option value="Oudoostfries">Oudoostfries</option>
                  <option value="Oudpicardisch">Oudpicardisch</option>
                  <option value="Oudproven&#xE7;aals">Oudproven&#xE7;aals</option>
-                 <option value="Oudprovencaals">Oudprovencaals</option>
                  <option value="Oudsaksisch">Oudsaksisch</option>
                  <option value="Oudslavisch">Oudslavisch</option>
                  <option value="Oudspaans">Oudspaans</option>
@@ -172,7 +167,6 @@
                  <option value="Zwabisch">Zwabisch</option>
                  <option value="Zweeds">Zweeds</option>
                  <option value="Zwitsers">Zwitsers</option>
-                 <option value="overige talen">overige talen</option>
                </select>
            </ivdnt:formulierinput>
        </ivdnt:formulierregel>
