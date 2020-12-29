@@ -147,6 +147,7 @@
                     });
                 };
 
+		/*
                 // Try to warn that the Back button won't nagivate within the site.
                 window.addEventListener("beforeunload", function (e) {
                     // NOTE: most modern browsers don't display custom messages anymore, but will display their own message
@@ -156,6 +157,7 @@
                     (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                     return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
                 });
+		*/
 
             </script>
             <xsl:if test="$GA_TRACKING_CODE ne ''" >
