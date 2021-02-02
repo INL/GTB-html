@@ -28,7 +28,7 @@
                 <ivdnt:hulp href="help/onw-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
             </ivdnt:collapse>
 
-            <ivdnt:collapse label="Over het VNMW">
+            <ivdnt:collapse label="Over het VMNW">
                 <ivdnt:hulp href="help/vnmw-algemeen.xml">Algemeen</ivdnt:hulp>
                 <ivdnt:hulp href="help/vnmw-afkortingen.xml">Afkortingen</ivdnt:hulp>
                 <ivdnt:hulp href="help/vnmw-geschiedenis.xml">Geschiedenis</ivdnt:hulp>
