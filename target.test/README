@@ -1,5 +1,0 @@
-De folder met deze naam (bijv. target, target.test, ..) wordt telkens verwijderd en opnieuw aangemaakt bij het genereren
-van de applicatie. zie hiervoor het script ../generate-gtb-html-files/generate-gtb-html-files.sh.
-
-De basis van de bestanden die in target geplaatst worden ligt, niet geheel verassend, in de
-folder met de naam source.
