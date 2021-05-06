@@ -22,6 +22,7 @@
            <ivdnt:formulierlabel>In de etymologische beschrijving genoemde taal</ivdnt:formulierlabel>
            <ivdnt:formulierinput>
                <select name='etymtaal' data-humanname="taal in etym. beschr." class="form-control gtb-selectveld">
+                 <option value="">---</option>
                  <option value="Angelsaksisch">Angelsaksisch</option>
                  <option value="Arabisch">Arabisch</option>
                  <option value="Aretijns">Aretijns</option>
@@ -357,4 +358,3 @@
         </ivdnt:formulierregel>
     </ivdnt:collapse>
 </ivdnt:collapse>
-
