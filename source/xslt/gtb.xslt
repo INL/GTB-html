@@ -20,8 +20,7 @@
     <xsl:param name="baseArticleURL" as="xs:string" required="yes"/>
     <!-- Pass the start of the URL for the typeahead functionality. This is a sample URL: .../iWDB/search?wdb=onw%2Cvmnw%2Cmnw%2Cwnt%2Cwft%2C&actie=list&index=lemmodern&prefix=koe&sensitive=false&xmlerror=true -->
     <xsl:param name="baseListURL" as="xs:string" required="yes"/>
-    <!-- Pass (json) the Google Analytics tracking code or, for development purposes, pass an empty string: -->
-    <xsl:param name="gaTrackingCode" as="xs:string" select="''"/>
+
     <!-- Pass a string that contains the current front end version: -->
     <xsl:param name="gtbFrontEndVersion" as="xs:string" select="''"/>
     <!-- Pass (json) true or set here to true() if you want to see the full search URL (for development purposes): -->
@@ -366,11 +365,6 @@
                 
                 <h4 class="gtb-zoekvraag-description">Zoekvraag = <xsl:copy-of select="ixsl:get(ixsl:page(), $CURRENT_QUESTION_DESCRIPTION_PROPERTY)"/></h4>
                 
-                <!-- First inform Google analytics: -->
-                <xsl:if test="$gaTrackingCode ne ''">
-                    <xsl:sequence select="js:sendGooglePageView($url-for-content)[ivdnt:always-false()]"/>
-                </xsl:if>
-                
                 <!-- Now, load en show the result of the query: -->
                 <xsl:apply-templates select="doc($url-for-content)" mode="render-results">
                     <xsl:with-param name="html" select="/html"/>
@@ -558,10 +552,6 @@
     
     <xsl:template name="ivdnt:load-help">
         <xsl:param name="href" as="xs:string"/>
-        <!-- First inform Google analytics: -->
-        <xsl:if test="$gaTrackingCode ne ''">
-            <xsl:sequence select="js:sendGooglePageView($href)[ivdnt:always-false()]"/>
-        </xsl:if>
         <xsl:result-document href="#help" method="ixsl:replace-content">
             <xsl:copy-of select="doc($href)"/>
         </xsl:result-document>

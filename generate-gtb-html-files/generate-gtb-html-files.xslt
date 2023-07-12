@@ -15,8 +15,8 @@
     <xsl:param name="BASEARTICLECONTENTURL" as="xs:string" required="yes"/> <!-- for development use: "http://gtb.inl.nl/iWDB/search?actie=article_content", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=article_content" -->
     <xsl:param name="BASESEARCHURL" as="xs:string" required="yes"/> <!-- for development use: "../redirect.php?actie=results", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=results" -->
     <xsl:param name="BASELISTURL" as="xs:string" required="yes"/> <!-- for development use: "redirect.php?actie=list", for test use: "http://gtb.ato.inl.nl/iWDB/search?actie=list" -->
-    <xsl:param name="GA_TRACKING_CODE" as="xs:string" select="''"/> <!-- Google Analytics tracking code; if not supplied, no tracking code will be generated (useful during debugging/testing). -->
-    
+    <xsl:param name="PLAUSIBLE_TRACKING_DOMAIN" as="xs:string" select="''"/> <!-- Plausible tracking domain; if not supplied, no tracking code will be generated (useful during debugging/testing). -->
+
     <!-- Space-separated dictionary abbreviations. Default is all dictionaries. -->
     <xsl:param name="SELECTED_SOURCES" select="'onw vmnw mnw wnt wft'"/>
     
@@ -141,7 +141,6 @@
                              baseArticleContentURL: "<xsl:value-of select="$BASEARTICLECONTENTURL"/>",
                              baseSearchURL: "<xsl:value-of select="$BASESEARCHURL"/>",
                              baseListURL: "<xsl:value-of select="$BASELISTURL"/>",
-                             gaTrackingCode: "<xsl:value-of select="$GA_TRACKING_CODE"/>",
                              gtbFrontEndVersion: "<xsl:value-of select="$VERSIONINFO"/>"
                         }
                     });
@@ -160,18 +159,9 @@
 		*/
 
             </script>
-            <xsl:if test="$GA_TRACKING_CODE ne ''" >
-                <xsl:comment>Google Analytics</xsl:comment>
-                <script xsl:expand-text="no">
-                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-                    
-                    ga('create', '<xsl:value-of select="$GA_TRACKING_CODE"/>', 'auto');
-                    ga('set', 'anonymizeIp', true);
-                    ga('send', 'pageview');
-                </script>
+            
+            <xsl:if test="$PLAUSIBLE_TRACKING_DOMAIN ne ''">
+                <script defer="" data-domain="{@PLAUSIBLE_TRACKING_DOMAIN}" src="https://statistiek.ivdnt.org/js/plausible.js"></script>
             </xsl:if>
 
             <xsl:apply-templates select="node()" mode="#current"/>

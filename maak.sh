@@ -12,7 +12,7 @@ cd generate-gtb-html-files
   "BASEARTICLECONTENTURL=/iWDB/search?actie=article_content" \
   "BASESEARCHURL=/iWDB/search?actie=results" \
   "BASELISTURL=/iWDB/search?actie=list" \
-  "GA_TRACKING_CODE=UA-57793092-1"
+  "PLAUSIBLE_TRACKING_DOMAIN=gtb.ivdnt.org"
   
 cd "$SAVEPWD"
 rm "$BASE_TARGET_DIR/redirect.php"
