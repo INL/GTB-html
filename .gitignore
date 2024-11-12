@@ -24,3 +24,6 @@ lzx-help2html\.xslt
 generate-gtb-html-files/sourceme
 
 scripts/
+
+# IntelliJ
+.idea
