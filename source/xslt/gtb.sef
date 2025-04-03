@@ -2388,7 +2388,7 @@
            <check card="1" diag="0|0||ixsl:call">
             <ifCall name="Q{http://saxonica.com/ns/interactiveXSLT}window" type="item()?"/>
            </check>
-           <str val="sendGooglePageView"/>
+           <str val="sendAnalyticsPageView"/>
            <arrayBlock>
             <varRef name="url-for-content" slot="0"/>
            </arrayBlock>
@@ -5761,7 +5761,7 @@
         <check card="1" diag="0|0||ixsl:call">
          <ifCall name="Q{http://saxonica.com/ns/interactiveXSLT}window" type="item()?"/>
         </check>
-        <str val="sendGooglePageView"/>
+        <str val="sendAnalyticsPageView"/>
         <arrayBlock>
          <varRef name="href" slot="0"/>
         </arrayBlock>
