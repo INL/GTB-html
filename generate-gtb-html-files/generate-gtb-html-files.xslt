@@ -161,7 +161,10 @@
             </script>
             
             <xsl:if test="$PLAUSIBLE_TRACKING_DOMAIN ne ''">
-                <script defer="" data-domain="{@PLAUSIBLE_TRACKING_DOMAIN}" src="https://statistiek.ivdnt.org/js/plausible.js"></script>
+                <script defer="" data-domain="{$PLAUSIBLE_TRACKING_DOMAIN}" src="https://statistiek.ivdnt.org/js/plausible.js"></script>
+                <script>
+                    <xsl:value-of select="'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };'"/>
+                </script>
             </xsl:if>
 
             <xsl:apply-templates select="node()" mode="#current"/>
